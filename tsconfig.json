@@ -13,12 +13,14 @@
       "noImplicitReturns": true,
       "noUnusedLocals": false,
       "noUnusedParameters": false,
-      "noEmit": true
+      "noEmit": true,
   },
   "include":[
+    "interfaces.ts",
     "models.ts",
     "valuesets.ts",
     "index.ts",
+    "Interfaces",
     "Models",
     "ValueSets"
   ]

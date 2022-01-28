@@ -6,29 +6,50 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Used for example, to point to a substance, or to a device used to administer a medication.
  */
-export class CatalogEntryRelatedEntry extends fhirModels.BackboneElement {
+export class CatalogEntryRelatedEntry extends fhirModels.BackboneElement implements fhirInterfaces.ICatalogEntryRelatedEntry {
   /**
    * The reference to the related item.
    */
-  item: fhirModels.Reference;
+  item: fhirModels.Reference|undefined;
   /**
    * The type of relation to the related item: child, parent, packageContent, containerPackage, usedIn, uses, requires, etc.
    */
-  relationtype: CatalogEntryRelatedEntryRelationtypeEnum;
-  _relationtype?: fhirModels.Element;
+  relationtype: CatalogEntryRelatedEntryRelationtypeEnum|undefined;
+  _relationtype?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for CatalogEntryRelatedEntry from an object that MAY NOT contain all required elements.
    */
-  constructor(source: CatalogEntryRelatedEntry) {
+  constructor(source:Partial<fhirInterfaces.ICatalogEntryRelatedEntry>) {
     super(source);
-    if (source["item"] === undefined) { throw 'Missing required element item';}
-    this.item = source.item;
-    if (source["relationtype"] === undefined) { throw 'Missing required element relationtype';}
-    this.relationtype = source.relationtype;
-    if (source["_relationtype"] !== undefined) { this._relationtype = source._relationtype; }
+    if (source["item"] !== undefined) { this.item = new fhirModels.Reference(source.item); }
+    if (source["relationtype"] !== undefined) { this.relationtype = source.relationtype; }
+    if (source["_relationtype"] !== undefined) { this._relationtype = new fhirModels.Element(source._relationtype); }
+  }
+  /**
+   * Check if the current CatalogEntryRelatedEntry contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["item"] === undefined) { missingElements.push("item"); }
+    if (this["relationtype"] === undefined) { missingElements.push("relationtype"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a CatalogEntryRelatedEntry from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ICatalogEntryRelatedEntry):CatalogEntryRelatedEntry {
+    var dest:CatalogEntryRelatedEntry = new CatalogEntryRelatedEntry(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `CatalogEntryRelatedEntry is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -41,92 +62,112 @@ export enum CatalogEntryRelatedEntryRelationtypeEnum {
 /**
  * Catalog entries are wrappers that contextualize items included in a catalog.
  */
-export class CatalogEntry extends fhirModels.DomainResource {
+export class CatalogEntry extends fhirModels.DomainResource implements fhirInterfaces.ICatalogEntry {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "CatalogEntry";
+  readonly resourceType = "CatalogEntry";
   /**
    * Used for examplefor Out of Formulary, or any specifics.
    */
-  additionalCharacteristic?: fhirModels.CodeableConcept[];
+  additionalCharacteristic?: fhirModels.CodeableConcept[]|undefined;
   /**
    * User for example for ATC classification, or.
    */
-  additionalClassification?: fhirModels.CodeableConcept[];
+  additionalClassification?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Used in supporting related concepts, e.g. NDC to RxNorm.
    */
-  additionalIdentifier?: fhirModels.Identifier[];
+  additionalIdentifier?: fhirModels.Identifier[]|undefined;
   /**
    * Classes of devices, or ATC for medication.
    */
-  classification?: fhirModels.CodeableConcept[];
+  classification?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Used in supporting different identifiers for the same product, e.g. manufacturer code and retailer code.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Perhaps not needed - if we use fhir resource metadata.
    */
-  lastUpdated?: string;
-  _lastUpdated?: fhirModels.Element;
+  lastUpdated?: string|undefined;
+  _lastUpdated?: fhirModels.Element|undefined;
   /**
    * Whether the entry represents an orderable item.
    */
-  orderable: boolean;
-  _orderable?: fhirModels.Element;
+  orderable: boolean|undefined;
+  _orderable?: fhirModels.Element|undefined;
   /**
    * The item in a catalog or definition.
    */
-  referencedItem: fhirModels.Reference;
+  referencedItem: fhirModels.Reference|undefined;
   /**
    * Used for example, to point to a substance, or to a device used to administer a medication.
    */
-  relatedEntry?: fhirModels.CatalogEntryRelatedEntry[];
+  relatedEntry?: fhirModels.CatalogEntryRelatedEntry[]|undefined;
   /**
    * Used to support catalog exchange even for unsupported products, e.g. getting list of medications even if not prescribable.
    */
-  status?: CatalogEntryStatusEnum;
-  _status?: fhirModels.Element;
+  status?: CatalogEntryStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The type of item - medication, device, service, protocol or other.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
    * The time period in which this catalog entry is expected to be active.
    */
-  validityPeriod?: fhirModels.Period;
+  validityPeriod?: fhirModels.Period|undefined;
   /**
    * The date until which this catalog entry is expected to be active.
    */
-  validTo?: string;
-  _validTo?: fhirModels.Element;
+  validTo?: string|undefined;
+  _validTo?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for CatalogEntry from an object that MAY NOT contain all required elements.
    */
-  constructor(source: CatalogEntry) {
+  constructor(source:Partial<fhirInterfaces.ICatalogEntry>) {
     super(source);
     if ((source['resourceType'] !== "CatalogEntry") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a CatalogEntry'; }
-    if (source["additionalCharacteristic"] !== undefined) { this.additionalCharacteristic = source.additionalCharacteristic; }
-    if (source["additionalClassification"] !== undefined) { this.additionalClassification = source.additionalClassification; }
-    if (source["additionalIdentifier"] !== undefined) { this.additionalIdentifier = source.additionalIdentifier; }
-    if (source["classification"] !== undefined) { this.classification = source.classification; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
+    if (source["additionalCharacteristic"] !== undefined) { this.additionalCharacteristic = source.additionalCharacteristic.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["additionalClassification"] !== undefined) { this.additionalClassification = source.additionalClassification.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["additionalIdentifier"] !== undefined) { this.additionalIdentifier = source.additionalIdentifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["classification"] !== undefined) { this.classification = source.classification.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
     if (source["lastUpdated"] !== undefined) { this.lastUpdated = source.lastUpdated; }
-    if (source["_lastUpdated"] !== undefined) { this._lastUpdated = source._lastUpdated; }
-    if (source["orderable"] === undefined) { throw 'Missing required element orderable';}
-    this.orderable = source.orderable;
-    if (source["_orderable"] !== undefined) { this._orderable = source._orderable; }
-    if (source["referencedItem"] === undefined) { throw 'Missing required element referencedItem';}
-    this.referencedItem = source.referencedItem;
-    if (source["relatedEntry"] !== undefined) { this.relatedEntry = source.relatedEntry; }
+    if (source["_lastUpdated"] !== undefined) { this._lastUpdated = new fhirModels.Element(source._lastUpdated); }
+    if (source["orderable"] !== undefined) { this.orderable = source.orderable; }
+    if (source["_orderable"] !== undefined) { this._orderable = new fhirModels.Element(source._orderable); }
+    if (source["referencedItem"] !== undefined) { this.referencedItem = new fhirModels.Reference(source.referencedItem); }
+    if (source["relatedEntry"] !== undefined) { this.relatedEntry = source.relatedEntry.map((x) => new fhirModels.CatalogEntryRelatedEntry(x)); }
     if (source["status"] !== undefined) { this.status = source.status; }
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["type"] !== undefined) { this.type = source.type; }
-    if (source["validityPeriod"] !== undefined) { this.validityPeriod = source.validityPeriod; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+    if (source["validityPeriod"] !== undefined) { this.validityPeriod = new fhirModels.Period(source.validityPeriod); }
     if (source["validTo"] !== undefined) { this.validTo = source.validTo; }
-    if (source["_validTo"] !== undefined) { this._validTo = source._validTo; }
+    if (source["_validTo"] !== undefined) { this._validTo = new fhirModels.Element(source._validTo); }
+  }
+  /**
+   * Check if the current CatalogEntry contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["orderable"] === undefined) { missingElements.push("orderable"); }
+    if (this["referencedItem"] === undefined) { missingElements.push("referencedItem"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a CatalogEntry from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ICatalogEntry):CatalogEntry {
+    var dest:CatalogEntry = new CatalogEntry(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `CatalogEntry is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

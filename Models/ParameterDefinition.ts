@@ -6,66 +6,87 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
  */
-export class ParameterDefinition extends fhirModels.Element {
+export class ParameterDefinition extends fhirModels.Element implements fhirInterfaces.IParameterDefinition {
   /**
    * A brief discussion of what the parameter is for and how it is used by the module.
    */
-  documentation?: string;
-  _documentation?: fhirModels.Element;
+  documentation?: string|undefined;
+  _documentation?: fhirModels.Element|undefined;
   /**
    * The maximum number of times this element is permitted to appear in the request or response.
    */
-  max?: string;
-  _max?: fhirModels.Element;
+  max?: string|undefined;
+  _max?: fhirModels.Element|undefined;
   /**
    * The minimum number of times this parameter SHALL appear in the request or response.
    */
-  min?: number;
-  _min?: fhirModels.Element;
+  min?: number|undefined;
+  _min?: fhirModels.Element|undefined;
   /**
    * The name of the parameter used to allow access to the value of the parameter in evaluation contexts.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.
    */
-  profile?: string;
-  _profile?: fhirModels.Element;
+  profile?: string|undefined;
+  _profile?: fhirModels.Element|undefined;
   /**
    * The type of the parameter.
    */
-  type: string;
-  _type?: fhirModels.Element;
+  type: string|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
    * Whether the parameter is input or output for the module.
    */
-  use: ParameterDefinitionUseEnum;
-  _use?: fhirModels.Element;
+  use: ParameterDefinitionUseEnum|undefined;
+  _use?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ParameterDefinition from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ParameterDefinition) {
+  constructor(source:Partial<fhirInterfaces.IParameterDefinition>) {
     super(source);
     if (source["documentation"] !== undefined) { this.documentation = source.documentation; }
-    if (source["_documentation"] !== undefined) { this._documentation = source._documentation; }
+    if (source["_documentation"] !== undefined) { this._documentation = new fhirModels.Element(source._documentation); }
     if (source["max"] !== undefined) { this.max = source.max; }
-    if (source["_max"] !== undefined) { this._max = source._max; }
+    if (source["_max"] !== undefined) { this._max = new fhirModels.Element(source._max); }
     if (source["min"] !== undefined) { this.min = source.min; }
-    if (source["_min"] !== undefined) { this._min = source._min; }
+    if (source["_min"] !== undefined) { this._min = new fhirModels.Element(source._min); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
     if (source["profile"] !== undefined) { this.profile = source.profile; }
-    if (source["_profile"] !== undefined) { this._profile = source._profile; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
-    if (source["use"] === undefined) { throw 'Missing required element use';}
-    this.use = source.use;
-    if (source["_use"] !== undefined) { this._use = source._use; }
+    if (source["_profile"] !== undefined) { this._profile = new fhirModels.Element(source._profile); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+    if (source["use"] !== undefined) { this.use = source.use; }
+    if (source["_use"] !== undefined) { this._use = new fhirModels.Element(source._use); }
+  }
+  /**
+   * Check if the current ParameterDefinition contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    if (this["use"] === undefined) { missingElements.push("use"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ParameterDefinition from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IParameterDefinition):ParameterDefinition {
+    var dest:ParameterDefinition = new ParameterDefinition(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ParameterDefinition is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

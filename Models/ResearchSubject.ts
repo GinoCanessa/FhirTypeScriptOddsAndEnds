@@ -6,69 +6,90 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A physical entity which is the primary unit of operational and/or administrative interest in a study.
  */
-export class ResearchSubject extends fhirModels.DomainResource {
+export class ResearchSubject extends fhirModels.DomainResource implements fhirInterfaces.IResearchSubject {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "ResearchSubject";
+  readonly resourceType = "ResearchSubject";
   /**
    * The name of the arm in the study the subject actually followed as part of this study.
    */
-  actualArm?: string;
-  _actualArm?: fhirModels.Element;
+  actualArm?: string|undefined;
+  _actualArm?: fhirModels.Element|undefined;
   /**
    * The name of the arm in the study the subject is expected to follow as part of this study.
    */
-  assignedArm?: string;
-  _assignedArm?: fhirModels.Element;
+  assignedArm?: string|undefined;
+  _assignedArm?: fhirModels.Element|undefined;
   /**
    * A record of the patient's informed agreement to participate in the study.
    */
-  consent?: fhirModels.Reference;
+  consent?: fhirModels.Reference|undefined;
   /**
    * Identifiers assigned to this research subject for a study.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The record of the person or animal who is involved in the study.
    */
-  individual: fhirModels.Reference;
+  individual: fhirModels.Reference|undefined;
   /**
    * The dates the subject began and ended their participation in the study.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * The current state of the subject.
    */
-  status: ResearchSubjectStatusEnum;
-  _status?: fhirModels.Element;
+  status: ResearchSubjectStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * Reference to the study the subject is participating in.
    */
-  study: fhirModels.Reference;
+  study: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for ResearchSubject from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ResearchSubject) {
+  constructor(source:Partial<fhirInterfaces.IResearchSubject>) {
     super(source);
     if ((source['resourceType'] !== "ResearchSubject") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a ResearchSubject'; }
     if (source["actualArm"] !== undefined) { this.actualArm = source.actualArm; }
-    if (source["_actualArm"] !== undefined) { this._actualArm = source._actualArm; }
+    if (source["_actualArm"] !== undefined) { this._actualArm = new fhirModels.Element(source._actualArm); }
     if (source["assignedArm"] !== undefined) { this.assignedArm = source.assignedArm; }
-    if (source["_assignedArm"] !== undefined) { this._assignedArm = source._assignedArm; }
-    if (source["consent"] !== undefined) { this.consent = source.consent; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["individual"] === undefined) { throw 'Missing required element individual';}
-    this.individual = source.individual;
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["study"] === undefined) { throw 'Missing required element study';}
-    this.study = source.study;
+    if (source["_assignedArm"] !== undefined) { this._assignedArm = new fhirModels.Element(source._assignedArm); }
+    if (source["consent"] !== undefined) { this.consent = new fhirModels.Reference(source.consent); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["individual"] !== undefined) { this.individual = new fhirModels.Reference(source.individual); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["study"] !== undefined) { this.study = new fhirModels.Reference(source.study); }
+  }
+  /**
+   * Check if the current ResearchSubject contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["individual"] === undefined) { missingElements.push("individual"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["study"] === undefined) { missingElements.push("study"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ResearchSubject from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IResearchSubject):ResearchSubject {
+    var dest:ResearchSubject = new ResearchSubject(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ResearchSubject is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

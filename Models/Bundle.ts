@@ -6,59 +6,100 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
  * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
  * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
  */
-export class BundleLink extends fhirModels.BackboneElement {
+export class BundleLink extends fhirModels.BackboneElement implements fhirInterfaces.IBundleLink {
   /**
    * A name which details the functional use for this link - see [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
    */
-  relation: string;
-  _relation?: fhirModels.Element;
+  relation: string|undefined;
+  _relation?: fhirModels.Element|undefined;
   /**
    * The reference details for the link.
    */
-  url: string;
-  _url?: fhirModels.Element;
+  url: string|undefined;
+  _url?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for BundleLink from an object that MAY NOT contain all required elements.
    */
-  constructor(source: BundleLink) {
+  constructor(source:Partial<fhirInterfaces.IBundleLink>) {
     super(source);
-    if (source["relation"] === undefined) { throw 'Missing required element relation';}
-    this.relation = source.relation;
-    if (source["_relation"] !== undefined) { this._relation = source._relation; }
-    if (source["url"] === undefined) { throw 'Missing required element url';}
-    this.url = source.url;
-    if (source["_url"] !== undefined) { this._url = source._url; }
+    if (source["relation"] !== undefined) { this.relation = source.relation; }
+    if (source["_relation"] !== undefined) { this._relation = new fhirModels.Element(source._relation); }
+    if (source["url"] !== undefined) { this.url = source.url; }
+    if (source["_url"] !== undefined) { this._url = new fhirModels.Element(source._url); }
+  }
+  /**
+   * Check if the current BundleLink contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["relation"] === undefined) { missingElements.push("relation"); }
+    if (this["url"] === undefined) { missingElements.push("url"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a BundleLink from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundleLink):BundleLink {
+    var dest:BundleLink = new BundleLink(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `BundleLink is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Information about the search process that lead to the creation of this entry.
  */
-export class BundleEntrySearch extends fhirModels.BackboneElement {
+export class BundleEntrySearch extends fhirModels.BackboneElement implements fhirInterfaces.IBundleEntrySearch {
   /**
    * There is only one mode. In some corner cases, a resource may be included because it is both a match and an include. In these circumstances, 'match' takes precedence.
    */
-  mode?: BundleEntrySearchModeEnum;
-  _mode?: fhirModels.Element;
+  mode?: BundleEntrySearchModeEnum|undefined;
+  _mode?: fhirModels.Element|undefined;
   /**
    * Servers are not required to return a ranking score. 1 is most relevant, and 0 is least relevant. Often, search results are sorted by score, but the client may specify a different sort order.
    * See [Patient Match](patient-operation-match.html) for the EMPI search which relates to this element.
    */
-  score?: number;
-  _score?: fhirModels.Element;
+  score?: number|undefined;
+  _score?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for BundleEntrySearch from an object that MAY NOT contain all required elements.
    */
-  constructor(source: BundleEntrySearch) {
+  constructor(source:Partial<fhirInterfaces.IBundleEntrySearch>) {
     super(source);
     if (source["mode"] !== undefined) { this.mode = source.mode; }
-    if (source["_mode"] !== undefined) { this._mode = source._mode; }
+    if (source["_mode"] !== undefined) { this._mode = new fhirModels.Element(source._mode); }
     if (source["score"] !== undefined) { this.score = source.score; }
-    if (source["_score"] !== undefined) { this._score = source._score; }
+    if (source["_score"] !== undefined) { this._score = new fhirModels.Element(source._score); }
+  }
+  /**
+   * Check if the current BundleEntrySearch contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a BundleEntrySearch from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundleEntrySearch):BundleEntrySearch {
+    var dest:BundleEntrySearch = new BundleEntrySearch(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `BundleEntrySearch is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -72,56 +113,76 @@ export enum BundleEntrySearchModeEnum {
 /**
  * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
  */
-export class BundleEntryRequest extends fhirModels.BackboneElement {
+export class BundleEntryRequest extends fhirModels.BackboneElement implements fhirInterfaces.IBundleEntryRequest {
   /**
    * Only perform the operation if the Etag value matches. For more information, see the API section ["Managing Resource Contention"](http.html#concurrency).
    */
-  ifMatch?: string;
-  _ifMatch?: fhirModels.Element;
+  ifMatch?: string|undefined;
+  _ifMatch?: fhirModels.Element|undefined;
   /**
    * Only perform the operation if the last updated date matches. See the API documentation for ["Conditional Read"](http.html#cread).
    */
-  ifModifiedSince?: string;
-  _ifModifiedSince?: fhirModels.Element;
+  ifModifiedSince?: string|undefined;
+  _ifModifiedSince?: fhirModels.Element|undefined;
   /**
    * Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for ["Conditional Create"](http.html#ccreate). This is just the query portion of the URL - what follows the "?" (not including the "?").
    */
-  ifNoneExist?: string;
-  _ifNoneExist?: fhirModels.Element;
+  ifNoneExist?: string|undefined;
+  _ifNoneExist?: fhirModels.Element|undefined;
   /**
    * If the ETag values match, return a 304 Not Modified status. See the API documentation for ["Conditional Read"](http.html#cread).
    */
-  ifNoneMatch?: string;
-  _ifNoneMatch?: fhirModels.Element;
+  ifNoneMatch?: string|undefined;
+  _ifNoneMatch?: fhirModels.Element|undefined;
   /**
    * In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.
    */
-  method: BundleEntryRequestMethodEnum;
-  _method?: fhirModels.Element;
+  method: BundleEntryRequestMethodEnum|undefined;
+  _method?: fhirModels.Element|undefined;
   /**
    * E.g. for a Patient Create, the method would be "POST" and the URL would be "Patient". For a Patient Update, the method would be PUT and the URL would be "Patient/[id]".
    */
-  url: string;
-  _url?: fhirModels.Element;
+  url: string|undefined;
+  _url?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for BundleEntryRequest from an object that MAY NOT contain all required elements.
    */
-  constructor(source: BundleEntryRequest) {
+  constructor(source:Partial<fhirInterfaces.IBundleEntryRequest>) {
     super(source);
     if (source["ifMatch"] !== undefined) { this.ifMatch = source.ifMatch; }
-    if (source["_ifMatch"] !== undefined) { this._ifMatch = source._ifMatch; }
+    if (source["_ifMatch"] !== undefined) { this._ifMatch = new fhirModels.Element(source._ifMatch); }
     if (source["ifModifiedSince"] !== undefined) { this.ifModifiedSince = source.ifModifiedSince; }
-    if (source["_ifModifiedSince"] !== undefined) { this._ifModifiedSince = source._ifModifiedSince; }
+    if (source["_ifModifiedSince"] !== undefined) { this._ifModifiedSince = new fhirModels.Element(source._ifModifiedSince); }
     if (source["ifNoneExist"] !== undefined) { this.ifNoneExist = source.ifNoneExist; }
-    if (source["_ifNoneExist"] !== undefined) { this._ifNoneExist = source._ifNoneExist; }
+    if (source["_ifNoneExist"] !== undefined) { this._ifNoneExist = new fhirModels.Element(source._ifNoneExist); }
     if (source["ifNoneMatch"] !== undefined) { this.ifNoneMatch = source.ifNoneMatch; }
-    if (source["_ifNoneMatch"] !== undefined) { this._ifNoneMatch = source._ifNoneMatch; }
-    if (source["method"] === undefined) { throw 'Missing required element method';}
-    this.method = source.method;
-    if (source["_method"] !== undefined) { this._method = source._method; }
-    if (source["url"] === undefined) { throw 'Missing required element url';}
-    this.url = source.url;
-    if (source["_url"] !== undefined) { this._url = source._url; }
+    if (source["_ifNoneMatch"] !== undefined) { this._ifNoneMatch = new fhirModels.Element(source._ifNoneMatch); }
+    if (source["method"] !== undefined) { this.method = source.method; }
+    if (source["_method"] !== undefined) { this._method = new fhirModels.Element(source._method); }
+    if (source["url"] !== undefined) { this.url = source.url; }
+    if (source["_url"] !== undefined) { this._url = new fhirModels.Element(source._url); }
+  }
+  /**
+   * Check if the current BundleEntryRequest contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["method"] === undefined) { missingElements.push("method"); }
+    if (this["url"] === undefined) { missingElements.push("url"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a BundleEntryRequest from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundleEntryRequest):BundleEntryRequest {
+    var dest:BundleEntryRequest = new BundleEntryRequest(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `BundleEntryRequest is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -138,119 +199,161 @@ export enum BundleEntryRequestMethodEnum {
 /**
  * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
  */
-export class BundleEntryResponse extends fhirModels.BackboneElement {
+export class BundleEntryResponse extends fhirModels.BackboneElement implements fhirInterfaces.IBundleEntryResponse {
   /**
    * Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.
    */
-  etag?: string;
-  _etag?: fhirModels.Element;
+  etag?: string|undefined;
+  _etag?: fhirModels.Element|undefined;
   /**
    * This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.
    */
-  lastModified?: string;
-  _lastModified?: fhirModels.Element;
+  lastModified?: string|undefined;
+  _lastModified?: fhirModels.Element|undefined;
   /**
    * The location header created by processing this operation, populated if the operation returns a location.
    */
-  location?: string;
-  _location?: fhirModels.Element;
+  location?: string|undefined;
+  _location?: fhirModels.Element|undefined;
   /**
    * For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.
    * This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.
    */
-  outcome?: fhirModels.FhirResource;
+  outcome?: fhirModels.FhirResource|undefined;
   /**
    * The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.
    */
-  status: string;
-  _status?: fhirModels.Element;
+  status: string|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for BundleEntryResponse from an object that MAY NOT contain all required elements.
    */
-  constructor(source: BundleEntryResponse) {
+  constructor(source:Partial<fhirInterfaces.IBundleEntryResponse>) {
     super(source);
     if (source["etag"] !== undefined) { this.etag = source.etag; }
-    if (source["_etag"] !== undefined) { this._etag = source._etag; }
+    if (source["_etag"] !== undefined) { this._etag = new fhirModels.Element(source._etag); }
     if (source["lastModified"] !== undefined) { this.lastModified = source.lastModified; }
-    if (source["_lastModified"] !== undefined) { this._lastModified = source._lastModified; }
+    if (source["_lastModified"] !== undefined) { this._lastModified = new fhirModels.Element(source._lastModified); }
     if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["_location"] !== undefined) { this._location = source._location; }
-    if (source["outcome"] !== undefined) { this.outcome = source.outcome; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_location"] !== undefined) { this._location = new fhirModels.Element(source._location); }
+    if (source["outcome"] !== undefined) { this.outcome = (fhirModels.FhirResourceFactory(source.outcome) ?? undefined); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current BundleEntryResponse contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a BundleEntryResponse from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundleEntryResponse):BundleEntryResponse {
+    var dest:BundleEntryResponse = new BundleEntryResponse(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `BundleEntryResponse is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
  */
-export class BundleEntry<BundleContentType = fhirModels.FhirResource> extends fhirModels.BackboneElement {
+export class BundleEntry<BundleContentType = fhirModels.FhirResource> extends fhirModels.BackboneElement implements fhirInterfaces.IBundleEntry<BundleContentType> {
   /**
    * fullUrl might not be [unique in the context of a resource](bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](references.html), the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](references.html#regex), then the 'id' portion of the fullUrl SHALL end with the Resource.id.
    * Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).
    */
-  fullUrl?: string;
-  _fullUrl?: fhirModels.Element;
+  fullUrl?: string|undefined;
+  _fullUrl?: fhirModels.Element|undefined;
   /**
    * A series of links that provide context to this entry.
    */
-  link?: fhirModels.BundleLink[];
+  link?: fhirModels.BundleLink[]|undefined;
   /**
    * Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.
    */
-  request?: fhirModels.BundleEntryRequest;
+  request?: fhirModels.BundleEntryRequest|undefined;
   /**
    * The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.
    */
-  resource?: BundleContentType;
+  resource?: BundleContentType|undefined;
   /**
    * Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.
    */
-  response?: fhirModels.BundleEntryResponse;
+  response?: fhirModels.BundleEntryResponse|undefined;
   /**
    * Information about the search process that lead to the creation of this entry.
    */
-  search?: fhirModels.BundleEntrySearch;
+  search?: fhirModels.BundleEntrySearch|undefined;
   /**
-   * Default constructor
+   * Default constructor for BundleEntry from an object that MAY NOT contain all required elements.
    */
-  constructor(source: BundleEntry) {
+  constructor(source:Partial<fhirInterfaces.IBundleEntry>) {
     super(source);
     if (source["fullUrl"] !== undefined) { this.fullUrl = source.fullUrl; }
-    if (source["_fullUrl"] !== undefined) { this._fullUrl = source._fullUrl; }
-    if (source["link"] !== undefined) { this.link = source.link; }
-    if (source["request"] !== undefined) { this.request = source.request; }
-    if (source["resource"] !== undefined) { this.resource = source.resource as unknown as BundleContentType; }
-    if (source["response"] !== undefined) { this.response = source.response; }
-    if (source["search"] !== undefined) { this.search = source.search; }
+    if (source["_fullUrl"] !== undefined) { this._fullUrl = new fhirModels.Element(source._fullUrl); }
+    if (source["link"] !== undefined) { this.link = source.link.map((x) => new fhirModels.BundleLink(x)); }
+    if (source["request"] !== undefined) { this.request = new fhirModels.BundleEntryRequest(source.request); }
+    if (source["resource"] !== undefined) { this.resource = (fhirModels.FhirResourceFactory(source.resource) ?? undefined) as unknown as BundleContentType|undefined; }
+
+
+    if (source["response"] !== undefined) { this.response = new fhirModels.BundleEntryResponse(source.response); }
+    if (source["search"] !== undefined) { this.search = new fhirModels.BundleEntrySearch(source.search); }
+  }
+  /**
+   * Check if the current BundleEntry contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a BundleEntry from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundleEntry):BundleEntry {
+    var dest:BundleEntry = new BundleEntry(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `BundleEntry is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A container for a collection of resources.
  */
-export class Bundle<BundleContentType = fhirModels.FhirResource> extends fhirModels.Resource {
+export class Bundle<BundleContentType = fhirModels.FhirResource> extends fhirModels.Resource implements fhirInterfaces.IBundle<BundleContentType> {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Bundle";
+  readonly resourceType = "Bundle";
   /**
    * An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).
    */
-  entry?: BundleEntry<BundleContentType>[];
+  entry?: BundleEntry<BundleContentType>[]|undefined;
   /**
    * Persistent identity generally only matters for batches of type Document, Message, and Collection. It would not normally be populated for search and history results and servers ignore Bundle.identifier when processing batches and transactions. For Documents  the .identifier SHALL be populated such that the .identifier is globally unique.
    */
-  identifier?: fhirModels.Identifier;
+  identifier?: fhirModels.Identifier|undefined;
   /**
    * Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)). 
    * Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was [read](http.html#read) directly.
    * This specification defines some specific uses of Bundle.link for [searching](search.html#conformance) and [paging](http.html#paging), but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.
    */
-  link?: fhirModels.BundleLink[];
+  link?: fhirModels.BundleLink[]|undefined;
   /**
    * The signature could be created by the "author" of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.
    */
-  signature?: fhirModels.Signature;
+  signature?: fhirModels.Signature|undefined;
   /**
    * For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  
    * Usage:
@@ -261,35 +364,55 @@ export class Bundle<BundleContentType = fhirModels.FhirResource> extends fhirMod
    * * transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning
    * The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.
    */
-  timestamp?: string;
-  _timestamp?: fhirModels.Element;
+  timestamp?: string|undefined;
+  _timestamp?: fhirModels.Element|undefined;
   /**
    * Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.
    */
-  total?: number;
-  _total?: fhirModels.Element;
+  total?: number|undefined;
+  _total?: fhirModels.Element|undefined;
   /**
    * It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types.
    */
-  type: BundleTypeEnum;
-  _type?: fhirModels.Element;
+  type: BundleTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Bundle from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Bundle) {
+  constructor(source:Partial<fhirInterfaces.IBundle>) {
     super(source);
     if ((source['resourceType'] !== "Bundle") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Bundle'; }
-    if (source["entry"] !== undefined) { this.entry = source.entry as unknown as BundleEntry<BundleContentType>[]; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["link"] !== undefined) { this.link = source.link; }
-    if (source["signature"] !== undefined) { this.signature = source.signature; }
+    if (source["entry"] !== undefined) { this.entry = source.entry.map((x) => new BundleEntry<BundleContentType>(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = new fhirModels.Identifier(source.identifier); }
+    if (source["link"] !== undefined) { this.link = source.link.map((x) => new fhirModels.BundleLink(x)); }
+    if (source["signature"] !== undefined) { this.signature = new fhirModels.Signature(source.signature); }
     if (source["timestamp"] !== undefined) { this.timestamp = source.timestamp; }
-    if (source["_timestamp"] !== undefined) { this._timestamp = source._timestamp; }
+    if (source["_timestamp"] !== undefined) { this._timestamp = new fhirModels.Element(source._timestamp); }
     if (source["total"] !== undefined) { this.total = source.total; }
-    if (source["_total"] !== undefined) { this._total = source._total; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["_total"] !== undefined) { this._total = new fhirModels.Element(source._total); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current Bundle contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Bundle from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IBundle):Bundle {
+    var dest:Bundle = new Bundle(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Bundle is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

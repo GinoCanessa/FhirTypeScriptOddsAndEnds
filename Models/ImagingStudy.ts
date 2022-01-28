@@ -6,276 +6,357 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
  */
-export class ImagingStudySeriesPerformer extends fhirModels.BackboneElement {
+export class ImagingStudySeriesPerformer extends fhirModels.BackboneElement implements fhirInterfaces.IImagingStudySeriesPerformer {
   /**
    * Indicates who or what performed the series.
    */
-  actor: fhirModels.Reference;
+  actor: fhirModels.Reference|undefined;
   /**
    * Distinguishes the type of involvement of the performer in the series.
    */
-  function?: fhirModels.CodeableConcept;
+  function?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ImagingStudySeriesPerformer from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ImagingStudySeriesPerformer) {
+  constructor(source:Partial<fhirInterfaces.IImagingStudySeriesPerformer>) {
     super(source);
-    if (source["actor"] === undefined) { throw 'Missing required element actor';}
-    this.actor = source.actor;
-    if (source["function"] !== undefined) { this.function = source.function; }
+    if (source["actor"] !== undefined) { this.actor = new fhirModels.Reference(source.actor); }
+    if (source["function"] !== undefined) { this.function = new fhirModels.CodeableConcept(source.function); }
+  }
+  /**
+   * Check if the current ImagingStudySeriesPerformer contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["actor"] === undefined) { missingElements.push("actor"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ImagingStudySeriesPerformer from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IImagingStudySeriesPerformer):ImagingStudySeriesPerformer {
+    var dest:ImagingStudySeriesPerformer = new ImagingStudySeriesPerformer(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ImagingStudySeriesPerformer is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A single SOP instance within the series, e.g. an image, or presentation state.
  */
-export class ImagingStudySeriesInstance extends fhirModels.BackboneElement {
+export class ImagingStudySeriesInstance extends fhirModels.BackboneElement implements fhirInterfaces.IImagingStudySeriesInstance {
   /**
    * The number of instance in the series.
    */
-  number?: number;
-  _number?: fhirModels.Element;
+  number?: number|undefined;
+  _number?: fhirModels.Element|undefined;
   /**
    * DICOM instance  type.
    */
-  sopClass: fhirModels.Coding;
+  sopClass: fhirModels.Coding|undefined;
   /**
    * Particularly for post-acquisition analytic objects, such as SR, presentation states, value mapping, etc.
    */
-  title?: string;
-  _title?: fhirModels.Element;
+  title?: string|undefined;
+  _title?: fhirModels.Element|undefined;
   /**
    * See  [DICOM PS3.3 C.12.1](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#sect_C.12.1).
    */
-  uid: string;
-  _uid?: fhirModels.Element;
+  uid: string|undefined;
+  _uid?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ImagingStudySeriesInstance from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ImagingStudySeriesInstance) {
+  constructor(source:Partial<fhirInterfaces.IImagingStudySeriesInstance>) {
     super(source);
     if (source["number"] !== undefined) { this.number = source.number; }
-    if (source["_number"] !== undefined) { this._number = source._number; }
-    if (source["sopClass"] === undefined) { throw 'Missing required element sopClass';}
-    this.sopClass = source.sopClass;
+    if (source["_number"] !== undefined) { this._number = new fhirModels.Element(source._number); }
+    if (source["sopClass"] !== undefined) { this.sopClass = new fhirModels.Coding(source.sopClass); }
     if (source["title"] !== undefined) { this.title = source.title; }
-    if (source["_title"] !== undefined) { this._title = source._title; }
-    if (source["uid"] === undefined) { throw 'Missing required element uid';}
-    this.uid = source.uid;
-    if (source["_uid"] !== undefined) { this._uid = source._uid; }
+    if (source["_title"] !== undefined) { this._title = new fhirModels.Element(source._title); }
+    if (source["uid"] !== undefined) { this.uid = source.uid; }
+    if (source["_uid"] !== undefined) { this._uid = new fhirModels.Element(source._uid); }
+  }
+  /**
+   * Check if the current ImagingStudySeriesInstance contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["sopClass"] === undefined) { missingElements.push("sopClass"); }
+    if (this["uid"] === undefined) { missingElements.push("uid"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ImagingStudySeriesInstance from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IImagingStudySeriesInstance):ImagingStudySeriesInstance {
+    var dest:ImagingStudySeriesInstance = new ImagingStudySeriesInstance(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ImagingStudySeriesInstance is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Each study has one or more series of images or other content.
  */
-export class ImagingStudySeries extends fhirModels.BackboneElement {
+export class ImagingStudySeries extends fhirModels.BackboneElement implements fhirInterfaces.IImagingStudySeries {
   /**
    * The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings. The bodySite may indicate the laterality of body part imaged; if so, it shall be consistent with any content of ImagingStudy.series.laterality.
    */
-  bodySite?: fhirModels.Coding;
+  bodySite?: fhirModels.Coding|undefined;
   /**
    * A description of the series.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG) formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; and DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances.
    */
-  endpoint?: fhirModels.Reference[];
+  endpoint?: fhirModels.Reference[]|undefined;
   /**
    * A single SOP instance within the series, e.g. an image, or presentation state.
    */
-  instance?: fhirModels.ImagingStudySeriesInstance[];
+  instance?: fhirModels.ImagingStudySeriesInstance[]|undefined;
   /**
    * The laterality of the (possibly paired) anatomic structures examined. E.g., the left knee, both lungs, or unpaired abdomen. If present, shall be consistent with any laterality information indicated in ImagingStudy.series.bodySite.
    */
-  laterality?: fhirModels.Coding;
+  laterality?: fhirModels.Coding|undefined;
   /**
    * The modality of this series sequence.
    */
-  modality: fhirModels.Coding;
+  modality: fhirModels.Coding|undefined;
   /**
    * The numeric identifier of this series in the study.
    */
-  number?: number;
-  _number?: fhirModels.Element;
+  number?: number|undefined;
+  _number?: fhirModels.Element|undefined;
   /**
    * Number of SOP Instances in the Study. The value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
    */
-  numberOfInstances?: number;
-  _numberOfInstances?: fhirModels.Element;
+  numberOfInstances?: number|undefined;
+  _numberOfInstances?: fhirModels.Element|undefined;
   /**
    * If the person who performed the series is not known, their Organization may be recorded. A patient, or related person, may be the performer, e.g. for patient-captured images.
    */
-  performer?: fhirModels.ImagingStudySeriesPerformer[];
+  performer?: fhirModels.ImagingStudySeriesPerformer[]|undefined;
   /**
    * The specimen imaged, e.g., for whole slide imaging of a biopsy.
    */
-  specimen?: fhirModels.Reference[];
+  specimen?: fhirModels.Reference[]|undefined;
   /**
    * The date and time the series was started.
    */
-  started?: string;
-  _started?: fhirModels.Element;
+  started?: string|undefined;
+  _started?: fhirModels.Element|undefined;
   /**
    * See [DICOM PS3.3 C.7.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html).
    */
-  uid: string;
-  _uid?: fhirModels.Element;
+  uid: string|undefined;
+  _uid?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ImagingStudySeries from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ImagingStudySeries) {
+  constructor(source:Partial<fhirInterfaces.IImagingStudySeries>) {
     super(source);
-    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite; }
+    if (source["bodySite"] !== undefined) { this.bodySite = new fhirModels.Coding(source.bodySite); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["instance"] !== undefined) { this.instance = source.instance; }
-    if (source["laterality"] !== undefined) { this.laterality = source.laterality; }
-    if (source["modality"] === undefined) { throw 'Missing required element modality';}
-    this.modality = source.modality;
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint.map((x) => new fhirModels.Reference(x)); }
+    if (source["instance"] !== undefined) { this.instance = source.instance.map((x) => new fhirModels.ImagingStudySeriesInstance(x)); }
+    if (source["laterality"] !== undefined) { this.laterality = new fhirModels.Coding(source.laterality); }
+    if (source["modality"] !== undefined) { this.modality = new fhirModels.Coding(source.modality); }
     if (source["number"] !== undefined) { this.number = source.number; }
-    if (source["_number"] !== undefined) { this._number = source._number; }
+    if (source["_number"] !== undefined) { this._number = new fhirModels.Element(source._number); }
     if (source["numberOfInstances"] !== undefined) { this.numberOfInstances = source.numberOfInstances; }
-    if (source["_numberOfInstances"] !== undefined) { this._numberOfInstances = source._numberOfInstances; }
-    if (source["performer"] !== undefined) { this.performer = source.performer; }
-    if (source["specimen"] !== undefined) { this.specimen = source.specimen; }
+    if (source["_numberOfInstances"] !== undefined) { this._numberOfInstances = new fhirModels.Element(source._numberOfInstances); }
+    if (source["performer"] !== undefined) { this.performer = source.performer.map((x) => new fhirModels.ImagingStudySeriesPerformer(x)); }
+    if (source["specimen"] !== undefined) { this.specimen = source.specimen.map((x) => new fhirModels.Reference(x)); }
     if (source["started"] !== undefined) { this.started = source.started; }
-    if (source["_started"] !== undefined) { this._started = source._started; }
-    if (source["uid"] === undefined) { throw 'Missing required element uid';}
-    this.uid = source.uid;
-    if (source["_uid"] !== undefined) { this._uid = source._uid; }
+    if (source["_started"] !== undefined) { this._started = new fhirModels.Element(source._started); }
+    if (source["uid"] !== undefined) { this.uid = source.uid; }
+    if (source["_uid"] !== undefined) { this._uid = new fhirModels.Element(source._uid); }
+  }
+  /**
+   * Check if the current ImagingStudySeries contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["modality"] === undefined) { missingElements.push("modality"); }
+    if (this["uid"] === undefined) { missingElements.push("uid"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ImagingStudySeries from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IImagingStudySeries):ImagingStudySeries {
+    var dest:ImagingStudySeries = new ImagingStudySeries(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ImagingStudySeries is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.
  */
-export class ImagingStudy extends fhirModels.DomainResource {
+export class ImagingStudy extends fhirModels.DomainResource implements fhirInterfaces.IImagingStudy {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "ImagingStudy";
+  readonly resourceType = "ImagingStudy";
   /**
    * A list of the diagnostic requests that resulted in this imaging study being performed.
    */
-  basedOn?: fhirModels.Reference[];
+  basedOn?: fhirModels.Reference[]|undefined;
   /**
    * The Imaging Manager description of the study. Institution-generated description or classification of the Study (component) performed.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission test).
    */
-  encounter?: fhirModels.Reference;
+  encounter?: fhirModels.Reference|undefined;
   /**
    * Typical endpoint types include DICOM WADO-RS, which is used to retrieve DICOM instances in native or rendered (e.g., JPG, PNG), formats using a RESTful API; DICOM WADO-URI, which can similarly retrieve native or rendered instances, except using an HTTP query-based approach; DICOM QIDO-RS, which allows RESTful query for DICOM information without retrieving the actual instances; or IHE Invoke Image Display (IID), which provides standard invocation of an imaging web viewer.
    */
-  endpoint?: fhirModels.Reference[];
+  endpoint?: fhirModels.Reference[]|undefined;
   /**
    * See discussion under [Imaging Study Implementation Notes](imagingstudy.html#notes) for encoding of DICOM Study Instance UID. Accession Number should use ACSN Identifier type.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Who read the study and interpreted the images or other content.
    */
-  interpreter?: fhirModels.Reference[];
+  interpreter?: fhirModels.Reference[]|undefined;
   /**
    * The principal physical location where the ImagingStudy was performed.
    */
-  location?: fhirModels.Reference;
+  location?: fhirModels.Reference|undefined;
   /**
    * A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).
    */
-  modality?: fhirModels.Coding[];
+  modality?: fhirModels.Coding[]|undefined;
   /**
    * Per the recommended DICOM mapping, this element is derived from the Study Description attribute (0008,1030). Observations or findings about the imaging study should be recorded in another resource, e.g. Observation, and not in this element.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * Number of SOP Instances in Study. This value given may be larger than the number of instance elements this resource contains due to resource availability, security, or other factors. This element should be present if any instance elements are present.
    */
-  numberOfInstances?: number;
-  _numberOfInstances?: fhirModels.Element;
+  numberOfInstances?: number|undefined;
+  _numberOfInstances?: fhirModels.Element|undefined;
   /**
    * Number of Series in the Study. This value given may be larger than the number of series elements this Resource contains due to resource availability, security, or other factors. This element should be present if any series elements are present.
    */
-  numberOfSeries?: number;
-  _numberOfSeries?: fhirModels.Element;
+  numberOfSeries?: number|undefined;
+  _numberOfSeries?: fhirModels.Element|undefined;
   /**
    * The code for the performed procedure type.
    */
-  procedureCode?: fhirModels.CodeableConcept[];
+  procedureCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The procedure which this ImagingStudy was part of.
    */
-  procedureReference?: fhirModels.Reference;
+  procedureReference?: fhirModels.Reference|undefined;
   /**
    * Description of clinical condition indicating why the ImagingStudy was requested.
    */
-  reasonCode?: fhirModels.CodeableConcept[];
+  reasonCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates another resource whose existence justifies this Study.
    */
-  reasonReference?: fhirModels.Reference[];
+  reasonReference?: fhirModels.Reference[]|undefined;
   /**
    * The requesting/referring physician.
    */
-  referrer?: fhirModels.Reference;
+  referrer?: fhirModels.Reference|undefined;
   /**
    * Each study has one or more series of images or other content.
    */
-  series?: fhirModels.ImagingStudySeries[];
+  series?: fhirModels.ImagingStudySeries[]|undefined;
   /**
    * Date and time the study started.
    */
-  started?: string;
-  _started?: fhirModels.Element;
+  started?: string|undefined;
+  _started?: fhirModels.Element|undefined;
   /**
    * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
    */
-  status: ImagingStudyStatusEnum;
-  _status?: fhirModels.Element;
+  status: ImagingStudyStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * QA phantoms can be recorded with a Device; multiple subjects (such as mice) can be recorded with a Group.
    */
-  subject: fhirModels.Reference;
+  subject: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for ImagingStudy from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ImagingStudy) {
+  constructor(source:Partial<fhirInterfaces.IImagingStudy>) {
     super(source);
     if ((source['resourceType'] !== "ImagingStudy") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a ImagingStudy'; }
-    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn; }
+    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn.map((x) => new fhirModels.Reference(x)); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["encounter"] !== undefined) { this.encounter = source.encounter; }
-    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["interpreter"] !== undefined) { this.interpreter = source.interpreter; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["modality"] !== undefined) { this.modality = source.modality; }
-    if (source["note"] !== undefined) { this.note = source.note; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["encounter"] !== undefined) { this.encounter = new fhirModels.Reference(source.encounter); }
+    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint.map((x) => new fhirModels.Reference(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["interpreter"] !== undefined) { this.interpreter = source.interpreter.map((x) => new fhirModels.Reference(x)); }
+    if (source["location"] !== undefined) { this.location = new fhirModels.Reference(source.location); }
+    if (source["modality"] !== undefined) { this.modality = source.modality.map((x) => new fhirModels.Coding(x)); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
     if (source["numberOfInstances"] !== undefined) { this.numberOfInstances = source.numberOfInstances; }
-    if (source["_numberOfInstances"] !== undefined) { this._numberOfInstances = source._numberOfInstances; }
+    if (source["_numberOfInstances"] !== undefined) { this._numberOfInstances = new fhirModels.Element(source._numberOfInstances); }
     if (source["numberOfSeries"] !== undefined) { this.numberOfSeries = source.numberOfSeries; }
-    if (source["_numberOfSeries"] !== undefined) { this._numberOfSeries = source._numberOfSeries; }
-    if (source["procedureCode"] !== undefined) { this.procedureCode = source.procedureCode; }
-    if (source["procedureReference"] !== undefined) { this.procedureReference = source.procedureReference; }
-    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode; }
-    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference; }
-    if (source["referrer"] !== undefined) { this.referrer = source.referrer; }
-    if (source["series"] !== undefined) { this.series = source.series; }
+    if (source["_numberOfSeries"] !== undefined) { this._numberOfSeries = new fhirModels.Element(source._numberOfSeries); }
+    if (source["procedureCode"] !== undefined) { this.procedureCode = source.procedureCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["procedureReference"] !== undefined) { this.procedureReference = new fhirModels.Reference(source.procedureReference); }
+    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference.map((x) => new fhirModels.Reference(x)); }
+    if (source["referrer"] !== undefined) { this.referrer = new fhirModels.Reference(source.referrer); }
+    if (source["series"] !== undefined) { this.series = source.series.map((x) => new fhirModels.ImagingStudySeries(x)); }
     if (source["started"] !== undefined) { this.started = source.started; }
-    if (source["_started"] !== undefined) { this._started = source._started; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subject"] === undefined) { throw 'Missing required element subject';}
-    this.subject = source.subject;
+    if (source["_started"] !== undefined) { this._started = new fhirModels.Element(source._started); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subject"] !== undefined) { this.subject = new fhirModels.Reference(source.subject); }
+  }
+  /**
+   * Check if the current ImagingStudy contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["subject"] === undefined) { missingElements.push("subject"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ImagingStudy from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IImagingStudy):ImagingStudy {
+    var dest:ImagingStudy = new ImagingStudy(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ImagingStudy is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

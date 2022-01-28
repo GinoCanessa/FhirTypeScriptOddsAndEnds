@@ -6,14 +6,35 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export class Count extends fhirModels.Quantity {
+export class Count extends fhirModels.Quantity implements fhirInterfaces.ICount {
   /**
-   * Default constructor
+   * Default constructor for Count from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Count) {
+  constructor(source:Partial<fhirInterfaces.ICount>) {
     super(source);
+  }
+  /**
+   * Check if the current Count contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Count from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ICount):Count {
+    var dest:Count = new Count(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Count is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

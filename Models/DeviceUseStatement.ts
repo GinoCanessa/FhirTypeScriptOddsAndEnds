@@ -6,105 +6,126 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A record of a device being used by a patient where the record is the result of a report from the patient or another clinician.
  */
-export class DeviceUseStatement extends fhirModels.DomainResource {
+export class DeviceUseStatement extends fhirModels.DomainResource implements fhirInterfaces.IDeviceUseStatement {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "DeviceUseStatement";
+  readonly resourceType = "DeviceUseStatement";
   /**
    * A plan, proposal or order that is fulfilled in whole or in part by this DeviceUseStatement.
    */
-  basedOn?: fhirModels.Reference[];
+  basedOn?: fhirModels.Reference[]|undefined;
   /**
    * Indicates the anotomic location on the subject's body where the device was used ( i.e. the target).
    */
-  bodySite?: fhirModels.CodeableConcept;
+  bodySite?: fhirModels.CodeableConcept|undefined;
   /**
    * The most common use cases for deriving a DeviceUseStatement comes from creating it from a request or from an observation or a claim. it should be noted that the amount of information that is available varies from the type resource that you derive the DeviceUseStatement from.
    */
-  derivedFrom?: fhirModels.Reference[];
+  derivedFrom?: fhirModels.Reference[]|undefined;
   /**
    * The details of the device used.
    */
-  device: fhirModels.Reference;
+  device: fhirModels.Reference|undefined;
   /**
    * An external identifier for this statement such as an IRI.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Details about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class. These may include for example a comment, an instruction, or a note associated with the statement.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * Reason or justification for the use of the device.
    */
-  reasonCode?: fhirModels.CodeableConcept[];
+  reasonCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates another resource whose existence justifies this DeviceUseStatement.
    */
-  reasonReference?: fhirModels.Reference[];
+  reasonReference?: fhirModels.Reference[]|undefined;
   /**
    * The time at which the statement was made/recorded.
    */
-  recordedOn?: string;
-  _recordedOn?: fhirModels.Element;
+  recordedOn?: string|undefined;
+  _recordedOn?: fhirModels.Element|undefined;
   /**
    * Who reported the device was being used by the patient.
    */
-  source?: fhirModels.Reference;
+  source?: fhirModels.Reference|undefined;
   /**
    * DeviceUseStatment is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for contains codes that assert the status of the use  by the patient (for example, stopped or on hold) as well as codes that assert the status of the resource itself (for example, entered in error).
    * This element is labeled as a modifier because the status contains the codes that mark the statement as not currently valid.
    */
-  status: DeviceUseStatementStatusEnum;
-  _status?: fhirModels.Element;
+  status: DeviceUseStatementStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The patient who used the device.
    */
-  subject: fhirModels.Reference;
+  subject: fhirModels.Reference|undefined;
   /**
    * How often the device was used.
    */
-  timingTiming?: fhirModels.Timing;
+  timingTiming?: fhirModels.Timing|undefined;
   /**
    * How often the device was used.
    */
-  timingPeriod?: fhirModels.Period;
+  timingPeriod?: fhirModels.Period|undefined;
   /**
    * How often the device was used.
    */
-  timingDateTime?: string;
-  _timingDateTime?: fhirModels.Element;
+  timingDateTime?: string|undefined;
+  _timingDateTime?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for DeviceUseStatement from an object that MAY NOT contain all required elements.
    */
-  constructor(source: DeviceUseStatement) {
+  constructor(source:Partial<fhirInterfaces.IDeviceUseStatement>) {
     super(source);
     if ((source['resourceType'] !== "DeviceUseStatement") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a DeviceUseStatement'; }
-    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn; }
-    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite; }
-    if (source["derivedFrom"] !== undefined) { this.derivedFrom = source.derivedFrom; }
-    if (source["device"] === undefined) { throw 'Missing required element device';}
-    this.device = source.device;
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["note"] !== undefined) { this.note = source.note; }
-    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode; }
-    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference; }
+    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn.map((x) => new fhirModels.Reference(x)); }
+    if (source["bodySite"] !== undefined) { this.bodySite = new fhirModels.CodeableConcept(source.bodySite); }
+    if (source["derivedFrom"] !== undefined) { this.derivedFrom = source.derivedFrom.map((x) => new fhirModels.Reference(x)); }
+    if (source["device"] !== undefined) { this.device = new fhirModels.Reference(source.device); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
+    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference.map((x) => new fhirModels.Reference(x)); }
     if (source["recordedOn"] !== undefined) { this.recordedOn = source.recordedOn; }
-    if (source["_recordedOn"] !== undefined) { this._recordedOn = source._recordedOn; }
-    if (source["source"] !== undefined) { this.source = source.source; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subject"] === undefined) { throw 'Missing required element subject';}
-    this.subject = source.subject;
-    if (source["timingTiming"] !== undefined) { this.timingTiming = source.timingTiming; }
-    if (source["timingPeriod"] !== undefined) { this.timingPeriod = source.timingPeriod; }
+    if (source["_recordedOn"] !== undefined) { this._recordedOn = new fhirModels.Element(source._recordedOn); }
+    if (source["source"] !== undefined) { this.source = new fhirModels.Reference(source.source); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subject"] !== undefined) { this.subject = new fhirModels.Reference(source.subject); }
+    if (source["timingTiming"] !== undefined) { this.timingTiming = new fhirModels.Timing(source.timingTiming); }
+    if (source["timingPeriod"] !== undefined) { this.timingPeriod = new fhirModels.Period(source.timingPeriod); }
     if (source["timingDateTime"] !== undefined) { this.timingDateTime = source.timingDateTime; }
-    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = source._timingDateTime; }
+    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = new fhirModels.Element(source._timingDateTime); }
+  }
+  /**
+   * Check if the current DeviceUseStatement contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["device"] === undefined) { missingElements.push("device"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["subject"] === undefined) { missingElements.push("subject"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a DeviceUseStatement from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IDeviceUseStatement):DeviceUseStatement {
+    var dest:DeviceUseStatement = new DeviceUseStatement(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `DeviceUseStatement is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

@@ -6,44 +6,65 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Details where to send notifications when resources are received that meet the criteria.
  */
-export class SubscriptionChannel extends fhirModels.BackboneElement {
+export class SubscriptionChannel extends fhirModels.BackboneElement implements fhirInterfaces.ISubscriptionChannel {
   /**
    * For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).
    */
-  endpoint?: string;
-  _endpoint?: fhirModels.Element;
+  endpoint?: string|undefined;
+  _endpoint?: fhirModels.Element|undefined;
   /**
    * Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions.
    */
-  header?: string[];
-  _header?: fhirModels.Element[];
+  header?: string[]|undefined;
+  _header?: fhirModels.Element[]|undefined;
   /**
    * Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.
    */
-  payload?: string;
-  _payload?: fhirModels.Element;
+  payload?: string|undefined;
+  _payload?: fhirModels.Element|undefined;
   /**
    * The type of channel to send notifications on.
    */
-  type: SubscriptionChannelTypeEnum;
-  _type?: fhirModels.Element;
+  type: SubscriptionChannelTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for SubscriptionChannel from an object that MAY NOT contain all required elements.
    */
-  constructor(source: SubscriptionChannel) {
+  constructor(source:Partial<fhirInterfaces.ISubscriptionChannel>) {
     super(source);
     if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["_endpoint"] !== undefined) { this._endpoint = source._endpoint; }
-    if (source["header"] !== undefined) { this.header = source.header; }
-    if (source["_header"] !== undefined) { this._header = source._header; }
+    if (source["_endpoint"] !== undefined) { this._endpoint = new fhirModels.Element(source._endpoint); }
+    if (source["header"] !== undefined) { this.header = source.header.map((x) => (x)); }
+    if (source["_header"] !== undefined) { this._header = source._header.map((x) => new fhirModels.Element(x)); }
     if (source["payload"] !== undefined) { this.payload = source.payload; }
-    if (source["_payload"] !== undefined) { this._payload = source._payload; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["_payload"] !== undefined) { this._payload = new fhirModels.Element(source._payload); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current SubscriptionChannel contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a SubscriptionChannel from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ISubscriptionChannel):SubscriptionChannel {
+    var dest:SubscriptionChannel = new SubscriptionChannel(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `SubscriptionChannel is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -59,67 +80,87 @@ export enum SubscriptionChannelTypeEnum {
 /**
  * The subscription resource is used to define a push-based subscription from a server to another system. Once a subscription is registered with the server, the server checks every resource that is created or updated, and if the resource matches the given criteria, it sends a message on the defined "channel" so that another system can take an appropriate action.
  */
-export class Subscription extends fhirModels.DomainResource {
+export class Subscription extends fhirModels.DomainResource implements fhirInterfaces.ISubscription {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Subscription";
+  readonly resourceType = "Subscription";
   /**
    * Details where to send notifications when resources are received that meet the criteria.
    */
-  channel: fhirModels.SubscriptionChannel;
+  channel: fhirModels.SubscriptionChannel|undefined;
   /**
    * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
    */
-  contact?: fhirModels.ContactPoint[];
+  contact?: fhirModels.ContactPoint[]|undefined;
   /**
    * The rules are search criteria (without the [base] part). Like Bundle.entry.request.url, it has no leading "/".
    */
-  criteria: string;
-  _criteria?: fhirModels.Element;
+  criteria: string|undefined;
+  _criteria?: fhirModels.Element|undefined;
   /**
    * The server is permitted to deviate from this time but should observe it.
    */
-  end?: string;
-  _end?: fhirModels.Element;
+  end?: string|undefined;
+  _end?: fhirModels.Element|undefined;
   /**
    * A record of the last error that occurred when the server processed a notification.
    */
-  error?: string;
-  _error?: fhirModels.Element;
+  error?: string|undefined;
+  _error?: fhirModels.Element|undefined;
   /**
    * A description of why this subscription is defined.
    */
-  reason: string;
-  _reason?: fhirModels.Element;
+  reason: string|undefined;
+  _reason?: fhirModels.Element|undefined;
   /**
    * A client can only submit subscription resources in the requested or off state. Only the server can  move a subscription from requested to active, and then to error. Either the server or the client can turn a subscription off.
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
-  status: SubscriptionStatusEnum;
-  _status?: fhirModels.Element;
+  status: SubscriptionStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Subscription from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Subscription) {
+  constructor(source:Partial<fhirInterfaces.ISubscription>) {
     super(source);
     if ((source['resourceType'] !== "Subscription") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Subscription'; }
-    if (source["channel"] === undefined) { throw 'Missing required element channel';}
-    this.channel = source.channel;
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
-    if (source["criteria"] === undefined) { throw 'Missing required element criteria';}
-    this.criteria = source.criteria;
-    if (source["_criteria"] !== undefined) { this._criteria = source._criteria; }
+    if (source["channel"] !== undefined) { this.channel = new fhirModels.SubscriptionChannel(source.channel); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactPoint(x)); }
+    if (source["criteria"] !== undefined) { this.criteria = source.criteria; }
+    if (source["_criteria"] !== undefined) { this._criteria = new fhirModels.Element(source._criteria); }
     if (source["end"] !== undefined) { this.end = source.end; }
-    if (source["_end"] !== undefined) { this._end = source._end; }
+    if (source["_end"] !== undefined) { this._end = new fhirModels.Element(source._end); }
     if (source["error"] !== undefined) { this.error = source.error; }
-    if (source["_error"] !== undefined) { this._error = source._error; }
-    if (source["reason"] === undefined) { throw 'Missing required element reason';}
-    this.reason = source.reason;
-    if (source["_reason"] !== undefined) { this._reason = source._reason; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_error"] !== undefined) { this._error = new fhirModels.Element(source._error); }
+    if (source["reason"] !== undefined) { this.reason = source.reason; }
+    if (source["_reason"] !== undefined) { this._reason = new fhirModels.Element(source._reason); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current Subscription contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["channel"] === undefined) { missingElements.push("channel"); }
+    if (this["criteria"] === undefined) { missingElements.push("criteria"); }
+    if (this["reason"] === undefined) { missingElements.push("reason"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Subscription from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ISubscription):Subscription {
+    var dest:Subscription = new Subscription(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Subscription is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

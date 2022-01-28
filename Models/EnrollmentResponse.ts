@@ -6,68 +6,89 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * This resource provides enrollment and plan details from the processing of an EnrollmentRequest resource.
  */
-export class EnrollmentResponse extends fhirModels.DomainResource {
+export class EnrollmentResponse extends fhirModels.DomainResource implements fhirInterfaces.IEnrollmentResponse {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "EnrollmentResponse";
+  readonly resourceType = "EnrollmentResponse";
   /**
    * The date when the enclosed suite of services were performed or completed.
    */
-  created?: string;
-  _created?: fhirModels.Element;
+  created?: string|undefined;
+  _created?: fhirModels.Element|undefined;
   /**
    * A description of the status of the adjudication.
    */
-  disposition?: string;
-  _disposition?: fhirModels.Element;
+  disposition?: string|undefined;
+  _disposition?: fhirModels.Element|undefined;
   /**
    * The Response business identifier.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The Insurer who produced this adjudicated response.
    */
-  organization?: fhirModels.Reference;
+  organization?: fhirModels.Reference|undefined;
   /**
    * Processing status: error, complete.
    */
-  outcome?: EnrollmentResponseOutcomeEnum;
-  _outcome?: fhirModels.Element;
+  outcome?: EnrollmentResponseOutcomeEnum|undefined;
+  _outcome?: fhirModels.Element|undefined;
   /**
    * Original request resource reference.
    */
-  request?: fhirModels.Reference;
+  request?: fhirModels.Reference|undefined;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
-  requestProvider?: fhirModels.Reference;
+  requestProvider?: fhirModels.Reference|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the response as not currently valid.
    */
-  status?: EnrollmentResponseStatusEnum;
-  _status?: fhirModels.Element;
+  status?: EnrollmentResponseStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for EnrollmentResponse from an object that MAY NOT contain all required elements.
    */
-  constructor(source: EnrollmentResponse) {
+  constructor(source:Partial<fhirInterfaces.IEnrollmentResponse>) {
     super(source);
     if ((source['resourceType'] !== "EnrollmentResponse") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a EnrollmentResponse'; }
     if (source["created"] !== undefined) { this.created = source.created; }
-    if (source["_created"] !== undefined) { this._created = source._created; }
+    if (source["_created"] !== undefined) { this._created = new fhirModels.Element(source._created); }
     if (source["disposition"] !== undefined) { this.disposition = source.disposition; }
-    if (source["_disposition"] !== undefined) { this._disposition = source._disposition; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["organization"] !== undefined) { this.organization = source.organization; }
+    if (source["_disposition"] !== undefined) { this._disposition = new fhirModels.Element(source._disposition); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["organization"] !== undefined) { this.organization = new fhirModels.Reference(source.organization); }
     if (source["outcome"] !== undefined) { this.outcome = source.outcome; }
-    if (source["_outcome"] !== undefined) { this._outcome = source._outcome; }
-    if (source["request"] !== undefined) { this.request = source.request; }
-    if (source["requestProvider"] !== undefined) { this.requestProvider = source.requestProvider; }
+    if (source["_outcome"] !== undefined) { this._outcome = new fhirModels.Element(source._outcome); }
+    if (source["request"] !== undefined) { this.request = new fhirModels.Reference(source.request); }
+    if (source["requestProvider"] !== undefined) { this.requestProvider = new fhirModels.Reference(source.requestProvider); }
     if (source["status"] !== undefined) { this.status = source.status; }
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current EnrollmentResponse contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a EnrollmentResponse from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IEnrollmentResponse):EnrollmentResponse {
+    var dest:EnrollmentResponse = new EnrollmentResponse(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `EnrollmentResponse is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

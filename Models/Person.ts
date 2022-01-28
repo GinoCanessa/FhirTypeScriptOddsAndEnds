@@ -6,28 +6,49 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Link to a resource that concerns the same actual person.
  */
-export class PersonLink extends fhirModels.BackboneElement {
+export class PersonLink extends fhirModels.BackboneElement implements fhirInterfaces.IPersonLink {
   /**
    * Level of assurance that this link is associated with the target resource.
    */
-  assurance?: PersonLinkAssuranceEnum;
-  _assurance?: fhirModels.Element;
+  assurance?: PersonLinkAssuranceEnum|undefined;
+  _assurance?: fhirModels.Element|undefined;
   /**
    * The resource to which this actual person is associated.
    */
-  target: fhirModels.Reference;
+  target: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for PersonLink from an object that MAY NOT contain all required elements.
    */
-  constructor(source: PersonLink) {
+  constructor(source:Partial<fhirInterfaces.IPersonLink>) {
     super(source);
     if (source["assurance"] !== undefined) { this.assurance = source.assurance; }
-    if (source["_assurance"] !== undefined) { this._assurance = source._assurance; }
-    if (source["target"] === undefined) { throw 'Missing required element target';}
-    this.target = source.target;
+    if (source["_assurance"] !== undefined) { this._assurance = new fhirModels.Element(source._assurance); }
+    if (source["target"] !== undefined) { this.target = new fhirModels.Reference(source.target); }
+  }
+  /**
+   * Check if the current PersonLink contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["target"] === undefined) { missingElements.push("target"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a PersonLink from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IPersonLink):PersonLink {
+    var dest:PersonLink = new PersonLink(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `PersonLink is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -42,73 +63,93 @@ export enum PersonLinkAssuranceEnum {
 /**
  * Demographics and administrative information about a person independent of a specific health-related context.
  */
-export class Person extends fhirModels.DomainResource {
+export class Person extends fhirModels.DomainResource implements fhirInterfaces.IPerson {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Person";
+  readonly resourceType = "Person";
   /**
    * Whether this person's record is in active use.
    */
-  active?: boolean;
-  _active?: fhirModels.Element;
+  active?: boolean|undefined;
+  _active?: fhirModels.Element|undefined;
   /**
    * Person may have multiple addresses with different uses or applicable periods.
    */
-  address?: fhirModels.Address[];
+  address?: fhirModels.Address[]|undefined;
   /**
    * At least an estimated year should be provided as a guess if the real DOB is unknown.
    */
-  birthDate?: string;
-  _birthDate?: fhirModels.Element;
+  birthDate?: string|undefined;
+  _birthDate?: fhirModels.Element|undefined;
   /**
    * The gender might not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though a clear majority of systems and contexts only support M and F.
    */
-  gender?: PersonGenderEnum;
-  _gender?: fhirModels.Element;
+  gender?: PersonGenderEnum|undefined;
+  _gender?: fhirModels.Element|undefined;
   /**
    * Identifier for a person within a particular scope.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Link to a resource that concerns the same actual person.
    */
-  link?: fhirModels.PersonLink[];
+  link?: fhirModels.PersonLink[]|undefined;
   /**
    * The organization that is the custodian of the person record.
    */
-  managingOrganization?: fhirModels.Reference;
+  managingOrganization?: fhirModels.Reference|undefined;
   /**
    * Person may have multiple names with different uses or applicable periods.
    */
-  name?: fhirModels.HumanName[];
+  name?: fhirModels.HumanName[]|undefined;
   /**
    * An image that can be displayed as a thumbnail of the person to enhance the identification of the individual.
    */
-  photo?: fhirModels.Attachment;
+  photo?: fhirModels.Attachment|undefined;
   /**
    * Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification.
    */
-  telecom?: fhirModels.ContactPoint[];
+  telecom?: fhirModels.ContactPoint[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for Person from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Person) {
+  constructor(source:Partial<fhirInterfaces.IPerson>) {
     super(source);
     if ((source['resourceType'] !== "Person") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Person'; }
     if (source["active"] !== undefined) { this.active = source.active; }
-    if (source["_active"] !== undefined) { this._active = source._active; }
-    if (source["address"] !== undefined) { this.address = source.address; }
+    if (source["_active"] !== undefined) { this._active = new fhirModels.Element(source._active); }
+    if (source["address"] !== undefined) { this.address = source.address.map((x) => new fhirModels.Address(x)); }
     if (source["birthDate"] !== undefined) { this.birthDate = source.birthDate; }
-    if (source["_birthDate"] !== undefined) { this._birthDate = source._birthDate; }
+    if (source["_birthDate"] !== undefined) { this._birthDate = new fhirModels.Element(source._birthDate); }
     if (source["gender"] !== undefined) { this.gender = source.gender; }
-    if (source["_gender"] !== undefined) { this._gender = source._gender; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["link"] !== undefined) { this.link = source.link; }
-    if (source["managingOrganization"] !== undefined) { this.managingOrganization = source.managingOrganization; }
-    if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["photo"] !== undefined) { this.photo = source.photo; }
-    if (source["telecom"] !== undefined) { this.telecom = source.telecom; }
+    if (source["_gender"] !== undefined) { this._gender = new fhirModels.Element(source._gender); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["link"] !== undefined) { this.link = source.link.map((x) => new fhirModels.PersonLink(x)); }
+    if (source["managingOrganization"] !== undefined) { this.managingOrganization = new fhirModels.Reference(source.managingOrganization); }
+    if (source["name"] !== undefined) { this.name = source.name.map((x) => new fhirModels.HumanName(x)); }
+    if (source["photo"] !== undefined) { this.photo = new fhirModels.Attachment(source.photo); }
+    if (source["telecom"] !== undefined) { this.telecom = source.telecom.map((x) => new fhirModels.ContactPoint(x)); }
+  }
+  /**
+   * Check if the current Person contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Person from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IPerson):Person {
+    var dest:Person = new Person(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Person is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

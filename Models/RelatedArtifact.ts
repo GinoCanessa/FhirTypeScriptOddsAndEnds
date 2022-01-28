@@ -6,63 +6,84 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Related artifacts such as additional documentation, justification, or bibliographic references.
  */
-export class RelatedArtifact extends fhirModels.Element {
+export class RelatedArtifact extends fhirModels.Element implements fhirInterfaces.IRelatedArtifact {
   /**
    * Additional structured information about citations should be captured as extensions.
    */
-  citation?: string;
-  _citation?: fhirModels.Element;
+  citation?: string|undefined;
+  _citation?: fhirModels.Element|undefined;
   /**
    * A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
    */
-  display?: string;
-  _display?: fhirModels.Element;
+  display?: string|undefined;
+  _display?: fhirModels.Element|undefined;
   /**
    * The document being referenced, represented as an attachment. This is exclusive with the resource element.
    */
-  document?: fhirModels.Attachment;
+  document?: fhirModels.Attachment|undefined;
   /**
    * A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.
    */
-  label?: string;
-  _label?: fhirModels.Element;
+  label?: string|undefined;
+  _label?: fhirModels.Element|undefined;
   /**
    * If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.
    */
-  resource?: string;
-  _resource?: fhirModels.Element;
+  resource?: string|undefined;
+  _resource?: fhirModels.Element|undefined;
   /**
    * The type of relationship to the related artifact.
    */
-  type: RelatedArtifactTypeEnum;
-  _type?: fhirModels.Element;
+  type: RelatedArtifactTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
    * If a document or resource element is present, this element SHALL NOT be provided (use the url or reference in the Attachment or resource reference).
    */
-  url?: string;
-  _url?: fhirModels.Element;
+  url?: string|undefined;
+  _url?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for RelatedArtifact from an object that MAY NOT contain all required elements.
    */
-  constructor(source: RelatedArtifact) {
+  constructor(source:Partial<fhirInterfaces.IRelatedArtifact>) {
     super(source);
     if (source["citation"] !== undefined) { this.citation = source.citation; }
-    if (source["_citation"] !== undefined) { this._citation = source._citation; }
+    if (source["_citation"] !== undefined) { this._citation = new fhirModels.Element(source._citation); }
     if (source["display"] !== undefined) { this.display = source.display; }
-    if (source["_display"] !== undefined) { this._display = source._display; }
-    if (source["document"] !== undefined) { this.document = source.document; }
+    if (source["_display"] !== undefined) { this._display = new fhirModels.Element(source._display); }
+    if (source["document"] !== undefined) { this.document = new fhirModels.Attachment(source.document); }
     if (source["label"] !== undefined) { this.label = source.label; }
-    if (source["_label"] !== undefined) { this._label = source._label; }
+    if (source["_label"] !== undefined) { this._label = new fhirModels.Element(source._label); }
     if (source["resource"] !== undefined) { this.resource = source.resource; }
-    if (source["_resource"] !== undefined) { this._resource = source._resource; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["_resource"] !== undefined) { this._resource = new fhirModels.Element(source._resource); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
     if (source["url"] !== undefined) { this.url = source.url; }
-    if (source["_url"] !== undefined) { this._url = source._url; }
+    if (source["_url"] !== undefined) { this._url = new fhirModels.Element(source._url); }
+  }
+  /**
+   * Check if the current RelatedArtifact contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a RelatedArtifact from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRelatedArtifact):RelatedArtifact {
+    var dest:RelatedArtifact = new RelatedArtifact(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `RelatedArtifact is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

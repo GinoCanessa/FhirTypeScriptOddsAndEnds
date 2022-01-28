@@ -6,25 +6,44 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Base definition for all elements in a resource.
  */
-export class Element {
+export class Element implements fhirInterfaces.IElement {
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
-  extension?: fhirModels.Extension[];
+  extension?: fhirModels.Extension[]|undefined;
   /**
    * Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.
    */
-  id?: string;
-  _id?: fhirModels.Element;
+  id?: string|undefined;
+  _id?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Element from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Element) {
-    if (source["extension"] !== undefined) { this.extension = source.extension; }
+  constructor(source:Partial<fhirInterfaces.IElement>) {
+    if (source["extension"] !== undefined) { this.extension = source.extension.map((x) => new fhirModels.Extension(x)); }
     if (source["id"] !== undefined) { this.id = source.id; }
-    if (source["_id"] !== undefined) { this._id = source._id; }
+    if (source["_id"] !== undefined) { this._id = new fhirModels.Element(source._id); }
+  }
+  /**
+   * Check if the current Element contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Element from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IElement):Element {
+    var dest:Element = new Element(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Element is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

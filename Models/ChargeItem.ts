@@ -6,205 +6,246 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Indicates who or what performed or participated in the charged service.
  */
-export class ChargeItemPerformer extends fhirModels.BackboneElement {
+export class ChargeItemPerformer extends fhirModels.BackboneElement implements fhirInterfaces.IChargeItemPerformer {
   /**
    * The device, practitioner, etc. who performed or participated in the service.
    */
-  actor: fhirModels.Reference;
+  actor: fhirModels.Reference|undefined;
   /**
    * Describes the type of performance or participation(e.g. primary surgeon, anesthesiologiest, etc.).
    */
-  function?: fhirModels.CodeableConcept;
+  function?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ChargeItemPerformer from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ChargeItemPerformer) {
+  constructor(source:Partial<fhirInterfaces.IChargeItemPerformer>) {
     super(source);
-    if (source["actor"] === undefined) { throw 'Missing required element actor';}
-    this.actor = source.actor;
-    if (source["function"] !== undefined) { this.function = source.function; }
+    if (source["actor"] !== undefined) { this.actor = new fhirModels.Reference(source.actor); }
+    if (source["function"] !== undefined) { this.function = new fhirModels.CodeableConcept(source.function); }
+  }
+  /**
+   * Check if the current ChargeItemPerformer contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["actor"] === undefined) { missingElements.push("actor"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ChargeItemPerformer from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IChargeItemPerformer):ChargeItemPerformer {
+    var dest:ChargeItemPerformer = new ChargeItemPerformer(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ChargeItemPerformer is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation.
  */
-export class ChargeItem extends fhirModels.DomainResource {
+export class ChargeItem extends fhirModels.DomainResource implements fhirInterfaces.IChargeItem {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "ChargeItem";
+  readonly resourceType = "ChargeItem";
   /**
    * Systems posting the ChargeItems might not always be able to determine, which accounts the Items need to be places into. It is up to the postprocessing Financial System to apply internal rules to decide based on the Encounter/EpisodeOfCare/Patient/Coverage context and the type of ChargeItem, which Account is appropriate.
    */
-  account?: fhirModels.Reference[];
+  account?: fhirModels.Reference[]|undefined;
   /**
    * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
    */
-  bodysite?: fhirModels.CodeableConcept[];
+  bodysite?: fhirModels.CodeableConcept[]|undefined;
   /**
    * A code that identifies the charge, like a billing code.
    */
-  code: fhirModels.CodeableConcept;
+  code: fhirModels.CodeableConcept|undefined;
   /**
    * The encounter or episode of care that establishes the context for this event.
    */
-  context?: fhirModels.Reference;
+  context?: fhirModels.Reference|undefined;
   /**
    * The costCenter could either be given as a reference to an Organization(Role) resource or as the identifier of the cost center determined by Reference.identifier.value and Reference.identifier.system, depending on use case requirements.
    */
-  costCenter?: fhirModels.Reference;
+  costCenter?: fhirModels.Reference|undefined;
   /**
    * References the source of pricing information, rules of application for the code this ChargeItem uses.
    */
-  definitionCanonical?: string[];
-  _definitionCanonical?: fhirModels.Element[];
+  definitionCanonical?: string[]|undefined;
+  _definitionCanonical?: fhirModels.Element[]|undefined;
   /**
    * References the (external) source of pricing information, rules of application for the code this ChargeItem uses.
    */
-  definitionUri?: string[];
-  _definitionUri?: fhirModels.Element[];
+  definitionUri?: string[]|undefined;
+  _definitionUri?: fhirModels.Element[]|undefined;
   /**
    * The actual date when the service associated with the charge has been rendered is captured in occurrence[x].
    */
-  enteredDate?: string;
-  _enteredDate?: fhirModels.Element;
+  enteredDate?: string|undefined;
+  _enteredDate?: fhirModels.Element|undefined;
   /**
    * The enterer is also the person considered responsible for factor/price overrides if applicable.
    */
-  enterer?: fhirModels.Reference;
+  enterer?: fhirModels.Reference|undefined;
   /**
    * There is no reason to carry the factor in the instance of a ChargeItem unless special circumstances require a manual override. The factors are usually defined by a set of rules in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
    */
-  factorOverride?: number;
-  _factorOverride?: fhirModels.Element;
+  factorOverride?: number|undefined;
+  _factorOverride?: fhirModels.Element|undefined;
   /**
    * Identifiers assigned to this event performer or other systems.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Comments made about the event by the performer, subject or other participants.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * The list of types may be constrained as appropriate for the type of charge item.
    */
-  occurrenceDateTime?: string;
-  _occurrenceDateTime?: fhirModels.Element;
+  occurrenceDateTime?: string|undefined;
+  _occurrenceDateTime?: fhirModels.Element|undefined;
   /**
    * The list of types may be constrained as appropriate for the type of charge item.
    */
-  occurrencePeriod?: fhirModels.Period;
+  occurrencePeriod?: fhirModels.Period|undefined;
   /**
    * The list of types may be constrained as appropriate for the type of charge item.
    */
-  occurrenceTiming?: fhirModels.Timing;
+  occurrenceTiming?: fhirModels.Timing|undefined;
   /**
    * Derived Profiles may choose to add invariants requiring this field to be populated if either priceOverride or factorOverride have been filled.
    */
-  overrideReason?: string;
-  _overrideReason?: fhirModels.Element;
+  overrideReason?: string|undefined;
+  _overrideReason?: fhirModels.Element|undefined;
   /**
    * ChargeItems can be grouped to larger ChargeItems covering the whole set.
    */
-  partOf?: fhirModels.Reference[];
+  partOf?: fhirModels.Reference[]|undefined;
   /**
    * Indicates who or what performed or participated in the charged service.
    */
-  performer?: fhirModels.ChargeItemPerformer[];
+  performer?: fhirModels.ChargeItemPerformer[]|undefined;
   /**
    * Practitioners and Devices can be associated with multiple organizations. It has to be made clear, on behalf of which Organization the services have been rendered.
    */
-  performingOrganization?: fhirModels.Reference;
+  performingOrganization?: fhirModels.Reference|undefined;
   /**
    * There is no reason to carry the price in the instance of a ChargeItem unless circumstances require a manual override. The list prices or are usually defined in a back catalogue of the billing codes  (see ChargeItem.definition). Derived profiles may require a ChargeItem.overrideReason to be provided if either factor or price are manually overridden.
    */
-  priceOverride?: fhirModels.Money;
+  priceOverride?: fhirModels.Money|undefined;
   /**
    * Identifies the device, food, drug or other product being charged either by type code or reference to an instance.
    */
-  productReference?: fhirModels.Reference;
+  productReference?: fhirModels.Reference|undefined;
   /**
    * Identifies the device, food, drug or other product being charged either by type code or reference to an instance.
    */
-  productCodeableConcept?: fhirModels.CodeableConcept;
+  productCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * In many cases this may just be a value, if the underlying units are implicit in the definition of the charge item code.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * If the application of the charge item requires a reason to be given, it can be captured here. Textual reasons can be captured using reasonCode.text.
    */
-  reason?: fhirModels.CodeableConcept[];
+  reason?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The rendered Service might not be associated with a Request. This property indicates which Organization requested the services to be rendered. (In many cases, this may just be the Department associated with the Encounter.location).
    */
-  requestingOrganization?: fhirModels.Reference;
+  requestingOrganization?: fhirModels.Reference|undefined;
   /**
    * Indicated the rendered service that caused this charge.
    */
-  service?: fhirModels.Reference[];
+  service?: fhirModels.Reference[]|undefined;
   /**
    * Unknown does not represent "other" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.
    * This element is labeled as a modifier because the status contains the code entered-in-error that marks the charge item as not currently valid.
    */
-  status: ChargeItemStatusEnum;
-  _status?: fhirModels.Element;
+  status: ChargeItemStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The individual or set of individuals the action is being or was performed on.
    */
-  subject: fhirModels.Reference;
+  subject: fhirModels.Reference|undefined;
   /**
    * Further information supporting this charge.
    */
-  supportingInformation?: fhirModels.Reference[];
+  supportingInformation?: fhirModels.Reference[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for ChargeItem from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ChargeItem) {
+  constructor(source:Partial<fhirInterfaces.IChargeItem>) {
     super(source);
     if ((source['resourceType'] !== "ChargeItem") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a ChargeItem'; }
-    if (source["account"] !== undefined) { this.account = source.account; }
-    if (source["bodysite"] !== undefined) { this.bodysite = source.bodysite; }
-    if (source["code"] === undefined) { throw 'Missing required element code';}
-    this.code = source.code;
-    if (source["context"] !== undefined) { this.context = source.context; }
-    if (source["costCenter"] !== undefined) { this.costCenter = source.costCenter; }
-    if (source["definitionCanonical"] !== undefined) { this.definitionCanonical = source.definitionCanonical; }
-    if (source["_definitionCanonical"] !== undefined) { this._definitionCanonical = source._definitionCanonical; }
-    if (source["definitionUri"] !== undefined) { this.definitionUri = source.definitionUri; }
-    if (source["_definitionUri"] !== undefined) { this._definitionUri = source._definitionUri; }
+    if (source["account"] !== undefined) { this.account = source.account.map((x) => new fhirModels.Reference(x)); }
+    if (source["bodysite"] !== undefined) { this.bodysite = source.bodysite.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["context"] !== undefined) { this.context = new fhirModels.Reference(source.context); }
+    if (source["costCenter"] !== undefined) { this.costCenter = new fhirModels.Reference(source.costCenter); }
+    if (source["definitionCanonical"] !== undefined) { this.definitionCanonical = source.definitionCanonical.map((x) => (x)); }
+    if (source["_definitionCanonical"] !== undefined) { this._definitionCanonical = source._definitionCanonical.map((x) => new fhirModels.Element(x)); }
+    if (source["definitionUri"] !== undefined) { this.definitionUri = source.definitionUri.map((x) => (x)); }
+    if (source["_definitionUri"] !== undefined) { this._definitionUri = source._definitionUri.map((x) => new fhirModels.Element(x)); }
     if (source["enteredDate"] !== undefined) { this.enteredDate = source.enteredDate; }
-    if (source["_enteredDate"] !== undefined) { this._enteredDate = source._enteredDate; }
-    if (source["enterer"] !== undefined) { this.enterer = source.enterer; }
+    if (source["_enteredDate"] !== undefined) { this._enteredDate = new fhirModels.Element(source._enteredDate); }
+    if (source["enterer"] !== undefined) { this.enterer = new fhirModels.Reference(source.enterer); }
     if (source["factorOverride"] !== undefined) { this.factorOverride = source.factorOverride; }
-    if (source["_factorOverride"] !== undefined) { this._factorOverride = source._factorOverride; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["note"] !== undefined) { this.note = source.note; }
+    if (source["_factorOverride"] !== undefined) { this._factorOverride = new fhirModels.Element(source._factorOverride); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
     if (source["occurrenceDateTime"] !== undefined) { this.occurrenceDateTime = source.occurrenceDateTime; }
-    if (source["_occurrenceDateTime"] !== undefined) { this._occurrenceDateTime = source._occurrenceDateTime; }
-    if (source["occurrencePeriod"] !== undefined) { this.occurrencePeriod = source.occurrencePeriod; }
-    if (source["occurrenceTiming"] !== undefined) { this.occurrenceTiming = source.occurrenceTiming; }
+    if (source["_occurrenceDateTime"] !== undefined) { this._occurrenceDateTime = new fhirModels.Element(source._occurrenceDateTime); }
+    if (source["occurrencePeriod"] !== undefined) { this.occurrencePeriod = new fhirModels.Period(source.occurrencePeriod); }
+    if (source["occurrenceTiming"] !== undefined) { this.occurrenceTiming = new fhirModels.Timing(source.occurrenceTiming); }
     if (source["overrideReason"] !== undefined) { this.overrideReason = source.overrideReason; }
-    if (source["_overrideReason"] !== undefined) { this._overrideReason = source._overrideReason; }
-    if (source["partOf"] !== undefined) { this.partOf = source.partOf; }
-    if (source["performer"] !== undefined) { this.performer = source.performer; }
-    if (source["performingOrganization"] !== undefined) { this.performingOrganization = source.performingOrganization; }
-    if (source["priceOverride"] !== undefined) { this.priceOverride = source.priceOverride; }
-    if (source["productReference"] !== undefined) { this.productReference = source.productReference; }
-    if (source["productCodeableConcept"] !== undefined) { this.productCodeableConcept = source.productCodeableConcept; }
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["reason"] !== undefined) { this.reason = source.reason; }
-    if (source["requestingOrganization"] !== undefined) { this.requestingOrganization = source.requestingOrganization; }
-    if (source["service"] !== undefined) { this.service = source.service; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subject"] === undefined) { throw 'Missing required element subject';}
-    this.subject = source.subject;
-    if (source["supportingInformation"] !== undefined) { this.supportingInformation = source.supportingInformation; }
+    if (source["_overrideReason"] !== undefined) { this._overrideReason = new fhirModels.Element(source._overrideReason); }
+    if (source["partOf"] !== undefined) { this.partOf = source.partOf.map((x) => new fhirModels.Reference(x)); }
+    if (source["performer"] !== undefined) { this.performer = source.performer.map((x) => new fhirModels.ChargeItemPerformer(x)); }
+    if (source["performingOrganization"] !== undefined) { this.performingOrganization = new fhirModels.Reference(source.performingOrganization); }
+    if (source["priceOverride"] !== undefined) { this.priceOverride = new fhirModels.Money(source.priceOverride); }
+    if (source["productReference"] !== undefined) { this.productReference = new fhirModels.Reference(source.productReference); }
+    if (source["productCodeableConcept"] !== undefined) { this.productCodeableConcept = new fhirModels.CodeableConcept(source.productCodeableConcept); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["reason"] !== undefined) { this.reason = source.reason.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["requestingOrganization"] !== undefined) { this.requestingOrganization = new fhirModels.Reference(source.requestingOrganization); }
+    if (source["service"] !== undefined) { this.service = source.service.map((x) => new fhirModels.Reference(x)); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subject"] !== undefined) { this.subject = new fhirModels.Reference(source.subject); }
+    if (source["supportingInformation"] !== undefined) { this.supportingInformation = source.supportingInformation.map((x) => new fhirModels.Reference(x)); }
+  }
+  /**
+   * Check if the current ChargeItem contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["code"] === undefined) { missingElements.push("code"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["subject"] === undefined) { missingElements.push("subject"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ChargeItem from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IChargeItem):ChargeItem {
+    var dest:ChargeItem = new ChargeItem(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ChargeItem is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

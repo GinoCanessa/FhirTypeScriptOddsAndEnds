@@ -6,41 +6,62 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
-export class Annotation extends fhirModels.Element {
+export class Annotation extends fhirModels.Element implements fhirInterfaces.IAnnotation {
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  authorReference?: fhirModels.Reference;
+  authorReference?: fhirModels.Reference|undefined;
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
-  authorString?: string;
-  _authorString?: fhirModels.Element;
+  authorString?: string|undefined;
+  _authorString?: fhirModels.Element|undefined;
   /**
    * The text of the annotation in markdown format.
    */
-  text: string;
-  _text?: fhirModels.Element;
+  text: string|undefined;
+  _text?: fhirModels.Element|undefined;
   /**
    * Indicates when this particular annotation was made.
    */
-  time?: string;
-  _time?: fhirModels.Element;
+  time?: string|undefined;
+  _time?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Annotation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Annotation) {
+  constructor(source:Partial<fhirInterfaces.IAnnotation>) {
     super(source);
-    if (source["authorReference"] !== undefined) { this.authorReference = source.authorReference; }
+    if (source["authorReference"] !== undefined) { this.authorReference = new fhirModels.Reference(source.authorReference); }
     if (source["authorString"] !== undefined) { this.authorString = source.authorString; }
-    if (source["_authorString"] !== undefined) { this._authorString = source._authorString; }
-    if (source["text"] === undefined) { throw 'Missing required element text';}
-    this.text = source.text;
-    if (source["_text"] !== undefined) { this._text = source._text; }
+    if (source["_authorString"] !== undefined) { this._authorString = new fhirModels.Element(source._authorString); }
+    if (source["text"] !== undefined) { this.text = source.text; }
+    if (source["_text"] !== undefined) { this._text = new fhirModels.Element(source._text); }
     if (source["time"] !== undefined) { this.time = source.time; }
-    if (source["_time"] !== undefined) { this._time = source._time; }
+    if (source["_time"] !== undefined) { this._time = new fhirModels.Element(source._time); }
+  }
+  /**
+   * Check if the current Annotation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["text"] === undefined) { missingElements.push("text"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Annotation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IAnnotation):Annotation {
+    var dest:Annotation = new Annotation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Annotation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

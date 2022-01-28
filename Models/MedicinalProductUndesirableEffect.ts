@@ -6,44 +6,65 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Describe the undesirable effects of the medicinal product.
  */
-export class MedicinalProductUndesirableEffect extends fhirModels.DomainResource {
+export class MedicinalProductUndesirableEffect extends fhirModels.DomainResource implements fhirInterfaces.IMedicinalProductUndesirableEffect {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "MedicinalProductUndesirableEffect";
+  readonly resourceType = "MedicinalProductUndesirableEffect";
   /**
    * Classification of the effect.
    */
-  classification?: fhirModels.CodeableConcept;
+  classification?: fhirModels.CodeableConcept|undefined;
   /**
    * The frequency of occurrence of the effect.
    */
-  frequencyOfOccurrence?: fhirModels.CodeableConcept;
+  frequencyOfOccurrence?: fhirModels.CodeableConcept|undefined;
   /**
    * The population group to which this applies.
    */
-  population?: fhirModels.Population[];
+  population?: fhirModels.Population[]|undefined;
   /**
    * The medication for which this is an indication.
    */
-  subject?: fhirModels.Reference[];
+  subject?: fhirModels.Reference[]|undefined;
   /**
    * The symptom, condition or undesirable effect.
    */
-  symptomConditionEffect?: fhirModels.CodeableConcept;
+  symptomConditionEffect?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductUndesirableEffect from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductUndesirableEffect) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductUndesirableEffect>) {
     super(source);
     if ((source['resourceType'] !== "MedicinalProductUndesirableEffect") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a MedicinalProductUndesirableEffect'; }
-    if (source["classification"] !== undefined) { this.classification = source.classification; }
-    if (source["frequencyOfOccurrence"] !== undefined) { this.frequencyOfOccurrence = source.frequencyOfOccurrence; }
-    if (source["population"] !== undefined) { this.population = source.population; }
-    if (source["subject"] !== undefined) { this.subject = source.subject; }
-    if (source["symptomConditionEffect"] !== undefined) { this.symptomConditionEffect = source.symptomConditionEffect; }
+    if (source["classification"] !== undefined) { this.classification = new fhirModels.CodeableConcept(source.classification); }
+    if (source["frequencyOfOccurrence"] !== undefined) { this.frequencyOfOccurrence = new fhirModels.CodeableConcept(source.frequencyOfOccurrence); }
+    if (source["population"] !== undefined) { this.population = source.population.map((x) => new fhirModels.Population(x)); }
+    if (source["subject"] !== undefined) { this.subject = source.subject.map((x) => new fhirModels.Reference(x)); }
+    if (source["symptomConditionEffect"] !== undefined) { this.symptomConditionEffect = new fhirModels.CodeableConcept(source.symptomConditionEffect); }
+  }
+  /**
+   * Check if the current MedicinalProductUndesirableEffect contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductUndesirableEffect from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductUndesirableEffect):MedicinalProductUndesirableEffect {
+    var dest:MedicinalProductUndesirableEffect = new MedicinalProductUndesirableEffect(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductUndesirableEffect is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

@@ -6,201 +6,262 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.
  */
-export class ResearchStudyArm extends fhirModels.BackboneElement {
+export class ResearchStudyArm extends fhirModels.BackboneElement implements fhirInterfaces.IResearchStudyArm {
   /**
    * A succinct description of the path through the study that would be followed by a subject adhering to this arm.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Unique, human-readable label for this arm of the study.
    */
-  name: string;
-  _name?: fhirModels.Element;
+  name: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * Categorization of study arm, e.g. experimental, active comparator, placebo comparater.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ResearchStudyArm from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ResearchStudyArm) {
+  constructor(source:Partial<fhirInterfaces.IResearchStudyArm>) {
     super(source);
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["name"] === undefined) { throw 'Missing required element name';}
-    this.name = source.name;
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["name"] !== undefined) { this.name = source.name; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ResearchStudyArm contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["name"] === undefined) { missingElements.push("name"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ResearchStudyArm from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IResearchStudyArm):ResearchStudyArm {
+    var dest:ResearchStudyArm = new ResearchStudyArm(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ResearchStudyArm is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.
  */
-export class ResearchStudyObjective extends fhirModels.BackboneElement {
+export class ResearchStudyObjective extends fhirModels.BackboneElement implements fhirInterfaces.IResearchStudyObjective {
   /**
    * Unique, human-readable label for this objective of the study.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * The kind of study objective.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ResearchStudyObjective from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ResearchStudyObjective) {
+  constructor(source:Partial<fhirInterfaces.IResearchStudyObjective>) {
     super(source);
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ResearchStudyObjective contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ResearchStudyObjective from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IResearchStudyObjective):ResearchStudyObjective {
+    var dest:ResearchStudyObjective = new ResearchStudyObjective(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ResearchStudyObjective is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A process where a researcher or organization plans and then executes a series of steps intended to increase the field of healthcare-related knowledge.  This includes studies of safety, efficacy, comparative effectiveness and other information about medications, devices, therapies and other interventional and investigative techniques.  A ResearchStudy involves the gathering of information about human or animal subjects.
  */
-export class ResearchStudy extends fhirModels.DomainResource {
+export class ResearchStudy extends fhirModels.DomainResource implements fhirInterfaces.IResearchStudy {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "ResearchStudy";
+  readonly resourceType = "ResearchStudy";
   /**
    * Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.
    */
-  arm?: fhirModels.ResearchStudyArm[];
+  arm?: fhirModels.ResearchStudyArm[]|undefined;
   /**
    * Codes categorizing the type of study such as investigational vs. observational, type of blinding, type of randomization, safety vs. efficacy, etc.
    */
-  category?: fhirModels.CodeableConcept[];
+  category?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The condition that is the focus of the study.  For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion "healthy volunteer", but the target condition code would be a Lupus SNOMED code.
    */
-  condition?: fhirModels.CodeableConcept[];
+  condition?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Contact details to assist a user in learning more about or engaging with the study.
    */
-  contact?: fhirModels.ContactDetail[];
+  contact?: fhirModels.ContactDetail[]|undefined;
   /**
    * A full description of how the study is being conducted.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * The Group referenced should not generally enumerate specific subjects.  Subjects will be linked to the study using the ResearchSubject resource.
    */
-  enrollment?: fhirModels.Reference[];
+  enrollment?: fhirModels.Reference[]|undefined;
   /**
    * The medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about.
    */
-  focus?: fhirModels.CodeableConcept[];
+  focus?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Identifiers assigned to this research study by the sponsor or other systems.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Key terms to aid in searching for or filtering the study.
    */
-  keyword?: fhirModels.CodeableConcept[];
+  keyword?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates a country, state or other region where the study is taking place.
    */
-  location?: fhirModels.CodeableConcept[];
+  location?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Comments made about the study by the performer, subject or other participants.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.
    */
-  objective?: fhirModels.ResearchStudyObjective[];
+  objective?: fhirModels.ResearchStudyObjective[]|undefined;
   /**
    * A larger research study of which this particular study is a component or step.
    */
-  partOf?: fhirModels.Reference[];
+  partOf?: fhirModels.Reference[]|undefined;
   /**
    * Identifies the start date and the expected (or actual, depending on status) end date for the study.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.
    */
-  phase?: fhirModels.CodeableConcept;
+  phase?: fhirModels.CodeableConcept|undefined;
   /**
    * The type of study based upon the intent of the study's activities. A classification of the intent of the study.
    */
-  primaryPurposeType?: fhirModels.CodeableConcept;
+  primaryPurposeType?: fhirModels.CodeableConcept|undefined;
   /**
    * A researcher in a study who oversees multiple aspects of the study, such as concept development, protocol writing, protocol submission for IRB approval, participant recruitment, informed consent, data collection, analysis, interpretation and presentation.
    */
-  principalInvestigator?: fhirModels.Reference;
+  principalInvestigator?: fhirModels.Reference|undefined;
   /**
    * The set of steps expected to be performed as part of the execution of the study.
    */
-  protocol?: fhirModels.Reference[];
+  protocol?: fhirModels.Reference[]|undefined;
   /**
    * A description and/or code explaining the premature termination of the study.
    */
-  reasonStopped?: fhirModels.CodeableConcept;
+  reasonStopped?: fhirModels.CodeableConcept|undefined;
   /**
    * Citations, references and other related documents.
    */
-  relatedArtifact?: fhirModels.RelatedArtifact[];
+  relatedArtifact?: fhirModels.RelatedArtifact[]|undefined;
   /**
    * A facility in which study activities are conducted.
    */
-  site?: fhirModels.Reference[];
+  site?: fhirModels.Reference[]|undefined;
   /**
    * An organization that initiates the investigation and is legally responsible for the study.
    */
-  sponsor?: fhirModels.Reference;
+  sponsor?: fhirModels.Reference|undefined;
   /**
    * The current state of the study.
    */
-  status: ResearchStudyStatusEnum;
-  _status?: fhirModels.Element;
+  status: ResearchStudyStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * A short, descriptive user-friendly label for the study.
    */
-  title?: string;
-  _title?: fhirModels.Element;
+  title?: string|undefined;
+  _title?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ResearchStudy from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ResearchStudy) {
+  constructor(source:Partial<fhirInterfaces.IResearchStudy>) {
     super(source);
     if ((source['resourceType'] !== "ResearchStudy") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a ResearchStudy'; }
-    if (source["arm"] !== undefined) { this.arm = source.arm; }
-    if (source["category"] !== undefined) { this.category = source.category; }
-    if (source["condition"] !== undefined) { this.condition = source.condition; }
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
+    if (source["arm"] !== undefined) { this.arm = source.arm.map((x) => new fhirModels.ResearchStudyArm(x)); }
+    if (source["category"] !== undefined) { this.category = source.category.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["condition"] !== undefined) { this.condition = source.condition.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["enrollment"] !== undefined) { this.enrollment = source.enrollment; }
-    if (source["focus"] !== undefined) { this.focus = source.focus; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["keyword"] !== undefined) { this.keyword = source.keyword; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["note"] !== undefined) { this.note = source.note; }
-    if (source["objective"] !== undefined) { this.objective = source.objective; }
-    if (source["partOf"] !== undefined) { this.partOf = source.partOf; }
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["phase"] !== undefined) { this.phase = source.phase; }
-    if (source["primaryPurposeType"] !== undefined) { this.primaryPurposeType = source.primaryPurposeType; }
-    if (source["principalInvestigator"] !== undefined) { this.principalInvestigator = source.principalInvestigator; }
-    if (source["protocol"] !== undefined) { this.protocol = source.protocol; }
-    if (source["reasonStopped"] !== undefined) { this.reasonStopped = source.reasonStopped; }
-    if (source["relatedArtifact"] !== undefined) { this.relatedArtifact = source.relatedArtifact; }
-    if (source["site"] !== undefined) { this.site = source.site; }
-    if (source["sponsor"] !== undefined) { this.sponsor = source.sponsor; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["enrollment"] !== undefined) { this.enrollment = source.enrollment.map((x) => new fhirModels.Reference(x)); }
+    if (source["focus"] !== undefined) { this.focus = source.focus.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["keyword"] !== undefined) { this.keyword = source.keyword.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["location"] !== undefined) { this.location = source.location.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
+    if (source["objective"] !== undefined) { this.objective = source.objective.map((x) => new fhirModels.ResearchStudyObjective(x)); }
+    if (source["partOf"] !== undefined) { this.partOf = source.partOf.map((x) => new fhirModels.Reference(x)); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["phase"] !== undefined) { this.phase = new fhirModels.CodeableConcept(source.phase); }
+    if (source["primaryPurposeType"] !== undefined) { this.primaryPurposeType = new fhirModels.CodeableConcept(source.primaryPurposeType); }
+    if (source["principalInvestigator"] !== undefined) { this.principalInvestigator = new fhirModels.Reference(source.principalInvestigator); }
+    if (source["protocol"] !== undefined) { this.protocol = source.protocol.map((x) => new fhirModels.Reference(x)); }
+    if (source["reasonStopped"] !== undefined) { this.reasonStopped = new fhirModels.CodeableConcept(source.reasonStopped); }
+    if (source["relatedArtifact"] !== undefined) { this.relatedArtifact = source.relatedArtifact.map((x) => new fhirModels.RelatedArtifact(x)); }
+    if (source["site"] !== undefined) { this.site = source.site.map((x) => new fhirModels.Reference(x)); }
+    if (source["sponsor"] !== undefined) { this.sponsor = new fhirModels.Reference(source.sponsor); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
     if (source["title"] !== undefined) { this.title = source.title; }
-    if (source["_title"] !== undefined) { this._title = source._title; }
+    if (source["_title"] !== undefined) { this._title = new fhirModels.Element(source._title); }
+  }
+  /**
+   * Check if the current ResearchStudy contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ResearchStudy from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IResearchStudy):ResearchStudy {
+    var dest:ResearchStudy = new ResearchStudy(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ResearchStudy is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

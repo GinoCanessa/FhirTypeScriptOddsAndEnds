@@ -6,56 +6,77 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * The manufactured item as contained in the packaged medicinal product.
  */
-export class MedicinalProductManufactured extends fhirModels.DomainResource {
+export class MedicinalProductManufactured extends fhirModels.DomainResource implements fhirInterfaces.IMedicinalProductManufactured {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "MedicinalProductManufactured";
+  readonly resourceType = "MedicinalProductManufactured";
   /**
    * Ingredient.
    */
-  ingredient?: fhirModels.Reference[];
+  ingredient?: fhirModels.Reference[]|undefined;
   /**
    * Dose form as manufactured and before any transformation into the pharmaceutical product.
    */
-  manufacturedDoseForm: fhirModels.CodeableConcept;
+  manufacturedDoseForm: fhirModels.CodeableConcept|undefined;
   /**
    * Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).
    */
-  manufacturer?: fhirModels.Reference[];
+  manufacturer?: fhirModels.Reference[]|undefined;
   /**
    * Other codeable characteristics.
    */
-  otherCharacteristics?: fhirModels.CodeableConcept[];
+  otherCharacteristics?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Dimensions, color etc.
    */
-  physicalCharacteristics?: fhirModels.ProdCharacteristic;
+  physicalCharacteristics?: fhirModels.ProdCharacteristic|undefined;
   /**
    * The quantity or "count number" of the manufactured item.
    */
-  quantity: fhirModels.Quantity;
+  quantity: fhirModels.Quantity|undefined;
   /**
    * The “real world” units in which the quantity of the manufactured item is described.
    */
-  unitOfPresentation?: fhirModels.CodeableConcept;
+  unitOfPresentation?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductManufactured from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductManufactured) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductManufactured>) {
     super(source);
     if ((source['resourceType'] !== "MedicinalProductManufactured") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a MedicinalProductManufactured'; }
-    if (source["ingredient"] !== undefined) { this.ingredient = source.ingredient; }
-    if (source["manufacturedDoseForm"] === undefined) { throw 'Missing required element manufacturedDoseForm';}
-    this.manufacturedDoseForm = source.manufacturedDoseForm;
-    if (source["manufacturer"] !== undefined) { this.manufacturer = source.manufacturer; }
-    if (source["otherCharacteristics"] !== undefined) { this.otherCharacteristics = source.otherCharacteristics; }
-    if (source["physicalCharacteristics"] !== undefined) { this.physicalCharacteristics = source.physicalCharacteristics; }
-    if (source["quantity"] === undefined) { throw 'Missing required element quantity';}
-    this.quantity = source.quantity;
-    if (source["unitOfPresentation"] !== undefined) { this.unitOfPresentation = source.unitOfPresentation; }
+    if (source["ingredient"] !== undefined) { this.ingredient = source.ingredient.map((x) => new fhirModels.Reference(x)); }
+    if (source["manufacturedDoseForm"] !== undefined) { this.manufacturedDoseForm = new fhirModels.CodeableConcept(source.manufacturedDoseForm); }
+    if (source["manufacturer"] !== undefined) { this.manufacturer = source.manufacturer.map((x) => new fhirModels.Reference(x)); }
+    if (source["otherCharacteristics"] !== undefined) { this.otherCharacteristics = source.otherCharacteristics.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["physicalCharacteristics"] !== undefined) { this.physicalCharacteristics = new fhirModels.ProdCharacteristic(source.physicalCharacteristics); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["unitOfPresentation"] !== undefined) { this.unitOfPresentation = new fhirModels.CodeableConcept(source.unitOfPresentation); }
+  }
+  /**
+   * Check if the current MedicinalProductManufactured contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["manufacturedDoseForm"] === undefined) { missingElements.push("manufacturedDoseForm"); }
+    if (this["quantity"] === undefined) { missingElements.push("quantity"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductManufactured from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductManufactured):MedicinalProductManufactured {
+    var dest:MedicinalProductManufactured = new MedicinalProductManufactured(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductManufactured is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

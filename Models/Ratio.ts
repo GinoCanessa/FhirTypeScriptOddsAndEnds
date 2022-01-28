@@ -6,24 +6,45 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A relationship of two Quantity values - expressed as a numerator and a denominator.
  */
-export class Ratio extends fhirModels.Element {
+export class Ratio extends fhirModels.Element implements fhirInterfaces.IRatio {
   /**
    * The value of the denominator.
    */
-  denominator?: fhirModels.Quantity;
+  denominator?: fhirModels.Quantity|undefined;
   /**
    * The value of the numerator.
    */
-  numerator?: fhirModels.Quantity;
+  numerator?: fhirModels.Quantity|undefined;
   /**
-   * Default constructor
+   * Default constructor for Ratio from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Ratio) {
+  constructor(source:Partial<fhirInterfaces.IRatio>) {
     super(source);
-    if (source["denominator"] !== undefined) { this.denominator = source.denominator; }
-    if (source["numerator"] !== undefined) { this.numerator = source.numerator; }
+    if (source["denominator"] !== undefined) { this.denominator = new fhirModels.Quantity(source.denominator); }
+    if (source["numerator"] !== undefined) { this.numerator = new fhirModels.Quantity(source.numerator); }
+  }
+  /**
+   * Check if the current Ratio contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Ratio from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRatio):Ratio {
+    var dest:Ratio = new Ratio(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Ratio is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

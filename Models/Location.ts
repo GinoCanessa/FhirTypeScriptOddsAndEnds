@@ -6,78 +6,119 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).
  */
-export class LocationPosition extends fhirModels.BackboneElement {
+export class LocationPosition extends fhirModels.BackboneElement implements fhirInterfaces.ILocationPosition {
   /**
    * Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below).
    */
-  altitude?: number;
-  _altitude?: fhirModels.Element;
+  altitude?: number|undefined;
+  _altitude?: fhirModels.Element|undefined;
   /**
    * Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below).
    */
-  latitude: number;
-  _latitude?: fhirModels.Element;
+  latitude: number|undefined;
+  _latitude?: fhirModels.Element|undefined;
   /**
    * Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below).
    */
-  longitude: number;
-  _longitude?: fhirModels.Element;
+  longitude: number|undefined;
+  _longitude?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for LocationPosition from an object that MAY NOT contain all required elements.
    */
-  constructor(source: LocationPosition) {
+  constructor(source:Partial<fhirInterfaces.ILocationPosition>) {
     super(source);
     if (source["altitude"] !== undefined) { this.altitude = source.altitude; }
-    if (source["_altitude"] !== undefined) { this._altitude = source._altitude; }
-    if (source["latitude"] === undefined) { throw 'Missing required element latitude';}
-    this.latitude = source.latitude;
-    if (source["_latitude"] !== undefined) { this._latitude = source._latitude; }
-    if (source["longitude"] === undefined) { throw 'Missing required element longitude';}
-    this.longitude = source.longitude;
-    if (source["_longitude"] !== undefined) { this._longitude = source._longitude; }
+    if (source["_altitude"] !== undefined) { this._altitude = new fhirModels.Element(source._altitude); }
+    if (source["latitude"] !== undefined) { this.latitude = source.latitude; }
+    if (source["_latitude"] !== undefined) { this._latitude = new fhirModels.Element(source._latitude); }
+    if (source["longitude"] !== undefined) { this.longitude = source.longitude; }
+    if (source["_longitude"] !== undefined) { this._longitude = new fhirModels.Element(source._longitude); }
+  }
+  /**
+   * Check if the current LocationPosition contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["latitude"] === undefined) { missingElements.push("latitude"); }
+    if (this["longitude"] === undefined) { missingElements.push("longitude"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a LocationPosition from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ILocationPosition):LocationPosition {
+    var dest:LocationPosition = new LocationPosition(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `LocationPosition is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * This type of information is commonly found published in directories and on websites informing customers when the facility is available.
  * Specific services within the location may have their own hours which could be shorter (or longer) than the locations hours.
  */
-export class LocationHoursOfOperation extends fhirModels.BackboneElement {
+export class LocationHoursOfOperation extends fhirModels.BackboneElement implements fhirInterfaces.ILocationHoursOfOperation {
   /**
    * The Location is open all day.
    */
-  allDay?: boolean;
-  _allDay?: fhirModels.Element;
+  allDay?: boolean|undefined;
+  _allDay?: fhirModels.Element|undefined;
   /**
    * Time that the Location closes.
    */
-  closingTime?: string;
-  _closingTime?: fhirModels.Element;
+  closingTime?: string|undefined;
+  _closingTime?: fhirModels.Element|undefined;
   /**
    * Indicates which days of the week are available between the start and end Times.
    */
-  daysOfWeek?: LocationHoursOfOperationDaysOfWeekEnum[];
-  _daysOfWeek?: fhirModels.Element[];
+  daysOfWeek?: LocationHoursOfOperationDaysOfWeekEnum[]|undefined;
+  _daysOfWeek?: fhirModels.Element[]|undefined;
   /**
    * Time that the Location opens.
    */
-  openingTime?: string;
-  _openingTime?: fhirModels.Element;
+  openingTime?: string|undefined;
+  _openingTime?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for LocationHoursOfOperation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: LocationHoursOfOperation) {
+  constructor(source:Partial<fhirInterfaces.ILocationHoursOfOperation>) {
     super(source);
     if (source["allDay"] !== undefined) { this.allDay = source.allDay; }
-    if (source["_allDay"] !== undefined) { this._allDay = source._allDay; }
+    if (source["_allDay"] !== undefined) { this._allDay = new fhirModels.Element(source._allDay); }
     if (source["closingTime"] !== undefined) { this.closingTime = source.closingTime; }
-    if (source["_closingTime"] !== undefined) { this._closingTime = source._closingTime; }
-    if (source["daysOfWeek"] !== undefined) { this.daysOfWeek = source.daysOfWeek; }
-    if (source["_daysOfWeek"] !== undefined) { this._daysOfWeek = source._daysOfWeek; }
+    if (source["_closingTime"] !== undefined) { this._closingTime = new fhirModels.Element(source._closingTime); }
+    if (source["daysOfWeek"] !== undefined) { this.daysOfWeek = source.daysOfWeek.map((x) => (x)); }
+    if (source["_daysOfWeek"] !== undefined) { this._daysOfWeek = source._daysOfWeek.map((x) => new fhirModels.Element(x)); }
     if (source["openingTime"] !== undefined) { this.openingTime = source.openingTime; }
-    if (source["_openingTime"] !== undefined) { this._openingTime = source._openingTime; }
+    if (source["_openingTime"] !== undefined) { this._openingTime = new fhirModels.Element(source._openingTime); }
+  }
+  /**
+   * Check if the current LocationHoursOfOperation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a LocationHoursOfOperation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ILocationHoursOfOperation):LocationHoursOfOperation {
+    var dest:LocationHoursOfOperation = new LocationHoursOfOperation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `LocationHoursOfOperation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -95,115 +136,135 @@ export enum LocationHoursOfOperationDaysOfWeekEnum {
 /**
  * Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
  */
-export class Location extends fhirModels.DomainResource {
+export class Location extends fhirModels.DomainResource implements fhirInterfaces.ILocation {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Location";
+  readonly resourceType = "Location";
   /**
    * Additional addresses should be recorded using another instance of the Location resource, or via the Organization.
    */
-  address?: fhirModels.Address;
+  address?: fhirModels.Address|undefined;
   /**
    * There are no dates associated with the alias/historic names, as this is not intended to track when names were used, but to assist in searching so that older names can still result in identifying the location.
    */
-  alias?: string[];
-  _alias?: fhirModels.Element[];
+  alias?: string[]|undefined;
+  _alias?: fhirModels.Element[]|undefined;
   /**
    * A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.
    */
-  availabilityExceptions?: string;
-  _availabilityExceptions?: fhirModels.Element;
+  availabilityExceptions?: string|undefined;
+  _availabilityExceptions?: fhirModels.Element|undefined;
   /**
    * Description of the Location, which helps in finding or referencing the place.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Technical endpoints providing access to services operated for the location.
    */
-  endpoint?: fhirModels.Reference[];
+  endpoint?: fhirModels.Reference[]|undefined;
   /**
    * This type of information is commonly found published in directories and on websites informing customers when the facility is available.
    * Specific services within the location may have their own hours which could be shorter (or longer) than the locations hours.
    */
-  hoursOfOperation?: fhirModels.LocationHoursOfOperation[];
+  hoursOfOperation?: fhirModels.LocationHoursOfOperation[]|undefined;
   /**
    * Unique code or number identifying the location to its users.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * This can also be used as the part of the organization hierarchy where this location provides services. These services can be defined through the HealthcareService resource.
    */
-  managingOrganization?: fhirModels.Reference;
+  managingOrganization?: fhirModels.Reference|undefined;
   /**
    * This is labeled as a modifier because whether or not the location is a class of locations changes how it can be used and understood.
    */
-  mode?: LocationModeEnum;
-  _mode?: fhirModels.Element;
+  mode?: LocationModeEnum|undefined;
+  _mode?: fhirModels.Element|undefined;
   /**
    * If the name of a location changes, consider putting the old name in the alias column so that it can still be located through searches.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.
    */
-  operationalStatus?: fhirModels.Coding;
+  operationalStatus?: fhirModels.Coding|undefined;
   /**
    * Another Location of which this Location is physically a part of.
    */
-  partOf?: fhirModels.Reference;
+  partOf?: fhirModels.Reference|undefined;
   /**
    * Physical form of the location, e.g. building, room, vehicle, road.
    */
-  physicalType?: fhirModels.CodeableConcept;
+  physicalType?: fhirModels.CodeableConcept|undefined;
   /**
    * The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).
    */
-  position?: fhirModels.LocationPosition;
+  position?: fhirModels.LocationPosition|undefined;
   /**
    * The status property covers the general availability of the resource, not the current value which may be covered by the operationStatus, or by a schedule/slots if they are configured for the location.
    */
-  status?: LocationStatusEnum;
-  _status?: fhirModels.Element;
+  status?: LocationStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites.
    */
-  telecom?: fhirModels.ContactPoint[];
+  telecom?: fhirModels.ContactPoint[]|undefined;
   /**
    * Indicates the type of function performed at the location.
    */
-  type?: fhirModels.CodeableConcept[];
+  type?: fhirModels.CodeableConcept[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for Location from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Location) {
+  constructor(source:Partial<fhirInterfaces.ILocation>) {
     super(source);
     if ((source['resourceType'] !== "Location") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Location'; }
-    if (source["address"] !== undefined) { this.address = source.address; }
-    if (source["alias"] !== undefined) { this.alias = source.alias; }
-    if (source["_alias"] !== undefined) { this._alias = source._alias; }
+    if (source["address"] !== undefined) { this.address = new fhirModels.Address(source.address); }
+    if (source["alias"] !== undefined) { this.alias = source.alias.map((x) => (x)); }
+    if (source["_alias"] !== undefined) { this._alias = source._alias.map((x) => new fhirModels.Element(x)); }
     if (source["availabilityExceptions"] !== undefined) { this.availabilityExceptions = source.availabilityExceptions; }
-    if (source["_availabilityExceptions"] !== undefined) { this._availabilityExceptions = source._availabilityExceptions; }
+    if (source["_availabilityExceptions"] !== undefined) { this._availabilityExceptions = new fhirModels.Element(source._availabilityExceptions); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["hoursOfOperation"] !== undefined) { this.hoursOfOperation = source.hoursOfOperation; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["managingOrganization"] !== undefined) { this.managingOrganization = source.managingOrganization; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint.map((x) => new fhirModels.Reference(x)); }
+    if (source["hoursOfOperation"] !== undefined) { this.hoursOfOperation = source.hoursOfOperation.map((x) => new fhirModels.LocationHoursOfOperation(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["managingOrganization"] !== undefined) { this.managingOrganization = new fhirModels.Reference(source.managingOrganization); }
     if (source["mode"] !== undefined) { this.mode = source.mode; }
-    if (source["_mode"] !== undefined) { this._mode = source._mode; }
+    if (source["_mode"] !== undefined) { this._mode = new fhirModels.Element(source._mode); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["operationalStatus"] !== undefined) { this.operationalStatus = source.operationalStatus; }
-    if (source["partOf"] !== undefined) { this.partOf = source.partOf; }
-    if (source["physicalType"] !== undefined) { this.physicalType = source.physicalType; }
-    if (source["position"] !== undefined) { this.position = source.position; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["operationalStatus"] !== undefined) { this.operationalStatus = new fhirModels.Coding(source.operationalStatus); }
+    if (source["partOf"] !== undefined) { this.partOf = new fhirModels.Reference(source.partOf); }
+    if (source["physicalType"] !== undefined) { this.physicalType = new fhirModels.CodeableConcept(source.physicalType); }
+    if (source["position"] !== undefined) { this.position = new fhirModels.LocationPosition(source.position); }
     if (source["status"] !== undefined) { this.status = source.status; }
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["telecom"] !== undefined) { this.telecom = source.telecom; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["telecom"] !== undefined) { this.telecom = source.telecom.map((x) => new fhirModels.ContactPoint(x)); }
+    if (source["type"] !== undefined) { this.type = source.type.map((x) => new fhirModels.CodeableConcept(x)); }
+  }
+  /**
+   * Check if the current Location contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Location from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ILocation):Location {
+    var dest:Location = new Location(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Location is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

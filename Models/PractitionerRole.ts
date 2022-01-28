@@ -6,43 +6,64 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * More detailed availability information may be provided in associated Schedule/Slot resources.
  */
-export class PractitionerRoleAvailableTime extends fhirModels.BackboneElement {
+export class PractitionerRoleAvailableTime extends fhirModels.BackboneElement implements fhirInterfaces.IPractitionerRoleAvailableTime {
   /**
    * Is this always available? (hence times are irrelevant) e.g. 24 hour service.
    */
-  allDay?: boolean;
-  _allDay?: fhirModels.Element;
+  allDay?: boolean|undefined;
+  _allDay?: fhirModels.Element|undefined;
   /**
    * The timezone is expected to be for where this HealthcareService is provided at.
    */
-  availableEndTime?: string;
-  _availableEndTime?: fhirModels.Element;
+  availableEndTime?: string|undefined;
+  _availableEndTime?: fhirModels.Element|undefined;
   /**
    * The timezone is expected to be for where this HealthcareService is provided at.
    */
-  availableStartTime?: string;
-  _availableStartTime?: fhirModels.Element;
+  availableStartTime?: string|undefined;
+  _availableStartTime?: fhirModels.Element|undefined;
   /**
    * Indicates which days of the week are available between the start and end Times.
    */
-  daysOfWeek?: PractitionerRoleAvailableTimeDaysOfWeekEnum[];
-  _daysOfWeek?: fhirModels.Element[];
+  daysOfWeek?: PractitionerRoleAvailableTimeDaysOfWeekEnum[]|undefined;
+  _daysOfWeek?: fhirModels.Element[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for PractitionerRoleAvailableTime from an object that MAY NOT contain all required elements.
    */
-  constructor(source: PractitionerRoleAvailableTime) {
+  constructor(source:Partial<fhirInterfaces.IPractitionerRoleAvailableTime>) {
     super(source);
     if (source["allDay"] !== undefined) { this.allDay = source.allDay; }
-    if (source["_allDay"] !== undefined) { this._allDay = source._allDay; }
+    if (source["_allDay"] !== undefined) { this._allDay = new fhirModels.Element(source._allDay); }
     if (source["availableEndTime"] !== undefined) { this.availableEndTime = source.availableEndTime; }
-    if (source["_availableEndTime"] !== undefined) { this._availableEndTime = source._availableEndTime; }
+    if (source["_availableEndTime"] !== undefined) { this._availableEndTime = new fhirModels.Element(source._availableEndTime); }
     if (source["availableStartTime"] !== undefined) { this.availableStartTime = source.availableStartTime; }
-    if (source["_availableStartTime"] !== undefined) { this._availableStartTime = source._availableStartTime; }
-    if (source["daysOfWeek"] !== undefined) { this.daysOfWeek = source.daysOfWeek; }
-    if (source["_daysOfWeek"] !== undefined) { this._daysOfWeek = source._daysOfWeek; }
+    if (source["_availableStartTime"] !== undefined) { this._availableStartTime = new fhirModels.Element(source._availableStartTime); }
+    if (source["daysOfWeek"] !== undefined) { this.daysOfWeek = source.daysOfWeek.map((x) => (x)); }
+    if (source["_daysOfWeek"] !== undefined) { this._daysOfWeek = source._daysOfWeek.map((x) => new fhirModels.Element(x)); }
+  }
+  /**
+   * Check if the current PractitionerRoleAvailableTime contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a PractitionerRoleAvailableTime from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IPractitionerRoleAvailableTime):PractitionerRoleAvailableTime {
+    var dest:PractitionerRoleAvailableTime = new PractitionerRoleAvailableTime(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `PractitionerRoleAvailableTime is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -60,114 +81,154 @@ export enum PractitionerRoleAvailableTimeDaysOfWeekEnum {
 /**
  * The practitioner is not available or performing this role during this period of time due to the provided reason.
  */
-export class PractitionerRoleNotAvailable extends fhirModels.BackboneElement {
+export class PractitionerRoleNotAvailable extends fhirModels.BackboneElement implements fhirInterfaces.IPractitionerRoleNotAvailable {
   /**
    * The reason that can be presented to the user as to why this time is not available.
    */
-  description: string;
-  _description?: fhirModels.Element;
+  description: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Service is not available (seasonally or for a public holiday) from this date.
    */
-  during?: fhirModels.Period;
+  during?: fhirModels.Period|undefined;
   /**
-   * Default constructor
+   * Default constructor for PractitionerRoleNotAvailable from an object that MAY NOT contain all required elements.
    */
-  constructor(source: PractitionerRoleNotAvailable) {
+  constructor(source:Partial<fhirInterfaces.IPractitionerRoleNotAvailable>) {
     super(source);
-    if (source["description"] === undefined) { throw 'Missing required element description';}
-    this.description = source.description;
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["during"] !== undefined) { this.during = source.during; }
+    if (source["description"] !== undefined) { this.description = source.description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["during"] !== undefined) { this.during = new fhirModels.Period(source.during); }
+  }
+  /**
+   * Check if the current PractitionerRoleNotAvailable contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["description"] === undefined) { missingElements.push("description"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a PractitionerRoleNotAvailable from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IPractitionerRoleNotAvailable):PractitionerRoleNotAvailable {
+    var dest:PractitionerRoleNotAvailable = new PractitionerRoleNotAvailable(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `PractitionerRoleNotAvailable is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.
  */
-export class PractitionerRole extends fhirModels.DomainResource {
+export class PractitionerRole extends fhirModels.DomainResource implements fhirInterfaces.IPractitionerRole {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "PractitionerRole";
+  readonly resourceType = "PractitionerRole";
   /**
    * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
    */
-  active?: boolean;
-  _active?: fhirModels.Element;
+  active?: boolean|undefined;
+  _active?: fhirModels.Element|undefined;
   /**
    * A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times.
    */
-  availabilityExceptions?: string;
-  _availabilityExceptions?: fhirModels.Element;
+  availabilityExceptions?: string|undefined;
+  _availabilityExceptions?: fhirModels.Element|undefined;
   /**
    * More detailed availability information may be provided in associated Schedule/Slot resources.
    */
-  availableTime?: fhirModels.PractitionerRoleAvailableTime[];
+  availableTime?: fhirModels.PractitionerRoleAvailableTime[]|undefined;
   /**
    * A person may have more than one role.
    */
-  code?: fhirModels.CodeableConcept[];
+  code?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Technical endpoints providing access to services operated for the practitioner with this role.
    */
-  endpoint?: fhirModels.Reference[];
+  endpoint?: fhirModels.Reference[]|undefined;
   /**
    * The list of healthcare services that this worker provides for this role's Organization/Location(s).
    */
-  healthcareService?: fhirModels.Reference[];
+  healthcareService?: fhirModels.Reference[]|undefined;
   /**
    * Business Identifiers that are specific to a role/location.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The location(s) at which this practitioner provides care.
    */
-  location?: fhirModels.Reference[];
+  location?: fhirModels.Reference[]|undefined;
   /**
    * The practitioner is not available or performing this role during this period of time due to the provided reason.
    */
-  notAvailable?: fhirModels.PractitionerRoleNotAvailable[];
+  notAvailable?: fhirModels.PractitionerRoleNotAvailable[]|undefined;
   /**
    * The organization where the Practitioner performs the roles associated.
    */
-  organization?: fhirModels.Reference;
+  organization?: fhirModels.Reference|undefined;
   /**
    * The period during which the person is authorized to act as a practitioner in these role(s) for the organization.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * Practitioner that is able to provide the defined services for the organization.
    */
-  practitioner?: fhirModels.Reference;
+  practitioner?: fhirModels.Reference|undefined;
   /**
    * Specific specialty of the practitioner.
    */
-  specialty?: fhirModels.CodeableConcept[];
+  specialty?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Contact details that are specific to the role/location/service.
    */
-  telecom?: fhirModels.ContactPoint[];
+  telecom?: fhirModels.ContactPoint[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for PractitionerRole from an object that MAY NOT contain all required elements.
    */
-  constructor(source: PractitionerRole) {
+  constructor(source:Partial<fhirInterfaces.IPractitionerRole>) {
     super(source);
     if ((source['resourceType'] !== "PractitionerRole") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a PractitionerRole'; }
     if (source["active"] !== undefined) { this.active = source.active; }
-    if (source["_active"] !== undefined) { this._active = source._active; }
+    if (source["_active"] !== undefined) { this._active = new fhirModels.Element(source._active); }
     if (source["availabilityExceptions"] !== undefined) { this.availabilityExceptions = source.availabilityExceptions; }
-    if (source["_availabilityExceptions"] !== undefined) { this._availabilityExceptions = source._availabilityExceptions; }
-    if (source["availableTime"] !== undefined) { this.availableTime = source.availableTime; }
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["healthcareService"] !== undefined) { this.healthcareService = source.healthcareService; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["notAvailable"] !== undefined) { this.notAvailable = source.notAvailable; }
-    if (source["organization"] !== undefined) { this.organization = source.organization; }
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["practitioner"] !== undefined) { this.practitioner = source.practitioner; }
-    if (source["specialty"] !== undefined) { this.specialty = source.specialty; }
-    if (source["telecom"] !== undefined) { this.telecom = source.telecom; }
+    if (source["_availabilityExceptions"] !== undefined) { this._availabilityExceptions = new fhirModels.Element(source._availabilityExceptions); }
+    if (source["availableTime"] !== undefined) { this.availableTime = source.availableTime.map((x) => new fhirModels.PractitionerRoleAvailableTime(x)); }
+    if (source["code"] !== undefined) { this.code = source.code.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint.map((x) => new fhirModels.Reference(x)); }
+    if (source["healthcareService"] !== undefined) { this.healthcareService = source.healthcareService.map((x) => new fhirModels.Reference(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["location"] !== undefined) { this.location = source.location.map((x) => new fhirModels.Reference(x)); }
+    if (source["notAvailable"] !== undefined) { this.notAvailable = source.notAvailable.map((x) => new fhirModels.PractitionerRoleNotAvailable(x)); }
+    if (source["organization"] !== undefined) { this.organization = new fhirModels.Reference(source.organization); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["practitioner"] !== undefined) { this.practitioner = new fhirModels.Reference(source.practitioner); }
+    if (source["specialty"] !== undefined) { this.specialty = source.specialty.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["telecom"] !== undefined) { this.telecom = source.telecom.map((x) => new fhirModels.ContactPoint(x)); }
+  }
+  /**
+   * Check if the current PractitionerRole contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a PractitionerRole from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IPractitionerRole):PractitionerRole {
+    var dest:PractitionerRole = new PractitionerRole(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `PractitionerRole is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

@@ -6,59 +6,80 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * This resource provides the insurance enrollment details to the insurer regarding a specified coverage.
  */
-export class EnrollmentRequest extends fhirModels.DomainResource {
+export class EnrollmentRequest extends fhirModels.DomainResource implements fhirInterfaces.IEnrollmentRequest {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "EnrollmentRequest";
+  readonly resourceType = "EnrollmentRequest";
   /**
    * Patient Resource.
    */
-  candidate?: fhirModels.Reference;
+  candidate?: fhirModels.Reference|undefined;
   /**
    * Reference to the program or plan identification, underwriter or payor.
    */
-  coverage?: fhirModels.Reference;
+  coverage?: fhirModels.Reference|undefined;
   /**
    * The date when this resource was created.
    */
-  created?: string;
-  _created?: fhirModels.Element;
+  created?: string|undefined;
+  _created?: fhirModels.Element|undefined;
   /**
    * The Response business identifier.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The Insurer who is target  of the request.
    */
-  insurer?: fhirModels.Reference;
+  insurer?: fhirModels.Reference|undefined;
   /**
    * The practitioner who is responsible for the services rendered to the patient.
    */
-  provider?: fhirModels.Reference;
+  provider?: fhirModels.Reference|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the request as not currently valid.
    */
-  status?: EnrollmentRequestStatusEnum;
-  _status?: fhirModels.Element;
+  status?: EnrollmentRequestStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for EnrollmentRequest from an object that MAY NOT contain all required elements.
    */
-  constructor(source: EnrollmentRequest) {
+  constructor(source:Partial<fhirInterfaces.IEnrollmentRequest>) {
     super(source);
     if ((source['resourceType'] !== "EnrollmentRequest") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a EnrollmentRequest'; }
-    if (source["candidate"] !== undefined) { this.candidate = source.candidate; }
-    if (source["coverage"] !== undefined) { this.coverage = source.coverage; }
+    if (source["candidate"] !== undefined) { this.candidate = new fhirModels.Reference(source.candidate); }
+    if (source["coverage"] !== undefined) { this.coverage = new fhirModels.Reference(source.coverage); }
     if (source["created"] !== undefined) { this.created = source.created; }
-    if (source["_created"] !== undefined) { this._created = source._created; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["insurer"] !== undefined) { this.insurer = source.insurer; }
-    if (source["provider"] !== undefined) { this.provider = source.provider; }
+    if (source["_created"] !== undefined) { this._created = new fhirModels.Element(source._created); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["insurer"] !== undefined) { this.insurer = new fhirModels.Reference(source.insurer); }
+    if (source["provider"] !== undefined) { this.provider = new fhirModels.Reference(source.provider); }
     if (source["status"] !== undefined) { this.status = source.status; }
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current EnrollmentRequest contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a EnrollmentRequest from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IEnrollmentRequest):EnrollmentRequest {
+    var dest:EnrollmentRequest = new EnrollmentRequest(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `EnrollmentRequest is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

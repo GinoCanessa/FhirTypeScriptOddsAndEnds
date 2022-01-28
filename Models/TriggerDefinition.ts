@@ -6,64 +6,85 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
  */
-export class TriggerDefinition extends fhirModels.Element {
+export class TriggerDefinition extends fhirModels.Element implements fhirInterfaces.ITriggerDefinition {
   /**
    * This element can be only be specified for data type triggers and provides additional semantics for the trigger. The context available within the condition is based on the type of data event. For all events, the current resource will be available as context. In addition, for modification events, the previous resource will also be available. The expression may be inlined, or may be a simple absolute URI, which is a reference to a named expression within a logic library referenced by a library element or extension within the containing resource. If the expression is a FHIR Path expression, it evaluates in the context of a resource of one of the type identified in the data requirement, and may also refer to the variable %previous for delta comparisons on events of type data-changed, data-modified, and data-deleted which will always have the same type.
    */
-  condition?: fhirModels.Expression;
+  condition?: fhirModels.Expression|undefined;
   /**
    * This element shall be present for any data type trigger.
    */
-  data?: fhirModels.DataRequirement[];
+  data?: fhirModels.DataRequirement[]|undefined;
   /**
    * An event name can be provided for all event types, but is required for named events. If a name is provided for a type other than named events, it is considered to be a shorthand for the semantics described by the formal description of the event.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingTiming?: fhirModels.Timing;
+  timingTiming?: fhirModels.Timing|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingReference?: fhirModels.Reference;
+  timingReference?: fhirModels.Reference|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingDate?: string;
-  _timingDate?: fhirModels.Element;
+  timingDate?: string|undefined;
+  _timingDate?: fhirModels.Element|undefined;
   /**
    * The timing of the event (if this is a periodic trigger).
    */
-  timingDateTime?: string;
-  _timingDateTime?: fhirModels.Element;
+  timingDateTime?: string|undefined;
+  _timingDateTime?: fhirModels.Element|undefined;
   /**
    * The type of triggering event.
    */
-  type: TriggerDefinitionTypeEnum;
-  _type?: fhirModels.Element;
+  type: TriggerDefinitionTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for TriggerDefinition from an object that MAY NOT contain all required elements.
    */
-  constructor(source: TriggerDefinition) {
+  constructor(source:Partial<fhirInterfaces.ITriggerDefinition>) {
     super(source);
-    if (source["condition"] !== undefined) { this.condition = source.condition; }
-    if (source["data"] !== undefined) { this.data = source.data; }
+    if (source["condition"] !== undefined) { this.condition = new fhirModels.Expression(source.condition); }
+    if (source["data"] !== undefined) { this.data = source.data.map((x) => new fhirModels.DataRequirement(x)); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["timingTiming"] !== undefined) { this.timingTiming = source.timingTiming; }
-    if (source["timingReference"] !== undefined) { this.timingReference = source.timingReference; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["timingTiming"] !== undefined) { this.timingTiming = new fhirModels.Timing(source.timingTiming); }
+    if (source["timingReference"] !== undefined) { this.timingReference = new fhirModels.Reference(source.timingReference); }
     if (source["timingDate"] !== undefined) { this.timingDate = source.timingDate; }
-    if (source["_timingDate"] !== undefined) { this._timingDate = source._timingDate; }
+    if (source["_timingDate"] !== undefined) { this._timingDate = new fhirModels.Element(source._timingDate); }
     if (source["timingDateTime"] !== undefined) { this.timingDateTime = source.timingDateTime; }
-    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = source._timingDateTime; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = new fhirModels.Element(source._timingDateTime); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current TriggerDefinition contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a TriggerDefinition from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ITriggerDefinition):TriggerDefinition {
+    var dest:TriggerDefinition = new TriggerDefinition(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `TriggerDefinition is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

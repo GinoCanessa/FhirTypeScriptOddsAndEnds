@@ -6,14 +6,35 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A duration of time during which an organism (or a process) has existed.
  */
-export class Age extends fhirModels.Quantity {
+export class Age extends fhirModels.Quantity implements fhirInterfaces.IAge {
   /**
-   * Default constructor
+   * Default constructor for Age from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Age) {
+  constructor(source:Partial<fhirInterfaces.IAge>) {
     super(source);
+  }
+  /**
+   * Check if the current Age contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Age from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IAge):Age {
+    var dest:Age = new Age(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Age is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

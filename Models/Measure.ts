@@ -6,437 +6,558 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A population criteria for the measure.
  */
-export class MeasureGroupPopulation extends fhirModels.BackboneElement {
+export class MeasureGroupPopulation extends fhirModels.BackboneElement implements fhirInterfaces.IMeasureGroupPopulation {
   /**
    * The type of population criteria.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * In the case of a continuous-variable or ratio measure, this may be the name of a function that calculates the value of the individual observation for each patient or event in the population. For these types of measures, individual observations are reported as observation resources included in the evaluatedResources bundle for each patient. See the MeasureReport resource or the Quality Reporting topic for more information.
    */
-  criteria: fhirModels.Expression;
+  criteria: fhirModels.Expression|undefined;
   /**
    * The human readable description of this population criteria.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for MeasureGroupPopulation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MeasureGroupPopulation) {
+  constructor(source:Partial<fhirInterfaces.IMeasureGroupPopulation>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["criteria"] === undefined) { throw 'Missing required element criteria';}
-    this.criteria = source.criteria;
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["criteria"] !== undefined) { this.criteria = new fhirModels.Expression(source.criteria); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+  }
+  /**
+   * Check if the current MeasureGroupPopulation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["criteria"] === undefined) { missingElements.push("criteria"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MeasureGroupPopulation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasureGroupPopulation):MeasureGroupPopulation {
+    var dest:MeasureGroupPopulation = new MeasureGroupPopulation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MeasureGroupPopulation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Stratifiers are defined either as a single criteria, or as a set of component criteria.
  */
-export class MeasureGroupStratifierComponent extends fhirModels.BackboneElement {
+export class MeasureGroupStratifierComponent extends fhirModels.BackboneElement implements fhirInterfaces.IMeasureGroupStratifierComponent {
   /**
    * Indicates a meaning for the stratifier component. This can be as simple as a unique identifier, or it can establish meaning in a broader context by drawing from a terminology, allowing stratifiers to be correlated across measures.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * An expression that specifies the criteria for this component of the stratifier. This is typically the name of an expression defined within a referenced library, but it may also be a path to a stratifier element.
    */
-  criteria: fhirModels.Expression;
+  criteria: fhirModels.Expression|undefined;
   /**
    * The human readable description of this stratifier criteria component.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for MeasureGroupStratifierComponent from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MeasureGroupStratifierComponent) {
+  constructor(source:Partial<fhirInterfaces.IMeasureGroupStratifierComponent>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["criteria"] === undefined) { throw 'Missing required element criteria';}
-    this.criteria = source.criteria;
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["criteria"] !== undefined) { this.criteria = new fhirModels.Expression(source.criteria); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+  }
+  /**
+   * Check if the current MeasureGroupStratifierComponent contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["criteria"] === undefined) { missingElements.push("criteria"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MeasureGroupStratifierComponent from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasureGroupStratifierComponent):MeasureGroupStratifierComponent {
+    var dest:MeasureGroupStratifierComponent = new MeasureGroupStratifierComponent(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MeasureGroupStratifierComponent is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
  */
-export class MeasureGroupStratifier extends fhirModels.BackboneElement {
+export class MeasureGroupStratifier extends fhirModels.BackboneElement implements fhirInterfaces.IMeasureGroupStratifier {
   /**
    * Indicates a meaning for the stratifier. This can be as simple as a unique identifier, or it can establish meaning in a broader context by drawing from a terminology, allowing stratifiers to be correlated across measures.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * Stratifiers are defined either as a single criteria, or as a set of component criteria.
    */
-  component?: fhirModels.MeasureGroupStratifierComponent[];
+  component?: fhirModels.MeasureGroupStratifierComponent[]|undefined;
   /**
    * An expression that specifies the criteria for the stratifier. This is typically the name of an expression defined within a referenced library, but it may also be a path to a stratifier element.
    */
-  criteria?: fhirModels.Expression;
+  criteria?: fhirModels.Expression|undefined;
   /**
    * The human readable description of this stratifier criteria.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for MeasureGroupStratifier from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MeasureGroupStratifier) {
+  constructor(source:Partial<fhirInterfaces.IMeasureGroupStratifier>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["component"] !== undefined) { this.component = source.component; }
-    if (source["criteria"] !== undefined) { this.criteria = source.criteria; }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["component"] !== undefined) { this.component = source.component.map((x) => new fhirModels.MeasureGroupStratifierComponent(x)); }
+    if (source["criteria"] !== undefined) { this.criteria = new fhirModels.Expression(source.criteria); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+  }
+  /**
+   * Check if the current MeasureGroupStratifier contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MeasureGroupStratifier from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasureGroupStratifier):MeasureGroupStratifier {
+    var dest:MeasureGroupStratifier = new MeasureGroupStratifier(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MeasureGroupStratifier is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A group of population criteria for the measure.
  */
-export class MeasureGroup extends fhirModels.BackboneElement {
+export class MeasureGroup extends fhirModels.BackboneElement implements fhirInterfaces.IMeasureGroup {
   /**
    * Indicates a meaning for the group. This can be as simple as a unique identifier, or it can establish meaning in a broader context by drawing from a terminology, allowing groups to be correlated across measures.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * The human readable description of this population group.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * A population criteria for the measure.
    */
-  population?: fhirModels.MeasureGroupPopulation[];
+  population?: fhirModels.MeasureGroupPopulation[]|undefined;
   /**
    * The stratifier criteria for the measure report, specified as either the name of a valid CQL expression defined within a referenced library or a valid FHIR Resource Path.
    */
-  stratifier?: fhirModels.MeasureGroupStratifier[];
+  stratifier?: fhirModels.MeasureGroupStratifier[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for MeasureGroup from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MeasureGroup) {
+  constructor(source:Partial<fhirInterfaces.IMeasureGroup>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["population"] !== undefined) { this.population = source.population; }
-    if (source["stratifier"] !== undefined) { this.stratifier = source.stratifier; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["population"] !== undefined) { this.population = source.population.map((x) => new fhirModels.MeasureGroupPopulation(x)); }
+    if (source["stratifier"] !== undefined) { this.stratifier = source.stratifier.map((x) => new fhirModels.MeasureGroupStratifier(x)); }
+  }
+  /**
+   * Check if the current MeasureGroup contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MeasureGroup from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasureGroup):MeasureGroup {
+    var dest:MeasureGroup = new MeasureGroup(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MeasureGroup is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Note that supplemental data are reported as observations for each patient and included in the evaluatedResources bundle. See the MeasureReport resource or the Quality Reporting topic for more information.
  */
-export class MeasureSupplementalData extends fhirModels.BackboneElement {
+export class MeasureSupplementalData extends fhirModels.BackboneElement implements fhirInterfaces.IMeasureSupplementalData {
   /**
    * Indicates a meaning for the supplemental data. This can be as simple as a unique identifier, or it can establish meaning in a broader context by drawing from a terminology, allowing supplemental data to be correlated across measures.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * The criteria for the supplemental data. This is typically the name of a valid expression defined within a referenced library, but it may also be a path to a specific data element. The criteria defines the data to be returned for this element.
    */
-  criteria: fhirModels.Expression;
+  criteria: fhirModels.Expression|undefined;
   /**
    * The human readable description of this supplemental data.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * An indicator of the intended usage for the supplemental data element. Supplemental data indicates the data is additional information requested to augment the measure information. Risk adjustment factor indicates the data is additional information used to calculate risk adjustment factors when applying a risk model to the measure calculation.
    */
-  usage?: fhirModels.CodeableConcept[];
+  usage?: fhirModels.CodeableConcept[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for MeasureSupplementalData from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MeasureSupplementalData) {
+  constructor(source:Partial<fhirInterfaces.IMeasureSupplementalData>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["criteria"] === undefined) { throw 'Missing required element criteria';}
-    this.criteria = source.criteria;
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["criteria"] !== undefined) { this.criteria = new fhirModels.Expression(source.criteria); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["usage"] !== undefined) { this.usage = source.usage; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["usage"] !== undefined) { this.usage = source.usage.map((x) => new fhirModels.CodeableConcept(x)); }
+  }
+  /**
+   * Check if the current MeasureSupplementalData contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["criteria"] === undefined) { missingElements.push("criteria"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MeasureSupplementalData from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasureSupplementalData):MeasureSupplementalData {
+    var dest:MeasureSupplementalData = new MeasureSupplementalData(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MeasureSupplementalData is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The Measure resource provides the definition of a quality measure.
  */
-export class Measure extends fhirModels.DomainResource {
+export class Measure extends fhirModels.DomainResource implements fhirInterfaces.IMeasure {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Measure";
+  readonly resourceType = "Measure";
   /**
    * The 'date' element may be more recent than the approval date because of minor changes or editorial corrections.
    */
-  approvalDate?: string;
-  _approvalDate?: fhirModels.Element;
+  approvalDate?: string|undefined;
+  _approvalDate?: fhirModels.Element|undefined;
   /**
    * An individiual or organization primarily involved in the creation and maintenance of the content.
    */
-  author?: fhirModels.ContactDetail[];
+  author?: fhirModels.ContactDetail[]|undefined;
   /**
    * Provides a summary of relevant clinical guidelines or other clinical recommendations supporting the measure.
    */
-  clinicalRecommendationStatement?: string;
-  _clinicalRecommendationStatement?: fhirModels.Element;
+  clinicalRecommendationStatement?: string|undefined;
+  _clinicalRecommendationStatement?: fhirModels.Element|undefined;
   /**
    * If this is a composite measure, the scoring method used to combine the component measures to determine the composite score.
    */
-  compositeScoring?: fhirModels.CodeableConcept;
+  compositeScoring?: fhirModels.CodeableConcept|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  contact?: fhirModels.ContactDetail[];
+  contact?: fhirModels.ContactDetail[]|undefined;
   /**
    * A copyright statement relating to the measure and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the measure.
    */
-  copyright?: string;
-  _copyright?: fhirModels.Element;
+  copyright?: string|undefined;
+  _copyright?: fhirModels.Element|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the measure. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * Provides a description of an individual term used within the measure.
    */
-  definition?: string[];
-  _definition?: fhirModels.Element[];
+  definition?: string[]|undefined;
+  _definition?: fhirModels.Element[]|undefined;
   /**
    * This description can be used to capture details such as why the measure was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the measure as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the measure is presumed to be the predominant language in the place the measure was created).
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Notices and disclaimers regarding the use of the measure or related to intellectual property (such as code systems) referenced by the measure.
    */
-  disclaimer?: string;
-  _disclaimer?: fhirModels.Element;
+  disclaimer?: string|undefined;
+  _disclaimer?: fhirModels.Element|undefined;
   /**
    * An individual or organization primarily responsible for internal coherence of the content.
    */
-  editor?: fhirModels.ContactDetail[];
+  editor?: fhirModels.ContactDetail[]|undefined;
   /**
    * The effective period for a measure  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.
    */
-  effectivePeriod?: fhirModels.Period;
+  effectivePeriod?: fhirModels.Period|undefined;
   /**
    * An individual or organization responsible for officially endorsing the content for use in some setting.
    */
-  endorser?: fhirModels.ContactDetail[];
+  endorser?: fhirModels.ContactDetail[]|undefined;
   /**
    * Allows filtering of measures that are appropriate for use versus not.
    */
-  experimental?: boolean;
-  _experimental?: fhirModels.Element;
+  experimental?: boolean|undefined;
+  _experimental?: fhirModels.Element|undefined;
   /**
    * A group of population criteria for the measure.
    */
-  group?: fhirModels.MeasureGroup[];
+  group?: fhirModels.MeasureGroup[]|undefined;
   /**
    * Additional guidance for the measure including how it can be used in a clinical context, and the intent of the measure.
    */
-  guidance?: string;
-  _guidance?: fhirModels.Element;
+  guidance?: string|undefined;
+  _guidance?: fhirModels.Element|undefined;
   /**
    * Typically, this is used for identifiers that can go in an HL7 V3 II (instance identifier) data type, and can then identify this measure outside of FHIR, where it is not possible to use the logical URI.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Information on whether an increase or decrease in score is the preferred result (e.g., a higher score indicates better quality OR a lower score indicates better quality OR quality is within a range).
    */
-  improvementNotation?: fhirModels.CodeableConcept;
+  improvementNotation?: fhirModels.CodeableConcept|undefined;
   /**
    * It may be possible for the measure to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  jurisdiction?: fhirModels.CodeableConcept[];
+  jurisdiction?: fhirModels.CodeableConcept[]|undefined;
   /**
    * If specified, this date follows the original approval date.
    */
-  lastReviewDate?: string;
-  _lastReviewDate?: fhirModels.Element;
+  lastReviewDate?: string|undefined;
+  _lastReviewDate?: fhirModels.Element|undefined;
   /**
    * A reference to a Library resource containing the formal logic used by the measure.
    */
-  library?: string[];
-  _library?: fhirModels.Element[];
+  library?: string[]|undefined;
+  _library?: fhirModels.Element[]|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the measure is the organization or individual primarily responsible for the maintenance and upkeep of the measure. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the measure. This item SHOULD be populated unless the information is available from context.
    */
-  publisher?: string;
-  _publisher?: fhirModels.Element;
+  publisher?: string|undefined;
+  _publisher?: fhirModels.Element|undefined;
   /**
    * This element does not describe the usage of the measure. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this measure.
    */
-  purpose?: string;
-  _purpose?: fhirModels.Element;
+  purpose?: string|undefined;
+  _purpose?: fhirModels.Element|undefined;
   /**
    * The measure rate for an organization or clinician is based upon the entities’ aggregate data and summarizes the performance of the entity over a given time period (e.g., monthly, quarterly, yearly). The aggregated data are derived from the results of a specific measure algorithm and, if appropriate, the application of specific risk adjustment models.  Can also be used to describe how to risk adjust the data based on supplemental data elements described in the eMeasure (e.g., pneumonia hospital measures antibiotic selection in the ICU versus non-ICU and then the roll-up of the two). This could be applied to aggregated cohort measure definitions (e.g., CDC's aggregate reporting for TB at the state level).
    */
-  rateAggregation?: string;
-  _rateAggregation?: fhirModels.Element;
+  rateAggregation?: string|undefined;
+  _rateAggregation?: fhirModels.Element|undefined;
   /**
    * Provides a succinct statement of the need for the measure. Usually includes statements pertaining to importance criterion: impact, gap in care, and evidence.
    */
-  rationale?: string;
-  _rationale?: fhirModels.Element;
+  rationale?: string|undefined;
+  _rationale?: fhirModels.Element|undefined;
   /**
    * Each related artifact is either an attachment, or a reference to another resource, but not both.
    */
-  relatedArtifact?: fhirModels.RelatedArtifact[];
+  relatedArtifact?: fhirModels.RelatedArtifact[]|undefined;
   /**
    * An individual or organization primarily responsible for review of some aspect of the content.
    */
-  reviewer?: fhirModels.ContactDetail[];
+  reviewer?: fhirModels.ContactDetail[]|undefined;
   /**
    * Describes the method of adjusting for clinical severity and conditions present at the start of care that can influence patient outcomes for making valid comparisons of outcome measures across providers. Indicates whether a measure is subject to the statistical process for reducing, removing, or clarifying the influences of confounding factors to allow for more useful comparisons.
    */
-  riskAdjustment?: string;
-  _riskAdjustment?: fhirModels.Element;
+  riskAdjustment?: string|undefined;
+  _riskAdjustment?: fhirModels.Element|undefined;
   /**
    * Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented.
    */
-  scoring?: fhirModels.CodeableConcept;
+  scoring?: fhirModels.CodeableConcept|undefined;
   /**
    * Allows filtering of measures that are appropriate for use versus not.
    */
-  status: MeasureStatusEnum;
-  _status?: fhirModels.Element;
+  status: MeasureStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The subject of the measure is critical in interpreting the criteria definitions, as the logic in the measures is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
    */
-  subjectCodeableConcept?: fhirModels.CodeableConcept;
+  subjectCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * The subject of the measure is critical in interpreting the criteria definitions, as the logic in the measures is evaluated with respect to a particular subject. This corresponds roughly to the notion of a Compartment in that it limits what content is available based on its relationship to the subject. In CQL, this corresponds to the context declaration.
    */
-  subjectReference?: fhirModels.Reference;
+  subjectReference?: fhirModels.Reference|undefined;
   /**
    * An explanatory or alternate title for the measure giving additional information about its content.
    */
-  subtitle?: string;
-  _subtitle?: fhirModels.Element;
+  subtitle?: string|undefined;
+  _subtitle?: fhirModels.Element|undefined;
   /**
    * Note that supplemental data are reported as observations for each patient and included in the evaluatedResources bundle. See the MeasureReport resource or the Quality Reporting topic for more information.
    */
-  supplementalData?: fhirModels.MeasureSupplementalData[];
+  supplementalData?: fhirModels.MeasureSupplementalData[]|undefined;
   /**
    * This name does not need to be machine-processing friendly and may contain punctuation, white-space, etc.
    */
-  title?: string;
-  _title?: fhirModels.Element;
+  title?: string|undefined;
+  _title?: fhirModels.Element|undefined;
   /**
    * Descriptive topics related to the content of the measure. Topics provide a high-level categorization grouping types of measures that can be useful for filtering and searching.
    */
-  topic?: fhirModels.CodeableConcept[];
+  topic?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates whether the measure is used to examine a process, an outcome over time, a patient-reported outcome, or a structure measure such as utilization.
    */
-  type?: fhirModels.CodeableConcept[];
+  type?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  url?: string;
-  _url?: fhirModels.Element;
+  url?: string|undefined;
+  _url?: fhirModels.Element|undefined;
   /**
    * A detailed description, from a clinical perspective, of how the measure is used.
    */
-  usage?: string;
-  _usage?: fhirModels.Element;
+  usage?: string|undefined;
+  _usage?: fhirModels.Element|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  useContext?: fhirModels.UsageContext[];
+  useContext?: fhirModels.UsageContext[]|undefined;
   /**
    * There may be different measure instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the measure with the format [url]|[version].
    */
-  version?: string;
-  _version?: fhirModels.Element;
+  version?: string|undefined;
+  _version?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Measure from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Measure) {
+  constructor(source:Partial<fhirInterfaces.IMeasure>) {
     super(source);
     if ((source['resourceType'] !== "Measure") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Measure'; }
     if (source["approvalDate"] !== undefined) { this.approvalDate = source.approvalDate; }
-    if (source["_approvalDate"] !== undefined) { this._approvalDate = source._approvalDate; }
-    if (source["author"] !== undefined) { this.author = source.author; }
+    if (source["_approvalDate"] !== undefined) { this._approvalDate = new fhirModels.Element(source._approvalDate); }
+    if (source["author"] !== undefined) { this.author = source.author.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["clinicalRecommendationStatement"] !== undefined) { this.clinicalRecommendationStatement = source.clinicalRecommendationStatement; }
-    if (source["_clinicalRecommendationStatement"] !== undefined) { this._clinicalRecommendationStatement = source._clinicalRecommendationStatement; }
-    if (source["compositeScoring"] !== undefined) { this.compositeScoring = source.compositeScoring; }
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
+    if (source["_clinicalRecommendationStatement"] !== undefined) { this._clinicalRecommendationStatement = new fhirModels.Element(source._clinicalRecommendationStatement); }
+    if (source["compositeScoring"] !== undefined) { this.compositeScoring = new fhirModels.CodeableConcept(source.compositeScoring); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["copyright"] !== undefined) { this.copyright = source.copyright; }
-    if (source["_copyright"] !== undefined) { this._copyright = source._copyright; }
+    if (source["_copyright"] !== undefined) { this._copyright = new fhirModels.Element(source._copyright); }
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
-    if (source["definition"] !== undefined) { this.definition = source.definition; }
-    if (source["_definition"] !== undefined) { this._definition = source._definition; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
+    if (source["definition"] !== undefined) { this.definition = source.definition.map((x) => (x)); }
+    if (source["_definition"] !== undefined) { this._definition = source._definition.map((x) => new fhirModels.Element(x)); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
     if (source["disclaimer"] !== undefined) { this.disclaimer = source.disclaimer; }
-    if (source["_disclaimer"] !== undefined) { this._disclaimer = source._disclaimer; }
-    if (source["editor"] !== undefined) { this.editor = source.editor; }
-    if (source["effectivePeriod"] !== undefined) { this.effectivePeriod = source.effectivePeriod; }
-    if (source["endorser"] !== undefined) { this.endorser = source.endorser; }
+    if (source["_disclaimer"] !== undefined) { this._disclaimer = new fhirModels.Element(source._disclaimer); }
+    if (source["editor"] !== undefined) { this.editor = source.editor.map((x) => new fhirModels.ContactDetail(x)); }
+    if (source["effectivePeriod"] !== undefined) { this.effectivePeriod = new fhirModels.Period(source.effectivePeriod); }
+    if (source["endorser"] !== undefined) { this.endorser = source.endorser.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["experimental"] !== undefined) { this.experimental = source.experimental; }
-    if (source["_experimental"] !== undefined) { this._experimental = source._experimental; }
-    if (source["group"] !== undefined) { this.group = source.group; }
+    if (source["_experimental"] !== undefined) { this._experimental = new fhirModels.Element(source._experimental); }
+    if (source["group"] !== undefined) { this.group = source.group.map((x) => new fhirModels.MeasureGroup(x)); }
     if (source["guidance"] !== undefined) { this.guidance = source.guidance; }
-    if (source["_guidance"] !== undefined) { this._guidance = source._guidance; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["improvementNotation"] !== undefined) { this.improvementNotation = source.improvementNotation; }
-    if (source["jurisdiction"] !== undefined) { this.jurisdiction = source.jurisdiction; }
+    if (source["_guidance"] !== undefined) { this._guidance = new fhirModels.Element(source._guidance); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["improvementNotation"] !== undefined) { this.improvementNotation = new fhirModels.CodeableConcept(source.improvementNotation); }
+    if (source["jurisdiction"] !== undefined) { this.jurisdiction = source.jurisdiction.map((x) => new fhirModels.CodeableConcept(x)); }
     if (source["lastReviewDate"] !== undefined) { this.lastReviewDate = source.lastReviewDate; }
-    if (source["_lastReviewDate"] !== undefined) { this._lastReviewDate = source._lastReviewDate; }
-    if (source["library"] !== undefined) { this.library = source.library; }
-    if (source["_library"] !== undefined) { this._library = source._library; }
+    if (source["_lastReviewDate"] !== undefined) { this._lastReviewDate = new fhirModels.Element(source._lastReviewDate); }
+    if (source["library"] !== undefined) { this.library = source.library.map((x) => (x)); }
+    if (source["_library"] !== undefined) { this._library = source._library.map((x) => new fhirModels.Element(x)); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
     if (source["publisher"] !== undefined) { this.publisher = source.publisher; }
-    if (source["_publisher"] !== undefined) { this._publisher = source._publisher; }
+    if (source["_publisher"] !== undefined) { this._publisher = new fhirModels.Element(source._publisher); }
     if (source["purpose"] !== undefined) { this.purpose = source.purpose; }
-    if (source["_purpose"] !== undefined) { this._purpose = source._purpose; }
+    if (source["_purpose"] !== undefined) { this._purpose = new fhirModels.Element(source._purpose); }
     if (source["rateAggregation"] !== undefined) { this.rateAggregation = source.rateAggregation; }
-    if (source["_rateAggregation"] !== undefined) { this._rateAggregation = source._rateAggregation; }
+    if (source["_rateAggregation"] !== undefined) { this._rateAggregation = new fhirModels.Element(source._rateAggregation); }
     if (source["rationale"] !== undefined) { this.rationale = source.rationale; }
-    if (source["_rationale"] !== undefined) { this._rationale = source._rationale; }
-    if (source["relatedArtifact"] !== undefined) { this.relatedArtifact = source.relatedArtifact; }
-    if (source["reviewer"] !== undefined) { this.reviewer = source.reviewer; }
+    if (source["_rationale"] !== undefined) { this._rationale = new fhirModels.Element(source._rationale); }
+    if (source["relatedArtifact"] !== undefined) { this.relatedArtifact = source.relatedArtifact.map((x) => new fhirModels.RelatedArtifact(x)); }
+    if (source["reviewer"] !== undefined) { this.reviewer = source.reviewer.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["riskAdjustment"] !== undefined) { this.riskAdjustment = source.riskAdjustment; }
-    if (source["_riskAdjustment"] !== undefined) { this._riskAdjustment = source._riskAdjustment; }
-    if (source["scoring"] !== undefined) { this.scoring = source.scoring; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subjectCodeableConcept"] !== undefined) { this.subjectCodeableConcept = source.subjectCodeableConcept; }
-    if (source["subjectReference"] !== undefined) { this.subjectReference = source.subjectReference; }
+    if (source["_riskAdjustment"] !== undefined) { this._riskAdjustment = new fhirModels.Element(source._riskAdjustment); }
+    if (source["scoring"] !== undefined) { this.scoring = new fhirModels.CodeableConcept(source.scoring); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subjectCodeableConcept"] !== undefined) { this.subjectCodeableConcept = new fhirModels.CodeableConcept(source.subjectCodeableConcept); }
+    if (source["subjectReference"] !== undefined) { this.subjectReference = new fhirModels.Reference(source.subjectReference); }
     if (source["subtitle"] !== undefined) { this.subtitle = source.subtitle; }
-    if (source["_subtitle"] !== undefined) { this._subtitle = source._subtitle; }
-    if (source["supplementalData"] !== undefined) { this.supplementalData = source.supplementalData; }
+    if (source["_subtitle"] !== undefined) { this._subtitle = new fhirModels.Element(source._subtitle); }
+    if (source["supplementalData"] !== undefined) { this.supplementalData = source.supplementalData.map((x) => new fhirModels.MeasureSupplementalData(x)); }
     if (source["title"] !== undefined) { this.title = source.title; }
-    if (source["_title"] !== undefined) { this._title = source._title; }
-    if (source["topic"] !== undefined) { this.topic = source.topic; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_title"] !== undefined) { this._title = new fhirModels.Element(source._title); }
+    if (source["topic"] !== undefined) { this.topic = source.topic.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["type"] !== undefined) { this.type = source.type.map((x) => new fhirModels.CodeableConcept(x)); }
     if (source["url"] !== undefined) { this.url = source.url; }
-    if (source["_url"] !== undefined) { this._url = source._url; }
+    if (source["_url"] !== undefined) { this._url = new fhirModels.Element(source._url); }
     if (source["usage"] !== undefined) { this.usage = source.usage; }
-    if (source["_usage"] !== undefined) { this._usage = source._usage; }
-    if (source["useContext"] !== undefined) { this.useContext = source.useContext; }
+    if (source["_usage"] !== undefined) { this._usage = new fhirModels.Element(source._usage); }
+    if (source["useContext"] !== undefined) { this.useContext = source.useContext.map((x) => new fhirModels.UsageContext(x)); }
     if (source["version"] !== undefined) { this.version = source.version; }
-    if (source["_version"] !== undefined) { this._version = source._version; }
+    if (source["_version"] !== undefined) { this._version = new fhirModels.Element(source._version); }
+  }
+  /**
+   * Check if the current Measure contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Measure from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMeasure):Measure {
+    var dest:Measure = new Measure(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Measure is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

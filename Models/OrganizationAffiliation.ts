@@ -6,81 +6,102 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Defines an affiliation/assotiation/relationship between 2 distinct oganizations, that is not a part-of relationship/sub-division relationship.
  */
-export class OrganizationAffiliation extends fhirModels.DomainResource {
+export class OrganizationAffiliation extends fhirModels.DomainResource implements fhirInterfaces.IOrganizationAffiliation {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "OrganizationAffiliation";
+  readonly resourceType = "OrganizationAffiliation";
   /**
    * If this value is false, you may refer to the period to see when the role was in active use. If there is no period specified, no inference can be made about when it was active.
    */
-  active?: boolean;
-  _active?: fhirModels.Element;
+  active?: boolean|undefined;
+  _active?: fhirModels.Element|undefined;
   /**
    * Definition of the role the participatingOrganization plays in the association.
    */
-  code?: fhirModels.CodeableConcept[];
+  code?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Technical endpoints providing access to services operated for this role.
    */
-  endpoint?: fhirModels.Reference[];
+  endpoint?: fhirModels.Reference[]|undefined;
   /**
    * Healthcare services provided through the role.
    */
-  healthcareService?: fhirModels.Reference[];
+  healthcareService?: fhirModels.Reference[]|undefined;
   /**
    * Business identifiers that are specific to this role.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The location(s) at which the role occurs.
    */
-  location?: fhirModels.Reference[];
+  location?: fhirModels.Reference[]|undefined;
   /**
    * Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).
    */
-  network?: fhirModels.Reference[];
+  network?: fhirModels.Reference[]|undefined;
   /**
    * Organization where the role is available (primary organization/has members).
    */
-  organization?: fhirModels.Reference;
+  organization?: fhirModels.Reference|undefined;
   /**
    * The Participating Organization provides/performs the role(s) defined by the code to the Primary Organization (e.g. providing services or is a member of).
    */
-  participatingOrganization?: fhirModels.Reference;
+  participatingOrganization?: fhirModels.Reference|undefined;
   /**
    * The period during which the participatingOrganization is affiliated with the primary organization.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * Specific specialty of the participatingOrganization in the context of the role.
    */
-  specialty?: fhirModels.CodeableConcept[];
+  specialty?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Contact details at the participatingOrganization relevant to this Affiliation.
    */
-  telecom?: fhirModels.ContactPoint[];
+  telecom?: fhirModels.ContactPoint[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for OrganizationAffiliation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: OrganizationAffiliation) {
+  constructor(source:Partial<fhirInterfaces.IOrganizationAffiliation>) {
     super(source);
     if ((source['resourceType'] !== "OrganizationAffiliation") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a OrganizationAffiliation'; }
     if (source["active"] !== undefined) { this.active = source.active; }
-    if (source["_active"] !== undefined) { this._active = source._active; }
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint; }
-    if (source["healthcareService"] !== undefined) { this.healthcareService = source.healthcareService; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["network"] !== undefined) { this.network = source.network; }
-    if (source["organization"] !== undefined) { this.organization = source.organization; }
-    if (source["participatingOrganization"] !== undefined) { this.participatingOrganization = source.participatingOrganization; }
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["specialty"] !== undefined) { this.specialty = source.specialty; }
-    if (source["telecom"] !== undefined) { this.telecom = source.telecom; }
+    if (source["_active"] !== undefined) { this._active = new fhirModels.Element(source._active); }
+    if (source["code"] !== undefined) { this.code = source.code.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["endpoint"] !== undefined) { this.endpoint = source.endpoint.map((x) => new fhirModels.Reference(x)); }
+    if (source["healthcareService"] !== undefined) { this.healthcareService = source.healthcareService.map((x) => new fhirModels.Reference(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["location"] !== undefined) { this.location = source.location.map((x) => new fhirModels.Reference(x)); }
+    if (source["network"] !== undefined) { this.network = source.network.map((x) => new fhirModels.Reference(x)); }
+    if (source["organization"] !== undefined) { this.organization = new fhirModels.Reference(source.organization); }
+    if (source["participatingOrganization"] !== undefined) { this.participatingOrganization = new fhirModels.Reference(source.participatingOrganization); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["specialty"] !== undefined) { this.specialty = source.specialty.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["telecom"] !== undefined) { this.telecom = source.telecom.map((x) => new fhirModels.ContactPoint(x)); }
+  }
+  /**
+   * Check if the current OrganizationAffiliation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a OrganizationAffiliation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IOrganizationAffiliation):OrganizationAffiliation {
+    var dest:OrganizationAffiliation = new OrganizationAffiliation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `OrganizationAffiliation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

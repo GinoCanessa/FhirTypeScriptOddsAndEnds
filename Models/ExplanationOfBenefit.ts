@@ -6,1039 +6,1400 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * For example,  for the original treatment and follow-up exams.
  */
-export class ExplanationOfBenefitRelated extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitRelated extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitRelated {
   /**
    * Reference to a related claim.
    */
-  claim?: fhirModels.Reference;
+  claim?: fhirModels.Reference|undefined;
   /**
    * For example, Property/Casualty insurer claim number or Workers Compensation case number.
    */
-  reference?: fhirModels.Identifier;
+  reference?: fhirModels.Identifier|undefined;
   /**
    * For example, prior claim or umbrella.
    */
-  relationship?: fhirModels.CodeableConcept;
+  relationship?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitRelated from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitRelated) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitRelated>) {
     super(source);
-    if (source["claim"] !== undefined) { this.claim = source.claim; }
-    if (source["reference"] !== undefined) { this.reference = source.reference; }
-    if (source["relationship"] !== undefined) { this.relationship = source.relationship; }
+    if (source["claim"] !== undefined) { this.claim = new fhirModels.Reference(source.claim); }
+    if (source["reference"] !== undefined) { this.reference = new fhirModels.Identifier(source.reference); }
+    if (source["relationship"] !== undefined) { this.relationship = new fhirModels.CodeableConcept(source.relationship); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitRelated contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitRelated from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitRelated):ExplanationOfBenefitRelated {
+    var dest:ExplanationOfBenefitRelated = new ExplanationOfBenefitRelated(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitRelated is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
  */
-export class ExplanationOfBenefitPayee extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitPayee extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitPayee {
   /**
    * Not required if the payee is 'subscriber' or 'provider'.
    */
-  party?: fhirModels.Reference;
+  party?: fhirModels.Reference|undefined;
   /**
    * Type of Party to be reimbursed: Subscriber, provider, other.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitPayee from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitPayee) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitPayee>) {
     super(source);
-    if (source["party"] !== undefined) { this.party = source.party; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["party"] !== undefined) { this.party = new fhirModels.Reference(source.party); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitPayee contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitPayee from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitPayee):ExplanationOfBenefitPayee {
+    var dest:ExplanationOfBenefitPayee = new ExplanationOfBenefitPayee(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitPayee is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The members of the team who provided the products and services.
  */
-export class ExplanationOfBenefitCareTeam extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitCareTeam extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitCareTeam {
   /**
    * Member of the team who provided the product or service.
    */
-  provider: fhirModels.Reference;
+  provider: fhirModels.Reference|undefined;
   /**
    * The qualification of the practitioner which is applicable for this service.
    */
-  qualification?: fhirModels.CodeableConcept;
+  qualification?: fhirModels.CodeableConcept|undefined;
   /**
    * Responsible might not be required when there is only a single provider listed.
    */
-  responsible?: boolean;
-  _responsible?: fhirModels.Element;
+  responsible?: boolean|undefined;
+  _responsible?: fhirModels.Element|undefined;
   /**
    * Role might not be required when there is only a single provider listed.
    */
-  role?: fhirModels.CodeableConcept;
+  role?: fhirModels.CodeableConcept|undefined;
   /**
    * A number to uniquely identify care team entries.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitCareTeam from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitCareTeam) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitCareTeam>) {
     super(source);
-    if (source["provider"] === undefined) { throw 'Missing required element provider';}
-    this.provider = source.provider;
-    if (source["qualification"] !== undefined) { this.qualification = source.qualification; }
+    if (source["provider"] !== undefined) { this.provider = new fhirModels.Reference(source.provider); }
+    if (source["qualification"] !== undefined) { this.qualification = new fhirModels.CodeableConcept(source.qualification); }
     if (source["responsible"] !== undefined) { this.responsible = source.responsible; }
-    if (source["_responsible"] !== undefined) { this._responsible = source._responsible; }
-    if (source["role"] !== undefined) { this.role = source.role; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
+    if (source["_responsible"] !== undefined) { this._responsible = new fhirModels.Element(source._responsible); }
+    if (source["role"] !== undefined) { this.role = new fhirModels.CodeableConcept(source.role); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitCareTeam contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["provider"] === undefined) { missingElements.push("provider"); }
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitCareTeam from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitCareTeam):ExplanationOfBenefitCareTeam {
+    var dest:ExplanationOfBenefitCareTeam = new ExplanationOfBenefitCareTeam(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitCareTeam is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Often there are multiple jurisdiction specific valuesets which are required.
  */
-export class ExplanationOfBenefitSupportingInfo extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitSupportingInfo extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitSupportingInfo {
   /**
    * This may contain a category for the local bill type codes.
    */
-  category: fhirModels.CodeableConcept;
+  category: fhirModels.CodeableConcept|undefined;
   /**
    * This may contain the local bill type codes such as the US UB-04 bill type code.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * For example: the reason for the additional stay, or why a tooth is  missing.
    */
-  reason?: fhirModels.Coding;
+  reason?: fhirModels.Coding|undefined;
   /**
    * A number to uniquely identify supporting information entries.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * The date when or period to which this information refers.
    */
-  timingDate?: string;
-  _timingDate?: fhirModels.Element;
+  timingDate?: string|undefined;
+  _timingDate?: fhirModels.Element|undefined;
   /**
    * The date when or period to which this information refers.
    */
-  timingPeriod?: fhirModels.Period;
+  timingPeriod?: fhirModels.Period|undefined;
   /**
    * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
    */
-  valueBoolean?: boolean;
-  _valueBoolean?: fhirModels.Element;
+  valueBoolean?: boolean|undefined;
+  _valueBoolean?: fhirModels.Element|undefined;
   /**
    * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
    */
-  valueString?: string;
-  _valueString?: fhirModels.Element;
+  valueString?: string|undefined;
+  _valueString?: fhirModels.Element|undefined;
   /**
    * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
    */
-  valueQuantity?: fhirModels.Quantity;
+  valueQuantity?: fhirModels.Quantity|undefined;
   /**
    * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
    */
-  valueAttachment?: fhirModels.Attachment;
+  valueAttachment?: fhirModels.Attachment|undefined;
   /**
    * Could be used to provide references to other resources, document. For example, could contain a PDF in an Attachment of the Police Report for an Accident.
    */
-  valueReference?: fhirModels.Reference;
+  valueReference?: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitSupportingInfo from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitSupportingInfo) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitSupportingInfo>) {
     super(source);
-    if (source["category"] === undefined) { throw 'Missing required element category';}
-    this.category = source.category;
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["reason"] !== undefined) { this.reason = source.reason; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["reason"] !== undefined) { this.reason = new fhirModels.Coding(source.reason); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
     if (source["timingDate"] !== undefined) { this.timingDate = source.timingDate; }
-    if (source["_timingDate"] !== undefined) { this._timingDate = source._timingDate; }
-    if (source["timingPeriod"] !== undefined) { this.timingPeriod = source.timingPeriod; }
+    if (source["_timingDate"] !== undefined) { this._timingDate = new fhirModels.Element(source._timingDate); }
+    if (source["timingPeriod"] !== undefined) { this.timingPeriod = new fhirModels.Period(source.timingPeriod); }
     if (source["valueBoolean"] !== undefined) { this.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = source._valueBoolean; }
+    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = new fhirModels.Element(source._valueBoolean); }
     if (source["valueString"] !== undefined) { this.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { this._valueString = source._valueString; }
-    if (source["valueQuantity"] !== undefined) { this.valueQuantity = source.valueQuantity; }
-    if (source["valueAttachment"] !== undefined) { this.valueAttachment = source.valueAttachment; }
-    if (source["valueReference"] !== undefined) { this.valueReference = source.valueReference; }
+    if (source["_valueString"] !== undefined) { this._valueString = new fhirModels.Element(source._valueString); }
+    if (source["valueQuantity"] !== undefined) { this.valueQuantity = new fhirModels.Quantity(source.valueQuantity); }
+    if (source["valueAttachment"] !== undefined) { this.valueAttachment = new fhirModels.Attachment(source.valueAttachment); }
+    if (source["valueReference"] !== undefined) { this.valueReference = new fhirModels.Reference(source.valueReference); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitSupportingInfo contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["category"] === undefined) { missingElements.push("category"); }
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitSupportingInfo from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitSupportingInfo):ExplanationOfBenefitSupportingInfo {
+    var dest:ExplanationOfBenefitSupportingInfo = new ExplanationOfBenefitSupportingInfo(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitSupportingInfo is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Information about diagnoses relevant to the claim items.
  */
-export class ExplanationOfBenefitDiagnosis extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitDiagnosis extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitDiagnosis {
   /**
    * The nature of illness or problem in a coded form or as a reference to an external defined Condition.
    */
-  diagnosisCodeableConcept?: fhirModels.CodeableConcept;
+  diagnosisCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * The nature of illness or problem in a coded form or as a reference to an external defined Condition.
    */
-  diagnosisReference?: fhirModels.Reference;
+  diagnosisReference?: fhirModels.Reference|undefined;
   /**
    * Indication of whether the diagnosis was present on admission to a facility.
    */
-  onAdmission?: fhirModels.CodeableConcept;
+  onAdmission?: fhirModels.CodeableConcept|undefined;
   /**
    * For example, DRG (Diagnosis Related Group) or a bundled billing code. A patient may have a diagnosis of a Myocardio-infarction and a DRG for HeartAttack would assigned. The Claim item (and possible subsequent claims) would refer to the DRG for those line items that were for services related to the heart attack event.
    */
-  packageCode?: fhirModels.CodeableConcept;
+  packageCode?: fhirModels.CodeableConcept|undefined;
   /**
    * Diagnosis are presented in list order to their expected importance: primary, secondary, etc.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * For example: admitting, primary, secondary, discharge.
    */
-  type?: fhirModels.CodeableConcept[];
+  type?: fhirModels.CodeableConcept[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitDiagnosis from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitDiagnosis) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitDiagnosis>) {
     super(source);
-    if (source["diagnosisCodeableConcept"] !== undefined) { this.diagnosisCodeableConcept = source.diagnosisCodeableConcept; }
-    if (source["diagnosisReference"] !== undefined) { this.diagnosisReference = source.diagnosisReference; }
-    if (source["onAdmission"] !== undefined) { this.onAdmission = source.onAdmission; }
-    if (source["packageCode"] !== undefined) { this.packageCode = source.packageCode; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["diagnosisCodeableConcept"] !== undefined) { this.diagnosisCodeableConcept = new fhirModels.CodeableConcept(source.diagnosisCodeableConcept); }
+    if (source["diagnosisReference"] !== undefined) { this.diagnosisReference = new fhirModels.Reference(source.diagnosisReference); }
+    if (source["onAdmission"] !== undefined) { this.onAdmission = new fhirModels.CodeableConcept(source.onAdmission); }
+    if (source["packageCode"] !== undefined) { this.packageCode = new fhirModels.CodeableConcept(source.packageCode); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
+    if (source["type"] !== undefined) { this.type = source.type.map((x) => new fhirModels.CodeableConcept(x)); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitDiagnosis contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitDiagnosis from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitDiagnosis):ExplanationOfBenefitDiagnosis {
+    var dest:ExplanationOfBenefitDiagnosis = new ExplanationOfBenefitDiagnosis(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitDiagnosis is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Procedures performed on the patient relevant to the billing items with the claim.
  */
-export class ExplanationOfBenefitProcedure extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitProcedure extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitProcedure {
   /**
    * Date and optionally time the procedure was performed.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * The code or reference to a Procedure resource which identifies the clinical intervention performed.
    */
-  procedureCodeableConcept?: fhirModels.CodeableConcept;
+  procedureCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * The code or reference to a Procedure resource which identifies the clinical intervention performed.
    */
-  procedureReference?: fhirModels.Reference;
+  procedureReference?: fhirModels.Reference|undefined;
   /**
    * A number to uniquely identify procedure entries.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * When the condition was observed or the relative ranking.
    */
-  type?: fhirModels.CodeableConcept[];
+  type?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Unique Device Identifiers associated with this line item.
    */
-  udi?: fhirModels.Reference[];
+  udi?: fhirModels.Reference[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitProcedure from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitProcedure) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitProcedure>) {
     super(source);
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
-    if (source["procedureCodeableConcept"] !== undefined) { this.procedureCodeableConcept = source.procedureCodeableConcept; }
-    if (source["procedureReference"] !== undefined) { this.procedureReference = source.procedureReference; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
-    if (source["type"] !== undefined) { this.type = source.type; }
-    if (source["udi"] !== undefined) { this.udi = source.udi; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
+    if (source["procedureCodeableConcept"] !== undefined) { this.procedureCodeableConcept = new fhirModels.CodeableConcept(source.procedureCodeableConcept); }
+    if (source["procedureReference"] !== undefined) { this.procedureReference = new fhirModels.Reference(source.procedureReference); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
+    if (source["type"] !== undefined) { this.type = source.type.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["udi"] !== undefined) { this.udi = source.udi.map((x) => new fhirModels.Reference(x)); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitProcedure contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitProcedure from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitProcedure):ExplanationOfBenefitProcedure {
+    var dest:ExplanationOfBenefitProcedure = new ExplanationOfBenefitProcedure(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitProcedure is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
  */
-export class ExplanationOfBenefitInsurance extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitInsurance extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitInsurance {
   /**
    * Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.
    */
-  coverage: fhirModels.Reference;
+  coverage: fhirModels.Reference|undefined;
   /**
    * A patient may (will) have multiple insurance policies which provide reimbursement for healthcare services and products. For example, a person may also be covered by their spouse's policy and both appear in the list (and may be from the same insurer). This flag will be set to true for only one of the listed policies and that policy will be used for adjudicating this claim. Other claims would be created to request adjudication against the other listed policies.
    */
-  focal: boolean;
-  _focal?: fhirModels.Element;
+  focal: boolean|undefined;
+  _focal?: fhirModels.Element|undefined;
   /**
    * This value is an alphanumeric string that may be provided over the phone, via text, via paper, or within a ClaimResponse resource and is not a FHIR Identifier.
    */
-  preAuthRef?: string[];
-  _preAuthRef?: fhirModels.Element[];
+  preAuthRef?: string[]|undefined;
+  _preAuthRef?: fhirModels.Element[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitInsurance from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitInsurance) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitInsurance>) {
     super(source);
-    if (source["coverage"] === undefined) { throw 'Missing required element coverage';}
-    this.coverage = source.coverage;
-    if (source["focal"] === undefined) { throw 'Missing required element focal';}
-    this.focal = source.focal;
-    if (source["_focal"] !== undefined) { this._focal = source._focal; }
-    if (source["preAuthRef"] !== undefined) { this.preAuthRef = source.preAuthRef; }
-    if (source["_preAuthRef"] !== undefined) { this._preAuthRef = source._preAuthRef; }
+    if (source["coverage"] !== undefined) { this.coverage = new fhirModels.Reference(source.coverage); }
+    if (source["focal"] !== undefined) { this.focal = source.focal; }
+    if (source["_focal"] !== undefined) { this._focal = new fhirModels.Element(source._focal); }
+    if (source["preAuthRef"] !== undefined) { this.preAuthRef = source.preAuthRef.map((x) => (x)); }
+    if (source["_preAuthRef"] !== undefined) { this._preAuthRef = source._preAuthRef.map((x) => new fhirModels.Element(x)); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitInsurance contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["coverage"] === undefined) { missingElements.push("coverage"); }
+    if (this["focal"] === undefined) { missingElements.push("focal"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitInsurance from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitInsurance):ExplanationOfBenefitInsurance {
+    var dest:ExplanationOfBenefitInsurance = new ExplanationOfBenefitInsurance(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitInsurance is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Details of a accident which resulted in injuries which required the products and services listed in the claim.
  */
-export class ExplanationOfBenefitAccident extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitAccident extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitAccident {
   /**
    * The date of the accident has to precede the dates of the products and services but within a reasonable timeframe.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * The physical location of the accident event.
    */
-  locationAddress?: fhirModels.Address;
+  locationAddress?: fhirModels.Address|undefined;
   /**
    * The physical location of the accident event.
    */
-  locationReference?: fhirModels.Reference;
+  locationReference?: fhirModels.Reference|undefined;
   /**
    * The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitAccident from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitAccident) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitAccident>) {
     super(source);
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
-    if (source["locationAddress"] !== undefined) { this.locationAddress = source.locationAddress; }
-    if (source["locationReference"] !== undefined) { this.locationReference = source.locationReference; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
+    if (source["locationAddress"] !== undefined) { this.locationAddress = new fhirModels.Address(source.locationAddress); }
+    if (source["locationReference"] !== undefined) { this.locationReference = new fhirModels.Reference(source.locationReference); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitAccident contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitAccident from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitAccident):ExplanationOfBenefitAccident {
+    var dest:ExplanationOfBenefitAccident = new ExplanationOfBenefitAccident(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitAccident is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
  */
-export class ExplanationOfBenefitItemAdjudication extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitItemAdjudication extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitItemAdjudication {
   /**
    * For example, amount submitted, eligible amount, co-payment, and benefit payable.
    */
-  amount?: fhirModels.Money;
+  amount?: fhirModels.Money|undefined;
   /**
    * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
    */
-  category: fhirModels.CodeableConcept;
+  category: fhirModels.CodeableConcept|undefined;
   /**
    * For example, may indicate that the funds for this benefit type have been exhausted.
    */
-  reason?: fhirModels.CodeableConcept;
+  reason?: fhirModels.CodeableConcept|undefined;
   /**
    * For example: eligible percentage or co-payment percentage.
    */
-  value?: number;
-  _value?: fhirModels.Element;
+  value?: number|undefined;
+  _value?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitItemAdjudication from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitItemAdjudication) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitItemAdjudication>) {
     super(source);
-    if (source["amount"] !== undefined) { this.amount = source.amount; }
-    if (source["category"] === undefined) { throw 'Missing required element category';}
-    this.category = source.category;
-    if (source["reason"] !== undefined) { this.reason = source.reason; }
+    if (source["amount"] !== undefined) { this.amount = new fhirModels.Money(source.amount); }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
+    if (source["reason"] !== undefined) { this.reason = new fhirModels.CodeableConcept(source.reason); }
     if (source["value"] !== undefined) { this.value = source.value; }
-    if (source["_value"] !== undefined) { this._value = source._value; }
+    if (source["_value"] !== undefined) { this._value = new fhirModels.Element(source._value); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitItemAdjudication contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["category"] === undefined) { missingElements.push("category"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitItemAdjudication from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitItemAdjudication):ExplanationOfBenefitItemAdjudication {
+    var dest:ExplanationOfBenefitItemAdjudication = new ExplanationOfBenefitItemAdjudication(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitItemAdjudication is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Third-tier of goods and services.
  */
-export class ExplanationOfBenefitItemDetailSubDetail extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitItemDetailSubDetail extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitItemDetailSubDetail {
   /**
    * The adjudication results.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
    */
-  category?: fhirModels.CodeableConcept;
+  category?: fhirModels.CodeableConcept|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * For example: Neonatal program, child dental program or drug users recovery program.
    */
-  programCode?: fhirModels.CodeableConcept[];
+  programCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * The type of revenue or cost center providing the product and/or service.
    */
-  revenue?: fhirModels.CodeableConcept;
+  revenue?: fhirModels.CodeableConcept|undefined;
   /**
    * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * Unique Device Identifiers associated with this line item.
    */
-  udi?: fhirModels.Reference[];
+  udi?: fhirModels.Reference[]|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitItemDetailSubDetail from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitItemDetailSubDetail) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitItemDetailSubDetail>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
-    if (source["category"] !== undefined) { this.category = source.category; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["programCode"] !== undefined) { this.programCode = source.programCode; }
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["revenue"] !== undefined) { this.revenue = source.revenue; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
-    if (source["udi"] !== undefined) { this.udi = source.udi; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["programCode"] !== undefined) { this.programCode = source.programCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["revenue"] !== undefined) { this.revenue = new fhirModels.CodeableConcept(source.revenue); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
+    if (source["udi"] !== undefined) { this.udi = source.udi.map((x) => new fhirModels.Reference(x)); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitItemDetailSubDetail contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitItemDetailSubDetail from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitItemDetailSubDetail):ExplanationOfBenefitItemDetailSubDetail {
+    var dest:ExplanationOfBenefitItemDetailSubDetail = new ExplanationOfBenefitItemDetailSubDetail(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitItemDetailSubDetail is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Second-tier of goods and services.
  */
-export class ExplanationOfBenefitItemDetail extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitItemDetail extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitItemDetail {
   /**
    * The adjudication results.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * Examples include: Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
    */
-  category?: fhirModels.CodeableConcept;
+  category?: fhirModels.CodeableConcept|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * For example: Neonatal program, child dental program or drug users recovery program.
    */
-  programCode?: fhirModels.CodeableConcept[];
+  programCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * The type of revenue or cost center providing the product and/or service.
    */
-  revenue?: fhirModels.CodeableConcept;
+  revenue?: fhirModels.CodeableConcept|undefined;
   /**
    * A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * Third-tier of goods and services.
    */
-  subDetail?: fhirModels.ExplanationOfBenefitItemDetailSubDetail[];
+  subDetail?: fhirModels.ExplanationOfBenefitItemDetailSubDetail[]|undefined;
   /**
    * Unique Device Identifiers associated with this line item.
    */
-  udi?: fhirModels.Reference[];
+  udi?: fhirModels.Reference[]|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitItemDetail from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitItemDetail) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitItemDetail>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
-    if (source["category"] !== undefined) { this.category = source.category; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["programCode"] !== undefined) { this.programCode = source.programCode; }
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["revenue"] !== undefined) { this.revenue = source.revenue; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
-    if (source["subDetail"] !== undefined) { this.subDetail = source.subDetail; }
-    if (source["udi"] !== undefined) { this.udi = source.udi; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["programCode"] !== undefined) { this.programCode = source.programCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["revenue"] !== undefined) { this.revenue = new fhirModels.CodeableConcept(source.revenue); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
+    if (source["subDetail"] !== undefined) { this.subDetail = source.subDetail.map((x) => new fhirModels.ExplanationOfBenefitItemDetailSubDetail(x)); }
+    if (source["udi"] !== undefined) { this.udi = source.udi.map((x) => new fhirModels.Reference(x)); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitItemDetail contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitItemDetail from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitItemDetail):ExplanationOfBenefitItemDetail {
+    var dest:ExplanationOfBenefitItemDetail = new ExplanationOfBenefitItemDetail(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitItemDetail is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
  */
-export class ExplanationOfBenefitItem extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitItem extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitItem {
   /**
    * If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
    */
-  bodySite?: fhirModels.CodeableConcept;
+  bodySite?: fhirModels.CodeableConcept|undefined;
   /**
    * Care team members related to this service or product.
    */
-  careTeamSequence?: number[];
-  _careTeamSequence?: fhirModels.Element[];
+  careTeamSequence?: number[]|undefined;
+  _careTeamSequence?: fhirModels.Element[]|undefined;
   /**
    * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
    */
-  category?: fhirModels.CodeableConcept;
+  category?: fhirModels.CodeableConcept|undefined;
   /**
    * Second-tier of goods and services.
    */
-  detail?: fhirModels.ExplanationOfBenefitItemDetail[];
+  detail?: fhirModels.ExplanationOfBenefitItemDetail[]|undefined;
   /**
    * Diagnoses applicable for this service or product.
    */
-  diagnosisSequence?: number[];
-  _diagnosisSequence?: fhirModels.Element[];
+  diagnosisSequence?: number[]|undefined;
+  _diagnosisSequence?: fhirModels.Element[]|undefined;
   /**
    * A billed item may include goods or services provided in multiple encounters.
    */
-  encounter?: fhirModels.Reference[];
+  encounter?: fhirModels.Reference[]|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * Exceptions, special conditions and supporting information applicable for this service or product.
    */
-  informationSequence?: number[];
-  _informationSequence?: fhirModels.Element[];
+  informationSequence?: number[]|undefined;
+  _informationSequence?: fhirModels.Element[]|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationCodeableConcept?: fhirModels.CodeableConcept;
+  locationCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationAddress?: fhirModels.Address;
+  locationAddress?: fhirModels.Address|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationReference?: fhirModels.Reference;
+  locationReference?: fhirModels.Reference|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * Procedures applicable for this service or product.
    */
-  procedureSequence?: number[];
-  _procedureSequence?: fhirModels.Element[];
+  procedureSequence?: number[]|undefined;
+  _procedureSequence?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * For example: Neonatal program, child dental program or drug users recovery program.
    */
-  programCode?: fhirModels.CodeableConcept[];
+  programCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * The type of revenue or cost center providing the product and/or service.
    */
-  revenue?: fhirModels.CodeableConcept;
+  revenue?: fhirModels.CodeableConcept|undefined;
   /**
    * A number to uniquely identify item entries.
    */
-  sequence: number;
-  _sequence?: fhirModels.Element;
+  sequence: number|undefined;
+  _sequence?: fhirModels.Element|undefined;
   /**
    * The date or dates when the service or product was supplied, performed or completed.
    */
-  servicedDate?: string;
-  _servicedDate?: fhirModels.Element;
+  servicedDate?: string|undefined;
+  _servicedDate?: fhirModels.Element|undefined;
   /**
    * The date or dates when the service or product was supplied, performed or completed.
    */
-  servicedPeriod?: fhirModels.Period;
+  servicedPeriod?: fhirModels.Period|undefined;
   /**
    * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
    */
-  subSite?: fhirModels.CodeableConcept[];
+  subSite?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Unique Device Identifiers associated with this line item.
    */
-  udi?: fhirModels.Reference[];
+  udi?: fhirModels.Reference[]|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitItem from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitItem) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitItem>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
-    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite; }
-    if (source["careTeamSequence"] !== undefined) { this.careTeamSequence = source.careTeamSequence; }
-    if (source["_careTeamSequence"] !== undefined) { this._careTeamSequence = source._careTeamSequence; }
-    if (source["category"] !== undefined) { this.category = source.category; }
-    if (source["detail"] !== undefined) { this.detail = source.detail; }
-    if (source["diagnosisSequence"] !== undefined) { this.diagnosisSequence = source.diagnosisSequence; }
-    if (source["_diagnosisSequence"] !== undefined) { this._diagnosisSequence = source._diagnosisSequence; }
-    if (source["encounter"] !== undefined) { this.encounter = source.encounter; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
+    if (source["bodySite"] !== undefined) { this.bodySite = new fhirModels.CodeableConcept(source.bodySite); }
+    if (source["careTeamSequence"] !== undefined) { this.careTeamSequence = source.careTeamSequence.map((x) => (x)); }
+    if (source["_careTeamSequence"] !== undefined) { this._careTeamSequence = source._careTeamSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
+    if (source["detail"] !== undefined) { this.detail = source.detail.map((x) => new fhirModels.ExplanationOfBenefitItemDetail(x)); }
+    if (source["diagnosisSequence"] !== undefined) { this.diagnosisSequence = source.diagnosisSequence.map((x) => (x)); }
+    if (source["_diagnosisSequence"] !== undefined) { this._diagnosisSequence = source._diagnosisSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["encounter"] !== undefined) { this.encounter = source.encounter.map((x) => new fhirModels.Reference(x)); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["informationSequence"] !== undefined) { this.informationSequence = source.informationSequence; }
-    if (source["_informationSequence"] !== undefined) { this._informationSequence = source._informationSequence; }
-    if (source["locationCodeableConcept"] !== undefined) { this.locationCodeableConcept = source.locationCodeableConcept; }
-    if (source["locationAddress"] !== undefined) { this.locationAddress = source.locationAddress; }
-    if (source["locationReference"] !== undefined) { this.locationReference = source.locationReference; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["procedureSequence"] !== undefined) { this.procedureSequence = source.procedureSequence; }
-    if (source["_procedureSequence"] !== undefined) { this._procedureSequence = source._procedureSequence; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["programCode"] !== undefined) { this.programCode = source.programCode; }
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["revenue"] !== undefined) { this.revenue = source.revenue; }
-    if (source["sequence"] === undefined) { throw 'Missing required element sequence';}
-    this.sequence = source.sequence;
-    if (source["_sequence"] !== undefined) { this._sequence = source._sequence; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["informationSequence"] !== undefined) { this.informationSequence = source.informationSequence.map((x) => (x)); }
+    if (source["_informationSequence"] !== undefined) { this._informationSequence = source._informationSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["locationCodeableConcept"] !== undefined) { this.locationCodeableConcept = new fhirModels.CodeableConcept(source.locationCodeableConcept); }
+    if (source["locationAddress"] !== undefined) { this.locationAddress = new fhirModels.Address(source.locationAddress); }
+    if (source["locationReference"] !== undefined) { this.locationReference = new fhirModels.Reference(source.locationReference); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["procedureSequence"] !== undefined) { this.procedureSequence = source.procedureSequence.map((x) => (x)); }
+    if (source["_procedureSequence"] !== undefined) { this._procedureSequence = source._procedureSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["programCode"] !== undefined) { this.programCode = source.programCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["revenue"] !== undefined) { this.revenue = new fhirModels.CodeableConcept(source.revenue); }
+    if (source["sequence"] !== undefined) { this.sequence = source.sequence; }
+    if (source["_sequence"] !== undefined) { this._sequence = new fhirModels.Element(source._sequence); }
     if (source["servicedDate"] !== undefined) { this.servicedDate = source.servicedDate; }
-    if (source["_servicedDate"] !== undefined) { this._servicedDate = source._servicedDate; }
-    if (source["servicedPeriod"] !== undefined) { this.servicedPeriod = source.servicedPeriod; }
-    if (source["subSite"] !== undefined) { this.subSite = source.subSite; }
-    if (source["udi"] !== undefined) { this.udi = source.udi; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_servicedDate"] !== undefined) { this._servicedDate = new fhirModels.Element(source._servicedDate); }
+    if (source["servicedPeriod"] !== undefined) { this.servicedPeriod = new fhirModels.Period(source.servicedPeriod); }
+    if (source["subSite"] !== undefined) { this.subSite = source.subSite.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["udi"] !== undefined) { this.udi = source.udi.map((x) => new fhirModels.Reference(x)); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitItem contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    if (this["sequence"] === undefined) { missingElements.push("sequence"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitItem from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitItem):ExplanationOfBenefitItem {
+    var dest:ExplanationOfBenefitItem = new ExplanationOfBenefitItem(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitItem is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The third-tier service adjudications for payor added services.
  */
-export class ExplanationOfBenefitAddItemDetailSubDetail extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitAddItemDetailSubDetail extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitAddItemDetailSubDetail {
   /**
    * The adjudication results.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitAddItemDetailSubDetail from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitAddItemDetailSubDetail) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitAddItemDetailSubDetail>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitAddItemDetailSubDetail contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitAddItemDetailSubDetail from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitAddItemDetailSubDetail):ExplanationOfBenefitAddItemDetailSubDetail {
+    var dest:ExplanationOfBenefitAddItemDetailSubDetail = new ExplanationOfBenefitAddItemDetailSubDetail(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitAddItemDetailSubDetail is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The second-tier service adjudications for payor added services.
  */
-export class ExplanationOfBenefitAddItemDetail extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitAddItemDetail extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitAddItemDetail {
   /**
    * The adjudication results.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * The third-tier service adjudications for payor added services.
    */
-  subDetail?: fhirModels.ExplanationOfBenefitAddItemDetailSubDetail[];
+  subDetail?: fhirModels.ExplanationOfBenefitAddItemDetailSubDetail[]|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitAddItemDetail from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitAddItemDetail) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitAddItemDetail>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
-    if (source["subDetail"] !== undefined) { this.subDetail = source.subDetail; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
+    if (source["subDetail"] !== undefined) { this.subDetail = source.subDetail.map((x) => new fhirModels.ExplanationOfBenefitAddItemDetailSubDetail(x)); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitAddItemDetail contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitAddItemDetail from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitAddItemDetail):ExplanationOfBenefitAddItemDetail {
+    var dest:ExplanationOfBenefitAddItemDetail = new ExplanationOfBenefitAddItemDetail(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitAddItemDetail is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The first-tier service adjudications for payor added product or service lines.
  */
-export class ExplanationOfBenefitAddItem extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitAddItem extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitAddItem {
   /**
    * The adjudication results.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * For example, providing a tooth code allows an insurer to identify a provider performing a filling on a tooth that was previously removed.
    */
-  bodySite?: fhirModels.CodeableConcept;
+  bodySite?: fhirModels.CodeableConcept|undefined;
   /**
    * The second-tier service adjudications for payor added services.
    */
-  detail?: fhirModels.ExplanationOfBenefitAddItemDetail[];
+  detail?: fhirModels.ExplanationOfBenefitAddItemDetail[]|undefined;
   /**
    * The sequence number of the details within the claim item which this line is intended to replace.
    */
-  detailSequence?: number[];
-  _detailSequence?: fhirModels.Element[];
+  detailSequence?: number[]|undefined;
+  _detailSequence?: fhirModels.Element[]|undefined;
   /**
    * To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).
    */
-  factor?: number;
-  _factor?: fhirModels.Element;
+  factor?: number|undefined;
+  _factor?: fhirModels.Element|undefined;
   /**
    * Claim items which this service line is intended to replace.
    */
-  itemSequence?: number[];
-  _itemSequence?: fhirModels.Element[];
+  itemSequence?: number[]|undefined;
+  _itemSequence?: fhirModels.Element[]|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationCodeableConcept?: fhirModels.CodeableConcept;
+  locationCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationAddress?: fhirModels.Address;
+  locationAddress?: fhirModels.Address|undefined;
   /**
    * Where the product or service was provided.
    */
-  locationReference?: fhirModels.Reference;
+  locationReference?: fhirModels.Reference|undefined;
   /**
    * For example, in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or out of office hours.
    */
-  modifier?: fhirModels.CodeableConcept[];
+  modifier?: fhirModels.CodeableConcept[]|undefined;
   /**
    * For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.
    */
-  net?: fhirModels.Money;
+  net?: fhirModels.Money|undefined;
   /**
    * The numbers associated with notes below which apply to the adjudication of this item.
    */
-  noteNumber?: number[];
-  _noteNumber?: fhirModels.Element[];
+  noteNumber?: number[]|undefined;
+  _noteNumber?: fhirModels.Element[]|undefined;
   /**
    * If this is an actual service or product line, i.e. not a Group, then use code to indicate the Professional Service or Product supplied (e.g. CTP, HCPCS, USCLS, ICD10, NCPDP, DIN, RxNorm, ACHI, CCI). If a grouping item then use a group code to indicate the type of thing being grouped e.g. 'glasses' or 'compound'.
    */
-  productOrService: fhirModels.CodeableConcept;
+  productOrService: fhirModels.CodeableConcept|undefined;
   /**
    * For example: Neonatal program, child dental program or drug users recovery program.
    */
-  programCode?: fhirModels.CodeableConcept[];
+  programCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The providers who are authorized for the services rendered to the patient.
    */
-  provider?: fhirModels.Reference[];
+  provider?: fhirModels.Reference[]|undefined;
   /**
    * The number of repetitions of a service or product.
    */
-  quantity?: fhirModels.Quantity;
+  quantity?: fhirModels.Quantity|undefined;
   /**
    * The date or dates when the service or product was supplied, performed or completed.
    */
-  servicedDate?: string;
-  _servicedDate?: fhirModels.Element;
+  servicedDate?: string|undefined;
+  _servicedDate?: fhirModels.Element|undefined;
   /**
    * The date or dates when the service or product was supplied, performed or completed.
    */
-  servicedPeriod?: fhirModels.Period;
+  servicedPeriod?: fhirModels.Period|undefined;
   /**
    * The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace.
    */
-  subDetailSequence?: number[];
-  _subDetailSequence?: fhirModels.Element[];
+  subDetailSequence?: number[]|undefined;
+  _subDetailSequence?: fhirModels.Element[]|undefined;
   /**
    * A region or surface of the bodySite, e.g. limb region or tooth surface(s).
    */
-  subSite?: fhirModels.CodeableConcept[];
+  subSite?: fhirModels.CodeableConcept[]|undefined;
   /**
    * If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.
    */
-  unitPrice?: fhirModels.Money;
+  unitPrice?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitAddItem from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitAddItem) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitAddItem>) {
     super(source);
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
-    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite; }
-    if (source["detail"] !== undefined) { this.detail = source.detail; }
-    if (source["detailSequence"] !== undefined) { this.detailSequence = source.detailSequence; }
-    if (source["_detailSequence"] !== undefined) { this._detailSequence = source._detailSequence; }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
+    if (source["bodySite"] !== undefined) { this.bodySite = new fhirModels.CodeableConcept(source.bodySite); }
+    if (source["detail"] !== undefined) { this.detail = source.detail.map((x) => new fhirModels.ExplanationOfBenefitAddItemDetail(x)); }
+    if (source["detailSequence"] !== undefined) { this.detailSequence = source.detailSequence.map((x) => (x)); }
+    if (source["_detailSequence"] !== undefined) { this._detailSequence = source._detailSequence.map((x) => new fhirModels.Element(x)); }
     if (source["factor"] !== undefined) { this.factor = source.factor; }
-    if (source["_factor"] !== undefined) { this._factor = source._factor; }
-    if (source["itemSequence"] !== undefined) { this.itemSequence = source.itemSequence; }
-    if (source["_itemSequence"] !== undefined) { this._itemSequence = source._itemSequence; }
-    if (source["locationCodeableConcept"] !== undefined) { this.locationCodeableConcept = source.locationCodeableConcept; }
-    if (source["locationAddress"] !== undefined) { this.locationAddress = source.locationAddress; }
-    if (source["locationReference"] !== undefined) { this.locationReference = source.locationReference; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["net"] !== undefined) { this.net = source.net; }
-    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber; }
-    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber; }
-    if (source["productOrService"] === undefined) { throw 'Missing required element productOrService';}
-    this.productOrService = source.productOrService;
-    if (source["programCode"] !== undefined) { this.programCode = source.programCode; }
-    if (source["provider"] !== undefined) { this.provider = source.provider; }
-    if (source["quantity"] !== undefined) { this.quantity = source.quantity; }
+    if (source["_factor"] !== undefined) { this._factor = new fhirModels.Element(source._factor); }
+    if (source["itemSequence"] !== undefined) { this.itemSequence = source.itemSequence.map((x) => (x)); }
+    if (source["_itemSequence"] !== undefined) { this._itemSequence = source._itemSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["locationCodeableConcept"] !== undefined) { this.locationCodeableConcept = new fhirModels.CodeableConcept(source.locationCodeableConcept); }
+    if (source["locationAddress"] !== undefined) { this.locationAddress = new fhirModels.Address(source.locationAddress); }
+    if (source["locationReference"] !== undefined) { this.locationReference = new fhirModels.Reference(source.locationReference); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["net"] !== undefined) { this.net = new fhirModels.Money(source.net); }
+    if (source["noteNumber"] !== undefined) { this.noteNumber = source.noteNumber.map((x) => (x)); }
+    if (source["_noteNumber"] !== undefined) { this._noteNumber = source._noteNumber.map((x) => new fhirModels.Element(x)); }
+    if (source["productOrService"] !== undefined) { this.productOrService = new fhirModels.CodeableConcept(source.productOrService); }
+    if (source["programCode"] !== undefined) { this.programCode = source.programCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["provider"] !== undefined) { this.provider = source.provider.map((x) => new fhirModels.Reference(x)); }
+    if (source["quantity"] !== undefined) { this.quantity = new fhirModels.Quantity(source.quantity); }
     if (source["servicedDate"] !== undefined) { this.servicedDate = source.servicedDate; }
-    if (source["_servicedDate"] !== undefined) { this._servicedDate = source._servicedDate; }
-    if (source["servicedPeriod"] !== undefined) { this.servicedPeriod = source.servicedPeriod; }
-    if (source["subDetailSequence"] !== undefined) { this.subDetailSequence = source.subDetailSequence; }
-    if (source["_subDetailSequence"] !== undefined) { this._subDetailSequence = source._subDetailSequence; }
-    if (source["subSite"] !== undefined) { this.subSite = source.subSite; }
-    if (source["unitPrice"] !== undefined) { this.unitPrice = source.unitPrice; }
+    if (source["_servicedDate"] !== undefined) { this._servicedDate = new fhirModels.Element(source._servicedDate); }
+    if (source["servicedPeriod"] !== undefined) { this.servicedPeriod = new fhirModels.Period(source.servicedPeriod); }
+    if (source["subDetailSequence"] !== undefined) { this.subDetailSequence = source.subDetailSequence.map((x) => (x)); }
+    if (source["_subDetailSequence"] !== undefined) { this._subDetailSequence = source._subDetailSequence.map((x) => new fhirModels.Element(x)); }
+    if (source["subSite"] !== undefined) { this.subSite = source.subSite.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["unitPrice"] !== undefined) { this.unitPrice = new fhirModels.Money(source.unitPrice); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitAddItem contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productOrService"] === undefined) { missingElements.push("productOrService"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitAddItem from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitAddItem):ExplanationOfBenefitAddItem {
+    var dest:ExplanationOfBenefitAddItem = new ExplanationOfBenefitAddItem(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitAddItem is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Totals for amounts submitted, co-pays, benefits payable etc.
  */
-export class ExplanationOfBenefitTotal extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitTotal extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitTotal {
   /**
    * Monetary total amount associated with the category.
    */
-  amount: fhirModels.Money;
+  amount: fhirModels.Money|undefined;
   /**
    * For example, codes indicating: Co-Pay, deductible, eligible, benefit, tax, etc.
    */
-  category: fhirModels.CodeableConcept;
+  category: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitTotal from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitTotal) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitTotal>) {
     super(source);
-    if (source["amount"] === undefined) { throw 'Missing required element amount';}
-    this.amount = source.amount;
-    if (source["category"] === undefined) { throw 'Missing required element category';}
-    this.category = source.category;
+    if (source["amount"] !== undefined) { this.amount = new fhirModels.Money(source.amount); }
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitTotal contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["amount"] === undefined) { missingElements.push("amount"); }
+    if (this["category"] === undefined) { missingElements.push("category"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitTotal from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitTotal):ExplanationOfBenefitTotal {
+    var dest:ExplanationOfBenefitTotal = new ExplanationOfBenefitTotal(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitTotal is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Payment details for the adjudication of the claim.
  */
-export class ExplanationOfBenefitPayment extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitPayment extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitPayment {
   /**
    * Insurers will deduct amounts owing from the provider (adjustment), such as a prior overpayment, from the amount owing to the provider (benefits payable) when payment is made to the provider.
    */
-  adjustment?: fhirModels.Money;
+  adjustment?: fhirModels.Money|undefined;
   /**
    * Reason for the payment adjustment.
    */
-  adjustmentReason?: fhirModels.CodeableConcept;
+  adjustmentReason?: fhirModels.CodeableConcept|undefined;
   /**
    * Benefits payable less any payment adjustment.
    */
-  amount?: fhirModels.Money;
+  amount?: fhirModels.Money|undefined;
   /**
    * Estimated date the payment will be issued or the actual issue date of payment.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * For example: EFT number or check number.
    */
-  identifier?: fhirModels.Identifier;
+  identifier?: fhirModels.Identifier|undefined;
   /**
    * Whether this represents partial or complete payment of the benefits payable.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitPayment from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitPayment) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitPayment>) {
     super(source);
-    if (source["adjustment"] !== undefined) { this.adjustment = source.adjustment; }
-    if (source["adjustmentReason"] !== undefined) { this.adjustmentReason = source.adjustmentReason; }
-    if (source["amount"] !== undefined) { this.amount = source.amount; }
+    if (source["adjustment"] !== undefined) { this.adjustment = new fhirModels.Money(source.adjustment); }
+    if (source["adjustmentReason"] !== undefined) { this.adjustmentReason = new fhirModels.CodeableConcept(source.adjustmentReason); }
+    if (source["amount"] !== undefined) { this.amount = new fhirModels.Money(source.amount); }
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
+    if (source["identifier"] !== undefined) { this.identifier = new fhirModels.Identifier(source.identifier); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitPayment contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitPayment from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitPayment):ExplanationOfBenefitPayment {
+    var dest:ExplanationOfBenefitPayment = new ExplanationOfBenefitPayment(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitPayment is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A note that describes or explains adjudication results in a human readable form.
  */
-export class ExplanationOfBenefitProcessNote extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitProcessNote extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitProcessNote {
   /**
    * Only required if the language is different from the resource language.
    */
-  language?: fhirModels.CodeableConcept;
+  language?: fhirModels.CodeableConcept|undefined;
   /**
    * A number to uniquely identify a note entry.
    */
-  number?: number;
-  _number?: fhirModels.Element;
+  number?: number|undefined;
+  _number?: fhirModels.Element|undefined;
   /**
    * The explanation or description associated with the processing.
    */
-  text?: string;
-  _text?: fhirModels.Element;
+  text?: string|undefined;
+  _text?: fhirModels.Element|undefined;
   /**
    * The business purpose of the note text.
    */
-  type?: ExplanationOfBenefitProcessNoteTypeEnum;
-  _type?: fhirModels.Element;
+  type?: ExplanationOfBenefitProcessNoteTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitProcessNote from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitProcessNote) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitProcessNote>) {
     super(source);
-    if (source["language"] !== undefined) { this.language = source.language; }
+    if (source["language"] !== undefined) { this.language = new fhirModels.CodeableConcept(source.language); }
     if (source["number"] !== undefined) { this.number = source.number; }
-    if (source["_number"] !== undefined) { this._number = source._number; }
+    if (source["_number"] !== undefined) { this._number = new fhirModels.Element(source._number); }
     if (source["text"] !== undefined) { this.text = source.text; }
-    if (source["_text"] !== undefined) { this._text = source._text; }
+    if (source["_text"] !== undefined) { this._text = new fhirModels.Element(source._text); }
     if (source["type"] !== undefined) { this.type = source.type; }
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitProcessNote contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitProcessNote from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitProcessNote):ExplanationOfBenefitProcessNote {
+    var dest:ExplanationOfBenefitProcessNote = new ExplanationOfBenefitProcessNote(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitProcessNote is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -1052,361 +1413,421 @@ export enum ExplanationOfBenefitProcessNoteTypeEnum {
 /**
  * Benefits Used to date.
  */
-export class ExplanationOfBenefitBenefitBalanceFinancial extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitBenefitBalanceFinancial extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitBenefitBalanceFinancial {
   /**
    * The quantity of the benefit which is permitted under the coverage.
    */
-  allowedUnsignedInt?: number;
-  _allowedUnsignedInt?: fhirModels.Element;
+  allowedUnsignedInt?: number|undefined;
+  _allowedUnsignedInt?: fhirModels.Element|undefined;
   /**
    * The quantity of the benefit which is permitted under the coverage.
    */
-  allowedString?: string;
-  _allowedString?: fhirModels.Element;
+  allowedString?: string|undefined;
+  _allowedString?: fhirModels.Element|undefined;
   /**
    * The quantity of the benefit which is permitted under the coverage.
    */
-  allowedMoney?: fhirModels.Money;
+  allowedMoney?: fhirModels.Money|undefined;
   /**
    * For example: deductible, visits, benefit amount.
    */
-  type: fhirModels.CodeableConcept;
+  type: fhirModels.CodeableConcept|undefined;
   /**
    * The quantity of the benefit which have been consumed to date.
    */
-  usedUnsignedInt?: number;
-  _usedUnsignedInt?: fhirModels.Element;
+  usedUnsignedInt?: number|undefined;
+  _usedUnsignedInt?: fhirModels.Element|undefined;
   /**
    * The quantity of the benefit which have been consumed to date.
    */
-  usedMoney?: fhirModels.Money;
+  usedMoney?: fhirModels.Money|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitBenefitBalanceFinancial from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitBenefitBalanceFinancial) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitBenefitBalanceFinancial>) {
     super(source);
     if (source["allowedUnsignedInt"] !== undefined) { this.allowedUnsignedInt = source.allowedUnsignedInt; }
-    if (source["_allowedUnsignedInt"] !== undefined) { this._allowedUnsignedInt = source._allowedUnsignedInt; }
+    if (source["_allowedUnsignedInt"] !== undefined) { this._allowedUnsignedInt = new fhirModels.Element(source._allowedUnsignedInt); }
     if (source["allowedString"] !== undefined) { this.allowedString = source.allowedString; }
-    if (source["_allowedString"] !== undefined) { this._allowedString = source._allowedString; }
-    if (source["allowedMoney"] !== undefined) { this.allowedMoney = source.allowedMoney; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
+    if (source["_allowedString"] !== undefined) { this._allowedString = new fhirModels.Element(source._allowedString); }
+    if (source["allowedMoney"] !== undefined) { this.allowedMoney = new fhirModels.Money(source.allowedMoney); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
     if (source["usedUnsignedInt"] !== undefined) { this.usedUnsignedInt = source.usedUnsignedInt; }
-    if (source["_usedUnsignedInt"] !== undefined) { this._usedUnsignedInt = source._usedUnsignedInt; }
-    if (source["usedMoney"] !== undefined) { this.usedMoney = source.usedMoney; }
+    if (source["_usedUnsignedInt"] !== undefined) { this._usedUnsignedInt = new fhirModels.Element(source._usedUnsignedInt); }
+    if (source["usedMoney"] !== undefined) { this.usedMoney = new fhirModels.Money(source.usedMoney); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitBenefitBalanceFinancial contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitBenefitBalanceFinancial from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitBenefitBalanceFinancial):ExplanationOfBenefitBenefitBalanceFinancial {
+    var dest:ExplanationOfBenefitBenefitBalanceFinancial = new ExplanationOfBenefitBenefitBalanceFinancial(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitBenefitBalanceFinancial is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Balance by Benefit Category.
  */
-export class ExplanationOfBenefitBenefitBalance extends fhirModels.BackboneElement {
+export class ExplanationOfBenefitBenefitBalance extends fhirModels.BackboneElement implements fhirInterfaces.IExplanationOfBenefitBenefitBalance {
   /**
    * Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.
    */
-  category: fhirModels.CodeableConcept;
+  category: fhirModels.CodeableConcept|undefined;
   /**
    * For example, 'DENT2 covers 100% of basic, 50% of major but excludes Ortho, Implants and Cosmetic services'.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage.
    */
-  excluded?: boolean;
-  _excluded?: fhirModels.Element;
+  excluded?: boolean|undefined;
+  _excluded?: fhirModels.Element|undefined;
   /**
    * Benefits Used to date.
    */
-  financial?: fhirModels.ExplanationOfBenefitBenefitBalanceFinancial[];
+  financial?: fhirModels.ExplanationOfBenefitBenefitBalanceFinancial[]|undefined;
   /**
    * For example: MED01, or DENT2.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * Is a flag to indicate whether the benefits refer to in-network providers or out-of-network providers.
    */
-  network?: fhirModels.CodeableConcept;
+  network?: fhirModels.CodeableConcept|undefined;
   /**
    * The term or period of the values such as 'maximum lifetime benefit' or 'maximum annual visits'.
    */
-  term?: fhirModels.CodeableConcept;
+  term?: fhirModels.CodeableConcept|undefined;
   /**
    * Indicates if the benefits apply to an individual or to the family.
    */
-  unit?: fhirModels.CodeableConcept;
+  unit?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefitBenefitBalance from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefitBenefitBalance) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefitBenefitBalance>) {
     super(source);
-    if (source["category"] === undefined) { throw 'Missing required element category';}
-    this.category = source.category;
+    if (source["category"] !== undefined) { this.category = new fhirModels.CodeableConcept(source.category); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
     if (source["excluded"] !== undefined) { this.excluded = source.excluded; }
-    if (source["_excluded"] !== undefined) { this._excluded = source._excluded; }
-    if (source["financial"] !== undefined) { this.financial = source.financial; }
+    if (source["_excluded"] !== undefined) { this._excluded = new fhirModels.Element(source._excluded); }
+    if (source["financial"] !== undefined) { this.financial = source.financial.map((x) => new fhirModels.ExplanationOfBenefitBenefitBalanceFinancial(x)); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["network"] !== undefined) { this.network = source.network; }
-    if (source["term"] !== undefined) { this.term = source.term; }
-    if (source["unit"] !== undefined) { this.unit = source.unit; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["network"] !== undefined) { this.network = new fhirModels.CodeableConcept(source.network); }
+    if (source["term"] !== undefined) { this.term = new fhirModels.CodeableConcept(source.term); }
+    if (source["unit"] !== undefined) { this.unit = new fhirModels.CodeableConcept(source.unit); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefitBenefitBalance contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["category"] === undefined) { missingElements.push("category"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefitBenefitBalance from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefitBenefitBalance):ExplanationOfBenefitBenefitBalance {
+    var dest:ExplanationOfBenefitBenefitBalance = new ExplanationOfBenefitBenefitBalance(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefitBenefitBalance is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided.
  */
-export class ExplanationOfBenefit extends fhirModels.DomainResource {
+export class ExplanationOfBenefit extends fhirModels.DomainResource implements fhirInterfaces.IExplanationOfBenefit {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "ExplanationOfBenefit";
+  readonly resourceType = "ExplanationOfBenefit";
   /**
    * Details of a accident which resulted in injuries which required the products and services listed in the claim.
    */
-  accident?: fhirModels.ExplanationOfBenefitAccident;
+  accident?: fhirModels.ExplanationOfBenefitAccident|undefined;
   /**
    * The first-tier service adjudications for payor added product or service lines.
    */
-  addItem?: fhirModels.ExplanationOfBenefitAddItem[];
+  addItem?: fhirModels.ExplanationOfBenefitAddItem[]|undefined;
   /**
    * The adjudication results which are presented at the header level rather than at the line-item or add-item levels.
    */
-  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[];
+  adjudication?: fhirModels.ExplanationOfBenefitItemAdjudication[]|undefined;
   /**
    * Balance by Benefit Category.
    */
-  benefitBalance?: fhirModels.ExplanationOfBenefitBenefitBalance[];
+  benefitBalance?: fhirModels.ExplanationOfBenefitBenefitBalance[]|undefined;
   /**
    * Not applicable when use=claim.
    */
-  benefitPeriod?: fhirModels.Period;
+  benefitPeriod?: fhirModels.Period|undefined;
   /**
    * Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and prodeterminations. Typically line item dates of service should fall within the billing period if one is specified.
    */
-  billablePeriod?: fhirModels.Period;
+  billablePeriod?: fhirModels.Period|undefined;
   /**
    * The members of the team who provided the products and services.
    */
-  careTeam?: fhirModels.ExplanationOfBenefitCareTeam[];
+  careTeam?: fhirModels.ExplanationOfBenefitCareTeam[]|undefined;
   /**
    * The business identifier for the instance of the adjudication request: claim predetermination or preauthorization.
    */
-  claim?: fhirModels.Reference;
+  claim?: fhirModels.Reference|undefined;
   /**
    * The business identifier for the instance of the adjudication response: claim, predetermination or preauthorization response.
    */
-  claimResponse?: fhirModels.Reference;
+  claimResponse?: fhirModels.Reference|undefined;
   /**
    * This field is independent of the date of creation of the resource as it may reflect the creation date of a source document prior to digitization. Typically for claims all services must be completed as of this date.
    */
-  created: string;
-  _created?: fhirModels.Element;
+  created: string|undefined;
+  _created?: fhirModels.Element|undefined;
   /**
    * Information about diagnoses relevant to the claim items.
    */
-  diagnosis?: fhirModels.ExplanationOfBenefitDiagnosis[];
+  diagnosis?: fhirModels.ExplanationOfBenefitDiagnosis[]|undefined;
   /**
    * A human readable description of the status of the adjudication.
    */
-  disposition?: string;
-  _disposition?: fhirModels.Element;
+  disposition?: string|undefined;
+  _disposition?: fhirModels.Element|undefined;
   /**
    * Individual who created the claim, predetermination or preauthorization.
    */
-  enterer?: fhirModels.Reference;
+  enterer?: fhirModels.Reference|undefined;
   /**
    * Facility where the services were provided.
    */
-  facility?: fhirModels.Reference;
+  facility?: fhirModels.Reference|undefined;
   /**
    * Needed to permit insurers to include the actual form.
    */
-  form?: fhirModels.Attachment;
+  form?: fhirModels.Attachment|undefined;
   /**
    * May be needed to identify specific jurisdictional forms.
    */
-  formCode?: fhirModels.CodeableConcept;
+  formCode?: fhirModels.CodeableConcept|undefined;
   /**
    * Fund would be release by a future claim quoting the preAuthRef of this response. Examples of values include: provider, patient, none.
    */
-  fundsReserve?: fhirModels.CodeableConcept;
+  fundsReserve?: fhirModels.CodeableConcept|undefined;
   /**
    * This field is only used for preauthorizations.
    */
-  fundsReserveRequested?: fhirModels.CodeableConcept;
+  fundsReserveRequested?: fhirModels.CodeableConcept|undefined;
   /**
    * A unique identifier assigned to this explanation of benefit.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * All insurance coverages for the patient which may be applicable for reimbursement, of the products and services listed in the claim, are typically provided in the claim to allow insurers to confirm the ordering of the insurance coverages relative to local 'coordination of benefit' rules. One coverage (and only one) with 'focal=true' is to be used in the adjudication of this claim. Coverages appearing before the focal Coverage in the list, and where 'Coverage.subrogation=false', should provide a reference to the ClaimResponse containing the adjudication results of the prior claim.
    */
-  insurance: fhirModels.ExplanationOfBenefitInsurance[];
+  insurance: fhirModels.ExplanationOfBenefitInsurance[]|undefined;
   /**
    * The party responsible for authorization, adjudication and reimbursement.
    */
-  insurer: fhirModels.Reference;
+  insurer: fhirModels.Reference|undefined;
   /**
    * A claim line. Either a simple (a product or service) or a 'group' of details which can also be a simple items or groups of sub-details.
    */
-  item?: fhirModels.ExplanationOfBenefitItem[];
+  item?: fhirModels.ExplanationOfBenefitItem[]|undefined;
   /**
    * For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefor issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.
    */
-  originalPrescription?: fhirModels.Reference;
+  originalPrescription?: fhirModels.Reference|undefined;
   /**
    * The resource may be used to indicate that: the request has been held (queued) for processing; that it has been processed and errors found (error); that no errors were found and that some of the adjudication has been undertaken (partial) or that all of the adjudication has been undertaken (complete).
    */
-  outcome: ExplanationOfBenefitOutcomeEnum;
-  _outcome?: fhirModels.Element;
+  outcome: ExplanationOfBenefitOutcomeEnum|undefined;
+  _outcome?: fhirModels.Element|undefined;
   /**
    * The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought.
    */
-  patient: fhirModels.Reference;
+  patient: fhirModels.Reference|undefined;
   /**
    * Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and may choose to pay the subscriber instead.
    */
-  payee?: fhirModels.ExplanationOfBenefitPayee;
+  payee?: fhirModels.ExplanationOfBenefitPayee|undefined;
   /**
    * Payment details for the adjudication of the claim.
    */
-  payment?: fhirModels.ExplanationOfBenefitPayment;
+  payment?: fhirModels.ExplanationOfBenefitPayment|undefined;
   /**
    * This value is only present on preauthorization adjudications.
    */
-  preAuthRef?: string[];
-  _preAuthRef?: fhirModels.Element[];
+  preAuthRef?: string[]|undefined;
+  _preAuthRef?: fhirModels.Element[]|undefined;
   /**
    * This value is only present on preauthorization adjudications.
    */
-  preAuthRefPeriod?: fhirModels.Period[];
+  preAuthRefPeriod?: fhirModels.Period[]|undefined;
   /**
    * This indicates the relative order of a series of EOBs related to different coverages for the same suite of services.
    */
-  precedence?: number;
-  _precedence?: fhirModels.Element;
+  precedence?: number|undefined;
+  _precedence?: fhirModels.Element|undefined;
   /**
    * Prescription to support the dispensing of pharmacy, device or vision products.
    */
-  prescription?: fhirModels.Reference;
+  prescription?: fhirModels.Reference|undefined;
   /**
    * If a claim processor is unable to complete the processing as per the priority then they should generate and error and not process the request.
    */
-  priority?: fhirModels.CodeableConcept;
+  priority?: fhirModels.CodeableConcept|undefined;
   /**
    * Procedures performed on the patient relevant to the billing items with the claim.
    */
-  procedure?: fhirModels.ExplanationOfBenefitProcedure[];
+  procedure?: fhirModels.ExplanationOfBenefitProcedure[]|undefined;
   /**
    * A note that describes or explains adjudication results in a human readable form.
    */
-  processNote?: fhirModels.ExplanationOfBenefitProcessNote[];
+  processNote?: fhirModels.ExplanationOfBenefitProcessNote[]|undefined;
   /**
    * Typically this field would be 1..1 where this party is responsible for the claim but not necessarily professionally responsible for the provision of the individual products and services listed below.
    */
-  provider: fhirModels.Reference;
+  provider: fhirModels.Reference|undefined;
   /**
    * The referral resource which lists the date, practitioner, reason and other supporting information.
    */
-  referral?: fhirModels.Reference;
+  referral?: fhirModels.Reference|undefined;
   /**
    * For example,  for the original treatment and follow-up exams.
    */
-  related?: fhirModels.ExplanationOfBenefitRelated[];
+  related?: fhirModels.ExplanationOfBenefitRelated[]|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.
    */
-  status: ExplanationOfBenefitStatusEnum;
-  _status?: fhirModels.Element;
+  status: ExplanationOfBenefitStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * This may contain the local bill type codes such as the US UB-04 bill type code.
    */
-  subType?: fhirModels.CodeableConcept;
+  subType?: fhirModels.CodeableConcept|undefined;
   /**
    * Often there are multiple jurisdiction specific valuesets which are required.
    */
-  supportingInfo?: fhirModels.ExplanationOfBenefitSupportingInfo[];
+  supportingInfo?: fhirModels.ExplanationOfBenefitSupportingInfo[]|undefined;
   /**
    * Totals for amounts submitted, co-pays, benefits payable etc.
    */
-  total?: fhirModels.ExplanationOfBenefitTotal[];
+  total?: fhirModels.ExplanationOfBenefitTotal[]|undefined;
   /**
    * The majority of jurisdictions use: oral, pharmacy, vision, professional and institutional, or variants on those terms, as the general styles of claims. The valueset is extensible to accommodate other jurisdictional requirements.
    */
-  type: fhirModels.CodeableConcept;
+  type: fhirModels.CodeableConcept|undefined;
   /**
    * A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future.
    */
-  use: ExplanationOfBenefitUseEnum;
-  _use?: fhirModels.Element;
+  use: ExplanationOfBenefitUseEnum|undefined;
+  _use?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for ExplanationOfBenefit from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ExplanationOfBenefit) {
+  constructor(source:Partial<fhirInterfaces.IExplanationOfBenefit>) {
     super(source);
     if ((source['resourceType'] !== "ExplanationOfBenefit") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a ExplanationOfBenefit'; }
-    if (source["accident"] !== undefined) { this.accident = source.accident; }
-    if (source["addItem"] !== undefined) { this.addItem = source.addItem; }
-    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication; }
-    if (source["benefitBalance"] !== undefined) { this.benefitBalance = source.benefitBalance; }
-    if (source["benefitPeriod"] !== undefined) { this.benefitPeriod = source.benefitPeriod; }
-    if (source["billablePeriod"] !== undefined) { this.billablePeriod = source.billablePeriod; }
-    if (source["careTeam"] !== undefined) { this.careTeam = source.careTeam; }
-    if (source["claim"] !== undefined) { this.claim = source.claim; }
-    if (source["claimResponse"] !== undefined) { this.claimResponse = source.claimResponse; }
-    if (source["created"] === undefined) { throw 'Missing required element created';}
-    this.created = source.created;
-    if (source["_created"] !== undefined) { this._created = source._created; }
-    if (source["diagnosis"] !== undefined) { this.diagnosis = source.diagnosis; }
+    if (source["accident"] !== undefined) { this.accident = new fhirModels.ExplanationOfBenefitAccident(source.accident); }
+    if (source["addItem"] !== undefined) { this.addItem = source.addItem.map((x) => new fhirModels.ExplanationOfBenefitAddItem(x)); }
+    if (source["adjudication"] !== undefined) { this.adjudication = source.adjudication.map((x) => new fhirModels.ExplanationOfBenefitItemAdjudication(x)); }
+    if (source["benefitBalance"] !== undefined) { this.benefitBalance = source.benefitBalance.map((x) => new fhirModels.ExplanationOfBenefitBenefitBalance(x)); }
+    if (source["benefitPeriod"] !== undefined) { this.benefitPeriod = new fhirModels.Period(source.benefitPeriod); }
+    if (source["billablePeriod"] !== undefined) { this.billablePeriod = new fhirModels.Period(source.billablePeriod); }
+    if (source["careTeam"] !== undefined) { this.careTeam = source.careTeam.map((x) => new fhirModels.ExplanationOfBenefitCareTeam(x)); }
+    if (source["claim"] !== undefined) { this.claim = new fhirModels.Reference(source.claim); }
+    if (source["claimResponse"] !== undefined) { this.claimResponse = new fhirModels.Reference(source.claimResponse); }
+    if (source["created"] !== undefined) { this.created = source.created; }
+    if (source["_created"] !== undefined) { this._created = new fhirModels.Element(source._created); }
+    if (source["diagnosis"] !== undefined) { this.diagnosis = source.diagnosis.map((x) => new fhirModels.ExplanationOfBenefitDiagnosis(x)); }
     if (source["disposition"] !== undefined) { this.disposition = source.disposition; }
-    if (source["_disposition"] !== undefined) { this._disposition = source._disposition; }
-    if (source["enterer"] !== undefined) { this.enterer = source.enterer; }
-    if (source["facility"] !== undefined) { this.facility = source.facility; }
-    if (source["form"] !== undefined) { this.form = source.form; }
-    if (source["formCode"] !== undefined) { this.formCode = source.formCode; }
-    if (source["fundsReserve"] !== undefined) { this.fundsReserve = source.fundsReserve; }
-    if (source["fundsReserveRequested"] !== undefined) { this.fundsReserveRequested = source.fundsReserveRequested; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["insurance"] === undefined) { throw 'Missing required element insurance';}
-    this.insurance = source.insurance;
-    if (source["insurer"] === undefined) { throw 'Missing required element insurer';}
-    this.insurer = source.insurer;
-    if (source["item"] !== undefined) { this.item = source.item; }
-    if (source["originalPrescription"] !== undefined) { this.originalPrescription = source.originalPrescription; }
-    if (source["outcome"] === undefined) { throw 'Missing required element outcome';}
-    this.outcome = source.outcome;
-    if (source["_outcome"] !== undefined) { this._outcome = source._outcome; }
-    if (source["patient"] === undefined) { throw 'Missing required element patient';}
-    this.patient = source.patient;
-    if (source["payee"] !== undefined) { this.payee = source.payee; }
-    if (source["payment"] !== undefined) { this.payment = source.payment; }
-    if (source["preAuthRef"] !== undefined) { this.preAuthRef = source.preAuthRef; }
-    if (source["_preAuthRef"] !== undefined) { this._preAuthRef = source._preAuthRef; }
-    if (source["preAuthRefPeriod"] !== undefined) { this.preAuthRefPeriod = source.preAuthRefPeriod; }
+    if (source["_disposition"] !== undefined) { this._disposition = new fhirModels.Element(source._disposition); }
+    if (source["enterer"] !== undefined) { this.enterer = new fhirModels.Reference(source.enterer); }
+    if (source["facility"] !== undefined) { this.facility = new fhirModels.Reference(source.facility); }
+    if (source["form"] !== undefined) { this.form = new fhirModels.Attachment(source.form); }
+    if (source["formCode"] !== undefined) { this.formCode = new fhirModels.CodeableConcept(source.formCode); }
+    if (source["fundsReserve"] !== undefined) { this.fundsReserve = new fhirModels.CodeableConcept(source.fundsReserve); }
+    if (source["fundsReserveRequested"] !== undefined) { this.fundsReserveRequested = new fhirModels.CodeableConcept(source.fundsReserveRequested); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["insurance"] !== undefined) { this.insurance = source.insurance.map((x) => new fhirModels.ExplanationOfBenefitInsurance(x)); }
+    if (source["insurer"] !== undefined) { this.insurer = new fhirModels.Reference(source.insurer); }
+    if (source["item"] !== undefined) { this.item = source.item.map((x) => new fhirModels.ExplanationOfBenefitItem(x)); }
+    if (source["originalPrescription"] !== undefined) { this.originalPrescription = new fhirModels.Reference(source.originalPrescription); }
+    if (source["outcome"] !== undefined) { this.outcome = source.outcome; }
+    if (source["_outcome"] !== undefined) { this._outcome = new fhirModels.Element(source._outcome); }
+    if (source["patient"] !== undefined) { this.patient = new fhirModels.Reference(source.patient); }
+    if (source["payee"] !== undefined) { this.payee = new fhirModels.ExplanationOfBenefitPayee(source.payee); }
+    if (source["payment"] !== undefined) { this.payment = new fhirModels.ExplanationOfBenefitPayment(source.payment); }
+    if (source["preAuthRef"] !== undefined) { this.preAuthRef = source.preAuthRef.map((x) => (x)); }
+    if (source["_preAuthRef"] !== undefined) { this._preAuthRef = source._preAuthRef.map((x) => new fhirModels.Element(x)); }
+    if (source["preAuthRefPeriod"] !== undefined) { this.preAuthRefPeriod = source.preAuthRefPeriod.map((x) => new fhirModels.Period(x)); }
     if (source["precedence"] !== undefined) { this.precedence = source.precedence; }
-    if (source["_precedence"] !== undefined) { this._precedence = source._precedence; }
-    if (source["prescription"] !== undefined) { this.prescription = source.prescription; }
-    if (source["priority"] !== undefined) { this.priority = source.priority; }
-    if (source["procedure"] !== undefined) { this.procedure = source.procedure; }
-    if (source["processNote"] !== undefined) { this.processNote = source.processNote; }
-    if (source["provider"] === undefined) { throw 'Missing required element provider';}
-    this.provider = source.provider;
-    if (source["referral"] !== undefined) { this.referral = source.referral; }
-    if (source["related"] !== undefined) { this.related = source.related; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subType"] !== undefined) { this.subType = source.subType; }
-    if (source["supportingInfo"] !== undefined) { this.supportingInfo = source.supportingInfo; }
-    if (source["total"] !== undefined) { this.total = source.total; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["use"] === undefined) { throw 'Missing required element use';}
-    this.use = source.use;
-    if (source["_use"] !== undefined) { this._use = source._use; }
+    if (source["_precedence"] !== undefined) { this._precedence = new fhirModels.Element(source._precedence); }
+    if (source["prescription"] !== undefined) { this.prescription = new fhirModels.Reference(source.prescription); }
+    if (source["priority"] !== undefined) { this.priority = new fhirModels.CodeableConcept(source.priority); }
+    if (source["procedure"] !== undefined) { this.procedure = source.procedure.map((x) => new fhirModels.ExplanationOfBenefitProcedure(x)); }
+    if (source["processNote"] !== undefined) { this.processNote = source.processNote.map((x) => new fhirModels.ExplanationOfBenefitProcessNote(x)); }
+    if (source["provider"] !== undefined) { this.provider = new fhirModels.Reference(source.provider); }
+    if (source["referral"] !== undefined) { this.referral = new fhirModels.Reference(source.referral); }
+    if (source["related"] !== undefined) { this.related = source.related.map((x) => new fhirModels.ExplanationOfBenefitRelated(x)); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subType"] !== undefined) { this.subType = new fhirModels.CodeableConcept(source.subType); }
+    if (source["supportingInfo"] !== undefined) { this.supportingInfo = source.supportingInfo.map((x) => new fhirModels.ExplanationOfBenefitSupportingInfo(x)); }
+    if (source["total"] !== undefined) { this.total = source.total.map((x) => new fhirModels.ExplanationOfBenefitTotal(x)); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+    if (source["use"] !== undefined) { this.use = source.use; }
+    if (source["_use"] !== undefined) { this._use = new fhirModels.Element(source._use); }
+  }
+  /**
+   * Check if the current ExplanationOfBenefit contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["created"] === undefined) { missingElements.push("created"); }
+    if ((this["insurance"] === undefined) || (this["insurance"].length === 0)) { missingElements.push("insurance"); }
+    if (this["insurer"] === undefined) { missingElements.push("insurer"); }
+    if (this["outcome"] === undefined) { missingElements.push("outcome"); }
+    if (this["patient"] === undefined) { missingElements.push("patient"); }
+    if (this["provider"] === undefined) { missingElements.push("provider"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    if (this["use"] === undefined) { missingElements.push("use"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ExplanationOfBenefit from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IExplanationOfBenefit):ExplanationOfBenefit {
+    var dest:ExplanationOfBenefit = new ExplanationOfBenefit(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ExplanationOfBenefit is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

@@ -6,92 +6,113 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information.
  */
-export class Endpoint extends fhirModels.DomainResource {
+export class Endpoint extends fhirModels.DomainResource implements fhirInterfaces.IEndpoint {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Endpoint";
+  readonly resourceType = "Endpoint";
   /**
    * For rest-hook, and websocket, the end-point must be an http: or https: URL; for email, a mailto: url, for sms, a tel: url, and for message the endpoint can be in any form of url the server understands (usually, http: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs)
    * This address will be to the service base, without any parameters, or sub-services or resources tacked on.
    * E.g. for a WADO-RS endpoint, the url should be "https://pacs.hospital.org/wado-rs"
    * and not "https://pacs.hospital.org/wado-rs/studies/1.2.250.1.59.40211.12345678.678910/series/1.2.250.1.59.40211.789001276.14556172.67789/instances/...".
    */
-  address: string;
-  _address?: fhirModels.Element;
+  address: string|undefined;
+  _address?: fhirModels.Element|undefined;
   /**
    * For additional connectivity details for the protocol, extensions will be used at this point, as in the XDS example.
    */
-  connectionType: fhirModels.Coding;
+  connectionType: fhirModels.Coding|undefined;
   /**
    * Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.
    */
-  contact?: fhirModels.ContactPoint[];
+  contact?: fhirModels.ContactPoint[]|undefined;
   /**
    * Exactly what these mean depends on the channel type. The can convey additional information to the recipient and/or meet security requirements.
    */
-  header?: string[];
-  _header?: fhirModels.Element[];
+  header?: string[]|undefined;
+  _header?: fhirModels.Element[]|undefined;
   /**
    * Identifier for the organization that is used to identify the endpoint across multiple disparate systems.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * This property is not typically used when searching for Endpoint resources for usage. The typical usage is via the reference from an applicable Organization/Location/Practitioner resource, which is where the context is provided. Multiple Locations may reference a single endpoint, and don't have to be within the same organization resource, but most likely within the same organizational hierarchy.
    */
-  managingOrganization?: fhirModels.Reference;
+  managingOrganization?: fhirModels.Reference|undefined;
   /**
    * A friendly name that this endpoint can be referred to with.
    */
-  name?: string;
-  _name?: fhirModels.Element;
+  name?: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * Sending the payload has obvious security consequences. The server is responsible for ensuring that the content is appropriately secured.
    */
-  payloadMimeType?: string[];
-  _payloadMimeType?: fhirModels.Element[];
+  payloadMimeType?: string[]|undefined;
+  _payloadMimeType?: fhirModels.Element[]|undefined;
   /**
    * The payloadFormat describes the serialization format of the data, where the payloadType indicates the specific document/schema that is being transferred; e.g. DischargeSummary or CarePlan.
    */
-  payloadType: fhirModels.CodeableConcept[];
+  payloadType: fhirModels.CodeableConcept[]|undefined;
   /**
    * The interval during which the endpoint is expected to be operational.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * This element is labeled as a modifier because the status contains codes that mark the endpoint as not currently valid.
    */
-  status: EndpointStatusEnum;
-  _status?: fhirModels.Element;
+  status: EndpointStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Endpoint from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Endpoint) {
+  constructor(source:Partial<fhirInterfaces.IEndpoint>) {
     super(source);
     if ((source['resourceType'] !== "Endpoint") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Endpoint'; }
-    if (source["address"] === undefined) { throw 'Missing required element address';}
-    this.address = source.address;
-    if (source["_address"] !== undefined) { this._address = source._address; }
-    if (source["connectionType"] === undefined) { throw 'Missing required element connectionType';}
-    this.connectionType = source.connectionType;
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
-    if (source["header"] !== undefined) { this.header = source.header; }
-    if (source["_header"] !== undefined) { this._header = source._header; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["managingOrganization"] !== undefined) { this.managingOrganization = source.managingOrganization; }
+    if (source["address"] !== undefined) { this.address = source.address; }
+    if (source["_address"] !== undefined) { this._address = new fhirModels.Element(source._address); }
+    if (source["connectionType"] !== undefined) { this.connectionType = new fhirModels.Coding(source.connectionType); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactPoint(x)); }
+    if (source["header"] !== undefined) { this.header = source.header.map((x) => (x)); }
+    if (source["_header"] !== undefined) { this._header = source._header.map((x) => new fhirModels.Element(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["managingOrganization"] !== undefined) { this.managingOrganization = new fhirModels.Reference(source.managingOrganization); }
     if (source["name"] !== undefined) { this.name = source.name; }
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["payloadMimeType"] !== undefined) { this.payloadMimeType = source.payloadMimeType; }
-    if (source["_payloadMimeType"] !== undefined) { this._payloadMimeType = source._payloadMimeType; }
-    if (source["payloadType"] === undefined) { throw 'Missing required element payloadType';}
-    this.payloadType = source.payloadType;
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["payloadMimeType"] !== undefined) { this.payloadMimeType = source.payloadMimeType.map((x) => (x)); }
+    if (source["_payloadMimeType"] !== undefined) { this._payloadMimeType = source._payloadMimeType.map((x) => new fhirModels.Element(x)); }
+    if (source["payloadType"] !== undefined) { this.payloadType = source.payloadType.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current Endpoint contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["address"] === undefined) { missingElements.push("address"); }
+    if (this["connectionType"] === undefined) { missingElements.push("connectionType"); }
+    if ((this["payloadType"] === undefined) || (this["payloadType"].length === 0)) { missingElements.push("payloadType"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Endpoint from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IEndpoint):Endpoint {
+    var dest:Endpoint = new Endpoint(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Endpoint is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

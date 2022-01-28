@@ -6,57 +6,78 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * An error, warning, or information message that results from a system action.
  */
-export class OperationOutcomeIssue extends fhirModels.BackboneElement {
+export class OperationOutcomeIssue extends fhirModels.BackboneElement implements fhirInterfaces.IOperationOutcomeIssue {
   /**
    * Describes the type of the issue. The system that creates an OperationOutcome SHALL choose the most applicable code from the IssueType value set, and may additional provide its own code for the error in the details element.
    */
-  code: string;
-  _code?: fhirModels.Element;
+  code: string|undefined;
+  _code?: fhirModels.Element|undefined;
   /**
    * A human readable description of the error issue SHOULD be placed in details.text.
    */
-  details?: fhirModels.CodeableConcept;
+  details?: fhirModels.CodeableConcept|undefined;
   /**
    * This may be a description of how a value is erroneous, a stack dump to help trace the issue or other troubleshooting information.
    */
-  diagnostics?: string;
-  _diagnostics?: fhirModels.Element;
+  diagnostics?: string|undefined;
+  _diagnostics?: fhirModels.Element|undefined;
   /**
    * The root of the FHIRPath is the resource or bundle that generated OperationOutcome.  Each FHIRPath SHALL resolve to a single node.
    */
-  expression?: string[];
-  _expression?: fhirModels.Element[];
+  expression?: string[]|undefined;
+  _expression?: fhirModels.Element[]|undefined;
   /**
    * The root of the XPath is the resource or bundle that generated OperationOutcome.  Each XPath SHALL resolve to a single node.  This element is deprecated, and is being replaced by expression.
    */
-  location?: string[];
-  _location?: fhirModels.Element[];
+  location?: string[]|undefined;
+  _location?: fhirModels.Element[]|undefined;
   /**
    * This is labeled as "Is Modifier" because applications should not confuse hints and warnings with errors.
    */
-  severity: OperationOutcomeIssueSeverityEnum;
-  _severity?: fhirModels.Element;
+  severity: OperationOutcomeIssueSeverityEnum|undefined;
+  _severity?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for OperationOutcomeIssue from an object that MAY NOT contain all required elements.
    */
-  constructor(source: OperationOutcomeIssue) {
+  constructor(source:Partial<fhirInterfaces.IOperationOutcomeIssue>) {
     super(source);
-    if (source["code"] === undefined) { throw 'Missing required element code';}
-    this.code = source.code;
-    if (source["_code"] !== undefined) { this._code = source._code; }
-    if (source["details"] !== undefined) { this.details = source.details; }
+    if (source["code"] !== undefined) { this.code = source.code; }
+    if (source["_code"] !== undefined) { this._code = new fhirModels.Element(source._code); }
+    if (source["details"] !== undefined) { this.details = new fhirModels.CodeableConcept(source.details); }
     if (source["diagnostics"] !== undefined) { this.diagnostics = source.diagnostics; }
-    if (source["_diagnostics"] !== undefined) { this._diagnostics = source._diagnostics; }
-    if (source["expression"] !== undefined) { this.expression = source.expression; }
-    if (source["_expression"] !== undefined) { this._expression = source._expression; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["_location"] !== undefined) { this._location = source._location; }
-    if (source["severity"] === undefined) { throw 'Missing required element severity';}
-    this.severity = source.severity;
-    if (source["_severity"] !== undefined) { this._severity = source._severity; }
+    if (source["_diagnostics"] !== undefined) { this._diagnostics = new fhirModels.Element(source._diagnostics); }
+    if (source["expression"] !== undefined) { this.expression = source.expression.map((x) => (x)); }
+    if (source["_expression"] !== undefined) { this._expression = source._expression.map((x) => new fhirModels.Element(x)); }
+    if (source["location"] !== undefined) { this.location = source.location.map((x) => (x)); }
+    if (source["_location"] !== undefined) { this._location = source._location.map((x) => new fhirModels.Element(x)); }
+    if (source["severity"] !== undefined) { this.severity = source.severity; }
+    if (source["_severity"] !== undefined) { this._severity = new fhirModels.Element(source._severity); }
+  }
+  /**
+   * Check if the current OperationOutcomeIssue contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["code"] === undefined) { missingElements.push("code"); }
+    if (this["severity"] === undefined) { missingElements.push("severity"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a OperationOutcomeIssue from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IOperationOutcomeIssue):OperationOutcomeIssue {
+    var dest:OperationOutcomeIssue = new OperationOutcomeIssue(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `OperationOutcomeIssue is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -71,22 +92,42 @@ export enum OperationOutcomeIssueSeverityEnum {
 /**
  * A collection of error, warning, or information messages that result from a system action.
  */
-export class OperationOutcome extends fhirModels.DomainResource {
+export class OperationOutcome extends fhirModels.DomainResource implements fhirInterfaces.IOperationOutcome {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "OperationOutcome";
+  readonly resourceType = "OperationOutcome";
   /**
    * An error, warning, or information message that results from a system action.
    */
-  issue: fhirModels.OperationOutcomeIssue[];
+  issue: fhirModels.OperationOutcomeIssue[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for OperationOutcome from an object that MAY NOT contain all required elements.
    */
-  constructor(source: OperationOutcome) {
+  constructor(source:Partial<fhirInterfaces.IOperationOutcome>) {
     super(source);
     if ((source['resourceType'] !== "OperationOutcome") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a OperationOutcome'; }
-    if (source["issue"] === undefined) { throw 'Missing required element issue';}
-    this.issue = source.issue;
+    if (source["issue"] !== undefined) { this.issue = source.issue.map((x) => new fhirModels.OperationOutcomeIssue(x)); }
+  }
+  /**
+   * Check if the current OperationOutcome contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if ((this["issue"] === undefined) || (this["issue"].length === 0)) { missingElements.push("issue"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a OperationOutcome from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IOperationOutcome):OperationOutcome {
+    var dest:OperationOutcome = new OperationOutcome(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `OperationOutcome is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

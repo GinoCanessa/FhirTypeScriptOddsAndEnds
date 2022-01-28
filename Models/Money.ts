@@ -6,28 +6,49 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * An amount of economic utility in some recognized currency.
  */
-export class Money extends fhirModels.Element {
+export class Money extends fhirModels.Element implements fhirInterfaces.IMoney {
   /**
    * ISO 4217 Currency Code.
    */
-  currency?: string;
-  _currency?: fhirModels.Element;
+  currency?: string|undefined;
+  _currency?: fhirModels.Element|undefined;
   /**
    * Monetary values have their own rules for handling precision (refer to standard accounting text books).
    */
-  value?: number;
-  _value?: fhirModels.Element;
+  value?: number|undefined;
+  _value?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Money from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Money) {
+  constructor(source:Partial<fhirInterfaces.IMoney>) {
     super(source);
     if (source["currency"] !== undefined) { this.currency = source.currency; }
-    if (source["_currency"] !== undefined) { this._currency = source._currency; }
+    if (source["_currency"] !== undefined) { this._currency = new fhirModels.Element(source._currency); }
     if (source["value"] !== undefined) { this.value = source.value; }
-    if (source["_value"] !== undefined) { this._value = source._value; }
+    if (source["_value"] !== undefined) { this._value = new fhirModels.Element(source._value); }
+  }
+  /**
+   * Check if the current Money contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Money from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMoney):Money {
+    var dest:Money = new Money(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Money is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

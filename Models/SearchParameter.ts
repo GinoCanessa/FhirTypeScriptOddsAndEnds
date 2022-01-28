@@ -6,230 +6,271 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Used to define the parts of a composite search parameter.
  */
-export class SearchParameterComponent extends fhirModels.BackboneElement {
+export class SearchParameterComponent extends fhirModels.BackboneElement implements fhirInterfaces.ISearchParameterComponent {
   /**
    * The definition of the search parameter that describes this part.
    */
-  definition: string;
-  _definition?: fhirModels.Element;
+  definition: string|undefined;
+  _definition?: fhirModels.Element|undefined;
   /**
    * This expression overrides the expression in the definition and extracts the index values from the outcome of the composite expression.
    */
-  expression: string;
-  _expression?: fhirModels.Element;
+  expression: string|undefined;
+  _expression?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for SearchParameterComponent from an object that MAY NOT contain all required elements.
    */
-  constructor(source: SearchParameterComponent) {
+  constructor(source:Partial<fhirInterfaces.ISearchParameterComponent>) {
     super(source);
-    if (source["definition"] === undefined) { throw 'Missing required element definition';}
-    this.definition = source.definition;
-    if (source["_definition"] !== undefined) { this._definition = source._definition; }
-    if (source["expression"] === undefined) { throw 'Missing required element expression';}
-    this.expression = source.expression;
-    if (source["_expression"] !== undefined) { this._expression = source._expression; }
+    if (source["definition"] !== undefined) { this.definition = source.definition; }
+    if (source["_definition"] !== undefined) { this._definition = new fhirModels.Element(source._definition); }
+    if (source["expression"] !== undefined) { this.expression = source.expression; }
+    if (source["_expression"] !== undefined) { this._expression = new fhirModels.Element(source._expression); }
+  }
+  /**
+   * Check if the current SearchParameterComponent contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["definition"] === undefined) { missingElements.push("definition"); }
+    if (this["expression"] === undefined) { missingElements.push("expression"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a SearchParameterComponent from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ISearchParameterComponent):SearchParameterComponent {
+    var dest:SearchParameterComponent = new SearchParameterComponent(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `SearchParameterComponent is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A search parameter that defines a named search item that can be used to search/filter on a resource.
  */
-export class SearchParameter extends fhirModels.DomainResource {
+export class SearchParameter extends fhirModels.DomainResource implements fhirInterfaces.ISearchParameter {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "SearchParameter";
+  readonly resourceType = "SearchParameter";
   /**
    * A search parameter must always apply to at least one resource type. When search parameters apply to more than one resource type, they can be used against any of the listed resource types, or in a cross-type search (see [Cross Resource Search](http.html#xres-search)).
    */
-  base: string[];
-  _base?: fhirModels.Element[];
+  base: string[]|undefined;
+  _base?: fhirModels.Element[]|undefined;
   /**
    * Systems are not required to list all the chain names they support, but if they don't list them, clients might not know to use them.
    */
-  chain?: string[];
-  _chain?: fhirModels.Element[];
+  chain?: string[]|undefined;
+  _chain?: fhirModels.Element[]|undefined;
   /**
    * For maximum compatibility, use only lowercase ASCII characters.
    */
-  code: string;
-  _code?: fhirModels.Element;
+  code: string|undefined;
+  _code?: fhirModels.Element|undefined;
   /**
    * If no comparators are listed, clients should not expect servers to support any comparators.
    */
-  comparator?: SearchParameterComparatorEnum[];
-  _comparator?: fhirModels.Element[];
+  comparator?: SearchParameterComparatorEnum[]|undefined;
+  _comparator?: fhirModels.Element[]|undefined;
   /**
    * Used to define the parts of a composite search parameter.
    */
-  component?: fhirModels.SearchParameterComponent[];
+  component?: fhirModels.SearchParameterComponent[]|undefined;
   /**
    * May be a web site, an email address, a telephone number, etc.
    */
-  contact?: fhirModels.ContactDetail[];
+  contact?: fhirModels.ContactDetail[]|undefined;
   /**
    * Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the search parameter. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * The intent of this is that a server can designate that it provides support for a search parameter defined in the specification itself (e.g.  [`value-quantity`](http://hl7.org/fhir/SearchParameter/Observation-value-quantity), but detail how it is supported by the server.
    */
-  derivedFrom?: string;
-  _derivedFrom?: fhirModels.Element;
+  derivedFrom?: string|undefined;
+  _derivedFrom?: fhirModels.Element|undefined;
   /**
    * This description can be used to capture details such as why the search parameter was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the search parameter as conveyed in the 'text' field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the search parameter is presumed to be the predominant language in the place the search parameter was created).
    */
-  description: string;
-  _description?: fhirModels.Element;
+  description: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Allows filtering of search parameters that are appropriate for use versus not.
    */
-  experimental?: boolean;
-  _experimental?: fhirModels.Element;
+  experimental?: boolean|undefined;
+  _experimental?: fhirModels.Element|undefined;
   /**
    * Note that the elements returned by the expression are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system. For composite search parameters, the outcome of the expression must a collection of base elements from which the composites are derived.
    */
-  expression?: string;
-  _expression?: fhirModels.Element;
+  expression?: string|undefined;
+  _expression?: fhirModels.Element|undefined;
   /**
    * It may be possible for the search parameter to be used in jurisdictions other than those for which it was originally designed or intended.
    */
-  jurisdiction?: fhirModels.CodeableConcept[];
+  jurisdiction?: fhirModels.CodeableConcept[]|undefined;
   /**
    * A modifier supported for the search parameter.
    */
-  modifier?: SearchParameterModifierEnum[];
-  _modifier?: fhirModels.Element[];
+  modifier?: SearchParameterModifierEnum[]|undefined;
+  _modifier?: fhirModels.Element[]|undefined;
   /**
    * Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.
    */
-  multipleAnd?: boolean;
-  _multipleAnd?: fhirModels.Element;
+  multipleAnd?: boolean|undefined;
+  _multipleAnd?: fhirModels.Element|undefined;
   /**
    * Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.
    */
-  multipleOr?: boolean;
-  _multipleOr?: fhirModels.Element;
+  multipleOr?: boolean|undefined;
+  _multipleOr?: fhirModels.Element|undefined;
   /**
    * The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.
    */
-  name: string;
-  _name?: fhirModels.Element;
+  name: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * Usually an organization but may be an individual. The publisher (or steward) of the search parameter is the organization or individual primarily responsible for the maintenance and upkeep of the search parameter. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the search parameter. This item SHOULD be populated unless the information is available from context.
    */
-  publisher?: string;
-  _publisher?: fhirModels.Element;
+  publisher?: string|undefined;
+  _publisher?: fhirModels.Element|undefined;
   /**
    * This element does not describe the usage of the search parameter. Instead, it provides traceability of ''why'' the resource is either needed or ''why'' it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this search parameter.
    */
-  purpose?: string;
-  _purpose?: fhirModels.Element;
+  purpose?: string|undefined;
+  _purpose?: fhirModels.Element|undefined;
   /**
    * Allows filtering of search parameters that are appropriate for use versus not.
    */
-  status: SearchParameterStatusEnum;
-  _status?: fhirModels.Element;
+  status: SearchParameterStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * Types of resource (if a resource is referenced).
    */
-  target?: string[];
-  _target?: fhirModels.Element[];
+  target?: string[]|undefined;
+  _target?: fhirModels.Element[]|undefined;
   /**
    * The type of value that a search parameter may contain, and how the content is interpreted.
    */
-  type: SearchParameterTypeEnum;
-  _type?: fhirModels.Element;
+  type: SearchParameterTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
    * Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.
    * The determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). 
    * In some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.
    */
-  url: string;
-  _url?: fhirModels.Element;
+  url: string|undefined;
+  _url?: fhirModels.Element|undefined;
   /**
    * When multiple useContexts are specified, there is no expectation that all or any of the contexts apply.
    */
-  useContext?: fhirModels.UsageContext[];
+  useContext?: fhirModels.UsageContext[]|undefined;
   /**
    * There may be different search parameter instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the search parameter with the format [url]|[version].
    */
-  version?: string;
-  _version?: fhirModels.Element;
+  version?: string|undefined;
+  _version?: fhirModels.Element|undefined;
   /**
    * Note that the elements returned by the XPath are sometimes complex elements where logic is required to determine quite how to handle them; e.g. CodeableConcepts may contain text and/or multiple codings, where the codings themselves contain a code and a system.
    */
-  xpath?: string;
-  _xpath?: fhirModels.Element;
+  xpath?: string|undefined;
+  _xpath?: fhirModels.Element|undefined;
   /**
    * How the search parameter relates to the set of elements returned by evaluating the xpath query.
    */
-  xpathUsage?: SearchParameterXpathUsageEnum;
-  _xpathUsage?: fhirModels.Element;
+  xpathUsage?: SearchParameterXpathUsageEnum|undefined;
+  _xpathUsage?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for SearchParameter from an object that MAY NOT contain all required elements.
    */
-  constructor(source: SearchParameter) {
+  constructor(source:Partial<fhirInterfaces.ISearchParameter>) {
     super(source);
     if ((source['resourceType'] !== "SearchParameter") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a SearchParameter'; }
-    if (source["base"] === undefined) { throw 'Missing required element base';}
-    this.base = source.base;
-    if (source["_base"] !== undefined) { this._base = source._base; }
-    if (source["chain"] !== undefined) { this.chain = source.chain; }
-    if (source["_chain"] !== undefined) { this._chain = source._chain; }
-    if (source["code"] === undefined) { throw 'Missing required element code';}
-    this.code = source.code;
-    if (source["_code"] !== undefined) { this._code = source._code; }
-    if (source["comparator"] !== undefined) { this.comparator = source.comparator; }
-    if (source["_comparator"] !== undefined) { this._comparator = source._comparator; }
-    if (source["component"] !== undefined) { this.component = source.component; }
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
+    if (source["base"] !== undefined) { this.base = source.base.map((x) => (x)); }
+    if (source["_base"] !== undefined) { this._base = source._base.map((x) => new fhirModels.Element(x)); }
+    if (source["chain"] !== undefined) { this.chain = source.chain.map((x) => (x)); }
+    if (source["_chain"] !== undefined) { this._chain = source._chain.map((x) => new fhirModels.Element(x)); }
+    if (source["code"] !== undefined) { this.code = source.code; }
+    if (source["_code"] !== undefined) { this._code = new fhirModels.Element(source._code); }
+    if (source["comparator"] !== undefined) { this.comparator = source.comparator.map((x) => (x)); }
+    if (source["_comparator"] !== undefined) { this._comparator = source._comparator.map((x) => new fhirModels.Element(x)); }
+    if (source["component"] !== undefined) { this.component = source.component.map((x) => new fhirModels.SearchParameterComponent(x)); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactDetail(x)); }
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
     if (source["derivedFrom"] !== undefined) { this.derivedFrom = source.derivedFrom; }
-    if (source["_derivedFrom"] !== undefined) { this._derivedFrom = source._derivedFrom; }
-    if (source["description"] === undefined) { throw 'Missing required element description';}
-    this.description = source.description;
-    if (source["_description"] !== undefined) { this._description = source._description; }
+    if (source["_derivedFrom"] !== undefined) { this._derivedFrom = new fhirModels.Element(source._derivedFrom); }
+    if (source["description"] !== undefined) { this.description = source.description; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
     if (source["experimental"] !== undefined) { this.experimental = source.experimental; }
-    if (source["_experimental"] !== undefined) { this._experimental = source._experimental; }
+    if (source["_experimental"] !== undefined) { this._experimental = new fhirModels.Element(source._experimental); }
     if (source["expression"] !== undefined) { this.expression = source.expression; }
-    if (source["_expression"] !== undefined) { this._expression = source._expression; }
-    if (source["jurisdiction"] !== undefined) { this.jurisdiction = source.jurisdiction; }
-    if (source["modifier"] !== undefined) { this.modifier = source.modifier; }
-    if (source["_modifier"] !== undefined) { this._modifier = source._modifier; }
+    if (source["_expression"] !== undefined) { this._expression = new fhirModels.Element(source._expression); }
+    if (source["jurisdiction"] !== undefined) { this.jurisdiction = source.jurisdiction.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["modifier"] !== undefined) { this.modifier = source.modifier.map((x) => (x)); }
+    if (source["_modifier"] !== undefined) { this._modifier = source._modifier.map((x) => new fhirModels.Element(x)); }
     if (source["multipleAnd"] !== undefined) { this.multipleAnd = source.multipleAnd; }
-    if (source["_multipleAnd"] !== undefined) { this._multipleAnd = source._multipleAnd; }
+    if (source["_multipleAnd"] !== undefined) { this._multipleAnd = new fhirModels.Element(source._multipleAnd); }
     if (source["multipleOr"] !== undefined) { this.multipleOr = source.multipleOr; }
-    if (source["_multipleOr"] !== undefined) { this._multipleOr = source._multipleOr; }
-    if (source["name"] === undefined) { throw 'Missing required element name';}
-    this.name = source.name;
-    if (source["_name"] !== undefined) { this._name = source._name; }
+    if (source["_multipleOr"] !== undefined) { this._multipleOr = new fhirModels.Element(source._multipleOr); }
+    if (source["name"] !== undefined) { this.name = source.name; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
     if (source["publisher"] !== undefined) { this.publisher = source.publisher; }
-    if (source["_publisher"] !== undefined) { this._publisher = source._publisher; }
+    if (source["_publisher"] !== undefined) { this._publisher = new fhirModels.Element(source._publisher); }
     if (source["purpose"] !== undefined) { this.purpose = source.purpose; }
-    if (source["_purpose"] !== undefined) { this._purpose = source._purpose; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["target"] !== undefined) { this.target = source.target; }
-    if (source["_target"] !== undefined) { this._target = source._target; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
-    if (source["url"] === undefined) { throw 'Missing required element url';}
-    this.url = source.url;
-    if (source["_url"] !== undefined) { this._url = source._url; }
-    if (source["useContext"] !== undefined) { this.useContext = source.useContext; }
+    if (source["_purpose"] !== undefined) { this._purpose = new fhirModels.Element(source._purpose); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["target"] !== undefined) { this.target = source.target.map((x) => (x)); }
+    if (source["_target"] !== undefined) { this._target = source._target.map((x) => new fhirModels.Element(x)); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+    if (source["url"] !== undefined) { this.url = source.url; }
+    if (source["_url"] !== undefined) { this._url = new fhirModels.Element(source._url); }
+    if (source["useContext"] !== undefined) { this.useContext = source.useContext.map((x) => new fhirModels.UsageContext(x)); }
     if (source["version"] !== undefined) { this.version = source.version; }
-    if (source["_version"] !== undefined) { this._version = source._version; }
+    if (source["_version"] !== undefined) { this._version = new fhirModels.Element(source._version); }
     if (source["xpath"] !== undefined) { this.xpath = source.xpath; }
-    if (source["_xpath"] !== undefined) { this._xpath = source._xpath; }
+    if (source["_xpath"] !== undefined) { this._xpath = new fhirModels.Element(source._xpath); }
     if (source["xpathUsage"] !== undefined) { this.xpathUsage = source.xpathUsage; }
-    if (source["_xpathUsage"] !== undefined) { this._xpathUsage = source._xpathUsage; }
+    if (source["_xpathUsage"] !== undefined) { this._xpathUsage = new fhirModels.Element(source._xpathUsage); }
+  }
+  /**
+   * Check if the current SearchParameter contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if ((this["base"] === undefined) || (this["base"].length === 0)) { missingElements.push("base"); }
+    if (this["code"] === undefined) { missingElements.push("code"); }
+    if (this["description"] === undefined) { missingElements.push("description"); }
+    if (this["name"] === undefined) { missingElements.push("name"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    if (this["url"] === undefined) { missingElements.push("url"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a SearchParameter from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ISearchParameter):SearchParameter {
+    var dest:SearchParameter = new SearchParameter(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `SearchParameter is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

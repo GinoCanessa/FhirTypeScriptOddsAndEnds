@@ -6,832 +6,913 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
  */
-export class TaskRestriction extends fhirModels.BackboneElement {
+export class TaskRestriction extends fhirModels.BackboneElement implements fhirInterfaces.ITaskRestriction {
   /**
    * Note that period.high is the due date representing the time by which the task should be completed.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?
    */
-  recipient?: fhirModels.Reference[];
+  recipient?: fhirModels.Reference[]|undefined;
   /**
    * Indicates the number of times the requested action should occur.
    */
-  repetitions?: number;
-  _repetitions?: fhirModels.Element;
+  repetitions?: number|undefined;
+  _repetitions?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for TaskRestriction from an object that MAY NOT contain all required elements.
    */
-  constructor(source: TaskRestriction) {
+  constructor(source:Partial<fhirInterfaces.ITaskRestriction>) {
     super(source);
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["recipient"] !== undefined) { this.recipient = source.recipient; }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["recipient"] !== undefined) { this.recipient = source.recipient.map((x) => new fhirModels.Reference(x)); }
     if (source["repetitions"] !== undefined) { this.repetitions = source.repetitions; }
-    if (source["_repetitions"] !== undefined) { this._repetitions = source._repetitions; }
+    if (source["_repetitions"] !== undefined) { this._repetitions = new fhirModels.Element(source._repetitions); }
+  }
+  /**
+   * Check if the current TaskRestriction contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a TaskRestriction from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ITaskRestriction):TaskRestriction {
+    var dest:TaskRestriction = new TaskRestriction(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `TaskRestriction is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Additional information that may be needed in the execution of the task.
  */
-export class TaskInput extends fhirModels.BackboneElement {
+export class TaskInput extends fhirModels.BackboneElement implements fhirInterfaces.ITaskInput {
   /**
    * If referencing a BPMN workflow or Protocol, the "system" is the URL for the workflow definition and the code is the "name" of the required input.
    */
-  type: fhirModels.CodeableConcept;
+  type: fhirModels.CodeableConcept|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueBase64Binary?: string;
-  _valueBase64Binary?: fhirModels.Element;
+  valueBase64Binary?: string|undefined;
+  _valueBase64Binary?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueBoolean?: boolean;
-  _valueBoolean?: fhirModels.Element;
+  valueBoolean?: boolean|undefined;
+  _valueBoolean?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueCanonical?: string;
-  _valueCanonical?: fhirModels.Element;
+  valueCanonical?: string|undefined;
+  _valueCanonical?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueCode?: string;
-  _valueCode?: fhirModels.Element;
+  valueCode?: string|undefined;
+  _valueCode?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDate?: string;
-  _valueDate?: fhirModels.Element;
+  valueDate?: string|undefined;
+  _valueDate?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDateTime?: string;
-  _valueDateTime?: fhirModels.Element;
+  valueDateTime?: string|undefined;
+  _valueDateTime?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDecimal?: number;
-  _valueDecimal?: fhirModels.Element;
+  valueDecimal?: number|undefined;
+  _valueDecimal?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueId?: string;
-  _valueId?: fhirModels.Element;
+  valueId?: string|undefined;
+  _valueId?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueInstant?: string;
-  _valueInstant?: fhirModels.Element;
+  valueInstant?: string|undefined;
+  _valueInstant?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueInteger?: number;
-  _valueInteger?: fhirModels.Element;
+  valueInteger?: number|undefined;
+  _valueInteger?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueMarkdown?: string;
-  _valueMarkdown?: fhirModels.Element;
+  valueMarkdown?: string|undefined;
+  _valueMarkdown?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueOid?: string;
-  _valueOid?: fhirModels.Element;
+  valueOid?: string|undefined;
+  _valueOid?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valuePositiveInt?: number;
-  _valuePositiveInt?: fhirModels.Element;
+  valuePositiveInt?: number|undefined;
+  _valuePositiveInt?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueString?: string;
-  _valueString?: fhirModels.Element;
+  valueString?: string|undefined;
+  _valueString?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueTime?: string;
-  _valueTime?: fhirModels.Element;
+  valueTime?: string|undefined;
+  _valueTime?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueUnsignedInt?: number;
-  _valueUnsignedInt?: fhirModels.Element;
+  valueUnsignedInt?: number|undefined;
+  _valueUnsignedInt?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueUri?: string;
-  _valueUri?: fhirModels.Element;
+  valueUri?: string|undefined;
+  _valueUri?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueUrl?: string;
-  _valueUrl?: fhirModels.Element;
+  valueUrl?: string|undefined;
+  _valueUrl?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueUuid?: string;
-  _valueUuid?: fhirModels.Element;
+  valueUuid?: string|undefined;
+  _valueUuid?: fhirModels.Element|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueAddress?: fhirModels.Address;
+  valueAddress?: fhirModels.Address|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueAge?: fhirModels.Age;
+  valueAge?: fhirModels.Age|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueAnnotation?: fhirModels.Annotation;
+  valueAnnotation?: fhirModels.Annotation|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueAttachment?: fhirModels.Attachment;
+  valueAttachment?: fhirModels.Attachment|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueCodeableConcept?: fhirModels.CodeableConcept;
+  valueCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueCoding?: fhirModels.Coding;
+  valueCoding?: fhirModels.Coding|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueContactPoint?: fhirModels.ContactPoint;
+  valueContactPoint?: fhirModels.ContactPoint|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueCount?: fhirModels.Count;
+  valueCount?: fhirModels.Count|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDistance?: fhirModels.Distance;
+  valueDistance?: fhirModels.Distance|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDuration?: fhirModels.Duration;
+  valueDuration?: fhirModels.Duration|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueHumanName?: fhirModels.HumanName;
+  valueHumanName?: fhirModels.HumanName|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueIdentifier?: fhirModels.Identifier;
+  valueIdentifier?: fhirModels.Identifier|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueMoney?: fhirModels.Money;
+  valueMoney?: fhirModels.Money|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valuePeriod?: fhirModels.Period;
+  valuePeriod?: fhirModels.Period|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueQuantity?: fhirModels.Quantity;
+  valueQuantity?: fhirModels.Quantity|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueRange?: fhirModels.Range;
+  valueRange?: fhirModels.Range|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueRatio?: fhirModels.Ratio;
+  valueRatio?: fhirModels.Ratio|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueReference?: fhirModels.Reference;
+  valueReference?: fhirModels.Reference|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueSampledData?: fhirModels.SampledData;
+  valueSampledData?: fhirModels.SampledData|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueSignature?: fhirModels.Signature;
+  valueSignature?: fhirModels.Signature|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueTiming?: fhirModels.Timing;
+  valueTiming?: fhirModels.Timing|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueContactDetail?: fhirModels.ContactDetail;
+  valueContactDetail?: fhirModels.ContactDetail|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueContributor?: fhirModels.Contributor;
+  valueContributor?: fhirModels.Contributor|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDataRequirement?: fhirModels.DataRequirement;
+  valueDataRequirement?: fhirModels.DataRequirement|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueExpression?: fhirModels.Expression;
+  valueExpression?: fhirModels.Expression|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueParameterDefinition?: fhirModels.ParameterDefinition;
+  valueParameterDefinition?: fhirModels.ParameterDefinition|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueRelatedArtifact?: fhirModels.RelatedArtifact;
+  valueRelatedArtifact?: fhirModels.RelatedArtifact|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueTriggerDefinition?: fhirModels.TriggerDefinition;
+  valueTriggerDefinition?: fhirModels.TriggerDefinition|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueUsageContext?: fhirModels.UsageContext;
+  valueUsageContext?: fhirModels.UsageContext|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueDosage?: fhirModels.Dosage;
+  valueDosage?: fhirModels.Dosage|undefined;
   /**
    * The value of the input parameter as a basic type.
    */
-  valueMeta?: fhirModels.Meta;
+  valueMeta?: fhirModels.Meta|undefined;
   /**
-   * Default constructor
+   * Default constructor for TaskInput from an object that MAY NOT contain all required elements.
    */
-  constructor(source: TaskInput) {
+  constructor(source:Partial<fhirInterfaces.ITaskInput>) {
     super(source);
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
     if (source["valueBase64Binary"] !== undefined) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source["_valueBase64Binary"] !== undefined) { this._valueBase64Binary = source._valueBase64Binary; }
+    if (source["_valueBase64Binary"] !== undefined) { this._valueBase64Binary = new fhirModels.Element(source._valueBase64Binary); }
     if (source["valueBoolean"] !== undefined) { this.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = source._valueBoolean; }
+    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = new fhirModels.Element(source._valueBoolean); }
     if (source["valueCanonical"] !== undefined) { this.valueCanonical = source.valueCanonical; }
-    if (source["_valueCanonical"] !== undefined) { this._valueCanonical = source._valueCanonical; }
+    if (source["_valueCanonical"] !== undefined) { this._valueCanonical = new fhirModels.Element(source._valueCanonical); }
     if (source["valueCode"] !== undefined) { this.valueCode = source.valueCode; }
-    if (source["_valueCode"] !== undefined) { this._valueCode = source._valueCode; }
+    if (source["_valueCode"] !== undefined) { this._valueCode = new fhirModels.Element(source._valueCode); }
     if (source["valueDate"] !== undefined) { this.valueDate = source.valueDate; }
-    if (source["_valueDate"] !== undefined) { this._valueDate = source._valueDate; }
+    if (source["_valueDate"] !== undefined) { this._valueDate = new fhirModels.Element(source._valueDate); }
     if (source["valueDateTime"] !== undefined) { this.valueDateTime = source.valueDateTime; }
-    if (source["_valueDateTime"] !== undefined) { this._valueDateTime = source._valueDateTime; }
+    if (source["_valueDateTime"] !== undefined) { this._valueDateTime = new fhirModels.Element(source._valueDateTime); }
     if (source["valueDecimal"] !== undefined) { this.valueDecimal = source.valueDecimal; }
-    if (source["_valueDecimal"] !== undefined) { this._valueDecimal = source._valueDecimal; }
+    if (source["_valueDecimal"] !== undefined) { this._valueDecimal = new fhirModels.Element(source._valueDecimal); }
     if (source["valueId"] !== undefined) { this.valueId = source.valueId; }
-    if (source["_valueId"] !== undefined) { this._valueId = source._valueId; }
+    if (source["_valueId"] !== undefined) { this._valueId = new fhirModels.Element(source._valueId); }
     if (source["valueInstant"] !== undefined) { this.valueInstant = source.valueInstant; }
-    if (source["_valueInstant"] !== undefined) { this._valueInstant = source._valueInstant; }
+    if (source["_valueInstant"] !== undefined) { this._valueInstant = new fhirModels.Element(source._valueInstant); }
     if (source["valueInteger"] !== undefined) { this.valueInteger = source.valueInteger; }
-    if (source["_valueInteger"] !== undefined) { this._valueInteger = source._valueInteger; }
+    if (source["_valueInteger"] !== undefined) { this._valueInteger = new fhirModels.Element(source._valueInteger); }
     if (source["valueMarkdown"] !== undefined) { this.valueMarkdown = source.valueMarkdown; }
-    if (source["_valueMarkdown"] !== undefined) { this._valueMarkdown = source._valueMarkdown; }
+    if (source["_valueMarkdown"] !== undefined) { this._valueMarkdown = new fhirModels.Element(source._valueMarkdown); }
     if (source["valueOid"] !== undefined) { this.valueOid = source.valueOid; }
-    if (source["_valueOid"] !== undefined) { this._valueOid = source._valueOid; }
+    if (source["_valueOid"] !== undefined) { this._valueOid = new fhirModels.Element(source._valueOid); }
     if (source["valuePositiveInt"] !== undefined) { this.valuePositiveInt = source.valuePositiveInt; }
-    if (source["_valuePositiveInt"] !== undefined) { this._valuePositiveInt = source._valuePositiveInt; }
+    if (source["_valuePositiveInt"] !== undefined) { this._valuePositiveInt = new fhirModels.Element(source._valuePositiveInt); }
     if (source["valueString"] !== undefined) { this.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { this._valueString = source._valueString; }
+    if (source["_valueString"] !== undefined) { this._valueString = new fhirModels.Element(source._valueString); }
     if (source["valueTime"] !== undefined) { this.valueTime = source.valueTime; }
-    if (source["_valueTime"] !== undefined) { this._valueTime = source._valueTime; }
+    if (source["_valueTime"] !== undefined) { this._valueTime = new fhirModels.Element(source._valueTime); }
     if (source["valueUnsignedInt"] !== undefined) { this.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source["_valueUnsignedInt"] !== undefined) { this._valueUnsignedInt = source._valueUnsignedInt; }
+    if (source["_valueUnsignedInt"] !== undefined) { this._valueUnsignedInt = new fhirModels.Element(source._valueUnsignedInt); }
     if (source["valueUri"] !== undefined) { this.valueUri = source.valueUri; }
-    if (source["_valueUri"] !== undefined) { this._valueUri = source._valueUri; }
+    if (source["_valueUri"] !== undefined) { this._valueUri = new fhirModels.Element(source._valueUri); }
     if (source["valueUrl"] !== undefined) { this.valueUrl = source.valueUrl; }
-    if (source["_valueUrl"] !== undefined) { this._valueUrl = source._valueUrl; }
+    if (source["_valueUrl"] !== undefined) { this._valueUrl = new fhirModels.Element(source._valueUrl); }
     if (source["valueUuid"] !== undefined) { this.valueUuid = source.valueUuid; }
-    if (source["_valueUuid"] !== undefined) { this._valueUuid = source._valueUuid; }
-    if (source["valueAddress"] !== undefined) { this.valueAddress = source.valueAddress; }
-    if (source["valueAge"] !== undefined) { this.valueAge = source.valueAge; }
-    if (source["valueAnnotation"] !== undefined) { this.valueAnnotation = source.valueAnnotation; }
-    if (source["valueAttachment"] !== undefined) { this.valueAttachment = source.valueAttachment; }
-    if (source["valueCodeableConcept"] !== undefined) { this.valueCodeableConcept = source.valueCodeableConcept; }
-    if (source["valueCoding"] !== undefined) { this.valueCoding = source.valueCoding; }
-    if (source["valueContactPoint"] !== undefined) { this.valueContactPoint = source.valueContactPoint; }
-    if (source["valueCount"] !== undefined) { this.valueCount = source.valueCount; }
-    if (source["valueDistance"] !== undefined) { this.valueDistance = source.valueDistance; }
-    if (source["valueDuration"] !== undefined) { this.valueDuration = source.valueDuration; }
-    if (source["valueHumanName"] !== undefined) { this.valueHumanName = source.valueHumanName; }
-    if (source["valueIdentifier"] !== undefined) { this.valueIdentifier = source.valueIdentifier; }
-    if (source["valueMoney"] !== undefined) { this.valueMoney = source.valueMoney; }
-    if (source["valuePeriod"] !== undefined) { this.valuePeriod = source.valuePeriod; }
-    if (source["valueQuantity"] !== undefined) { this.valueQuantity = source.valueQuantity; }
-    if (source["valueRange"] !== undefined) { this.valueRange = source.valueRange; }
-    if (source["valueRatio"] !== undefined) { this.valueRatio = source.valueRatio; }
-    if (source["valueReference"] !== undefined) { this.valueReference = source.valueReference; }
-    if (source["valueSampledData"] !== undefined) { this.valueSampledData = source.valueSampledData; }
-    if (source["valueSignature"] !== undefined) { this.valueSignature = source.valueSignature; }
-    if (source["valueTiming"] !== undefined) { this.valueTiming = source.valueTiming; }
-    if (source["valueContactDetail"] !== undefined) { this.valueContactDetail = source.valueContactDetail; }
-    if (source["valueContributor"] !== undefined) { this.valueContributor = source.valueContributor; }
-    if (source["valueDataRequirement"] !== undefined) { this.valueDataRequirement = source.valueDataRequirement; }
-    if (source["valueExpression"] !== undefined) { this.valueExpression = source.valueExpression; }
-    if (source["valueParameterDefinition"] !== undefined) { this.valueParameterDefinition = source.valueParameterDefinition; }
-    if (source["valueRelatedArtifact"] !== undefined) { this.valueRelatedArtifact = source.valueRelatedArtifact; }
-    if (source["valueTriggerDefinition"] !== undefined) { this.valueTriggerDefinition = source.valueTriggerDefinition; }
-    if (source["valueUsageContext"] !== undefined) { this.valueUsageContext = source.valueUsageContext; }
-    if (source["valueDosage"] !== undefined) { this.valueDosage = source.valueDosage; }
-    if (source["valueMeta"] !== undefined) { this.valueMeta = source.valueMeta; }
+    if (source["_valueUuid"] !== undefined) { this._valueUuid = new fhirModels.Element(source._valueUuid); }
+    if (source["valueAddress"] !== undefined) { this.valueAddress = new fhirModels.Address(source.valueAddress); }
+    if (source["valueAge"] !== undefined) { this.valueAge = new fhirModels.Age(source.valueAge); }
+    if (source["valueAnnotation"] !== undefined) { this.valueAnnotation = new fhirModels.Annotation(source.valueAnnotation); }
+    if (source["valueAttachment"] !== undefined) { this.valueAttachment = new fhirModels.Attachment(source.valueAttachment); }
+    if (source["valueCodeableConcept"] !== undefined) { this.valueCodeableConcept = new fhirModels.CodeableConcept(source.valueCodeableConcept); }
+    if (source["valueCoding"] !== undefined) { this.valueCoding = new fhirModels.Coding(source.valueCoding); }
+    if (source["valueContactPoint"] !== undefined) { this.valueContactPoint = new fhirModels.ContactPoint(source.valueContactPoint); }
+    if (source["valueCount"] !== undefined) { this.valueCount = new fhirModels.Count(source.valueCount); }
+    if (source["valueDistance"] !== undefined) { this.valueDistance = new fhirModels.Distance(source.valueDistance); }
+    if (source["valueDuration"] !== undefined) { this.valueDuration = new fhirModels.Duration(source.valueDuration); }
+    if (source["valueHumanName"] !== undefined) { this.valueHumanName = new fhirModels.HumanName(source.valueHumanName); }
+    if (source["valueIdentifier"] !== undefined) { this.valueIdentifier = new fhirModels.Identifier(source.valueIdentifier); }
+    if (source["valueMoney"] !== undefined) { this.valueMoney = new fhirModels.Money(source.valueMoney); }
+    if (source["valuePeriod"] !== undefined) { this.valuePeriod = new fhirModels.Period(source.valuePeriod); }
+    if (source["valueQuantity"] !== undefined) { this.valueQuantity = new fhirModels.Quantity(source.valueQuantity); }
+    if (source["valueRange"] !== undefined) { this.valueRange = new fhirModels.Range(source.valueRange); }
+    if (source["valueRatio"] !== undefined) { this.valueRatio = new fhirModels.Ratio(source.valueRatio); }
+    if (source["valueReference"] !== undefined) { this.valueReference = new fhirModels.Reference(source.valueReference); }
+    if (source["valueSampledData"] !== undefined) { this.valueSampledData = new fhirModels.SampledData(source.valueSampledData); }
+    if (source["valueSignature"] !== undefined) { this.valueSignature = new fhirModels.Signature(source.valueSignature); }
+    if (source["valueTiming"] !== undefined) { this.valueTiming = new fhirModels.Timing(source.valueTiming); }
+    if (source["valueContactDetail"] !== undefined) { this.valueContactDetail = new fhirModels.ContactDetail(source.valueContactDetail); }
+    if (source["valueContributor"] !== undefined) { this.valueContributor = new fhirModels.Contributor(source.valueContributor); }
+    if (source["valueDataRequirement"] !== undefined) { this.valueDataRequirement = new fhirModels.DataRequirement(source.valueDataRequirement); }
+    if (source["valueExpression"] !== undefined) { this.valueExpression = new fhirModels.Expression(source.valueExpression); }
+    if (source["valueParameterDefinition"] !== undefined) { this.valueParameterDefinition = new fhirModels.ParameterDefinition(source.valueParameterDefinition); }
+    if (source["valueRelatedArtifact"] !== undefined) { this.valueRelatedArtifact = new fhirModels.RelatedArtifact(source.valueRelatedArtifact); }
+    if (source["valueTriggerDefinition"] !== undefined) { this.valueTriggerDefinition = new fhirModels.TriggerDefinition(source.valueTriggerDefinition); }
+    if (source["valueUsageContext"] !== undefined) { this.valueUsageContext = new fhirModels.UsageContext(source.valueUsageContext); }
+    if (source["valueDosage"] !== undefined) { this.valueDosage = new fhirModels.Dosage(source.valueDosage); }
+    if (source["valueMeta"] !== undefined) { this.valueMeta = new fhirModels.Meta(source.valueMeta); }
+  }
+  /**
+   * Check if the current TaskInput contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a TaskInput from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ITaskInput):TaskInput {
+    var dest:TaskInput = new TaskInput(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `TaskInput is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Outputs produced by the Task.
  */
-export class TaskOutput extends fhirModels.BackboneElement {
+export class TaskOutput extends fhirModels.BackboneElement implements fhirInterfaces.ITaskOutput {
   /**
    * The name of the Output parameter.
    */
-  type: fhirModels.CodeableConcept;
+  type: fhirModels.CodeableConcept|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueBase64Binary?: string;
-  _valueBase64Binary?: fhirModels.Element;
+  valueBase64Binary?: string|undefined;
+  _valueBase64Binary?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueBoolean?: boolean;
-  _valueBoolean?: fhirModels.Element;
+  valueBoolean?: boolean|undefined;
+  _valueBoolean?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueCanonical?: string;
-  _valueCanonical?: fhirModels.Element;
+  valueCanonical?: string|undefined;
+  _valueCanonical?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueCode?: string;
-  _valueCode?: fhirModels.Element;
+  valueCode?: string|undefined;
+  _valueCode?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDate?: string;
-  _valueDate?: fhirModels.Element;
+  valueDate?: string|undefined;
+  _valueDate?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDateTime?: string;
-  _valueDateTime?: fhirModels.Element;
+  valueDateTime?: string|undefined;
+  _valueDateTime?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDecimal?: number;
-  _valueDecimal?: fhirModels.Element;
+  valueDecimal?: number|undefined;
+  _valueDecimal?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueId?: string;
-  _valueId?: fhirModels.Element;
+  valueId?: string|undefined;
+  _valueId?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueInstant?: string;
-  _valueInstant?: fhirModels.Element;
+  valueInstant?: string|undefined;
+  _valueInstant?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueInteger?: number;
-  _valueInteger?: fhirModels.Element;
+  valueInteger?: number|undefined;
+  _valueInteger?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueMarkdown?: string;
-  _valueMarkdown?: fhirModels.Element;
+  valueMarkdown?: string|undefined;
+  _valueMarkdown?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueOid?: string;
-  _valueOid?: fhirModels.Element;
+  valueOid?: string|undefined;
+  _valueOid?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valuePositiveInt?: number;
-  _valuePositiveInt?: fhirModels.Element;
+  valuePositiveInt?: number|undefined;
+  _valuePositiveInt?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueString?: string;
-  _valueString?: fhirModels.Element;
+  valueString?: string|undefined;
+  _valueString?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueTime?: string;
-  _valueTime?: fhirModels.Element;
+  valueTime?: string|undefined;
+  _valueTime?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueUnsignedInt?: number;
-  _valueUnsignedInt?: fhirModels.Element;
+  valueUnsignedInt?: number|undefined;
+  _valueUnsignedInt?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueUri?: string;
-  _valueUri?: fhirModels.Element;
+  valueUri?: string|undefined;
+  _valueUri?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueUrl?: string;
-  _valueUrl?: fhirModels.Element;
+  valueUrl?: string|undefined;
+  _valueUrl?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueUuid?: string;
-  _valueUuid?: fhirModels.Element;
+  valueUuid?: string|undefined;
+  _valueUuid?: fhirModels.Element|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueAddress?: fhirModels.Address;
+  valueAddress?: fhirModels.Address|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueAge?: fhirModels.Age;
+  valueAge?: fhirModels.Age|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueAnnotation?: fhirModels.Annotation;
+  valueAnnotation?: fhirModels.Annotation|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueAttachment?: fhirModels.Attachment;
+  valueAttachment?: fhirModels.Attachment|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueCodeableConcept?: fhirModels.CodeableConcept;
+  valueCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueCoding?: fhirModels.Coding;
+  valueCoding?: fhirModels.Coding|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueContactPoint?: fhirModels.ContactPoint;
+  valueContactPoint?: fhirModels.ContactPoint|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueCount?: fhirModels.Count;
+  valueCount?: fhirModels.Count|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDistance?: fhirModels.Distance;
+  valueDistance?: fhirModels.Distance|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDuration?: fhirModels.Duration;
+  valueDuration?: fhirModels.Duration|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueHumanName?: fhirModels.HumanName;
+  valueHumanName?: fhirModels.HumanName|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueIdentifier?: fhirModels.Identifier;
+  valueIdentifier?: fhirModels.Identifier|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueMoney?: fhirModels.Money;
+  valueMoney?: fhirModels.Money|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valuePeriod?: fhirModels.Period;
+  valuePeriod?: fhirModels.Period|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueQuantity?: fhirModels.Quantity;
+  valueQuantity?: fhirModels.Quantity|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueRange?: fhirModels.Range;
+  valueRange?: fhirModels.Range|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueRatio?: fhirModels.Ratio;
+  valueRatio?: fhirModels.Ratio|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueReference?: fhirModels.Reference;
+  valueReference?: fhirModels.Reference|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueSampledData?: fhirModels.SampledData;
+  valueSampledData?: fhirModels.SampledData|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueSignature?: fhirModels.Signature;
+  valueSignature?: fhirModels.Signature|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueTiming?: fhirModels.Timing;
+  valueTiming?: fhirModels.Timing|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueContactDetail?: fhirModels.ContactDetail;
+  valueContactDetail?: fhirModels.ContactDetail|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueContributor?: fhirModels.Contributor;
+  valueContributor?: fhirModels.Contributor|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDataRequirement?: fhirModels.DataRequirement;
+  valueDataRequirement?: fhirModels.DataRequirement|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueExpression?: fhirModels.Expression;
+  valueExpression?: fhirModels.Expression|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueParameterDefinition?: fhirModels.ParameterDefinition;
+  valueParameterDefinition?: fhirModels.ParameterDefinition|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueRelatedArtifact?: fhirModels.RelatedArtifact;
+  valueRelatedArtifact?: fhirModels.RelatedArtifact|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueTriggerDefinition?: fhirModels.TriggerDefinition;
+  valueTriggerDefinition?: fhirModels.TriggerDefinition|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueUsageContext?: fhirModels.UsageContext;
+  valueUsageContext?: fhirModels.UsageContext|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueDosage?: fhirModels.Dosage;
+  valueDosage?: fhirModels.Dosage|undefined;
   /**
    * The value of the Output parameter as a basic type.
    */
-  valueMeta?: fhirModels.Meta;
+  valueMeta?: fhirModels.Meta|undefined;
   /**
-   * Default constructor
+   * Default constructor for TaskOutput from an object that MAY NOT contain all required elements.
    */
-  constructor(source: TaskOutput) {
+  constructor(source:Partial<fhirInterfaces.ITaskOutput>) {
     super(source);
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
     if (source["valueBase64Binary"] !== undefined) { this.valueBase64Binary = source.valueBase64Binary; }
-    if (source["_valueBase64Binary"] !== undefined) { this._valueBase64Binary = source._valueBase64Binary; }
+    if (source["_valueBase64Binary"] !== undefined) { this._valueBase64Binary = new fhirModels.Element(source._valueBase64Binary); }
     if (source["valueBoolean"] !== undefined) { this.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = source._valueBoolean; }
+    if (source["_valueBoolean"] !== undefined) { this._valueBoolean = new fhirModels.Element(source._valueBoolean); }
     if (source["valueCanonical"] !== undefined) { this.valueCanonical = source.valueCanonical; }
-    if (source["_valueCanonical"] !== undefined) { this._valueCanonical = source._valueCanonical; }
+    if (source["_valueCanonical"] !== undefined) { this._valueCanonical = new fhirModels.Element(source._valueCanonical); }
     if (source["valueCode"] !== undefined) { this.valueCode = source.valueCode; }
-    if (source["_valueCode"] !== undefined) { this._valueCode = source._valueCode; }
+    if (source["_valueCode"] !== undefined) { this._valueCode = new fhirModels.Element(source._valueCode); }
     if (source["valueDate"] !== undefined) { this.valueDate = source.valueDate; }
-    if (source["_valueDate"] !== undefined) { this._valueDate = source._valueDate; }
+    if (source["_valueDate"] !== undefined) { this._valueDate = new fhirModels.Element(source._valueDate); }
     if (source["valueDateTime"] !== undefined) { this.valueDateTime = source.valueDateTime; }
-    if (source["_valueDateTime"] !== undefined) { this._valueDateTime = source._valueDateTime; }
+    if (source["_valueDateTime"] !== undefined) { this._valueDateTime = new fhirModels.Element(source._valueDateTime); }
     if (source["valueDecimal"] !== undefined) { this.valueDecimal = source.valueDecimal; }
-    if (source["_valueDecimal"] !== undefined) { this._valueDecimal = source._valueDecimal; }
+    if (source["_valueDecimal"] !== undefined) { this._valueDecimal = new fhirModels.Element(source._valueDecimal); }
     if (source["valueId"] !== undefined) { this.valueId = source.valueId; }
-    if (source["_valueId"] !== undefined) { this._valueId = source._valueId; }
+    if (source["_valueId"] !== undefined) { this._valueId = new fhirModels.Element(source._valueId); }
     if (source["valueInstant"] !== undefined) { this.valueInstant = source.valueInstant; }
-    if (source["_valueInstant"] !== undefined) { this._valueInstant = source._valueInstant; }
+    if (source["_valueInstant"] !== undefined) { this._valueInstant = new fhirModels.Element(source._valueInstant); }
     if (source["valueInteger"] !== undefined) { this.valueInteger = source.valueInteger; }
-    if (source["_valueInteger"] !== undefined) { this._valueInteger = source._valueInteger; }
+    if (source["_valueInteger"] !== undefined) { this._valueInteger = new fhirModels.Element(source._valueInteger); }
     if (source["valueMarkdown"] !== undefined) { this.valueMarkdown = source.valueMarkdown; }
-    if (source["_valueMarkdown"] !== undefined) { this._valueMarkdown = source._valueMarkdown; }
+    if (source["_valueMarkdown"] !== undefined) { this._valueMarkdown = new fhirModels.Element(source._valueMarkdown); }
     if (source["valueOid"] !== undefined) { this.valueOid = source.valueOid; }
-    if (source["_valueOid"] !== undefined) { this._valueOid = source._valueOid; }
+    if (source["_valueOid"] !== undefined) { this._valueOid = new fhirModels.Element(source._valueOid); }
     if (source["valuePositiveInt"] !== undefined) { this.valuePositiveInt = source.valuePositiveInt; }
-    if (source["_valuePositiveInt"] !== undefined) { this._valuePositiveInt = source._valuePositiveInt; }
+    if (source["_valuePositiveInt"] !== undefined) { this._valuePositiveInt = new fhirModels.Element(source._valuePositiveInt); }
     if (source["valueString"] !== undefined) { this.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { this._valueString = source._valueString; }
+    if (source["_valueString"] !== undefined) { this._valueString = new fhirModels.Element(source._valueString); }
     if (source["valueTime"] !== undefined) { this.valueTime = source.valueTime; }
-    if (source["_valueTime"] !== undefined) { this._valueTime = source._valueTime; }
+    if (source["_valueTime"] !== undefined) { this._valueTime = new fhirModels.Element(source._valueTime); }
     if (source["valueUnsignedInt"] !== undefined) { this.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source["_valueUnsignedInt"] !== undefined) { this._valueUnsignedInt = source._valueUnsignedInt; }
+    if (source["_valueUnsignedInt"] !== undefined) { this._valueUnsignedInt = new fhirModels.Element(source._valueUnsignedInt); }
     if (source["valueUri"] !== undefined) { this.valueUri = source.valueUri; }
-    if (source["_valueUri"] !== undefined) { this._valueUri = source._valueUri; }
+    if (source["_valueUri"] !== undefined) { this._valueUri = new fhirModels.Element(source._valueUri); }
     if (source["valueUrl"] !== undefined) { this.valueUrl = source.valueUrl; }
-    if (source["_valueUrl"] !== undefined) { this._valueUrl = source._valueUrl; }
+    if (source["_valueUrl"] !== undefined) { this._valueUrl = new fhirModels.Element(source._valueUrl); }
     if (source["valueUuid"] !== undefined) { this.valueUuid = source.valueUuid; }
-    if (source["_valueUuid"] !== undefined) { this._valueUuid = source._valueUuid; }
-    if (source["valueAddress"] !== undefined) { this.valueAddress = source.valueAddress; }
-    if (source["valueAge"] !== undefined) { this.valueAge = source.valueAge; }
-    if (source["valueAnnotation"] !== undefined) { this.valueAnnotation = source.valueAnnotation; }
-    if (source["valueAttachment"] !== undefined) { this.valueAttachment = source.valueAttachment; }
-    if (source["valueCodeableConcept"] !== undefined) { this.valueCodeableConcept = source.valueCodeableConcept; }
-    if (source["valueCoding"] !== undefined) { this.valueCoding = source.valueCoding; }
-    if (source["valueContactPoint"] !== undefined) { this.valueContactPoint = source.valueContactPoint; }
-    if (source["valueCount"] !== undefined) { this.valueCount = source.valueCount; }
-    if (source["valueDistance"] !== undefined) { this.valueDistance = source.valueDistance; }
-    if (source["valueDuration"] !== undefined) { this.valueDuration = source.valueDuration; }
-    if (source["valueHumanName"] !== undefined) { this.valueHumanName = source.valueHumanName; }
-    if (source["valueIdentifier"] !== undefined) { this.valueIdentifier = source.valueIdentifier; }
-    if (source["valueMoney"] !== undefined) { this.valueMoney = source.valueMoney; }
-    if (source["valuePeriod"] !== undefined) { this.valuePeriod = source.valuePeriod; }
-    if (source["valueQuantity"] !== undefined) { this.valueQuantity = source.valueQuantity; }
-    if (source["valueRange"] !== undefined) { this.valueRange = source.valueRange; }
-    if (source["valueRatio"] !== undefined) { this.valueRatio = source.valueRatio; }
-    if (source["valueReference"] !== undefined) { this.valueReference = source.valueReference; }
-    if (source["valueSampledData"] !== undefined) { this.valueSampledData = source.valueSampledData; }
-    if (source["valueSignature"] !== undefined) { this.valueSignature = source.valueSignature; }
-    if (source["valueTiming"] !== undefined) { this.valueTiming = source.valueTiming; }
-    if (source["valueContactDetail"] !== undefined) { this.valueContactDetail = source.valueContactDetail; }
-    if (source["valueContributor"] !== undefined) { this.valueContributor = source.valueContributor; }
-    if (source["valueDataRequirement"] !== undefined) { this.valueDataRequirement = source.valueDataRequirement; }
-    if (source["valueExpression"] !== undefined) { this.valueExpression = source.valueExpression; }
-    if (source["valueParameterDefinition"] !== undefined) { this.valueParameterDefinition = source.valueParameterDefinition; }
-    if (source["valueRelatedArtifact"] !== undefined) { this.valueRelatedArtifact = source.valueRelatedArtifact; }
-    if (source["valueTriggerDefinition"] !== undefined) { this.valueTriggerDefinition = source.valueTriggerDefinition; }
-    if (source["valueUsageContext"] !== undefined) { this.valueUsageContext = source.valueUsageContext; }
-    if (source["valueDosage"] !== undefined) { this.valueDosage = source.valueDosage; }
-    if (source["valueMeta"] !== undefined) { this.valueMeta = source.valueMeta; }
+    if (source["_valueUuid"] !== undefined) { this._valueUuid = new fhirModels.Element(source._valueUuid); }
+    if (source["valueAddress"] !== undefined) { this.valueAddress = new fhirModels.Address(source.valueAddress); }
+    if (source["valueAge"] !== undefined) { this.valueAge = new fhirModels.Age(source.valueAge); }
+    if (source["valueAnnotation"] !== undefined) { this.valueAnnotation = new fhirModels.Annotation(source.valueAnnotation); }
+    if (source["valueAttachment"] !== undefined) { this.valueAttachment = new fhirModels.Attachment(source.valueAttachment); }
+    if (source["valueCodeableConcept"] !== undefined) { this.valueCodeableConcept = new fhirModels.CodeableConcept(source.valueCodeableConcept); }
+    if (source["valueCoding"] !== undefined) { this.valueCoding = new fhirModels.Coding(source.valueCoding); }
+    if (source["valueContactPoint"] !== undefined) { this.valueContactPoint = new fhirModels.ContactPoint(source.valueContactPoint); }
+    if (source["valueCount"] !== undefined) { this.valueCount = new fhirModels.Count(source.valueCount); }
+    if (source["valueDistance"] !== undefined) { this.valueDistance = new fhirModels.Distance(source.valueDistance); }
+    if (source["valueDuration"] !== undefined) { this.valueDuration = new fhirModels.Duration(source.valueDuration); }
+    if (source["valueHumanName"] !== undefined) { this.valueHumanName = new fhirModels.HumanName(source.valueHumanName); }
+    if (source["valueIdentifier"] !== undefined) { this.valueIdentifier = new fhirModels.Identifier(source.valueIdentifier); }
+    if (source["valueMoney"] !== undefined) { this.valueMoney = new fhirModels.Money(source.valueMoney); }
+    if (source["valuePeriod"] !== undefined) { this.valuePeriod = new fhirModels.Period(source.valuePeriod); }
+    if (source["valueQuantity"] !== undefined) { this.valueQuantity = new fhirModels.Quantity(source.valueQuantity); }
+    if (source["valueRange"] !== undefined) { this.valueRange = new fhirModels.Range(source.valueRange); }
+    if (source["valueRatio"] !== undefined) { this.valueRatio = new fhirModels.Ratio(source.valueRatio); }
+    if (source["valueReference"] !== undefined) { this.valueReference = new fhirModels.Reference(source.valueReference); }
+    if (source["valueSampledData"] !== undefined) { this.valueSampledData = new fhirModels.SampledData(source.valueSampledData); }
+    if (source["valueSignature"] !== undefined) { this.valueSignature = new fhirModels.Signature(source.valueSignature); }
+    if (source["valueTiming"] !== undefined) { this.valueTiming = new fhirModels.Timing(source.valueTiming); }
+    if (source["valueContactDetail"] !== undefined) { this.valueContactDetail = new fhirModels.ContactDetail(source.valueContactDetail); }
+    if (source["valueContributor"] !== undefined) { this.valueContributor = new fhirModels.Contributor(source.valueContributor); }
+    if (source["valueDataRequirement"] !== undefined) { this.valueDataRequirement = new fhirModels.DataRequirement(source.valueDataRequirement); }
+    if (source["valueExpression"] !== undefined) { this.valueExpression = new fhirModels.Expression(source.valueExpression); }
+    if (source["valueParameterDefinition"] !== undefined) { this.valueParameterDefinition = new fhirModels.ParameterDefinition(source.valueParameterDefinition); }
+    if (source["valueRelatedArtifact"] !== undefined) { this.valueRelatedArtifact = new fhirModels.RelatedArtifact(source.valueRelatedArtifact); }
+    if (source["valueTriggerDefinition"] !== undefined) { this.valueTriggerDefinition = new fhirModels.TriggerDefinition(source.valueTriggerDefinition); }
+    if (source["valueUsageContext"] !== undefined) { this.valueUsageContext = new fhirModels.UsageContext(source.valueUsageContext); }
+    if (source["valueDosage"] !== undefined) { this.valueDosage = new fhirModels.Dosage(source.valueDosage); }
+    if (source["valueMeta"] !== undefined) { this.valueMeta = new fhirModels.Meta(source.valueMeta); }
+  }
+  /**
+   * Check if the current TaskOutput contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a TaskOutput from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ITaskOutput):TaskOutput {
+    var dest:TaskOutput = new TaskOutput(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `TaskOutput is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A task to be performed.
  */
-export class Task extends fhirModels.DomainResource {
+export class Task extends fhirModels.DomainResource implements fhirInterfaces.ITask {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Task";
+  readonly resourceType = "Task";
   /**
    * The date and time this task was created.
    */
-  authoredOn?: string;
-  _authoredOn?: fhirModels.Element;
+  authoredOn?: string|undefined;
+  _authoredOn?: fhirModels.Element|undefined;
   /**
    * BasedOn refers to a higher-level authorization that triggered the creation of the task.  It references a "request" resource such as a ServiceRequest, MedicationRequest, ServiceRequest, CarePlan, etc. which is distinct from the "request" resource the task is seeking to fulfill.  This latter resource is referenced by FocusOn.  For example, based on a ServiceRequest (= BasedOn), a task is created to fulfill a procedureRequest ( = FocusOn ) to collect a specimen from a patient.
    */
-  basedOn?: fhirModels.Reference[];
+  basedOn?: fhirModels.Reference[]|undefined;
   /**
    * Contains business-specific nuances of the business state.
    */
-  businessStatus?: fhirModels.CodeableConcept;
+  businessStatus?: fhirModels.CodeableConcept|undefined;
   /**
    * The title (eg "My Tasks", "Outstanding Tasks for Patient X") should go into the code.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * A free-text description of what is to be performed.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * The healthcare event  (e.g. a patient and healthcare provider interaction) during which this task was created.
    */
-  encounter?: fhirModels.Reference;
+  encounter?: fhirModels.Reference|undefined;
   /**
    * Identifies the time action was first taken against the task (start) and/or the time final action was taken against the task prior to marking it as completed (end).
    */
-  executionPeriod?: fhirModels.Period;
+  executionPeriod?: fhirModels.Period|undefined;
   /**
    * If multiple resources need to be manipulated, use sub-tasks.  (This ensures that status can be tracked independently for each referenced resource.).
    */
-  focus?: fhirModels.Reference;
+  focus?: fhirModels.Reference|undefined;
   /**
    * The entity who benefits from the performance of the service specified in the task (e.g., the patient).
    */
-  for?: fhirModels.Reference;
+  for?: fhirModels.Reference|undefined;
   /**
    * An identifier that links together multiple tasks and other requests that were created in the same context.
    */
-  groupIdentifier?: fhirModels.Identifier;
+  groupIdentifier?: fhirModels.Identifier|undefined;
   /**
    * The business identifier for this task.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Additional information that may be needed in the execution of the task.
    */
-  input?: fhirModels.TaskInput[];
+  input?: fhirModels.TaskInput[]|undefined;
   /**
    * The URL pointing to a *FHIR*-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
    */
-  instantiatesCanonical?: string;
-  _instantiatesCanonical?: fhirModels.Element;
+  instantiatesCanonical?: string|undefined;
+  _instantiatesCanonical?: fhirModels.Element|undefined;
   /**
    * The URL pointing to an *externally* maintained  protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Task.
    */
-  instantiatesUri?: string;
-  _instantiatesUri?: fhirModels.Element;
+  instantiatesUri?: string|undefined;
+  _instantiatesUri?: fhirModels.Element|undefined;
   /**
    * Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be relevant to the Task.
    */
-  insurance?: fhirModels.Reference[];
+  insurance?: fhirModels.Reference[]|undefined;
   /**
    * This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.
    * In most cases, Tasks will have an intent of "order".
    */
-  intent: TaskIntentEnum;
-  _intent?: fhirModels.Element;
+  intent: TaskIntentEnum|undefined;
+  _intent?: fhirModels.Element|undefined;
   /**
    * The date and time of last modification to this task.
    */
-  lastModified?: string;
-  _lastModified?: fhirModels.Element;
+  lastModified?: string|undefined;
+  _lastModified?: fhirModels.Element|undefined;
   /**
    * Principal physical location where the this task is performed.
    */
-  location?: fhirModels.Reference;
+  location?: fhirModels.Reference|undefined;
   /**
    * Free-text information captured about the task as it progresses.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * Outputs produced by the Task.
    */
-  output?: fhirModels.TaskOutput[];
+  output?: fhirModels.TaskOutput[]|undefined;
   /**
    * Tasks may be created with an owner not yet identified.
    */
-  owner?: fhirModels.Reference;
+  owner?: fhirModels.Reference|undefined;
   /**
    * This should usually be 0..1.
    */
-  partOf?: fhirModels.Reference[];
+  partOf?: fhirModels.Reference[]|undefined;
   /**
    * The kind of participant that should perform the task.
    */
-  performerType?: fhirModels.CodeableConcept[];
+  performerType?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates how quickly the Task should be addressed with respect to other requests.
    */
-  priority?: TaskPriorityEnum;
-  _priority?: fhirModels.Element;
+  priority?: TaskPriorityEnum|undefined;
+  _priority?: fhirModels.Element|undefined;
   /**
    * This should only be included if there is no focus or if it differs from the reason indicated on the focus.
    */
-  reasonCode?: fhirModels.CodeableConcept;
+  reasonCode?: fhirModels.CodeableConcept|undefined;
   /**
    * Tasks might be justified based on an Observation, a Condition, a past or planned procedure, etc.   This should only be included if there is no focus or if it differs from the reason indicated on the focus.    Use the CodeableConcept text element in `Task.reasonCode` if the data is free (uncoded) text.
    */
-  reasonReference?: fhirModels.Reference;
+  reasonReference?: fhirModels.Reference|undefined;
   /**
    * This element does not point to the Provenance associated with the *current* version of the resource - as it would be created after this version existed.  The Provenance for the current version can be retrieved with a _revinclude.
    */
-  relevantHistory?: fhirModels.Reference[];
+  relevantHistory?: fhirModels.Reference[]|undefined;
   /**
    * The creator of the task.
    */
-  requester?: fhirModels.Reference;
+  requester?: fhirModels.Reference|undefined;
   /**
    * If the Task.focus is a request resource and the task is seeking fulfillment (i.e. is asking for the request to be actioned), this element identifies any limitations on what parts of the referenced request should be actioned.
    */
-  restriction?: fhirModels.TaskRestriction;
+  restriction?: fhirModels.TaskRestriction|undefined;
   /**
    * The current status of the task.
    */
-  status: TaskStatusEnum;
-  _status?: fhirModels.Element;
+  status: TaskStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * This applies to the current status.  Look at the history of the task to see reasons for past statuses.
    */
-  statusReason?: fhirModels.CodeableConcept;
+  statusReason?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for Task from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Task) {
+  constructor(source:Partial<fhirInterfaces.ITask>) {
     super(source);
     if ((source['resourceType'] !== "Task") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Task'; }
     if (source["authoredOn"] !== undefined) { this.authoredOn = source.authoredOn; }
-    if (source["_authoredOn"] !== undefined) { this._authoredOn = source._authoredOn; }
-    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn; }
-    if (source["businessStatus"] !== undefined) { this.businessStatus = source.businessStatus; }
-    if (source["code"] !== undefined) { this.code = source.code; }
+    if (source["_authoredOn"] !== undefined) { this._authoredOn = new fhirModels.Element(source._authoredOn); }
+    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn.map((x) => new fhirModels.Reference(x)); }
+    if (source["businessStatus"] !== undefined) { this.businessStatus = new fhirModels.CodeableConcept(source.businessStatus); }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["encounter"] !== undefined) { this.encounter = source.encounter; }
-    if (source["executionPeriod"] !== undefined) { this.executionPeriod = source.executionPeriod; }
-    if (source["focus"] !== undefined) { this.focus = source.focus; }
-    if (source["for"] !== undefined) { this.for = source.for; }
-    if (source["groupIdentifier"] !== undefined) { this.groupIdentifier = source.groupIdentifier; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["input"] !== undefined) { this.input = source.input; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["encounter"] !== undefined) { this.encounter = new fhirModels.Reference(source.encounter); }
+    if (source["executionPeriod"] !== undefined) { this.executionPeriod = new fhirModels.Period(source.executionPeriod); }
+    if (source["focus"] !== undefined) { this.focus = new fhirModels.Reference(source.focus); }
+    if (source["for"] !== undefined) { this.for = new fhirModels.Reference(source.for); }
+    if (source["groupIdentifier"] !== undefined) { this.groupIdentifier = new fhirModels.Identifier(source.groupIdentifier); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["input"] !== undefined) { this.input = source.input.map((x) => new fhirModels.TaskInput(x)); }
     if (source["instantiatesCanonical"] !== undefined) { this.instantiatesCanonical = source.instantiatesCanonical; }
-    if (source["_instantiatesCanonical"] !== undefined) { this._instantiatesCanonical = source._instantiatesCanonical; }
+    if (source["_instantiatesCanonical"] !== undefined) { this._instantiatesCanonical = new fhirModels.Element(source._instantiatesCanonical); }
     if (source["instantiatesUri"] !== undefined) { this.instantiatesUri = source.instantiatesUri; }
-    if (source["_instantiatesUri"] !== undefined) { this._instantiatesUri = source._instantiatesUri; }
-    if (source["insurance"] !== undefined) { this.insurance = source.insurance; }
-    if (source["intent"] === undefined) { throw 'Missing required element intent';}
-    this.intent = source.intent;
-    if (source["_intent"] !== undefined) { this._intent = source._intent; }
+    if (source["_instantiatesUri"] !== undefined) { this._instantiatesUri = new fhirModels.Element(source._instantiatesUri); }
+    if (source["insurance"] !== undefined) { this.insurance = source.insurance.map((x) => new fhirModels.Reference(x)); }
+    if (source["intent"] !== undefined) { this.intent = source.intent; }
+    if (source["_intent"] !== undefined) { this._intent = new fhirModels.Element(source._intent); }
     if (source["lastModified"] !== undefined) { this.lastModified = source.lastModified; }
-    if (source["_lastModified"] !== undefined) { this._lastModified = source._lastModified; }
-    if (source["location"] !== undefined) { this.location = source.location; }
-    if (source["note"] !== undefined) { this.note = source.note; }
-    if (source["output"] !== undefined) { this.output = source.output; }
-    if (source["owner"] !== undefined) { this.owner = source.owner; }
-    if (source["partOf"] !== undefined) { this.partOf = source.partOf; }
-    if (source["performerType"] !== undefined) { this.performerType = source.performerType; }
+    if (source["_lastModified"] !== undefined) { this._lastModified = new fhirModels.Element(source._lastModified); }
+    if (source["location"] !== undefined) { this.location = new fhirModels.Reference(source.location); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
+    if (source["output"] !== undefined) { this.output = source.output.map((x) => new fhirModels.TaskOutput(x)); }
+    if (source["owner"] !== undefined) { this.owner = new fhirModels.Reference(source.owner); }
+    if (source["partOf"] !== undefined) { this.partOf = source.partOf.map((x) => new fhirModels.Reference(x)); }
+    if (source["performerType"] !== undefined) { this.performerType = source.performerType.map((x) => new fhirModels.CodeableConcept(x)); }
     if (source["priority"] !== undefined) { this.priority = source.priority; }
-    if (source["_priority"] !== undefined) { this._priority = source._priority; }
-    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode; }
-    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference; }
-    if (source["relevantHistory"] !== undefined) { this.relevantHistory = source.relevantHistory; }
-    if (source["requester"] !== undefined) { this.requester = source.requester; }
-    if (source["restriction"] !== undefined) { this.restriction = source.restriction; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["statusReason"] !== undefined) { this.statusReason = source.statusReason; }
+    if (source["_priority"] !== undefined) { this._priority = new fhirModels.Element(source._priority); }
+    if (source["reasonCode"] !== undefined) { this.reasonCode = new fhirModels.CodeableConcept(source.reasonCode); }
+    if (source["reasonReference"] !== undefined) { this.reasonReference = new fhirModels.Reference(source.reasonReference); }
+    if (source["relevantHistory"] !== undefined) { this.relevantHistory = source.relevantHistory.map((x) => new fhirModels.Reference(x)); }
+    if (source["requester"] !== undefined) { this.requester = new fhirModels.Reference(source.requester); }
+    if (source["restriction"] !== undefined) { this.restriction = new fhirModels.TaskRestriction(source.restriction); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["statusReason"] !== undefined) { this.statusReason = new fhirModels.CodeableConcept(source.statusReason); }
+  }
+  /**
+   * Check if the current Task contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["intent"] === undefined) { missingElements.push("intent"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Task from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ITask):Task {
+    var dest:Task = new Task(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Task is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

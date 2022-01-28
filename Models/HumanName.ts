@@ -6,62 +6,83 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A human's name with the ability to identify parts and usage.
  */
-export class HumanName extends fhirModels.Element {
+export class HumanName extends fhirModels.Element implements fhirInterfaces.IHumanName {
   /**
    * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
    */
-  family?: string;
-  _family?: fhirModels.Element;
+  family?: string|undefined;
+  _family?: fhirModels.Element|undefined;
   /**
    * If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to paractical limitations.  This element is not called "first name" since given names do not always come first.
    */
-  given?: string[];
-  _given?: fhirModels.Element[];
+  given?: string[]|undefined;
+  _given?: fhirModels.Element[]|undefined;
   /**
    * Indicates the period of time when this name was valid for the named person.
    */
-  period?: fhirModels.Period;
+  period?: fhirModels.Period|undefined;
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the start of the name.
    */
-  prefix?: string[];
-  _prefix?: fhirModels.Element[];
+  prefix?: string[]|undefined;
+  _prefix?: fhirModels.Element[]|undefined;
   /**
    * Part of the name that is acquired as a title due to academic, legal, employment or nobility status, etc. and that appears at the end of the name.
    */
-  suffix?: string[];
-  _suffix?: fhirModels.Element[];
+  suffix?: string[]|undefined;
+  _suffix?: fhirModels.Element[]|undefined;
   /**
    * Can provide both a text representation and parts. Applications updating a name SHALL ensure that when both text and parts are present,  no content is included in the text that isn't found in a part.
    */
-  text?: string;
-  _text?: fhirModels.Element;
+  text?: string|undefined;
+  _text?: fhirModels.Element|undefined;
   /**
    * Applications can assume that a name is current unless it explicitly says that it is temporary or old.
    */
-  use?: HumanNameUseEnum;
-  _use?: fhirModels.Element;
+  use?: HumanNameUseEnum|undefined;
+  _use?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for HumanName from an object that MAY NOT contain all required elements.
    */
-  constructor(source: HumanName) {
+  constructor(source:Partial<fhirInterfaces.IHumanName>) {
     super(source);
     if (source["family"] !== undefined) { this.family = source.family; }
-    if (source["_family"] !== undefined) { this._family = source._family; }
-    if (source["given"] !== undefined) { this.given = source.given; }
-    if (source["_given"] !== undefined) { this._given = source._given; }
-    if (source["period"] !== undefined) { this.period = source.period; }
-    if (source["prefix"] !== undefined) { this.prefix = source.prefix; }
-    if (source["_prefix"] !== undefined) { this._prefix = source._prefix; }
-    if (source["suffix"] !== undefined) { this.suffix = source.suffix; }
-    if (source["_suffix"] !== undefined) { this._suffix = source._suffix; }
+    if (source["_family"] !== undefined) { this._family = new fhirModels.Element(source._family); }
+    if (source["given"] !== undefined) { this.given = source.given.map((x) => (x)); }
+    if (source["_given"] !== undefined) { this._given = source._given.map((x) => new fhirModels.Element(x)); }
+    if (source["period"] !== undefined) { this.period = new fhirModels.Period(source.period); }
+    if (source["prefix"] !== undefined) { this.prefix = source.prefix.map((x) => (x)); }
+    if (source["_prefix"] !== undefined) { this._prefix = source._prefix.map((x) => new fhirModels.Element(x)); }
+    if (source["suffix"] !== undefined) { this.suffix = source.suffix.map((x) => (x)); }
+    if (source["_suffix"] !== undefined) { this._suffix = source._suffix.map((x) => new fhirModels.Element(x)); }
     if (source["text"] !== undefined) { this.text = source.text; }
-    if (source["_text"] !== undefined) { this._text = source._text; }
+    if (source["_text"] !== undefined) { this._text = new fhirModels.Element(source._text); }
     if (source["use"] !== undefined) { this.use = source.use; }
-    if (source["_use"] !== undefined) { this._use = source._use; }
+    if (source["_use"] !== undefined) { this._use = new fhirModels.Element(source._use); }
+  }
+  /**
+   * Check if the current HumanName contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a HumanName from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IHumanName):HumanName {
+    var dest:HumanName = new HumanName(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `HumanName is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

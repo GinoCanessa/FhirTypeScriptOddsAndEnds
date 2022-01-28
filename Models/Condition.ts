@@ -6,203 +6,264 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Clinical stage or grade of a condition. May include formal severity assessments.
  */
-export class ConditionStage extends fhirModels.BackboneElement {
+export class ConditionStage extends fhirModels.BackboneElement implements fhirInterfaces.IConditionStage {
   /**
    * Reference to a formal record of the evidence on which the staging assessment is based.
    */
-  assessment?: fhirModels.Reference[];
+  assessment?: fhirModels.Reference[]|undefined;
   /**
    * A simple summary of the stage such as "Stage 3". The determination of the stage is disease-specific.
    */
-  summary?: fhirModels.CodeableConcept;
+  summary?: fhirModels.CodeableConcept|undefined;
   /**
    * The kind of staging, such as pathological or clinical staging.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for ConditionStage from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ConditionStage) {
+  constructor(source:Partial<fhirInterfaces.IConditionStage>) {
     super(source);
-    if (source["assessment"] !== undefined) { this.assessment = source.assessment; }
-    if (source["summary"] !== undefined) { this.summary = source.summary; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["assessment"] !== undefined) { this.assessment = source.assessment.map((x) => new fhirModels.Reference(x)); }
+    if (source["summary"] !== undefined) { this.summary = new fhirModels.CodeableConcept(source.summary); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current ConditionStage contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ConditionStage from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IConditionStage):ConditionStage {
+    var dest:ConditionStage = new ConditionStage(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ConditionStage is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
  */
-export class ConditionEvidence extends fhirModels.BackboneElement {
+export class ConditionEvidence extends fhirModels.BackboneElement implements fhirInterfaces.IConditionEvidence {
   /**
    * A manifestation or symptom that led to the recording of this condition.
    */
-  code?: fhirModels.CodeableConcept[];
+  code?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Links to other relevant information, including pathology reports.
    */
-  detail?: fhirModels.Reference[];
+  detail?: fhirModels.Reference[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for ConditionEvidence from an object that MAY NOT contain all required elements.
    */
-  constructor(source: ConditionEvidence) {
+  constructor(source:Partial<fhirInterfaces.IConditionEvidence>) {
     super(source);
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["detail"] !== undefined) { this.detail = source.detail; }
+    if (source["code"] !== undefined) { this.code = source.code.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["detail"] !== undefined) { this.detail = source.detail.map((x) => new fhirModels.Reference(x)); }
+  }
+  /**
+   * Check if the current ConditionEvidence contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a ConditionEvidence from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IConditionEvidence):ConditionEvidence {
+    var dest:ConditionEvidence = new ConditionEvidence(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `ConditionEvidence is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.
  */
-export class Condition extends fhirModels.DomainResource {
+export class Condition extends fhirModels.DomainResource implements fhirInterfaces.ICondition {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Condition";
+  readonly resourceType = "Condition";
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  abatementDateTime?: string;
-  _abatementDateTime?: fhirModels.Element;
+  abatementDateTime?: string|undefined;
+  _abatementDateTime?: fhirModels.Element|undefined;
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  abatementAge?: fhirModels.Age;
+  abatementAge?: fhirModels.Age|undefined;
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  abatementPeriod?: fhirModels.Period;
+  abatementPeriod?: fhirModels.Period|undefined;
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  abatementRange?: fhirModels.Range;
+  abatementRange?: fhirModels.Range|undefined;
   /**
    * There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.
    */
-  abatementString?: string;
-  _abatementString?: fhirModels.Element;
+  abatementString?: string|undefined;
+  _abatementString?: fhirModels.Element|undefined;
   /**
    * Individual who is making the condition statement.
    */
-  asserter?: fhirModels.Reference;
+  asserter?: fhirModels.Reference|undefined;
   /**
    * Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.
    */
-  bodySite?: fhirModels.CodeableConcept[];
+  bodySite?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.
    */
-  category?: fhirModels.CodeableConcept[];
+  category?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
    */
-  clinicalStatus?: fhirModels.CodeableConcept;
+  clinicalStatus?: fhirModels.CodeableConcept|undefined;
   /**
    * Identification of the condition, problem or diagnosis.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. This record indicates the encounter this particular record is associated with.  In the case of a "new" diagnosis reflecting ongoing/revised information about the condition, this might be distinct from the first encounter in which the underlying condition was first "known".
    */
-  encounter?: fhirModels.Reference;
+  encounter?: fhirModels.Reference|undefined;
   /**
    * The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.
    */
-  evidence?: fhirModels.ConditionEvidence[];
+  evidence?: fhirModels.ConditionEvidence[]|undefined;
   /**
    * This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  onsetDateTime?: string;
-  _onsetDateTime?: fhirModels.Element;
+  onsetDateTime?: string|undefined;
+  _onsetDateTime?: fhirModels.Element|undefined;
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  onsetAge?: fhirModels.Age;
+  onsetAge?: fhirModels.Age|undefined;
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  onsetPeriod?: fhirModels.Period;
+  onsetPeriod?: fhirModels.Period|undefined;
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  onsetRange?: fhirModels.Range;
+  onsetRange?: fhirModels.Range|undefined;
   /**
    * Age is generally used when the patient reports an age at which the Condition began to occur.
    */
-  onsetString?: string;
-  _onsetString?: fhirModels.Element;
+  onsetString?: string|undefined;
+  _onsetString?: fhirModels.Element|undefined;
   /**
    * The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.
    */
-  recordedDate?: string;
-  _recordedDate?: fhirModels.Element;
+  recordedDate?: string|undefined;
+  _recordedDate?: fhirModels.Element|undefined;
   /**
    * Individual who recorded the record and takes responsibility for its content.
    */
-  recorder?: fhirModels.Reference;
+  recorder?: fhirModels.Reference|undefined;
   /**
    * Coding of the severity with a terminology is preferred, where possible.
    */
-  severity?: fhirModels.CodeableConcept;
+  severity?: fhirModels.CodeableConcept|undefined;
   /**
    * Clinical stage or grade of a condition. May include formal severity assessments.
    */
-  stage?: fhirModels.ConditionStage[];
+  stage?: fhirModels.ConditionStage[]|undefined;
   /**
    * Indicates the patient or group who the condition record is associated with.
    */
-  subject: fhirModels.Reference;
+  subject: fhirModels.Reference|undefined;
   /**
    * verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.
    * The data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.
    */
-  verificationStatus?: fhirModels.CodeableConcept;
+  verificationStatus?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for Condition from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Condition) {
+  constructor(source:Partial<fhirInterfaces.ICondition>) {
     super(source);
     if ((source['resourceType'] !== "Condition") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Condition'; }
     if (source["abatementDateTime"] !== undefined) { this.abatementDateTime = source.abatementDateTime; }
-    if (source["_abatementDateTime"] !== undefined) { this._abatementDateTime = source._abatementDateTime; }
-    if (source["abatementAge"] !== undefined) { this.abatementAge = source.abatementAge; }
-    if (source["abatementPeriod"] !== undefined) { this.abatementPeriod = source.abatementPeriod; }
-    if (source["abatementRange"] !== undefined) { this.abatementRange = source.abatementRange; }
+    if (source["_abatementDateTime"] !== undefined) { this._abatementDateTime = new fhirModels.Element(source._abatementDateTime); }
+    if (source["abatementAge"] !== undefined) { this.abatementAge = new fhirModels.Age(source.abatementAge); }
+    if (source["abatementPeriod"] !== undefined) { this.abatementPeriod = new fhirModels.Period(source.abatementPeriod); }
+    if (source["abatementRange"] !== undefined) { this.abatementRange = new fhirModels.Range(source.abatementRange); }
     if (source["abatementString"] !== undefined) { this.abatementString = source.abatementString; }
-    if (source["_abatementString"] !== undefined) { this._abatementString = source._abatementString; }
-    if (source["asserter"] !== undefined) { this.asserter = source.asserter; }
-    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite; }
-    if (source["category"] !== undefined) { this.category = source.category; }
-    if (source["clinicalStatus"] !== undefined) { this.clinicalStatus = source.clinicalStatus; }
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["encounter"] !== undefined) { this.encounter = source.encounter; }
-    if (source["evidence"] !== undefined) { this.evidence = source.evidence; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["note"] !== undefined) { this.note = source.note; }
+    if (source["_abatementString"] !== undefined) { this._abatementString = new fhirModels.Element(source._abatementString); }
+    if (source["asserter"] !== undefined) { this.asserter = new fhirModels.Reference(source.asserter); }
+    if (source["bodySite"] !== undefined) { this.bodySite = source.bodySite.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["category"] !== undefined) { this.category = source.category.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["clinicalStatus"] !== undefined) { this.clinicalStatus = new fhirModels.CodeableConcept(source.clinicalStatus); }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["encounter"] !== undefined) { this.encounter = new fhirModels.Reference(source.encounter); }
+    if (source["evidence"] !== undefined) { this.evidence = source.evidence.map((x) => new fhirModels.ConditionEvidence(x)); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
     if (source["onsetDateTime"] !== undefined) { this.onsetDateTime = source.onsetDateTime; }
-    if (source["_onsetDateTime"] !== undefined) { this._onsetDateTime = source._onsetDateTime; }
-    if (source["onsetAge"] !== undefined) { this.onsetAge = source.onsetAge; }
-    if (source["onsetPeriod"] !== undefined) { this.onsetPeriod = source.onsetPeriod; }
-    if (source["onsetRange"] !== undefined) { this.onsetRange = source.onsetRange; }
+    if (source["_onsetDateTime"] !== undefined) { this._onsetDateTime = new fhirModels.Element(source._onsetDateTime); }
+    if (source["onsetAge"] !== undefined) { this.onsetAge = new fhirModels.Age(source.onsetAge); }
+    if (source["onsetPeriod"] !== undefined) { this.onsetPeriod = new fhirModels.Period(source.onsetPeriod); }
+    if (source["onsetRange"] !== undefined) { this.onsetRange = new fhirModels.Range(source.onsetRange); }
     if (source["onsetString"] !== undefined) { this.onsetString = source.onsetString; }
-    if (source["_onsetString"] !== undefined) { this._onsetString = source._onsetString; }
+    if (source["_onsetString"] !== undefined) { this._onsetString = new fhirModels.Element(source._onsetString); }
     if (source["recordedDate"] !== undefined) { this.recordedDate = source.recordedDate; }
-    if (source["_recordedDate"] !== undefined) { this._recordedDate = source._recordedDate; }
-    if (source["recorder"] !== undefined) { this.recorder = source.recorder; }
-    if (source["severity"] !== undefined) { this.severity = source.severity; }
-    if (source["stage"] !== undefined) { this.stage = source.stage; }
-    if (source["subject"] === undefined) { throw 'Missing required element subject';}
-    this.subject = source.subject;
-    if (source["verificationStatus"] !== undefined) { this.verificationStatus = source.verificationStatus; }
+    if (source["_recordedDate"] !== undefined) { this._recordedDate = new fhirModels.Element(source._recordedDate); }
+    if (source["recorder"] !== undefined) { this.recorder = new fhirModels.Reference(source.recorder); }
+    if (source["severity"] !== undefined) { this.severity = new fhirModels.CodeableConcept(source.severity); }
+    if (source["stage"] !== undefined) { this.stage = source.stage.map((x) => new fhirModels.ConditionStage(x)); }
+    if (source["subject"] !== undefined) { this.subject = new fhirModels.Reference(source.subject); }
+    if (source["verificationStatus"] !== undefined) { this.verificationStatus = new fhirModels.CodeableConcept(source.verificationStatus); }
+  }
+  /**
+   * Check if the current Condition contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["subject"] === undefined) { missingElements.push("subject"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Condition from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ICondition):Condition {
+    var dest:Condition = new Condition(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Condition is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

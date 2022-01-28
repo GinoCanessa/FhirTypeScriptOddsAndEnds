@@ -6,300 +6,421 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Coding words or phrases of the name.
  */
-export class MedicinalProductNameNamePart extends fhirModels.BackboneElement {
+export class MedicinalProductNameNamePart extends fhirModels.BackboneElement implements fhirInterfaces.IMedicinalProductNameNamePart {
   /**
    * A fragment of a product name.
    */
-  part: string;
-  _part?: fhirModels.Element;
+  part: string|undefined;
+  _part?: fhirModels.Element|undefined;
   /**
    * Idenifying type for this part of the name (e.g. strength part).
    */
-  type: fhirModels.Coding;
+  type: fhirModels.Coding|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductNameNamePart from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductNameNamePart) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductNameNamePart>) {
     super(source);
-    if (source["part"] === undefined) { throw 'Missing required element part';}
-    this.part = source.part;
-    if (source["_part"] !== undefined) { this._part = source._part; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
+    if (source["part"] !== undefined) { this.part = source.part; }
+    if (source["_part"] !== undefined) { this._part = new fhirModels.Element(source._part); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.Coding(source.type); }
+  }
+  /**
+   * Check if the current MedicinalProductNameNamePart contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["part"] === undefined) { missingElements.push("part"); }
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductNameNamePart from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductNameNamePart):MedicinalProductNameNamePart {
+    var dest:MedicinalProductNameNamePart = new MedicinalProductNameNamePart(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductNameNamePart is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Country where the name applies.
  */
-export class MedicinalProductNameCountryLanguage extends fhirModels.BackboneElement {
+export class MedicinalProductNameCountryLanguage extends fhirModels.BackboneElement implements fhirInterfaces.IMedicinalProductNameCountryLanguage {
   /**
    * Country code for where this name applies.
    */
-  country: fhirModels.CodeableConcept;
+  country: fhirModels.CodeableConcept|undefined;
   /**
    * Jurisdiction code for where this name applies.
    */
-  jurisdiction?: fhirModels.CodeableConcept;
+  jurisdiction?: fhirModels.CodeableConcept|undefined;
   /**
    * Language code for this name.
    */
-  language: fhirModels.CodeableConcept;
+  language: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductNameCountryLanguage from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductNameCountryLanguage) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductNameCountryLanguage>) {
     super(source);
-    if (source["country"] === undefined) { throw 'Missing required element country';}
-    this.country = source.country;
-    if (source["jurisdiction"] !== undefined) { this.jurisdiction = source.jurisdiction; }
-    if (source["language"] === undefined) { throw 'Missing required element language';}
-    this.language = source.language;
+    if (source["country"] !== undefined) { this.country = new fhirModels.CodeableConcept(source.country); }
+    if (source["jurisdiction"] !== undefined) { this.jurisdiction = new fhirModels.CodeableConcept(source.jurisdiction); }
+    if (source["language"] !== undefined) { this.language = new fhirModels.CodeableConcept(source.language); }
+  }
+  /**
+   * Check if the current MedicinalProductNameCountryLanguage contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["country"] === undefined) { missingElements.push("country"); }
+    if (this["language"] === undefined) { missingElements.push("language"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductNameCountryLanguage from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductNameCountryLanguage):MedicinalProductNameCountryLanguage {
+    var dest:MedicinalProductNameCountryLanguage = new MedicinalProductNameCountryLanguage(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductNameCountryLanguage is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * The product's name, including full name and possibly coded parts.
  */
-export class MedicinalProductName extends fhirModels.BackboneElement {
+export class MedicinalProductName extends fhirModels.BackboneElement implements fhirInterfaces.IMedicinalProductName {
   /**
    * Country where the name applies.
    */
-  countryLanguage?: fhirModels.MedicinalProductNameCountryLanguage[];
+  countryLanguage?: fhirModels.MedicinalProductNameCountryLanguage[]|undefined;
   /**
    * Coding words or phrases of the name.
    */
-  namePart?: fhirModels.MedicinalProductNameNamePart[];
+  namePart?: fhirModels.MedicinalProductNameNamePart[]|undefined;
   /**
    * The full product name.
    */
-  productName: string;
-  _productName?: fhirModels.Element;
+  productName: string|undefined;
+  _productName?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductName from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductName) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductName>) {
     super(source);
-    if (source["countryLanguage"] !== undefined) { this.countryLanguage = source.countryLanguage; }
-    if (source["namePart"] !== undefined) { this.namePart = source.namePart; }
-    if (source["productName"] === undefined) { throw 'Missing required element productName';}
-    this.productName = source.productName;
-    if (source["_productName"] !== undefined) { this._productName = source._productName; }
+    if (source["countryLanguage"] !== undefined) { this.countryLanguage = source.countryLanguage.map((x) => new fhirModels.MedicinalProductNameCountryLanguage(x)); }
+    if (source["namePart"] !== undefined) { this.namePart = source.namePart.map((x) => new fhirModels.MedicinalProductNameNamePart(x)); }
+    if (source["productName"] !== undefined) { this.productName = source.productName; }
+    if (source["_productName"] !== undefined) { this._productName = new fhirModels.Element(source._productName); }
+  }
+  /**
+   * Check if the current MedicinalProductName contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["productName"] === undefined) { missingElements.push("productName"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductName from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductName):MedicinalProductName {
+    var dest:MedicinalProductName = new MedicinalProductName(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductName is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * An operation applied to the product, for manufacturing or adminsitrative purpose.
  */
-export class MedicinalProductManufacturingBusinessOperation extends fhirModels.BackboneElement {
+export class MedicinalProductManufacturingBusinessOperation extends fhirModels.BackboneElement implements fhirInterfaces.IMedicinalProductManufacturingBusinessOperation {
   /**
    * Regulatory authorization reference number.
    */
-  authorisationReferenceNumber?: fhirModels.Identifier;
+  authorisationReferenceNumber?: fhirModels.Identifier|undefined;
   /**
    * To indicate if this proces is commercially confidential.
    */
-  confidentialityIndicator?: fhirModels.CodeableConcept;
+  confidentialityIndicator?: fhirModels.CodeableConcept|undefined;
   /**
    * Regulatory authorization date.
    */
-  effectiveDate?: string;
-  _effectiveDate?: fhirModels.Element;
+  effectiveDate?: string|undefined;
+  _effectiveDate?: fhirModels.Element|undefined;
   /**
    * The manufacturer or establishment associated with the process.
    */
-  manufacturer?: fhirModels.Reference[];
+  manufacturer?: fhirModels.Reference[]|undefined;
   /**
    * The type of manufacturing operation.
    */
-  operationType?: fhirModels.CodeableConcept;
+  operationType?: fhirModels.CodeableConcept|undefined;
   /**
    * A regulator which oversees the operation.
    */
-  regulator?: fhirModels.Reference;
+  regulator?: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductManufacturingBusinessOperation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductManufacturingBusinessOperation) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductManufacturingBusinessOperation>) {
     super(source);
-    if (source["authorisationReferenceNumber"] !== undefined) { this.authorisationReferenceNumber = source.authorisationReferenceNumber; }
-    if (source["confidentialityIndicator"] !== undefined) { this.confidentialityIndicator = source.confidentialityIndicator; }
+    if (source["authorisationReferenceNumber"] !== undefined) { this.authorisationReferenceNumber = new fhirModels.Identifier(source.authorisationReferenceNumber); }
+    if (source["confidentialityIndicator"] !== undefined) { this.confidentialityIndicator = new fhirModels.CodeableConcept(source.confidentialityIndicator); }
     if (source["effectiveDate"] !== undefined) { this.effectiveDate = source.effectiveDate; }
-    if (source["_effectiveDate"] !== undefined) { this._effectiveDate = source._effectiveDate; }
-    if (source["manufacturer"] !== undefined) { this.manufacturer = source.manufacturer; }
-    if (source["operationType"] !== undefined) { this.operationType = source.operationType; }
-    if (source["regulator"] !== undefined) { this.regulator = source.regulator; }
+    if (source["_effectiveDate"] !== undefined) { this._effectiveDate = new fhirModels.Element(source._effectiveDate); }
+    if (source["manufacturer"] !== undefined) { this.manufacturer = source.manufacturer.map((x) => new fhirModels.Reference(x)); }
+    if (source["operationType"] !== undefined) { this.operationType = new fhirModels.CodeableConcept(source.operationType); }
+    if (source["regulator"] !== undefined) { this.regulator = new fhirModels.Reference(source.regulator); }
+  }
+  /**
+   * Check if the current MedicinalProductManufacturingBusinessOperation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductManufacturingBusinessOperation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductManufacturingBusinessOperation):MedicinalProductManufacturingBusinessOperation {
+    var dest:MedicinalProductManufacturingBusinessOperation = new MedicinalProductManufacturingBusinessOperation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductManufacturingBusinessOperation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Indicates if the medicinal product has an orphan designation for the treatment of a rare disease.
  */
-export class MedicinalProductSpecialDesignation extends fhirModels.BackboneElement {
+export class MedicinalProductSpecialDesignation extends fhirModels.BackboneElement implements fhirInterfaces.IMedicinalProductSpecialDesignation {
   /**
    * Date when the designation was granted.
    */
-  date?: string;
-  _date?: fhirModels.Element;
+  date?: string|undefined;
+  _date?: fhirModels.Element|undefined;
   /**
    * Identifier for the designation, or procedure number.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * Condition for which the medicinal use applies.
    */
-  indicationCodeableConcept?: fhirModels.CodeableConcept;
+  indicationCodeableConcept?: fhirModels.CodeableConcept|undefined;
   /**
    * Condition for which the medicinal use applies.
    */
-  indicationReference?: fhirModels.Reference;
+  indicationReference?: fhirModels.Reference|undefined;
   /**
    * The intended use of the product, e.g. prevention, treatment.
    */
-  intendedUse?: fhirModels.CodeableConcept;
+  intendedUse?: fhirModels.CodeableConcept|undefined;
   /**
    * Animal species for which this applies.
    */
-  species?: fhirModels.CodeableConcept;
+  species?: fhirModels.CodeableConcept|undefined;
   /**
    * For example granted, pending, expired or withdrawn.
    */
-  status?: fhirModels.CodeableConcept;
+  status?: fhirModels.CodeableConcept|undefined;
   /**
    * The type of special designation, e.g. orphan drug, minor use.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProductSpecialDesignation from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProductSpecialDesignation) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProductSpecialDesignation>) {
     super(source);
     if (source["date"] !== undefined) { this.date = source.date; }
-    if (source["_date"] !== undefined) { this._date = source._date; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["indicationCodeableConcept"] !== undefined) { this.indicationCodeableConcept = source.indicationCodeableConcept; }
-    if (source["indicationReference"] !== undefined) { this.indicationReference = source.indicationReference; }
-    if (source["intendedUse"] !== undefined) { this.intendedUse = source.intendedUse; }
-    if (source["species"] !== undefined) { this.species = source.species; }
-    if (source["status"] !== undefined) { this.status = source.status; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_date"] !== undefined) { this._date = new fhirModels.Element(source._date); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["indicationCodeableConcept"] !== undefined) { this.indicationCodeableConcept = new fhirModels.CodeableConcept(source.indicationCodeableConcept); }
+    if (source["indicationReference"] !== undefined) { this.indicationReference = new fhirModels.Reference(source.indicationReference); }
+    if (source["intendedUse"] !== undefined) { this.intendedUse = new fhirModels.CodeableConcept(source.intendedUse); }
+    if (source["species"] !== undefined) { this.species = new fhirModels.CodeableConcept(source.species); }
+    if (source["status"] !== undefined) { this.status = new fhirModels.CodeableConcept(source.status); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current MedicinalProductSpecialDesignation contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProductSpecialDesignation from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProductSpecialDesignation):MedicinalProductSpecialDesignation {
+    var dest:MedicinalProductSpecialDesignation = new MedicinalProductSpecialDesignation(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProductSpecialDesignation is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
  * Detailed definition of a medicinal product, typically for uses other than direct patient care (e.g. regulatory use).
  */
-export class MedicinalProduct extends fhirModels.DomainResource {
+export class MedicinalProduct extends fhirModels.DomainResource implements fhirInterfaces.IMedicinalProduct {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "MedicinalProduct";
+  readonly resourceType = "MedicinalProduct";
   /**
    * Whether the Medicinal Product is subject to additional monitoring for regulatory reasons.
    */
-  additionalMonitoringIndicator?: fhirModels.CodeableConcept;
+  additionalMonitoringIndicator?: fhirModels.CodeableConcept|undefined;
   /**
    * Supporting documentation, typically for regulatory submission.
    */
-  attachedDocument?: fhirModels.Reference[];
+  attachedDocument?: fhirModels.Reference[]|undefined;
   /**
    * Clinical trials or studies that this product is involved in.
    */
-  clinicalTrial?: fhirModels.Reference[];
+  clinicalTrial?: fhirModels.Reference[]|undefined;
   /**
    * The dose form for a single part product, or combined form of a multiple part product.
    */
-  combinedPharmaceuticalDoseForm?: fhirModels.CodeableConcept;
+  combinedPharmaceuticalDoseForm?: fhirModels.CodeableConcept|undefined;
   /**
    * A product specific contact, person (in a role), or an organization.
    */
-  contact?: fhirModels.Reference[];
+  contact?: fhirModels.Reference[]|undefined;
   /**
    * Reference to another product, e.g. for linking authorised to investigational product.
    */
-  crossReference?: fhirModels.Identifier[];
+  crossReference?: fhirModels.Identifier[]|undefined;
   /**
    * If this medicine applies to human or veterinary uses.
    */
-  domain?: fhirModels.Coding;
+  domain?: fhirModels.Coding|undefined;
   /**
    * Business identifier for this product. Could be an MPID.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * The legal status of supply of the medicinal product as classified by the regulator.
    */
-  legalStatusOfSupply?: fhirModels.CodeableConcept;
+  legalStatusOfSupply?: fhirModels.CodeableConcept|undefined;
   /**
    * An operation applied to the product, for manufacturing or adminsitrative purpose.
    */
-  manufacturingBusinessOperation?: fhirModels.MedicinalProductManufacturingBusinessOperation[];
+  manufacturingBusinessOperation?: fhirModels.MedicinalProductManufacturingBusinessOperation[]|undefined;
   /**
    * Marketing status of the medicinal product, in contrast to marketing authorizaton.
    */
-  marketingStatus?: fhirModels.MarketingStatus[];
+  marketingStatus?: fhirModels.MarketingStatus[]|undefined;
   /**
    * A master file for to the medicinal product (e.g. Pharmacovigilance System Master File).
    */
-  masterFile?: fhirModels.Reference[];
+  masterFile?: fhirModels.Reference[]|undefined;
   /**
    * The product's name, including full name and possibly coded parts.
    */
-  name: fhirModels.MedicinalProductName[];
+  name: fhirModels.MedicinalProductName[]|undefined;
   /**
    * Package representation for the product.
    */
-  packagedMedicinalProduct?: fhirModels.Reference[];
+  packagedMedicinalProduct?: fhirModels.Reference[]|undefined;
   /**
    * If authorised for use in children.
    */
-  paediatricUseIndicator?: fhirModels.CodeableConcept;
+  paediatricUseIndicator?: fhirModels.CodeableConcept|undefined;
   /**
    * Pharmaceutical aspects of product.
    */
-  pharmaceuticalProduct?: fhirModels.Reference[];
+  pharmaceuticalProduct?: fhirModels.Reference[]|undefined;
   /**
    * Allows the product to be classified by various systems.
    */
-  productClassification?: fhirModels.CodeableConcept[];
+  productClassification?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates if the medicinal product has an orphan designation for the treatment of a rare disease.
    */
-  specialDesignation?: fhirModels.MedicinalProductSpecialDesignation[];
+  specialDesignation?: fhirModels.MedicinalProductSpecialDesignation[]|undefined;
   /**
    * Whether the Medicinal Product is subject to special measures for regulatory reasons.
    */
-  specialMeasures?: string[];
-  _specialMeasures?: fhirModels.Element[];
+  specialMeasures?: string[]|undefined;
+  _specialMeasures?: fhirModels.Element[]|undefined;
   /**
    * Regulatory type, e.g. Investigational or Authorized.
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for MedicinalProduct from an object that MAY NOT contain all required elements.
    */
-  constructor(source: MedicinalProduct) {
+  constructor(source:Partial<fhirInterfaces.IMedicinalProduct>) {
     super(source);
     if ((source['resourceType'] !== "MedicinalProduct") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a MedicinalProduct'; }
-    if (source["additionalMonitoringIndicator"] !== undefined) { this.additionalMonitoringIndicator = source.additionalMonitoringIndicator; }
-    if (source["attachedDocument"] !== undefined) { this.attachedDocument = source.attachedDocument; }
-    if (source["clinicalTrial"] !== undefined) { this.clinicalTrial = source.clinicalTrial; }
-    if (source["combinedPharmaceuticalDoseForm"] !== undefined) { this.combinedPharmaceuticalDoseForm = source.combinedPharmaceuticalDoseForm; }
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
-    if (source["crossReference"] !== undefined) { this.crossReference = source.crossReference; }
-    if (source["domain"] !== undefined) { this.domain = source.domain; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["legalStatusOfSupply"] !== undefined) { this.legalStatusOfSupply = source.legalStatusOfSupply; }
-    if (source["manufacturingBusinessOperation"] !== undefined) { this.manufacturingBusinessOperation = source.manufacturingBusinessOperation; }
-    if (source["marketingStatus"] !== undefined) { this.marketingStatus = source.marketingStatus; }
-    if (source["masterFile"] !== undefined) { this.masterFile = source.masterFile; }
-    if (source["name"] === undefined) { throw 'Missing required element name';}
-    this.name = source.name;
-    if (source["packagedMedicinalProduct"] !== undefined) { this.packagedMedicinalProduct = source.packagedMedicinalProduct; }
-    if (source["paediatricUseIndicator"] !== undefined) { this.paediatricUseIndicator = source.paediatricUseIndicator; }
-    if (source["pharmaceuticalProduct"] !== undefined) { this.pharmaceuticalProduct = source.pharmaceuticalProduct; }
-    if (source["productClassification"] !== undefined) { this.productClassification = source.productClassification; }
-    if (source["specialDesignation"] !== undefined) { this.specialDesignation = source.specialDesignation; }
-    if (source["specialMeasures"] !== undefined) { this.specialMeasures = source.specialMeasures; }
-    if (source["_specialMeasures"] !== undefined) { this._specialMeasures = source._specialMeasures; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["additionalMonitoringIndicator"] !== undefined) { this.additionalMonitoringIndicator = new fhirModels.CodeableConcept(source.additionalMonitoringIndicator); }
+    if (source["attachedDocument"] !== undefined) { this.attachedDocument = source.attachedDocument.map((x) => new fhirModels.Reference(x)); }
+    if (source["clinicalTrial"] !== undefined) { this.clinicalTrial = source.clinicalTrial.map((x) => new fhirModels.Reference(x)); }
+    if (source["combinedPharmaceuticalDoseForm"] !== undefined) { this.combinedPharmaceuticalDoseForm = new fhirModels.CodeableConcept(source.combinedPharmaceuticalDoseForm); }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.Reference(x)); }
+    if (source["crossReference"] !== undefined) { this.crossReference = source.crossReference.map((x) => new fhirModels.Identifier(x)); }
+    if (source["domain"] !== undefined) { this.domain = new fhirModels.Coding(source.domain); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["legalStatusOfSupply"] !== undefined) { this.legalStatusOfSupply = new fhirModels.CodeableConcept(source.legalStatusOfSupply); }
+    if (source["manufacturingBusinessOperation"] !== undefined) { this.manufacturingBusinessOperation = source.manufacturingBusinessOperation.map((x) => new fhirModels.MedicinalProductManufacturingBusinessOperation(x)); }
+    if (source["marketingStatus"] !== undefined) { this.marketingStatus = source.marketingStatus.map((x) => new fhirModels.MarketingStatus(x)); }
+    if (source["masterFile"] !== undefined) { this.masterFile = source.masterFile.map((x) => new fhirModels.Reference(x)); }
+    if (source["name"] !== undefined) { this.name = source.name.map((x) => new fhirModels.MedicinalProductName(x)); }
+    if (source["packagedMedicinalProduct"] !== undefined) { this.packagedMedicinalProduct = source.packagedMedicinalProduct.map((x) => new fhirModels.Reference(x)); }
+    if (source["paediatricUseIndicator"] !== undefined) { this.paediatricUseIndicator = new fhirModels.CodeableConcept(source.paediatricUseIndicator); }
+    if (source["pharmaceuticalProduct"] !== undefined) { this.pharmaceuticalProduct = source.pharmaceuticalProduct.map((x) => new fhirModels.Reference(x)); }
+    if (source["productClassification"] !== undefined) { this.productClassification = source.productClassification.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["specialDesignation"] !== undefined) { this.specialDesignation = source.specialDesignation.map((x) => new fhirModels.MedicinalProductSpecialDesignation(x)); }
+    if (source["specialMeasures"] !== undefined) { this.specialMeasures = source.specialMeasures.map((x) => (x)); }
+    if (source["_specialMeasures"] !== undefined) { this._specialMeasures = source._specialMeasures.map((x) => new fhirModels.Element(x)); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current MedicinalProduct contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if ((this["name"] === undefined) || (this["name"].length === 0)) { missingElements.push("name"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a MedicinalProduct from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IMedicinalProduct):MedicinalProduct {
+    var dest:MedicinalProduct = new MedicinalProduct(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `MedicinalProduct is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

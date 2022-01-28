@@ -194,6 +194,313 @@ import { TestScriptOrigin, TestScriptDestination, TestScriptMetadataLink, TestSc
 import { ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeIncludeFilter, ValueSetComposeInclude, ValueSetCompose, ValueSetExpansionParameter, ValueSetExpansionContains, ValueSetExpansion, ValueSet } from './Models/ValueSet';
 import { VerificationResultPrimarySource, VerificationResultAttestation, VerificationResultValidator, VerificationResult } from './Models/VerificationResult';
 import { VisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecification, VisionPrescription } from './Models/VisionPrescription';
+
+/**
+ * Resource binding for generic use.
+ */
+type FhirResource = 
+  Account
+  |ActivityDefinition
+  |AdverseEvent
+  |AllergyIntolerance
+  |Appointment
+  |AppointmentResponse
+  |AuditEvent
+  |Basic
+  |Binary
+  |BiologicallyDerivedProduct
+  |BodyStructure
+  |Bundle
+  |CapabilityStatement
+  |CarePlan
+  |CareTeam
+  |CatalogEntry
+  |ChargeItem
+  |ChargeItemDefinition
+  |Claim
+  |ClaimResponse
+  |ClinicalImpression
+  |CodeSystem
+  |Communication
+  |CommunicationRequest
+  |CompartmentDefinition
+  |Composition
+  |ConceptMap
+  |Condition
+  |Consent
+  |Contract
+  |Coverage
+  |CoverageEligibilityRequest
+  |CoverageEligibilityResponse
+  |DetectedIssue
+  |Device
+  |DeviceDefinition
+  |DeviceMetric
+  |DeviceRequest
+  |DeviceUseStatement
+  |DiagnosticReport
+  |DocumentManifest
+  |DocumentReference
+  |EffectEvidenceSynthesis
+  |Encounter
+  |Endpoint
+  |EnrollmentRequest
+  |EnrollmentResponse
+  |EpisodeOfCare
+  |EventDefinition
+  |Evidence
+  |EvidenceVariable
+  |ExampleScenario
+  |ExplanationOfBenefit
+  |FamilyMemberHistory
+  |Flag
+  |Goal
+  |GraphDefinition
+  |Group
+  |GuidanceResponse
+  |HealthcareService
+  |ImagingStudy
+  |Immunization
+  |ImmunizationEvaluation
+  |ImmunizationRecommendation
+  |ImplementationGuide
+  |InsurancePlan
+  |Invoice
+  |Library
+  |Linkage
+  |List
+  |Location
+  |Measure
+  |MeasureReport
+  |Media
+  |Medication
+  |MedicationAdministration
+  |MedicationDispense
+  |MedicationKnowledge
+  |MedicationRequest
+  |MedicationStatement
+  |MedicinalProduct
+  |MedicinalProductAuthorization
+  |MedicinalProductContraindication
+  |MedicinalProductIndication
+  |MedicinalProductIngredient
+  |MedicinalProductInteraction
+  |MedicinalProductManufactured
+  |MedicinalProductPackaged
+  |MedicinalProductPharmaceutical
+  |MedicinalProductUndesirableEffect
+  |MessageDefinition
+  |MessageHeader
+  |MolecularSequence
+  |NamingSystem
+  |NutritionOrder
+  |Observation
+  |ObservationDefinition
+  |OperationDefinition
+  |OperationOutcome
+  |Organization
+  |OrganizationAffiliation
+  |Parameters
+  |Patient
+  |PaymentNotice
+  |PaymentReconciliation
+  |Person
+  |PlanDefinition
+  |Practitioner
+  |PractitionerRole
+  |Procedure
+  |Provenance
+  |Questionnaire
+  |QuestionnaireResponse
+  |RelatedPerson
+  |RequestGroup
+  |ResearchDefinition
+  |ResearchElementDefinition
+  |ResearchStudy
+  |ResearchSubject
+  |RiskAssessment
+  |RiskEvidenceSynthesis
+  |Schedule
+  |SearchParameter
+  |ServiceRequest
+  |Slot
+  |Specimen
+  |SpecimenDefinition
+  |StructureDefinition
+  |StructureMap
+  |Subscription
+  |Substance
+  |SubstanceNucleicAcid
+  |SubstancePolymer
+  |SubstanceProtein
+  |SubstanceReferenceInformation
+  |SubstanceSourceMaterial
+  |SubstanceSpecification
+  |SupplyDelivery
+  |SupplyRequest
+  |Task
+  |TerminologyCapabilities
+  |TestReport
+  |TestScript
+  |ValueSet
+  |VerificationResult
+  |VisionPrescription;
+
+/**
+ * Factory creator for FHIR Resources
+ */
+function FhirResourceFactory(source:any) : FhirResource|null {
+  switch (source["resourceType"]) {
+    case "Account": return new Account(source);
+    case "ActivityDefinition": return new ActivityDefinition(source);
+    case "AdverseEvent": return new AdverseEvent(source);
+    case "AllergyIntolerance": return new AllergyIntolerance(source);
+    case "Appointment": return new Appointment(source);
+    case "AppointmentResponse": return new AppointmentResponse(source);
+    case "AuditEvent": return new AuditEvent(source);
+    case "Basic": return new Basic(source);
+    case "Binary": return new Binary(source);
+    case "BiologicallyDerivedProduct": return new BiologicallyDerivedProduct(source);
+    case "BodyStructure": return new BodyStructure(source);
+    case "Bundle": return new Bundle(source);
+    case "CapabilityStatement": return new CapabilityStatement(source);
+    case "CarePlan": return new CarePlan(source);
+    case "CareTeam": return new CareTeam(source);
+    case "CatalogEntry": return new CatalogEntry(source);
+    case "ChargeItem": return new ChargeItem(source);
+    case "ChargeItemDefinition": return new ChargeItemDefinition(source);
+    case "Claim": return new Claim(source);
+    case "ClaimResponse": return new ClaimResponse(source);
+    case "ClinicalImpression": return new ClinicalImpression(source);
+    case "CodeSystem": return new CodeSystem(source);
+    case "Communication": return new Communication(source);
+    case "CommunicationRequest": return new CommunicationRequest(source);
+    case "CompartmentDefinition": return new CompartmentDefinition(source);
+    case "Composition": return new Composition(source);
+    case "ConceptMap": return new ConceptMap(source);
+    case "Condition": return new Condition(source);
+    case "Consent": return new Consent(source);
+    case "Contract": return new Contract(source);
+    case "Coverage": return new Coverage(source);
+    case "CoverageEligibilityRequest": return new CoverageEligibilityRequest(source);
+    case "CoverageEligibilityResponse": return new CoverageEligibilityResponse(source);
+    case "DetectedIssue": return new DetectedIssue(source);
+    case "Device": return new Device(source);
+    case "DeviceDefinition": return new DeviceDefinition(source);
+    case "DeviceMetric": return new DeviceMetric(source);
+    case "DeviceRequest": return new DeviceRequest(source);
+    case "DeviceUseStatement": return new DeviceUseStatement(source);
+    case "DiagnosticReport": return new DiagnosticReport(source);
+    case "DocumentManifest": return new DocumentManifest(source);
+    case "DocumentReference": return new DocumentReference(source);
+    case "EffectEvidenceSynthesis": return new EffectEvidenceSynthesis(source);
+    case "Encounter": return new Encounter(source);
+    case "Endpoint": return new Endpoint(source);
+    case "EnrollmentRequest": return new EnrollmentRequest(source);
+    case "EnrollmentResponse": return new EnrollmentResponse(source);
+    case "EpisodeOfCare": return new EpisodeOfCare(source);
+    case "EventDefinition": return new EventDefinition(source);
+    case "Evidence": return new Evidence(source);
+    case "EvidenceVariable": return new EvidenceVariable(source);
+    case "ExampleScenario": return new ExampleScenario(source);
+    case "ExplanationOfBenefit": return new ExplanationOfBenefit(source);
+    case "FamilyMemberHistory": return new FamilyMemberHistory(source);
+    case "Flag": return new Flag(source);
+    case "Goal": return new Goal(source);
+    case "GraphDefinition": return new GraphDefinition(source);
+    case "Group": return new Group(source);
+    case "GuidanceResponse": return new GuidanceResponse(source);
+    case "HealthcareService": return new HealthcareService(source);
+    case "ImagingStudy": return new ImagingStudy(source);
+    case "Immunization": return new Immunization(source);
+    case "ImmunizationEvaluation": return new ImmunizationEvaluation(source);
+    case "ImmunizationRecommendation": return new ImmunizationRecommendation(source);
+    case "ImplementationGuide": return new ImplementationGuide(source);
+    case "InsurancePlan": return new InsurancePlan(source);
+    case "Invoice": return new Invoice(source);
+    case "Library": return new Library(source);
+    case "Linkage": return new Linkage(source);
+    case "List": return new List(source);
+    case "Location": return new Location(source);
+    case "Measure": return new Measure(source);
+    case "MeasureReport": return new MeasureReport(source);
+    case "Media": return new Media(source);
+    case "Medication": return new Medication(source);
+    case "MedicationAdministration": return new MedicationAdministration(source);
+    case "MedicationDispense": return new MedicationDispense(source);
+    case "MedicationKnowledge": return new MedicationKnowledge(source);
+    case "MedicationRequest": return new MedicationRequest(source);
+    case "MedicationStatement": return new MedicationStatement(source);
+    case "MedicinalProduct": return new MedicinalProduct(source);
+    case "MedicinalProductAuthorization": return new MedicinalProductAuthorization(source);
+    case "MedicinalProductContraindication": return new MedicinalProductContraindication(source);
+    case "MedicinalProductIndication": return new MedicinalProductIndication(source);
+    case "MedicinalProductIngredient": return new MedicinalProductIngredient(source);
+    case "MedicinalProductInteraction": return new MedicinalProductInteraction(source);
+    case "MedicinalProductManufactured": return new MedicinalProductManufactured(source);
+    case "MedicinalProductPackaged": return new MedicinalProductPackaged(source);
+    case "MedicinalProductPharmaceutical": return new MedicinalProductPharmaceutical(source);
+    case "MedicinalProductUndesirableEffect": return new MedicinalProductUndesirableEffect(source);
+    case "MessageDefinition": return new MessageDefinition(source);
+    case "MessageHeader": return new MessageHeader(source);
+    case "MolecularSequence": return new MolecularSequence(source);
+    case "NamingSystem": return new NamingSystem(source);
+    case "NutritionOrder": return new NutritionOrder(source);
+    case "Observation": return new Observation(source);
+    case "ObservationDefinition": return new ObservationDefinition(source);
+    case "OperationDefinition": return new OperationDefinition(source);
+    case "OperationOutcome": return new OperationOutcome(source);
+    case "Organization": return new Organization(source);
+    case "OrganizationAffiliation": return new OrganizationAffiliation(source);
+    case "Parameters": return new Parameters(source);
+    case "Patient": return new Patient(source);
+    case "PaymentNotice": return new PaymentNotice(source);
+    case "PaymentReconciliation": return new PaymentReconciliation(source);
+    case "Person": return new Person(source);
+    case "PlanDefinition": return new PlanDefinition(source);
+    case "Practitioner": return new Practitioner(source);
+    case "PractitionerRole": return new PractitionerRole(source);
+    case "Procedure": return new Procedure(source);
+    case "Provenance": return new Provenance(source);
+    case "Questionnaire": return new Questionnaire(source);
+    case "QuestionnaireResponse": return new QuestionnaireResponse(source);
+    case "RelatedPerson": return new RelatedPerson(source);
+    case "RequestGroup": return new RequestGroup(source);
+    case "ResearchDefinition": return new ResearchDefinition(source);
+    case "ResearchElementDefinition": return new ResearchElementDefinition(source);
+    case "ResearchStudy": return new ResearchStudy(source);
+    case "ResearchSubject": return new ResearchSubject(source);
+    case "RiskAssessment": return new RiskAssessment(source);
+    case "RiskEvidenceSynthesis": return new RiskEvidenceSynthesis(source);
+    case "Schedule": return new Schedule(source);
+    case "SearchParameter": return new SearchParameter(source);
+    case "ServiceRequest": return new ServiceRequest(source);
+    case "Slot": return new Slot(source);
+    case "Specimen": return new Specimen(source);
+    case "SpecimenDefinition": return new SpecimenDefinition(source);
+    case "StructureDefinition": return new StructureDefinition(source);
+    case "StructureMap": return new StructureMap(source);
+    case "Subscription": return new Subscription(source);
+    case "Substance": return new Substance(source);
+    case "SubstanceNucleicAcid": return new SubstanceNucleicAcid(source);
+    case "SubstancePolymer": return new SubstancePolymer(source);
+    case "SubstanceProtein": return new SubstanceProtein(source);
+    case "SubstanceReferenceInformation": return new SubstanceReferenceInformation(source);
+    case "SubstanceSourceMaterial": return new SubstanceSourceMaterial(source);
+    case "SubstanceSpecification": return new SubstanceSpecification(source);
+    case "SupplyDelivery": return new SupplyDelivery(source);
+    case "SupplyRequest": return new SupplyRequest(source);
+    case "Task": return new Task(source);
+    case "TerminologyCapabilities": return new TerminologyCapabilities(source);
+    case "TestReport": return new TestReport(source);
+    case "TestScript": return new TestScript(source);
+    case "ValueSet": return new ValueSet(source);
+    case "VerificationResult": return new VerificationResult(source);
+    case "VisionPrescription": return new VisionPrescription(source);
+    default: return null;
+  }
+}
+
 export {
   Address,
   Age,
@@ -384,154 +691,6 @@ export {
   ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeIncludeFilter, ValueSetComposeInclude, ValueSetCompose, ValueSetExpansionParameter, ValueSetExpansionContains, ValueSetExpansion, ValueSet,
   VerificationResultPrimarySource, VerificationResultAttestation, VerificationResultValidator, VerificationResult,
   VisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecification, VisionPrescription,
+  type FhirResource,
+  FhirResourceFactory,
 }
-/**
- * Resource binding for generic use.
- */
-export type FhirResource = 
-  Account
-  |ActivityDefinition
-  |AdverseEvent
-  |AllergyIntolerance
-  |Appointment
-  |AppointmentResponse
-  |AuditEvent
-  |Basic
-  |Binary
-  |BiologicallyDerivedProduct
-  |BodyStructure
-  |Bundle
-  |CapabilityStatement
-  |CarePlan
-  |CareTeam
-  |CatalogEntry
-  |ChargeItem
-  |ChargeItemDefinition
-  |Claim
-  |ClaimResponse
-  |ClinicalImpression
-  |CodeSystem
-  |Communication
-  |CommunicationRequest
-  |CompartmentDefinition
-  |Composition
-  |ConceptMap
-  |Condition
-  |Consent
-  |Contract
-  |Coverage
-  |CoverageEligibilityRequest
-  |CoverageEligibilityResponse
-  |DetectedIssue
-  |Device
-  |DeviceDefinition
-  |DeviceMetric
-  |DeviceRequest
-  |DeviceUseStatement
-  |DiagnosticReport
-  |DocumentManifest
-  |DocumentReference
-  |EffectEvidenceSynthesis
-  |Encounter
-  |Endpoint
-  |EnrollmentRequest
-  |EnrollmentResponse
-  |EpisodeOfCare
-  |EventDefinition
-  |Evidence
-  |EvidenceVariable
-  |ExampleScenario
-  |ExplanationOfBenefit
-  |FamilyMemberHistory
-  |Flag
-  |Goal
-  |GraphDefinition
-  |Group
-  |GuidanceResponse
-  |HealthcareService
-  |ImagingStudy
-  |Immunization
-  |ImmunizationEvaluation
-  |ImmunizationRecommendation
-  |ImplementationGuide
-  |InsurancePlan
-  |Invoice
-  |Library
-  |Linkage
-  |List
-  |Location
-  |Measure
-  |MeasureReport
-  |Media
-  |Medication
-  |MedicationAdministration
-  |MedicationDispense
-  |MedicationKnowledge
-  |MedicationRequest
-  |MedicationStatement
-  |MedicinalProduct
-  |MedicinalProductAuthorization
-  |MedicinalProductContraindication
-  |MedicinalProductIndication
-  |MedicinalProductIngredient
-  |MedicinalProductInteraction
-  |MedicinalProductManufactured
-  |MedicinalProductPackaged
-  |MedicinalProductPharmaceutical
-  |MedicinalProductUndesirableEffect
-  |MessageDefinition
-  |MessageHeader
-  |MolecularSequence
-  |NamingSystem
-  |NutritionOrder
-  |Observation
-  |ObservationDefinition
-  |OperationDefinition
-  |OperationOutcome
-  |Organization
-  |OrganizationAffiliation
-  |Parameters
-  |Patient
-  |PaymentNotice
-  |PaymentReconciliation
-  |Person
-  |PlanDefinition
-  |Practitioner
-  |PractitionerRole
-  |Procedure
-  |Provenance
-  |Questionnaire
-  |QuestionnaireResponse
-  |RelatedPerson
-  |RequestGroup
-  |ResearchDefinition
-  |ResearchElementDefinition
-  |ResearchStudy
-  |ResearchSubject
-  |RiskAssessment
-  |RiskEvidenceSynthesis
-  |Schedule
-  |SearchParameter
-  |ServiceRequest
-  |Slot
-  |Specimen
-  |SpecimenDefinition
-  |StructureDefinition
-  |StructureMap
-  |Subscription
-  |Substance
-  |SubstanceNucleicAcid
-  |SubstancePolymer
-  |SubstanceProtein
-  |SubstanceReferenceInformation
-  |SubstanceSourceMaterial
-  |SubstanceSpecification
-  |SupplyDelivery
-  |SupplyRequest
-  |Task
-  |TerminologyCapabilities
-  |TestReport
-  |TestScript
-  |ValueSet
-  |VerificationResult
-  |VisionPrescription;

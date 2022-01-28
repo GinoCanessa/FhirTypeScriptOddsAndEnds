@@ -6,36 +6,57 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
  */
-export class Contributor extends fhirModels.Element {
+export class Contributor extends fhirModels.Element implements fhirInterfaces.IContributor {
   /**
    * Contact details to assist a user in finding and communicating with the contributor.
    */
-  contact?: fhirModels.ContactDetail[];
+  contact?: fhirModels.ContactDetail[]|undefined;
   /**
    * The name of the individual or organization responsible for the contribution.
    */
-  name: string;
-  _name?: fhirModels.Element;
+  name: string|undefined;
+  _name?: fhirModels.Element|undefined;
   /**
    * The type of contributor.
    */
-  type: ContributorTypeEnum;
-  _type?: fhirModels.Element;
+  type: ContributorTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Contributor from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Contributor) {
+  constructor(source:Partial<fhirInterfaces.IContributor>) {
     super(source);
-    if (source["contact"] !== undefined) { this.contact = source.contact; }
-    if (source["name"] === undefined) { throw 'Missing required element name';}
-    this.name = source.name;
-    if (source["_name"] !== undefined) { this._name = source._name; }
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["contact"] !== undefined) { this.contact = source.contact.map((x) => new fhirModels.ContactDetail(x)); }
+    if (source["name"] !== undefined) { this.name = source.name; }
+    if (source["_name"] !== undefined) { this._name = new fhirModels.Element(source._name); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current Contributor contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["name"] === undefined) { missingElements.push("name"); }
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Contributor from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IContributor):Contributor {
+    var dest:Contributor = new Contributor(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Contributor is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

@@ -6,49 +6,70 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A reference to a code defined by a terminology system.
  */
-export class Coding extends fhirModels.Element {
+export class Coding extends fhirModels.Element implements fhirInterfaces.ICoding {
   /**
    * A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
    */
-  code?: string;
-  _code?: fhirModels.Element;
+  code?: string|undefined;
+  _code?: fhirModels.Element|undefined;
   /**
    * A representation of the meaning of the code in the system, following the rules of the system.
    */
-  display?: string;
-  _display?: fhirModels.Element;
+  display?: string|undefined;
+  _display?: fhirModels.Element|undefined;
   /**
    * The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.
    */
-  system?: string;
-  _system?: fhirModels.Element;
+  system?: string|undefined;
+  _system?: fhirModels.Element|undefined;
   /**
    * Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.
    */
-  userSelected?: boolean;
-  _userSelected?: fhirModels.Element;
+  userSelected?: boolean|undefined;
+  _userSelected?: fhirModels.Element|undefined;
   /**
    * Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.
    */
-  version?: string;
-  _version?: fhirModels.Element;
+  version?: string|undefined;
+  _version?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Coding from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Coding) {
+  constructor(source:Partial<fhirInterfaces.ICoding>) {
     super(source);
     if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["_code"] !== undefined) { this._code = source._code; }
+    if (source["_code"] !== undefined) { this._code = new fhirModels.Element(source._code); }
     if (source["display"] !== undefined) { this.display = source.display; }
-    if (source["_display"] !== undefined) { this._display = source._display; }
+    if (source["_display"] !== undefined) { this._display = new fhirModels.Element(source._display); }
     if (source["system"] !== undefined) { this.system = source.system; }
-    if (source["_system"] !== undefined) { this._system = source._system; }
+    if (source["_system"] !== undefined) { this._system = new fhirModels.Element(source._system); }
     if (source["userSelected"] !== undefined) { this.userSelected = source.userSelected; }
-    if (source["_userSelected"] !== undefined) { this._userSelected = source._userSelected; }
+    if (source["_userSelected"] !== undefined) { this._userSelected = new fhirModels.Element(source._userSelected); }
     if (source["version"] !== undefined) { this.version = source.version; }
-    if (source["_version"] !== undefined) { this._version = source._version; }
+    if (source["_version"] !== undefined) { this._version = new fhirModels.Element(source._version); }
+  }
+  /**
+   * Check if the current Coding contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Coding from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ICoding):Coding {
+    var dest:Coding = new Coding(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Coding is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

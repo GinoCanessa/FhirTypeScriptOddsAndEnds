@@ -6,29 +6,50 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
  */
-export class LinkageItem extends fhirModels.BackboneElement {
+export class LinkageItem extends fhirModels.BackboneElement implements fhirInterfaces.ILinkageItem {
   /**
    * The resource instance being linked as part of the group.
    */
-  resource: fhirModels.Reference;
+  resource: fhirModels.Reference|undefined;
   /**
    * Distinguishes which item is "source of truth" (if any) and which items are no longer considered to be current representations.
    */
-  type: LinkageItemTypeEnum;
-  _type?: fhirModels.Element;
+  type: LinkageItemTypeEnum|undefined;
+  _type?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for LinkageItem from an object that MAY NOT contain all required elements.
    */
-  constructor(source: LinkageItem) {
+  constructor(source:Partial<fhirInterfaces.ILinkageItem>) {
     super(source);
-    if (source["resource"] === undefined) { throw 'Missing required element resource';}
-    this.resource = source.resource;
-    if (source["type"] === undefined) { throw 'Missing required element type';}
-    this.type = source.type;
-    if (source["_type"] !== undefined) { this._type = source._type; }
+    if (source["resource"] !== undefined) { this.resource = new fhirModels.Reference(source.resource); }
+    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_type"] !== undefined) { this._type = new fhirModels.Element(source._type); }
+  }
+  /**
+   * Check if the current LinkageItem contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["resource"] === undefined) { missingElements.push("resource"); }
+    if (this["type"] === undefined) { missingElements.push("type"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a LinkageItem from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ILinkageItem):LinkageItem {
+    var dest:LinkageItem = new LinkageItem(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `LinkageItem is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -42,34 +63,54 @@ export enum LinkageItemTypeEnum {
 /**
  * Identifies two or more records (resource instances) that refer to the same real-world "occurrence".
  */
-export class Linkage extends fhirModels.DomainResource {
+export class Linkage extends fhirModels.DomainResource implements fhirInterfaces.ILinkage {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Linkage";
+  readonly resourceType = "Linkage";
   /**
    * If false, any asserted linkages should not be considered current/relevant/applicable.
    */
-  active?: boolean;
-  _active?: fhirModels.Element;
+  active?: boolean|undefined;
+  _active?: fhirModels.Element|undefined;
   /**
    * Identifies the user or organization responsible for asserting the linkages as well as the user or organization who establishes the context in which the nature of each linkage is evaluated.
    */
-  author?: fhirModels.Reference;
+  author?: fhirModels.Reference|undefined;
   /**
    * Identifies which record considered as the reference to the same real-world occurrence as well as how the items should be evaluated within the collection of linked items.
    */
-  item: fhirModels.LinkageItem[];
+  item: fhirModels.LinkageItem[]|undefined;
   /**
-   * Default constructor
+   * Default constructor for Linkage from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Linkage) {
+  constructor(source:Partial<fhirInterfaces.ILinkage>) {
     super(source);
     if ((source['resourceType'] !== "Linkage") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Linkage'; }
     if (source["active"] !== undefined) { this.active = source.active; }
-    if (source["_active"] !== undefined) { this._active = source._active; }
-    if (source["author"] !== undefined) { this.author = source.author; }
-    if (source["item"] === undefined) { throw 'Missing required element item';}
-    this.item = source.item;
+    if (source["_active"] !== undefined) { this._active = new fhirModels.Element(source._active); }
+    if (source["author"] !== undefined) { this.author = new fhirModels.Reference(source.author); }
+    if (source["item"] !== undefined) { this.item = source.item.map((x) => new fhirModels.LinkageItem(x)); }
+  }
+  /**
+   * Check if the current Linkage contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if ((this["item"] === undefined) || (this["item"].length === 0)) { missingElements.push("item"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Linkage from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ILinkage):Linkage {
+    var dest:Linkage = new Linkage(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Linkage is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }

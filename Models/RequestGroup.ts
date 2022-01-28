@@ -6,28 +6,49 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all of the conditions are true.
  */
-export class RequestGroupActionCondition extends fhirModels.BackboneElement {
+export class RequestGroupActionCondition extends fhirModels.BackboneElement implements fhirInterfaces.IRequestGroupActionCondition {
   /**
    * The expression may be inlined, or may be a reference to a named expression within a logic library referenced by the library element.
    */
-  expression?: fhirModels.Expression;
+  expression?: fhirModels.Expression|undefined;
   /**
    * Applicability criteria are used to determine immediate applicability when a plan definition is applied to a given context. Start and stop criteria are carried through application and used to describe enter/exit criteria for an action.
    */
-  kind: RequestGroupActionConditionKindEnum;
-  _kind?: fhirModels.Element;
+  kind: RequestGroupActionConditionKindEnum|undefined;
+  _kind?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for RequestGroupActionCondition from an object that MAY NOT contain all required elements.
    */
-  constructor(source: RequestGroupActionCondition) {
+  constructor(source:Partial<fhirInterfaces.IRequestGroupActionCondition>) {
     super(source);
-    if (source["expression"] !== undefined) { this.expression = source.expression; }
-    if (source["kind"] === undefined) { throw 'Missing required element kind';}
-    this.kind = source.kind;
-    if (source["_kind"] !== undefined) { this._kind = source._kind; }
+    if (source["expression"] !== undefined) { this.expression = new fhirModels.Expression(source.expression); }
+    if (source["kind"] !== undefined) { this.kind = source.kind; }
+    if (source["_kind"] !== undefined) { this._kind = new fhirModels.Element(source._kind); }
+  }
+  /**
+   * Check if the current RequestGroupActionCondition contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["kind"] === undefined) { missingElements.push("kind"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a RequestGroupActionCondition from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRequestGroupActionCondition):RequestGroupActionCondition {
+    var dest:RequestGroupActionCondition = new RequestGroupActionCondition(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `RequestGroupActionCondition is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -41,38 +62,58 @@ export enum RequestGroupActionConditionKindEnum {
 /**
  * A relationship to another action such as "before" or "30-60 minutes after start of".
  */
-export class RequestGroupActionRelatedAction extends fhirModels.BackboneElement {
+export class RequestGroupActionRelatedAction extends fhirModels.BackboneElement implements fhirInterfaces.IRequestGroupActionRelatedAction {
   /**
    * The element id of the action this is related to.
    */
-  actionId: string;
-  _actionId?: fhirModels.Element;
+  actionId: string|undefined;
+  _actionId?: fhirModels.Element|undefined;
   /**
    * A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.
    */
-  offsetDuration?: fhirModels.Duration;
+  offsetDuration?: fhirModels.Duration|undefined;
   /**
    * A duration or range of durations to apply to the relationship. For example, 30-60 minutes before.
    */
-  offsetRange?: fhirModels.Range;
+  offsetRange?: fhirModels.Range|undefined;
   /**
    * The relationship of this action to the related action.
    */
-  relationship: RequestGroupActionRelatedActionRelationshipEnum;
-  _relationship?: fhirModels.Element;
+  relationship: RequestGroupActionRelatedActionRelationshipEnum|undefined;
+  _relationship?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for RequestGroupActionRelatedAction from an object that MAY NOT contain all required elements.
    */
-  constructor(source: RequestGroupActionRelatedAction) {
+  constructor(source:Partial<fhirInterfaces.IRequestGroupActionRelatedAction>) {
     super(source);
-    if (source["actionId"] === undefined) { throw 'Missing required element actionId';}
-    this.actionId = source.actionId;
-    if (source["_actionId"] !== undefined) { this._actionId = source._actionId; }
-    if (source["offsetDuration"] !== undefined) { this.offsetDuration = source.offsetDuration; }
-    if (source["offsetRange"] !== undefined) { this.offsetRange = source.offsetRange; }
-    if (source["relationship"] === undefined) { throw 'Missing required element relationship';}
-    this.relationship = source.relationship;
-    if (source["_relationship"] !== undefined) { this._relationship = source._relationship; }
+    if (source["actionId"] !== undefined) { this.actionId = source.actionId; }
+    if (source["_actionId"] !== undefined) { this._actionId = new fhirModels.Element(source._actionId); }
+    if (source["offsetDuration"] !== undefined) { this.offsetDuration = new fhirModels.Duration(source.offsetDuration); }
+    if (source["offsetRange"] !== undefined) { this.offsetRange = new fhirModels.Range(source.offsetRange); }
+    if (source["relationship"] !== undefined) { this.relationship = source.relationship; }
+    if (source["_relationship"] !== undefined) { this._relationship = new fhirModels.Element(source._relationship); }
+  }
+  /**
+   * Check if the current RequestGroupActionRelatedAction contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["actionId"] === undefined) { missingElements.push("actionId"); }
+    if (this["relationship"] === undefined) { missingElements.push("relationship"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a RequestGroupActionRelatedAction from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRequestGroupActionRelatedAction):RequestGroupActionRelatedAction {
+    var dest:RequestGroupActionRelatedAction = new RequestGroupActionRelatedAction(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `RequestGroupActionRelatedAction is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -92,154 +133,174 @@ export enum RequestGroupActionRelatedActionRelationshipEnum {
 /**
  * The actions, if any, produced by the evaluation of the artifact.
  */
-export class RequestGroupAction extends fhirModels.BackboneElement {
+export class RequestGroupAction extends fhirModels.BackboneElement implements fhirInterfaces.IRequestGroupAction {
   /**
    * Sub actions.
    */
-  action?: fhirModels.RequestGroupAction[];
+  action?: fhirModels.RequestGroupAction[]|undefined;
   /**
    * Defines whether the action can be selected multiple times.
    */
-  cardinalityBehavior?: RequestGroupActionCardinalityBehaviorEnum;
-  _cardinalityBehavior?: fhirModels.Element;
+  cardinalityBehavior?: RequestGroupActionCardinalityBehaviorEnum|undefined;
+  _cardinalityBehavior?: fhirModels.Element|undefined;
   /**
    * A code that provides meaning for the action or action group. For example, a section may have a LOINC code for a section of a documentation template.
    */
-  code?: fhirModels.CodeableConcept[];
+  code?: fhirModels.CodeableConcept[]|undefined;
   /**
    * When multiple conditions of the same kind are present, the effects are combined using AND semantics, so the overall condition is true only if all of the conditions are true.
    */
-  condition?: fhirModels.RequestGroupActionCondition[];
+  condition?: fhirModels.RequestGroupActionCondition[]|undefined;
   /**
    * A short description of the action used to provide a summary to display to the user.
    */
-  description?: string;
-  _description?: fhirModels.Element;
+  description?: string|undefined;
+  _description?: fhirModels.Element|undefined;
   /**
    * Didactic or other informational resources associated with the action that can be provided to the CDS recipient. Information resources can include inline text commentary and links to web resources.
    */
-  documentation?: fhirModels.RelatedArtifact[];
+  documentation?: fhirModels.RelatedArtifact[]|undefined;
   /**
    * Defines the grouping behavior for the action and its children.
    */
-  groupingBehavior?: RequestGroupActionGroupingBehaviorEnum;
-  _groupingBehavior?: fhirModels.Element;
+  groupingBehavior?: RequestGroupActionGroupingBehaviorEnum|undefined;
+  _groupingBehavior?: fhirModels.Element|undefined;
   /**
    * The participant that should perform or be responsible for this action.
    */
-  participant?: fhirModels.Reference[];
+  participant?: fhirModels.Reference[]|undefined;
   /**
    * Defines whether the action should usually be preselected.
    */
-  precheckBehavior?: RequestGroupActionPrecheckBehaviorEnum;
-  _precheckBehavior?: fhirModels.Element;
+  precheckBehavior?: RequestGroupActionPrecheckBehaviorEnum|undefined;
+  _precheckBehavior?: fhirModels.Element|undefined;
   /**
    * A user-visible prefix for the action.
    */
-  prefix?: string;
-  _prefix?: fhirModels.Element;
+  prefix?: string|undefined;
+  _prefix?: fhirModels.Element|undefined;
   /**
    * Indicates how quickly the action should be addressed with respect to other actions.
    */
-  priority?: RequestGroupActionPriorityEnum;
-  _priority?: fhirModels.Element;
+  priority?: RequestGroupActionPriorityEnum|undefined;
+  _priority?: fhirModels.Element|undefined;
   /**
    * A relationship to another action such as "before" or "30-60 minutes after start of".
    */
-  relatedAction?: fhirModels.RequestGroupActionRelatedAction[];
+  relatedAction?: fhirModels.RequestGroupActionRelatedAction[]|undefined;
   /**
    * Defines expectations around whether an action is required.
    */
-  requiredBehavior?: RequestGroupActionRequiredBehaviorEnum;
-  _requiredBehavior?: fhirModels.Element;
+  requiredBehavior?: RequestGroupActionRequiredBehaviorEnum|undefined;
+  _requiredBehavior?: fhirModels.Element|undefined;
   /**
    * The target resource SHALL be a [Request](request.html) resource with a Request.intent set to "option".
    */
-  resource?: fhirModels.Reference;
+  resource?: fhirModels.Reference|undefined;
   /**
    * Defines the selection behavior for the action and its children.
    */
-  selectionBehavior?: RequestGroupActionSelectionBehaviorEnum;
-  _selectionBehavior?: fhirModels.Element;
+  selectionBehavior?: RequestGroupActionSelectionBehaviorEnum|undefined;
+  _selectionBehavior?: fhirModels.Element|undefined;
   /**
    * A text equivalent of the action to be performed. This provides a human-interpretable description of the action when the definition is consumed by a system that might not be capable of interpreting it dynamically.
    */
-  textEquivalent?: string;
-  _textEquivalent?: fhirModels.Element;
+  textEquivalent?: string|undefined;
+  _textEquivalent?: fhirModels.Element|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingDateTime?: string;
-  _timingDateTime?: fhirModels.Element;
+  timingDateTime?: string|undefined;
+  _timingDateTime?: fhirModels.Element|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingAge?: fhirModels.Age;
+  timingAge?: fhirModels.Age|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingPeriod?: fhirModels.Period;
+  timingPeriod?: fhirModels.Period|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingDuration?: fhirModels.Duration;
+  timingDuration?: fhirModels.Duration|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingRange?: fhirModels.Range;
+  timingRange?: fhirModels.Range|undefined;
   /**
    * An optional value describing when the action should be performed.
    */
-  timingTiming?: fhirModels.Timing;
+  timingTiming?: fhirModels.Timing|undefined;
   /**
    * The title of the action displayed to a user.
    */
-  title?: string;
-  _title?: fhirModels.Element;
+  title?: string|undefined;
+  _title?: fhirModels.Element|undefined;
   /**
    * The type of action to perform (create, update, remove).
    */
-  type?: fhirModels.CodeableConcept;
+  type?: fhirModels.CodeableConcept|undefined;
   /**
-   * Default constructor
+   * Default constructor for RequestGroupAction from an object that MAY NOT contain all required elements.
    */
-  constructor(source: RequestGroupAction) {
+  constructor(source:Partial<fhirInterfaces.IRequestGroupAction>) {
     super(source);
-    if (source["action"] !== undefined) { this.action = source.action; }
+    if (source["action"] !== undefined) { this.action = source.action.map((x) => new fhirModels.RequestGroupAction(x)); }
     if (source["cardinalityBehavior"] !== undefined) { this.cardinalityBehavior = source.cardinalityBehavior; }
-    if (source["_cardinalityBehavior"] !== undefined) { this._cardinalityBehavior = source._cardinalityBehavior; }
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["condition"] !== undefined) { this.condition = source.condition; }
+    if (source["_cardinalityBehavior"] !== undefined) { this._cardinalityBehavior = new fhirModels.Element(source._cardinalityBehavior); }
+    if (source["code"] !== undefined) { this.code = source.code.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["condition"] !== undefined) { this.condition = source.condition.map((x) => new fhirModels.RequestGroupActionCondition(x)); }
     if (source["description"] !== undefined) { this.description = source.description; }
-    if (source["_description"] !== undefined) { this._description = source._description; }
-    if (source["documentation"] !== undefined) { this.documentation = source.documentation; }
+    if (source["_description"] !== undefined) { this._description = new fhirModels.Element(source._description); }
+    if (source["documentation"] !== undefined) { this.documentation = source.documentation.map((x) => new fhirModels.RelatedArtifact(x)); }
     if (source["groupingBehavior"] !== undefined) { this.groupingBehavior = source.groupingBehavior; }
-    if (source["_groupingBehavior"] !== undefined) { this._groupingBehavior = source._groupingBehavior; }
-    if (source["participant"] !== undefined) { this.participant = source.participant; }
+    if (source["_groupingBehavior"] !== undefined) { this._groupingBehavior = new fhirModels.Element(source._groupingBehavior); }
+    if (source["participant"] !== undefined) { this.participant = source.participant.map((x) => new fhirModels.Reference(x)); }
     if (source["precheckBehavior"] !== undefined) { this.precheckBehavior = source.precheckBehavior; }
-    if (source["_precheckBehavior"] !== undefined) { this._precheckBehavior = source._precheckBehavior; }
+    if (source["_precheckBehavior"] !== undefined) { this._precheckBehavior = new fhirModels.Element(source._precheckBehavior); }
     if (source["prefix"] !== undefined) { this.prefix = source.prefix; }
-    if (source["_prefix"] !== undefined) { this._prefix = source._prefix; }
+    if (source["_prefix"] !== undefined) { this._prefix = new fhirModels.Element(source._prefix); }
     if (source["priority"] !== undefined) { this.priority = source.priority; }
-    if (source["_priority"] !== undefined) { this._priority = source._priority; }
-    if (source["relatedAction"] !== undefined) { this.relatedAction = source.relatedAction; }
+    if (source["_priority"] !== undefined) { this._priority = new fhirModels.Element(source._priority); }
+    if (source["relatedAction"] !== undefined) { this.relatedAction = source.relatedAction.map((x) => new fhirModels.RequestGroupActionRelatedAction(x)); }
     if (source["requiredBehavior"] !== undefined) { this.requiredBehavior = source.requiredBehavior; }
-    if (source["_requiredBehavior"] !== undefined) { this._requiredBehavior = source._requiredBehavior; }
-    if (source["resource"] !== undefined) { this.resource = source.resource; }
+    if (source["_requiredBehavior"] !== undefined) { this._requiredBehavior = new fhirModels.Element(source._requiredBehavior); }
+    if (source["resource"] !== undefined) { this.resource = new fhirModels.Reference(source.resource); }
     if (source["selectionBehavior"] !== undefined) { this.selectionBehavior = source.selectionBehavior; }
-    if (source["_selectionBehavior"] !== undefined) { this._selectionBehavior = source._selectionBehavior; }
+    if (source["_selectionBehavior"] !== undefined) { this._selectionBehavior = new fhirModels.Element(source._selectionBehavior); }
     if (source["textEquivalent"] !== undefined) { this.textEquivalent = source.textEquivalent; }
-    if (source["_textEquivalent"] !== undefined) { this._textEquivalent = source._textEquivalent; }
+    if (source["_textEquivalent"] !== undefined) { this._textEquivalent = new fhirModels.Element(source._textEquivalent); }
     if (source["timingDateTime"] !== undefined) { this.timingDateTime = source.timingDateTime; }
-    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = source._timingDateTime; }
-    if (source["timingAge"] !== undefined) { this.timingAge = source.timingAge; }
-    if (source["timingPeriod"] !== undefined) { this.timingPeriod = source.timingPeriod; }
-    if (source["timingDuration"] !== undefined) { this.timingDuration = source.timingDuration; }
-    if (source["timingRange"] !== undefined) { this.timingRange = source.timingRange; }
-    if (source["timingTiming"] !== undefined) { this.timingTiming = source.timingTiming; }
+    if (source["_timingDateTime"] !== undefined) { this._timingDateTime = new fhirModels.Element(source._timingDateTime); }
+    if (source["timingAge"] !== undefined) { this.timingAge = new fhirModels.Age(source.timingAge); }
+    if (source["timingPeriod"] !== undefined) { this.timingPeriod = new fhirModels.Period(source.timingPeriod); }
+    if (source["timingDuration"] !== undefined) { this.timingDuration = new fhirModels.Duration(source.timingDuration); }
+    if (source["timingRange"] !== undefined) { this.timingRange = new fhirModels.Range(source.timingRange); }
+    if (source["timingTiming"] !== undefined) { this.timingTiming = new fhirModels.Timing(source.timingTiming); }
     if (source["title"] !== undefined) { this.title = source.title; }
-    if (source["_title"] !== undefined) { this._title = source._title; }
-    if (source["type"] !== undefined) { this.type = source.type; }
+    if (source["_title"] !== undefined) { this._title = new fhirModels.Element(source._title); }
+    if (source["type"] !== undefined) { this.type = new fhirModels.CodeableConcept(source.type); }
+  }
+  /**
+   * Check if the current RequestGroupAction contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a RequestGroupAction from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRequestGroupAction):RequestGroupAction {
+    var dest:RequestGroupAction = new RequestGroupAction(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `RequestGroupAction is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
@@ -295,121 +356,141 @@ export enum RequestGroupActionSelectionBehaviorEnum {
 /**
  * A group of related requests that can be used to capture intended activities that have inter-dependencies such as "give this medication after that one".
  */
-export class RequestGroup extends fhirModels.DomainResource {
+export class RequestGroup extends fhirModels.DomainResource implements fhirInterfaces.IRequestGroup {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "RequestGroup";
+  readonly resourceType = "RequestGroup";
   /**
    * The actions, if any, produced by the evaluation of the artifact.
    */
-  action?: fhirModels.RequestGroupAction[];
+  action?: fhirModels.RequestGroupAction[]|undefined;
   /**
    * Provides a reference to the author of the request group.
    */
-  author?: fhirModels.Reference;
+  author?: fhirModels.Reference|undefined;
   /**
    * Indicates when the request group was created.
    */
-  authoredOn?: string;
-  _authoredOn?: fhirModels.Element;
+  authoredOn?: string|undefined;
+  _authoredOn?: fhirModels.Element|undefined;
   /**
    * A plan, proposal or order that is fulfilled in whole or in part by this request.
    */
-  basedOn?: fhirModels.Reference[];
+  basedOn?: fhirModels.Reference[]|undefined;
   /**
    * This element can be used to provide a code that captures the meaning of the request group as a whole, as opposed to the code of the action element, which captures the meaning of the individual actions within the request group.
    */
-  code?: fhirModels.CodeableConcept;
+  code?: fhirModels.CodeableConcept|undefined;
   /**
    * Describes the context of the request group, if any.
    */
-  encounter?: fhirModels.Reference;
+  encounter?: fhirModels.Reference|undefined;
   /**
    * Requests are linked either by a "basedOn" relationship (i.e. one request is fulfilling another) or by having a common requisition.  Requests that are part of the same requisition are generally treated independently from the perspective of changing their state or maintaining them after initial creation.
    */
-  groupIdentifier?: fhirModels.Identifier;
+  groupIdentifier?: fhirModels.Identifier|undefined;
   /**
    * Allows a service to provide a unique, business identifier for the request.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * A canonical URL referencing a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
    */
-  instantiatesCanonical?: string[];
-  _instantiatesCanonical?: fhirModels.Element[];
+  instantiatesCanonical?: string[]|undefined;
+  _instantiatesCanonical?: fhirModels.Element[]|undefined;
   /**
    * A URL referencing an externally defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this request.
    */
-  instantiatesUri?: string[];
-  _instantiatesUri?: fhirModels.Element[];
+  instantiatesUri?: string[]|undefined;
+  _instantiatesUri?: fhirModels.Element[]|undefined;
   /**
    * Indicates the level of authority/intentionality associated with the request and where the request fits into the workflow chain.
    */
-  intent: RequestGroupIntentEnum;
-  _intent?: fhirModels.Element;
+  intent: RequestGroupIntentEnum|undefined;
+  _intent?: fhirModels.Element|undefined;
   /**
    * Provides a mechanism to communicate additional information about the response.
    */
-  note?: fhirModels.Annotation[];
+  note?: fhirModels.Annotation[]|undefined;
   /**
    * Indicates how quickly the request should be addressed with respect to other requests.
    */
-  priority?: RequestGroupPriorityEnum;
-  _priority?: fhirModels.Element;
+  priority?: RequestGroupPriorityEnum|undefined;
+  _priority?: fhirModels.Element|undefined;
   /**
    * Describes the reason for the request group in coded or textual form.
    */
-  reasonCode?: fhirModels.CodeableConcept[];
+  reasonCode?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Indicates another resource whose existence justifies this request group.
    */
-  reasonReference?: fhirModels.Reference[];
+  reasonReference?: fhirModels.Reference[]|undefined;
   /**
    * The replacement could be because the initial request was immediately rejected (due to an issue) or because the previous request was completed, but the need for the action described by the request remains ongoing.
    */
-  replaces?: fhirModels.Reference[];
+  replaces?: fhirModels.Reference[]|undefined;
   /**
    * The current state of the request. For request groups, the status reflects the status of all the requests in the group.
    */
-  status: RequestGroupStatusEnum;
-  _status?: fhirModels.Element;
+  status: RequestGroupStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
    * The subject for which the request group was created.
    */
-  subject?: fhirModels.Reference;
+  subject?: fhirModels.Reference|undefined;
   /**
-   * Default constructor
+   * Default constructor for RequestGroup from an object that MAY NOT contain all required elements.
    */
-  constructor(source: RequestGroup) {
+  constructor(source:Partial<fhirInterfaces.IRequestGroup>) {
     super(source);
     if ((source['resourceType'] !== "RequestGroup") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a RequestGroup'; }
-    if (source["action"] !== undefined) { this.action = source.action; }
-    if (source["author"] !== undefined) { this.author = source.author; }
+    if (source["action"] !== undefined) { this.action = source.action.map((x) => new fhirModels.RequestGroupAction(x)); }
+    if (source["author"] !== undefined) { this.author = new fhirModels.Reference(source.author); }
     if (source["authoredOn"] !== undefined) { this.authoredOn = source.authoredOn; }
-    if (source["_authoredOn"] !== undefined) { this._authoredOn = source._authoredOn; }
-    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn; }
-    if (source["code"] !== undefined) { this.code = source.code; }
-    if (source["encounter"] !== undefined) { this.encounter = source.encounter; }
-    if (source["groupIdentifier"] !== undefined) { this.groupIdentifier = source.groupIdentifier; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
-    if (source["instantiatesCanonical"] !== undefined) { this.instantiatesCanonical = source.instantiatesCanonical; }
-    if (source["_instantiatesCanonical"] !== undefined) { this._instantiatesCanonical = source._instantiatesCanonical; }
-    if (source["instantiatesUri"] !== undefined) { this.instantiatesUri = source.instantiatesUri; }
-    if (source["_instantiatesUri"] !== undefined) { this._instantiatesUri = source._instantiatesUri; }
-    if (source["intent"] === undefined) { throw 'Missing required element intent';}
-    this.intent = source.intent;
-    if (source["_intent"] !== undefined) { this._intent = source._intent; }
-    if (source["note"] !== undefined) { this.note = source.note; }
+    if (source["_authoredOn"] !== undefined) { this._authoredOn = new fhirModels.Element(source._authoredOn); }
+    if (source["basedOn"] !== undefined) { this.basedOn = source.basedOn.map((x) => new fhirModels.Reference(x)); }
+    if (source["code"] !== undefined) { this.code = new fhirModels.CodeableConcept(source.code); }
+    if (source["encounter"] !== undefined) { this.encounter = new fhirModels.Reference(source.encounter); }
+    if (source["groupIdentifier"] !== undefined) { this.groupIdentifier = new fhirModels.Identifier(source.groupIdentifier); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
+    if (source["instantiatesCanonical"] !== undefined) { this.instantiatesCanonical = source.instantiatesCanonical.map((x) => (x)); }
+    if (source["_instantiatesCanonical"] !== undefined) { this._instantiatesCanonical = source._instantiatesCanonical.map((x) => new fhirModels.Element(x)); }
+    if (source["instantiatesUri"] !== undefined) { this.instantiatesUri = source.instantiatesUri.map((x) => (x)); }
+    if (source["_instantiatesUri"] !== undefined) { this._instantiatesUri = source._instantiatesUri.map((x) => new fhirModels.Element(x)); }
+    if (source["intent"] !== undefined) { this.intent = source.intent; }
+    if (source["_intent"] !== undefined) { this._intent = new fhirModels.Element(source._intent); }
+    if (source["note"] !== undefined) { this.note = source.note.map((x) => new fhirModels.Annotation(x)); }
     if (source["priority"] !== undefined) { this.priority = source.priority; }
-    if (source["_priority"] !== undefined) { this._priority = source._priority; }
-    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode; }
-    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference; }
-    if (source["replaces"] !== undefined) { this.replaces = source.replaces; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
-    if (source["subject"] !== undefined) { this.subject = source.subject; }
+    if (source["_priority"] !== undefined) { this._priority = new fhirModels.Element(source._priority); }
+    if (source["reasonCode"] !== undefined) { this.reasonCode = source.reasonCode.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["reasonReference"] !== undefined) { this.reasonReference = source.reasonReference.map((x) => new fhirModels.Reference(x)); }
+    if (source["replaces"] !== undefined) { this.replaces = source.replaces.map((x) => new fhirModels.Reference(x)); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+    if (source["subject"] !== undefined) { this.subject = new fhirModels.Reference(source.subject); }
+  }
+  /**
+   * Check if the current RequestGroup contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["intent"] === undefined) { missingElements.push("intent"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a RequestGroup from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.IRequestGroup):RequestGroup {
+    var dest:RequestGroup = new RequestGroup(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `RequestGroup is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**

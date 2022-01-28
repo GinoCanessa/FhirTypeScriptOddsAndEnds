@@ -6,89 +6,110 @@
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
 import * as fhirModels from '../models'
+import * as fhirInterfaces from '../interfaces'
 /**
  * A slot of time on a schedule that may be available for booking appointments.
  */
-export class Slot extends fhirModels.DomainResource {
+export class Slot extends fhirModels.DomainResource implements fhirInterfaces.ISlot {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = "Slot";
+  readonly resourceType = "Slot";
   /**
    * The style of appointment or patient that may be booked in the slot (not service type).
    */
-  appointmentType?: fhirModels.CodeableConcept;
+  appointmentType?: fhirModels.CodeableConcept|undefined;
   /**
    * Comments on the slot to describe any extended information. Such as custom constraints on the slot.
    */
-  comment?: string;
-  _comment?: fhirModels.Element;
+  comment?: string|undefined;
+  _comment?: fhirModels.Element|undefined;
   /**
    * Date/Time that the slot is to conclude.
    */
-  end: string;
-  _end?: fhirModels.Element;
+  end: string|undefined;
+  _end?: fhirModels.Element|undefined;
   /**
    * External Ids for this item.
    */
-  identifier?: fhirModels.Identifier[];
+  identifier?: fhirModels.Identifier[]|undefined;
   /**
    * This slot has already been overbooked, appointments are unlikely to be accepted for this time.
    */
-  overbooked?: boolean;
-  _overbooked?: fhirModels.Element;
+  overbooked?: boolean|undefined;
+  _overbooked?: fhirModels.Element|undefined;
   /**
    * The schedule resource that this slot defines an interval of status information.
    */
-  schedule: fhirModels.Reference;
+  schedule: fhirModels.Reference|undefined;
   /**
    * A broad categorization of the service that is to be performed during this appointment.
    */
-  serviceCategory?: fhirModels.CodeableConcept[];
+  serviceCategory?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The type of appointments that can be booked into this slot (ideally this would be an identifiable service - which is at a location, rather than the location itself). If provided then this overrides the value provided on the availability resource.
    */
-  serviceType?: fhirModels.CodeableConcept[];
+  serviceType?: fhirModels.CodeableConcept[]|undefined;
   /**
    * The specialty of a practitioner that would be required to perform the service requested in this appointment.
    */
-  specialty?: fhirModels.CodeableConcept[];
+  specialty?: fhirModels.CodeableConcept[]|undefined;
   /**
    * Date/Time that the slot is to begin.
    */
-  start: string;
-  _start?: fhirModels.Element;
+  start: string|undefined;
+  _start?: fhirModels.Element|undefined;
   /**
    * busy | free | busy-unavailable | busy-tentative | entered-in-error.
    */
-  status: SlotStatusEnum;
-  _status?: fhirModels.Element;
+  status: SlotStatusEnum|undefined;
+  _status?: fhirModels.Element|undefined;
   /**
-   * Default constructor
+   * Default constructor for Slot from an object that MAY NOT contain all required elements.
    */
-  constructor(source: Slot) {
+  constructor(source:Partial<fhirInterfaces.ISlot>) {
     super(source);
     if ((source['resourceType'] !== "Slot") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Slot'; }
-    if (source["appointmentType"] !== undefined) { this.appointmentType = source.appointmentType; }
+    if (source["appointmentType"] !== undefined) { this.appointmentType = new fhirModels.CodeableConcept(source.appointmentType); }
     if (source["comment"] !== undefined) { this.comment = source.comment; }
-    if (source["_comment"] !== undefined) { this._comment = source._comment; }
-    if (source["end"] === undefined) { throw 'Missing required element end';}
-    this.end = source.end;
-    if (source["_end"] !== undefined) { this._end = source._end; }
-    if (source["identifier"] !== undefined) { this.identifier = source.identifier; }
+    if (source["_comment"] !== undefined) { this._comment = new fhirModels.Element(source._comment); }
+    if (source["end"] !== undefined) { this.end = source.end; }
+    if (source["_end"] !== undefined) { this._end = new fhirModels.Element(source._end); }
+    if (source["identifier"] !== undefined) { this.identifier = source.identifier.map((x) => new fhirModels.Identifier(x)); }
     if (source["overbooked"] !== undefined) { this.overbooked = source.overbooked; }
-    if (source["_overbooked"] !== undefined) { this._overbooked = source._overbooked; }
-    if (source["schedule"] === undefined) { throw 'Missing required element schedule';}
-    this.schedule = source.schedule;
-    if (source["serviceCategory"] !== undefined) { this.serviceCategory = source.serviceCategory; }
-    if (source["serviceType"] !== undefined) { this.serviceType = source.serviceType; }
-    if (source["specialty"] !== undefined) { this.specialty = source.specialty; }
-    if (source["start"] === undefined) { throw 'Missing required element start';}
-    this.start = source.start;
-    if (source["_start"] !== undefined) { this._start = source._start; }
-    if (source["status"] === undefined) { throw 'Missing required element status';}
-    this.status = source.status;
-    if (source["_status"] !== undefined) { this._status = source._status; }
+    if (source["_overbooked"] !== undefined) { this._overbooked = new fhirModels.Element(source._overbooked); }
+    if (source["schedule"] !== undefined) { this.schedule = new fhirModels.Reference(source.schedule); }
+    if (source["serviceCategory"] !== undefined) { this.serviceCategory = source.serviceCategory.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["serviceType"] !== undefined) { this.serviceType = source.serviceType.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["specialty"] !== undefined) { this.specialty = source.specialty.map((x) => new fhirModels.CodeableConcept(x)); }
+    if (source["start"] !== undefined) { this.start = source.start; }
+    if (source["_start"] !== undefined) { this._start = new fhirModels.Element(source._start); }
+    if (source["status"] !== undefined) { this.status = source.status; }
+    if (source["_status"] !== undefined) { this._status = new fhirModels.Element(source._status); }
+  }
+  /**
+   * Check if the current Slot contains all required elements.
+   */
+  checkRequiredElements():string[] {
+    var missingElements:string[] = [];
+    if (this["end"] === undefined) { missingElements.push("end"); }
+    if (this["schedule"] === undefined) { missingElements.push("schedule"); }
+    if (this["start"] === undefined) { missingElements.push("start"); }
+    if (this["status"] === undefined) { missingElements.push("status"); }
+    var parentMissing:string[] = super.checkRequiredElements();
+    missingElements.push(...parentMissing);
+    return missingElements;
+  }
+  /**
+   * Factory function to create a Slot from an object that MUST contain all required elements.
+   */
+  static CreateStrict(source:fhirInterfaces.ISlot):Slot {
+    var dest:Slot = new Slot(source);
+    var missingElements:string[] = dest.checkRequiredElements();
+    if (missingElements.length !== 0) {
+    throw `Slot is missing elements: ${missingElements.join(", ")}`
+     }
+    return dest;
   }
 }
 /**
