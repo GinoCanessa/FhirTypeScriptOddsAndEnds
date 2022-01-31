@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * A code that identifies the status of the family history record.
  */

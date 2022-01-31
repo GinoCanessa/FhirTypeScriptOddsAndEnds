@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the destination within a TestScript.
  */

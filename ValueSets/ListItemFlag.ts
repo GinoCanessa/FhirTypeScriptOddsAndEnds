@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * Example Item Flags for the List Resource. In this case, these are the kind of flags that would be used on a medication list at the end of a consultation.
  */

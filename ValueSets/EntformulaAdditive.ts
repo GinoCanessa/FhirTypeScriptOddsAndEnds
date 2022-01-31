@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
  */

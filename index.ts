@@ -5,7 +5,9 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import * as Interfaces from './interfaces';
-import * as Models from './models';
+import * as StrictInterfaces from './strictinterfaces';
+import * as OptionalInterfaces from './optionalinterfaces';
+import * as StrictModels from './strictmodels';
+import * as OptionalModels from './optionalmodels';
 import * as ValueSets from './valuesets';
-export { Interfaces, Models, ValueSets };
+export { StrictInterfaces, OptionalInterfaces, StrictModels, OptionalModels, ValueSets };

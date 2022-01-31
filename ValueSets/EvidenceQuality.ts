@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
  */

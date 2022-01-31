@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  *  A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
  */

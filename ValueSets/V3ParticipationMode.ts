@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  *  A set of codes specifying the modality by which the Entity playing the Role is participating in the Act.  Examples:
  * Physically present, over the telephone, written communication.  Rationale:

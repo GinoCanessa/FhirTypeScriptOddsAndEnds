@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 703763000 |Precondition value (qualifier value)|
  */

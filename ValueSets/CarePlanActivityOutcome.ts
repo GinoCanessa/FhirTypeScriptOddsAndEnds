@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  * Example codes indicating the outcome of a care plan activity. Note that these are in no way complete and might not even be appropriate for some uses.
  */

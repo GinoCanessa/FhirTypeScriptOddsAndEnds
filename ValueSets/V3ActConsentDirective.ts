@@ -5,7 +5,7 @@
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
 // Minimum TypeScript Version: 3.7
-import { Coding } from '../models'
+import { Coding } from '../strictmodels'
 /**
  *  ActConsentDirective codes are used to specify the type of Consent Directive to which a Consent Directive Act conforms.
  */

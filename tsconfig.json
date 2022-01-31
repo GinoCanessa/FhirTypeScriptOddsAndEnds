@@ -16,12 +16,16 @@
       "noEmit": true,
   },
   "include":[
-    "interfaces.ts",
-    "models.ts",
+    "strictinterfaces.ts",
+    "optionalinterfaces.ts",
+    "strictmodels.ts",
+    "optionalmodels.ts",
     "valuesets.ts",
     "index.ts",
-    "Interfaces",
-    "Models",
+    "StrictInterfaces",
+    "OptionalInterfaces",
+    "StrictModels",
+    "OptionalModels",
     "ValueSets"
   ]
 }
