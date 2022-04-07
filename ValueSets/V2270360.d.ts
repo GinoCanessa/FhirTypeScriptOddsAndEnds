@@ -1,0 +1,68 @@
+import { Coding } from '../strictmodels';
+/**
+ * FHIR Value set/code system definition for HL7 v2 table 0360 ver 2.9 ( Degree/License/Certificate)
+ */
+export declare const V2270360: {
+    v2_2_7_0360_AssociateOfArts: Coding;
+    v2_2_7_0360_AssociateOfAppliedScience: Coding;
+    v2_2_7_0360_AssociateOfBusinessAdministration: Coding;
+    v2_2_7_0360_AssociateOfEngineering: Coding;
+    v2_2_7_0360_AssociateOfScience: Coding;
+    v2_2_7_0360_BachelorOfArts: Coding;
+    v2_2_7_0360_BachelorOfBusinessAdministration: Coding;
+    v2_2_7_0360_BachelorOrEngineering: Coding;
+    v2_2_7_0360_BachelorOfFineArts: Coding;
+    v2_2_7_0360_BachelorOfNursing: Coding;
+    v2_2_7_0360_BachelorOfScience: Coding;
+    v2_2_7_0360_BachelorOfScienceLaw: Coding;
+    v2_2_7_0360_BachelorOnScienceNursing: Coding;
+    v2_2_7_0360_BachelorOfTheology: Coding;
+    v2_2_7_0360_CertifiedAdultNursePractitioner: Coding;
+    v2_2_7_0360_Certificate: Coding;
+    v2_2_7_0360_CertifiedMedicalAssistant: Coding;
+    v2_2_7_0360_CertifiedNurseMidwife: Coding;
+    v2_2_7_0360_CertifiedNursePractitioner: Coding;
+    v2_2_7_0360_CertifiedNurseSpecialist: Coding;
+    v2_2_7_0360_CertifiedPediatricNursePractitioner: Coding;
+    v2_2_7_0360_CertifiedRegisteredNurse: Coding;
+    v2_2_7_0360_CertifiedTumorRegistrar: Coding;
+    v2_2_7_0360_DoctorOfBusinessAdministration: Coding;
+    v2_2_7_0360_DoctorOfEducation: Coding;
+    v2_2_7_0360_Diploma: Coding;
+    v2_2_7_0360_DoctorOfOsteopathy: Coding;
+    v2_2_7_0360_EmergencyMedicalTechnician: Coding;
+    v2_2_7_0360_EmergencyMedicalTechnicianParamedic: Coding;
+    v2_2_7_0360_FamilyPracticeNursePractitioner: Coding;
+    v2_2_7_0360_HighSchoolGraduate: Coding;
+    v2_2_7_0360_JurisDoctor: Coding;
+    v2_2_7_0360_MasterOfArts: Coding;
+    v2_2_7_0360_MasterOfBusinessAdministration: Coding;
+    v2_2_7_0360_MasterOfCivilEngineering: Coding;
+    v2_2_7_0360_DoctorOfMedicine: Coding;
+    v2_2_7_0360_MedicalAssistant: Coding;
+    v2_2_7_0360_MasterOfDivinity: Coding;
+    v2_2_7_0360_MasterOfEngineering: Coding;
+    v2_2_7_0360_MasterOfEducation: Coding;
+    v2_2_7_0360_MasterOfElectricalEngineering: Coding;
+    v2_2_7_0360_MasterOfFineArts: Coding;
+    v2_2_7_0360_MasterOfMechanicalEngineering: Coding;
+    v2_2_7_0360_MasterOfScience: Coding;
+    v2_2_7_0360_MasterOfScienceLaw: Coding;
+    v2_2_7_0360_MasterOfScienceNursing: Coding;
+    v2_2_7_0360_MedicalTechnician: Coding;
+    v2_2_7_0360_MasterOfTheology: Coding;
+    v2_2_7_0360_NonGraduate: Coding;
+    v2_2_7_0360_NursePractitioner: Coding;
+    v2_2_7_0360_PhysicianAssistant: Coding;
+    v2_2_7_0360_DoctorOfPharmacy: Coding;
+    v2_2_7_0360_DoctorOfPhilosophy: Coding;
+    v2_2_7_0360_DoctorOfEngineering: Coding;
+    v2_2_7_0360_DoctorOfScience: Coding;
+    v2_2_7_0360_AdvancedPracticeNurse: Coding;
+    v2_2_7_0360_RegisteredMedicalAssistant: Coding;
+    v2_2_7_0360_RegisteredNurse: Coding;
+    v2_2_7_0360_RegisteredPharmacist: Coding;
+    v2_2_7_0360_SecretarialCertificate: Coding;
+    v2_2_7_0360_TradeSchoolGraduate: Coding;
+};
+//# sourceMappingURL=V2270360.d.ts.map

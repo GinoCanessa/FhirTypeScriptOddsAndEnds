@@ -1,0 +1,63 @@
+import { Coding } from '../strictmodels';
+/**
+ * This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)
+ */
+export declare const Languages: {
+    Languages_Arabic: Coding;
+    Languages_Bengali: Coding;
+    Languages_Czech: Coding;
+    Languages_Danish: Coding;
+    Languages_German: Coding;
+    Languages_GermanAustria: Coding;
+    Languages_GermanSwitzerland: Coding;
+    Languages_GermanGermany: Coding;
+    Languages_Greek: Coding;
+    Languages_English: Coding;
+    Languages_EnglishAustralia: Coding;
+    Languages_EnglishCanada: Coding;
+    Languages_EnglishGreatBritain: Coding;
+    Languages_EnglishIndia: Coding;
+    Languages_EnglishNewZeland: Coding;
+    Languages_EnglishSingapore: Coding;
+    Languages_EnglishUnitedStates: Coding;
+    Languages_Spanish: Coding;
+    Languages_SpanishArgentina: Coding;
+    Languages_SpanishSpain: Coding;
+    Languages_SpanishUruguay: Coding;
+    Languages_Finnish: Coding;
+    Languages_French: Coding;
+    Languages_FrenchBelgium: Coding;
+    Languages_FrenchSwitzerland: Coding;
+    Languages_FrenchFrance: Coding;
+    Languages_Frysian: Coding;
+    Languages_FrysianNetherlands: Coding;
+    Languages_Hindi: Coding;
+    Languages_Croatian: Coding;
+    Languages_Italian: Coding;
+    Languages_ItalianSwitzerland: Coding;
+    Languages_ItalianItaly: Coding;
+    Languages_Japanese: Coding;
+    Languages_Korean: Coding;
+    Languages_Dutch: Coding;
+    Languages_DutchBelgium: Coding;
+    Languages_DutchNetherlands: Coding;
+    Languages_Norwegian: Coding;
+    Languages_NorwegianNorway: Coding;
+    Languages_Punjabi: Coding;
+    Languages_Polish: Coding;
+    Languages_Portuguese: Coding;
+    Languages_PortugueseBrazil: Coding;
+    Languages_Russian: Coding;
+    Languages_RussianRussia: Coding;
+    Languages_Serbian: Coding;
+    Languages_SerbianSerbia: Coding;
+    Languages_Swedish: Coding;
+    Languages_SwedishSweden: Coding;
+    Languages_Telegu: Coding;
+    Languages_Chinese: Coding;
+    Languages_ChineseChina: Coding;
+    Languages_ChineseHongKong: Coding;
+    Languages_ChineseSingapore: Coding;
+    Languages_ChineseTaiwan: Coding;
+};
+//# sourceMappingURL=Languages.d.ts.map
