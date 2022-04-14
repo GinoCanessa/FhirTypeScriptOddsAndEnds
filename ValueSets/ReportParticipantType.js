@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportParticipantType = void 0;
 /**
  * The type of participant.
  */
-export var ReportParticipantType = {
+exports.ReportParticipantType = {
     /**
      * A FHIR Client.
      */
@@ -25,5 +28,6 @@ export var ReportParticipantType = {
         code: "test-engine",
         display: "Test Engine",
         system: "http://hl7.org/fhir/report-participant-type"
-    }
+    },
 };
+//# sourceMappingURL=ReportParticipantType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceProvisionConditions = void 0;
 /**
  * The code(s) that detail the conditions under which the healthcare service is available/offered.
  */
-export var ServiceProvisionConditions = {
+exports.ServiceProvisionConditions = {
     /**
      * Fees apply for this service.
      */
@@ -25,5 +28,6 @@ export var ServiceProvisionConditions = {
         code: "free",
         display: "Free",
         system: "http://terminology.hl7.org/CodeSystem/service-provision-conditions"
-    }
+    },
 };
+//# sourceMappingURL=ServiceProvisionConditions.js.map

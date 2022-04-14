@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationStatementStatus = void 0;
 /**
  * Medication Status Codes
  */
-export var MedicationStatementStatus = {
+exports.MedicationStatementStatus = {
     /**
      * The medication is still being taken.
      */
@@ -65,5 +68,6 @@ export var MedicationStatementStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/CodeSystem/medication-statement-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationStatementStatus.js.map

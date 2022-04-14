@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountType = void 0;
 /**
  * This examples value set defines the set of codes that can be used to represent the type of an account.
  */
-export var AccountType = {
+exports.AccountType = {
     /**
      * An account represents a grouping of financial transactions that are tracked and reported together with a single balance. 	 	Examples of account codes (types) are Patient billing accounts (collection of charges), Cost centers; Cash.
      */
@@ -81,5 +84,6 @@ export var AccountType = {
         code: "V",
         display: "Visa",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=AccountType.js.map

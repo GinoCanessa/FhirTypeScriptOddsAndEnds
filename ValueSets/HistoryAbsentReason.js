@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HistoryAbsentReason = void 0;
 /**
  * Codes describing the reason why a family member's history is not available.
  */
-export var HistoryAbsentReason = {
+exports.HistoryAbsentReason = {
     /**
      * Patient does not have the information now, but can provide the information at a later date.
      */
@@ -33,5 +36,6 @@ export var HistoryAbsentReason = {
         code: "withheld",
         display: "Information Withheld",
         system: "http://terminology.hl7.org/CodeSystem/history-absent-reason"
-    }
+    },
 };
+//# sourceMappingURL=HistoryAbsentReason.js.map

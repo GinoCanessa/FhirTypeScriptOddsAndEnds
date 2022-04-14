@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceStatusReason = void 0;
 /**
  * The availability status reason of the device.
  */
-export var DeviceStatusReason = {
+exports.DeviceStatusReason = {
     /**
      * The device hardware is disconnected.
      */
@@ -65,5 +68,6 @@ export var DeviceStatusReason = {
         code: "transduc-discon",
         display: "Transducer Disconnected",
         system: "http://terminology.hl7.org/CodeSystem/device-status-reason"
-    }
+    },
 };
+//# sourceMappingURL=DeviceStatusReason.js.map

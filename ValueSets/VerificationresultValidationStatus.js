@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultValidationStatus = void 0;
 /**
  * Status of the validation of the target against the primary source
  */
-export var VerificationresultValidationStatus = {
+exports.VerificationresultValidationStatus = {
     verificationresult_validation_status_Failed: {
         code: "failed",
         display: "Failed",
@@ -19,5 +22,6 @@ export var VerificationresultValidationStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/validation-status"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultValidationStatus.js.map

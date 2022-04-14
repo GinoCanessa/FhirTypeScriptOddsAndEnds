@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChromosomeHuman = void 0;
 /**
  * Chromosome number for human.
  */
-export var ChromosomeHuman = {
+exports.ChromosomeHuman = {
     /**
      * chromosome 1.
      */
@@ -193,5 +196,6 @@ export var ChromosomeHuman = {
         code: "Y",
         display: "chromosome Y",
         system: "http://terminology.hl7.org/CodeSystem/chromosome-human"
-    }
+    },
 };
+//# sourceMappingURL=ChromosomeHuman.js.map

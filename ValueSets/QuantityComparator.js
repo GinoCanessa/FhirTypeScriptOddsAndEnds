@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuantityComparator = void 0;
 /**
  * How the Quantity should be understood and represented.
  */
-export var QuantityComparator = {
+exports.QuantityComparator = {
     /**
      * The actual value is less than the given value.
      */
@@ -33,5 +36,6 @@ export var QuantityComparator = {
         code: ">=",
         display: "Greater or Equal to",
         system: "http://hl7.org/fhir/quantity-comparator"
-    }
+    },
 };
+//# sourceMappingURL=QuantityComparator.js.map

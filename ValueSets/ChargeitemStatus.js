@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChargeitemStatus = void 0;
 /**
  * Codes identifying the lifecycle stage of a ChargeItem.
  */
-export var ChargeitemStatus = {
+exports.ChargeitemStatus = {
     /**
      * The processing of the charge was aborted.
      */
@@ -57,5 +60,6 @@ export var ChargeitemStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/chargeitem-status"
-    }
+    },
 };
+//# sourceMappingURL=ChargeitemStatus.js.map

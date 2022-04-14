@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchElementType = void 0;
 /**
  * The possible types of research elements (E.g. Population, Exposure, Outcome).
  */
-export var ResearchElementType = {
+exports.ResearchElementType = {
     /**
      * The element defines an exposure within the population that is being researched.
      */
@@ -25,5 +28,6 @@ export var ResearchElementType = {
         code: "population",
         display: "Population",
         system: "http://hl7.org/fhir/research-element-type"
-    }
+    },
 };
+//# sourceMappingURL=ResearchElementType.js.map

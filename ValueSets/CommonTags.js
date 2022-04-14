@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommonTags = void 0;
 /**
  * Common Tag Codes defined by FHIR project
  */
-export var CommonTags = {
+exports.CommonTags = {
     /**
      * This request is intended to be acted upon, not merely stored
      */
@@ -9,5 +12,6 @@ export var CommonTags = {
         code: "actionable",
         display: "Actionable",
         system: "http://terminology.hl7.org/CodeSystem/common-tags"
-    }
+    },
 };
+//# sourceMappingURL=CommonTags.js.map

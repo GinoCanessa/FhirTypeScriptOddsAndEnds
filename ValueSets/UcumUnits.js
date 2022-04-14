@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UcumUnits = void 0;
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export var UcumUnits = {
+exports.UcumUnits = {
     UcumUnits_IgAAnticardiolipinUnit: {
         code: "[APL'U]",
         display: "IgA anticardiolipin unit",
@@ -4921,5 +4924,6 @@ export var UcumUnits = {
         code: "V",
         display: "volt",
         system: "http://unitsofmeasure.org"
-    }
+    },
 };
+//# sourceMappingURL=UcumUnits.js.map

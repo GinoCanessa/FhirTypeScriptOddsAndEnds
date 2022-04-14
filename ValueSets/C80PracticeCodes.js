@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.C80PracticeCodes = void 0;
 /**
  * This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.
  */
-export var C80PracticeCodes = {
+exports.C80PracticeCodes = {
     C80PracticeCodes_PediatricSurgery: {
         code: "394539006",
         display: "Pediatric surgery",
@@ -576,5 +579,6 @@ export var C80PracticeCodes = {
         code: "422191005",
         display: "Ophthalmic surgery",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=C80PracticeCodes.js.map

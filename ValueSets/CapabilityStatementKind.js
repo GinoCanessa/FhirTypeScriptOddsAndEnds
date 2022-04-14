@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CapabilityStatementKind = void 0;
 /**
  * How a capability statement is intended to be used.
  */
-export var CapabilityStatementKind = {
+exports.CapabilityStatementKind = {
     /**
      * The CapabilityStatement instance represents the capabilities of a system or piece of software, independent of a particular installation.
      */
@@ -25,5 +28,6 @@ export var CapabilityStatementKind = {
         code: "requirements",
         display: "Requirements",
         system: "http://hl7.org/fhir/capability-statement-kind"
-    }
+    },
 };
+//# sourceMappingURL=CapabilityStatementKind.js.map

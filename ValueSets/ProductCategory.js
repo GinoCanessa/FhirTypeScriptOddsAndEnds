@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductCategory = void 0;
 /**
  * Biologically Derived Product Category.
  */
-export var ProductCategory = {
+exports.ProductCategory = {
     /**
      * Biological agent of unspecified type.
      */
@@ -41,5 +44,6 @@ export var ProductCategory = {
         code: "tissue",
         display: "Tissue",
         system: "http://hl7.org/fhir/product-category"
-    }
+    },
 };
+//# sourceMappingURL=ProductCategory.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PreparePatientPriorSpecimenCollection = void 0;
 /**
  * Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 703763000 |Precondition value (qualifier value)|
  */
-export var PreparePatientPriorSpecimenCollection = {
+exports.PreparePatientPriorSpecimenCollection = {
     PreparePatientPriorSpecimenCollection_VAL1HPost50GGlucosePO: {
         code: "703760002",
         display: "1H post 50 g glucose PO",
@@ -226,5 +229,6 @@ export var PreparePatientPriorSpecimenCollection = {
         code: "707820009",
         display: "On menstrual cycle day 3",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=PreparePatientPriorSpecimenCollection.js.map

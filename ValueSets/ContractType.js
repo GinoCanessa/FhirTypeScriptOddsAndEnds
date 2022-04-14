@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractType = void 0;
 /**
  * This value set includes sample Contract Type codes.
  */
-export var ContractType = {
+exports.ContractType = {
     /**
      * Consent Directive.
      */
@@ -41,5 +44,6 @@ export var ContractType = {
         code: "supply",
         display: "Supply Contract",
         system: "http://terminology.hl7.org/CodeSystem/contract-type"
-    }
+    },
 };
+//# sourceMappingURL=ContractType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecimenStatus = void 0;
 /**
  * Codes providing the status/availability of a specimen.
  */
-export var SpecimenStatus = {
+exports.SpecimenStatus = {
     /**
      * The physical specimen is present and in good condition.
      */
@@ -33,5 +36,6 @@ export var SpecimenStatus = {
         code: "unsatisfactory",
         display: "Unsatisfactory",
         system: "http://hl7.org/fhir/specimen-status"
-    }
+    },
 };
+//# sourceMappingURL=SpecimenStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.C80Facilitycodes = void 0;
 /**
  * This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.
  */
-export var C80Facilitycodes = {
+exports.C80Facilitycodes = {
     C80Facilitycodes_HospitalOutpatientDentalClinic: {
         code: "10206005",
         display: "Hospital outpatient dental clinic",
@@ -396,5 +399,6 @@ export var C80Facilitycodes = {
         code: "91154008",
         display: "Free-standing birthing center",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=C80Facilitycodes.js.map

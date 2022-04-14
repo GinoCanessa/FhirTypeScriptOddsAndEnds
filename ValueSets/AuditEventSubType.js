@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEventSubType = void 0;
 /**
  * More detailed code concerning the type of the audit event - defined by DICOM with some FHIR specific additions.
  */
-export var AuditEventSubType = {
+exports.AuditEventSubType = {
     /**
      * Audit event: Application Entity has started
      */
@@ -321,5 +324,6 @@ export var AuditEventSubType = {
         code: "vread",
         display: "vread",
         system: "http://hl7.org/fhir/restful-interaction"
-    }
+    },
 };
+//# sourceMappingURL=AuditEventSubType.js.map

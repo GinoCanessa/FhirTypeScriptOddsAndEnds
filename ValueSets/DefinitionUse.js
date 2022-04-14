@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefinitionUse = void 0;
 /**
  * Structure Definition Use Codes / Keywords
  */
-export var DefinitionUse = {
+exports.DefinitionUse = {
     /**
      * This structure captures an analysis of a domain
      */
@@ -49,5 +52,6 @@ export var DefinitionUse = {
         code: "wire-format",
         display: "Wire Format",
         system: "http://terminology.hl7.org/CodeSystem/definition-use"
-    }
+    },
 };
+//# sourceMappingURL=DefinitionUse.js.map

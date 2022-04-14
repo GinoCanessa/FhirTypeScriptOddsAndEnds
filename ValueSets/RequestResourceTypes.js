@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestResourceTypes = void 0;
 /**
  * A list of all the request resource types defined in this version of the FHIR specification.
  */
-export var RequestResourceTypes = {
+exports.RequestResourceTypes = {
     /**
      * A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s).
      */
@@ -121,5 +124,6 @@ export var RequestResourceTypes = {
         code: "VisionPrescription",
         display: "VisionPrescription",
         system: "http://hl7.org/fhir/request-resource-types"
-    }
+    },
 };
+//# sourceMappingURL=RequestResourceTypes.js.map

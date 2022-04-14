@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageReasonEncounter = void 0;
 /**
  * Example Message Reasons. These are the set of codes that might be used an updating an encounter using admin-update.
  */
-export var MessageReasonEncounter = {
+exports.MessageReasonEncounter = {
     /**
      * The patient has temporarily left the institution.
      */
@@ -49,5 +52,6 @@ export var MessageReasonEncounter = {
         code: "return",
         display: "Returned",
         system: "http://terminology.hl7.org/CodeSystem/message-reasons-encounter"
-    }
+    },
 };
+//# sourceMappingURL=MessageReasonEncounter.js.map

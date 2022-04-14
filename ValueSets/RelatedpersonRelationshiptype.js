@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelatedpersonRelationshiptype = void 0;
 /**
  * A set of codes that can be used to indicate the relationship between a Patient and a Related Person.
  */
-export var RelatedpersonRelationshiptype = {
+exports.RelatedpersonRelationshiptype = {
     /**
      * PersonalRelationshipRoleType
      */
@@ -895,5 +898,6 @@ export var RelatedpersonRelationshiptype = {
         code: "WIFE",
         display: "wife",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
-    }
+    },
 };
+//# sourceMappingURL=RelatedpersonRelationshiptype.js.map

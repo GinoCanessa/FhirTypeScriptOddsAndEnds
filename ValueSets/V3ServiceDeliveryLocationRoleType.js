@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ServiceDeliveryLocationRoleType = void 0;
 /**
  *  A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.
  */
-export var V3ServiceDeliveryLocationRoleType = {
+exports.V3ServiceDeliveryLocationRoleType = {
     /**
      * A role of a place that further classifies the clinical setting (e.g., cardiology clinic, primary care clinic, rehabilitation hospital, skilled nursing facility) in which care is delivered during an encounter.
      */
@@ -1017,5 +1020,6 @@ export var V3ServiceDeliveryLocationRoleType = {
         code: "WORK",
         display: "work site",
         system: "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
-    }
+    },
 };
+//# sourceMappingURL=V3ServiceDeliveryLocationRoleType.js.map

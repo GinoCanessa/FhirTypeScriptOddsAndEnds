@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractActionstatus = void 0;
 /**
  * This value set contract specific codes for action status.
  */
-export var ContractActionstatus = {
+exports.ContractActionstatus = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractActionstatus = {
         code: "complete",
         display: "Complete",
         system: "http://hl7.org/fhir/contract-action-status"
-    }
+    },
 };
+//# sourceMappingURL=ContractActionstatus.js.map

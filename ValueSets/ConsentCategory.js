@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentCategory = void 0;
 /**
  * This value set includes sample Consent Directive Type codes, including several consent directive related LOINC codes; HL7 VALUE SET: ActConsentType(2.16.840.1.113883.1.11.19897); examples of US realm consent directive legal descriptions and references to online and/or downloadable forms such as the SSA-827 Authorization to Disclose Information to the Social Security Administration; and other anticipated consent directives related to participation in a clinical trial, medical procedures, reproductive procedures; health care directive (Living Will); advance directive, do not resuscitate (DNR); Physician Orders for Life-Sustaining Treatment (POLST)
  */
-export var ConsentCategory = {
+exports.ConsentCategory = {
     /**
      * Any instructions, written or given verbally by a patient to a health care provider in anticipation of potential need for medical treatment. [2005 Honor My Wishes]
      */
@@ -151,5 +154,6 @@ export var ConsentCategory = {
         code: "RSREID",
         display: "re-identifiable information access",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=ConsentCategory.js.map

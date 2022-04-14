@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GraphCompartmentUse = void 0;
 /**
  * Defines how a compartment rule is used.
  */
-export var GraphCompartmentUse = {
+exports.GraphCompartmentUse = {
     /**
      * This compartment rule is a condition for whether the rule applies.
      */
@@ -17,5 +20,6 @@ export var GraphCompartmentUse = {
         code: "requirement",
         display: "Requirement",
         system: "http://hl7.org/fhir/graph-compartment-use"
-    }
+    },
 };
+//# sourceMappingURL=GraphCompartmentUse.js.map

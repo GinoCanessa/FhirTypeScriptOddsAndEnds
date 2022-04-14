@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddressType = void 0;
 /**
  * The type of an address (physical / postal).
  */
-export var AddressType = {
+exports.AddressType = {
     /**
      * An address that is both physical and postal.
      */
@@ -25,5 +28,6 @@ export var AddressType = {
         code: "postal",
         display: "Postal",
         system: "http://hl7.org/fhir/address-type"
-    }
+    },
 };
+//# sourceMappingURL=AddressType.js.map

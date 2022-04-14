@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceStatus = void 0;
 /**
  * The availability status of the device.
  */
-export var DeviceStatus = {
+exports.DeviceStatus = {
     /**
      * The device is available for use.  Note: For *implanted devices*  this means that the device is implanted in the patient.
      */
@@ -33,5 +36,6 @@ export var DeviceStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/device-status"
-    }
+    },
 };
+//# sourceMappingURL=DeviceStatus.js.map

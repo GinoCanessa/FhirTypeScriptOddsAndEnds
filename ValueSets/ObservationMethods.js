@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObservationMethods = void 0;
 /**
  * Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))
  */
-export var ObservationMethods = {
+exports.ObservationMethods = {
     ObservationMethods_AntiStreptokinaseAssay: {
         code: "10071009",
         display: "Anti-streptokinase assay",
@@ -6141,5 +6144,6 @@ export var ObservationMethods = {
         code: "9988008",
         display: "Computerized tomography, oblique",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ObservationMethods.js.map

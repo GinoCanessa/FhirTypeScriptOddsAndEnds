@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplyrequestKind = void 0;
 /**
  * This value sets refers to a Category of supply.
  */
-export var SupplyrequestKind = {
+exports.SupplyrequestKind = {
     /**
      * Supply is stored and requested from central supply.
      */
@@ -17,5 +20,6 @@ export var SupplyrequestKind = {
         code: "nonstock",
         display: "Non-Stock",
         system: "http://terminology.hl7.org/CodeSystem/supply-kind"
-    }
+    },
 };
+//# sourceMappingURL=SupplyrequestKind.js.map

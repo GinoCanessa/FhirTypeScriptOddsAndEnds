@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointConnectionType = void 0;
 /**
  * This is an example value set defined by the FHIR project, that could be used to represent possible connection type profile values.
  */
-export var EndpointConnectionType = {
+exports.EndpointConnectionType = {
     /**
      * DICOMweb RESTful Image query - http://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_6.7.html
      */
@@ -113,5 +116,6 @@ export var EndpointConnectionType = {
         code: "secure-email",
         display: "Secure email",
         system: "http://terminology.hl7.org/CodeSystem/endpoint-connection-type"
-    }
+    },
 };
+//# sourceMappingURL=EndpointConnectionType.js.map

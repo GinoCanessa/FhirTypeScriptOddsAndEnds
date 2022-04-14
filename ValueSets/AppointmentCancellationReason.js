@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppointmentCancellationReason = void 0;
 /**
  * This example value set defines a set of reasons for the cancellation of an appointment.
  */
-export var AppointmentCancellationReason = {
+exports.AppointmentCancellationReason = {
     appointment_cancellation_reason_EquipmentMaintenanceRepair: {
         code: "maint",
         display: "Equipment Maintenance/Repair",
@@ -161,5 +164,6 @@ export var AppointmentCancellationReason = {
         code: "prov-pers",
         display: "Provider: Personal",
         system: "http://terminology.hl7.org/CodeSystem/appointment-cancellation-reason"
-    }
+    },
 };
+//# sourceMappingURL=AppointmentCancellationReason.js.map

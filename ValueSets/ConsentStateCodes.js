@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentStateCodes = void 0;
 /**
  * Indicates the state of the consent.
  */
-export var ConsentStateCodes = {
+exports.ConsentStateCodes = {
     /**
      * The consent is to be followed and enforced.
      */
@@ -49,5 +52,6 @@ export var ConsentStateCodes = {
         code: "rejected",
         display: "Rejected",
         system: "http://hl7.org/fhir/consent-state-codes"
-    }
+    },
 };
+//# sourceMappingURL=ConsentStateCodes.js.map

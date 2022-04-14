@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssetAvailability = void 0;
 /**
  * This value set has asset availability codes.
  */
-export var AssetAvailability = {
+exports.AssetAvailability = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var AssetAvailability = {
         code: "lease",
         display: "Lease",
         system: "http://hl7.org/fhir/asset-availability"
-    }
+    },
 };
+//# sourceMappingURL=AssetAvailability.js.map

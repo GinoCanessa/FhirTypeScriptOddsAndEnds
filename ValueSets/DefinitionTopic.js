@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefinitionTopic = void 0;
 /**
  * High-level categorization of the definition, used for searching, sorting, and filtering.
  */
-export var DefinitionTopic = {
+exports.DefinitionTopic = {
     /**
      * The definition is related to assessment of the patient.
      */
@@ -25,5 +28,6 @@ export var DefinitionTopic = {
         code: "treatment",
         display: "Treatment",
         system: "http://terminology.hl7.org/CodeSystem/definition-topic"
-    }
+    },
 };
+//# sourceMappingURL=DefinitionTopic.js.map

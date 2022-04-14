@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkType = void 0;
 /**
  * The type of link between this patient resource and another patient resource.
  */
-export var LinkType = {
+exports.LinkType = {
     /**
      * The patient resource containing this link is in use and valid but not considered the main source of information about a patient. The link points forward to another patient resource that should be consulted to retrieve additional patient information.
      */
@@ -33,5 +36,6 @@ export var LinkType = {
         code: "seealso",
         display: "See also",
         system: "http://hl7.org/fhir/link-type"
-    }
+    },
 };
+//# sourceMappingURL=LinkType.js.map

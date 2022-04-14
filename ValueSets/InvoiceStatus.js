@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoiceStatus = void 0;
 /**
  * Codes identifying the lifecycle stage of an Invoice.
  */
-export var InvoiceStatus = {
+exports.InvoiceStatus = {
     /**
      * the invoice has been balaced / completely paid.
      */
@@ -41,5 +44,6 @@ export var InvoiceStatus = {
         code: "issued",
         display: "issued",
         system: "http://hl7.org/fhir/invoice-status"
-    }
+    },
 };
+//# sourceMappingURL=InvoiceStatus.js.map

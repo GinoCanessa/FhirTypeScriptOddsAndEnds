@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductStorageScale = void 0;
 /**
  * BiologicallyDerived Product Storage Scale.
  */
-export var ProductStorageScale = {
+exports.ProductStorageScale = {
     /**
      * Celsius or centigrade temperature scale.
      */
@@ -25,5 +28,6 @@ export var ProductStorageScale = {
         code: "kelvin",
         display: "Kelvin",
         system: "http://hl7.org/fhir/product-storage-scale"
-    }
+    },
 };
+//# sourceMappingURL=ProductStorageScale.js.map

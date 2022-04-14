@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvenanceAgentRole = void 0;
 /**
  * The role that a provenance participant played
  */
-export var ProvenanceAgentRole = {
+exports.ProvenanceAgentRole = {
     /**
      * A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
      */
@@ -81,5 +84,6 @@ export var ProvenanceAgentRole = {
         code: "verifier",
         display: "Verifier",
         system: "http://hl7.org/fhir/provenance-participant-role"
-    }
+    },
 };
+//# sourceMappingURL=ProvenanceAgentRole.js.map

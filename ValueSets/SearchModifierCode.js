@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchModifierCode = void 0;
 /**
  * A supported modifier for a search parameter.
  */
-export var SearchModifierCode = {
+exports.SearchModifierCode = {
     /**
      * The search parameter tests whether the value in a resource subsumes the specified value (is-a, or hierarchical relationships).
      */
@@ -97,5 +100,6 @@ export var SearchModifierCode = {
         code: "type",
         display: "Type",
         system: "http://hl7.org/fhir/search-modifier-code"
-    }
+    },
 };
+//# sourceMappingURL=SearchModifierCode.js.map

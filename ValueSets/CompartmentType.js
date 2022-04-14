@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompartmentType = void 0;
 /**
  * Which type a compartment definition describes.
  */
-export var CompartmentType = {
+exports.CompartmentType = {
     /**
      * The compartment definition is for the device compartment.
      */
@@ -41,5 +44,6 @@ export var CompartmentType = {
         code: "RelatedPerson",
         display: "RelatedPerson",
         system: "http://hl7.org/fhir/compartment-type"
-    }
+    },
 };
+//# sourceMappingURL=CompartmentType.js.map

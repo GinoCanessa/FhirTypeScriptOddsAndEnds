@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BenefitTerm = void 0;
 /**
  * This value set includes a smattering of Benefit Term codes.
  */
-export var BenefitTerm = {
+exports.BenefitTerm = {
     /**
      * Annual, renewing on the anniversary
      */
@@ -25,5 +28,6 @@ export var BenefitTerm = {
         code: "lifetime",
         display: "Lifetime",
         system: "http://terminology.hl7.org/CodeSystem/benefit-term"
-    }
+    },
 };
+//# sourceMappingURL=BenefitTerm.js.map

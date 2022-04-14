@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionalReadStatus = void 0;
 /**
  * A code that indicates how the server supports conditional read.
  */
-export var ConditionalReadStatus = {
+exports.ConditionalReadStatus = {
     /**
      * Conditional reads are supported, with both If-Modified-Since and If-None-Match HTTP Headers.
      */
@@ -33,5 +36,6 @@ export var ConditionalReadStatus = {
         code: "not-supported",
         display: "Not Supported",
         system: "http://hl7.org/fhir/conditional-read-status"
-    }
+    },
 };
+//# sourceMappingURL=ConditionalReadStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasurePopulation = void 0;
 /**
  * The type of population.
  */
-export var MeasurePopulation = {
+exports.MeasurePopulation = {
     /**
      * The lower portion of a fraction used to calculate a rate, proportion, or ratio. The denominator can be the same as the initial population, or a subset of the initial population to further constrain the population for the purpose of the measure.
      */
@@ -73,5 +76,6 @@ export var MeasurePopulation = {
         code: "numerator-exclusion",
         display: "Numerator Exclusion",
         system: "http://terminology.hl7.org/CodeSystem/measure-population"
-    }
+    },
 };
+//# sourceMappingURL=MeasurePopulation.js.map

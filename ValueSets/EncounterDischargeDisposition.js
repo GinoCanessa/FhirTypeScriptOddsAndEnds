@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterDischargeDisposition = void 0;
 /**
  * This value set defines a set of codes that can be used to where the patient left the hospital.
  */
-export var EncounterDischargeDisposition = {
+exports.EncounterDischargeDisposition = {
     /**
      * The patient self discharged against medical advice.
      */
@@ -89,5 +92,6 @@ export var EncounterDischargeDisposition = {
         code: "snf",
         display: "Skilled nursing facility",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
-    }
+    },
 };
+//# sourceMappingURL=EncounterDischargeDisposition.js.map

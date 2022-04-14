@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationKind = void 0;
 /**
  * Whether an operation is a normal operation or a query.
  */
-export var OperationKind = {
+exports.OperationKind = {
     /**
      * This operation is invoked as an operation.
      */
@@ -17,5 +20,6 @@ export var OperationKind = {
         code: "query",
         display: "Query",
         system: "http://hl7.org/fhir/operation-kind"
-    }
+    },
 };
+//# sourceMappingURL=OperationKind.js.map

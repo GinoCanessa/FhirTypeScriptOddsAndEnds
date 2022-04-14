@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentAction = void 0;
 /**
  * This value set includes sample Consent Action codes.
  */
-export var ConsentAction = {
+exports.ConsentAction = {
     /**
      * Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)
      */
@@ -41,5 +44,6 @@ export var ConsentAction = {
         code: "use",
         display: "Use",
         system: "http://terminology.hl7.org/CodeSystem/consentaction"
-    }
+    },
 };
+//# sourceMappingURL=ConsentAction.js.map

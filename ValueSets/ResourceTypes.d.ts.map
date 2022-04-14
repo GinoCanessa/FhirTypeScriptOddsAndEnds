@@ -1,1 +1,1 @@
-{"version":3,"file":"ResourceTypes.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/ResourceTypes.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,aAAa,IACzB,CAAC"}
+{"version":3,"file":"ResourceTypes.d.ts","sourceRoot":"","sources":["../../ValueSets/ResourceTypes.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,aAAa,IACzB,CAAC"}

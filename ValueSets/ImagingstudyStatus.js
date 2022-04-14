@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImagingstudyStatus = void 0;
 /**
  * The status of the ImagingStudy.
  */
-export var ImagingstudyStatus = {
+exports.ImagingstudyStatus = {
     /**
      * At least one instance has been associated with this imaging study.
      */
@@ -41,5 +44,6 @@ export var ImagingstudyStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/imagingstudy-status"
-    }
+    },
 };
+//# sourceMappingURL=ImagingstudyStatus.js.map

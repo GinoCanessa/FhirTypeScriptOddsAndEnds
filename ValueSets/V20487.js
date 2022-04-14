@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V20487 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0487 ( Specimen Type)
  */
-export var V20487 = {
+exports.V20487 = {
     v2_0487_Abscess: {
         code: "ABS",
         display: "Abscess",
@@ -1566,5 +1569,6 @@ export var V20487 = {
         code: "WWT",
         display: "Environmental, Water  (Tap)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0487"
-    }
+    },
 };
+//# sourceMappingURL=V20487.js.map

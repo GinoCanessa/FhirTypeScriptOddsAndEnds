@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasureReportStatus = void 0;
 /**
  * The status of the measure report.
  */
-export var MeasureReportStatus = {
+exports.MeasureReportStatus = {
     /**
      * The report is complete and ready for use.
      */
@@ -25,5 +28,6 @@ export var MeasureReportStatus = {
         code: "pending",
         display: "Pending",
         system: "http://hl7.org/fhir/measure-report-status"
-    }
+    },
 };
+//# sourceMappingURL=MeasureReportStatus.js.map

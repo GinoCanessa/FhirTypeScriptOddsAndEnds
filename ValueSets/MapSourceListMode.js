@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapSourceListMode = void 0;
 /**
  * If field is a list, how to manage the source.
  */
-export var MapSourceListMode = {
+exports.MapSourceListMode = {
     /**
      * Only process this rule for the first in the list.
      */
@@ -41,5 +44,6 @@ export var MapSourceListMode = {
         code: "only_one",
         display: "Enforce only one",
         system: "http://hl7.org/fhir/map-source-list-mode"
-    }
+    },
 };
+//# sourceMappingURL=MapSourceListMode.js.map

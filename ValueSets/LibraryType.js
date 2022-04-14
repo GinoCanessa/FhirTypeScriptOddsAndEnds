@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LibraryType = void 0;
 /**
  * The type of knowledge asset this library contains.
  */
-export var LibraryType = {
+exports.LibraryType = {
     /**
      * The resource is a collection of knowledge assets.
      */
@@ -33,5 +36,6 @@ export var LibraryType = {
         code: "module-definition",
         display: "Module Definition",
         system: "http://terminology.hl7.org/CodeSystem/library-type"
-    }
+    },
 };
+//# sourceMappingURL=LibraryType.js.map

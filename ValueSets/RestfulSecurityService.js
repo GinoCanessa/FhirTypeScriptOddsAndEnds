@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestfulSecurityService = void 0;
 /**
  * Types of security services used with FHIR.
  */
-export var RestfulSecurityService = {
+exports.RestfulSecurityService = {
     /**
      * Basic authentication defined in HTTP specification.
      */
@@ -49,5 +52,6 @@ export var RestfulSecurityService = {
         code: "SMART-on-FHIR",
         display: "SMART-on-FHIR",
         system: "http://terminology.hl7.org/CodeSystem/restful-security-service"
-    }
+    },
 };
+//# sourceMappingURL=RestfulSecurityService.js.map

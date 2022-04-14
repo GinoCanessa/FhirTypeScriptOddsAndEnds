@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventCategory = void 0;
 /**
  * Overall categorization of the event, e.g. product-related or situational.
  */
-export var AdverseEventCategory = {
+exports.AdverseEventCategory = {
     /**
      * The adverse event pertains to an expired drug.
      */
@@ -113,5 +116,6 @@ export var AdverseEventCategory = {
         code: "wrong-time",
         display: "Wrong Time",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-category"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventCategory.js.map

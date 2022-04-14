@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V20916 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0916 ( Relevant Clincial Information)
  */
-export var V20916 = {
+exports.V20916 = {
     v2_0916_PatientWasFastingPriorToTheProcedure: {
         code: "F",
         display: "Patient was fasting prior to the procedure.",
@@ -16,5 +19,6 @@ export var V20916 = {
         code: "NG",
         display: "Not Given - Patient was not asked at the time of the procedure.",
         system: "http://terminology.hl7.org/CodeSystem/v2-0916"
-    }
+    },
 };
+//# sourceMappingURL=V20916.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicerequestOrderdetail = void 0;
 /**
  * An example value set of Codified order entry details concepts.  These concepts only make sense in the context of what is being ordered.  This example is for a patient ventilation order
  */
-export var ServicerequestOrderdetail = {
+exports.ServicerequestOrderdetail = {
     ServicerequestOrderdetail_PatientTriggeredInspiratoryAssistanceProcedure: {
         code: "243144002",
         display: "Patient triggered inspiratory assistance (procedure)",
@@ -26,5 +29,6 @@ export var ServicerequestOrderdetail = {
         code: "59427005",
         display: "Synchronized intermittent mandatory ventilation (procedure)",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ServicerequestOrderdetail.js.map

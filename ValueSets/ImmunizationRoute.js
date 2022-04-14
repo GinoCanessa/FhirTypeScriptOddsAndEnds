@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationRoute = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the administrative routes used during vaccination. This value set is provided as a suggestive example.
  */
-export var ImmunizationRoute = {
+exports.ImmunizationRoute = {
     /**
      * Injection, intradermal
      */
@@ -49,5 +52,6 @@ export var ImmunizationRoute = {
         code: "TRNSDERM",
         display: "Transdermal",
         system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationRoute.js.map

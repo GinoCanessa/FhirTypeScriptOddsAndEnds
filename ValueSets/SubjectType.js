@@ -1,4 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubjectType = void 0;
 /**
  * Possible types of subjects.
  */
-export var SubjectType = {};
+exports.SubjectType = {};
+//# sourceMappingURL=SubjectType.js.map

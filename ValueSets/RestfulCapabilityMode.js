@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RestfulCapabilityMode = void 0;
 /**
  * The mode of a RESTful capability statement.
  */
-export var RestfulCapabilityMode = {
+exports.RestfulCapabilityMode = {
     /**
      * The application acts as a client for this resource.
      */
@@ -17,5 +20,6 @@ export var RestfulCapabilityMode = {
         code: "server",
         display: "Server",
         system: "http://hl7.org/fhir/restful-capability-mode"
-    }
+    },
 };
+//# sourceMappingURL=RestfulCapabilityMode.js.map

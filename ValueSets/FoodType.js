@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FoodType = void 0;
 /**
  * This value set represents codes for types of foods and is provided as a suggestive example. It include codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 255620007 (Foods (substance)).
  */
-export var FoodType = {
+exports.FoodType = {
     FoodType_CitrusFruit: {
         code: "102259006",
         display: "Citrus fruit",
@@ -4981,5 +4984,6 @@ export var FoodType = {
         code: "96364008",
         display: "Sometribove",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=FoodType.js.map

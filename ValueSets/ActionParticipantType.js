@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionParticipantType = void 0;
 /**
  * The type of participant for the action.
  */
-export var ActionParticipantType = {
+exports.ActionParticipantType = {
     /**
      * The participant is a system or device used in the care of the patient.
      */
@@ -33,5 +36,6 @@ export var ActionParticipantType = {
         code: "related-person",
         display: "Related Person",
         system: "http://hl7.org/fhir/action-participant-type"
-    }
+    },
 };
+//# sourceMappingURL=ActionParticipantType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AccountStatus = void 0;
 /**
  * Indicates whether the account is available to be used.
  */
-export var AccountStatus = {
+exports.AccountStatus = {
     /**
      * This account is active and may be used.
      */
@@ -41,5 +44,6 @@ export var AccountStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/account-status"
-    }
+    },
 };
+//# sourceMappingURL=AccountStatus.js.map

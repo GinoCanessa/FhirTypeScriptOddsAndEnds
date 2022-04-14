@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferencerangeAppliesto = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.
  */
-export var ReferencerangeAppliesto = {
+exports.ReferencerangeAppliesto = {
     /**
      * American Indian or Alaska Native
      */
@@ -7377,5 +7380,6 @@ export var ReferencerangeAppliesto = {
         code: "2500-7",
         display: "Other Pacific Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
-    }
+    },
 };
+//# sourceMappingURL=ReferencerangeAppliesto.js.map

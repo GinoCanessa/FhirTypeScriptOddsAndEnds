@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalAchievement = void 0;
 /**
  * Describes the progression, or lack thereof, towards the goal against the target.
  */
-export var GoalAchievement = {
+exports.GoalAchievement = {
     /**
      * The goal has been met.
      */
@@ -73,5 +76,6 @@ export var GoalAchievement = {
         code: "worsening",
         display: "Worsening",
         system: "http://terminology.hl7.org/CodeSystem/goal-achievement"
-    }
+    },
 };
+//# sourceMappingURL=GoalAchievement.js.map

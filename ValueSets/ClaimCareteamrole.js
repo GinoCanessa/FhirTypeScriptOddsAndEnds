@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimCareteamrole = void 0;
 /**
  * This value set includes sample Claim Care Team Role codes.
  */
-export var ClaimCareteamrole = {
+exports.ClaimCareteamrole = {
     /**
      * Assisting care provider.
      */
@@ -33,5 +36,6 @@ export var ClaimCareteamrole = {
         code: "supervisor",
         display: "Supervising Provider",
         system: "http://terminology.hl7.org/CodeSystem/claimcareteamrole"
-    }
+    },
 };
+//# sourceMappingURL=ClaimCareteamrole.js.map

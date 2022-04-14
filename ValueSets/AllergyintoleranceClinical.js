@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyintoleranceClinical = void 0;
 /**
  * Preferred value set for AllergyIntolerance Clinical Status.
  */
-export var AllergyintoleranceClinical = {
+exports.AllergyintoleranceClinical = {
     /**
      * The subject is currently experiencing, or is at risk of, a reaction to the identified substance.
      */
@@ -25,5 +28,6 @@ export var AllergyintoleranceClinical = {
         code: "resolved",
         display: "Resolved",
         system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
-    }
+    },
 };
+//# sourceMappingURL=AllergyintoleranceClinical.js.map

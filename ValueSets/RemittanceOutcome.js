@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemittanceOutcome = void 0;
 /**
  * This value set includes Claim Processing Outcome codes.
  */
-export var RemittanceOutcome = {
+exports.RemittanceOutcome = {
     /**
      * The processing has completed without errors
      */
@@ -33,5 +36,6 @@ export var RemittanceOutcome = {
         code: "queued",
         display: "Queued",
         system: "http://hl7.org/fhir/remittance-outcome"
-    }
+    },
 };
+//# sourceMappingURL=RemittanceOutcome.js.map

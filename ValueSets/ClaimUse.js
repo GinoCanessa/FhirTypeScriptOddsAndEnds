@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimUse = void 0;
 /**
  * The purpose of the Claim: predetermination, preauthorization, claim.
  */
-export var ClaimUse = {
+exports.ClaimUse = {
     /**
      * The treatment is complete and this represents a Claim for the services.
      */
@@ -25,5 +28,6 @@ export var ClaimUse = {
         code: "predetermination",
         display: "Predetermination",
         system: "http://hl7.org/fhir/claim-use"
-    }
+    },
 };
+//# sourceMappingURL=ClaimUse.js.map

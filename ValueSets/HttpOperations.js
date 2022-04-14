@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpOperations = void 0;
 /**
  * The allowable request method or HTTP operation codes.
  */
-export var HttpOperations = {
+exports.HttpOperations = {
     /**
      * HTTP DELETE operation.
      */
@@ -57,5 +60,6 @@ export var HttpOperations = {
         code: "put",
         display: "PUT",
         system: "http://hl7.org/fhir/http-operations"
-    }
+    },
 };
+//# sourceMappingURL=HttpOperations.js.map

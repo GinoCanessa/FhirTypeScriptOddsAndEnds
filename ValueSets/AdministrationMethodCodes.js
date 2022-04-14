@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdministrationMethodCodes = void 0;
 /**
  * This value set includes some method codes from SNOMED CT - provided as an exemplar
  */
-export var AdministrationMethodCodes = {
+exports.AdministrationMethodCodes = {
     AdministrationMethodCodes_Apply: {
         code: "417924000",
         display: "Apply",
@@ -291,5 +294,6 @@ export var AdministrationMethodCodes = {
         code: "422327006",
         display: "Then stop",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=AdministrationMethodCodes.js.map

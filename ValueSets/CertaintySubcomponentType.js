@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertaintySubcomponentType = void 0;
 /**
  * The subcomponent classification of quality of evidence rating systems.
  */
-export var CertaintySubcomponentType = {
+exports.CertaintySubcomponentType = {
     /**
      * higher certainty due to dose response relationship.
      */
@@ -65,5 +68,6 @@ export var CertaintySubcomponentType = {
         code: "RiskOfBias",
         display: "Risk of bias",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-type"
-    }
+    },
 };
+//# sourceMappingURL=CertaintySubcomponentType.js.map

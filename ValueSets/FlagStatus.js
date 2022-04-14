@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FlagStatus = void 0;
 /**
  * Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or was entered in error.
  */
-export var FlagStatus = {
+exports.FlagStatus = {
     /**
      * A current flag that should be displayed to a user. A system may use the category to determine which user roles should view the flag.
      */
@@ -25,5 +28,6 @@ export var FlagStatus = {
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/flag-status"
-    }
+    },
 };
+//# sourceMappingURL=FlagStatus.js.map

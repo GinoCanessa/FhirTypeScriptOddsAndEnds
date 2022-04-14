@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MissingToothReason = void 0;
 /**
  * This value set includes sample Missing Tooth Reason codes.
  */
-export var MissingToothReason = {
+exports.MissingToothReason = {
     /**
      * Congenital
      */
@@ -33,5 +36,6 @@ export var MissingToothReason = {
         code: "u",
         display: "U",
         system: "http://terminology.hl7.org/CodeSystem/missingtoothreason"
-    }
+    },
 };
+//# sourceMappingURL=MissingToothReason.js.map

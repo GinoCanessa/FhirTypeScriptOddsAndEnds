@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RiskEstimateType = void 0;
 /**
  * Whether the risk estimate is dichotomous, continuous or qualitative and the specific type of risk estimate (eg proportion or median).
  */
-export var RiskEstimateType = {
+exports.RiskEstimateType = {
     /**
      * descriptive measure reported as total number of items.
      */
@@ -49,5 +52,6 @@ export var RiskEstimateType = {
         code: "proportion",
         display: "proportion",
         system: "http://terminology.hl7.org/CodeSystem/risk-estimate-type"
-    }
+    },
 };
+//# sourceMappingURL=RiskEstimateType.js.map

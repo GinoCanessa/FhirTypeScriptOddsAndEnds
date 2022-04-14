@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestStatus = void 0;
 /**
  * Codes identifying the lifecycle stage of a request.
  */
-export var RequestStatus = {
+exports.RequestStatus = {
     /**
      * The request is in force and ready to be acted upon.
      */
@@ -57,5 +60,6 @@ export var RequestStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/request-status"
-    }
+    },
 };
+//# sourceMappingURL=RequestStatus.js.map

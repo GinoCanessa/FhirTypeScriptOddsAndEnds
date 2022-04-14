@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchSubjectStatus = void 0;
 /**
  * Indicates the progression of a study subject through a study.
  */
-export var ResearchSubjectStatus = {
+exports.ResearchSubjectStatus = {
     /**
      * An identified person that can be considered for inclusion in a study.
      */
@@ -107,5 +110,6 @@ export var ResearchSubjectStatus = {
         code: "withdrawn",
         display: "Withdrawn",
         system: "http://hl7.org/fhir/research-subject-status"
-    }
+    },
 };
+//# sourceMappingURL=ResearchSubjectStatus.js.map

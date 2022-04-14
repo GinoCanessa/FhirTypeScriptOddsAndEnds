@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FlagCategory = void 0;
 /**
  * Example list of general categories for flagged issues. (Not complete or necessarily appropriate.)
  */
-export var FlagCategory = {
+exports.FlagCategory = {
     /**
      * Flags related to administrative and financial processes.
      */
@@ -81,5 +84,6 @@ export var FlagCategory = {
         code: "safety",
         display: "Safety",
         system: "http://terminology.hl7.org/CodeSystem/flag-category"
-    }
+    },
 };
+//# sourceMappingURL=FlagCategory.js.map

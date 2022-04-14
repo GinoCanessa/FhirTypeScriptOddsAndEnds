@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEventAction = void 0;
 /**
  * Indicator for type of action performed during the event that generated the event.
  */
-export var AuditEventAction = {
+exports.AuditEventAction = {
     /**
      * Create a new database object, such as placing an order.
      */
@@ -41,5 +44,6 @@ export var AuditEventAction = {
         code: "U",
         display: "Update",
         system: "http://hl7.org/fhir/audit-event-action"
-    }
+    },
 };
+//# sourceMappingURL=AuditEventAction.js.map

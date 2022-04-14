@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReasonMedicationGivenCodes = void 0;
 /**
  * This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.
  */
-export var ReasonMedicationGivenCodes = {
+exports.ReasonMedicationGivenCodes = {
     /**
      * No reason known.
      */
@@ -25,5 +28,6 @@ export var ReasonMedicationGivenCodes = {
         code: "c",
         display: "Emergency",
         system: "http://terminology.hl7.org/CodeSystem/reason-medication-given"
-    }
+    },
 };
+//# sourceMappingURL=ReasonMedicationGivenCodes.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssertResponseCodeTypes = void 0;
 /**
  * The type of response code to use for assertion.
  */
-export var AssertResponseCodeTypes = {
+exports.AssertResponseCodeTypes = {
     /**
      * Response code is 400.
      */
@@ -97,5 +100,6 @@ export var AssertResponseCodeTypes = {
         code: "unprocessable",
         display: "unprocessable",
         system: "http://hl7.org/fhir/assert-response-code-types"
-    }
+    },
 };
+//# sourceMappingURL=AssertResponseCodeTypes.js.map

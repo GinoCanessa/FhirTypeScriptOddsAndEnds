@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentifierType = void 0;
 /**
  * A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.
  */
-export var IdentifierType = {
+exports.IdentifierType = {
     v2_0203_AccessionID: {
         code: "ACSN",
         display: "Accession ID",
@@ -91,5 +94,6 @@ export var IdentifierType = {
         code: "UDI",
         display: "Universal Device Identifier",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
-    }
+    },
 };
+//# sourceMappingURL=IdentifierType.js.map

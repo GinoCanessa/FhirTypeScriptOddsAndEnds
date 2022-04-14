@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterSpecialArrangements = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate the kinds of special arrangements in place for a patients visit.
  */
-export var EncounterSpecialArrangements = {
+exports.EncounterSpecialArrangements = {
     /**
      * An additional bed made available for a person accompanying the patient, for example a parent accompanying a child.
      */
@@ -41,5 +44,6 @@ export var EncounterSpecialArrangements = {
         code: "wheel",
         display: "Wheelchair",
         system: "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"
-    }
+    },
 };
+//# sourceMappingURL=EncounterSpecialArrangements.js.map

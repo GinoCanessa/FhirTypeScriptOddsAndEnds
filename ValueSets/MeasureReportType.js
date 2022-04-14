@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasureReportType = void 0;
 /**
  * The type of the measure report.
  */
-export var MeasureReportType = {
+exports.MeasureReportType = {
     /**
      * A data collection report that contains data-of-interest for the measure.
      */
@@ -33,5 +36,6 @@ export var MeasureReportType = {
         code: "summary",
         display: "Summary",
         system: "http://hl7.org/fhir/measure-report-type"
-    }
+    },
 };
+//# sourceMappingURL=MeasureReportType.js.map

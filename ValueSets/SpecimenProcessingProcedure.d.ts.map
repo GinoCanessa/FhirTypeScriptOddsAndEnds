@@ -1,1 +1,1 @@
-{"version":3,"file":"SpecimenProcessingProcedure.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/SpecimenProcessingProcedure.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,2BAA2B;;;;;;;;;CAyCvC,CAAC"}
+{"version":3,"file":"SpecimenProcessingProcedure.d.ts","sourceRoot":"","sources":["../../ValueSets/SpecimenProcessingProcedure.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,2BAA2B;;;;;;;;;CAyCvC,CAAC"}

@@ -1,1 +1,1 @@
-{"version":3,"file":"PaymentStatus.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/PaymentStatus.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;IACxB;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}
+{"version":3,"file":"PaymentStatus.d.ts","sourceRoot":"","sources":["../../ValueSets/PaymentStatus.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;IACxB;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}

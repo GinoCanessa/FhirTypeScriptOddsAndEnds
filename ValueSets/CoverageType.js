@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoverageType = void 0;
 /**
  * This value set includes Coverage Type codes.
  */
-export var CoverageType = {
+exports.CoverageType = {
     /**
      * Definition: A policy that, after an initial premium or premiums, pays out a sum at pre-determined intervals.
      *
@@ -514,5 +517,6 @@ export var CoverageType = {
         code: "WCBPOL",
         display: "worker's compensation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=CoverageType.js.map

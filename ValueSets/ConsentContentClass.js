@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentContentClass = void 0;
 /**
  * This value set includes the FHIR resource types, along with some other important content class codes
  */
-export var ConsentContentClass = {
+exports.ConsentContentClass = {
     ConsentContentClass_CDADocuments: {
         code: "application/hl7-cda+xml",
         display: "CDA Documents",
@@ -381,5 +384,6 @@ export var ConsentContentClass = {
         code: "urn:ihe:rad:TEXT",
         display: "Radiology XDS-I Text",
         system: "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"
-    }
+    },
 };
+//# sourceMappingURL=ConsentContentClass.js.map

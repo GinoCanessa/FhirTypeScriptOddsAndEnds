@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceUscls = void 0;
 /**
  * This value set includes a smattering of USCLS codes.
  */
-export var ServiceUscls = {
+exports.ServiceUscls = {
     /**
      * Exam, comp, primary
      */
@@ -161,5 +164,6 @@ export var ServiceUscls = {
         code: "99555",
         display: "Expense",
         system: "http://terminology.hl7.org/CodeSystem/ex-USCLS"
-    }
+    },
 };
+//# sourceMappingURL=ServiceUscls.js.map

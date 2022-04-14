@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClinicalimpressionPrognosis = void 0;
 /**
  * Example value set for clinical impression prognosis.
  */
-export var ClinicalimpressionPrognosis = {
+exports.ClinicalimpressionPrognosis = {
     ClinicalimpressionPrognosis_GoodPrognosis: {
         code: "170968001",
         display: "Good prognosis",
@@ -31,5 +34,6 @@ export var ClinicalimpressionPrognosis = {
         code: "67334001",
         display: "Guarded prognosis",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ClinicalimpressionPrognosis.js.map

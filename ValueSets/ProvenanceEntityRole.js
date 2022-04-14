@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvenanceEntityRole = void 0;
 /**
  * How an entity was used in an activity.
  */
-export var ProvenanceEntityRole = {
+exports.ProvenanceEntityRole = {
     /**
      * A transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.
      */
@@ -41,5 +44,6 @@ export var ProvenanceEntityRole = {
         code: "source",
         display: "Source",
         system: "http://hl7.org/fhir/provenance-entity-role"
-    }
+    },
 };
+//# sourceMappingURL=ProvenanceEntityRole.js.map

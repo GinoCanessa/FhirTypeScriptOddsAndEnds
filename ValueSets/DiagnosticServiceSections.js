@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiagnosticServiceSections = void 0;
 /**
  * This value set includes all the codes in HL7 V2 table 0074.
  */
-export var DiagnosticServiceSections = {
+exports.DiagnosticServiceSections = {
     v2_0074_Audiology: {
         code: "AU",
         display: "Audiology",
@@ -206,5 +209,6 @@ export var DiagnosticServiceSections = {
         code: "XRC",
         display: "Cineradiograph",
         system: "http://terminology.hl7.org/CodeSystem/v2-0074"
-    }
+    },
 };
+//# sourceMappingURL=DiagnosticServiceSections.js.map

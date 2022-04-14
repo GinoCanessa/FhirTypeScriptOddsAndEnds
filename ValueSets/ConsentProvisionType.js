@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentProvisionType = void 0;
 /**
  * How a rule statement is applied, such as adding additional consent or removing consent.
  */
-export var ConsentProvisionType = {
+exports.ConsentProvisionType = {
     /**
      * Consent is denied for actions meeting these rules.
      */
@@ -17,5 +20,6 @@ export var ConsentProvisionType = {
         code: "permit",
         display: "Opt In",
         system: "http://hl7.org/fhir/consent-provision-type"
-    }
+    },
 };
+//# sourceMappingURL=ConsentProvisionType.js.map

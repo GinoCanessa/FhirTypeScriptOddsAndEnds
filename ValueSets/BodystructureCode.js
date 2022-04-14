@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BodystructureCode = void 0;
 /**
  * This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).
  */
-export var BodystructureCode = {
+exports.BodystructureCode = {
     BodystructureCode_EccrinePapillaryAdenoma: {
         code: "10060008",
         display: "Eccrine papillary adenoma",
@@ -4976,5 +4979,6 @@ export var BodystructureCode = {
         code: "999000",
         display: "Mixed ductal-endocrine carcinoma",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=BodystructureCode.js.map

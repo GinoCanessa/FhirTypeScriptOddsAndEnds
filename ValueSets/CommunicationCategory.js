@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommunicationCategory = void 0;
 /**
  * Codes for general categories of communications such as alerts, instructions, etc.
  */
-export var CommunicationCategory = {
+exports.CommunicationCategory = {
     /**
      * The communication conveys an alert.
      */
@@ -33,5 +36,6 @@ export var CommunicationCategory = {
         code: "reminder",
         display: "Reminder",
         system: "http://terminology.hl7.org/CodeSystem/communication-category"
-    }
+    },
 };
+//# sourceMappingURL=CommunicationCategory.js.map

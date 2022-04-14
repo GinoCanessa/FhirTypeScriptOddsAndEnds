@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProductStatus = void 0;
 /**
  * Biologically Derived Product Status.
  */
-export var ProductStatus = {
+exports.ProductStatus = {
     /**
      * Product is currently available for use.
      */
@@ -17,5 +20,6 @@ export var ProductStatus = {
         code: "unavailable",
         display: "Unavailable",
         system: "http://hl7.org/fhir/product-status"
-    }
+    },
 };
+//# sourceMappingURL=ProductStatus.js.map

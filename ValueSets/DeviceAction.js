@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceAction = void 0;
 /**
  * Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.
  */
-export var DeviceAction = {
+exports.DeviceAction = {
     DeviceAction_PatientEvaluationAction: {
         code: "129265001",
         display: "Patient evaluation - action",
@@ -2211,5 +2214,6 @@ export var DeviceAction = {
         code: "713295009",
         display: "Surgical replacement - action",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=DeviceAction.js.map

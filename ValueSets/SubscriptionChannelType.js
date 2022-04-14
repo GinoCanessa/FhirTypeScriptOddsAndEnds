@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionChannelType = void 0;
 /**
  * The type of method used to execute a subscription.
  */
-export var SubscriptionChannelType = {
+exports.SubscriptionChannelType = {
     /**
      * The channel is executed by sending an email to the email addressed in the URI (which must be a mailto:).
      */
@@ -41,5 +44,6 @@ export var SubscriptionChannelType = {
         code: "websocket",
         display: "Websocket",
         system: "http://hl7.org/fhir/subscription-channel-type"
-    }
+    },
 };
+//# sourceMappingURL=SubscriptionChannelType.js.map

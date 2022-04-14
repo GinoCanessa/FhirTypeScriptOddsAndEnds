@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueSeverity = void 0;
 /**
  * How the issue affects the success of the action.
  */
-export var IssueSeverity = {
+exports.IssueSeverity = {
     /**
      * The issue is sufficiently important to cause the action to fail.
      */
@@ -33,5 +36,6 @@ export var IssueSeverity = {
         code: "warning",
         display: "Warning",
         system: "http://hl7.org/fhir/issue-severity"
-    }
+    },
 };
+//# sourceMappingURL=IssueSeverity.js.map

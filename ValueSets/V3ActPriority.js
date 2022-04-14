@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ActPriority = void 0;
 /**
  *  A set of codes (e.g., for routine, emergency), specifying the urgency under which the Act happened, can happen, is happening, is intended to happen, or is requested/demanded to happen.
  */
-export var V3ActPriority = {
+exports.V3ActPriority = {
     /**
      * As soon as possible, next highest priority after stat.
      */
@@ -121,5 +124,6 @@ export var V3ActPriority = {
         code: "UR",
         display: "urgent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActPriority"
-    }
+    },
 };
+//# sourceMappingURL=V3ActPriority.js.map

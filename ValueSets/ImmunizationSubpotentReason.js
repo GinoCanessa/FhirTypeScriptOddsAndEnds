@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationSubpotentReason = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.
  */
-export var ImmunizationSubpotentReason = {
+exports.ImmunizationSubpotentReason = {
     /**
      * The vaccine experienced a cold chain break.
      */
@@ -25,5 +28,6 @@ export var ImmunizationSubpotentReason = {
         code: "recall",
         display: "Manufacturer Recall",
         system: "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationSubpotentReason.js.map

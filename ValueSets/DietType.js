@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DietType = void 0;
 /**
  * Codes that can be used to indicate the type of food being ordered for a patient. This value set is provided as a suggestive example. It includes codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 182922004 (Dietary regime (regime/therapy))
  */
-export var DietType = {
+exports.DietType = {
     DietType_DietaryApproachesToStopHypertensionDiet: {
         code: "1151000175103",
         display: "Dietary Approaches to Stop Hypertension diet",
@@ -151,5 +154,6 @@ export var DietType = {
         code: "61420007",
         display: "Tube feeding of patient",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=DietType.js.map

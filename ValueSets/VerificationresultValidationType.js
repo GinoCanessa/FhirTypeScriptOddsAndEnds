@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultValidationType = void 0;
 /**
  * What the target is validated against
  */
-export var VerificationresultValidationType = {
+exports.VerificationresultValidationType = {
     verificationresult_validation_type_MultipleSources: {
         code: "multiple",
         display: "Multiple Sources",
@@ -16,5 +19,6 @@ export var VerificationresultValidationType = {
         code: "primary",
         display: "Primary Source",
         system: "http://terminology.hl7.org/CodeSystem/validation-type"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultValidationType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodesystemHierarchyMeaning = void 0;
 /**
  * The meaning of the hierarchy of concepts in a code system.
  */
-export var CodesystemHierarchyMeaning = {
+exports.CodesystemHierarchyMeaning = {
     /**
      * Child concepts in the hierarchy may have only one parent, and there is a presumption that the code system is a "closed world" meaning all things must be in the hierarchy. This results in concepts such as "not otherwise classified.".
      */
@@ -33,5 +36,6 @@ export var CodesystemHierarchyMeaning = {
         code: "part-of",
         display: "Part Of",
         system: "http://hl7.org/fhir/codesystem-hierarchy-meaning"
-    }
+    },
 };
+//# sourceMappingURL=CodesystemHierarchyMeaning.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Program = void 0;
 /**
  * This value set defines an example set of codes that could be can be used to classify groupings of service-types/specialties.
  */
-export var Program = {
+exports.Program = {
     program_AcquiredBrainInjuryABIProgram: {
         code: "1",
         display: "Acquired Brain Injury (ABI) Program ",
@@ -226,5 +229,6 @@ export var Program = {
         code: "9",
         display: "Care Coordination & Supplementary Services (CCSS)",
         system: "http://terminology.hl7.org/CodeSystem/program"
-    }
+    },
 };
+//# sourceMappingURL=Program.js.map

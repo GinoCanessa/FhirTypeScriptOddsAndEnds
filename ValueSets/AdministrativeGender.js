@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdministrativeGender = void 0;
 /**
  * The gender of a person used for administrative purposes.
  */
-export var AdministrativeGender = {
+exports.AdministrativeGender = {
     /**
      * Female.
      */
@@ -33,5 +36,6 @@ export var AdministrativeGender = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/administrative-gender"
-    }
+    },
 };
+//# sourceMappingURL=AdministrativeGender.js.map

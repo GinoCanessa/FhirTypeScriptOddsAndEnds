@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationEvaluationDoseStatusReason = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why an administered dose has been assigned a particular status. Often, this reason describes why a dose is considered invalid. This value set is provided as a suggestive example.
  */
-export var ImmunizationEvaluationDoseStatusReason = {
+exports.ImmunizationEvaluationDoseStatusReason = {
     /**
      * The product was stored in a manner inconsistent with manufacturer guidelines potentially reducing the effectiveness of the product.
      */
@@ -41,5 +44,6 @@ export var ImmunizationEvaluationDoseStatusReason = {
         code: "prodrecall",
         display: "Product recall",
         system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status-reason"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationEvaluationDoseStatusReason.js.map

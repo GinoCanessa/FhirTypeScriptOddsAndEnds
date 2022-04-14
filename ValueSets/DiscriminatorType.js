@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiscriminatorType = void 0;
 /**
  * How an element value is interpreted when discrimination is evaluated.
  */
-export var DiscriminatorType = {
+exports.DiscriminatorType = {
     /**
      * The slices are differentiated by the presence or absence of the nominated element.
      */
@@ -41,5 +44,6 @@ export var DiscriminatorType = {
         code: "value",
         display: "Value",
         system: "http://hl7.org/fhir/discriminator-type"
-    }
+    },
 };
+//# sourceMappingURL=DiscriminatorType.js.map

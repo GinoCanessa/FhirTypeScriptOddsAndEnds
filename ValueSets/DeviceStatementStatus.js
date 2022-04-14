@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceStatementStatus = void 0;
 /**
  * A coded concept indicating the current status of the Device Usage.
  */
-export var DeviceStatementStatus = {
+exports.DeviceStatementStatus = {
     /**
      * The device is still being used.
      */
@@ -49,5 +52,6 @@ export var DeviceStatementStatus = {
         code: "stopped",
         display: "Stopped",
         system: "http://hl7.org/fhir/device-statement-status"
-    }
+    },
 };
+//# sourceMappingURL=DeviceStatementStatus.js.map

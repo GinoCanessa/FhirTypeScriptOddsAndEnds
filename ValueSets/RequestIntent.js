@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestIntent = void 0;
 /**
  * Codes indicating the degree of authority/intentionality associated with a request.
  */
-export var RequestIntent = {
+exports.RequestIntent = {
     /**
      * The request represents a legally binding instruction authored by a Patient or RelatedPerson.
      */
@@ -41,5 +44,6 @@ export var RequestIntent = {
         code: "reflex-order",
         display: "Reflex Order",
         system: "http://hl7.org/fhir/request-intent"
-    }
+    },
 };
+//# sourceMappingURL=RequestIntent.js.map

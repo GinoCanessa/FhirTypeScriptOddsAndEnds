@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportStatusCodes = void 0;
 /**
  * The current status of the test report.
  */
-export var ReportStatusCodes = {
+exports.ReportStatusCodes = {
     /**
      * All test operations have completed.
      */
@@ -41,5 +44,6 @@ export var ReportStatusCodes = {
         code: "waiting",
         display: "Waiting",
         system: "http://hl7.org/fhir/report-status-codes"
-    }
+    },
 };
+//# sourceMappingURL=ReportStatusCodes.js.map

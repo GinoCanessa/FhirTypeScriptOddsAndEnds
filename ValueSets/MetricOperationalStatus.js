@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricOperationalStatus = void 0;
 /**
  * Describes the operational status of the DeviceMetric.
  */
-export var MetricOperationalStatus = {
+exports.MetricOperationalStatus = {
     /**
      * The DeviceMetric was entered in error.
      */
@@ -33,5 +36,6 @@ export var MetricOperationalStatus = {
         code: "standby",
         display: "Standby",
         system: "http://hl7.org/fhir/metric-operational-status"
-    }
+    },
 };
+//# sourceMappingURL=MetricOperationalStatus.js.map

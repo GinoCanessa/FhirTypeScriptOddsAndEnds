@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultStatus = void 0;
 /**
  * The validation status of the target
  */
-export var VerificationresultStatus = {
+exports.VerificationresultStatus = {
     /**
      * ***TODO***
      */
@@ -49,5 +52,6 @@ export var VerificationresultStatus = {
         code: "validated",
         display: "Validated",
         system: "http://hl7.org/fhir/CodeSystem/status"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultStatus.js.map

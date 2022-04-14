@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecialValues = void 0;
 /**
  * A set of generally useful codes defined so they can be included in value sets.
  */
-export var SpecialValues = {
+exports.SpecialValues = {
     /**
      * Boolean false.
      */
@@ -49,5 +52,6 @@ export var SpecialValues = {
         code: "withdrawn",
         display: "Value Withdrawn",
         system: "http://terminology.hl7.org/CodeSystem/special-values"
-    }
+    },
 };
+//# sourceMappingURL=SpecialValues.js.map

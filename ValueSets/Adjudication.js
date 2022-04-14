@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Adjudication = void 0;
 /**
  * This value set includes a smattering of Adjudication Value codes which includes codes to indicate the amounts eligible under the plan, the amount of benefit, copays etc.
  */
-export var Adjudication = {
+exports.Adjudication = {
     /**
      * Amount payable under the coverage
      */
@@ -65,5 +68,6 @@ export var Adjudication = {
         code: "unallocdeduct",
         display: "Unallocated Deductible",
         system: "http://terminology.hl7.org/CodeSystem/adjudication"
-    }
+    },
 };
+//# sourceMappingURL=Adjudication.js.map

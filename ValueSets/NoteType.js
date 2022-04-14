@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NoteType = void 0;
 /**
  * The presentation types of notes.
  */
-export var NoteType = {
+exports.NoteType = {
     /**
      * Display the note.
      */
@@ -25,5 +28,6 @@ export var NoteType = {
         code: "printoper",
         display: "Print (Operator)",
         system: "http://hl7.org/fhir/note-type"
-    }
+    },
 };
+//# sourceMappingURL=NoteType.js.map

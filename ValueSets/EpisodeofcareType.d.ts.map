@@ -1,1 +1,1 @@
-{"version":3,"file":"EpisodeofcareType.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/EpisodeofcareType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,iBAAiB;;;;;;CA0B7B,CAAC"}
+{"version":3,"file":"EpisodeofcareType.d.ts","sourceRoot":"","sources":["../../ValueSets/EpisodeofcareType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,iBAAiB;;;;;;CA0B7B,CAAC"}

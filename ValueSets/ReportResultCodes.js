@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportResultCodes = void 0;
 /**
  * The reported execution result.
  */
-export var ReportResultCodes = {
+exports.ReportResultCodes = {
     /**
      * One or more test operations failed one or more asserts.
      */
@@ -25,5 +28,6 @@ export var ReportResultCodes = {
         code: "pending",
         display: "Pending",
         system: "http://hl7.org/fhir/report-result-codes"
-    }
+    },
 };
+//# sourceMappingURL=ReportResultCodes.js.map

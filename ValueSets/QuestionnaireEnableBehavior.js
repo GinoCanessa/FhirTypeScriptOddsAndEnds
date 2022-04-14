@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionnaireEnableBehavior = void 0;
 /**
  * Controls how multiple enableWhen values are interpreted -  whether all or any must be true.
  */
-export var QuestionnaireEnableBehavior = {
+exports.QuestionnaireEnableBehavior = {
     /**
      * Enable the question when all the enableWhen criteria are satisfied.
      */
@@ -17,5 +20,6 @@ export var QuestionnaireEnableBehavior = {
         code: "any",
         display: "Any",
         system: "http://hl7.org/fhir/questionnaire-enable-behavior"
-    }
+    },
 };
+//# sourceMappingURL=QuestionnaireEnableBehavior.js.map

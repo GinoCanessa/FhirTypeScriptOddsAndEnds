@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyintoleranceVerification = void 0;
 /**
  * Preferred value set for AllergyIntolerance Verification Status.
  */
-export var AllergyintoleranceVerification = {
+exports.AllergyintoleranceVerification = {
     /**
      * A high level of certainty about the propensity for a reaction to the identified substance, which may include clinical evidence by testing or rechallenge.
      */
@@ -33,5 +36,6 @@ export var AllergyintoleranceVerification = {
         code: "unconfirmed",
         display: "Unconfirmed",
         system: "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
-    }
+    },
 };
+//# sourceMappingURL=AllergyintoleranceVerification.js.map

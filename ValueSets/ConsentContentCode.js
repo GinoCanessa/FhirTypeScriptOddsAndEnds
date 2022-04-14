@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentContentCode = void 0;
 /**
  * This example value set contains all LOINC code
  */
-export var ConsentContentCode = {
+exports.ConsentContentCode = {
     ConsentContentCode_AcyclovirSusceptibility: {
         code: "1-8",
         display: "Acyclovir [Susceptibility]",
@@ -5001,5 +5004,6 @@ export var ConsentContentCode = {
         code: "10898-5",
         display: "Eastern equine encephalitis virus IgM Ab [Titer] in Serum by Immunofluorescence",
         system: "http://loinc.org"
-    }
+    },
 };
+//# sourceMappingURL=ConsentContentCode.js.map

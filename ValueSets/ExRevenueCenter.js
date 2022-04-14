@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExRevenueCenter = void 0;
 /**
  * This value set includes sample Revenue Center codes.
  */
-export var ExRevenueCenter = {
+exports.ExRevenueCenter = {
     /**
      * Vision Clinic
      */
@@ -73,5 +76,6 @@ export var ExRevenueCenter = {
         code: "0452",
         display: "Emergency Room - beyond EMTALA",
         system: "http://terminology.hl7.org/CodeSystem/ex-revenue-center"
-    }
+    },
 };
+//# sourceMappingURL=ExRevenueCenter.js.map

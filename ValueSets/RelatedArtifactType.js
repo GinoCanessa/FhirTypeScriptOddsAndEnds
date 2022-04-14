@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelatedArtifactType = void 0;
 /**
  * The type of relationship to the related artifact.
  */
-export var RelatedArtifactType = {
+exports.RelatedArtifactType = {
     /**
      * Bibliographic citation for papers, references, or other relevant material for the knowledge resource. This is intended to allow for citation of related material, but that was not necessarily specifically prepared in connection with this knowledge resource.
      */
@@ -65,5 +68,6 @@ export var RelatedArtifactType = {
         code: "successor",
         display: "Successor",
         system: "http://hl7.org/fhir/related-artifact-type"
-    }
+    },
 };
+//# sourceMappingURL=RelatedArtifactType.js.map

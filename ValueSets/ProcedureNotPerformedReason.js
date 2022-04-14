@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcedureNotPerformedReason = void 0;
 /**
  * Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).
  */
-export var ProcedureNotPerformedReason = {
+exports.ProcedureNotPerformedReason = {
     ProcedureNotPerformedReason_ColonoscopyRefused: {
         code: "116101000119100",
         display: "Colonoscopy refused",
@@ -2026,5 +2029,6 @@ export var ProcedureNotPerformedReason = {
         code: "921000119109",
         display: "Vaccine refused by parent",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ProcedureNotPerformedReason.js.map

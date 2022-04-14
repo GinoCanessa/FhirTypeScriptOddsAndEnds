@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FilterOperator = void 0;
 /**
  * The kind of operation to perform as a part of a property based filter.
  */
-export var FilterOperator = {
+exports.FilterOperator = {
     /**
      * The specified property of the code equals the provided value.
      */
@@ -73,5 +76,6 @@ export var FilterOperator = {
         code: "regex",
         display: "Regular Expression",
         system: "http://hl7.org/fhir/filter-operator"
-    }
+    },
 };
+//# sourceMappingURL=FilterOperator.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalStatus = void 0;
 /**
  * Codes that reflect the current state of a goal and whether the goal is still being targeted.
  */
-export var GoalStatus = {
+exports.GoalStatus = {
     /**
      * A proposed goal was accepted or acknowledged.
      */
@@ -73,5 +76,6 @@ export var GoalStatus = {
         code: "rejected",
         display: "Rejected",
         system: "http://hl7.org/fhir/goal-status"
-    }
+    },
 };
+//# sourceMappingURL=GoalStatus.js.map

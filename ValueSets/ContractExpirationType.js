@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractExpirationType = void 0;
 /**
  * This value set contract specific codes for status.
  */
-export var ContractExpirationType = {
+exports.ContractExpirationType = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractExpirationType = {
         code: "breach",
         display: "Breach",
         system: "http://hl7.org/fhir/contract-expiration-type"
-    }
+    },
 };
+//# sourceMappingURL=ContractExpirationType.js.map

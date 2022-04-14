@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HandlingCondition = void 0;
 /**
  * Set of handling instructions prior testing of the specimen.
  */
-export var HandlingCondition = {
+exports.HandlingCondition = {
     /**
      * frozen temperature.
      */
@@ -25,5 +28,6 @@ export var HandlingCondition = {
         code: "room",
         display: "room temperature",
         system: "http://terminology.hl7.org/CodeSystem/handling-condition"
-    }
+    },
 };
+//# sourceMappingURL=HandlingCondition.js.map

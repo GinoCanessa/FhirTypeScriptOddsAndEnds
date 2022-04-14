@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationCodes = void 0;
 /**
  * This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.
  */
-export var MedicationCodes = {
+exports.MedicationCodes = {
     MedicationCodes_Bithionol: {
         code: "10016008",
         display: "Bithionol",
@@ -8231,5 +8234,6 @@ export var MedicationCodes = {
         code: "9992001",
         display: "Molybdenum radioisotope",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=MedicationCodes.js.map

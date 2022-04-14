@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricCategory = void 0;
 /**
  * Describes the category of the metric.
  */
-export var MetricCategory = {
+exports.MetricCategory = {
     /**
      * DeviceObservations generated for this DeviceMetric are calculated.
      */
@@ -33,5 +36,6 @@ export var MetricCategory = {
         code: "unspecified",
         display: "Unspecified",
         system: "http://hl7.org/fhir/metric-category"
-    }
+    },
 };
+//# sourceMappingURL=MetricCategory.js.map

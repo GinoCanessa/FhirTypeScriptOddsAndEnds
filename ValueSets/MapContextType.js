@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapContextType = void 0;
 /**
  * How to interpret the context.
  */
-export var MapContextType = {
+exports.MapContextType = {
     /**
      * The context specifies a type.
      */
@@ -17,5 +20,6 @@ export var MapContextType = {
         code: "variable",
         display: "Variable",
         system: "http://hl7.org/fhir/map-context-type"
-    }
+    },
 };
+//# sourceMappingURL=MapContextType.js.map

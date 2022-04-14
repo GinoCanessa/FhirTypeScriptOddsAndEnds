@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentStatus = void 0;
 /**
  * This value set includes a sample set of Payment Status codes.
  */
-export var PaymentStatus = {
+exports.PaymentStatus = {
     /**
      * The payment has been received by the payee.
      */
@@ -17,5 +20,6 @@ export var PaymentStatus = {
         code: "paid",
         display: "Paid",
         system: "http://terminology.hl7.org/CodeSystem/paymentstatus"
-    }
+    },
 };
+//# sourceMappingURL=PaymentStatus.js.map

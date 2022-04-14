@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentMode = void 0;
 /**
  * Whether the application produces or consumes documents.
  */
-export var DocumentMode = {
+exports.DocumentMode = {
     /**
      * The application consumes documents of the specified type.
      */
@@ -17,5 +20,6 @@ export var DocumentMode = {
         code: "producer",
         display: "Producer",
         system: "http://hl7.org/fhir/document-mode"
-    }
+    },
 };
+//# sourceMappingURL=DocumentMode.js.map

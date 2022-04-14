@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommunicationNotDoneReason = void 0;
 /**
  * Codes for the reason why a communication did not happen.
  */
-export var CommunicationNotDoneReason = {
+exports.CommunicationNotDoneReason = {
     /**
      * The communication was not done due to a family objection.
      */
@@ -49,5 +52,6 @@ export var CommunicationNotDoneReason = {
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/communication-not-done-reason"
-    }
+    },
 };
+//# sourceMappingURL=CommunicationNotDoneReason.js.map

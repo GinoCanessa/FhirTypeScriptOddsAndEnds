@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Dicm405Mediatype = void 0;
 /**
  * Media Type Code
  */
-export var Dicm405Mediatype = {
+exports.Dicm405Mediatype = {
     /**
      * Film type of output
      */
@@ -81,5 +84,6 @@ export var Dicm405Mediatype = {
         code: "110038",
         display: "Paper Document",
         system: "http://dicom.nema.org/resources/ontology/DCM"
-    }
+    },
 };
+//# sourceMappingURL=Dicm405Mediatype.js.map

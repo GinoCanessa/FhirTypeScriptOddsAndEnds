@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultValidationProcess = void 0;
 /**
  * The primary process by which the target is validated
  */
-export var VerificationresultValidationProcess = {
+exports.VerificationresultValidationProcess = {
     verificationresult_validation_process_EditCheck: {
         code: "edit-check",
         display: "edit check",
@@ -31,5 +34,6 @@ export var VerificationresultValidationProcess = {
         code: "valueset",
         display: "value set",
         system: "http://terminology.hl7.org/CodeSystem/validation-process"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultValidationProcess.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsuranceplanApplicability = void 0;
 /**
  * Whether the cost applies to in-network or out-of-network providers.
  */
-export var InsuranceplanApplicability = {
+exports.InsuranceplanApplicability = {
     /**
      * Provider is contracted with the health insurance company to provide services to plan members for specific pre-negotiated rates
      */
@@ -25,5 +28,6 @@ export var InsuranceplanApplicability = {
         code: "out-of-network",
         display: "Out of Network",
         system: "http://terminology.hl7.org/CodeSystem/applicability"
-    }
+    },
 };
+//# sourceMappingURL=InsuranceplanApplicability.js.map

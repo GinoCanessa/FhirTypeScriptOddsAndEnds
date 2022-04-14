@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CodesystemContentMode = void 0;
 /**
  * The extent of the content of the code system (the concepts and codes it defines) are represented in a code system resource.
  */
-export var CodesystemContentMode = {
+exports.CodesystemContentMode = {
     /**
      * All the concepts defined by the code system are included in the code system resource.
      */
@@ -41,5 +44,6 @@ export var CodesystemContentMode = {
         code: "supplement",
         display: "Supplement",
         system: "http://hl7.org/fhir/codesystem-content-mode"
-    }
+    },
 };
+//# sourceMappingURL=CodesystemContentMode.js.map

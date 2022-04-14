@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimType = void 0;
 /**
  * This value set includes Claim Type codes.
  */
-export var ClaimType = {
+exports.ClaimType = {
     /**
      * Hospital, clinic and typically inpatient claims.
      */
@@ -41,5 +44,6 @@ export var ClaimType = {
         code: "vision",
         display: "Vision",
         system: "http://terminology.hl7.org/CodeSystem/claim-type"
-    }
+    },
 };
+//# sourceMappingURL=ClaimType.js.map

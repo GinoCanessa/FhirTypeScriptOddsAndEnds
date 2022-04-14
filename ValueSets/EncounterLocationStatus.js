@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterLocationStatus = void 0;
 /**
  * The status of the location.
  */
-export var EncounterLocationStatus = {
+exports.EncounterLocationStatus = {
     /**
      * The patient is currently at this location, or was between the period specified.
      * A system may update these records when the patient leaves the location to either reserved, or completed.
@@ -35,5 +38,6 @@ export var EncounterLocationStatus = {
         code: "reserved",
         display: "Reserved",
         system: "http://hl7.org/fhir/encounter-location-status"
-    }
+    },
 };
+//# sourceMappingURL=EncounterLocationStatus.js.map

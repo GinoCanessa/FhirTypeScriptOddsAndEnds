@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceAggregationMode = void 0;
 /**
  * How resource references can be aggregated.
  */
-export var ResourceAggregationMode = {
+exports.ResourceAggregationMode = {
     /**
      * The resource the reference points to will be found in the same bundle as the resource that includes the reference.
      */
@@ -25,5 +28,6 @@ export var ResourceAggregationMode = {
         code: "referenced",
         display: "Referenced",
         system: "http://hl7.org/fhir/resource-aggregation-mode"
-    }
+    },
 };
+//# sourceMappingURL=ResourceAggregationMode.js.map

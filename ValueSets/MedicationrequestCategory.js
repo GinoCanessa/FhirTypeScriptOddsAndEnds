@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationrequestCategory = void 0;
 /**
  * MedicationRequest Category Codes
  */
-export var MedicationrequestCategory = {
+exports.MedicationrequestCategory = {
     /**
      * Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
      */
@@ -33,5 +36,6 @@ export var MedicationrequestCategory = {
         code: "outpatient",
         display: "Outpatient",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
-    }
+    },
 };
+//# sourceMappingURL=MedicationrequestCategory.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProviderQualification = void 0;
 /**
  * This value set includes sample Provider Qualification codes.
  */
-export var ProviderQualification = {
+exports.ProviderQualification = {
     /**
      * Dentist General Practitioner (DDS, DDM).
      */
@@ -25,5 +28,6 @@ export var ProviderQualification = {
         code: "604215",
         display: "Ophthalmologist",
         system: "http://terminology.hl7.org/CodeSystem/ex-providerqualification"
-    }
+    },
 };
+//# sourceMappingURL=ProviderQualification.js.map

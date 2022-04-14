@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SignatureType = void 0;
 /**
  * The Digital Signature Purposes, an indication of the reason an entity signs a document. This is included in the signed information and can be used when determining accountability for various actions concerning the document. Examples include: author, transcriptionist/recorder, and witness.
  */
-export var SignatureType = {
+exports.SignatureType = {
     /**
      * the signature of the primary or sole author of a health information document. There can be only one primary author of a health information document.
      */
@@ -145,5 +148,6 @@ export var SignatureType = {
         code: "1.2.840.10065.1.12.1.9",
         display: "Event Witness Signature",
         system: "urn:iso-astm:E1762-95:2013"
-    }
+    },
 };
+//# sourceMappingURL=SignatureType.js.map

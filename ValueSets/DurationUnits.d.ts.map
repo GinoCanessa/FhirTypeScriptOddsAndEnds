@@ -1,1 +1,1 @@
-{"version":3,"file":"DurationUnits.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/DurationUnits.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;;;CAWzB,CAAC"}
+{"version":3,"file":"DurationUnits.d.ts","sourceRoot":"","sources":["../../ValueSets/DurationUnits.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;;;CAWzB,CAAC"}

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamingsystemType = void 0;
 /**
  * Identifies the purpose of the naming system.
  */
-export var NamingsystemType = {
+exports.NamingsystemType = {
     /**
      * The naming system is used to define concepts and symbols to represent those concepts; e.g. UCUM, LOINC, NDC code, local lab codes, etc.
      */
@@ -25,5 +28,6 @@ export var NamingsystemType = {
         code: "root",
         display: "Root",
         system: "http://hl7.org/fhir/namingsystem-type"
-    }
+    },
 };
+//# sourceMappingURL=NamingsystemType.js.map

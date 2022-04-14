@@ -1,4 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ActPharmacySupplyType = void 0;
 /**
  *  Identifies types of dispensing events
  */
-export var V3ActPharmacySupplyType = {};
+exports.V3ActPharmacySupplyType = {};
+//# sourceMappingURL=V3ActPharmacySupplyType.js.map

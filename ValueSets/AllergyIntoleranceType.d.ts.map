@@ -1,1 +1,1 @@
-{"version":3,"file":"AllergyIntoleranceType.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/AllergyIntoleranceType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,sBAAsB;IACjC;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}
+{"version":3,"file":"AllergyIntoleranceType.d.ts","sourceRoot":"","sources":["../../ValueSets/AllergyIntoleranceType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,sBAAsB;IACjC;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}

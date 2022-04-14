@@ -1,1 +1,1 @@
-{"version":3,"file":"DocTypecodes.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/DocTypecodes.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,YAAY;;;;;;;;;;;;;;;;;;;CA2FxB,CAAC"}
+{"version":3,"file":"DocTypecodes.d.ts","sourceRoot":"","sources":["../../ValueSets/DocTypecodes.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,YAAY;;;;;;;;;;;;;;;;;;;CA2FxB,CAAC"}

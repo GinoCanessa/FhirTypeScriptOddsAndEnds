@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasureImprovementNotation = void 0;
 /**
  * Observation values that indicate what change in a measurement value or score is indicative of an improvement in the measured item or scored issue.
  */
-export var MeasureImprovementNotation = {
+exports.MeasureImprovementNotation = {
     /**
      * Improvement is indicated as a decrease in the score or measurement (e.g. Lower score indicates better quality).
      */
@@ -17,5 +20,6 @@ export var MeasureImprovementNotation = {
         code: "increase",
         display: "Increased score indicates improvement",
         system: "http://terminology.hl7.org/CodeSystem/measure-improvement-notation"
-    }
+    },
 };
+//# sourceMappingURL=MeasureImprovementNotation.js.map

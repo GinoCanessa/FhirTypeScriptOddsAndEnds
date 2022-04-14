@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasureScoring = void 0;
 /**
  * The scoring type of the measure.
  */
-export var MeasureScoring = {
+exports.MeasureScoring = {
     /**
      * The measure is a cohort definition.
      */
@@ -33,5 +36,6 @@ export var MeasureScoring = {
         code: "ratio",
         display: "Ratio",
         system: "http://terminology.hl7.org/CodeSystem/measure-scoring"
-    }
+    },
 };
+//# sourceMappingURL=MeasureScoring.js.map

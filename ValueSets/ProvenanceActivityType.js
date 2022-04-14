@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvenanceActivityType = void 0;
 /**
  * This value set contains representative Activity Type codes, which includes codes from the HL7 DocumentCompletion, ActStatus, and DataOperations code system, W3C PROV-DM and PROV-N concepts and display names, several HL7 Lifecycle Event codes for which there are agreed upon definitions, and non-duplicated codes from the HL7 Security and Privacy Ontology Operations codes.
  */
-export var ProvenanceActivityType = {
+exports.ProvenanceActivityType = {
     /**
      * Participations related, but not primary to an act. The Referring, Admitting, and Discharging practitioners must be the same person as those authoring the ControlAct event for their respective trigger events.
      */
@@ -477,5 +480,6 @@ export var ProvenanceActivityType = {
         code: "VRF",
         display: "verifier",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
-    }
+    },
 };
+//# sourceMappingURL=ProvenanceActivityType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractStatus = void 0;
 /**
  * This value set contract specific codes for status.
  */
-export var ContractStatus = {
+exports.ContractStatus = {
     /**
      * Contract is augmented with additional information to correct errors in a predecessor or to updated values in a predecessor. Usage: Contract altered within effective time. Precedence Order = 9. Comparable FHIR and v.3 status codes: revised; replaced.
      */
@@ -121,5 +124,6 @@ export var ContractStatus = {
         code: "terminated",
         display: "Terminated",
         system: "http://hl7.org/fhir/contract-status"
-    }
+    },
 };
+//# sourceMappingURL=ContractStatus.js.map

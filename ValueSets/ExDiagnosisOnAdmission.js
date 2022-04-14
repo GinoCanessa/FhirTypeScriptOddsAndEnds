@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExDiagnosisOnAdmission = void 0;
 /**
  * This value set includes example Diagnosis on Admission codes.
  */
-export var ExDiagnosisOnAdmission = {
+exports.ExDiagnosisOnAdmission = {
     /**
      * Diagnosis was not present at time of inpatient admission.
      */
@@ -33,5 +36,6 @@ export var ExDiagnosisOnAdmission = {
         code: "y",
         display: "Yes",
         system: "http://terminology.hl7.org/CodeSystem/ex-diagnosis-on-admission"
-    }
+    },
 };
+//# sourceMappingURL=ExDiagnosisOnAdmission.js.map

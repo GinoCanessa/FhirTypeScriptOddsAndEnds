@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecimenContainedPreference = void 0;
 /**
  * Degree of preference of a type of conditioned specimen.
  */
-export var SpecimenContainedPreference = {
+exports.SpecimenContainedPreference = {
     /**
      * This type of conditioned specimen is an alternate.
      */
@@ -17,5 +20,6 @@ export var SpecimenContainedPreference = {
         code: "preferred",
         display: "Preferred",
         system: "http://hl7.org/fhir/specimen-contained-preference"
-    }
+    },
 };
+//# sourceMappingURL=SpecimenContainedPreference.js.map

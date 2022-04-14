@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExBenefitcategory = void 0;
 /**
  * This value set includes examples of Benefit Category codes.
  */
-export var ExBenefitcategory = {
+exports.ExBenefitcategory = {
     /**
      * Medical Care.
      */
@@ -225,5 +228,6 @@ export var ExBenefitcategory = {
         code: "F6",
         display: "Vision Coverage",
         system: "http://terminology.hl7.org/CodeSystem/ex-benefitcategory"
-    }
+    },
 };
+//# sourceMappingURL=ExBenefitcategory.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactPointUse = void 0;
 /**
  * Use of contact point.
  */
-export var ContactPointUse = {
+exports.ContactPointUse = {
     /**
      * A communication contact point at a home; attempted contacts for business purposes might intrude privacy and chances are one will contact family or other household members instead of the person one wishes to call. Typically used with urgent cases, or if no other contacts are available.
      */
@@ -41,5 +44,6 @@ export var ContactPointUse = {
         code: "work",
         display: "Work",
         system: "http://hl7.org/fhir/contact-point-use"
-    }
+    },
 };
+//# sourceMappingURL=ContactPointUse.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationdispenseStatusReason = void 0;
 /**
  * MedicationDispense Status Codes
  */
-export var MedicationdispenseStatusReason = {
+exports.MedicationdispenseStatusReason = {
     /**
      * This therapy has been ordered as a backup to a preferred therapy. This order will be released when and if the preferred therapy is unsuccessful.
      */
@@ -169,5 +172,6 @@ export var MedicationdispenseStatusReason = {
         code: "washout",
         display: "Washout",
         system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-status-reason"
-    }
+    },
 };
+//# sourceMappingURL=MedicationdispenseStatusReason.js.map

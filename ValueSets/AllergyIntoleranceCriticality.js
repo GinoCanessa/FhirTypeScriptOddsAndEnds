@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyIntoleranceCriticality = void 0;
 /**
  * Estimate of the potential clinical harm, or seriousness, of a reaction to an identified substance.
  */
-export var AllergyIntoleranceCriticality = {
+exports.AllergyIntoleranceCriticality = {
     /**
      * Worst case result of a future exposure is assessed to be life-threatening or having high potential for organ system failure.
      */
@@ -25,5 +28,6 @@ export var AllergyIntoleranceCriticality = {
         code: "unable-to-assess",
         display: "Unable to Assess Risk",
         system: "http://hl7.org/fhir/allergy-intolerance-criticality"
-    }
+    },
 };
+//# sourceMappingURL=AllergyIntoleranceCriticality.js.map

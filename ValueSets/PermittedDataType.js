@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PermittedDataType = void 0;
 /**
  * Permitted data type for observation value.
  */
-export var PermittedDataType = {
+exports.PermittedDataType = {
     /**
      * true or false.
      */
@@ -89,5 +92,6 @@ export var PermittedDataType = {
         code: "time",
         display: "time",
         system: "http://hl7.org/fhir/permitted-data-type"
-    }
+    },
 };
+//# sourceMappingURL=PermittedDataType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TimingAbbreviation = void 0;
 /**
  * Code for a known / defined timing pattern.
  */
-export var TimingAbbreviation = {
+exports.TimingAbbreviation = {
     /**
      * Every morning at institution specified times.
      */
@@ -129,5 +132,6 @@ export var TimingAbbreviation = {
         code: "WK",
         display: "weekly",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
-    }
+    },
 };
+//# sourceMappingURL=TimingAbbreviation.js.map

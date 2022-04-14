@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionStageType = void 0;
 /**
  * Example value set for the type of stages of cancer and other conditions
  */
-export var ConditionStageType = {
+exports.ConditionStageType = {
     ConditionStageType_GleasonQuoteSMicroscopicProstaticCarcinomaGradingSystem: {
         code: "106241006",
         display: "Gleason's microscopic prostatic carcinoma grading system",
@@ -5011,5 +5014,6 @@ export var ConditionStageType = {
         code: "83200007",
         display: "WR stage 6",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ConditionStageType.js.map

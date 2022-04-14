@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractTermType = void 0;
 /**
  * This value set includes sample Contract Term Type codes.
  */
-export var ContractTermType = {
+exports.ContractTermType = {
     /**
      * Based on specialized statutes that deal with particular subjects.
      */
@@ -17,5 +20,6 @@ export var ContractTermType = {
         code: "subject-to",
         display: "Subject To",
         system: "http://terminology.hl7.org/CodeSystem/contracttermtypecodes"
-    }
+    },
 };
+//# sourceMappingURL=ContractTermType.js.map

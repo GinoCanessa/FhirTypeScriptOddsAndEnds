@@ -1,1 +1,1 @@
-{"version":3,"file":"SpecimenCollection.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/SpecimenCollection.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,kBAAkB,IAC9B,CAAC"}
+{"version":3,"file":"SpecimenCollection.d.ts","sourceRoot":"","sources":["../../ValueSets/SpecimenCollection.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,kBAAkB,IAC9B,CAAC"}

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationOutcome = void 0;
 /**
  * Operation Outcome codes used by FHIR test servers (see Implementation file translations.xml)
  */
-export var OperationOutcome = {
+exports.OperationOutcome = {
     operation_outcome_DELETEMULTIPLEMATCHES: {
         code: "DELETE_MULTIPLE_MATCHES",
         display: "Error: Multiple matches exist for the conditional delete",
@@ -251,5 +254,6 @@ export var OperationOutcome = {
         code: "UPDATE_MULTIPLE_MATCHES",
         display: "Error: Multiple matches exist for the conditional update",
         system: "http://terminology.hl7.org/CodeSystem/operation-outcome"
-    }
+    },
 };
+//# sourceMappingURL=OperationOutcome.js.map

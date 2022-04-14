@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventResourceTypes = void 0;
 /**
  * A list of all the event resource types defined in this version of the FHIR specification.
  */
-export var EventResourceTypes = {
+exports.EventResourceTypes = {
     /**
      * Item containing charge code(s) associated with the provision of healthcare provider products.
      */
@@ -273,5 +276,6 @@ export var EventResourceTypes = {
         code: "Task",
         display: "Task",
         system: "http://hl7.org/fhir/event-resource-types"
-    }
+    },
 };
+//# sourceMappingURL=EventResourceTypes.js.map

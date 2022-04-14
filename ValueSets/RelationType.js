@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelationType = void 0;
 /**
  * The type of relations between entries.
  */
-export var RelationType = {
+exports.RelationType = {
     /**
      * the related entry represents an item that replaces the current retired item.
      */
@@ -17,5 +20,6 @@ export var RelationType = {
         code: "triggers",
         display: "Triggers",
         system: "http://hl7.org/fhir/relation-type"
-    }
+    },
 };
+//# sourceMappingURL=RelationType.js.map

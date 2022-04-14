@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaView = void 0;
 /**
  * Codes defined in SNOMED CT that can be used to record Media Recording views.
  */
-export var MediaView = {
+exports.MediaView = {
     MediaView_LLOProjection: {
         code: "260421001",
         display: "LLO projection",
@@ -1381,5 +1384,6 @@ export var MediaView = {
         code: "442667005",
         display: "Stereoscopic view decremented from baseline",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=MediaView.js.map

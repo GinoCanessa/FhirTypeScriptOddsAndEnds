@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoverageeligibilityresponseExAuthSupport = void 0;
 /**
  * This value set includes CoverageEligibilityResponse Auth Support codes.
  */
-export var CoverageeligibilityresponseExAuthSupport = {
+exports.CoverageeligibilityresponseExAuthSupport = {
     /**
      * A formal accident report as would be filed with police or a simlar official body.
      */
@@ -65,5 +68,6 @@ export var CoverageeligibilityresponseExAuthSupport = {
         code: "professionalreport",
         display: "Professional Report",
         system: "http://terminology.hl7.org/CodeSystem/coverageeligibilityresponse-ex-auth-support"
-    }
+    },
 };
+//# sourceMappingURL=CoverageeligibilityresponseExAuthSupport.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpdxLicense = void 0;
 /**
  * The license that applies to an Implementation Guide (using an SPDX license Identifiers, or 'not-open-source'). The binding is required but new SPDX license Identifiers are allowed to be used (https://spdx.org/licenses/).
  */
-export var SpdxLicense = {
+exports.SpdxLicense = {
     /**
      * BSD Zero Clause License.
      */
@@ -2769,5 +2772,6 @@ export var SpdxLicense = {
         code: "ZPL-2.1",
         display: "Zope Public License 2.1",
         system: "http://hl7.org/fhir/spdx-license"
-    }
+    },
 };
+//# sourceMappingURL=SpdxLicense.js.map

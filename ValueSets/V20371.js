@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V20371 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0371 ( Additive)
  */
-export var V20371 = {
+exports.V20371 = {
     v2_0371_ACDSolutionA: {
         code: "ACDA",
         display: "ACD Solution A",
@@ -286,5 +289,6 @@ export var V20371 = {
         code: "WEST",
         display: "Buffered Citrate (Westergren Sedimentation Rate)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0371"
-    }
+    },
 };
+//# sourceMappingURL=V20371.js.map

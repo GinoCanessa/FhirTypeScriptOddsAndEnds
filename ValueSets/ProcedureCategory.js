@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcedureCategory = void 0;
 /**
  * Procedure Category code: A selection of relevant SNOMED CT codes.
  */
-export var ProcedureCategory = {
+exports.ProcedureCategory = {
     ProcedureCategory_VAL103693007: {
         code: "103693007",
         system: "http://snomed.info/sct"
@@ -29,5 +32,6 @@ export var ProcedureCategory = {
     ProcedureCategory_VAL46947000: {
         code: "46947000",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ProcedureCategory.js.map

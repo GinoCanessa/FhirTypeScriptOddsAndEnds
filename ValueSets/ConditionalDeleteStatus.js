@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionalDeleteStatus = void 0;
 /**
  * A code that indicates how the server supports conditional delete.
  */
-export var ConditionalDeleteStatus = {
+exports.ConditionalDeleteStatus = {
     /**
      * Conditional deletes are supported, and multiple resources can be deleted in a single interaction.
      */
@@ -25,5 +28,6 @@ export var ConditionalDeleteStatus = {
         code: "single",
         display: "Single Deletes Supported",
         system: "http://hl7.org/fhir/conditional-delete-status"
-    }
+    },
 };
+//# sourceMappingURL=ConditionalDeleteStatus.js.map

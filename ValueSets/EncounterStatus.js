@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterStatus = void 0;
 /**
  * Current state of the encounter.
  */
-export var EncounterStatus = {
+exports.EncounterStatus = {
     /**
      * The Patient is present for the encounter, however is not currently meeting with a practitioner.
      */
@@ -73,5 +76,6 @@ export var EncounterStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/encounter-status"
-    }
+    },
 };
+//# sourceMappingURL=EncounterStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GuidanceResponseStatus = void 0;
 /**
  * The status of a guidance response.
  */
-export var GuidanceResponseStatus = {
+exports.GuidanceResponseStatus = {
     /**
      * The request was processed successfully, but more data may result in a more complete evaluation.
      */
@@ -49,5 +52,6 @@ export var GuidanceResponseStatus = {
         code: "success",
         display: "Success",
         system: "http://hl7.org/fhir/guidance-response-status"
-    }
+    },
 };
+//# sourceMappingURL=GuidanceResponseStatus.js.map

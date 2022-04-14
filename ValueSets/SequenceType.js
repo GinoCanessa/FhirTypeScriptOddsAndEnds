@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SequenceType = void 0;
 /**
  * Type if a sequence -- DNA, RNA, or amino acid sequence.
  */
-export var SequenceType = {
+exports.SequenceType = {
     /**
      * Amino acid sequence.
      */
@@ -25,5 +28,6 @@ export var SequenceType = {
         code: "rna",
         display: "RNA Sequence",
         system: "http://hl7.org/fhir/sequence-type"
-    }
+    },
 };
+//# sourceMappingURL=SequenceType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeofcareType = void 0;
 /**
  * This example value set defines a set of codes that can be used to express the usage type of an EpisodeOfCare record.
  */
-export var EpisodeofcareType = {
+exports.EpisodeofcareType = {
     episodeofcare_type_CommunityBasedAgedCare: {
         code: "cacp",
         display: "Community-based aged care",
@@ -26,5 +29,6 @@ export var EpisodeofcareType = {
         code: "pac",
         display: "Post Acute Care",
         system: "http://terminology.hl7.org/CodeSystem/episodeofcare-type"
-    }
+    },
 };
+//# sourceMappingURL=EpisodeofcareType.js.map

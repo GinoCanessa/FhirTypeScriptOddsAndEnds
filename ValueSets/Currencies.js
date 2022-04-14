@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Currencies = void 0;
 /**
  * Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)
  */
-export var Currencies = {
+exports.Currencies = {
     Currencies_UnitedArabEmiratesDirham: {
         code: "AED",
         display: "United Arab Emirates dirham",
@@ -911,5 +914,6 @@ export var Currencies = {
         code: "ZWL",
         display: "Zimbabwean dollar A/10",
         system: "urn:iso:std:iso:4217"
-    }
+    },
 };
+//# sourceMappingURL=Currencies.js.map

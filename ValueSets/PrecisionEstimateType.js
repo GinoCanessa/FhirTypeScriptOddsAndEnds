@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PrecisionEstimateType = void 0;
 /**
  * Method of reporting variability of estimates, such as confidence intervals, interquartile range or standard deviation.
  */
-export var PrecisionEstimateType = {
+exports.PrecisionEstimateType = {
     /**
      * confidence interval.
      */
@@ -33,5 +36,6 @@ export var PrecisionEstimateType = {
         code: "SE",
         display: "standard error",
         system: "http://terminology.hl7.org/CodeSystem/precision-estimate-type"
-    }
+    },
 };
+//# sourceMappingURL=PrecisionEstimateType.js.map

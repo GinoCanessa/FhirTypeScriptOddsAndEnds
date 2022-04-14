@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VariableType = void 0;
 /**
  * The possible types of variables for exposures or outcomes (E.g. Dichotomous, Continuous, Descriptive).
  */
-export var VariableType = {
+exports.VariableType = {
     /**
      * The variable is a continuous result such as a quantity.
      */
@@ -25,5 +28,6 @@ export var VariableType = {
         code: "dichotomous",
         display: "Dichotomous",
         system: "http://hl7.org/fhir/variable-type"
-    }
+    },
 };
+//# sourceMappingURL=VariableType.js.map

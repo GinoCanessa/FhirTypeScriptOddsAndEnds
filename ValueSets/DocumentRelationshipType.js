@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentRelationshipType = void 0;
 /**
  * The type of relationship between documents.
  */
-export var DocumentRelationshipType = {
+exports.DocumentRelationshipType = {
     /**
      * This document adds additional information to the target document.
      */
@@ -33,5 +36,6 @@ export var DocumentRelationshipType = {
         code: "transforms",
         display: "Transforms",
         system: "http://hl7.org/fhir/document-relationship-type"
-    }
+    },
 };
+//# sourceMappingURL=DocumentRelationshipType.js.map

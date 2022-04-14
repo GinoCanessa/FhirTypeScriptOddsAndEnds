@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConstraintSeverity = void 0;
 /**
  * SHALL applications comply with this constraint?
  */
-export var ConstraintSeverity = {
+exports.ConstraintSeverity = {
     /**
      * If the constraint is violated, the resource is not conformant.
      */
@@ -17,5 +20,6 @@ export var ConstraintSeverity = {
         code: "warning",
         display: "Warning",
         system: "http://hl7.org/fhir/constraint-severity"
-    }
+    },
 };
+//# sourceMappingURL=ConstraintSeverity.js.map

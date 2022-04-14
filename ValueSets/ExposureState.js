@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExposureState = void 0;
 /**
  * Whether the results by exposure is describing the results for the primary exposure of interest (exposure) or the alternative state (exposureAlternative).
  */
-export var ExposureState = {
+exports.ExposureState = {
     /**
      * used when the results by exposure is describing the results for the primary exposure of interest.
      */
@@ -17,5 +20,6 @@ export var ExposureState = {
         code: "exposure-alternative",
         display: "Exposure Alternative",
         system: "http://hl7.org/fhir/exposure-state"
-    }
+    },
 };
+//# sourceMappingURL=ExposureState.js.map

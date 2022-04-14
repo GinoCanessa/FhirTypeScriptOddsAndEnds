@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractTermSubtype = void 0;
 /**
  * This value set includes sample Contract Term SubType codes.
  */
-export var ContractTermSubtype = {
+exports.ContractTermSubtype = {
     /**
      * Terms that go to the very root of a contract.
      */
@@ -25,5 +28,6 @@ export var ContractTermSubtype = {
         code: "warranty",
         display: "Warranty",
         system: "http://terminology.hl7.org/CodeSystem/contracttermsubtypecodes"
-    }
+    },
 };
+//# sourceMappingURL=ContractTermSubtype.js.map

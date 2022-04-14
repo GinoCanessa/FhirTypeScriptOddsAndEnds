@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationFormCodes = void 0;
 /**
  * This value set includes all dose form codes from SNOMED CT - provided as an exemplar.
  */
-export var MedicationFormCodes = {
+exports.MedicationFormCodes = {
     MedicationFormCodes_DrugStick: {
         code: "11190007",
         display: "Drug stick",
@@ -1761,5 +1764,6 @@ export var MedicationFormCodes = {
         code: "85581007",
         display: "Drug powder",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=MedicationFormCodes.js.map

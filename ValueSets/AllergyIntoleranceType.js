@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyIntoleranceType = void 0;
 /**
  * Identification of the underlying physiological mechanism for a Reaction Risk.
  */
-export var AllergyIntoleranceType = {
+exports.AllergyIntoleranceType = {
     /**
      * A propensity for hypersensitive reaction(s) to a substance.  These reactions are most typically type I hypersensitivity, plus other "allergy-like" reactions, including pseudoallergy.
      */
@@ -17,5 +20,6 @@ export var AllergyIntoleranceType = {
         code: "intolerance",
         display: "Intolerance",
         system: "http://hl7.org/fhir/allergy-intolerance-type"
-    }
+    },
 };
+//# sourceMappingURL=AllergyIntoleranceType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcessPriority = void 0;
 /**
  * This value set includes the financial processing priority codes.
  */
-export var ProcessPriority = {
+exports.ProcessPriority = {
     /**
      * Later, when possible.
      */
@@ -25,5 +28,6 @@ export var ProcessPriority = {
         code: "stat",
         display: "Immediate",
         system: "http://terminology.hl7.org/CodeSystem/processpriority"
-    }
+    },
 };
+//# sourceMappingURL=ProcessPriority.js.map

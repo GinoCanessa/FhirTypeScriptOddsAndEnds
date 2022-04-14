@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EntformulaAdditive = void 0;
 /**
  * EnteralFormulaAdditiveType: Codes for the type of modular component such as protein, carbohydrate or fiber to be provided in addition to or mixed with the base formula. This value set is provided as a suggestive example.
  */
-export var EntformulaAdditive = {
+exports.EntformulaAdditive = {
     /**
      * Modular carbohydrate enteral formula component
      */
@@ -41,5 +44,6 @@ export var EntformulaAdditive = {
         code: "water",
         display: "Water",
         system: "http://terminology.hl7.org/CodeSystem/entformula-additive"
-    }
+    },
 };
+//# sourceMappingURL=EntformulaAdditive.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExamplescenarioActorType = void 0;
 /**
  * The type of actor - system or human.
  */
-export var ExamplescenarioActorType = {
+exports.ExamplescenarioActorType = {
     /**
      * A system.
      */
@@ -17,5 +20,6 @@ export var ExamplescenarioActorType = {
         code: "person",
         display: "Person",
         system: "http://hl7.org/fhir/examplescenario-actor-type"
-    }
+    },
 };
+//# sourceMappingURL=ExamplescenarioActorType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositionStatus = void 0;
 /**
  * The workflow/clinical status of the composition.
  */
-export var CompositionStatus = {
+exports.CompositionStatus = {
     /**
      * The composition content or the referenced resources have been modified (edited or added to) subsequent to being released as "final" and the composition is complete and verified by an authorized person.
      */
@@ -33,5 +36,6 @@ export var CompositionStatus = {
         code: "preliminary",
         display: "Preliminary",
         system: "http://hl7.org/fhir/composition-status"
-    }
+    },
 };
+//# sourceMappingURL=CompositionStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ItemType = void 0;
 /**
  * Distinguishes groups from questions and display text and indicates data type for questions.
  */
-export var ItemType = {
+exports.ItemType = {
     /**
      * Question with binary content such as an image, PDF, etc. as an answer (valueAttachment).
      */
@@ -137,5 +140,6 @@ export var ItemType = {
         code: "url",
         display: "Url",
         system: "http://hl7.org/fhir/item-type"
-    }
+    },
 };
+//# sourceMappingURL=ItemType.js.map

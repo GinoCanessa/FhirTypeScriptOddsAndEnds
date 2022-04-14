@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RepositoryType = void 0;
 /**
  * Type for access of external URI.
  */
-export var RepositoryType = {
+exports.RepositoryType = {
     /**
      * When URL is clicked, the resource can be seen directly (by webpage or by download link format).
      */
@@ -41,5 +44,6 @@ export var RepositoryType = {
         code: "other",
         display: "Some other complicated or particular way to get resource from URL.",
         system: "http://hl7.org/fhir/repository-type"
-    }
+    },
 };
+//# sourceMappingURL=RepositoryType.js.map

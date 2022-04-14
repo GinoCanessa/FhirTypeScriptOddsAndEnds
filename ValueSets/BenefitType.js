@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BenefitType = void 0;
 /**
  * This value set includes a smattering of Benefit type codes.
  */
-export var BenefitType = {
+exports.BenefitType = {
     /**
      * Maximum benefit allowable.
      */
@@ -97,5 +100,6 @@ export var BenefitType = {
         code: "visit",
         display: "Visit",
         system: "http://terminology.hl7.org/CodeSystem/benefit-type"
-    }
+    },
 };
+//# sourceMappingURL=BenefitType.js.map

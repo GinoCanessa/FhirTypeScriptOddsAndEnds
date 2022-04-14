@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageTransport = void 0;
 /**
  * The protocol used for message transport.
  */
-export var MessageTransport = {
+exports.MessageTransport = {
     /**
      * The application sends or receives messages using File Transfer Protocol.
      */
@@ -25,5 +28,6 @@ export var MessageTransport = {
         code: "mllp",
         display: "MLLP",
         system: "http://terminology.hl7.org/CodeSystem/message-transport"
-    }
+    },
 };
+//# sourceMappingURL=MessageTransport.js.map

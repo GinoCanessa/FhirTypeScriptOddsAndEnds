@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentAdjustmentReason = void 0;
 /**
  * This value set includes smattering of Payment Adjustment Reason codes.
  */
-export var PaymentAdjustmentReason = {
+exports.PaymentAdjustmentReason = {
     /**
      * Prior Payment Reversal
      */
@@ -17,5 +20,6 @@ export var PaymentAdjustmentReason = {
         code: "a002",
         display: "Prior Overpayment",
         system: "http://terminology.hl7.org/CodeSystem/payment-adjustment-reason"
-    }
+    },
 };
+//# sourceMappingURL=PaymentAdjustmentReason.js.map

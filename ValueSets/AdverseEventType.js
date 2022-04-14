@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventType = void 0;
 /**
  * This value set includes all SNOMED CT Clinical Findings.
  */
-export var AdverseEventType = {
+exports.AdverseEventType = {
     AdverseEventType_ReligiousDiscrimination: {
         code: "1003002",
         display: "Religious discrimination",
@@ -5001,5 +5004,6 @@ export var AdverseEventType = {
         code: "998008",
         display: "Chagas' disease with heart involvement",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventType.js.map

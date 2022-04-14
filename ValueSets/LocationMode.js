@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationMode = void 0;
 /**
  * Indicates whether a resource instance represents a specific location or a class of locations.
  */
-export var LocationMode = {
+exports.LocationMode = {
     /**
      * The Location resource represents a specific instance of a location (e.g. Operating Theatre 1A).
      */
@@ -17,5 +20,6 @@ export var LocationMode = {
         code: "kind",
         display: "Kind",
         system: "http://hl7.org/fhir/location-mode"
-    }
+    },
 };
+//# sourceMappingURL=LocationMode.js.map

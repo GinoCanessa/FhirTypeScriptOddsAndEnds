@@ -1,1 +1,1 @@
-{"version":3,"file":"AddressType.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/AddressType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,WAAW;IACtB;;OAEG;;IAMH;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}
+{"version":3,"file":"AddressType.d.ts","sourceRoot":"","sources":["../../ValueSets/AddressType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,WAAW;IACtB;;OAEG;;IAMH;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}

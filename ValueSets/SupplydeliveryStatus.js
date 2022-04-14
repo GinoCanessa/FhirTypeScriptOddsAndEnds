@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplydeliveryStatus = void 0;
 /**
  * Status of the supply delivery.
  */
-export var SupplydeliveryStatus = {
+exports.SupplydeliveryStatus = {
     /**
      * Delivery was not completed.
      */
@@ -33,5 +36,6 @@ export var SupplydeliveryStatus = {
         code: "in-progress",
         display: "In Progress",
         system: "http://hl7.org/fhir/supplydelivery-status"
-    }
+    },
 };
+//# sourceMappingURL=SupplydeliveryStatus.js.map

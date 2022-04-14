@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UdiEntryType = void 0;
 /**
  * Codes to identify how UDI data was entered.
  */
-export var UdiEntryType = {
+exports.UdiEntryType = {
     /**
      * a barcodescanner captured the data from the device label.
      */
@@ -49,5 +52,6 @@ export var UdiEntryType = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/udi-entry-type"
-    }
+    },
 };
+//# sourceMappingURL=UdiEntryType.js.map

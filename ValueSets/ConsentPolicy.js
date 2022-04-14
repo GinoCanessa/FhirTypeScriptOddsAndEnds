@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentPolicy = void 0;
 /**
  * This value set includes sample Regulatory consent policy types from the US and other regions.
  */
-export var ConsentPolicy = {
+exports.ConsentPolicy = {
     /**
      * Pursuant to Sec. 2 no. 9 Health Telematics Act 2012, ELGA Health Data ( “ELGA-Gesundheitsdaten”) = Medical documents. Austria opted for an opt-out approach. This means that a person is by default ‘ELGA participant’ unless he/she objects. ELGA participants have the following options: General opt out: No participation in ELGA, Partial opt-out: No participation in a particular ELGA application, e.g. eMedication and Case-specific opt-out: No participation in ELGA only regarding a particular case/treatment. There is the possibility to opt-in again. ELGA participants can also exclude the access of a particular ELGA healthcare provider to a particular piece of or all of their ELGA data. http://ec.europa.eu/health/ehealth/docs/laws_austria_en.pdf
      */
@@ -209,5 +212,6 @@ export var ConsentPolicy = {
         code: "va-21-4142",
         display: "VA Form 21-4142",
         system: "http://terminology.hl7.org/CodeSystem/consentpolicycodes"
-    }
+    },
 };
+//# sourceMappingURL=ConsentPolicy.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionRequiredBehavior = void 0;
 /**
  * Defines expectations around whether an action or action group is required.
  */
-export var ActionRequiredBehavior = {
+exports.ActionRequiredBehavior = {
     /**
      * An action with this behavior may be included in the set of actions processed by the end user.
      */
@@ -25,5 +28,6 @@ export var ActionRequiredBehavior = {
         code: "must-unless-documented",
         display: "Must Unless Documented",
         system: "http://hl7.org/fhir/action-required-behavior"
-    }
+    },
 };
+//# sourceMappingURL=ActionRequiredBehavior.js.map

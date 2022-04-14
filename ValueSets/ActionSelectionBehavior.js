@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionSelectionBehavior = void 0;
 /**
  * Defines selection behavior of a group.
  */
-export var ActionSelectionBehavior = {
+exports.ActionSelectionBehavior = {
     /**
      * All the actions in the group must be selected as a single unit.
      */
@@ -49,5 +52,6 @@ export var ActionSelectionBehavior = {
         code: "one-or-more",
         display: "One Or More",
         system: "http://hl7.org/fhir/action-selection-behavior"
-    }
+    },
 };
+//# sourceMappingURL=ActionSelectionBehavior.js.map

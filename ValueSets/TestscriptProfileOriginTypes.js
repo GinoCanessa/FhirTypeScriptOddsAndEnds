@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestscriptProfileOriginTypes = void 0;
 /**
  * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the origin within a TestScript.
  */
-export var TestscriptProfileOriginTypes = {
+exports.TestscriptProfileOriginTypes = {
     /**
      * General FHIR client used to initiate operations against a FHIR server.
      */
@@ -17,5 +20,6 @@ export var TestscriptProfileOriginTypes = {
         code: "FHIR-SDC-FormFiller",
         display: "FHIR SDC FormFiller",
         system: "http://terminology.hl7.org/CodeSystem/testscript-profile-origin-types"
-    }
+    },
 };
+//# sourceMappingURL=TestscriptProfileOriginTypes.js.map

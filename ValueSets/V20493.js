@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V20493 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0493 ( Specimen Condition)
  */
-export var V20493 = {
+exports.V20493 = {
     v2_0493_Autolyzed: {
         code: "AUT",
         display: "Autolyzed",
@@ -51,5 +54,6 @@ export var V20493 = {
         code: "SNR",
         display: "Sample not received",
         system: "http://terminology.hl7.org/CodeSystem/v2-0493"
-    }
+    },
 };
+//# sourceMappingURL=V20493.js.map

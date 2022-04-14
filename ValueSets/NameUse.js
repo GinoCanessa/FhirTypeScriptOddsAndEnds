@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NameUse = void 0;
 /**
  * The use of a human name.
  */
-export var NameUse = {
+exports.NameUse = {
     /**
      * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons).
      */
@@ -57,5 +60,6 @@ export var NameUse = {
         code: "usual",
         display: "Usual",
         system: "http://hl7.org/fhir/name-use"
-    }
+    },
 };
+//# sourceMappingURL=NameUse.js.map

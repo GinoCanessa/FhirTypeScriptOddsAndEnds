@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ParticipantRole = void 0;
 /**
  * Roles of participants that may be included in a care team.  Defined as: Is a Person, Healthcare professional (occupation) or Healthcare related organization (qualifier value).
  */
-export var ParticipantRole = {
+exports.ParticipantRole = {
     ParticipantRole_MaternalAunt: {
         code: "100217091000087103",
         display: "Maternal aunt",
@@ -5031,5 +5034,6 @@ export var ParticipantRole = {
         code: "999483971000087108",
         display: "Health regulatory body for naturopathic practitioners",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ParticipantRole.js.map

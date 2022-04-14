@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchEntryMode = void 0;
 /**
  * Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.
  */
-export var SearchEntryMode = {
+exports.SearchEntryMode = {
     /**
      * This resource is returned because it is referred to from another resource in the search set.
      */
@@ -25,5 +28,6 @@ export var SearchEntryMode = {
         code: "outcome",
         display: "Outcome",
         system: "http://hl7.org/fhir/search-entry-mode"
-    }
+    },
 };
+//# sourceMappingURL=SearchEntryMode.js.map

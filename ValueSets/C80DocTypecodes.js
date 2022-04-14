@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.C80DocTypecodes = void 0;
 /**
  * This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.
  */
-export var C80DocTypecodes = {
+exports.C80DocTypecodes = {
     C80DocTypecodes_VAL18HydroxydeoxycorticosteroneMassVolumeInSerumOrPlasma: {
         code: "11206-0",
         display: "18-Hydroxydeoxycorticosterone [Mass/volume] in Serum or Plasma",
@@ -32006,5 +32009,6 @@ export var C80DocTypecodes = {
         code: "8653-8",
         display: "Hospital Discharge instructions",
         system: "http://loinc.org"
-    }
+    },
 };
+//# sourceMappingURL=C80DocTypecodes.js.map

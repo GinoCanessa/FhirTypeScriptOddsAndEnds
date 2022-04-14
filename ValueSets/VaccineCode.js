@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VaccineCode = void 0;
 /**
  * This identifies the vaccine substance administered - CVX codes.
  */
-export var VaccineCode = {
+exports.VaccineCode = {
     sid_cvx_DTP: {
         code: "01",
         display: "DTP",
@@ -1341,5 +1344,6 @@ export var VaccineCode = {
         code: "VRVAX",
         display: "Varivax",
         system: "urn:oid:1.2.36.1.2001.1005.17"
-    }
+    },
 };
+//# sourceMappingURL=VaccineCode.js.map

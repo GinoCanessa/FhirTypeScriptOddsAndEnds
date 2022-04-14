@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationPhysicalType = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate the physical form of the Location.
  */
-export var LocationPhysicalType = {
+exports.LocationPhysicalType = {
     /**
      * A defined physical boundary of something, such as a flood risk zone, region, postcode
      */
@@ -113,5 +116,6 @@ export var LocationPhysicalType = {
         code: "wi",
         display: "Wing",
         system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
-    }
+    },
 };
+//# sourceMappingURL=LocationPhysicalType.js.map

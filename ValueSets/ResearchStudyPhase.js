@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchStudyPhase = void 0;
 /**
  * Codes for the stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.
  */
-export var ResearchStudyPhase = {
+exports.ResearchStudyPhase = {
     /**
      * Designation for optional exploratory trials conducted in accordance with the United States Food and Drug Administration's (FDA) 2006 Guidance on Exploratory Investigational New Drug (IND) Studies. Formerly called Phase 0.
      */
@@ -65,5 +68,6 @@ export var ResearchStudyPhase = {
         code: "phase-4",
         display: "Phase 4",
         system: "http://terminology.hl7.org/CodeSystem/research-study-phase"
-    }
+    },
 };
+//# sourceMappingURL=ResearchStudyPhase.js.map

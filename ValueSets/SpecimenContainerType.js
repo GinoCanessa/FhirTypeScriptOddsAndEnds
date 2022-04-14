@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecimenContainerType = void 0;
 /**
  * Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 706041008 |Device for body fluid and tissue collection/transfer/processing (physical object)|
  */
-export var SpecimenContainerType = {
+exports.SpecimenContainerType = {
     SpecimenContainerType_PleuralDrainageSystemFluidCollector: {
         code: "463568005",
         display: "Pleural drainage system fluid collector",
@@ -616,5 +619,6 @@ export var SpecimenContainerType = {
         code: "718302001",
         display: "Urological fluid funnel, non-sterile",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=SpecimenContainerType.js.map

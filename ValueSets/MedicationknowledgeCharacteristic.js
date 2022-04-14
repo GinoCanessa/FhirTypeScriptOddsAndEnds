@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationknowledgeCharacteristic = void 0;
 /**
  * MedicationKnowledge Characteristic Codes
  */
-export var MedicationknowledgeCharacteristic = {
+exports.MedicationknowledgeCharacteristic = {
     /**
      * Description of the coating of the product
      */
@@ -57,5 +60,6 @@ export var MedicationknowledgeCharacteristic = {
         code: "size",
         display: "Size",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-characteristic"
-    }
+    },
 };
+//# sourceMappingURL=MedicationknowledgeCharacteristic.js.map

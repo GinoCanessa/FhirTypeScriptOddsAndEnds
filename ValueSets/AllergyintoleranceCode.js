@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyintoleranceCode = void 0;
 /**
  * This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.
  */
-export var AllergyintoleranceCode = {
+exports.AllergyintoleranceCode = {
     AllergyintoleranceCode_Mannotetraose2AlphaNAcetylglucosaminyltransferase: {
         code: "1002007",
         display: "Mannotetraose 2-alpha-N-acetylglucosaminyltransferase",
@@ -15081,5 +15084,6 @@ export var AllergyintoleranceCode = {
         code: "9944001",
         display: "Chlorphenamine",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=AllergyintoleranceCode.js.map

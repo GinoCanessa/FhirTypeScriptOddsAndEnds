@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionStage = void 0;
 /**
  * Example value set for stages of cancer and other conditions.
  */
-export var ConditionStage = {
+exports.ConditionStage = {
     ConditionStage_ClinicalStageIID: {
         code: "112240001",
         display: "Clinical stage II D",
@@ -4981,5 +4984,6 @@ export var ConditionStage = {
         code: "90402004",
         display: "pT3 stage",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ConditionStage.js.map

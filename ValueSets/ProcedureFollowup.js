@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProcedureFollowup = void 0;
 /**
  * Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.
  */
-export var ProcedureFollowup = {
+exports.ProcedureFollowup = {
     ProcedureFollowup_VAL18949003: {
         code: "18949003",
         system: "http://snomed.info/sct"
@@ -41,5 +44,6 @@ export var ProcedureFollowup = {
     ProcedureFollowup_VAL447346005: {
         code: "447346005",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ProcedureFollowup.js.map

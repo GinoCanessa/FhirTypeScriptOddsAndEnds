@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DaysOfWeek = void 0;
 /**
  * The days of the week.
  */
-export var DaysOfWeek = {
+exports.DaysOfWeek = {
     /**
      * Friday.
      */
@@ -57,5 +60,6 @@ export var DaysOfWeek = {
         code: "wed",
         display: "Wednesday",
         system: "http://hl7.org/fhir/days-of-week"
-    }
+    },
 };
+//# sourceMappingURL=DaysOfWeek.js.map

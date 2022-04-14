@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AddressUse = void 0;
 /**
  * The use of an address.
  */
-export var AddressUse = {
+exports.AddressUse = {
     /**
      * An address to be used to send bills, invoices, receipts etc.
      */
@@ -41,5 +44,6 @@ export var AddressUse = {
         code: "work",
         display: "Work",
         system: "http://hl7.org/fhir/address-use"
-    }
+    },
 };
+//# sourceMappingURL=AddressUse.js.map

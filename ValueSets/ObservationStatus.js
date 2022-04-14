@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObservationStatus = void 0;
 /**
  * Codes providing the status of an observation.
  */
-export var ObservationStatus = {
+exports.ObservationStatus = {
     /**
      * Subsequent to being Final, the observation has been modified subsequent.  This includes updates/new information and corrections.
      */
@@ -65,5 +68,6 @@ export var ObservationStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/observation-status"
-    }
+    },
 };
+//# sourceMappingURL=ObservationStatus.js.map

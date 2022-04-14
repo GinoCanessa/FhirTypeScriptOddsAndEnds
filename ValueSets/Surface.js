@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Surface = void 0;
 /**
  * This value set includes a smattering of FDI tooth surface codes.
  */
-export var Surface = {
+exports.Surface = {
     /**
      * The surface of a posterior tooth facing the cheeks.
      */
@@ -89,5 +92,6 @@ export var Surface = {
         code: "V",
         display: "Ventral",
         system: "http://terminology.hl7.org/CodeSystem/FDI-surface"
-    }
+    },
 };
+//# sourceMappingURL=Surface.js.map

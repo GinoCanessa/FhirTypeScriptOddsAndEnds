@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BenefitNetwork = void 0;
 /**
  * This value set includes a smattering of Network type codes.
  */
-export var BenefitNetwork = {
+exports.BenefitNetwork = {
     /**
      * Services rendered by a Network provider
      */
@@ -17,5 +20,6 @@ export var BenefitNetwork = {
         code: "out",
         display: "Out of Network",
         system: "http://terminology.hl7.org/CodeSystem/benefit-network"
-    }
+    },
 };
+//# sourceMappingURL=BenefitNetwork.js.map

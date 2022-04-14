@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FHIRVersion = void 0;
 /**
  * All published FHIR Versions.
  */
-export var FHIRVersion = {
+exports.FHIRVersion = {
     /**
      * DSTU 1 Official version.
      */
@@ -177,5 +180,6 @@ export var FHIRVersion = {
         code: "4.0.1",
         display: "4.0.1",
         system: "http://hl7.org/fhir/FHIR-version"
-    }
+    },
 };
+//# sourceMappingURL=FHIRVersion.js.map

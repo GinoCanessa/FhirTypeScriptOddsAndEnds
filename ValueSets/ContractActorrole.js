@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractActorrole = void 0;
 /**
  * This value set includes sample Contract Actor Role codes.
  */
-export var ContractActorrole = {
+exports.ContractActorrole = {
     /**
      * A receiver, human or animal, of health care related goods and services.
      */
@@ -17,5 +20,6 @@ export var ContractActorrole = {
         code: "practitioner",
         display: "Practitioner",
         system: "http://terminology.hl7.org/CodeSystem/contractactorrole"
-    }
+    },
 };
+//# sourceMappingURL=ContractActorrole.js.map

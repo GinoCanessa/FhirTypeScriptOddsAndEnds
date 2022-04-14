@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ProvenanceAgentType = void 0;
 /**
  * The type of participation a provenance participant.
  */
-export var ProvenanceAgentType = {
+exports.ProvenanceAgentType = {
     /**
      * A device that operates independently of an author on custodian's algorithms for data extraction of existing information for purpose of generating a new artifact.
      */
@@ -81,5 +84,6 @@ export var ProvenanceAgentType = {
         code: "verifier",
         display: "Verifier",
         system: "http://terminology.hl7.org/CodeSystem/provenance-participant-type"
-    }
+    },
 };
+//# sourceMappingURL=ProvenanceAgentType.js.map

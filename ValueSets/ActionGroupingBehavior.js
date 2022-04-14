@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionGroupingBehavior = void 0;
 /**
  * Defines organization behavior of a group.
  */
-export var ActionGroupingBehavior = {
+exports.ActionGroupingBehavior = {
     /**
      * A group with this behavior logically groups its sub-elements, and may be shown as a visual group to the end user, but it is not required to do so.
      */
@@ -25,5 +28,6 @@ export var ActionGroupingBehavior = {
         code: "visual-group",
         display: "Visual Group",
         system: "http://hl7.org/fhir/action-grouping-behavior"
-    }
+    },
 };
+//# sourceMappingURL=ActionGroupingBehavior.js.map

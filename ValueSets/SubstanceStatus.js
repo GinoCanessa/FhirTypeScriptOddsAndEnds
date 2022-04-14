@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubstanceStatus = void 0;
 /**
  * A code to indicate if the substance is actively used.
  */
-export var SubstanceStatus = {
+exports.SubstanceStatus = {
     /**
      * The substance is considered for use or reference.
      */
@@ -25,5 +28,6 @@ export var SubstanceStatus = {
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/substance-status"
-    }
+    },
 };
+//# sourceMappingURL=SubstanceStatus.js.map

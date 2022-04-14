@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationAdminCategory = void 0;
 /**
  * MedicationAdministration Category Codes
  */
-export var MedicationAdminCategory = {
+exports.MedicationAdminCategory = {
     /**
      * Includes administrations by the patient in their home (this would include long term care or nursing homes, hospices, etc.)
      */
@@ -25,5 +28,6 @@ export var MedicationAdminCategory = {
         code: "outpatient",
         display: "Outpatient",
         system: "http://terminology.hl7.org/CodeSystem/medication-admin-category"
-    }
+    },
 };
+//# sourceMappingURL=MedicationAdminCategory.js.map

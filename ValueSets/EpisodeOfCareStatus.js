@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EpisodeOfCareStatus = void 0;
 /**
  * The status of the episode of care.
  */
-export var EpisodeOfCareStatus = {
+exports.EpisodeOfCareStatus = {
     /**
      * This episode of care is current.
      */
@@ -57,5 +60,6 @@ export var EpisodeOfCareStatus = {
         code: "waitlist",
         display: "Waitlist",
         system: "http://hl7.org/fhir/episode-of-care-status"
-    }
+    },
 };
+//# sourceMappingURL=EpisodeOfCareStatus.js.map

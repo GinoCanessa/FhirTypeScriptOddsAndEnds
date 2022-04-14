@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimModifiers = void 0;
 /**
  * This value set includes sample Modifier type codes.
  */
-export var ClaimModifiers = {
+exports.ClaimModifiers = {
     /**
      * Repair of prior service or installation.
      */
@@ -49,5 +52,6 @@ export var ClaimModifiers = {
         code: "x",
         display: "None",
         system: "http://terminology.hl7.org/CodeSystem/modifiers"
-    }
+    },
 };
+//# sourceMappingURL=ClaimModifiers.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BodysiteLaterality = void 0;
 /**
  * Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'
  */
-export var BodysiteLaterality = {
+exports.BodysiteLaterality = {
     BodysiteLaterality_UnilateralLeft: {
         code: "419161000",
         display: "Unilateral left",
@@ -16,5 +19,6 @@ export var BodysiteLaterality = {
         code: "51440002",
         display: "Bilateral",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=BodysiteLaterality.js.map

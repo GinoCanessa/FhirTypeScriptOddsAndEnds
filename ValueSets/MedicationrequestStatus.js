@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationrequestStatus = void 0;
 /**
  * MedicationRequest Status Codes
  */
-export var MedicationrequestStatus = {
+exports.MedicationrequestStatus = {
     /**
      * The prescription is 'actionable', but not all actions that are implied by it have occurred yet.
      */
@@ -65,5 +68,6 @@ export var MedicationrequestStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/CodeSystem/medicationrequest-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationrequestStatus.js.map

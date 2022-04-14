@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListMode = void 0;
 /**
  * The processing mode that applies to this list.
  */
-export var ListMode = {
+exports.ListMode = {
     /**
      * A point-in-time list that shows what changes have been made or recommended.  E.g. a discharge medication list showing what was added and removed during an encounter.
      */
@@ -25,5 +28,6 @@ export var ListMode = {
         code: "working",
         display: "Working List",
         system: "http://hl7.org/fhir/list-mode"
-    }
+    },
 };
+//# sourceMappingURL=ListMode.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommunicationTopic = void 0;
 /**
  * Codes describing the purpose or content of the communication.
  */
-export var CommunicationTopic = {
+exports.CommunicationTopic = {
     /**
      * The purpose or content of the communication is an appointment reminder.
      */
@@ -49,5 +52,6 @@ export var CommunicationTopic = {
         code: "summary-report",
         display: "Summary Report",
         system: "http://terminology.hl7.org/CodeSystem/communication-topic"
-    }
+    },
 };
+//# sourceMappingURL=CommunicationTopic.js.map

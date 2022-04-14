@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DiagnosticReportStatus = void 0;
 /**
  * The status of the diagnostic report.
  */
-export var DiagnosticReportStatus = {
+exports.DiagnosticReportStatus = {
     /**
      * Subsequent to being final, the report has been modified.  This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.
      */
@@ -81,5 +84,6 @@ export var DiagnosticReportStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/diagnostic-report-status"
-    }
+    },
 };
+//# sourceMappingURL=DiagnosticReportStatus.js.map

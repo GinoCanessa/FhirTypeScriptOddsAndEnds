@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionnaireEnableOperator = void 0;
 /**
  * The criteria by which a question is enabled.
  */
-export var QuestionnaireEnableOperator = {
+exports.QuestionnaireEnableOperator = {
     /**
      * True if whether at least no answer has a value that is equal to the enableWhen answer.
      */
@@ -57,5 +60,6 @@ export var QuestionnaireEnableOperator = {
         code: "exists",
         display: "Exists",
         system: "http://hl7.org/fhir/questionnaire-enable-operator"
-    }
+    },
 };
+//# sourceMappingURL=QuestionnaireEnableOperator.js.map

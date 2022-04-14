@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResourceSlicingRules = void 0;
 /**
  * How slices are interpreted when evaluating an instance.
  */
-export var ResourceSlicingRules = {
+exports.ResourceSlicingRules = {
     /**
      * No additional content is allowed other than that described by the slices in this profile.
      */
@@ -25,5 +28,6 @@ export var ResourceSlicingRules = {
         code: "openAtEnd",
         display: "Open at End",
         system: "http://hl7.org/fhir/resource-slicing-rules"
-    }
+    },
 };
+//# sourceMappingURL=ResourceSlicingRules.js.map

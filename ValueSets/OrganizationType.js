@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationType = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate a type of organization.
  */
-export var OrganizationType = {
+exports.OrganizationType = {
     /**
      * An organization that is a registered business or corporation but not identified by other types.
      */
@@ -97,5 +100,6 @@ export var OrganizationType = {
         code: "team",
         display: "Organizational team",
         system: "http://terminology.hl7.org/CodeSystem/organization-type"
-    }
+    },
 };
+//# sourceMappingURL=OrganizationType.js.map

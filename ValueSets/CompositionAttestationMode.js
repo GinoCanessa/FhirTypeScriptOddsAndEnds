@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositionAttestationMode = void 0;
 /**
  * The way in which a person authenticated a composition.
  */
-export var CompositionAttestationMode = {
+exports.CompositionAttestationMode = {
     /**
      * The person authenticated the content and accepted legal responsibility for its content.
      */
@@ -33,5 +36,6 @@ export var CompositionAttestationMode = {
         code: "professional",
         display: "Professional",
         system: "http://hl7.org/fhir/composition-attestation-mode"
-    }
+    },
 };
+//# sourceMappingURL=CompositionAttestationMode.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractDecisionMode = void 0;
 /**
  * This value set contract specific codes for decision modes.
  */
-export var ContractDecisionMode = {
+exports.ContractDecisionMode = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractDecisionMode = {
         code: "policy",
         display: "Policy",
         system: "http://hl7.org/fhir/contract-decision-mode"
-    }
+    },
 };
+//# sourceMappingURL=ContractDecisionMode.js.map

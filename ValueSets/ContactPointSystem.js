@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactPointSystem = void 0;
 /**
  * Telecommunications form for contact point.
  */
-export var ContactPointSystem = {
+exports.ContactPointSystem = {
     /**
      * The value is an email address.
      */
@@ -57,5 +60,6 @@ export var ContactPointSystem = {
         code: "url",
         display: "URL",
         system: "http://hl7.org/fhir/contact-point-system"
-    }
+    },
 };
+//# sourceMappingURL=ContactPointSystem.js.map

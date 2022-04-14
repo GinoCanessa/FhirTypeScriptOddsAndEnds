@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V20276 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0276 ( Appointment Reason Codes)
  */
-export var V20276 = {
+exports.V20276 = {
     v2_0276_ARoutineCheckUpSuchAsAnAnnualPhysical: {
         code: "CHECKUP",
         display: "A routine check-up, such as an annual physical",
@@ -26,5 +29,6 @@ export var V20276 = {
         code: "WALKIN",
         display: "A previously unscheduled walk-in visit",
         system: "http://terminology.hl7.org/CodeSystem/v2-0276"
-    }
+    },
 };
+//# sourceMappingURL=V20276.js.map

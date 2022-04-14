@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterDiet = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  */
-export var EncounterDiet = {
+exports.EncounterDiet = {
     /**
      * Excludes dairy products.
      */
@@ -57,5 +60,6 @@ export var EncounterDiet = {
         code: "vegetarian",
         display: "Vegetarian",
         system: "http://terminology.hl7.org/CodeSystem/diet"
-    }
+    },
 };
+//# sourceMappingURL=EncounterDiet.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InsuranceplanType = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate a type of insurance plan.
  */
-export var InsuranceplanType = {
+exports.InsuranceplanType = {
     insuranceplan_type_Dental: {
         code: "dental",
         display: "Dental",
@@ -51,5 +54,6 @@ export var InsuranceplanType = {
         code: "vision",
         display: "Vision",
         system: "http://terminology.hl7.org/CodeSystem/insurance-plan-type"
-    }
+    },
 };
+//# sourceMappingURL=InsuranceplanType.js.map

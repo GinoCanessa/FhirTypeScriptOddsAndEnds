@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoverageCopayType = void 0;
 /**
  * This value set includes sample Coverage Copayment Type codes.
  */
-export var CoverageCopayType = {
+exports.CoverageCopayType = {
     /**
      * A standard fixed currency amount applied to all classes or service or product not otherwise specified.
      */
@@ -81,5 +84,6 @@ export var CoverageCopayType = {
         code: "urgentcare",
         display: "Urgent Care",
         system: "http://terminology.hl7.org/CodeSystem/coverage-copay-type"
-    }
+    },
 };
+//# sourceMappingURL=CoverageCopayType.js.map

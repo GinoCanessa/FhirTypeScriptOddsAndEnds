@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchXpathUsage = void 0;
 /**
  * How a search parameter relates to the set of elements returned by evaluating its xpath query.
  */
-export var SearchXpathUsage = {
+exports.SearchXpathUsage = {
     /**
      * The search parameter is based on a spatial transform of the selected nodes, using physical distance from the middle.
      */
@@ -41,5 +44,6 @@ export var SearchXpathUsage = {
         code: "phonetic",
         display: "Phonetic",
         system: "http://hl7.org/fhir/search-xpath-usage"
-    }
+    },
 };
+//# sourceMappingURL=SearchXpathUsage.js.map

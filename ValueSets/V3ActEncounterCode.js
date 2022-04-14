@@ -1,4 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ActEncounterCode = void 0;
 /**
  *  Domain provides codes that qualify the ActEncounterClass (ENC)
  */
-export var V3ActEncounterCode = {};
+exports.V3ActEncounterCode = {};
+//# sourceMappingURL=V3ActEncounterCode.js.map

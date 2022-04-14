@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PlanDefinitionType = void 0;
 /**
  * The type of PlanDefinition.
  */
-export var PlanDefinitionType = {
+exports.PlanDefinitionType = {
     /**
      * Defines a desired/typical sequence of clinical activities including preconditions, triggers and temporal relationships.
      */
@@ -33,5 +36,6 @@ export var PlanDefinitionType = {
         code: "workflow-definition",
         display: "Workflow Definition",
         system: "http://terminology.hl7.org/CodeSystem/plan-definition-type"
-    }
+    },
 };
+//# sourceMappingURL=PlanDefinitionType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdjudicationError = void 0;
 /**
  * This value set includes a smattering of adjudication codes.
  */
-export var AdjudicationError = {
+exports.AdjudicationError = {
     /**
      * Missing Identifier
      */
@@ -17,5 +20,6 @@ export var AdjudicationError = {
         code: "a002",
         display: "Missing Creation Date",
         system: "http://terminology.hl7.org/CodeSystem/adjudication-error"
-    }
+    },
 };
+//# sourceMappingURL=AdjudicationError.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DataAbsentReason = void 0;
 /**
  * Used to specify why the normally expected content of the data element is missing.
  */
-export var DataAbsentReason = {
+exports.DataAbsentReason = {
     /**
      * The content of the data is represented in the resource narrative.
      */
@@ -121,5 +124,6 @@ export var DataAbsentReason = {
         code: "unsupported",
         display: "Unsupported",
         system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
-    }
+    },
 };
+//# sourceMappingURL=DataAbsentReason.js.map

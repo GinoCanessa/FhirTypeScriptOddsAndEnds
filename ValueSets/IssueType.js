@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IssueType = void 0;
 /**
  * A code that describes the type of issue.
  */
-export var IssueType = {
+exports.IssueType = {
     /**
      * The content/operation failed to pass some business rule and so could not proceed.
      */
@@ -249,5 +252,6 @@ export var IssueType = {
         code: "value",
         display: "Element value invalid",
         system: "http://hl7.org/fhir/issue-type"
-    }
+    },
 };
+//# sourceMappingURL=IssueType.js.map

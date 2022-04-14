@@ -1,8 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ActReason = void 0;
 /**
  *  A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type "has reason" linking to another Act.  Examples:
  * Example reasons that might qualify for being coded in this field might be: "routine requirement", "infectious disease reporting requirement", "on patient request", "required by law".
  */
-export var V3ActReason = {
+exports.V3ActReason = {
     /**
      * Identifies the reason the patient is assigned to this accommodation type
      */
@@ -1792,5 +1795,6 @@ export var V3ActReason = {
         code: "WRNGVER",
         display: "wrong version",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
-    }
+    },
 };
+//# sourceMappingURL=V3ActReason.js.map

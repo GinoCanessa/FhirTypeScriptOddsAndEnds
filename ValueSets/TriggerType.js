@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TriggerType = void 0;
 /**
  * The type of trigger.
  */
-export var TriggerType = {
+exports.TriggerType = {
     /**
      * The trigger occurs whenever access to data of a particular type is completed.
      */
@@ -65,5 +68,6 @@ export var TriggerType = {
         code: "periodic",
         display: "Periodic",
         system: "http://hl7.org/fhir/trigger-type"
-    }
+    },
 };
+//# sourceMappingURL=TriggerType.js.map

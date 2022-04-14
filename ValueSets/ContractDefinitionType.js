@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractDefinitionType = void 0;
 /**
  * This value set contract specific codes for status.
  */
-export var ContractDefinitionType = {
+exports.ContractDefinitionType = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractDefinitionType = {
         code: "temp",
         display: "Temporary Value",
         system: "http://hl7.org/fhir/contract-definition-type"
-    }
+    },
 };
+//# sourceMappingURL=ContractDefinitionType.js.map

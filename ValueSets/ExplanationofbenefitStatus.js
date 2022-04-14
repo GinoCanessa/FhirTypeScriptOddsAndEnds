@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExplanationofbenefitStatus = void 0;
 /**
  * A code specifying the state of the resource instance.
  */
-export var ExplanationofbenefitStatus = {
+exports.ExplanationofbenefitStatus = {
     /**
      * The resource instance is currently in-force.
      */
@@ -33,5 +36,6 @@ export var ExplanationofbenefitStatus = {
         code: "entered-in-error",
         display: "Entered In Error",
         system: "http://hl7.org/fhir/explanationofbenefit-status"
-    }
+    },
 };
+//# sourceMappingURL=ExplanationofbenefitStatus.js.map

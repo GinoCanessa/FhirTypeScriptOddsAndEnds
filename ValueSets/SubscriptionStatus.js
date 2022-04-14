@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriptionStatus = void 0;
 /**
  * The status of a subscription.
  */
-export var SubscriptionStatus = {
+exports.SubscriptionStatus = {
     /**
      * The subscription is active.
      */
@@ -33,5 +36,6 @@ export var SubscriptionStatus = {
         code: "requested",
         display: "Requested",
         system: "http://hl7.org/fhir/subscription-status"
-    }
+    },
 };
+//# sourceMappingURL=SubscriptionStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentDataMeaning = void 0;
 /**
  * How a resource reference is interpreted when testing consent restrictions.
  */
-export var ConsentDataMeaning = {
+exports.ConsentDataMeaning = {
     /**
      * The consent applies to instances of resources that are authored by.
      */
@@ -33,5 +36,6 @@ export var ConsentDataMeaning = {
         code: "related",
         display: "Related",
         system: "http://hl7.org/fhir/consent-data-meaning"
-    }
+    },
 };
+//# sourceMappingURL=ConsentDataMeaning.js.map

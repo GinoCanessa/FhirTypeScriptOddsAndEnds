@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrganizationRole = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate the role of one Organization in relation to another.
  */
-export var OrganizationRole = {
+exports.OrganizationRole = {
     /**
      * An organization such as a public health agency, community/social services provider, etc.
      */
@@ -62,5 +65,6 @@ export var OrganizationRole = {
         code: "supplier",
         display: "Supplier",
         system: "http://hl7.org/fhir/organization-role"
-    }
+    },
 };
+//# sourceMappingURL=OrganizationRole.js.map

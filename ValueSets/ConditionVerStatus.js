@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionVerStatus = void 0;
 /**
  * The verification status to support or decline the clinical status of the condition or diagnosis.
  */
-export var ConditionVerStatus = {
+exports.ConditionVerStatus = {
     /**
      * There is sufficient diagnostic and/or clinical evidence to treat this as a confirmed condition.
      */
@@ -49,5 +52,6 @@ export var ConditionVerStatus = {
         code: "unconfirmed",
         display: "Unconfirmed",
         system: "http://terminology.hl7.org/CodeSystem/condition-ver-status"
-    }
+    },
 };
+//# sourceMappingURL=ConditionVerStatus.js.map

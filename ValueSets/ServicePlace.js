@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServicePlace = void 0;
 /**
  * This value set includes a smattering of Service Place codes.
  */
-export var ServicePlace = {
+exports.ServicePlace = {
     /**
      * A facility or location where drugs and other medically related items and services are sold, dispensed, or otherwise provided directly to patients.
      */
@@ -137,5 +140,6 @@ export var ServicePlace = {
         code: "41",
         display: "Ambulance—Land",
         system: "http://terminology.hl7.org/CodeSystem/ex-serviceplace"
-    }
+    },
 };
+//# sourceMappingURL=ServicePlace.js.map

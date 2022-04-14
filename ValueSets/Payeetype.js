@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Payeetype = void 0;
 /**
  * This value set includes sample Payee Type codes.
  */
-export var Payeetype = {
+exports.Payeetype = {
     /**
      * Any benefit payable will be paid to a third party such as a guarrantor.
      */
@@ -25,5 +28,6 @@ export var Payeetype = {
         code: "subscriber",
         display: "Subscriber",
         system: "http://terminology.hl7.org/CodeSystem/payeetype"
-    }
+    },
 };
+//# sourceMappingURL=Payeetype.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationdispensePerformerFunction = void 0;
 /**
  * MedicationDispense Performer Function Codes
  */
-export var MedicationdispensePerformerFunction = {
+exports.MedicationdispensePerformerFunction = {
     /**
      * Performed initial quality assurance on the prepared medication
      */
@@ -33,5 +36,6 @@ export var MedicationdispensePerformerFunction = {
         code: "packager",
         display: "Packager",
         system: "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function"
-    }
+    },
 };
+//# sourceMappingURL=MedicationdispensePerformerFunction.js.map

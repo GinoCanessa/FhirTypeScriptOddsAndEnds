@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AgeUnits = void 0;
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export var AgeUnits = {
+exports.AgeUnits = {
     AgeUnits_Years: {
         code: "a",
         display: "years",
@@ -31,5 +34,6 @@ export var AgeUnits = {
         code: "wk",
         display: "weeks",
         system: "http://unitsofmeasure.org"
-    }
+    },
 };
+//# sourceMappingURL=AgeUnits.js.map

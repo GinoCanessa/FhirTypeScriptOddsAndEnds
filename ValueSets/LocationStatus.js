@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocationStatus = void 0;
 /**
  * Indicates whether the location is still in use.
  */
-export var LocationStatus = {
+exports.LocationStatus = {
     /**
      * The location is operational.
      */
@@ -25,5 +28,6 @@ export var LocationStatus = {
         code: "suspended",
         display: "Suspended",
         system: "http://hl7.org/fhir/location-status"
-    }
+    },
 };
+//# sourceMappingURL=LocationStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractSecurityControl = void 0;
 /**
  * This value set contract specific codes for security control.
  */
-export var ContractSecurityControl = {
+exports.ContractSecurityControl = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractSecurityControl = {
         code: "policy",
         display: "Policy",
         system: "http://hl7.org/fhir/contract-security-control"
-    }
+    },
 };
+//# sourceMappingURL=ContractSecurityControl.js.map

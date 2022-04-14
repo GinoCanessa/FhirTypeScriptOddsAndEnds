@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractAssettype = void 0;
 /**
  * This value set contract specific codes for asset type.
  */
-export var ContractAssettype = {
+exports.ContractAssettype = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractAssettype = {
         code: "participation",
         display: "Participation",
         system: "http://hl7.org/fhir/contract-asset-type"
-    }
+    },
 };
+//# sourceMappingURL=ContractAssettype.js.map

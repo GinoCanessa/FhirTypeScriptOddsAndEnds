@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EffectEstimateType = void 0;
 /**
  * Whether the effect estimate is an absolute effect estimate (absolute difference) or a relative effect estimate (relative difference), and the specific type of effect estimate (eg relative risk or median difference).
  */
-export var EffectEstimateType = {
+exports.EffectEstimateType = {
     /**
      * absolute risk difference (a type of absolute effect estimate).
      */
@@ -57,5 +60,6 @@ export var EffectEstimateType = {
         code: "relative-RR",
         display: "relative risk",
         system: "http://terminology.hl7.org/CodeSystem/effect-estimate-type"
-    }
+    },
 };
+//# sourceMappingURL=EffectEstimateType.js.map

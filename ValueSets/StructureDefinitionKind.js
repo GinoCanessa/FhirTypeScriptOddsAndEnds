@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StructureDefinitionKind = void 0;
 /**
  * Defines the type of structure that a definition is describing.
  */
-export var StructureDefinitionKind = {
+exports.StructureDefinitionKind = {
     /**
      * A  complex structure that defines a set of data elements that is suitable for use in 'resources'. The base specification defines a number of complex types, and other specifications can define additional types. These structures do not have a maintained identity.
      */
@@ -33,5 +36,6 @@ export var StructureDefinitionKind = {
         code: "resource",
         display: "Resource",
         system: "http://hl7.org/fhir/structure-definition-kind"
-    }
+    },
 };
+//# sourceMappingURL=StructureDefinitionKind.js.map

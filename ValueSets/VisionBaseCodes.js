@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VisionBaseCodes = void 0;
 /**
  * A coded concept listing the base codes.
  */
-export var VisionBaseCodes = {
+exports.VisionBaseCodes = {
     /**
      * bottom.
      */
@@ -33,5 +36,6 @@ export var VisionBaseCodes = {
         code: "up",
         display: "Up",
         system: "http://hl7.org/fhir/vision-base-codes"
-    }
+    },
 };
+//# sourceMappingURL=VisionBaseCodes.js.map

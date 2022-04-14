@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventStatus = void 0;
 /**
  * Codes identifying the lifecycle stage of an event.
  */
-export var EventStatus = {
+exports.EventStatus = {
     /**
      * The event was terminated prior to any activity beyond preparation.  I.e. The 'main' activity has not yet begun.  The boundary between preparatory and the 'main' activity is context-specific.
      */
@@ -41,5 +44,6 @@ export var EventStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/event-status"
-    }
+    },
 };
+//# sourceMappingURL=EventStatus.js.map

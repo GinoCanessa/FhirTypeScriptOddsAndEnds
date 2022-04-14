@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PropertyRepresentation = void 0;
 /**
  * How a property is represented when serialized.
  */
-export var PropertyRepresentation = {
+exports.PropertyRepresentation = {
     /**
      * Use CDA narrative instead of XHTML.
      */
@@ -41,5 +44,6 @@ export var PropertyRepresentation = {
         code: "xmlText",
         display: "XML Text",
         system: "http://hl7.org/fhir/property-representation"
-    }
+    },
 };
+//# sourceMappingURL=PropertyRepresentation.js.map

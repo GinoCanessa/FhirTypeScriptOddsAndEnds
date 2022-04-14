@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvoicePriceComponentType = void 0;
 /**
  * Codes indicating the kind of the price component.
  */
-export var InvoicePriceComponentType = {
+exports.InvoicePriceComponentType = {
     /**
      * the amount is the base price used for calculating the total price before applying surcharges, discount or taxes.
      */
@@ -49,5 +52,6 @@ export var InvoicePriceComponentType = {
         code: "tax",
         display: "tax",
         system: "http://hl7.org/fhir/invoice-priceComponentType"
-    }
+    },
 };
+//# sourceMappingURL=InvoicePriceComponentType.js.map

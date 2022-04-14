@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RouteCodes = void 0;
 /**
  * This value set includes all Route codes from SNOMED CT - provided as an exemplar.
  */
-export var RouteCodes = {
+exports.RouteCodes = {
     RouteCodes_AuricularUse: {
         code: "10547007",
         display: "Auricular use",
@@ -751,5 +754,6 @@ export var RouteCodes = {
         code: "90028008",
         display: "Urethral use",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=RouteCodes.js.map

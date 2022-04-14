@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClaimInformationcategory = void 0;
 /**
  * This value set includes sample Information Category codes.
  */
-export var ClaimInformationcategory = {
+exports.ClaimInformationcategory = {
     /**
      * Materials attached such as images, documents and resources.
      */
@@ -113,5 +116,6 @@ export var ClaimInformationcategory = {
         code: "related",
         display: "Related Services",
         system: "http://terminology.hl7.org/CodeSystem/claiminformationcategory"
-    }
+    },
 };
+//# sourceMappingURL=ClaimInformationcategory.js.map

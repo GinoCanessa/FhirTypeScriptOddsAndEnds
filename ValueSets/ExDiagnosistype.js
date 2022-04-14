@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExDiagnosistype = void 0;
 /**
  * This value set includes example Diagnosis Type codes.
  */
-export var ExDiagnosistype = {
+exports.ExDiagnosistype = {
     /**
      * The diagnosis given as the reason why the patient was admitted to the hospital.
      */
@@ -97,5 +100,6 @@ export var ExDiagnosistype = {
         code: "self",
         display: "Self Diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/ex-diagnosistype"
-    }
+    },
 };
+//# sourceMappingURL=ExDiagnosistype.js.map

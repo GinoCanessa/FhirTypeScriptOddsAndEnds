@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllTypes = void 0;
 /**
  * A list of all the concrete types defined in this version of the FHIR specification - Abstract Types, Data Types and Resource Types.
  */
-export var AllTypes = {
+exports.AllTypes = {
     /**
      * A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc.
      */
@@ -1685,5 +1688,6 @@ export var AllTypes = {
         code: "xhtml",
         display: "XHTML",
         system: "http://hl7.org/fhir/data-types"
-    }
+    },
 };
+//# sourceMappingURL=AllTypes.js.map

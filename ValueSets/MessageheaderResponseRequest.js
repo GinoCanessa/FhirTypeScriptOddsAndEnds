@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageheaderResponseRequest = void 0;
 /**
  * HL7-defined table of codes which identify conditions under which acknowledgments are required to be returned in response to a message.
  */
-export var MessageheaderResponseRequest = {
+exports.MessageheaderResponseRequest = {
     /**
      * initiator expects a response for this message.
      */
@@ -33,5 +36,6 @@ export var MessageheaderResponseRequest = {
         code: "on-success",
         display: "Successful completion only",
         system: "http://hl7.org/fhir/messageheader-response-request"
-    }
+    },
 };
+//# sourceMappingURL=MessageheaderResponseRequest.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskCode = void 0;
 /**
  * Codes indicating the type of action that is expected to be performed
  */
-export var TaskCode = {
+exports.TaskCode = {
     /**
      * Abort, cancel or withdraw the focal resource, as appropriate for the type of resource.
      */
@@ -57,5 +60,6 @@ export var TaskCode = {
         code: "suspend",
         display: "Suspend the focal resource",
         system: "http://hl7.org/fhir/CodeSystem/task-code"
-    }
+    },
 };
+//# sourceMappingURL=TaskCode.js.map

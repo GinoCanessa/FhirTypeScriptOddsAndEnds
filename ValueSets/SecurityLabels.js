@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SecurityLabels = void 0;
 /**
  * A single value set for all security labels defined by FHIR.
  */
-export var SecurityLabels = {
+exports.SecurityLabels = {
     /**
      * Security metadata observation values used to indicate the use of a more abstract version of the content, e.g., replacing exact value of an age or date field with a range, or remove the left digits of a credit card number or SSN.
      */
@@ -1939,5 +1942,6 @@ export var SecurityLabels = {
         code: "VIO",
         display: "violence information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=SecurityLabels.js.map

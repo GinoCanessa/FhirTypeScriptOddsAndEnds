@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferencerangeMeaning = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.
  */
-export var ReferencerangeMeaning = {
+exports.ReferencerangeMeaning = {
     /**
      * Endocrine related states that change the expected value.
      */
@@ -105,5 +108,6 @@ export var ReferencerangeMeaning = {
         code: "type",
         display: "Type",
         system: "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
-    }
+    },
 };
+//# sourceMappingURL=ReferencerangeMeaning.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventCapabilityMode = void 0;
 /**
  * The mode of a message capability statement.
  */
-export var EventCapabilityMode = {
+exports.EventCapabilityMode = {
     /**
      * The application receives requests and sends responses.
      */
@@ -17,5 +20,6 @@ export var EventCapabilityMode = {
         code: "sender",
         display: "Sender",
         system: "http://hl7.org/fhir/event-capability-mode"
-    }
+    },
 };
+//# sourceMappingURL=EventCapabilityMode.js.map

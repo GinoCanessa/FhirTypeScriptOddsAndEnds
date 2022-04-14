@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListOrder = void 0;
 /**
  * Base values for the order of the items in a list resource.
  */
-export var ListOrder = {
+exports.ListOrder = {
     /**
      * The list is sorted alphabetically by an unspecified property of the items in the list.
      */
@@ -65,5 +68,6 @@ export var ListOrder = {
         code: "user",
         display: "Sorted by User",
         system: "http://terminology.hl7.org/CodeSystem/list-order"
-    }
+    },
 };
+//# sourceMappingURL=ListOrder.js.map

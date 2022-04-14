@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UsageContextType = void 0;
 /**
  * A code that specifies a type of context being specified by a usage context.
  */
-export var UsageContextType = {
+exports.UsageContextType = {
     /**
      * The age of the patient. For this context type, the value could be a range that specifies the applicable ages or a code from an appropriate value set such as the MeSH value set http://terminology.hl7.org/ValueSet/v3-AgeGroupObservationValue.
      */
@@ -73,5 +76,6 @@ export var UsageContextType = {
         code: "workflow",
         display: "Workflow Setting",
         system: "http://terminology.hl7.org/CodeSystem/usage-context-type"
-    }
+    },
 };
+//# sourceMappingURL=UsageContextType.js.map

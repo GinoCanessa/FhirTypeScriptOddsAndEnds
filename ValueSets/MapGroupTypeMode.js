@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapGroupTypeMode = void 0;
 /**
  * If this is the default rule set to apply for the source type, or this combination of types.
  */
-export var MapGroupTypeMode = {
+exports.MapGroupTypeMode = {
     /**
      * This group is not a default group for the types.
      */
@@ -25,5 +28,6 @@ export var MapGroupTypeMode = {
         code: "types",
         display: "Default for Type Combination",
         system: "http://hl7.org/fhir/map-group-type-mode"
-    }
+    },
 };
+//# sourceMappingURL=MapGroupTypeMode.js.map

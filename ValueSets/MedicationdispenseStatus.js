@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationdispenseStatus = void 0;
 /**
  * MedicationDispense Status Codes
  */
-export var MedicationdispenseStatus = {
+exports.MedicationdispenseStatus = {
     /**
      * The dispensed product was not and will never be picked up by the patient.
      */
@@ -73,5 +76,6 @@ export var MedicationdispenseStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/medicationdispense-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationdispenseStatus.js.map

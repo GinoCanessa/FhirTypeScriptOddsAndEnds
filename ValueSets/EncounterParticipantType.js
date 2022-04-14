@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterParticipantType = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.
  */
-export var EncounterParticipantType = {
+exports.EncounterParticipantType = {
     /**
      * The practitioner who is responsible for admitting a patient to a patient encounter.
      */
@@ -97,5 +100,6 @@ export var EncounterParticipantType = {
         code: "translator",
         display: "Translator",
         system: "http://terminology.hl7.org/CodeSystem/participant-type"
-    }
+    },
 };
+//# sourceMappingURL=EncounterParticipantType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationFundingSource = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.
  */
-export var ImmunizationFundingSource = {
+exports.ImmunizationFundingSource = {
     /**
      * The vaccine was purchased with private funds.
      */
@@ -17,5 +20,6 @@ export var ImmunizationFundingSource = {
         code: "public",
         display: "Public",
         system: "http://terminology.hl7.org/CodeSystem/immunization-funding-source"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationFundingSource.js.map

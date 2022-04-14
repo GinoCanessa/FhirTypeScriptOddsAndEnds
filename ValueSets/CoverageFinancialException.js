@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoverageFinancialException = void 0;
 /**
  * This value set includes Example Coverage Financial Exception Codes.
  */
-export var CoverageFinancialException = {
+exports.CoverageFinancialException = {
     /**
      * Children in the foster care have all copays and deductibles waived.
      */
@@ -17,5 +20,6 @@ export var CoverageFinancialException = {
         code: "retired",
         display: "Retired",
         system: "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception"
-    }
+    },
 };
+//# sourceMappingURL=CoverageFinancialException.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEventOutcome = void 0;
 /**
  * Indicates whether the event succeeded or failed.
  */
-export var AuditEventOutcome = {
+exports.AuditEventOutcome = {
     /**
      * The operation completed successfully (whether with warnings or not).
      */
@@ -33,5 +36,6 @@ export var AuditEventOutcome = {
         code: "8",
         display: "Serious failure",
         system: "http://hl7.org/fhir/audit-event-outcome"
-    }
+    },
 };
+//# sourceMappingURL=AuditEventOutcome.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConceptmapUnmappedMode = void 0;
 /**
  * Defines which action to take if there is no match in the group.
  */
-export var ConceptmapUnmappedMode = {
+exports.ConceptmapUnmappedMode = {
     /**
      * Use the code explicitly provided in the group.unmapped.
      */
@@ -25,5 +28,6 @@ export var ConceptmapUnmappedMode = {
         code: "provided",
         display: "Provided Code",
         system: "http://hl7.org/fhir/conceptmap-unmapped-mode"
-    }
+    },
 };
+//# sourceMappingURL=ConceptmapUnmappedMode.js.map

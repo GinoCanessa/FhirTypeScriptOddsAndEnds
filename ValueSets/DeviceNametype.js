@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DeviceNametype = void 0;
 /**
  * The type of name the device is referred by.
  */
-export var DeviceNametype = {
+exports.DeviceNametype = {
     /**
      * Manufacturer name.
      */
@@ -49,5 +52,6 @@ export var DeviceNametype = {
         code: "user-friendly-name",
         display: "User Friendly name",
         system: "http://hl7.org/fhir/device-nametype"
-    }
+    },
 };
+//# sourceMappingURL=DeviceNametype.js.map

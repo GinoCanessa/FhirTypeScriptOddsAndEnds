@@ -1,1 +1,1 @@
-{"version":3,"file":"MedicationAsNeededReason.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/MedicationAsNeededReason.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,wBAAwB,IACpC,CAAC"}
+{"version":3,"file":"MedicationAsNeededReason.d.ts","sourceRoot":"","sources":["../../ValueSets/MedicationAsNeededReason.ts"],"names":[],"mappings":"AAQA;;GAEG;AACH,eAAO,MAAM,wBAAwB,IACpC,CAAC"}

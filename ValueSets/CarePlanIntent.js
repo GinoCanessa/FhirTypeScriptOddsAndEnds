@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarePlanIntent = void 0;
 /**
  * Codes indicating the degree of authority/intentionality associated with a care plan.
  */
-export var CarePlanIntent = {
+exports.CarePlanIntent = {
     /**
      * The request represents a component or option for a RequestGroup that establishes timing, conditionality and/or other constraints among a set of requests.  Refer to [[[RequestGroup]]] for additional information on how this status is used.
      */
@@ -33,5 +36,6 @@ export var CarePlanIntent = {
         code: "proposal",
         display: "Proposal",
         system: "http://hl7.org/fhir/request-intent"
-    }
+    },
 };
+//# sourceMappingURL=CarePlanIntent.js.map

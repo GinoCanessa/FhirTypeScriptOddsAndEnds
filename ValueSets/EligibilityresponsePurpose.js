@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EligibilityresponsePurpose = void 0;
 /**
  * A code specifying the types of information being requested.
  */
-export var EligibilityresponsePurpose = {
+exports.EligibilityresponsePurpose = {
     /**
      * The prior authorization requirements for the listed, or discovered if specified, converages for the categories of service and/or specifed biling codes are requested.
      */
@@ -33,5 +36,6 @@ export var EligibilityresponsePurpose = {
         code: "validation",
         display: "Coverage Validation",
         system: "http://hl7.org/fhir/eligibilityresponse-purpose"
-    }
+    },
 };
+//# sourceMappingURL=EligibilityresponsePurpose.js.map

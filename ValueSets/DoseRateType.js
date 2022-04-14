@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DoseRateType = void 0;
 /**
  * The kind of dose or rate specified.
  */
-export var DoseRateType = {
+exports.DoseRateType = {
     /**
      * The dose specified is calculated by the prescriber or the system.
      */
@@ -17,5 +20,6 @@ export var DoseRateType = {
         code: "ordered",
         display: "Ordered",
         system: "http://terminology.hl7.org/CodeSystem/dose-rate-type"
-    }
+    },
 };
+//# sourceMappingURL=DoseRateType.js.map

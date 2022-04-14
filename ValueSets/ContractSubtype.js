@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractSubtype = void 0;
 /**
  * This value set includes sample Contract Subtype codes.
  */
-export var ContractSubtype = {
+exports.ContractSubtype = {
     /**
      * Canadian health information disclosure policy.
      */
@@ -17,5 +20,6 @@ export var ContractSubtype = {
         code: "disclosure-us",
         display: "Disclosure-US",
         system: "http://terminology.hl7.org/CodeSystem/contractsubtypecodes"
-    }
+    },
 };
+//# sourceMappingURL=ContractSubtype.js.map

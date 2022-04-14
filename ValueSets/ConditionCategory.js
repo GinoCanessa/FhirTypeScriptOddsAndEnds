@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionCategory = void 0;
 /**
  * Preferred value set for Condition Categories.
  */
-export var ConditionCategory = {
+exports.ConditionCategory = {
     /**
      * A point in time diagnosis (e.g. from a physician or nurse) in context of an encounter.
      */
@@ -17,5 +20,6 @@ export var ConditionCategory = {
         code: "problem-list-item",
         display: "Problem List Item",
         system: "http://terminology.hl7.org/CodeSystem/condition-category"
-    }
+    },
 };
+//# sourceMappingURL=ConditionCategory.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapTransform = void 0;
 /**
  * How data is copied/created.
  */
-export var MapTransform = {
+exports.MapTransform = {
     /**
      * append(source...) - source is element or string.
      */
@@ -137,5 +140,6 @@ export var MapTransform = {
         code: "uuid",
         display: "uuid",
         system: "http://hl7.org/fhir/map-transform"
-    }
+    },
 };
+//# sourceMappingURL=MapTransform.js.map

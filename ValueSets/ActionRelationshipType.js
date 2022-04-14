@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionRelationshipType = void 0;
 /**
  * Defines the types of relationships between actions.
  */
-export var ActionRelationshipType = {
+exports.ActionRelationshipType = {
     /**
      * The action must be performed after the related action.
      */
@@ -73,5 +76,6 @@ export var ActionRelationshipType = {
         code: "concurrent-with-start",
         display: "Concurrent With Start",
         system: "http://hl7.org/fhir/action-relationship-type"
-    }
+    },
 };
+//# sourceMappingURL=ActionRelationshipType.js.map

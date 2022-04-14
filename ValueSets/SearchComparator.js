@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchComparator = void 0;
 /**
  * What Search Comparator Codes are supported in search.
  */
-export var SearchComparator = {
+exports.SearchComparator = {
     /**
      * the value for the parameter in the resource is approximately the same to the provided value.
      */
@@ -73,5 +76,6 @@ export var SearchComparator = {
         code: "sa",
         display: "Starts After",
         system: "http://hl7.org/fhir/search-comparator"
-    }
+    },
 };
+//# sourceMappingURL=SearchComparator.js.map

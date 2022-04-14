@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchStudyReasonStopped = void 0;
 /**
  * Codes for why the study ended prematurely.
  */
-export var ResearchStudyReasonStopped = {
+exports.ResearchStudyReasonStopped = {
     /**
      * The study prematurely ended because the accrual goal was met.
      */
@@ -33,5 +36,6 @@ export var ResearchStudyReasonStopped = {
         code: "temporarily-closed-per-study-design",
         display: "Temporarily closed per study design",
         system: "http://terminology.hl7.org/CodeSystem/research-study-reason-stopped"
-    }
+    },
 };
+//# sourceMappingURL=ResearchStudyReasonStopped.js.map

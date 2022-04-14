@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionPrecheckBehavior = void 0;
 /**
  * Defines selection frequency behavior for an action or group.
  */
-export var ActionPrecheckBehavior = {
+exports.ActionPrecheckBehavior = {
     /**
      * An action with this behavior is one of the less frequent actions included by the end user, for the particular context in which the action occurs. The system displaying the actions to the end user would typically not "pre-check" such an action.
      */
@@ -17,5 +20,6 @@ export var ActionPrecheckBehavior = {
         code: "yes",
         display: "Yes",
         system: "http://hl7.org/fhir/action-precheck-behavior"
-    }
+    },
 };
+//# sourceMappingURL=ActionPrecheckBehavior.js.map

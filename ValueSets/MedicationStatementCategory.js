@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationStatementCategory = void 0;
 /**
  * Medication Status Codes
  */
-export var MedicationStatementCategory = {
+exports.MedicationStatementCategory = {
     /**
      * Includes orders for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
      */
@@ -33,5 +36,6 @@ export var MedicationStatementCategory = {
         code: "patientspecified",
         display: "Patient Specified",
         system: "http://terminology.hl7.org/CodeSystem/medication-statement-category"
-    }
+    },
 };
+//# sourceMappingURL=MedicationStatementCategory.js.map

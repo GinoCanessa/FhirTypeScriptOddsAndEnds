@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RelatedClaimRelationship = void 0;
 /**
  * This value set includes sample Related Claim Relationship codes.
  */
-export var RelatedClaimRelationship = {
+exports.RelatedClaimRelationship = {
     /**
      * A claim for a different suite of services which is related the suite claimed here.
      */
@@ -17,5 +20,6 @@ export var RelatedClaimRelationship = {
         code: "prior",
         display: "Prior Claim",
         system: "http://terminology.hl7.org/CodeSystem/ex-relatedclaimrelationship"
-    }
+    },
 };
+//# sourceMappingURL=RelatedClaimRelationship.js.map

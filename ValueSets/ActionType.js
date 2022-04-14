@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionType = void 0;
 /**
  * The type of action to be performed.
  */
-export var ActionType = {
+exports.ActionType = {
     /**
      * The action is to create a new resource.
      */
@@ -33,5 +36,6 @@ export var ActionType = {
         code: "update",
         display: "Update",
         system: "http://terminology.hl7.org/CodeSystem/action-type"
-    }
+    },
 };
+//# sourceMappingURL=ActionType.js.map

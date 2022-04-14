@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceType = void 0;
 /**
  * This value set defines an example set of codes of service-types.
  */
-export var ServiceType = {
+exports.ServiceType = {
     /**
      * Adoption &amp; permanent care information/support
      */
@@ -4769,5 +4772,6 @@ export var ServiceType = {
         code: "99",
         display: "Disability Day Programs/Activities",
         system: "http://terminology.hl7.org/CodeSystem/service-type"
-    }
+    },
 };
+//# sourceMappingURL=ServiceType.js.map

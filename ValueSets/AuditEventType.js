@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEventType = void 0;
 /**
  * Event Types for Audit Events - defined by DICOM with some FHIR specific additions.
  */
-export var AuditEventType = {
+exports.AuditEventType = {
     /**
      * Audit event: Application Activity has taken place
      */
@@ -345,5 +348,6 @@ export var AuditEventType = {
         code: "verify",
         display: "Verify Record Lifecycle Event",
         system: "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"
-    }
+    },
 };
+//# sourceMappingURL=AuditEventType.js.map

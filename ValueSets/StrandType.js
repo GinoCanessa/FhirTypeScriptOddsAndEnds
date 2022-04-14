@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StrandType = void 0;
 /**
  * Type for strand.
  */
-export var StrandType = {
+exports.StrandType = {
     /**
      * Crick strand of reference sequence.
      */
@@ -17,5 +20,6 @@ export var StrandType = {
         code: "watson",
         display: "Watson strand of referenceSeq",
         system: "http://hl7.org/fhir/strand-type"
-    }
+    },
 };
+//# sourceMappingURL=StrandType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalStartEvent = void 0;
 /**
  * Identifies types of events that might trigger the start of a goal.
  */
-export var GoalStartEvent = {
+exports.GoalStartEvent = {
     GoalStartEvent_DischargeFromHospital: {
         code: "308283009",
         display: "Discharge from hospital",
@@ -21,5 +24,6 @@ export var GoalStartEvent = {
         code: "442137000",
         display: "Completion time of procedure",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=GoalStartEvent.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationrequestCourseOfTherapy = void 0;
 /**
  * MedicationRequest Course of Therapy Codes
  */
-export var MedicationrequestCourseOfTherapy = {
+exports.MedicationrequestCourseOfTherapy = {
     /**
      * A medication which the patient is only expected to consume for the duration of the current order and which is not expected to be renewed.
      */
@@ -25,5 +28,6 @@ export var MedicationrequestCourseOfTherapy = {
         code: "seasonal",
         display: "Seasonal",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy"
-    }
+    },
 };
+//# sourceMappingURL=MedicationrequestCourseOfTherapy.js.map

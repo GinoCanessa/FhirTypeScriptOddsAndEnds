@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExtensionContextType = void 0;
 /**
  * How an extension context is interpreted.
  */
-export var ExtensionContextType = {
+exports.ExtensionContextType = {
     /**
      * The context is any element that has an ElementDefinition.id that matches that found in the expression. This includes ElementDefinition Ids that have slicing identifiers. The full path for the element is [url]#[elementid]. If there is no #, the Element id is one defined in the base specification.
      */
@@ -25,5 +28,6 @@ export var ExtensionContextType = {
         code: "fhirpath",
         display: "FHIRPath",
         system: "http://hl7.org/fhir/extension-context-type"
-    }
+    },
 };
+//# sourceMappingURL=ExtensionContextType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationAdminStatus = void 0;
 /**
  * MedicationAdministration Status Codes
  */
-export var MedicationAdminStatus = {
+exports.MedicationAdminStatus = {
     /**
      * The administration has started but has not yet completed.
      */
@@ -41,5 +44,6 @@ export var MedicationAdminStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/medication-admin-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationAdminStatus.js.map

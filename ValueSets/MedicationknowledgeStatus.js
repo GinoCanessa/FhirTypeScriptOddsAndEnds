@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationknowledgeStatus = void 0;
 /**
  * MedicationKnowledge Status Codes
  */
-export var MedicationknowledgeStatus = {
+exports.MedicationknowledgeStatus = {
     /**
      * The medication is available for use.
      */
@@ -25,5 +28,6 @@ export var MedicationknowledgeStatus = {
         code: "inactive",
         display: "Inactive",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationknowledgeStatus.js.map

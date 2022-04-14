@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractSecurityClassification = void 0;
 /**
  * This value set contract specific codes for security classification.
  */
-export var ContractSecurityClassification = {
+exports.ContractSecurityClassification = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractSecurityClassification = {
         code: "policy",
         display: "Policy",
         system: "http://hl7.org/fhir/contract-security-classification"
-    }
+    },
 };
+//# sourceMappingURL=ContractSecurityClassification.js.map

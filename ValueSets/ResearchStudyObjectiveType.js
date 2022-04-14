@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchStudyObjectiveType = void 0;
 /**
  * Codes for the kind of study objective.
  */
-export var ResearchStudyObjectiveType = {
+exports.ResearchStudyObjectiveType = {
     /**
      * Exploratory questions to be answered in the study.
      */
@@ -25,5 +28,6 @@ export var ResearchStudyObjectiveType = {
         code: "secondary",
         display: "Secondary",
         system: "http://terminology.hl7.org/CodeSystem/research-study-objective-type"
-    }
+    },
 };
+//# sourceMappingURL=ResearchStudyObjectiveType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapModelMode = void 0;
 /**
  * How the referenced structure is used in this mapping.
  */
-export var MapModelMode = {
+exports.MapModelMode = {
     /**
      * This structure describes an instance that the mapping engine may ask to create that is used a target of data.
      */
@@ -33,5 +36,6 @@ export var MapModelMode = {
         code: "target",
         display: "Target Structure Definition",
         system: "http://hl7.org/fhir/map-model-mode"
-    }
+    },
 };
+//# sourceMappingURL=MapModelMode.js.map

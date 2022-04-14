@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MaritalStatus = void 0;
 /**
  * This value set defines the set of codes that can be used to indicate the marital status of a person.
  */
-export var MaritalStatus = {
+exports.MaritalStatus = {
     /**
      * Marriage contract has been declared null and to not have existed
      */
@@ -81,5 +84,6 @@ export var MaritalStatus = {
         code: "W",
         display: "Widowed",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
-    }
+    },
 };
+//# sourceMappingURL=MaritalStatus.js.map

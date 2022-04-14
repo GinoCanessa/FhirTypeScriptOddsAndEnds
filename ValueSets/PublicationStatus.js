@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PublicationStatus = void 0;
 /**
  * The lifecycle status of an artifact.
  */
-export var PublicationStatus = {
+exports.PublicationStatus = {
     /**
      * This resource is ready for normal use.
      */
@@ -33,5 +36,6 @@ export var PublicationStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/publication-status"
-    }
+    },
 };
+//# sourceMappingURL=PublicationStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OperationParameterUse = void 0;
 /**
  * Whether an operation parameter is an input or an output parameter.
  */
-export var OperationParameterUse = {
+exports.OperationParameterUse = {
     /**
      * This is an input parameter.
      */
@@ -17,5 +20,6 @@ export var OperationParameterUse = {
         code: "out",
         display: "Out",
         system: "http://hl7.org/fhir/operation-parameter-use"
-    }
+    },
 };
+//# sourceMappingURL=OperationParameterUse.js.map

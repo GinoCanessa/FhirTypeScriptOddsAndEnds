@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListItemFlag = void 0;
 /**
  * Example Item Flags for the List Resource. In this case, these are the kind of flags that would be used on a medication list at the end of a consultation.
  */
-export var ListItemFlag = {
+exports.ListItemFlag = {
     /**
      * No change has been made to the status of this medicine item.
      */
@@ -49,5 +52,6 @@ export var ListItemFlag = {
         code: "06",
         display: "Suspended",
         system: "urn:oid:1.2.36.1.2001.1001.101.104.16592"
-    }
+    },
 };
+//# sourceMappingURL=ListItemFlag.js.map

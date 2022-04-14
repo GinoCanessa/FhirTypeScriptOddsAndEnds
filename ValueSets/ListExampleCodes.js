@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListExampleCodes = void 0;
 /**
  * Example use codes for the List resource - typical kinds of use.
  */
-export var ListExampleCodes = {
+exports.ListExampleCodes = {
     /**
      * A list of part adverse reactions.
      */
@@ -73,5 +76,6 @@ export var ListExampleCodes = {
         code: "worklist",
         display: "Worklist",
         system: "http://terminology.hl7.org/CodeSystem/list-example-use-codes"
-    }
+    },
 };
+//# sourceMappingURL=ListExampleCodes.js.map

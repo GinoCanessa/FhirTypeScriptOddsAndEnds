@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventSeriousness = void 0;
 /**
  * Overall seriousness of this event for the patient.
  */
-export var AdverseEventSeriousness = {
+exports.AdverseEventSeriousness = {
     /**
      * Non-serious.
      */
@@ -65,5 +68,6 @@ export var AdverseEventSeriousness = {
         code: "SeriousResultsInHospitalization",
         display: "Requires or prolongs inpatient hospitalization",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-seriousness"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventSeriousness.js.map

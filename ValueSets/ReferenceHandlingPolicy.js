@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferenceHandlingPolicy = void 0;
 /**
  * A set of flags that defines how references are supported.
  */
-export var ReferenceHandlingPolicy = {
+exports.ReferenceHandlingPolicy = {
     /**
      * The server enforces that references have integrity - e.g. it ensures that references can always be resolved. This is typically the case for clinical record systems, but often not the case for middleware/proxy systems.
      */
@@ -41,5 +44,6 @@ export var ReferenceHandlingPolicy = {
         code: "resolves",
         display: "Resolves References",
         system: "http://hl7.org/fhir/reference-handling-policy"
-    }
+    },
 };
+//# sourceMappingURL=ReferenceHandlingPolicy.js.map

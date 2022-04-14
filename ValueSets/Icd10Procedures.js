@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Icd10Procedures = void 0;
 /**
  * This value set includes sample ICD-10 Procedure codes.
  */
-export var Icd10Procedures = {
+exports.Icd10Procedures = {
     /**
      * Procedure 1
      */
@@ -25,5 +28,6 @@ export var Icd10Procedures = {
         code: "123003",
         display: "PROC-3",
         system: "http://hl7.org/fhir/sid/ex-icd-10-procedures"
-    }
+    },
 };
+//# sourceMappingURL=Icd10Procedures.js.map

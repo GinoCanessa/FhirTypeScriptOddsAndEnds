@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObservationRangeCategory = void 0;
 /**
  * Codes identifying the category of observation range.
  */
-export var ObservationRangeCategory = {
+exports.ObservationRangeCategory = {
     /**
      * Absolute Range for Ordinal and Continuous Observations. Results outside this range are not possible.
      */
@@ -25,5 +28,6 @@ export var ObservationRangeCategory = {
         code: "reference",
         display: "reference range",
         system: "http://hl7.org/fhir/observation-range-category"
-    }
+    },
 };
+//# sourceMappingURL=ObservationRangeCategory.js.map

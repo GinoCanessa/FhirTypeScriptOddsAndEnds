@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplydeliveryType = void 0;
 /**
  * This value sets refers to a specific supply item.
  */
-export var SupplydeliveryType = {
+exports.SupplydeliveryType = {
     /**
      * What is supplied (or requested) is a device.
      */
@@ -17,5 +20,6 @@ export var SupplydeliveryType = {
         code: "medication",
         display: "Medication",
         system: "http://terminology.hl7.org/CodeSystem/supply-item-type"
-    }
+    },
 };
+//# sourceMappingURL=SupplydeliveryType.js.map

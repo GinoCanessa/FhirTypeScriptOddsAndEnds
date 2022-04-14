@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PractitionerRole = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate the role of a Practitioner.
  */
-export var PractitionerRole = {
+exports.PractitionerRole = {
     /**
      * A qualified/registered medical practitioner
      */
@@ -49,5 +52,6 @@ export var PractitionerRole = {
         code: "teacher",
         display: "Teacher/educator",
         system: "http://terminology.hl7.org/CodeSystem/practitioner-role"
-    }
+    },
 };
+//# sourceMappingURL=PractitionerRole.js.map

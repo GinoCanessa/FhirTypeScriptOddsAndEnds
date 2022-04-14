@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditEntityType = void 0;
 /**
  * Code for the entity type involved in the audit event.
  */
-export var AuditEntityType = {
+exports.AuditEntityType = {
     /**
      * Person
      */
@@ -33,5 +36,6 @@ export var AuditEntityType = {
         code: "4",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/audit-entity-type"
-    }
+    },
 };
+//# sourceMappingURL=AuditEntityType.js.map

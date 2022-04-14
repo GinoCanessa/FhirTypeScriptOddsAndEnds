@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchStudyStatus = void 0;
 /**
  * Codes that convey the current status of the research study.
  */
-export var ResearchStudyStatus = {
+exports.ResearchStudyStatus = {
     /**
      * Study is opened for accrual.
      */
@@ -90,5 +93,6 @@ export var ResearchStudyStatus = {
         code: "withdrawn",
         display: "Withdrawn",
         system: "http://hl7.org/fhir/research-study-status"
-    }
+    },
 };
+//# sourceMappingURL=ResearchStudyStatus.js.map

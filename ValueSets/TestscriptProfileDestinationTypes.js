@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestscriptProfileDestinationTypes = void 0;
 /**
  * This value set defines a set of codes that are used to indicate the profile type of a test system when acting as the destination within a TestScript.
  */
-export var TestscriptProfileDestinationTypes = {
+exports.TestscriptProfileDestinationTypes = {
     /**
      * A FHIR server acting as a Structured Data Capture Form Manager.
      */
@@ -33,5 +36,6 @@ export var TestscriptProfileDestinationTypes = {
         code: "FHIR-Server",
         display: "FHIR Server",
         system: "http://terminology.hl7.org/CodeSystem/testscript-profile-destination-types"
-    }
+    },
 };
+//# sourceMappingURL=TestscriptProfileDestinationTypes.js.map

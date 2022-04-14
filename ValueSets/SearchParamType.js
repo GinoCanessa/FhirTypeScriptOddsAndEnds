@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SearchParamType = void 0;
 /**
  * Data types allowed to be used for search parameters.
  */
-export var SearchParamType = {
+exports.SearchParamType = {
     /**
      * A composite search parameter that combines a search on two values together.
      */
@@ -73,5 +76,6 @@ export var SearchParamType = {
         code: "uri",
         display: "URI",
         system: "http://hl7.org/fhir/search-param-type"
-    }
+    },
 };
+//# sourceMappingURL=SearchParamType.js.map

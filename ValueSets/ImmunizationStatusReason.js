@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationStatusReason = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose of vaccine was not administered. This value set is provided as a suggestive example.
  */
-export var ImmunizationStatusReason = {
+exports.ImmunizationStatusReason = {
     ImmunizationStatusReason_NoConsentTetanusLowDoseDiphtheriaVaccine: {
         code: "171257003",
         display: "No consent - Tetanus/low dose diphtheria vaccine",
@@ -148,5 +151,6 @@ export var ImmunizationStatusReason = {
         code: "PATOBJ",
         display: "patient objection",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationStatusReason.js.map

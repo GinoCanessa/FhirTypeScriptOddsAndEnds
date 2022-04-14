@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListStatus = void 0;
 /**
  * The current state of the list.
  */
-export var ListStatus = {
+exports.ListStatus = {
     /**
      * The list is considered to be an active part of the patient's record.
      */
@@ -25,5 +28,6 @@ export var ListStatus = {
         code: "retired",
         display: "Retired",
         system: "http://hl7.org/fhir/list-status"
-    }
+    },
 };
+//# sourceMappingURL=ListStatus.js.map

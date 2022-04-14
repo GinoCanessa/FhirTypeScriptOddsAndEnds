@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObservationInterpretation = void 0;
 /**
  * A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.
  *
@@ -5,7 +8,7 @@
  *
  *    This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.
  */
-export var ObservationInterpretation = {
+exports.ObservationInterpretation = {
     /**
      * Codes that specify interpretation of genetic analysis, such as "positive", "negative", "carrier", "responsive", etc.
      */
@@ -462,5 +465,6 @@ export var ObservationInterpretation = {
         code: "WR",
         display: "Weakly reactive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
-    }
+    },
 };
+//# sourceMappingURL=ObservationInterpretation.js.map

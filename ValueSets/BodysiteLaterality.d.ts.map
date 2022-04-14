@@ -1,1 +1,1 @@
-{"version":3,"file":"BodysiteLaterality.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/BodysiteLaterality.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,kBAAkB;;;;CAgB9B,CAAC"}
+{"version":3,"file":"BodysiteLaterality.d.ts","sourceRoot":"","sources":["../../ValueSets/BodysiteLaterality.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,kBAAkB;;;;CAgB9B,CAAC"}

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocSectionCodes = void 0;
 /**
  * Document section codes (LOINC codes used in CCDA sections).
  */
-export var DocSectionCodes = {
+exports.DocSectionCodes = {
     DocSectionCodes_VAL113290: {
         code: "11329-0",
         system: "http://loinc.org"
@@ -89,5 +92,6 @@ export var DocSectionCodes = {
     DocSectionCodes_VAL87163: {
         code: "8716-3",
         system: "http://loinc.org"
-    }
+    },
 };
+//# sourceMappingURL=DocSectionCodes.js.map

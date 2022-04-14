@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdjudicationReason = void 0;
 /**
  * This value set includes smattering of Adjudication Reason codes.
  */
-export var AdjudicationReason = {
+exports.AdjudicationReason = {
     /**
      * Not covered
      */
@@ -17,5 +20,6 @@ export var AdjudicationReason = {
         code: "ar002",
         display: "Plan Limit Reached",
         system: "http://terminology.hl7.org/CodeSystem/adjudication-reason"
-    }
+    },
 };
+//# sourceMappingURL=AdjudicationReason.js.map

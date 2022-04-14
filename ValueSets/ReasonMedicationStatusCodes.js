@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReasonMedicationStatusCodes = void 0;
 /**
  * This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar
  */
-export var ReasonMedicationStatusCodes = {
+exports.ReasonMedicationStatusCodes = {
     ReasonMedicationStatusCodes_LongTermCurrentUseOfMycophenolate: {
         code: "106511000119106",
         display: "Long-term current use of mycophenolate",
@@ -291,5 +294,6 @@ export var ReasonMedicationStatusCodes = {
         code: "711436000",
         display: "Inhaled steroids used daily",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ReasonMedicationStatusCodes.js.map

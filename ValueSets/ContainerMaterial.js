@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerMaterial = void 0;
 /**
  * This value set includes SNOMED CT codes for materials that specimen containers are made of
  */
-export var ContainerMaterial = {
+exports.ContainerMaterial = {
     ContainerMaterial_Glass: {
         code: "32039001",
         display: "glass",
@@ -16,5 +19,6 @@ export var ContainerMaterial = {
         code: "61088005",
         display: "plastic",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ContainerMaterial.js.map

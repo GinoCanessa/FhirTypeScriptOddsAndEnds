@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObjectRole = void 0;
 /**
  * Code representing the role the entity played in the audit event.
  */
-export var ObjectRole = {
+exports.ObjectRole = {
     /**
      * This object is the patient that is the subject of care related to this event.  It is identifiable by patient ID or equivalent.  The patient may be either human or animal.
      */
@@ -193,5 +196,6 @@ export var ObjectRole = {
         code: "9",
         display: "Subscriber",
         system: "http://terminology.hl7.org/CodeSystem/object-role"
-    }
+    },
 };
+//# sourceMappingURL=ObjectRole.js.map

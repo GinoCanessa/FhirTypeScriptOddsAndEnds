@@ -1,1 +1,1 @@
-{"version":3,"file":"BodystructureRelativeLocation.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/BodystructureRelativeLocation.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,6BAA6B;;;;;;;;;;CA8CzC,CAAC"}
+{"version":3,"file":"BodystructureRelativeLocation.d.ts","sourceRoot":"","sources":["../../ValueSets/BodystructureRelativeLocation.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,6BAA6B;;;;;;;;;;CA8CzC,CAAC"}

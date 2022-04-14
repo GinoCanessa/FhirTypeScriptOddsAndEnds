@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReportActionResultCodes = void 0;
 /**
  * The results of executing an action.
  */
-export var ReportActionResultCodes = {
+exports.ReportActionResultCodes = {
     /**
      * The action encountered a fatal error and the engine was unable to process.
      */
@@ -41,5 +44,6 @@ export var ReportActionResultCodes = {
         code: "warning",
         display: "Warning",
         system: "http://hl7.org/fhir/report-action-result-codes"
-    }
+    },
 };
+//# sourceMappingURL=ReportActionResultCodes.js.map

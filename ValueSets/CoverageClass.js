@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CoverageClass = void 0;
 /**
  * This value set includes Coverage Class codes.
  */
-export var CoverageClass = {
+exports.CoverageClass = {
     /**
      * A class of benefits.
      */
@@ -89,5 +92,6 @@ export var CoverageClass = {
         code: "subplan",
         display: "SubPlan",
         system: "http://terminology.hl7.org/CodeSystem/coverage-class"
-    }
+    },
 };
+//# sourceMappingURL=CoverageClass.js.map

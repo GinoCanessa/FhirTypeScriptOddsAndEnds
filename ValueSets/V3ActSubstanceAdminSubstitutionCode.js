@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V3ActSubstanceAdminSubstitutionCode = void 0;
 /**
  * No Description Provided
  */
-export var V3ActSubstanceAdminSubstitutionCode = {
+exports.V3ActSubstanceAdminSubstitutionCode = {
     /**
      * Description:
      *
@@ -127,5 +130,6 @@ export var V3ActSubstanceAdminSubstitutionCode = {
         code: "TG",
         display: "therapeutic generic",
         system: "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"
-    }
+    },
 };
+//# sourceMappingURL=V3ActSubstanceAdminSubstitutionCode.js.map

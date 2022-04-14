@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.InvestigationSets = void 0;
 /**
  * Example value set for investigation type.
  */
-export var InvestigationSets = {
+exports.InvestigationSets = {
     InvestigationSets_HistorySymptoms: {
         code: "160237006",
         display: "History/symptoms",
@@ -11,5 +14,6 @@ export var InvestigationSets = {
         code: "271336007",
         display: "Examination / signs",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=InvestigationSets.js.map

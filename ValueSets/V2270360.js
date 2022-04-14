@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.V2270360 = void 0;
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0360 ver 2.9 ( Degree/License/Certificate)
  */
-export var V2270360 = {
+exports.V2270360 = {
     v2_2_7_0360_AssociateOfArts: {
         code: "AA",
         display: "Associate of Arts",
@@ -306,5 +309,6 @@ export var V2270360 = {
         code: "TS",
         display: "Trade School Graduate",
         system: "http://terminology.hl7.org/CodeSystem/v2-0360|2.7"
-    }
+    },
 };
+//# sourceMappingURL=V2270360.js.map

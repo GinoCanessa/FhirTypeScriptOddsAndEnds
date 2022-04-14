@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BodystructureRelativeLocation = void 0;
 /**
  * SNOMED-CT concepts modifying the anatomic location
  */
-export var BodystructureRelativeLocation = {
+exports.BodystructureRelativeLocation = {
     BodystructureRelativeLocation_Posterior: {
         code: "255551008",
         display: "Posterior",
@@ -46,5 +49,6 @@ export var BodystructureRelativeLocation = {
         code: "49370004",
         display: "Lateral",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=BodystructureRelativeLocation.js.map

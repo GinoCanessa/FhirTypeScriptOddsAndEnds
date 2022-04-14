@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContactentityType = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.
  */
-export var ContactentityType = {
+exports.ContactentityType = {
     /**
      * Contact details for administrative enquiries.
      */
@@ -49,5 +52,6 @@ export var ContactentityType = {
         code: "PRESS",
         display: "Press",
         system: "http://terminology.hl7.org/CodeSystem/contactentity-type"
-    }
+    },
 };
+//# sourceMappingURL=ContactentityType.js.map

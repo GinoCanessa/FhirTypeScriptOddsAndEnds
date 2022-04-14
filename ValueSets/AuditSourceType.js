@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AuditSourceType = void 0;
 /**
  * The type of process where the audit event originated from.
  */
-export var AuditSourceType = {
+exports.AuditSourceType = {
     /**
      * End-user display device, diagnostic device.
      */
@@ -73,5 +76,6 @@ export var AuditSourceType = {
         code: "9",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/security-source-type"
-    }
+    },
 };
+//# sourceMappingURL=AuditSourceType.js.map

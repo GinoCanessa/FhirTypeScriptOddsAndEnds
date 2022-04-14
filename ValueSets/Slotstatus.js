@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Slotstatus = void 0;
 /**
  * The free/busy status of the slot.
  */
-export var Slotstatus = {
+exports.Slotstatus = {
     /**
      * Indicates that the time interval is busy because one  or more events have been scheduled for that interval.
      */
@@ -41,5 +44,6 @@ export var Slotstatus = {
         code: "free",
         display: "Free",
         system: "http://hl7.org/fhir/slotstatus"
-    }
+    },
 };
+//# sourceMappingURL=Slotstatus.js.map

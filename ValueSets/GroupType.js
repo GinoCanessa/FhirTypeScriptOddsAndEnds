@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupType = void 0;
 /**
  * Types of resources that are part of group.
  */
-export var GroupType = {
+exports.GroupType = {
     /**
      * Group contains "animal" Patient resources.
      */
@@ -49,5 +52,6 @@ export var GroupType = {
         code: "substance",
         display: "Substance",
         system: "http://hl7.org/fhir/group-type"
-    }
+    },
 };
+//# sourceMappingURL=GroupType.js.map

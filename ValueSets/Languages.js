@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Languages = void 0;
 /**
  * This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)
  */
-export var Languages = {
+exports.Languages = {
     Languages_Arabic: {
         code: "ar",
         display: "Arabic",
@@ -281,5 +284,6 @@ export var Languages = {
         code: "zh-TW",
         display: "Chinese (Taiwan)",
         system: "urn:ietf:bcp:47"
-    }
+    },
 };
+//# sourceMappingURL=Languages.js.map

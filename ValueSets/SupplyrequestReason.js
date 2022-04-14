@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplyrequestReason = void 0;
 /**
  * The reason why the supply item was requested.
  */
-export var SupplyrequestReason = {
+exports.SupplyrequestReason = {
     /**
      * The supply has been requested for use in direct patient care.
      */
@@ -17,5 +20,6 @@ export var SupplyrequestReason = {
         code: "ward-stock",
         display: "Ward Stock",
         system: "http://terminology.hl7.org/CodeSystem/supplyrequest-reason"
-    }
+    },
 };
+//# sourceMappingURL=SupplyrequestReason.js.map

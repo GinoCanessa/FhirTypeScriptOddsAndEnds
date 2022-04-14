@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterType = void 0;
 /**
  * This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.
  */
-export var EncounterType = {
+exports.EncounterType = {
     encounter_type_AnnualDiabetesMellitusScreening: {
         code: "ADMS",
         display: "Annual diabetes mellitus screening",
@@ -21,5 +24,6 @@ export var EncounterType = {
         code: "OKI",
         display: "Outpatient Kenacort injection",
         system: "http://terminology.hl7.org/CodeSystem/encounter-type"
-    }
+    },
 };
+//# sourceMappingURL=EncounterType.js.map

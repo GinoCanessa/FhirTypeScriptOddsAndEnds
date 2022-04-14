@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NamingsystemIdentifierType = void 0;
 /**
  * Identifies the style of unique identifier used to identify a namespace.
  */
-export var NamingsystemIdentifierType = {
+exports.NamingsystemIdentifierType = {
     /**
      * An ISO object identifier; e.g. 1.2.3.4.5.
      */
@@ -33,5 +36,6 @@ export var NamingsystemIdentifierType = {
         code: "uuid",
         display: "UUID",
         system: "http://hl7.org/fhir/namingsystem-identifier-type"
-    }
+    },
 };
+//# sourceMappingURL=NamingsystemIdentifierType.js.map

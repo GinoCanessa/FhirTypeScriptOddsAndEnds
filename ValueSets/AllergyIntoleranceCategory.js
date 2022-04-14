@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AllergyIntoleranceCategory = void 0;
 /**
  * Category of an identified substance associated with allergies or intolerances.
  */
-export var AllergyIntoleranceCategory = {
+exports.AllergyIntoleranceCategory = {
     /**
      * A preparation that is synthesized from living organisms or their products, especially a human or animal protein, such as a hormone or antitoxin, that is used as a diagnostic, preventive, or therapeutic agent. Examples of biologic medications include: vaccines; allergenic extracts, which are used for both diagnosis and treatment (for example, allergy shots); gene therapies; cellular therapies.  There are other biologic products, such as tissues, which are not typically associated with allergies.
      */
@@ -33,5 +36,6 @@ export var AllergyIntoleranceCategory = {
         code: "medication",
         display: "Medication",
         system: "http://hl7.org/fhir/allergy-intolerance-category"
-    }
+    },
 };
+//# sourceMappingURL=AllergyIntoleranceCategory.js.map

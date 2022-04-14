@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventActuality = void 0;
 /**
  * Overall nature of the adverse event, e.g. real or potential.
  */
-export var AdverseEventActuality = {
+exports.AdverseEventActuality = {
     /**
      * The adverse event actually happened regardless of whether anyone was affected or harmed.
      */
@@ -17,5 +20,6 @@ export var AdverseEventActuality = {
         code: "potential",
         display: "Potential Adverse Event",
         system: "http://hl7.org/fhir/adverse-event-actuality"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventActuality.js.map

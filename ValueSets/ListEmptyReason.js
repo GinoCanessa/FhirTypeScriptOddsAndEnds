@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ListEmptyReason = void 0;
 /**
  * General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).
  */
-export var ListEmptyReason = {
+exports.ListEmptyReason = {
     /**
      * This list has now closed or has ceased to be relevant or useful.
      */
@@ -49,5 +52,6 @@ export var ListEmptyReason = {
         code: "withheld",
         display: "Information Withheld",
         system: "http://terminology.hl7.org/CodeSystem/list-empty-reason"
-    }
+    },
 };
+//# sourceMappingURL=ListEmptyReason.js.map

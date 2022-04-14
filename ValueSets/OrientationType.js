@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OrientationType = void 0;
 /**
  * Type for orientation.
  */
-export var OrientationType = {
+exports.OrientationType = {
     /**
      * Antisense orientation of reference sequence.
      */
@@ -17,5 +20,6 @@ export var OrientationType = {
         code: "sense",
         display: "Sense orientation of referenceSeq",
         system: "http://hl7.org/fhir/orientation-type"
-    }
+    },
 };
+//# sourceMappingURL=OrientationType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TestscriptOperationCodes = void 0;
 /**
  * This value set defines a set of codes that are used to indicate the supported operations of a testing engine or tool.
  */
-export var TestscriptOperationCodes = {
+exports.TestscriptOperationCodes = {
     /**
      * Realizes an ActivityDefinition in a specific context
      */
@@ -361,5 +364,6 @@ export var TestscriptOperationCodes = {
         code: "vread",
         display: "Version Read",
         system: "http://terminology.hl7.org/CodeSystem/testscript-operation-codes"
-    }
+    },
 };
+//# sourceMappingURL=TestscriptOperationCodes.js.map

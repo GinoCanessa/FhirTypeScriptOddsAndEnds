@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContributorType = void 0;
 /**
  * The type of contributor.
  */
-export var ContributorType = {
+exports.ContributorType = {
     /**
      * An author of the content of the module.
      */
@@ -33,5 +36,6 @@ export var ContributorType = {
         code: "reviewer",
         display: "Reviewer",
         system: "http://hl7.org/fhir/contributor-type"
-    }
+    },
 };
+//# sourceMappingURL=ContributorType.js.map

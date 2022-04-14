@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractAction = void 0;
 /**
  * This value set includes sample Contract Action codes.
  */
-export var ContractAction = {
+exports.ContractAction = {
     /**
      * Definition for Action A
      */
@@ -17,5 +20,6 @@ export var ContractAction = {
         code: "action-b",
         display: "Action B",
         system: "http://terminology.hl7.org/CodeSystem/contractaction"
-    }
+    },
 };
+//# sourceMappingURL=ContractAction.js.map

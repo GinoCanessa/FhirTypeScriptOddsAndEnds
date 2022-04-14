@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SynthesisType = void 0;
 /**
  * Types of combining results from a body of evidence (eg. summary data meta-analysis).
  */
-export var SynthesisType = {
+exports.SynthesisType = {
     /**
      * An approach describing a body of evidence by categorically classifying individual studies (eg 3 studies showed beneft and 2 studied found no effect).
      */
@@ -49,5 +52,6 @@ export var SynthesisType = {
         code: "std-MA",
         display: "summary data meta-analysis",
         system: "http://terminology.hl7.org/CodeSystem/synthesis-type"
-    }
+    },
 };
+//# sourceMappingURL=SynthesisType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EventTiming = void 0;
 /**
  * Real world event relating to the schedule.
  */
-export var EventTiming = {
+exports.EventTiming = {
     /**
      * before meal (from lat. ante cibus)
      */
@@ -218,5 +221,6 @@ export var EventTiming = {
         code: "WAKE",
         display: "WAKE",
         system: "http://terminology.hl7.org/CodeSystem/v3-TimingEvent"
-    }
+    },
 };
+//# sourceMappingURL=EventTiming.js.map

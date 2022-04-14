@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricCalibrationState = void 0;
 /**
  * Describes the state of a metric calibration.
  */
-export var MetricCalibrationState = {
+exports.MetricCalibrationState = {
     /**
      * The metric has been calibrated.
      */
@@ -33,5 +36,6 @@ export var MetricCalibrationState = {
         code: "unspecified",
         display: "Unspecified",
         system: "http://hl7.org/fhir/metric-calibration-state"
-    }
+    },
 };
+//# sourceMappingURL=MetricCalibrationState.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalCategory = void 0;
 /**
  * Example codes for grouping goals to use for filtering or presentation.
  */
-export var GoalCategory = {
+exports.GoalCategory = {
     /**
      * Goals related to the manner in which the subject acts.
      */
@@ -41,5 +44,6 @@ export var GoalCategory = {
         code: "safety",
         display: "Safety",
         system: "http://terminology.hl7.org/CodeSystem/goal-category"
-    }
+    },
 };
+//# sourceMappingURL=GoalCategory.js.map

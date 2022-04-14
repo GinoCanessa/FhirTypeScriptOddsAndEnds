@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Fundsreserve = void 0;
 /**
  * This value set includes sample funds reservation type codes.
  */
-export var Fundsreserve = {
+exports.Fundsreserve = {
     /**
      * The payor is not being requested to reserve any funds for the settlement of future claims.
      */
@@ -25,5 +28,6 @@ export var Fundsreserve = {
         code: "provider",
         display: "Provider",
         system: "http://terminology.hl7.org/CodeSystem/fundsreserve"
-    }
+    },
 };
+//# sourceMappingURL=Fundsreserve.js.map

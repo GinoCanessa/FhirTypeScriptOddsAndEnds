@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MeasureType = void 0;
 /**
  * The type of measure (includes codes from 2.16.840.1.113883.1.11.20368).
  */
-export var MeasureType = {
+exports.MeasureType = {
     /**
      * A measure that combines multiple component measures in to a single quality measure.
      */
@@ -41,5 +44,6 @@ export var MeasureType = {
         code: "structure",
         display: "Structure",
         system: "http://terminology.hl7.org/CodeSystem/measure-type"
-    }
+    },
 };
+//# sourceMappingURL=MeasureType.js.map

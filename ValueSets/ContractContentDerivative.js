@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractContentDerivative = void 0;
 /**
  * This is an example set of Content Derivative type codes, which represent the minimal content derived from the basal information source at a specific stage in its lifecycle, which is sufficient to manage that source information, for example, in a repository, registry, processes and workflows, for making access control decisions, and providing query responses.
  */
-export var ContractContentDerivative = {
+exports.ContractContentDerivative = {
     /**
      * Content derivative that conveys sufficient information needed to register the source basal content from which it is derived.  This derivative content may be used to register the basal content as it changes status in its lifecycle.  For example, content registration may occur when the basal content is created, updated, inactive, or deleted.
      */
@@ -33,5 +36,6 @@ export var ContractContentDerivative = {
         code: "statement",
         display: "Content Statement",
         system: "http://terminology.hl7.org/CodeSystem/contract-content-derivative"
-    }
+    },
 };
+//# sourceMappingURL=ContractContentDerivative.js.map

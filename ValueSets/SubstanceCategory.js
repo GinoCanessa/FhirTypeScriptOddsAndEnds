@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubstanceCategory = void 0;
 /**
  * Substance category codes
  */
-export var SubstanceCategory = {
+exports.SubstanceCategory = {
     /**
      * A substance that causes an allergic reaction.
      */
@@ -57,5 +60,6 @@ export var SubstanceCategory = {
         code: "material",
         display: "Material",
         system: "http://terminology.hl7.org/CodeSystem/substance-category"
-    }
+    },
 };
+//# sourceMappingURL=SubstanceCategory.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapInputMode = void 0;
 /**
  * Mode for this instance of data.
  */
-export var MapInputMode = {
+exports.MapInputMode = {
     /**
      * Names an input instance used a source for mapping.
      */
@@ -17,5 +20,6 @@ export var MapInputMode = {
         code: "target",
         display: "Target Instance",
         system: "http://hl7.org/fhir/map-input-mode"
-    }
+    },
 };
+//# sourceMappingURL=MapInputMode.js.map

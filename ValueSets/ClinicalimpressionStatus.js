@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ClinicalimpressionStatus = void 0;
 /**
  * Codes that reflect the current state of a clinical impression within its overall lifecycle.
  */
-export var ClinicalimpressionStatus = {
+exports.ClinicalimpressionStatus = {
     /**
      * The event has now concluded.
      */
@@ -25,5 +28,6 @@ export var ClinicalimpressionStatus = {
         code: "in-progress",
         display: "In Progress",
         system: "http://hl7.org/fhir/event-status"
-    }
+    },
 };
+//# sourceMappingURL=ClinicalimpressionStatus.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultNeed = void 0;
 /**
  * The frequency with which the target must be validated
  */
-export var VerificationresultNeed = {
+exports.VerificationresultNeed = {
     /**
      * ***TODO***
      */
@@ -25,5 +28,6 @@ export var VerificationresultNeed = {
         code: "periodic",
         display: "Periodic",
         system: "http://terminology.hl7.org/CodeSystem/need"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultNeed.js.map

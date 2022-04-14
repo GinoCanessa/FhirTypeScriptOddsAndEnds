@@ -1,1 +1,1 @@
-{"version":3,"file":"SupplydeliveryType.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/SupplydeliveryType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,kBAAkB;IAC7B;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}
+{"version":3,"file":"SupplydeliveryType.d.ts","sourceRoot":"","sources":["../../ValueSets/SupplydeliveryType.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,kBAAkB;IAC7B;;OAEG;;IAMH;;OAEG;;CAMJ,CAAC"}

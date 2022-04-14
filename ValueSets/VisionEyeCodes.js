@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VisionEyeCodes = void 0;
 /**
  * A coded concept listing the eye codes.
  */
-export var VisionEyeCodes = {
+exports.VisionEyeCodes = {
     /**
      * Left Eye.
      */
@@ -17,5 +20,6 @@ export var VisionEyeCodes = {
         code: "right",
         display: "Right Eye",
         system: "http://hl7.org/fhir/vision-eye-codes"
-    }
+    },
 };
+//# sourceMappingURL=VisionEyeCodes.js.map

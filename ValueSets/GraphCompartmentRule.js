@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GraphCompartmentRule = void 0;
 /**
  * How a compartment must be linked.
  */
-export var GraphCompartmentRule = {
+exports.GraphCompartmentRule = {
     /**
      * The compartment rule is defined in the accompanying FHIRPath expression.
      */
@@ -33,5 +36,6 @@ export var GraphCompartmentRule = {
         code: "matching",
         display: "Matching",
         system: "http://hl7.org/fhir/graph-compartment-rule"
-    }
+    },
 };
+//# sourceMappingURL=GraphCompartmentRule.js.map

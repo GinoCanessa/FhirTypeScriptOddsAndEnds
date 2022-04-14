@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ActionConditionKind = void 0;
 /**
  * Defines the kinds of conditions that can appear on actions.
  */
-export var ActionConditionKind = {
+exports.ActionConditionKind = {
     /**
      * The condition describes whether or not a given action is applicable.
      */
@@ -25,5 +28,6 @@ export var ActionConditionKind = {
         code: "stop",
         display: "Stop",
         system: "http://hl7.org/fhir/action-condition-kind"
-    }
+    },
 };
+//# sourceMappingURL=ActionConditionKind.js.map

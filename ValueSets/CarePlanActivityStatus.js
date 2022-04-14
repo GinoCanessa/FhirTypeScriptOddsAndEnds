@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarePlanActivityStatus = void 0;
 /**
  * Codes that reflect the current state of a care plan activity within its overall life cycle.
  */
-export var CarePlanActivityStatus = {
+exports.CarePlanActivityStatus = {
     /**
      * The planned care plan activity has been withdrawn.
      */
@@ -73,5 +76,6 @@ export var CarePlanActivityStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/care-plan-activity-status"
-    }
+    },
 };
+//# sourceMappingURL=CarePlanActivityStatus.js.map

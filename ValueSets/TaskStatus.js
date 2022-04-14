@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.TaskStatus = void 0;
 /**
  * The current status of the task.
  */
-export var TaskStatus = {
+exports.TaskStatus = {
     /**
      * The potential performer has agreed to execute the task but has not yet started work.
      */
@@ -97,5 +100,6 @@ export var TaskStatus = {
         code: "requested",
         display: "Requested",
         system: "http://hl7.org/fhir/task-status"
-    }
+    },
 };
+//# sourceMappingURL=TaskStatus.js.map

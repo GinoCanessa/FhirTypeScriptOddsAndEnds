@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QualityType = void 0;
 /**
  * Type for quality report.
  */
-export var QualityType = {
+exports.QualityType = {
     /**
      * INDEL Comparison.
      */
@@ -25,5 +28,6 @@ export var QualityType = {
         code: "unknown",
         display: "UNKNOWN Comparison",
         system: "http://hl7.org/fhir/quality-type"
-    }
+    },
 };
+//# sourceMappingURL=QualityType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SpecimenProcessingProcedure = void 0;
 /**
  * The technique that is used to perform the process or preserve the specimen.
  */
-export var SpecimenProcessingProcedure = {
+exports.SpecimenProcessingProcedure = {
     v2_0373_Acidification: {
         code: "ACID",
         display: "Acidification",
@@ -41,5 +44,6 @@ export var SpecimenProcessingProcedure = {
         code: "UFIL",
         display: "Ultrafiltration",
         system: "http://terminology.hl7.org/CodeSystem/v2-0373"
-    }
+    },
 };
+//# sourceMappingURL=SpecimenProcessingProcedure.js.map

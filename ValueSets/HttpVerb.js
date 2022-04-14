@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HttpVerb = void 0;
 /**
  * HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.
  */
-export var HttpVerb = {
+exports.HttpVerb = {
     /**
      * HTTP DELETE Command.
      */
@@ -49,5 +52,6 @@ export var HttpVerb = {
         code: "PUT",
         display: "PUT",
         system: "http://hl7.org/fhir/http-verb"
-    }
+    },
 };
+//# sourceMappingURL=HttpVerb.js.map

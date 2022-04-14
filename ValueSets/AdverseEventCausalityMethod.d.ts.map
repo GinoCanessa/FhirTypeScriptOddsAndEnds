@@ -1,1 +1,1 @@
-{"version":3,"file":"AdverseEventCausalityMethod.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/AdverseEventCausalityMethod.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,2BAA2B;;;;CAgBvC,CAAC"}
+{"version":3,"file":"AdverseEventCausalityMethod.d.ts","sourceRoot":"","sources":["../../ValueSets/AdverseEventCausalityMethod.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,2BAA2B;;;;CAgBvC,CAAC"}

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventOutcome = void 0;
 /**
  * TODO (and should this be required?).
  */
-export var AdverseEventOutcome = {
+exports.AdverseEventOutcome = {
     adverse_event_outcome_Fatal: {
         code: "fatal",
         display: "Fatal",
@@ -31,5 +34,6 @@ export var AdverseEventOutcome = {
         code: "unknown",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-outcome"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventOutcome.js.map

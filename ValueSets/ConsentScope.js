@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConsentScope = void 0;
 /**
  * This value set includes the four Consent scope codes.
  */
-export var ConsentScope = {
+exports.ConsentScope = {
     /**
      * Actions to be taken if they are no longer able to make decisions for themselves
      */
@@ -33,5 +36,6 @@ export var ConsentScope = {
         code: "treatment",
         display: "Treatment",
         system: "http://terminology.hl7.org/CodeSystem/consentscope"
-    }
+    },
 };
+//# sourceMappingURL=ConsentScope.js.map

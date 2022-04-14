@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocTypecodes = void 0;
 /**
  * FHIR Document Codes - all LOINC codes where scale type = 'DOC'.
  */
-export var DocTypecodes = {
+exports.DocTypecodes = {
     DocTypecodes_DeprecatedSpeechTherapyInitialAssessmentNoteAtFirstEncounter: {
         code: "11499-1",
         display: "Deprecated Speech therapy Initial assessment note at First encounter",
@@ -91,5 +94,6 @@ export var DocTypecodes = {
         code: "28032-1",
         display: "Deprecated Cardiac echo, study",
         system: "http://loinc.org"
-    }
+    },
 };
+//# sourceMappingURL=DocTypecodes.js.map

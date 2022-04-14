@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AdverseEventCausalityMethod = void 0;
 /**
  * TODO.
  */
-export var AdverseEventCausalityMethod = {
+exports.AdverseEventCausalityMethod = {
     adverse_event_causality_method_Bayesian: {
         code: "Bayesian",
         display: "Bayesian",
@@ -16,5 +19,6 @@ export var AdverseEventCausalityMethod = {
         code: "ProbabilityScale",
         display: "Probability Scale",
         system: "http://terminology.hl7.org/CodeSystem/adverse-event-causality-method"
-    }
+    },
 };
+//# sourceMappingURL=AdverseEventCausalityMethod.js.map

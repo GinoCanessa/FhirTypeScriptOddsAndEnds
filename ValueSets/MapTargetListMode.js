@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MapTargetListMode = void 0;
 /**
  * If field is a list, how to manage the production.
  */
-export var MapTargetListMode = {
+exports.MapTargetListMode = {
     /**
      * re-use the first item in the list, and keep adding content to it.
      */
@@ -33,5 +36,6 @@ export var MapTargetListMode = {
         code: "share",
         display: "Share",
         system: "http://hl7.org/fhir/map-target-list-mode"
-    }
+    },
 };
+//# sourceMappingURL=MapTargetListMode.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectedissueCategory = void 0;
 /**
  * Kinds of issues or contraindications, such as 'drug-drug interaction', 'duplicate therapy', etc.
  */
-export var DetectedissueCategory = {
+exports.DetectedissueCategory = {
     /**
      * Identifies types of detected issues regarding the administration or supply of an item to a patient.
      */
@@ -265,5 +268,6 @@ export var DetectedissueCategory = {
         code: "TPROD",
         display: "Therapeutic Product Alert",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=DetectedissueCategory.js.map

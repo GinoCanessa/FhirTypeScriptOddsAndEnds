@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssertDirectionCodes = void 0;
 /**
  * The type of direction to use for assertion.
  */
-export var AssertDirectionCodes = {
+exports.AssertDirectionCodes = {
     /**
      * The assertion is evaluated on the request.
      */
@@ -17,5 +20,6 @@ export var AssertDirectionCodes = {
         code: "response",
         display: "response",
         system: "http://hl7.org/fhir/assert-direction-codes"
-    }
+    },
 };
+//# sourceMappingURL=AssertDirectionCodes.js.map

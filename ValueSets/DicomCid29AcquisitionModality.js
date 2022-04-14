@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DicomCid29AcquisitionModality = void 0;
 /**
  * Transitive closure of CID 29 AcquisitionModality
  */
-export var DicomCid29AcquisitionModality = {
+exports.DicomCid29AcquisitionModality = {
     /**
      * Autorefraction device
      */
@@ -297,5 +300,6 @@ export var DicomCid29AcquisitionModality = {
         code: "XC",
         display: "External-camera Photography",
         system: "http://dicom.nema.org/resources/ontology/DCM"
-    }
+    },
 };
+//# sourceMappingURL=DicomCid29AcquisitionModality.js.map

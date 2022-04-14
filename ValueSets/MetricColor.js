@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricColor = void 0;
 /**
  * Describes the typical color of representation.
  */
-export var MetricColor = {
+exports.MetricColor = {
     /**
      * Color for representation - black.
      */
@@ -65,5 +68,6 @@ export var MetricColor = {
         code: "yellow",
         display: "Color Yellow",
         system: "http://hl7.org/fhir/metric-color"
-    }
+    },
 };
+//# sourceMappingURL=MetricColor.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EnteralRoute = void 0;
 /**
  * EnteralRouteOfAdministration: Codes specifying the route of administration of enteral formula.  This value set is composed of HL7 V3 codes and is provided as a suggestive example.
  */
-export var EnteralRoute = {
+exports.EnteralRoute = {
     /**
      * Instillation, enteral feeding tube
      */
@@ -73,5 +76,6 @@ export var EnteralRoute = {
         code: "PO",
         display: "Swallow, oral",
         system: "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"
-    }
+    },
 };
+//# sourceMappingURL=EnteralRoute.js.map

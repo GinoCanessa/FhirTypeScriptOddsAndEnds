@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContainerCap = void 0;
 /**
  * Color of the container cap.
  */
-export var ContainerCap = {
+exports.ContainerCap = {
     /**
      * black cap.
      */
@@ -97,5 +100,6 @@ export var ContainerCap = {
         code: "yellow",
         display: "yellow cap",
         system: "http://terminology.hl7.org/CodeSystem/container-cap"
-    }
+    },
 };
+//# sourceMappingURL=ContainerCap.js.map

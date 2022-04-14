@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.HistoryStatus = void 0;
 /**
  * A code that identifies the status of the family history record.
  */
-export var HistoryStatus = {
+exports.HistoryStatus = {
     /**
      * All available related health information is captured as of the date (and possibly time) when the family member history was taken.
      */
@@ -33,5 +36,6 @@ export var HistoryStatus = {
         code: "partial",
         display: "Partial",
         system: "http://hl7.org/fhir/history-status"
-    }
+    },
 };
+//# sourceMappingURL=HistoryStatus.js.map

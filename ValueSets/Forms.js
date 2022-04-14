@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Forms = void 0;
 /**
  * This value set includes a sample set of Forms codes.
  */
-export var Forms = {
+exports.Forms = {
     /**
      * Example: The #1 form to be used when printing this information.
      */
@@ -17,5 +20,6 @@ export var Forms = {
         code: "2",
         display: "Form #1",
         system: "http://terminology.hl7.org/CodeSystem/forms-codes"
-    }
+    },
 };
+//# sourceMappingURL=Forms.js.map

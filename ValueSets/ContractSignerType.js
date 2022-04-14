@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractSignerType = void 0;
 /**
  * This value set includes sample Contract Signer Type codes.
  */
-export var ContractSignerType = {
+exports.ContractSignerType = {
     /**
      * An entity that has a business or professional relationship with another entity in accordance with an agreement.
      */
@@ -385,5 +388,6 @@ export var ContractSignerType = {
         code: "WIT",
         display: "Witness",
         system: "http://terminology.hl7.org/CodeSystem/contractsignertypecodes"
-    }
+    },
 };
+//# sourceMappingURL=ContractSignerType.js.map

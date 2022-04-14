@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChargeitemBillingcodes = void 0;
 /**
  * Example set of codes that can be used for billing purposes.
  */
-export var ChargeitemBillingcodes = {
+exports.ChargeitemBillingcodes = {
     /**
      * From German EBM billing system:
      * Unvorhergesehene Inanspruchnahme des Vertragsarztes durch einen Patienten;zwischen 19:00 und 22:00 Uhr;an Samstagen, Sonntagen und gesetzlichen Feiertagen, am 24.12. und 31.12. zwischen 07:00 und 19:00 Uhr.
@@ -28,5 +31,6 @@ export var ChargeitemBillingcodes = {
         code: "1320",
         display: "Grundpauschale",
         system: "http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes"
-    }
+    },
 };
+//# sourceMappingURL=ChargeitemBillingcodes.js.map

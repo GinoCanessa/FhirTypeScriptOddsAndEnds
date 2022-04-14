@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RequestPriority = void 0;
 /**
  * The clinical priority of a diagnostic order.
  */
-export var RequestPriority = {
+exports.RequestPriority = {
     /**
      * The request should be actioned as soon as possible - higher priority than urgent.
      */
@@ -33,5 +36,6 @@ export var RequestPriority = {
         code: "urgent",
         display: "Urgent",
         system: "http://hl7.org/fhir/request-priority"
-    }
+    },
 };
+//# sourceMappingURL=RequestPriority.js.map

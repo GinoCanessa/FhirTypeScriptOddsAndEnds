@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GuideParameterCode = void 0;
 /**
  * Code of parameter that is input to the guide.
  */
-export var GuideParameterCode = {
+exports.GuideParameterCode = {
     /**
      * If the value of this string 0..* parameter is one of the metadata fields then all conformance resources will have any specified [Resource].[field] overwritten with the ImplementationGuide.[field], where field is one of: version, date, status, publisher, contact, copyright, experimental, jurisdiction, useContext.
      */
@@ -81,5 +84,6 @@ export var GuideParameterCode = {
         code: "rule-broken-links",
         display: "Broken Links Rule",
         system: "http://hl7.org/fhir/guide-parameter-code"
-    }
+    },
 };
+//# sourceMappingURL=GuideParameterCode.js.map

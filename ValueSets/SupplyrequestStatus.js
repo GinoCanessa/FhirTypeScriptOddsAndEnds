@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplyrequestStatus = void 0;
 /**
  * Status of the supply request.
  */
-export var SupplyrequestStatus = {
+exports.SupplyrequestStatus = {
     /**
      * The request is ready to be acted upon.
      */
@@ -57,5 +60,6 @@ export var SupplyrequestStatus = {
         code: "unknown",
         display: "Unknown",
         system: "http://hl7.org/fhir/supplyrequest-status"
-    }
+    },
 };
+//# sourceMappingURL=SupplyrequestStatus.js.map

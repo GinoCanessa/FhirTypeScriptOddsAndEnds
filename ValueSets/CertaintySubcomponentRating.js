@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CertaintySubcomponentRating = void 0;
 /**
  * The quality rating of the subcomponent of a quality of evidence rating.
  */
-export var CertaintySubcomponentRating = {
+exports.CertaintySubcomponentRating = {
     /**
      * possible reason for increasing quality rating was checked and found to be absent.
      */
@@ -89,5 +92,6 @@ export var CertaintySubcomponentRating = {
         code: "upcode2",
         display: "increase rating: +2",
         system: "http://terminology.hl7.org/CodeSystem/certainty-subcomponent-rating"
-    }
+    },
 };
+//# sourceMappingURL=CertaintySubcomponentRating.js.map

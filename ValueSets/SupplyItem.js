@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SupplyItem = void 0;
 /**
  * This value set includes [SNOMED CT](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) or  concept is-a 260787004 (Physical object)  and provided as an example value set.
  */
-export var SupplyItem = {
+exports.SupplyItem = {
     SupplyItem_Heater: {
         code: "10172004",
         display: "Heater",
@@ -1311,5 +1314,6 @@ export var SupplyItem = {
         code: "995006",
         display: "Farm tool, device",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=SupplyItem.js.map

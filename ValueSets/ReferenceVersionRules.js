@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReferenceVersionRules = void 0;
 /**
  * Whether a reference needs to be version specific or version independent, or whether either can be used.
  */
-export var ReferenceVersionRules = {
+exports.ReferenceVersionRules = {
     /**
      * The reference may be either version independent or version specific.
      */
@@ -25,5 +28,6 @@ export var ReferenceVersionRules = {
         code: "specific",
         display: "Version Specific",
         system: "http://hl7.org/fhir/reference-version-rules"
-    }
+    },
 };
+//# sourceMappingURL=ReferenceVersionRules.js.map

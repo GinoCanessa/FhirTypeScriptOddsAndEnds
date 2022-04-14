@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationEvaluationDoseStatus = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the validity of a dose relative to a particular recommended schedule. This value set is provided as a suggestive example.
  */
-export var ImmunizationEvaluationDoseStatus = {
+exports.ImmunizationEvaluationDoseStatus = {
     /**
      * The dose does not count toward fulfilling a path to immunity for a patient.
      */
@@ -17,5 +20,6 @@ export var ImmunizationEvaluationDoseStatus = {
         code: "valid",
         display: "Valid",
         system: "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationEvaluationDoseStatus.js.map

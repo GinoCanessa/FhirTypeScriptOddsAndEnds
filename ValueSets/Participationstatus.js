@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Participationstatus = void 0;
 /**
  * The Participation status of an appointment.
  */
-export var Participationstatus = {
+exports.Participationstatus = {
     /**
      * The participant has accepted the appointment.
      */
@@ -33,5 +36,6 @@ export var Participationstatus = {
         code: "tentative",
         display: "Tentative",
         system: "http://hl7.org/fhir/participationstatus"
-    }
+    },
 };
+//# sourceMappingURL=Participationstatus.js.map

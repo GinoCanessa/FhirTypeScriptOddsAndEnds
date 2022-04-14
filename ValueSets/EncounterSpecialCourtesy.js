@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterSpecialCourtesy = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.
  */
-export var EncounterSpecialCourtesy = {
+exports.EncounterSpecialCourtesy = {
     /**
      * extended courtesy
      */
@@ -56,5 +59,6 @@ export var EncounterSpecialCourtesy = {
         code: "VIP",
         display: "very important person",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
-    }
+    },
 };
+//# sourceMappingURL=EncounterSpecialCourtesy.js.map

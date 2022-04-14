@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MediaType = void 0;
 /**
  * Codes for high level media categories.
  */
-export var MediaType = {
+exports.MediaType = {
     /**
      * The media consists of a sound recording
      */
@@ -25,5 +28,6 @@ export var MediaType = {
         code: "video",
         display: "Video",
         system: "http://terminology.hl7.org/CodeSystem/media-type"
-    }
+    },
 };
+//# sourceMappingURL=MediaType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NarrativeStatus = void 0;
 /**
  * The status of a resource narrative.
  */
-export var NarrativeStatus = {
+exports.NarrativeStatus = {
     /**
      * The contents of the narrative may contain additional information not found in the structured data. Note that there is no computable way to determine what the extra information is, other than by human inspection.
      */
@@ -33,5 +36,6 @@ export var NarrativeStatus = {
         code: "generated",
         display: "Generated",
         system: "http://hl7.org/fhir/narrative-status"
-    }
+    },
 };
+//# sourceMappingURL=NarrativeStatus.js.map

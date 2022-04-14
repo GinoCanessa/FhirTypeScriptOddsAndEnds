@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerificationresultFailureAction = void 0;
 /**
  * The result if validation fails
  */
-export var VerificationresultFailureAction = {
+exports.VerificationresultFailureAction = {
     verificationresult_failure_action_Fatal: {
         code: "fatal",
         display: "Fatal",
@@ -21,5 +24,6 @@ export var VerificationresultFailureAction = {
         code: "warn",
         display: "Warning",
         system: "http://terminology.hl7.org/CodeSystem/failure-action"
-    }
+    },
 };
+//# sourceMappingURL=VerificationresultFailureAction.js.map

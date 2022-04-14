@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuestionnaireAnswersStatus = void 0;
 /**
  * Lifecycle status of the questionnaire response.
  */
-export var QuestionnaireAnswersStatus = {
+exports.QuestionnaireAnswersStatus = {
     /**
      * This QuestionnaireResponse has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.
      */
@@ -41,5 +44,6 @@ export var QuestionnaireAnswersStatus = {
         code: "stopped",
         display: "Stopped",
         system: "http://hl7.org/fhir/questionnaire-answers-status"
-    }
+    },
 };
+//# sourceMappingURL=QuestionnaireAnswersStatus.js.map

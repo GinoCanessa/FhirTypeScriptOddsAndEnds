@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Tooth = void 0;
 /**
  * This value set includes a smattering of FDI oral site codes.
  */
-export var Tooth = {
+exports.Tooth = {
     /**
      * Oral cavity.
      */
@@ -329,5 +332,6 @@ export var Tooth = {
         code: "8",
         display: "8",
         system: "http://terminology.hl7.org/CodeSystem/ex-tooth"
-    }
+    },
 };
+//# sourceMappingURL=Tooth.js.map

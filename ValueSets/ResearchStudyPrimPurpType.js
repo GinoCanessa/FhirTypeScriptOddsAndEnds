@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResearchStudyPrimPurpType = void 0;
 /**
  * Codes for the main intent of the study.
  */
-export var ResearchStudyPrimPurpType = {
+exports.ResearchStudyPrimPurpType = {
     /**
      * One or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention).
      */
@@ -65,5 +68,6 @@ export var ResearchStudyPrimPurpType = {
         code: "treatment",
         display: "Treatment",
         system: "http://terminology.hl7.org/CodeSystem/research-study-prim-purp-type"
-    }
+    },
 };
+//# sourceMappingURL=ResearchStudyPrimPurpType.js.map

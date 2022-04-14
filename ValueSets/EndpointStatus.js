@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EndpointStatus = void 0;
 /**
  * The status of the endpoint.
  */
-export var EndpointStatus = {
+exports.EndpointStatus = {
     /**
      * This endpoint is expected to be active and can be used.
      */
@@ -49,5 +52,6 @@ export var EndpointStatus = {
         code: "test",
         display: "Test",
         system: "http://hl7.org/fhir/endpoint-status"
-    }
+    },
 };
+//# sourceMappingURL=EndpointStatus.js.map

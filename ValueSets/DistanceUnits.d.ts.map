@@ -1,1 +1,1 @@
-{"version":3,"file":"DistanceUnits.d.ts","sourceRoot":"","sources":["../../fhir-codegen/temp/ts2r4/ValueSets/DistanceUnits.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;;;;;;CA0BzB,CAAC"}
+{"version":3,"file":"DistanceUnits.d.ts","sourceRoot":"","sources":["../../ValueSets/DistanceUnits.ts"],"names":[],"mappings":"AAOA,OAAO,EAAE,MAAM,EAAE,MAAM,iBAAiB,CAAA;AACxC;;GAEG;AACH,eAAO,MAAM,aAAa;;;;;;CA0BzB,CAAC"}

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefinitionResourceTypes = void 0;
 /**
  * A list of all the definition resource types defined in this version of the FHIR specification.
  */
-export var DefinitionResourceTypes = {
+exports.DefinitionResourceTypes = {
     /**
      * This resource allows for the definition of some activity to be performed, independent of a particular patient, practitioner, or other performance context.
      */
@@ -49,5 +52,6 @@ export var DefinitionResourceTypes = {
         code: "Questionnaire",
         display: "Questionnaire",
         system: "http://hl7.org/fhir/definition-resource-types"
-    }
+    },
 };
+//# sourceMappingURL=DefinitionResourceTypes.js.map

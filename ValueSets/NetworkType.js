@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NetworkType = void 0;
 /**
  * The type of network access point of this agent in the audit event.
  */
-export var NetworkType = {
+exports.NetworkType = {
     /**
      * The machine name, including DNS name.
      */
@@ -41,5 +44,6 @@ export var NetworkType = {
         code: "5",
         display: "URI",
         system: "http://hl7.org/fhir/network-type"
-    }
+    },
 };
+//# sourceMappingURL=NetworkType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConceptMapEquivalence = void 0;
 /**
  * The degree of equivalence between concepts.
  */
-export var ConceptMapEquivalence = {
+exports.ConceptMapEquivalence = {
     /**
      * This is an explicit assertion that there is no mapping between the source and target concept.
      */
@@ -81,5 +84,6 @@ export var ConceptMapEquivalence = {
         code: "wider",
         display: "Wider",
         system: "http://hl7.org/fhir/concept-map-equivalence"
-    }
+    },
 };
+//# sourceMappingURL=ConceptMapEquivalence.js.map

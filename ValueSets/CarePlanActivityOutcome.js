@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CarePlanActivityOutcome = void 0;
 /**
  * Example codes indicating the outcome of a care plan activity. Note that these are in no way complete and might not even be appropriate for some uses.
  */
-export var CarePlanActivityOutcome = {
+exports.CarePlanActivityOutcome = {
     CarePlanActivityOutcome_DeficientKnowledgeDiagnosticTest: {
         code: "129862009",
         display: "Deficient knowledge: diagnostic test",
@@ -211,5 +214,6 @@ export var CarePlanActivityOutcome = {
         code: "716438000",
         display: "Able to recognize need for pressure area care",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=CarePlanActivityOutcome.js.map

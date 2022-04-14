@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvidenceVariantState = void 0;
 /**
  * Used for results by exposure in variant states such as low-risk, medium-risk and high-risk states.
  */
-export var EvidenceVariantState = {
+exports.EvidenceVariantState = {
     /**
      * high risk estimate.
      */
@@ -25,5 +28,6 @@ export var EvidenceVariantState = {
         code: "medium-risk",
         display: "medium risk",
         system: "http://terminology.hl7.org/CodeSystem/evidence-variant-state"
-    }
+    },
 };
+//# sourceMappingURL=EvidenceVariantState.js.map

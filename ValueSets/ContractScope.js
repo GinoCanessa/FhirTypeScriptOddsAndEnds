@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ContractScope = void 0;
 /**
  * This value set contract specific codes for scope.
  */
-export var ContractScope = {
+exports.ContractScope = {
     /**
      * To be completed
      */
@@ -9,5 +12,6 @@ export var ContractScope = {
         code: "policy",
         display: "Policy",
         system: "http://hl7.org/fhir/contract-scope"
-    }
+    },
 };
+//# sourceMappingURL=ContractScope.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.KnowledgeResourceTypes = void 0;
 /**
  * A list of all the knowledge resource types defined in this version of the FHIR specification.
  */
-export var KnowledgeResourceTypes = {
+exports.KnowledgeResourceTypes = {
     /**
      * The definition of a specific activity to be taken, independent of any particular patient or context.
      */
@@ -73,5 +76,6 @@ export var KnowledgeResourceTypes = {
         code: "ValueSet",
         display: "ValueSet",
         system: "http://hl7.org/fhir/knowledge-resource-types"
-    }
+    },
 };
+//# sourceMappingURL=KnowledgeResourceTypes.js.map

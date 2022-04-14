@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AssertOperatorCodes = void 0;
 /**
  * The type of operator to use for assertion.
  */
-export var AssertOperatorCodes = {
+exports.AssertOperatorCodes = {
     /**
      * Compare value string contains a known value.
      */
@@ -89,5 +92,6 @@ export var AssertOperatorCodes = {
         code: "notIn",
         display: "notIn",
         system: "http://hl7.org/fhir/assert-operator-codes"
-    }
+    },
 };
+//# sourceMappingURL=AssertOperatorCodes.js.map

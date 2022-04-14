@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterAdmitSource = void 0;
 /**
  * This value set defines a set of codes that can be used to indicate from where the patient came in.
  */
-export var EncounterAdmitSource = {
+exports.EncounterAdmitSource = {
     /**
      * The patient is a newborn and the encounter will track the baby related activities (as opposed to the Mothers encounter - that may be associated using the newborn encounters partof property)
      */
@@ -81,5 +84,6 @@ export var EncounterAdmitSource = {
         code: "rehab",
         display: "From rehabilitation facility",
         system: "http://terminology.hl7.org/CodeSystem/admit-source"
-    }
+    },
 };
+//# sourceMappingURL=EncounterAdmitSource.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Appointmentstatus = void 0;
 /**
  * The free/busy status of an appointment.
  */
-export var Appointmentstatus = {
+exports.Appointmentstatus = {
     /**
      * The patient/patients has/have arrived and is/are waiting to be seen.
      */
@@ -82,5 +85,6 @@ export var Appointmentstatus = {
         code: "waitlist",
         display: "Waitlisted",
         system: "http://hl7.org/fhir/appointmentstatus"
-    }
+    },
 };
+//# sourceMappingURL=Appointmentstatus.js.map

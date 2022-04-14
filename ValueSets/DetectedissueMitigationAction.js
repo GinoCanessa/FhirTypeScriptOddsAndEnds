@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DetectedissueMitigationAction = void 0;
 /**
  * Kinds of mitigating actions and observations that can be associated with a detected issue or contraindication, such as 'added concurrent therapy', 'prior therapy documented', etc.
  */
-export var DetectedissueMitigationAction = {
+exports.DetectedissueMitigationAction = {
     /**
      * Codes dealing with the management of Detected Issue observations for the administrative and patient administrative acts domains.
      */
@@ -217,5 +220,6 @@ export var DetectedissueMitigationAction = {
         code: "EMAUTH",
         display: "emergency authorization override",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }
+    },
 };
+//# sourceMappingURL=DetectedissueMitigationAction.js.map

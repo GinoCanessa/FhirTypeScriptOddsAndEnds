@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DocumentReferenceStatus = void 0;
 /**
  * The status of the document reference.
  */
-export var DocumentReferenceStatus = {
+exports.DocumentReferenceStatus = {
     /**
      * This is the current reference for this document.
      */
@@ -25,5 +28,6 @@ export var DocumentReferenceStatus = {
         code: "superseded",
         display: "Superseded",
         system: "http://hl7.org/fhir/document-reference-status"
-    }
+    },
 };
+//# sourceMappingURL=DocumentReferenceStatus.js.map

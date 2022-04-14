@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationdispenseCategory = void 0;
 /**
  * MedicationDispense Category Codes
  */
-export var MedicationdispenseCategory = {
+exports.MedicationdispenseCategory = {
     /**
      * Includes dispenses for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).
      */
@@ -33,5 +36,6 @@ export var MedicationdispenseCategory = {
         code: "outpatient",
         display: "Outpatient",
         system: "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
-    }
+    },
 };
+//# sourceMappingURL=MedicationdispenseCategory.js.map

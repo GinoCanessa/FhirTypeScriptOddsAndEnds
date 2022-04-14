@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ObservationCategory = void 0;
 /**
  * Observation Category codes.
  */
-export var ObservationCategory = {
+exports.ObservationCategory = {
     /**
      * Observations that measure or record any bodily activity that enhances or maintains physical fitness and overall health and wellness.  Not under direct supervision of practitioner such as a physical therapist. (e.g., laps swum, steps, sleep data)
      */
@@ -73,5 +76,6 @@ export var ObservationCategory = {
         code: "vital-signs",
         display: "Vital Signs",
         system: "http://terminology.hl7.org/CodeSystem/observation-category"
-    }
+    },
 };
+//# sourceMappingURL=ObservationCategory.js.map

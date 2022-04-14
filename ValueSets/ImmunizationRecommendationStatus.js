@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ImmunizationRecommendationStatus = void 0;
 /**
  * The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the status of the patient towards perceived immunity against a vaccine preventable disease. This value set is provided as a suggestive example.
  */
-export var ImmunizationRecommendationStatus = {
+exports.ImmunizationRecommendationStatus = {
     /**
      * The patient is fully protected and no further doses are recommended.
      */
@@ -41,5 +44,6 @@ export var ImmunizationRecommendationStatus = {
         code: "overdue",
         display: "Overdue",
         system: "http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"
-    }
+    },
 };
+//# sourceMappingURL=ImmunizationRecommendationStatus.js.map

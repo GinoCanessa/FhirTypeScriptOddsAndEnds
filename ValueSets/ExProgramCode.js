@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExProgramCode = void 0;
 /**
  * This value set includes sample Program Reason Span codes.
  */
-export var ExProgramCode = {
+exports.ExProgramCode = {
     /**
      * Child Asthma Program
      */
@@ -33,5 +36,6 @@ export var ExProgramCode = {
         code: "none",
         display: "None",
         system: "http://terminology.hl7.org/CodeSystem/ex-programcode"
-    }
+    },
 };
+//# sourceMappingURL=ExProgramCode.js.map

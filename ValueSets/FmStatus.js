@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.FmStatus = void 0;
 /**
  * This value set includes Status codes.
  */
-export var FmStatus = {
+exports.FmStatus = {
     /**
      * The instance is currently in-force.
      */
@@ -33,5 +36,6 @@ export var FmStatus = {
         code: "entered-in-error",
         display: "Entered in Error",
         system: "http://hl7.org/fhir/fm-status"
-    }
+    },
 };
+//# sourceMappingURL=FmStatus.js.map

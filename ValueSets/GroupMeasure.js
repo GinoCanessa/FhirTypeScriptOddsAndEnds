@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GroupMeasure = void 0;
 /**
  * Possible group measure aggregates (E.g. Mean, Median).
  */
-export var GroupMeasure = {
+exports.GroupMeasure = {
     /**
      * Aggregated using Mean of participant values.
      */
@@ -49,5 +52,6 @@ export var GroupMeasure = {
         code: "median-of-median",
         display: "Median of Study Medians",
         system: "http://hl7.org/fhir/group-measure"
-    }
+    },
 };
+//# sourceMappingURL=GroupMeasure.js.map

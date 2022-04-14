@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConditionClinical = void 0;
 /**
  * Preferred value set for Condition Clinical Status.
  */
-export var ConditionClinical = {
+exports.ConditionClinical = {
     /**
      * The subject is currently experiencing the symptoms of the condition or there is evidence of the condition.
      */
@@ -49,5 +52,6 @@ export var ConditionClinical = {
         code: "resolved",
         display: "Resolved",
         system: "http://terminology.hl7.org/CodeSystem/condition-clinical"
-    }
+    },
 };
+//# sourceMappingURL=ConditionClinical.js.map

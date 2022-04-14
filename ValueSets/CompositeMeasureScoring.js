@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CompositeMeasureScoring = void 0;
 /**
  * The composite scoring method of the measure.
  */
-export var CompositeMeasureScoring = {
+exports.CompositeMeasureScoring = {
     /**
      * All-or-nothing scoring includes an individual in the numerator of the composite measure if they are in the numerators of all of the component measures in which they are in the denominator.
      */
@@ -33,5 +36,6 @@ export var CompositeMeasureScoring = {
         code: "weighted",
         display: "Weighted",
         system: "http://terminology.hl7.org/CodeSystem/composite-measure-scoring"
-    }
+    },
 };
+//# sourceMappingURL=CompositeMeasureScoring.js.map

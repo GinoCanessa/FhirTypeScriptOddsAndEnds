@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MetricCalibrationType = void 0;
 /**
  * Describes the type of a metric calibration.
  */
-export var MetricCalibrationType = {
+exports.MetricCalibrationType = {
     /**
      * Gain metric calibration method.
      */
@@ -33,5 +36,6 @@ export var MetricCalibrationType = {
         code: "unspecified",
         display: "Unspecified",
         system: "http://hl7.org/fhir/metric-calibration-type"
-    }
+    },
 };
+//# sourceMappingURL=MetricCalibrationType.js.map

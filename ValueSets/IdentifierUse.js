@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentifierUse = void 0;
 /**
  * Identifies the purpose for this identifier, if known .
  */
-export var IdentifierUse = {
+exports.IdentifierUse = {
     /**
      * The identifier considered to be most trusted for the identification of this item. Sometimes also known as "primary" and "main". The determination of "official" is subjective and implementation guides often provide additional guidelines for use.
      */
@@ -41,5 +44,6 @@ export var IdentifierUse = {
         code: "usual",
         display: "Usual",
         system: "http://hl7.org/fhir/identifier-use"
-    }
+    },
 };
+//# sourceMappingURL=IdentifierUse.js.map

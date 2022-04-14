@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BenefitUnit = void 0;
 /**
  * This value set includes a smattering of Unit type codes.
  */
-export var BenefitUnit = {
+exports.BenefitUnit = {
     /**
      * A family, typically includes self, spouse(s) and children to a defined age
      */
@@ -17,5 +20,6 @@ export var BenefitUnit = {
         code: "individual",
         display: "Individual",
         system: "http://terminology.hl7.org/CodeSystem/benefit-unit"
-    }
+    },
 };
+//# sourceMappingURL=BenefitUnit.js.map

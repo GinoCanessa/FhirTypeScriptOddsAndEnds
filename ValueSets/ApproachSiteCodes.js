@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ApproachSiteCodes = void 0;
 /**
  * This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.
  */
-export var ApproachSiteCodes = {
+exports.ApproachSiteCodes = {
     ApproachSiteCodes_LateralMeniscusOfKneeJoint: {
         code: "10013000",
         display: "Lateral meniscus of knee joint",
@@ -5001,5 +5004,6 @@ export var ApproachSiteCodes = {
         code: "9999005",
         display: "Duodenal ampulla",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=ApproachSiteCodes.js.map

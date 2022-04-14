@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EncounterReason = void 0;
 /**
  * This examples value set defines the set of codes that can be used to indicate reasons for an encounter.
  */
-export var EncounterReason = {
+exports.EncounterReason = {
     EncounterReason_CauterizationOfBartholinQuoteSGland: {
         code: "1001000",
         display: "Cauterization of Bartholin's gland",
@@ -14996,5 +14999,6 @@ export var EncounterReason = {
         code: "9855000",
         display: "Natural death with unknown cause",
         system: "http://snomed.info/sct"
-    }
+    },
 };
+//# sourceMappingURL=EncounterReason.js.map

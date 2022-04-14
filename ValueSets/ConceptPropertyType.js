@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConceptPropertyType = void 0;
 /**
  * The type of a property value.
  */
-export var ConceptPropertyType = {
+exports.ConceptPropertyType = {
     /**
      * The property value is a boolean true | false.
      */
@@ -57,5 +60,6 @@ export var ConceptPropertyType = {
         code: "string",
         display: "string",
         system: "http://hl7.org/fhir/concept-property-type"
-    }
+    },
 };
+//# sourceMappingURL=ConceptPropertyType.js.map

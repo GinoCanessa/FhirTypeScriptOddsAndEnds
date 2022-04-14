@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationknowledgePackageType = void 0;
 /**
  * MedicationKnowledge Package Type Codes
  */
-export var MedicationknowledgePackageType = {
+exports.MedicationknowledgePackageType = {
     medicationknowledge_package_type_Ampule: {
         code: "amp",
         display: "Ampule",
@@ -111,5 +114,6 @@ export var MedicationknowledgePackageType = {
         code: "vial",
         display: "Vial",
         system: "http://terminology.hl7.org/CodeSystem/medicationknowledge-package-type"
-    }
+    },
 };
+//# sourceMappingURL=MedicationknowledgePackageType.js.map

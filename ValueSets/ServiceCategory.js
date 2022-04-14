@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceCategory = void 0;
 /**
  * This value set defines an example set of codes that can be used to classify groupings of service-types/specialties.
  */
-export var ServiceCategory = {
+exports.ServiceCategory = {
     /**
      * Adoption
      */
@@ -305,5 +308,6 @@ export var ServiceCategory = {
         code: "9",
         display: "Death Services",
         system: "http://terminology.hl7.org/CodeSystem/service-category"
-    }
+    },
 };
+//# sourceMappingURL=ServiceCategory.js.map

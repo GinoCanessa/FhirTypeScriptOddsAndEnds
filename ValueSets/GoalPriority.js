@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.GoalPriority = void 0;
 /**
  * Indicates the level of importance associated with reaching or sustaining a goal.
  */
-export var GoalPriority = {
+exports.GoalPriority = {
     /**
      * Indicates that the goal is of considerable importance and should be a primary focus of care delivery.
      */
@@ -25,5 +28,6 @@ export var GoalPriority = {
         code: "medium-priority",
         display: "Medium Priority",
         system: "http://terminology.hl7.org/CodeSystem/goal-priority"
-    }
+    },
 };
+//# sourceMappingURL=GoalPriority.js.map

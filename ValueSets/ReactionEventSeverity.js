@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ReactionEventSeverity = void 0;
 /**
  * Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations.
  */
-export var ReactionEventSeverity = {
+exports.ReactionEventSeverity = {
     /**
      * Causes mild physiological effects.
      */
@@ -25,5 +28,6 @@ export var ReactionEventSeverity = {
         code: "severe",
         display: "Severe",
         system: "http://hl7.org/fhir/reaction-event-severity"
-    }
+    },
 };
+//# sourceMappingURL=ReactionEventSeverity.js.map

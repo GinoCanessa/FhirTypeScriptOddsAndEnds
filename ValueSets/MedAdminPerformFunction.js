@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedAdminPerformFunction = void 0;
 /**
  * MedicationAdministration Performer Function Codes
  */
-export var MedAdminPerformFunction = {
+exports.MedAdminPerformFunction = {
     /**
      * A person, non-person living subject, organization or device that who actually and principally carries out the action
      */
@@ -25,5 +28,6 @@ export var MedAdminPerformFunction = {
         code: "witness",
         display: "Witness",
         system: "http://terminology.hl7.org/CodeSystem/med-admin-perform-function"
-    }
+    },
 };
+//# sourceMappingURL=MedAdminPerformFunction.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VersioningPolicy = void 0;
 /**
  * How the system supports versioning for a resource.
  */
-export var VersioningPolicy = {
+exports.VersioningPolicy = {
     /**
      * VersionId meta-property is not supported (server) or used (client).
      */
@@ -25,5 +28,6 @@ export var VersioningPolicy = {
         code: "versioned-update",
         display: "VersionId tracked fully",
         system: "http://hl7.org/fhir/versioning-policy"
-    }
+    },
 };
+//# sourceMappingURL=VersioningPolicy.js.map

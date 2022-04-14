@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ExpressionLanguage = void 0;
 /**
  * The media type of the expression language.
  */
-export var ExpressionLanguage = {
+exports.ExpressionLanguage = {
     /**
      * FHIR's RESTful query syntax - typically independent of base URL.
      */
@@ -25,5 +28,6 @@ export var ExpressionLanguage = {
         code: "text/fhirpath",
         display: "FHIRPath",
         system: "http://hl7.org/fhir/expression-language"
-    }
+    },
 };
+//# sourceMappingURL=ExpressionLanguage.js.map

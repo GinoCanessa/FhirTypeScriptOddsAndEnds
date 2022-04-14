@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationStatus = void 0;
 /**
  * Medication Status Codes
  */
-export var MedicationStatus = {
+exports.MedicationStatus = {
     /**
      * The medication is available for use.
      */
@@ -25,5 +28,6 @@ export var MedicationStatus = {
         code: "inactive",
         display: "Inactive",
         system: "http://hl7.org/fhir/CodeSystem/medication-status"
-    }
+    },
 };
+//# sourceMappingURL=MedicationStatus.js.map

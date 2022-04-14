@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DurationUnits = void 0;
 /**
  * Unified Code for Units of Measure (UCUM). This value set includes all UCUM codes
  */
-export var DurationUnits = {
+exports.DurationUnits = {
     DurationUnits_Milliseconds: {
         code: "ms",
         display: "milliseconds",
@@ -11,5 +14,6 @@ export var DurationUnits = {
         code: "s",
         display: "seconds",
         system: "http://unitsofmeasure.org"
-    }
+    },
 };
+//# sourceMappingURL=DurationUnits.js.map

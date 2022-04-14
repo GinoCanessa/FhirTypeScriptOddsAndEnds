@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.CareTeamStatus = void 0;
 /**
  * Indicates the status of the care team.
  */
-export var CareTeamStatus = {
+exports.CareTeamStatus = {
     /**
      * The care team is currently participating in the coordination and delivery of care.
      */
@@ -41,5 +44,6 @@ export var CareTeamStatus = {
         code: "suspended",
         display: "Suspended",
         system: "http://hl7.org/fhir/care-team-status"
-    }
+    },
 };
+//# sourceMappingURL=CareTeamStatus.js.map

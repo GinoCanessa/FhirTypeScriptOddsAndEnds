@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EvidenceQuality = void 0;
 /**
  * A rating system that describes the quality of evidence such as the GRADE, DynaMed, or Oxford CEBM systems.
  */
-export var EvidenceQuality = {
+exports.EvidenceQuality = {
     /**
      * High quality evidence.
      */
@@ -33,5 +36,6 @@ export var EvidenceQuality = {
         code: "very-low",
         display: "Very low quality",
         system: "http://terminology.hl7.org/CodeSystem/evidence-quality"
-    }
+    },
 };
+//# sourceMappingURL=EvidenceQuality.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.BundleType = void 0;
 /**
  * Indicates the purpose of a bundle - how it is intended to be used.
  */
-export var BundleType = {
+exports.BundleType = {
     /**
      * The bundle is a set of actions - intended to be processed by a server as a group of independent actions.
      */
@@ -73,5 +76,6 @@ export var BundleType = {
         code: "transaction-response",
         display: "Transaction Response",
         system: "http://hl7.org/fhir/bundle-type"
-    }
+    },
 };
+//# sourceMappingURL=BundleType.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MessageSignificanceCategory = void 0;
 /**
  * The impact of the content of a message.
  */
-export var MessageSignificanceCategory = {
+exports.MessageSignificanceCategory = {
     /**
      * The message represents/requests a change that should not be processed more than once; e.g., making a booking for an appointment.
      */
@@ -25,5 +28,6 @@ export var MessageSignificanceCategory = {
         code: "notification",
         display: "Notification",
         system: "http://hl7.org/fhir/message-significance-category"
-    }
+    },
 };
+//# sourceMappingURL=MessageSignificanceCategory.js.map

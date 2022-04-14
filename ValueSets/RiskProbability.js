@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RiskProbability = void 0;
 /**
  * Codes representing the likelihood of a particular outcome in a risk assessment.
  */
-export var RiskProbability = {
+exports.RiskProbability = {
     /**
      * The specified outcome is effectively guaranteed.
      */
@@ -41,5 +44,6 @@ export var RiskProbability = {
         code: "negligible",
         display: "Negligible likelihood",
         system: "http://terminology.hl7.org/CodeSystem/risk-probability"
-    }
+    },
 };
+//# sourceMappingURL=RiskProbability.js.map

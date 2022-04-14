@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SubscriberRelationship = void 0;
 /**
  * This value set includes codes for the relationship between the Subscriber and the Beneficiary (insured/covered party/patient).
  */
-export var SubscriberRelationship = {
+exports.SubscriberRelationship = {
     /**
      * The Beneficiary is a child of the Subscriber
      */
@@ -57,5 +60,6 @@ export var SubscriberRelationship = {
         code: "spouse",
         display: "Spouse",
         system: "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
-    }
+    },
 };
+//# sourceMappingURL=SubscriberRelationship.js.map

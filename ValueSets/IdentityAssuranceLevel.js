@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.IdentityAssuranceLevel = void 0;
 /**
  * The level of confidence that this link represents the same actual person, based on NIST Authentication Levels.
  */
-export var IdentityAssuranceLevel = {
+exports.IdentityAssuranceLevel = {
     /**
      * Little or no confidence in the asserted identity's accuracy.
      */
@@ -33,5 +36,6 @@ export var IdentityAssuranceLevel = {
         code: "level4",
         display: "Level 4",
         system: "http://hl7.org/fhir/identity-assuranceLevel"
-    }
+    },
 };
+//# sourceMappingURL=IdentityAssuranceLevel.js.map

@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RejectionCriteria = void 0;
 /**
  * Criterion for rejection of the specimen by laboratory.
  */
-export var RejectionCriteria = {
+exports.RejectionCriteria = {
     /**
      * specimen container broken.
      */
@@ -41,5 +44,6 @@ export var RejectionCriteria = {
         code: "wrong-temperature",
         display: "specimen temperature inappropriate",
         system: "http://terminology.hl7.org/CodeSystem/rejection-criteria"
-    }
+    },
 };
+//# sourceMappingURL=RejectionCriteria.js.map

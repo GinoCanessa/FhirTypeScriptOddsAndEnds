@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResponseCode = void 0;
 /**
  * The kind of response to a message.
  */
-export var ResponseCode = {
+exports.ResponseCode = {
     /**
      * The message was rejected because of a problem with the content. There is no point in re-sending without change. The response narrative SHALL describe the issue.
      */
@@ -25,5 +28,6 @@ export var ResponseCode = {
         code: "transient-error",
         display: "Transient Error",
         system: "http://hl7.org/fhir/response-code"
-    }
+    },
 };
+//# sourceMappingURL=ResponseCode.js.map

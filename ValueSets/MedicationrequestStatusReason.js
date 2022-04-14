@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MedicationrequestStatusReason = void 0;
 /**
  * MedicationRequest Status Reason Codes
  */
-export var MedicationrequestStatusReason = {
+exports.MedicationrequestStatusReason = {
     /**
      * This therapy has been ordered as a backup to a preferred therapy. This order will be released when and if the preferred therapy is unsuccessful.
      */
@@ -105,5 +108,6 @@ export var MedicationrequestStatusReason = {
         code: "washout",
         display: "Waiting for old drug to wash out",
         system: "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason"
-    }
+    },
 };
+//# sourceMappingURL=MedicationrequestStatusReason.js.map

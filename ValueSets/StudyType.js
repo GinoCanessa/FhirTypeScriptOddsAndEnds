@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.StudyType = void 0;
 /**
  * Types of research studies (types of research methods).
  */
-export var StudyType = {
+exports.StudyType = {
     /**
      * case-control study.
      */
@@ -57,5 +60,6 @@ export var StudyType = {
         code: "series",
         display: "uncontrolled cohort or case series",
         system: "http://terminology.hl7.org/CodeSystem/study-type"
-    }
+    },
 };
+//# sourceMappingURL=StudyType.js.map

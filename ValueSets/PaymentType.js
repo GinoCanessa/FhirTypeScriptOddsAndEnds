@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PaymentType = void 0;
 /**
  * This value set includes sample Payment Type codes.
  */
-export var PaymentType = {
+exports.PaymentType = {
     /**
      * The amount is an adjustment regarding claims already paid.
      */
@@ -25,5 +28,6 @@ export var PaymentType = {
         code: "payment",
         display: "Payment",
         system: "http://terminology.hl7.org/CodeSystem/payment-type"
-    }
+    },
 };
+//# sourceMappingURL=PaymentType.js.map

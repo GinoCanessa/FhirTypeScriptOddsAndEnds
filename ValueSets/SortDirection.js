@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SortDirection = void 0;
 /**
  * The possible sort directions, ascending or descending.
  */
-export var SortDirection = {
+exports.SortDirection = {
     /**
      * Sort by the value ascending, so that lower values appear first.
      */
@@ -17,5 +20,6 @@ export var SortDirection = {
         code: "descending",
         display: "Descending",
         system: "http://hl7.org/fhir/sort-direction"
-    }
+    },
 };
+//# sourceMappingURL=SortDirection.js.map
