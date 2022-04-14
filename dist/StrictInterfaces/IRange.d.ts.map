@@ -1,0 +1,1 @@
+{"version":3,"file":"IRange.d.ts","sourceRoot":"","sources":["../../src/StrictInterfaces/IRange.ts"],"names":[],"mappings":"AAOA,OAAO,KAAK,cAAc,MAAM,qBAAqB,CAAA;AACrD;;GAEG;AACH,MAAM,WAAW,MAAO,SAAQ,cAAc,CAAC,QAAQ;IACrD;;OAEG;IACH,IAAI,CAAC,EAAE,cAAc,CAAC,SAAS,GAAC,SAAS,CAAC;IAC1C;;OAEG;IACH,GAAG,CAAC,EAAE,cAAc,CAAC,SAAS,GAAC,SAAS,CAAC;CAC1C"}

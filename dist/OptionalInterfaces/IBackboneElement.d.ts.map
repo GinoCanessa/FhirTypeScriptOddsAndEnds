@@ -1,0 +1,1 @@
+{"version":3,"file":"IBackboneElement.d.ts","sourceRoot":"","sources":["../../src/OptionalInterfaces/IBackboneElement.ts"],"names":[],"mappings":"AAOA,OAAO,KAAK,cAAc,MAAM,uBAAuB,CAAA;AACvD;;GAEG;AACH,MAAM,WAAW,gBAAiB,SAAQ,cAAc,CAAC,QAAQ;IAC/D;;OAEG;IACH,iBAAiB,CAAC,EAAE,cAAc,CAAC,UAAU,EAAE,GAAC,SAAS,CAAC;CAC3D"}

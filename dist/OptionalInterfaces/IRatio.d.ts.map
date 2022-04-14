@@ -1,0 +1,1 @@
+{"version":3,"file":"IRatio.d.ts","sourceRoot":"","sources":["../../src/OptionalInterfaces/IRatio.ts"],"names":[],"mappings":"AAOA,OAAO,KAAK,cAAc,MAAM,uBAAuB,CAAA;AACvD;;GAEG;AACH,MAAM,WAAW,MAAO,SAAQ,cAAc,CAAC,QAAQ;IACrD;;OAEG;IACH,WAAW,CAAC,EAAE,cAAc,CAAC,SAAS,GAAC,SAAS,CAAC;IACjD;;OAEG;IACH,SAAS,CAAC,EAAE,cAAc,CAAC,SAAS,GAAC,SAAS,CAAC;CAChD"}

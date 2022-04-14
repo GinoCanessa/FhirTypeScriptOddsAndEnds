@@ -1,1 +1,0 @@
-{"version":3,"file":"RelationType.js","sourceRoot":"","sources":["../../ValueSets/RelationType.ts"],"names":[],"mappings":";;;AAQA;;GAEG;AACU,QAAA,YAAY,GAAG;IAC1B;;OAEG;IACH,wBAAwB,EAAE;QACxB,IAAI,EAAE,gBAAgB;QACtB,OAAO,EAAE,aAAa;QACtB,MAAM,EAAE,mCAAmC;KAClC;IACX;;OAEG;IACH,sBAAsB,EAAE;QACtB,IAAI,EAAE,UAAU;QAChB,OAAO,EAAE,UAAU;QACnB,MAAM,EAAE,mCAAmC;KAClC;CACZ,CAAC"}
