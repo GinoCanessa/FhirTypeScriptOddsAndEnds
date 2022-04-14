@@ -1,8 +1,9 @@
 {
   "name": "fhir-typescript-sdk-dev",
-  "version": "0.0.1-beta.4",
+  "version": "0.0.1-beta.5",
   "description": "Developer pre-release testing of a FHIR TypeScript SDK",
   "main": "index.js",
+  "typings": "index.d.ts",
   "homepage": "https://github.com/GinoCanessa/FhirTypeScriptOddsAndEnds",
   "repository": {
     "type": "git",
