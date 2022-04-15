@@ -1,0 +1,63 @@
+import { Coding } from '../fhir';
+/**
+ * This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)
+ */
+export declare const LanguagesValueSet: {
+    LanguagesValueSet_Arabic: Coding;
+    LanguagesValueSet_Bengali: Coding;
+    LanguagesValueSet_Czech: Coding;
+    LanguagesValueSet_Danish: Coding;
+    LanguagesValueSet_German: Coding;
+    LanguagesValueSet_GermanAustria: Coding;
+    LanguagesValueSet_GermanSwitzerland: Coding;
+    LanguagesValueSet_GermanGermany: Coding;
+    LanguagesValueSet_Greek: Coding;
+    LanguagesValueSet_English: Coding;
+    LanguagesValueSet_EnglishAustralia: Coding;
+    LanguagesValueSet_EnglishCanada: Coding;
+    LanguagesValueSet_EnglishGreatBritain: Coding;
+    LanguagesValueSet_EnglishIndia: Coding;
+    LanguagesValueSet_EnglishNewZeland: Coding;
+    LanguagesValueSet_EnglishSingapore: Coding;
+    LanguagesValueSet_EnglishUnitedStates: Coding;
+    LanguagesValueSet_Spanish: Coding;
+    LanguagesValueSet_SpanishArgentina: Coding;
+    LanguagesValueSet_SpanishSpain: Coding;
+    LanguagesValueSet_SpanishUruguay: Coding;
+    LanguagesValueSet_Finnish: Coding;
+    LanguagesValueSet_French: Coding;
+    LanguagesValueSet_FrenchBelgium: Coding;
+    LanguagesValueSet_FrenchSwitzerland: Coding;
+    LanguagesValueSet_FrenchFrance: Coding;
+    LanguagesValueSet_Frysian: Coding;
+    LanguagesValueSet_FrysianNetherlands: Coding;
+    LanguagesValueSet_Hindi: Coding;
+    LanguagesValueSet_Croatian: Coding;
+    LanguagesValueSet_Italian: Coding;
+    LanguagesValueSet_ItalianSwitzerland: Coding;
+    LanguagesValueSet_ItalianItaly: Coding;
+    LanguagesValueSet_Japanese: Coding;
+    LanguagesValueSet_Korean: Coding;
+    LanguagesValueSet_Dutch: Coding;
+    LanguagesValueSet_DutchBelgium: Coding;
+    LanguagesValueSet_DutchNetherlands: Coding;
+    LanguagesValueSet_Norwegian: Coding;
+    LanguagesValueSet_NorwegianNorway: Coding;
+    LanguagesValueSet_Punjabi: Coding;
+    LanguagesValueSet_Polish: Coding;
+    LanguagesValueSet_Portuguese: Coding;
+    LanguagesValueSet_PortugueseBrazil: Coding;
+    LanguagesValueSet_Russian: Coding;
+    LanguagesValueSet_RussianRussia: Coding;
+    LanguagesValueSet_Serbian: Coding;
+    LanguagesValueSet_SerbianSerbia: Coding;
+    LanguagesValueSet_Swedish: Coding;
+    LanguagesValueSet_SwedishSweden: Coding;
+    LanguagesValueSet_Telegu: Coding;
+    LanguagesValueSet_Chinese: Coding;
+    LanguagesValueSet_ChineseChina: Coding;
+    LanguagesValueSet_ChineseHongKong: Coding;
+    LanguagesValueSet_ChineseSingapore: Coding;
+    LanguagesValueSet_ChineseTaiwan: Coding;
+};
+//# sourceMappingURL=LanguagesValueSet.d.ts.map

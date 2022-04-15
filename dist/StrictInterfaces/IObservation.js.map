@@ -1,1 +1,0 @@
-{"version":3,"file":"IObservation.js","sourceRoot":"","sources":["../../src/StrictInterfaces/IObservation.ts"],"names":[],"mappings":";;;AAqRA;;GAEG;AACH,IAAY,qBASX;AATD,WAAY,qBAAqB;IAC/B,kDAAyB,CAAA;IACzB,oDAA2B,CAAA;IAC3B,wCAAe,CAAA;IACf,4CAAmB,CAAA;IACnB,gDAAuB,CAAA;IACvB,gDAAuB,CAAA;IACvB,8DAAqC,CAAA;IACrC,4CAAmB,CAAA;AACrB,CAAC,EATW,qBAAqB,GAArB,6BAAqB,KAArB,6BAAqB,QAShC"}

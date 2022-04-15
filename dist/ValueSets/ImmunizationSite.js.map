@@ -1,1 +1,0 @@
-{"version":3,"file":"ImmunizationSite.js","sourceRoot":"","sources":["../../src/ValueSets/ImmunizationSite.ts"],"names":[],"mappings":";;;AAQA;;GAEG;AACU,QAAA,gBAAgB,GAAG;IAC9B;;OAEG;IACH,kBAAkB,EAAE;QAClB,IAAI,EAAE,IAAI;QACV,OAAO,EAAE,UAAU;QACnB,MAAM,EAAE,kDAAkD;KACjD;IACX;;OAEG;IACH,mBAAmB,EAAE;QACnB,IAAI,EAAE,IAAI;QACV,OAAO,EAAE,WAAW;QACpB,MAAM,EAAE,kDAAkD;KACjD;CACZ,CAAC"}

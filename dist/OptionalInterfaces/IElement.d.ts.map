@@ -1,1 +1,0 @@
-{"version":3,"file":"IElement.d.ts","sourceRoot":"","sources":["../../src/OptionalInterfaces/IElement.ts"],"names":[],"mappings":"AAOA,OAAO,KAAK,cAAc,MAAM,uBAAuB,CAAA;AACvD;;GAEG;AACH,MAAM,WAAW,QAAQ;IACvB;;OAEG;IACH,SAAS,CAAC,EAAE,cAAc,CAAC,UAAU,EAAE,GAAC,SAAS,CAAC;IAClD;;OAEG;IACH,EAAE,CAAC,EAAE,MAAM,GAAC,SAAS,CAAC;IACtB,GAAG,CAAC,EAAE,cAAc,CAAC,QAAQ,GAAC,SAAS,CAAC;CACzC"}

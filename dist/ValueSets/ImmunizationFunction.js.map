@@ -1,1 +1,0 @@
-{"version":3,"file":"ImmunizationFunction.js","sourceRoot":"","sources":["../../src/ValueSets/ImmunizationFunction.ts"],"names":[],"mappings":";;;AAQA;;GAEG;AACU,QAAA,oBAAoB,GAAG;IAClC,6BAA6B,EAAE;QAC7B,IAAI,EAAE,IAAI;QACV,OAAO,EAAE,wBAAwB;QACjC,MAAM,EAAE,+CAA+C;KAC9C;IACX,wBAAwB,EAAE;QACxB,IAAI,EAAE,IAAI;QACV,OAAO,EAAE,mBAAmB;QAC5B,MAAM,EAAE,+CAA+C;KAC9C;CACZ,CAAC"}
