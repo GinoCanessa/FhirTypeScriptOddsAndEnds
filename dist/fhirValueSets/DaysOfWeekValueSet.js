@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * The days of the week.
  */
-export var DaysOfWeekValueSet = {
+export const DaysOfWeekValueSet = {
     /**
      * Friday.
      */
-    days_of_week_Friday: Coding.FactoryCreateStrict({
+    days_of_week_Friday: Coding.FromStrict({
         code: "fri",
         display: "Friday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -22,7 +21,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Monday.
      */
-    days_of_week_Monday: Coding.FactoryCreateStrict({
+    days_of_week_Monday: Coding.FromStrict({
         code: "mon",
         display: "Monday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -30,7 +29,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Saturday.
      */
-    days_of_week_Saturday: Coding.FactoryCreateStrict({
+    days_of_week_Saturday: Coding.FromStrict({
         code: "sat",
         display: "Saturday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -38,7 +37,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Sunday.
      */
-    days_of_week_Sunday: Coding.FactoryCreateStrict({
+    days_of_week_Sunday: Coding.FromStrict({
         code: "sun",
         display: "Sunday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -46,7 +45,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Thursday.
      */
-    days_of_week_Thursday: Coding.FactoryCreateStrict({
+    days_of_week_Thursday: Coding.FromStrict({
         code: "thu",
         display: "Thursday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -54,7 +53,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Tuesday.
      */
-    days_of_week_Tuesday: Coding.FactoryCreateStrict({
+    days_of_week_Tuesday: Coding.FromStrict({
         code: "tue",
         display: "Tuesday",
         system: "http://hl7.org/fhir/days-of-week"
@@ -62,7 +61,7 @@ export var DaysOfWeekValueSet = {
     /**
      * Wednesday.
      */
-    days_of_week_Wednesday: Coding.FactoryCreateStrict({
+    days_of_week_Wednesday: Coding.FromStrict({
         code: "wed",
         display: "Wednesday",
         system: "http://hl7.org/fhir/days-of-week"

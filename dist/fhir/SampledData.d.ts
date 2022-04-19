@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
  */
-export interface ISampledData extends fhir.IFhirElement {
+export declare type ISampledData = fhir.IFhirElement & {
     /**
      * Data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData.
      */
@@ -37,7 +37,7 @@ export interface ISampledData extends fhir.IFhirElement {
      */
     upperLimit?: number | undefined;
     _upperLimit?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
  */
@@ -77,20 +77,16 @@ export declare class SampledData extends fhir.FhirElement implements fhir.ISampl
     upperLimit?: number | undefined;
     _upperLimit?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for SampledData - initializes required elements to null.
+     * Default constructor for SampledData - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a SampledData from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.ISampledData>): SampledData;
+    constructor(source?: Partial<fhir.ISampledData>);
     /**
      * Check if the current SampledData contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a SampledData from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.ISampledData): SampledData;
+    static FromStrict(source: fhir.ISampledData): SampledData;
 }
 //# sourceMappingURL=SampledData.d.ts.map

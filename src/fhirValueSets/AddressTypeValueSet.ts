@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const AddressTypeValueSet = {
   /**
    * An address that is both physical and postal.
    */
-  address_type_PostalAndPhysical: Coding.FactoryCreateStrict({
+  address_type_PostalAndPhysical: Coding.FromStrict({
     code: "both",
     display: "Postal & Physical",
     system: "http://hl7.org/fhir/address-type"
@@ -22,7 +21,7 @@ export const AddressTypeValueSet = {
   /**
    * A physical address that can be visited.
    */
-  address_type_Physical: Coding.FactoryCreateStrict({
+  address_type_Physical: Coding.FromStrict({
     code: "physical",
     display: "Physical",
     system: "http://hl7.org/fhir/address-type"
@@ -30,7 +29,7 @@ export const AddressTypeValueSet = {
   /**
    * Mailing addresses - PO Boxes and care-of addresses.
    */
-  address_type_Postal: Coding.FactoryCreateStrict({
+  address_type_Postal: Coding.FromStrict({
     code: "postal",
     display: "Postal",
     system: "http://hl7.org/fhir/address-type"

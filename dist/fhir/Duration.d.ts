@@ -2,27 +2,22 @@ import * as fhir from '../fhir';
 /**
  * A length of time.
  */
-export interface IDuration extends fhir.IQuantity {
-}
+export declare type IDuration = fhir.IQuantity & {};
 /**
  * A length of time.
  */
 export declare class Duration extends fhir.Quantity implements fhir.IDuration {
     /**
-     * Default constructor for Duration - initializes required elements to null.
+     * Default constructor for Duration - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Duration from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IDuration>): Duration;
+    constructor(source?: Partial<fhir.IDuration>);
     /**
      * Check if the current Duration contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Duration from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IDuration): Duration;
+    static FromStrict(source: fhir.IDuration): Duration;
 }
 //# sourceMappingURL=Duration.d.ts.map

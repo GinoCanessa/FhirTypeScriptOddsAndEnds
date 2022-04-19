@@ -3689,6 +3689,5 @@ export declare const ReferencerangeAppliestoValueSet: {
      * Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
      */
     v3_Race_OtherPacificIslander: Coding;
-    ReferencerangeAppliestoValueSet_VAL77386006: Coding;
 };
 //# sourceMappingURL=ReferencerangeAppliestoValueSet.d.ts.map

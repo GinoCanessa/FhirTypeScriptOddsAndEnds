@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.
  */
-export var EncounterDietValueSet = {
+export const EncounterDietValueSet = {
     /**
      * Excludes dairy products.
      */
-    encounter_diet_DairyFree: Coding.FactoryCreateStrict({
+    encounter_diet_DairyFree: Coding.FromStrict({
         code: "dairy-free",
         display: "Dairy Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -22,7 +21,7 @@ export var EncounterDietValueSet = {
     /**
      * Excludes ingredients containing gluten.
      */
-    encounter_diet_GlutenFree: Coding.FactoryCreateStrict({
+    encounter_diet_GlutenFree: Coding.FromStrict({
         code: "gluten-free",
         display: "Gluten Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -30,7 +29,7 @@ export var EncounterDietValueSet = {
     /**
      * Foods that conform to Islamic law.
      */
-    encounter_diet_Halal: Coding.FactoryCreateStrict({
+    encounter_diet_Halal: Coding.FromStrict({
         code: "halal",
         display: "Halal",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -38,7 +37,7 @@ export var EncounterDietValueSet = {
     /**
      * Foods that conform to Jewish dietary law.
      */
-    encounter_diet_Kosher: Coding.FactoryCreateStrict({
+    encounter_diet_Kosher: Coding.FromStrict({
         code: "kosher",
         display: "Kosher",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -46,7 +45,7 @@ export var EncounterDietValueSet = {
     /**
      * Excludes ingredients containing nuts.
      */
-    encounter_diet_NutFree: Coding.FactoryCreateStrict({
+    encounter_diet_NutFree: Coding.FromStrict({
         code: "nut-free",
         display: "Nut Free",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -54,7 +53,7 @@ export var EncounterDietValueSet = {
     /**
      * Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances.
      */
-    encounter_diet_Vegan: Coding.FactoryCreateStrict({
+    encounter_diet_Vegan: Coding.FromStrict({
         code: "vegan",
         display: "Vegan",
         system: "http://terminology.hl7.org/CodeSystem/diet"
@@ -62,7 +61,7 @@ export var EncounterDietValueSet = {
     /**
      * Food without meat, poultry or seafood.
      */
-    encounter_diet_Vegetarian: Coding.FactoryCreateStrict({
+    encounter_diet_Vegetarian: Coding.FromStrict({
         code: "vegetarian",
         display: "Vegetarian",
         system: "http://terminology.hl7.org/CodeSystem/diet"

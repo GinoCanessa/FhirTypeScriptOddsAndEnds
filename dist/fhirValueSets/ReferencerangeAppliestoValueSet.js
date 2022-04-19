@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.
  */
-export var ReferencerangeAppliestoValueSet = {
+export const ReferencerangeAppliestoValueSet = {
     /**
      * American Indian or Alaska Native
      */
-    v3_Race_AmericanIndianOrAlaskaNative: Coding.FactoryCreateStrict({
+    v3_Race_AmericanIndianOrAlaskaNative: Coding.FromStrict({
         code: "1002-5",
         display: "American Indian or Alaska Native",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -22,7 +21,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * American Indian
      */
-    v3_Race_AmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_AmericanIndian: Coding.FromStrict({
         code: "1004-1",
         display: "American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -30,7 +29,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Abenaki
      */
-    v3_Race_Abenaki: Coding.FactoryCreateStrict({
+    v3_Race_Abenaki: Coding.FromStrict({
         code: "1006-6",
         display: "Abenaki",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -38,7 +37,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Algonquian
      */
-    v3_Race_Algonquian: Coding.FactoryCreateStrict({
+    v3_Race_Algonquian: Coding.FromStrict({
         code: "1008-2",
         display: "Algonquian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -46,7 +45,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Apache
      */
-    v3_Race_Apache: Coding.FactoryCreateStrict({
+    v3_Race_Apache: Coding.FromStrict({
         code: "1010-8",
         display: "Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -54,7 +53,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chiricahua
      */
-    v3_Race_Chiricahua: Coding.FactoryCreateStrict({
+    v3_Race_Chiricahua: Coding.FromStrict({
         code: "1011-6",
         display: "Chiricahua",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -62,7 +61,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Sill Apache
      */
-    v3_Race_FortSillApache: Coding.FactoryCreateStrict({
+    v3_Race_FortSillApache: Coding.FromStrict({
         code: "1012-4",
         display: "Fort Sill Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -70,7 +69,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Jicarilla Apache
      */
-    v3_Race_JicarillaApache: Coding.FactoryCreateStrict({
+    v3_Race_JicarillaApache: Coding.FromStrict({
         code: "1013-2",
         display: "Jicarilla Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -78,7 +77,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lipan Apache
      */
-    v3_Race_LipanApache: Coding.FactoryCreateStrict({
+    v3_Race_LipanApache: Coding.FromStrict({
         code: "1014-0",
         display: "Lipan Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -86,7 +85,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mescalero Apache
      */
-    v3_Race_MescaleroApache: Coding.FactoryCreateStrict({
+    v3_Race_MescaleroApache: Coding.FromStrict({
         code: "1015-7",
         display: "Mescalero Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -94,7 +93,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Apache
      */
-    v3_Race_OklahomaApache: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaApache: Coding.FromStrict({
         code: "1016-5",
         display: "Oklahoma Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -102,7 +101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Payson Apache
      */
-    v3_Race_PaysonApache: Coding.FactoryCreateStrict({
+    v3_Race_PaysonApache: Coding.FromStrict({
         code: "1017-3",
         display: "Payson Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -110,7 +109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Carlos Apache
      */
-    v3_Race_SanCarlosApache: Coding.FactoryCreateStrict({
+    v3_Race_SanCarlosApache: Coding.FromStrict({
         code: "1018-1",
         display: "San Carlos Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -118,7 +117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * White Mountain Apache
      */
-    v3_Race_WhiteMountainApache: Coding.FactoryCreateStrict({
+    v3_Race_WhiteMountainApache: Coding.FromStrict({
         code: "1019-9",
         display: "White Mountain Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -126,7 +125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arapaho
      */
-    v3_Race_Arapaho: Coding.FactoryCreateStrict({
+    v3_Race_Arapaho: Coding.FromStrict({
         code: "1021-5",
         display: "Arapaho",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -134,7 +133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northern Arapaho
      */
-    v3_Race_NorthernArapaho: Coding.FactoryCreateStrict({
+    v3_Race_NorthernArapaho: Coding.FromStrict({
         code: "1022-3",
         display: "Northern Arapaho",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -142,7 +141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Southern Arapaho
      */
-    v3_Race_SouthernArapaho: Coding.FactoryCreateStrict({
+    v3_Race_SouthernArapaho: Coding.FromStrict({
         code: "1023-1",
         display: "Southern Arapaho",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -150,7 +149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wind River Arapaho
      */
-    v3_Race_WindRiverArapaho: Coding.FactoryCreateStrict({
+    v3_Race_WindRiverArapaho: Coding.FromStrict({
         code: "1024-9",
         display: "Wind River Arapaho",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -158,7 +157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arikara
      */
-    v3_Race_Arikara: Coding.FactoryCreateStrict({
+    v3_Race_Arikara: Coding.FromStrict({
         code: "1026-4",
         display: "Arikara",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -166,7 +165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Assiniboine
      */
-    v3_Race_Assiniboine: Coding.FactoryCreateStrict({
+    v3_Race_Assiniboine: Coding.FromStrict({
         code: "1028-0",
         display: "Assiniboine",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -174,7 +173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Assiniboine Sioux
      */
-    v3_Race_AssiniboineSioux: Coding.FactoryCreateStrict({
+    v3_Race_AssiniboineSioux: Coding.FromStrict({
         code: "1030-6",
         display: "Assiniboine Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -182,7 +181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Peck Assiniboine Sioux
      */
-    v3_Race_FortPeckAssiniboineSioux: Coding.FactoryCreateStrict({
+    v3_Race_FortPeckAssiniboineSioux: Coding.FromStrict({
         code: "1031-4",
         display: "Fort Peck Assiniboine Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -190,7 +189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bannock
      */
-    v3_Race_Bannock: Coding.FactoryCreateStrict({
+    v3_Race_Bannock: Coding.FromStrict({
         code: "1033-0",
         display: "Bannock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -198,7 +197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Blackfeet
      */
-    v3_Race_Blackfeet: Coding.FactoryCreateStrict({
+    v3_Race_Blackfeet: Coding.FromStrict({
         code: "1035-5",
         display: "Blackfeet",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -206,7 +205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Brotherton
      */
-    v3_Race_Brotherton: Coding.FactoryCreateStrict({
+    v3_Race_Brotherton: Coding.FromStrict({
         code: "1037-1",
         display: "Brotherton",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -214,7 +213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Burt Lake Band
      */
-    v3_Race_BurtLakeBand: Coding.FactoryCreateStrict({
+    v3_Race_BurtLakeBand: Coding.FromStrict({
         code: "1039-7",
         display: "Burt Lake Band",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -222,7 +221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Caddo
      */
-    v3_Race_Caddo: Coding.FactoryCreateStrict({
+    v3_Race_Caddo: Coding.FromStrict({
         code: "1041-3",
         display: "Caddo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -230,7 +229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Cado
      */
-    v3_Race_OklahomaCado: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaCado: Coding.FromStrict({
         code: "1042-1",
         display: "Oklahoma Cado",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -238,7 +237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cahuilla
      */
-    v3_Race_Cahuilla: Coding.FactoryCreateStrict({
+    v3_Race_Cahuilla: Coding.FromStrict({
         code: "1044-7",
         display: "Cahuilla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -246,7 +245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Agua Caliente Cahuilla
      */
-    v3_Race_AguaCalienteCahuilla: Coding.FactoryCreateStrict({
+    v3_Race_AguaCalienteCahuilla: Coding.FromStrict({
         code: "1045-4",
         display: "Agua Caliente Cahuilla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -254,7 +253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Augustine
      */
-    v3_Race_Augustine: Coding.FactoryCreateStrict({
+    v3_Race_Augustine: Coding.FromStrict({
         code: "1046-2",
         display: "Augustine",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -262,7 +261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cabazon
      */
-    v3_Race_Cabazon: Coding.FactoryCreateStrict({
+    v3_Race_Cabazon: Coding.FromStrict({
         code: "1047-0",
         display: "Cabazon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -270,7 +269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Los Coyotes
      */
-    v3_Race_LosCoyotes: Coding.FactoryCreateStrict({
+    v3_Race_LosCoyotes: Coding.FromStrict({
         code: "1048-8",
         display: "Los Coyotes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -278,7 +277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Morongo
      */
-    v3_Race_Morongo: Coding.FactoryCreateStrict({
+    v3_Race_Morongo: Coding.FromStrict({
         code: "1049-6",
         display: "Morongo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -286,7 +285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Rosa Cahuilla
      */
-    v3_Race_SantaRosaCahuilla: Coding.FactoryCreateStrict({
+    v3_Race_SantaRosaCahuilla: Coding.FromStrict({
         code: "1050-4",
         display: "Santa Rosa Cahuilla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -294,7 +293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Torres-Martinez
      */
-    v3_Race_TorresMartinez: Coding.FactoryCreateStrict({
+    v3_Race_TorresMartinez: Coding.FromStrict({
         code: "1051-2",
         display: "Torres-Martinez",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -302,7 +301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * California Tribes
      */
-    v3_Race_CaliforniaTribes: Coding.FactoryCreateStrict({
+    v3_Race_CaliforniaTribes: Coding.FromStrict({
         code: "1053-8",
         display: "California Tribes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -310,7 +309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cahto
      */
-    v3_Race_Cahto: Coding.FactoryCreateStrict({
+    v3_Race_Cahto: Coding.FromStrict({
         code: "1054-6",
         display: "Cahto",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -318,7 +317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chimariko
      */
-    v3_Race_Chimariko: Coding.FactoryCreateStrict({
+    v3_Race_Chimariko: Coding.FromStrict({
         code: "1055-3",
         display: "Chimariko",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -326,7 +325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coast Miwok
      */
-    v3_Race_CoastMiwok: Coding.FactoryCreateStrict({
+    v3_Race_CoastMiwok: Coding.FromStrict({
         code: "1056-1",
         display: "Coast Miwok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -334,7 +333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Digger
      */
-    v3_Race_Digger: Coding.FactoryCreateStrict({
+    v3_Race_Digger: Coding.FromStrict({
         code: "1057-9",
         display: "Digger",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -342,7 +341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kawaiisu
      */
-    v3_Race_Kawaiisu: Coding.FactoryCreateStrict({
+    v3_Race_Kawaiisu: Coding.FromStrict({
         code: "1058-7",
         display: "Kawaiisu",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -350,7 +349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kern River
      */
-    v3_Race_KernRiver: Coding.FactoryCreateStrict({
+    v3_Race_KernRiver: Coding.FromStrict({
         code: "1059-5",
         display: "Kern River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -358,7 +357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mattole
      */
-    v3_Race_Mattole: Coding.FactoryCreateStrict({
+    v3_Race_Mattole: Coding.FromStrict({
         code: "1060-3",
         display: "Mattole",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -366,7 +365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Red Wood
      */
-    v3_Race_RedWood: Coding.FactoryCreateStrict({
+    v3_Race_RedWood: Coding.FromStrict({
         code: "1061-1",
         display: "Red Wood",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -374,7 +373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Rosa
      */
-    v3_Race_SantaRosa: Coding.FactoryCreateStrict({
+    v3_Race_SantaRosa: Coding.FromStrict({
         code: "1062-9",
         display: "Santa Rosa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -382,7 +381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Takelma
      */
-    v3_Race_Takelma: Coding.FactoryCreateStrict({
+    v3_Race_Takelma: Coding.FromStrict({
         code: "1063-7",
         display: "Takelma",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -390,7 +389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wappo
      */
-    v3_Race_Wappo: Coding.FactoryCreateStrict({
+    v3_Race_Wappo: Coding.FromStrict({
         code: "1064-5",
         display: "Wappo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -398,7 +397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yana
      */
-    v3_Race_Yana: Coding.FactoryCreateStrict({
+    v3_Race_Yana: Coding.FromStrict({
         code: "1065-2",
         display: "Yana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -406,7 +405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yuki
      */
-    v3_Race_Yuki: Coding.FactoryCreateStrict({
+    v3_Race_Yuki: Coding.FromStrict({
         code: "1066-0",
         display: "Yuki",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -414,7 +413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Canadian and Latin American Indian
      */
-    v3_Race_CanadianAndLatinAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_CanadianAndLatinAmericanIndian: Coding.FromStrict({
         code: "1068-6",
         display: "Canadian and Latin American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -422,7 +421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Canadian Indian
      */
-    v3_Race_CanadianIndian: Coding.FactoryCreateStrict({
+    v3_Race_CanadianIndian: Coding.FromStrict({
         code: "1069-4",
         display: "Canadian Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -430,7 +429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Central American Indian
      */
-    v3_Race_CentralAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_CentralAmericanIndian: Coding.FromStrict({
         code: "1070-2",
         display: "Central American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -438,7 +437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * French American Indian
      */
-    v3_Race_FrenchAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_FrenchAmericanIndian: Coding.FromStrict({
         code: "1071-0",
         display: "French American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -446,7 +445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mexican American Indian
      */
-    v3_Race_MexicanAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_MexicanAmericanIndian: Coding.FromStrict({
         code: "1072-8",
         display: "Mexican American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -454,7 +453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * South American Indian
      */
-    v3_Race_SouthAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_SouthAmericanIndian: Coding.FromStrict({
         code: "1073-6",
         display: "South American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -462,7 +461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Spanish American Indian
      */
-    v3_Race_SpanishAmericanIndian: Coding.FactoryCreateStrict({
+    v3_Race_SpanishAmericanIndian: Coding.FromStrict({
         code: "1074-4",
         display: "Spanish American Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -470,7 +469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Catawba
      */
-    v3_Race_Catawba: Coding.FactoryCreateStrict({
+    v3_Race_Catawba: Coding.FromStrict({
         code: "1076-9",
         display: "Catawba",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -478,7 +477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cayuse
      */
-    v3_Race_Cayuse: Coding.FactoryCreateStrict({
+    v3_Race_Cayuse: Coding.FromStrict({
         code: "1078-5",
         display: "Cayuse",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -486,7 +485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chehalis
      */
-    v3_Race_Chehalis: Coding.FactoryCreateStrict({
+    v3_Race_Chehalis: Coding.FromStrict({
         code: "1080-1",
         display: "Chehalis",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -494,7 +493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chemakuan
      */
-    v3_Race_Chemakuan: Coding.FactoryCreateStrict({
+    v3_Race_Chemakuan: Coding.FromStrict({
         code: "1082-7",
         display: "Chemakuan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -502,7 +501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hoh
      */
-    v3_Race_Hoh: Coding.FactoryCreateStrict({
+    v3_Race_Hoh: Coding.FromStrict({
         code: "1083-5",
         display: "Hoh",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -510,7 +509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Quileute
      */
-    v3_Race_Quileute: Coding.FactoryCreateStrict({
+    v3_Race_Quileute: Coding.FromStrict({
         code: "1084-3",
         display: "Quileute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -518,7 +517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chemehuevi
      */
-    v3_Race_Chemehuevi: Coding.FactoryCreateStrict({
+    v3_Race_Chemehuevi: Coding.FromStrict({
         code: "1086-8",
         display: "Chemehuevi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -526,7 +525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cherokee
      */
-    v3_Race_Cherokee: Coding.FactoryCreateStrict({
+    v3_Race_Cherokee: Coding.FromStrict({
         code: "1088-4",
         display: "Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -534,7 +533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cherokee Alabama
      */
-    v3_Race_CherokeeAlabama: Coding.FactoryCreateStrict({
+    v3_Race_CherokeeAlabama: Coding.FromStrict({
         code: "1089-2",
         display: "Cherokee Alabama",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -542,7 +541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cherokees of Northeast Alabama
      */
-    v3_Race_CherokeesOfNortheastAlabama: Coding.FactoryCreateStrict({
+    v3_Race_CherokeesOfNortheastAlabama: Coding.FromStrict({
         code: "1090-0",
         display: "Cherokees of Northeast Alabama",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -550,7 +549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cherokees of Southeast Alabama
      */
-    v3_Race_CherokeesOfSoutheastAlabama: Coding.FactoryCreateStrict({
+    v3_Race_CherokeesOfSoutheastAlabama: Coding.FromStrict({
         code: "1091-8",
         display: "Cherokees of Southeast Alabama",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -558,7 +557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Cherokee
      */
-    v3_Race_EasternCherokee: Coding.FactoryCreateStrict({
+    v3_Race_EasternCherokee: Coding.FromStrict({
         code: "1092-6",
         display: "Eastern Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -566,7 +565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Echota Cherokee
      */
-    v3_Race_EchotaCherokee: Coding.FactoryCreateStrict({
+    v3_Race_EchotaCherokee: Coding.FromStrict({
         code: "1093-4",
         display: "Echota Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -574,7 +573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Etowah Cherokee
      */
-    v3_Race_EtowahCherokee: Coding.FactoryCreateStrict({
+    v3_Race_EtowahCherokee: Coding.FromStrict({
         code: "1094-2",
         display: "Etowah Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -582,7 +581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northern Cherokee
      */
-    v3_Race_NorthernCherokee: Coding.FactoryCreateStrict({
+    v3_Race_NorthernCherokee: Coding.FromStrict({
         code: "1095-9",
         display: "Northern Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -590,7 +589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tuscola
      */
-    v3_Race_Tuscola: Coding.FactoryCreateStrict({
+    v3_Race_Tuscola: Coding.FromStrict({
         code: "1096-7",
         display: "Tuscola",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -598,7 +597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * United Keetowah Band of Cherokee
      */
-    v3_Race_UnitedKeetowahBandOfCherokee: Coding.FactoryCreateStrict({
+    v3_Race_UnitedKeetowahBandOfCherokee: Coding.FromStrict({
         code: "1097-5",
         display: "United Keetowah Band of Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -606,7 +605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Western Cherokee
      */
-    v3_Race_WesternCherokee: Coding.FactoryCreateStrict({
+    v3_Race_WesternCherokee: Coding.FromStrict({
         code: "1098-3",
         display: "Western Cherokee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -614,7 +613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cherokee Shawnee
      */
-    v3_Race_CherokeeShawnee: Coding.FactoryCreateStrict({
+    v3_Race_CherokeeShawnee: Coding.FromStrict({
         code: "1100-7",
         display: "Cherokee Shawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -622,7 +621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cheyenne
      */
-    v3_Race_Cheyenne: Coding.FactoryCreateStrict({
+    v3_Race_Cheyenne: Coding.FromStrict({
         code: "1102-3",
         display: "Cheyenne",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -630,7 +629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northern Cheyenne
      */
-    v3_Race_NorthernCheyenne: Coding.FactoryCreateStrict({
+    v3_Race_NorthernCheyenne: Coding.FromStrict({
         code: "1103-1",
         display: "Northern Cheyenne",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -638,7 +637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Southern Cheyenne
      */
-    v3_Race_SouthernCheyenne: Coding.FactoryCreateStrict({
+    v3_Race_SouthernCheyenne: Coding.FromStrict({
         code: "1104-9",
         display: "Southern Cheyenne",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -646,7 +645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cheyenne-Arapaho
      */
-    v3_Race_CheyenneArapaho: Coding.FactoryCreateStrict({
+    v3_Race_CheyenneArapaho: Coding.FromStrict({
         code: "1106-4",
         display: "Cheyenne-Arapaho",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -654,7 +653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chickahominy
      */
-    v3_Race_Chickahominy: Coding.FactoryCreateStrict({
+    v3_Race_Chickahominy: Coding.FromStrict({
         code: "1108-0",
         display: "Chickahominy",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -662,7 +661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Chickahominy
      */
-    v3_Race_EasternChickahominy: Coding.FactoryCreateStrict({
+    v3_Race_EasternChickahominy: Coding.FromStrict({
         code: "1109-8",
         display: "Eastern Chickahominy",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -670,7 +669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Western Chickahominy
      */
-    v3_Race_WesternChickahominy: Coding.FactoryCreateStrict({
+    v3_Race_WesternChickahominy: Coding.FromStrict({
         code: "1110-6",
         display: "Western Chickahominy",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -678,7 +677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chickasaw
      */
-    v3_Race_Chickasaw: Coding.FactoryCreateStrict({
+    v3_Race_Chickasaw: Coding.FromStrict({
         code: "1112-2",
         display: "Chickasaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -686,7 +685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chinook
      */
-    v3_Race_Chinook: Coding.FactoryCreateStrict({
+    v3_Race_Chinook: Coding.FromStrict({
         code: "1114-8",
         display: "Chinook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -694,7 +693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Clatsop
      */
-    v3_Race_Clatsop: Coding.FactoryCreateStrict({
+    v3_Race_Clatsop: Coding.FromStrict({
         code: "1115-5",
         display: "Clatsop",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -702,7 +701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Columbia River Chinook
      */
-    v3_Race_ColumbiaRiverChinook: Coding.FactoryCreateStrict({
+    v3_Race_ColumbiaRiverChinook: Coding.FromStrict({
         code: "1116-3",
         display: "Columbia River Chinook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -710,7 +709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kathlamet
      */
-    v3_Race_Kathlamet: Coding.FactoryCreateStrict({
+    v3_Race_Kathlamet: Coding.FromStrict({
         code: "1117-1",
         display: "Kathlamet",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -718,7 +717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Upper Chinook
      */
-    v3_Race_UpperChinook: Coding.FactoryCreateStrict({
+    v3_Race_UpperChinook: Coding.FromStrict({
         code: "1118-9",
         display: "Upper Chinook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -726,7 +725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wakiakum Chinook
      */
-    v3_Race_WakiakumChinook: Coding.FactoryCreateStrict({
+    v3_Race_WakiakumChinook: Coding.FromStrict({
         code: "1119-7",
         display: "Wakiakum Chinook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -734,7 +733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Willapa Chinook
      */
-    v3_Race_WillapaChinook: Coding.FactoryCreateStrict({
+    v3_Race_WillapaChinook: Coding.FromStrict({
         code: "1120-5",
         display: "Willapa Chinook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -742,7 +741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wishram
      */
-    v3_Race_Wishram: Coding.FactoryCreateStrict({
+    v3_Race_Wishram: Coding.FromStrict({
         code: "1121-3",
         display: "Wishram",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -750,7 +749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chippewa
      */
-    v3_Race_Chippewa: Coding.FactoryCreateStrict({
+    v3_Race_Chippewa: Coding.FromStrict({
         code: "1123-9",
         display: "Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -758,7 +757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bad River
      */
-    v3_Race_BadRiver: Coding.FactoryCreateStrict({
+    v3_Race_BadRiver: Coding.FromStrict({
         code: "1124-7",
         display: "Bad River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -766,7 +765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bay Mills Chippewa
      */
-    v3_Race_BayMillsChippewa: Coding.FactoryCreateStrict({
+    v3_Race_BayMillsChippewa: Coding.FromStrict({
         code: "1125-4",
         display: "Bay Mills Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -774,7 +773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bois Forte
      */
-    v3_Race_BoisForte: Coding.FactoryCreateStrict({
+    v3_Race_BoisForte: Coding.FromStrict({
         code: "1126-2",
         display: "Bois Forte",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -782,7 +781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Burt Lake Chippewa
      */
-    v3_Race_BurtLakeChippewa: Coding.FactoryCreateStrict({
+    v3_Race_BurtLakeChippewa: Coding.FromStrict({
         code: "1127-0",
         display: "Burt Lake Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -790,7 +789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fond du Lac
      */
-    v3_Race_FondDuLac: Coding.FactoryCreateStrict({
+    v3_Race_FondDuLac: Coding.FromStrict({
         code: "1128-8",
         display: "Fond du Lac",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -798,7 +797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Grand Portage
      */
-    v3_Race_GrandPortage: Coding.FactoryCreateStrict({
+    v3_Race_GrandPortage: Coding.FromStrict({
         code: "1129-6",
         display: "Grand Portage",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -806,7 +805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Grand Traverse Band of Ottawa-Chippewa
      */
-    v3_Race_GrandTraverseBandOfOttawaChippewa: Coding.FactoryCreateStrict({
+    v3_Race_GrandTraverseBandOfOttawaChippewa: Coding.FromStrict({
         code: "1130-4",
         display: "Grand Traverse Band of Ottawa-Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -814,7 +813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Keweenaw
      */
-    v3_Race_Keweenaw: Coding.FactoryCreateStrict({
+    v3_Race_Keweenaw: Coding.FromStrict({
         code: "1131-2",
         display: "Keweenaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -822,7 +821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lac Courte Oreilles
      */
-    v3_Race_LacCourteOreilles: Coding.FactoryCreateStrict({
+    v3_Race_LacCourteOreilles: Coding.FromStrict({
         code: "1132-0",
         display: "Lac Courte Oreilles",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -830,7 +829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lac du Flambeau
      */
-    v3_Race_LacDuFlambeau: Coding.FactoryCreateStrict({
+    v3_Race_LacDuFlambeau: Coding.FromStrict({
         code: "1133-8",
         display: "Lac du Flambeau",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -838,7 +837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lac Vieux Desert Chippewa
      */
-    v3_Race_LacVieuxDesertChippewa: Coding.FactoryCreateStrict({
+    v3_Race_LacVieuxDesertChippewa: Coding.FromStrict({
         code: "1134-6",
         display: "Lac Vieux Desert Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -846,7 +845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lake Superior
      */
-    v3_Race_LakeSuperior: Coding.FactoryCreateStrict({
+    v3_Race_LakeSuperior: Coding.FromStrict({
         code: "1135-3",
         display: "Lake Superior",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -854,7 +853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Leech Lake
      */
-    v3_Race_LeechLake: Coding.FactoryCreateStrict({
+    v3_Race_LeechLake: Coding.FromStrict({
         code: "1136-1",
         display: "Leech Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -862,7 +861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Little Shell Chippewa
      */
-    v3_Race_LittleShellChippewa: Coding.FactoryCreateStrict({
+    v3_Race_LittleShellChippewa: Coding.FromStrict({
         code: "1137-9",
         display: "Little Shell Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -870,7 +869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mille Lacs
      */
-    v3_Race_MilleLacs: Coding.FactoryCreateStrict({
+    v3_Race_MilleLacs: Coding.FromStrict({
         code: "1138-7",
         display: "Mille Lacs",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -878,7 +877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Minnesota Chippewa
      */
-    v3_Race_MinnesotaChippewa: Coding.FactoryCreateStrict({
+    v3_Race_MinnesotaChippewa: Coding.FromStrict({
         code: "1139-5",
         display: "Minnesota Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -886,7 +885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ontonagon
      */
-    v3_Race_Ontonagon: Coding.FactoryCreateStrict({
+    v3_Race_Ontonagon: Coding.FromStrict({
         code: "1140-3",
         display: "Ontonagon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -894,7 +893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Red Cliff Chippewa
      */
-    v3_Race_RedCliffChippewa: Coding.FactoryCreateStrict({
+    v3_Race_RedCliffChippewa: Coding.FromStrict({
         code: "1141-1",
         display: "Red Cliff Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -902,7 +901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Red Lake Chippewa
      */
-    v3_Race_RedLakeChippewa: Coding.FactoryCreateStrict({
+    v3_Race_RedLakeChippewa: Coding.FromStrict({
         code: "1142-9",
         display: "Red Lake Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -910,7 +909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Saginaw Chippewa
      */
-    v3_Race_SaginawChippewa: Coding.FactoryCreateStrict({
+    v3_Race_SaginawChippewa: Coding.FromStrict({
         code: "1143-7",
         display: "Saginaw Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -918,7 +917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * St. Croix Chippewa
      */
-    v3_Race_StCroixChippewa: Coding.FactoryCreateStrict({
+    v3_Race_StCroixChippewa: Coding.FromStrict({
         code: "1144-5",
         display: "St. Croix Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -926,7 +925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sault Ste. Marie Chippewa
      */
-    v3_Race_SaultSteMarieChippewa: Coding.FactoryCreateStrict({
+    v3_Race_SaultSteMarieChippewa: Coding.FromStrict({
         code: "1145-2",
         display: "Sault Ste. Marie Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -934,7 +933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sokoagon Chippewa
      */
-    v3_Race_SokoagonChippewa: Coding.FactoryCreateStrict({
+    v3_Race_SokoagonChippewa: Coding.FromStrict({
         code: "1146-0",
         display: "Sokoagon Chippewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -942,7 +941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Turtle Mountain
      */
-    v3_Race_TurtleMountain: Coding.FactoryCreateStrict({
+    v3_Race_TurtleMountain: Coding.FromStrict({
         code: "1147-8",
         display: "Turtle Mountain",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -950,7 +949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * White Earth
      */
-    v3_Race_WhiteEarth: Coding.FactoryCreateStrict({
+    v3_Race_WhiteEarth: Coding.FromStrict({
         code: "1148-6",
         display: "White Earth",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -958,7 +957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chippewa Cree
      */
-    v3_Race_ChippewaCree: Coding.FactoryCreateStrict({
+    v3_Race_ChippewaCree: Coding.FromStrict({
         code: "1150-2",
         display: "Chippewa Cree",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -966,7 +965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Rocky Boy's Chippewa Cree
      */
-    v3_Race_RockyBoyQuoteSChippewaCree: Coding.FactoryCreateStrict({
+    v3_Race_RockyBoyQuoteSChippewaCree: Coding.FromStrict({
         code: "1151-0",
         display: "Rocky Boy's Chippewa Cree",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -974,7 +973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chitimacha
      */
-    v3_Race_Chitimacha: Coding.FactoryCreateStrict({
+    v3_Race_Chitimacha: Coding.FromStrict({
         code: "1153-6",
         display: "Chitimacha",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -982,7 +981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Choctaw
      */
-    v3_Race_Choctaw: Coding.FactoryCreateStrict({
+    v3_Race_Choctaw: Coding.FromStrict({
         code: "1155-1",
         display: "Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -990,7 +989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Clifton Choctaw
      */
-    v3_Race_CliftonChoctaw: Coding.FactoryCreateStrict({
+    v3_Race_CliftonChoctaw: Coding.FromStrict({
         code: "1156-9",
         display: "Clifton Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -998,7 +997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Jena Choctaw
      */
-    v3_Race_JenaChoctaw: Coding.FactoryCreateStrict({
+    v3_Race_JenaChoctaw: Coding.FromStrict({
         code: "1157-7",
         display: "Jena Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1006,7 +1005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mississippi Choctaw
      */
-    v3_Race_MississippiChoctaw: Coding.FactoryCreateStrict({
+    v3_Race_MississippiChoctaw: Coding.FromStrict({
         code: "1158-5",
         display: "Mississippi Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1014,7 +1013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mowa Band of Choctaw
      */
-    v3_Race_MowaBandOfChoctaw: Coding.FactoryCreateStrict({
+    v3_Race_MowaBandOfChoctaw: Coding.FromStrict({
         code: "1159-3",
         display: "Mowa Band of Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1022,7 +1021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Choctaw
      */
-    v3_Race_OklahomaChoctaw: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaChoctaw: Coding.FromStrict({
         code: "1160-1",
         display: "Oklahoma Choctaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1030,7 +1029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chumash
      */
-    v3_Race_Chumash: Coding.FactoryCreateStrict({
+    v3_Race_Chumash: Coding.FromStrict({
         code: "1162-7",
         display: "Chumash",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1038,7 +1037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Ynez
      */
-    v3_Race_SantaYnez: Coding.FactoryCreateStrict({
+    v3_Race_SantaYnez: Coding.FromStrict({
         code: "1163-5",
         display: "Santa Ynez",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1046,7 +1045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Clear Lake
      */
-    v3_Race_ClearLake: Coding.FactoryCreateStrict({
+    v3_Race_ClearLake: Coding.FromStrict({
         code: "1165-0",
         display: "Clear Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1054,7 +1053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coeur D'Alene
      */
-    v3_Race_CoeurDQuoteAlene: Coding.FactoryCreateStrict({
+    v3_Race_CoeurDQuoteAlene: Coding.FromStrict({
         code: "1167-6",
         display: "Coeur D'Alene",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1062,7 +1061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coharie
      */
-    v3_Race_Coharie: Coding.FactoryCreateStrict({
+    v3_Race_Coharie: Coding.FromStrict({
         code: "1169-2",
         display: "Coharie",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1070,7 +1069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Colorado River
      */
-    v3_Race_ColoradoRiver: Coding.FactoryCreateStrict({
+    v3_Race_ColoradoRiver: Coding.FromStrict({
         code: "1171-8",
         display: "Colorado River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1078,7 +1077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Colville
      */
-    v3_Race_Colville: Coding.FactoryCreateStrict({
+    v3_Race_Colville: Coding.FromStrict({
         code: "1173-4",
         display: "Colville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1086,7 +1085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Comanche
      */
-    v3_Race_Comanche: Coding.FactoryCreateStrict({
+    v3_Race_Comanche: Coding.FromStrict({
         code: "1175-9",
         display: "Comanche",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1094,7 +1093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Comanche
      */
-    v3_Race_OklahomaComanche: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaComanche: Coding.FromStrict({
         code: "1176-7",
         display: "Oklahoma Comanche",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1102,7 +1101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coos, Lower Umpqua, Siuslaw
      */
-    v3_Race_CoosLowerUmpquaSiuslaw: Coding.FactoryCreateStrict({
+    v3_Race_CoosLowerUmpquaSiuslaw: Coding.FromStrict({
         code: "1178-3",
         display: "Coos, Lower Umpqua, Siuslaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1110,7 +1109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coos
      */
-    v3_Race_Coos: Coding.FactoryCreateStrict({
+    v3_Race_Coos: Coding.FromStrict({
         code: "1180-9",
         display: "Coos",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1118,7 +1117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coquilles
      */
-    v3_Race_Coquilles: Coding.FactoryCreateStrict({
+    v3_Race_Coquilles: Coding.FromStrict({
         code: "1182-5",
         display: "Coquilles",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1126,7 +1125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Costanoan
      */
-    v3_Race_Costanoan: Coding.FactoryCreateStrict({
+    v3_Race_Costanoan: Coding.FromStrict({
         code: "1184-1",
         display: "Costanoan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1134,7 +1133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coushatta
      */
-    v3_Race_Coushatta: Coding.FactoryCreateStrict({
+    v3_Race_Coushatta: Coding.FromStrict({
         code: "1186-6",
         display: "Coushatta",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1142,7 +1141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alabama Coushatta
      */
-    v3_Race_AlabamaCoushatta: Coding.FactoryCreateStrict({
+    v3_Race_AlabamaCoushatta: Coding.FromStrict({
         code: "1187-4",
         display: "Alabama Coushatta",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1150,7 +1149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cowlitz
      */
-    v3_Race_Cowlitz: Coding.FactoryCreateStrict({
+    v3_Race_Cowlitz: Coding.FromStrict({
         code: "1189-0",
         display: "Cowlitz",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1158,7 +1157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cree
      */
-    v3_Race_Cree: Coding.FactoryCreateStrict({
+    v3_Race_Cree: Coding.FromStrict({
         code: "1191-6",
         display: "Cree",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1166,7 +1165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Creek
      */
-    v3_Race_Creek: Coding.FactoryCreateStrict({
+    v3_Race_Creek: Coding.FromStrict({
         code: "1193-2",
         display: "Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1174,7 +1173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alabama Creek
      */
-    v3_Race_AlabamaCreek: Coding.FactoryCreateStrict({
+    v3_Race_AlabamaCreek: Coding.FromStrict({
         code: "1194-0",
         display: "Alabama Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1182,7 +1181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alabama Quassarte
      */
-    v3_Race_AlabamaQuassarte: Coding.FactoryCreateStrict({
+    v3_Race_AlabamaQuassarte: Coding.FromStrict({
         code: "1195-7",
         display: "Alabama Quassarte",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1190,7 +1189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Creek
      */
-    v3_Race_EasternCreek: Coding.FactoryCreateStrict({
+    v3_Race_EasternCreek: Coding.FromStrict({
         code: "1196-5",
         display: "Eastern Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1198,7 +1197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Muscogee
      */
-    v3_Race_EasternMuscogee: Coding.FactoryCreateStrict({
+    v3_Race_EasternMuscogee: Coding.FromStrict({
         code: "1197-3",
         display: "Eastern Muscogee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1206,7 +1205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kialegee
      */
-    v3_Race_Kialegee: Coding.FactoryCreateStrict({
+    v3_Race_Kialegee: Coding.FromStrict({
         code: "1198-1",
         display: "Kialegee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1214,7 +1213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Muscogee
      */
-    v3_Race_LowerMuscogee: Coding.FactoryCreateStrict({
+    v3_Race_LowerMuscogee: Coding.FromStrict({
         code: "1199-9",
         display: "Lower Muscogee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1222,7 +1221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Machis Lower Creek Indian
      */
-    v3_Race_MachisLowerCreekIndian: Coding.FactoryCreateStrict({
+    v3_Race_MachisLowerCreekIndian: Coding.FromStrict({
         code: "1200-5",
         display: "Machis Lower Creek Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1230,7 +1229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Poarch Band
      */
-    v3_Race_PoarchBand: Coding.FactoryCreateStrict({
+    v3_Race_PoarchBand: Coding.FromStrict({
         code: "1201-3",
         display: "Poarch Band",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1238,7 +1237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Principal Creek Indian Nation
      */
-    v3_Race_PrincipalCreekIndianNation: Coding.FactoryCreateStrict({
+    v3_Race_PrincipalCreekIndianNation: Coding.FromStrict({
         code: "1202-1",
         display: "Principal Creek Indian Nation",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1246,7 +1245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Star Clan of Muscogee Creeks
      */
-    v3_Race_StarClanOfMuscogeeCreeks: Coding.FactoryCreateStrict({
+    v3_Race_StarClanOfMuscogeeCreeks: Coding.FromStrict({
         code: "1203-9",
         display: "Star Clan of Muscogee Creeks",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1254,7 +1253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Thlopthlocco
      */
-    v3_Race_Thlopthlocco: Coding.FactoryCreateStrict({
+    v3_Race_Thlopthlocco: Coding.FromStrict({
         code: "1204-7",
         display: "Thlopthlocco",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1262,7 +1261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tuckabachee
      */
-    v3_Race_Tuckabachee: Coding.FactoryCreateStrict({
+    v3_Race_Tuckabachee: Coding.FromStrict({
         code: "1205-4",
         display: "Tuckabachee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1270,7 +1269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Croatan
      */
-    v3_Race_Croatan: Coding.FactoryCreateStrict({
+    v3_Race_Croatan: Coding.FromStrict({
         code: "1207-0",
         display: "Croatan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1278,7 +1277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Crow
      */
-    v3_Race_Crow: Coding.FactoryCreateStrict({
+    v3_Race_Crow: Coding.FromStrict({
         code: "1209-6",
         display: "Crow",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1286,7 +1285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cupeno
      */
-    v3_Race_Cupeno: Coding.FactoryCreateStrict({
+    v3_Race_Cupeno: Coding.FromStrict({
         code: "1211-2",
         display: "Cupeno",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1294,7 +1293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Agua Caliente
      */
-    v3_Race_AguaCaliente: Coding.FactoryCreateStrict({
+    v3_Race_AguaCaliente: Coding.FromStrict({
         code: "1212-0",
         display: "Agua Caliente",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1302,7 +1301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Delaware
      */
-    v3_Race_Delaware: Coding.FactoryCreateStrict({
+    v3_Race_Delaware: Coding.FromStrict({
         code: "1214-6",
         display: "Delaware",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1310,7 +1309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Delaware
      */
-    v3_Race_EasternDelaware: Coding.FactoryCreateStrict({
+    v3_Race_EasternDelaware: Coding.FromStrict({
         code: "1215-3",
         display: "Eastern Delaware",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1318,7 +1317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lenni-Lenape
      */
-    v3_Race_LenniLenape: Coding.FactoryCreateStrict({
+    v3_Race_LenniLenape: Coding.FromStrict({
         code: "1216-1",
         display: "Lenni-Lenape",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1326,7 +1325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Munsee
      */
-    v3_Race_Munsee: Coding.FactoryCreateStrict({
+    v3_Race_Munsee: Coding.FromStrict({
         code: "1217-9",
         display: "Munsee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1334,7 +1333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Delaware
      */
-    v3_Race_OklahomaDelaware: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaDelaware: Coding.FromStrict({
         code: "1218-7",
         display: "Oklahoma Delaware",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1342,7 +1341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Rampough Mountain
      */
-    v3_Race_RampoughMountain: Coding.FactoryCreateStrict({
+    v3_Race_RampoughMountain: Coding.FromStrict({
         code: "1219-5",
         display: "Rampough Mountain",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1350,7 +1349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sand Hill
      */
-    v3_Race_SandHill: Coding.FactoryCreateStrict({
+    v3_Race_SandHill: Coding.FromStrict({
         code: "1220-3",
         display: "Sand Hill",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1358,7 +1357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Diegueno
      */
-    v3_Race_Diegueno: Coding.FactoryCreateStrict({
+    v3_Race_Diegueno: Coding.FromStrict({
         code: "1222-9",
         display: "Diegueno",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1366,7 +1365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Campo
      */
-    v3_Race_Campo: Coding.FactoryCreateStrict({
+    v3_Race_Campo: Coding.FromStrict({
         code: "1223-7",
         display: "Campo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1374,7 +1373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Capitan Grande
      */
-    v3_Race_CapitanGrande: Coding.FactoryCreateStrict({
+    v3_Race_CapitanGrande: Coding.FromStrict({
         code: "1224-5",
         display: "Capitan Grande",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1382,7 +1381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cuyapaipe
      */
-    v3_Race_Cuyapaipe: Coding.FactoryCreateStrict({
+    v3_Race_Cuyapaipe: Coding.FromStrict({
         code: "1225-2",
         display: "Cuyapaipe",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1390,7 +1389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * La Posta
      */
-    v3_Race_LaPosta: Coding.FactoryCreateStrict({
+    v3_Race_LaPosta: Coding.FromStrict({
         code: "1226-0",
         display: "La Posta",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1398,7 +1397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Manzanita
      */
-    v3_Race_Manzanita: Coding.FactoryCreateStrict({
+    v3_Race_Manzanita: Coding.FromStrict({
         code: "1227-8",
         display: "Manzanita",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1406,7 +1405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mesa Grande
      */
-    v3_Race_MesaGrande: Coding.FactoryCreateStrict({
+    v3_Race_MesaGrande: Coding.FromStrict({
         code: "1228-6",
         display: "Mesa Grande",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1414,7 +1413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Pasqual
      */
-    v3_Race_SanPasqual: Coding.FactoryCreateStrict({
+    v3_Race_SanPasqual: Coding.FromStrict({
         code: "1229-4",
         display: "San Pasqual",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1422,7 +1421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Ysabel
      */
-    v3_Race_SantaYsabel: Coding.FactoryCreateStrict({
+    v3_Race_SantaYsabel: Coding.FromStrict({
         code: "1230-2",
         display: "Santa Ysabel",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1430,7 +1429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sycuan
      */
-    v3_Race_Sycuan: Coding.FactoryCreateStrict({
+    v3_Race_Sycuan: Coding.FromStrict({
         code: "1231-0",
         display: "Sycuan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1438,7 +1437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Tribes
      */
-    v3_Race_EasternTribes: Coding.FactoryCreateStrict({
+    v3_Race_EasternTribes: Coding.FromStrict({
         code: "1233-6",
         display: "Eastern Tribes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1446,7 +1445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Attacapa
      */
-    v3_Race_Attacapa: Coding.FactoryCreateStrict({
+    v3_Race_Attacapa: Coding.FromStrict({
         code: "1234-4",
         display: "Attacapa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1454,7 +1453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Biloxi
      */
-    v3_Race_Biloxi: Coding.FactoryCreateStrict({
+    v3_Race_Biloxi: Coding.FromStrict({
         code: "1235-1",
         display: "Biloxi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1462,7 +1461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Georgetown
      */
-    v3_Race_Georgetown: Coding.FactoryCreateStrict({
+    v3_Race_Georgetown: Coding.FromStrict({
         code: "1236-9",
         display: "Georgetown",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1470,7 +1469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Moor
      */
-    v3_Race_Moor: Coding.FactoryCreateStrict({
+    v3_Race_Moor: Coding.FromStrict({
         code: "1237-7",
         display: "Moor",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1478,7 +1477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nansemond
      */
-    v3_Race_Nansemond: Coding.FactoryCreateStrict({
+    v3_Race_Nansemond: Coding.FromStrict({
         code: "1238-5",
         display: "Nansemond",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1486,7 +1485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Natchez
      */
-    v3_Race_Natchez: Coding.FactoryCreateStrict({
+    v3_Race_Natchez: Coding.FromStrict({
         code: "1239-3",
         display: "Natchez",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1494,7 +1493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nausu Waiwash
      */
-    v3_Race_NausuWaiwash: Coding.FactoryCreateStrict({
+    v3_Race_NausuWaiwash: Coding.FromStrict({
         code: "1240-1",
         display: "Nausu Waiwash",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1502,7 +1501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nipmuc
      */
-    v3_Race_Nipmuc: Coding.FactoryCreateStrict({
+    v3_Race_Nipmuc: Coding.FromStrict({
         code: "1241-9",
         display: "Nipmuc",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1510,7 +1509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Paugussett
      */
-    v3_Race_Paugussett: Coding.FactoryCreateStrict({
+    v3_Race_Paugussett: Coding.FromStrict({
         code: "1242-7",
         display: "Paugussett",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1518,7 +1517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pocomoke Acohonock
      */
-    v3_Race_PocomokeAcohonock: Coding.FactoryCreateStrict({
+    v3_Race_PocomokeAcohonock: Coding.FromStrict({
         code: "1243-5",
         display: "Pocomoke Acohonock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1526,7 +1525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Southeastern Indians
      */
-    v3_Race_SoutheasternIndians: Coding.FactoryCreateStrict({
+    v3_Race_SoutheasternIndians: Coding.FromStrict({
         code: "1244-3",
         display: "Southeastern Indians",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1534,7 +1533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Susquehanock
      */
-    v3_Race_Susquehanock: Coding.FactoryCreateStrict({
+    v3_Race_Susquehanock: Coding.FromStrict({
         code: "1245-0",
         display: "Susquehanock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1542,7 +1541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tunica Biloxi
      */
-    v3_Race_TunicaBiloxi: Coding.FactoryCreateStrict({
+    v3_Race_TunicaBiloxi: Coding.FromStrict({
         code: "1246-8",
         display: "Tunica Biloxi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1550,7 +1549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Waccamaw-Siousan
      */
-    v3_Race_WaccamawSiousan: Coding.FactoryCreateStrict({
+    v3_Race_WaccamawSiousan: Coding.FromStrict({
         code: "1247-6",
         display: "Waccamaw-Siousan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1558,7 +1557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wicomico
      */
-    v3_Race_Wicomico: Coding.FactoryCreateStrict({
+    v3_Race_Wicomico: Coding.FromStrict({
         code: "1248-4",
         display: "Wicomico",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1566,7 +1565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Esselen
      */
-    v3_Race_Esselen: Coding.FactoryCreateStrict({
+    v3_Race_Esselen: Coding.FromStrict({
         code: "1250-0",
         display: "Esselen",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1574,7 +1573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Belknap
      */
-    v3_Race_FortBelknap: Coding.FactoryCreateStrict({
+    v3_Race_FortBelknap: Coding.FromStrict({
         code: "1252-6",
         display: "Fort Belknap",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1582,7 +1581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Berthold
      */
-    v3_Race_FortBerthold: Coding.FactoryCreateStrict({
+    v3_Race_FortBerthold: Coding.FromStrict({
         code: "1254-2",
         display: "Fort Berthold",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1590,7 +1589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Mcdowell
      */
-    v3_Race_FortMcdowell: Coding.FactoryCreateStrict({
+    v3_Race_FortMcdowell: Coding.FromStrict({
         code: "1256-7",
         display: "Fort Mcdowell",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1598,7 +1597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Hall
      */
-    v3_Race_FortHall: Coding.FactoryCreateStrict({
+    v3_Race_FortHall: Coding.FromStrict({
         code: "1258-3",
         display: "Fort Hall",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1606,7 +1605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gabrieleno
      */
-    v3_Race_Gabrieleno: Coding.FactoryCreateStrict({
+    v3_Race_Gabrieleno: Coding.FromStrict({
         code: "1260-9",
         display: "Gabrieleno",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1614,7 +1613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Grand Ronde
      */
-    v3_Race_GrandRonde: Coding.FactoryCreateStrict({
+    v3_Race_GrandRonde: Coding.FromStrict({
         code: "1262-5",
         display: "Grand Ronde",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1622,7 +1621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gros Ventres
      */
-    v3_Race_GrosVentres: Coding.FactoryCreateStrict({
+    v3_Race_GrosVentres: Coding.FromStrict({
         code: "1264-1",
         display: "Gros Ventres",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1630,7 +1629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Atsina
      */
-    v3_Race_Atsina: Coding.FactoryCreateStrict({
+    v3_Race_Atsina: Coding.FromStrict({
         code: "1265-8",
         display: "Atsina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1638,7 +1637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Haliwa
      */
-    v3_Race_Haliwa: Coding.FactoryCreateStrict({
+    v3_Race_Haliwa: Coding.FromStrict({
         code: "1267-4",
         display: "Haliwa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1646,7 +1645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hidatsa
      */
-    v3_Race_Hidatsa: Coding.FactoryCreateStrict({
+    v3_Race_Hidatsa: Coding.FromStrict({
         code: "1269-0",
         display: "Hidatsa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1654,7 +1653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hoopa
      */
-    v3_Race_Hoopa: Coding.FactoryCreateStrict({
+    v3_Race_Hoopa: Coding.FromStrict({
         code: "1271-6",
         display: "Hoopa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1662,7 +1661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Trinity
      */
-    v3_Race_Trinity: Coding.FactoryCreateStrict({
+    v3_Race_Trinity: Coding.FromStrict({
         code: "1272-4",
         display: "Trinity",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1670,7 +1669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Whilkut
      */
-    v3_Race_Whilkut: Coding.FactoryCreateStrict({
+    v3_Race_Whilkut: Coding.FromStrict({
         code: "1273-2",
         display: "Whilkut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1678,7 +1677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hoopa Extension
      */
-    v3_Race_HoopaExtension: Coding.FactoryCreateStrict({
+    v3_Race_HoopaExtension: Coding.FromStrict({
         code: "1275-7",
         display: "Hoopa Extension",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1686,7 +1685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Houma
      */
-    v3_Race_Houma: Coding.FactoryCreateStrict({
+    v3_Race_Houma: Coding.FromStrict({
         code: "1277-3",
         display: "Houma",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1694,7 +1693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Inaja-Cosmit
      */
-    v3_Race_InajaCosmit: Coding.FactoryCreateStrict({
+    v3_Race_InajaCosmit: Coding.FromStrict({
         code: "1279-9",
         display: "Inaja-Cosmit",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1702,7 +1701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iowa
      */
-    v3_Race_Iowa: Coding.FactoryCreateStrict({
+    v3_Race_Iowa: Coding.FromStrict({
         code: "1281-5",
         display: "Iowa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1710,7 +1709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iowa of Kansas-Nebraska
      */
-    v3_Race_IowaOfKansasNebraska: Coding.FactoryCreateStrict({
+    v3_Race_IowaOfKansasNebraska: Coding.FromStrict({
         code: "1282-3",
         display: "Iowa of Kansas-Nebraska",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1718,7 +1717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iowa of Oklahoma
      */
-    v3_Race_IowaOfOklahoma: Coding.FactoryCreateStrict({
+    v3_Race_IowaOfOklahoma: Coding.FromStrict({
         code: "1283-1",
         display: "Iowa of Oklahoma",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1726,7 +1725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iroquois
      */
-    v3_Race_Iroquois: Coding.FactoryCreateStrict({
+    v3_Race_Iroquois: Coding.FromStrict({
         code: "1285-6",
         display: "Iroquois",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1734,7 +1733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cayuga
      */
-    v3_Race_Cayuga: Coding.FactoryCreateStrict({
+    v3_Race_Cayuga: Coding.FromStrict({
         code: "1286-4",
         display: "Cayuga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1742,7 +1741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mohawk
      */
-    v3_Race_Mohawk: Coding.FactoryCreateStrict({
+    v3_Race_Mohawk: Coding.FromStrict({
         code: "1287-2",
         display: "Mohawk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1750,7 +1749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oneida
      */
-    v3_Race_Oneida: Coding.FactoryCreateStrict({
+    v3_Race_Oneida: Coding.FromStrict({
         code: "1288-0",
         display: "Oneida",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1758,7 +1757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Onondaga
      */
-    v3_Race_Onondaga: Coding.FactoryCreateStrict({
+    v3_Race_Onondaga: Coding.FromStrict({
         code: "1289-8",
         display: "Onondaga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1766,7 +1765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Seneca
      */
-    v3_Race_Seneca: Coding.FactoryCreateStrict({
+    v3_Race_Seneca: Coding.FromStrict({
         code: "1290-6",
         display: "Seneca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1774,7 +1773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Seneca Nation
      */
-    v3_Race_SenecaNation: Coding.FactoryCreateStrict({
+    v3_Race_SenecaNation: Coding.FromStrict({
         code: "1291-4",
         display: "Seneca Nation",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1782,7 +1781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Seneca-Cayuga
      */
-    v3_Race_SenecaCayuga: Coding.FactoryCreateStrict({
+    v3_Race_SenecaCayuga: Coding.FromStrict({
         code: "1292-2",
         display: "Seneca-Cayuga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1790,7 +1789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tonawanda Seneca
      */
-    v3_Race_TonawandaSeneca: Coding.FactoryCreateStrict({
+    v3_Race_TonawandaSeneca: Coding.FromStrict({
         code: "1293-0",
         display: "Tonawanda Seneca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1798,7 +1797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tuscarora
      */
-    v3_Race_Tuscarora: Coding.FactoryCreateStrict({
+    v3_Race_Tuscarora: Coding.FromStrict({
         code: "1294-8",
         display: "Tuscarora",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1806,7 +1805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wyandotte
      */
-    v3_Race_Wyandotte: Coding.FactoryCreateStrict({
+    v3_Race_Wyandotte: Coding.FromStrict({
         code: "1295-5",
         display: "Wyandotte",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1814,7 +1813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Juaneno
      */
-    v3_Race_Juaneno: Coding.FactoryCreateStrict({
+    v3_Race_Juaneno: Coding.FromStrict({
         code: "1297-1",
         display: "Juaneno",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1822,7 +1821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kalispel
      */
-    v3_Race_Kalispel: Coding.FactoryCreateStrict({
+    v3_Race_Kalispel: Coding.FromStrict({
         code: "1299-7",
         display: "Kalispel",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1830,7 +1829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Karuk
      */
-    v3_Race_Karuk: Coding.FactoryCreateStrict({
+    v3_Race_Karuk: Coding.FromStrict({
         code: "1301-1",
         display: "Karuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1838,7 +1837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kaw
      */
-    v3_Race_Kaw: Coding.FactoryCreateStrict({
+    v3_Race_Kaw: Coding.FromStrict({
         code: "1303-7",
         display: "Kaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1846,7 +1845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kickapoo
      */
-    v3_Race_Kickapoo: Coding.FactoryCreateStrict({
+    v3_Race_Kickapoo: Coding.FromStrict({
         code: "1305-2",
         display: "Kickapoo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1854,7 +1853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Kickapoo
      */
-    v3_Race_OklahomaKickapoo: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaKickapoo: Coding.FromStrict({
         code: "1306-0",
         display: "Oklahoma Kickapoo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1862,7 +1861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Texas Kickapoo
      */
-    v3_Race_TexasKickapoo: Coding.FactoryCreateStrict({
+    v3_Race_TexasKickapoo: Coding.FromStrict({
         code: "1307-8",
         display: "Texas Kickapoo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1870,7 +1869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kiowa
      */
-    v3_Race_Kiowa: Coding.FactoryCreateStrict({
+    v3_Race_Kiowa: Coding.FromStrict({
         code: "1309-4",
         display: "Kiowa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1878,7 +1877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Kiowa
      */
-    v3_Race_OklahomaKiowa: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaKiowa: Coding.FromStrict({
         code: "1310-2",
         display: "Oklahoma Kiowa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1886,7 +1885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Klallam
      */
-    v3_Race_Klallam: Coding.FactoryCreateStrict({
+    v3_Race_Klallam: Coding.FromStrict({
         code: "1312-8",
         display: "Klallam",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1894,7 +1893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Jamestown
      */
-    v3_Race_Jamestown: Coding.FactoryCreateStrict({
+    v3_Race_Jamestown: Coding.FromStrict({
         code: "1313-6",
         display: "Jamestown",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1902,7 +1901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Elwha
      */
-    v3_Race_LowerElwha: Coding.FactoryCreateStrict({
+    v3_Race_LowerElwha: Coding.FromStrict({
         code: "1314-4",
         display: "Lower Elwha",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1910,7 +1909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Port Gamble Klallam
      */
-    v3_Race_PortGambleKlallam: Coding.FactoryCreateStrict({
+    v3_Race_PortGambleKlallam: Coding.FromStrict({
         code: "1315-1",
         display: "Port Gamble Klallam",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1918,7 +1917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Klamath
      */
-    v3_Race_Klamath: Coding.FactoryCreateStrict({
+    v3_Race_Klamath: Coding.FromStrict({
         code: "1317-7",
         display: "Klamath",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1926,7 +1925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Konkow
      */
-    v3_Race_Konkow: Coding.FactoryCreateStrict({
+    v3_Race_Konkow: Coding.FromStrict({
         code: "1319-3",
         display: "Konkow",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1934,7 +1933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kootenai
      */
-    v3_Race_Kootenai: Coding.FactoryCreateStrict({
+    v3_Race_Kootenai: Coding.FromStrict({
         code: "1321-9",
         display: "Kootenai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1942,7 +1941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lassik
      */
-    v3_Race_Lassik: Coding.FactoryCreateStrict({
+    v3_Race_Lassik: Coding.FromStrict({
         code: "1323-5",
         display: "Lassik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1950,7 +1949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Long Island
      */
-    v3_Race_LongIsland: Coding.FactoryCreateStrict({
+    v3_Race_LongIsland: Coding.FromStrict({
         code: "1325-0",
         display: "Long Island",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1958,7 +1957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Matinecock
      */
-    v3_Race_Matinecock: Coding.FactoryCreateStrict({
+    v3_Race_Matinecock: Coding.FromStrict({
         code: "1326-8",
         display: "Matinecock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1966,7 +1965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Montauk
      */
-    v3_Race_Montauk: Coding.FactoryCreateStrict({
+    v3_Race_Montauk: Coding.FromStrict({
         code: "1327-6",
         display: "Montauk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1974,7 +1973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Poospatuck
      */
-    v3_Race_Poospatuck: Coding.FactoryCreateStrict({
+    v3_Race_Poospatuck: Coding.FromStrict({
         code: "1328-4",
         display: "Poospatuck",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1982,7 +1981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Setauket
      */
-    v3_Race_Setauket: Coding.FactoryCreateStrict({
+    v3_Race_Setauket: Coding.FromStrict({
         code: "1329-2",
         display: "Setauket",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1990,7 +1989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Luiseno
      */
-    v3_Race_Luiseno: Coding.FactoryCreateStrict({
+    v3_Race_Luiseno: Coding.FromStrict({
         code: "1331-8",
         display: "Luiseno",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -1998,7 +1997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * La Jolla
      */
-    v3_Race_LaJolla: Coding.FactoryCreateStrict({
+    v3_Race_LaJolla: Coding.FromStrict({
         code: "1332-6",
         display: "La Jolla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2006,7 +2005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pala
      */
-    v3_Race_Pala: Coding.FactoryCreateStrict({
+    v3_Race_Pala: Coding.FromStrict({
         code: "1333-4",
         display: "Pala",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2014,7 +2013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pauma
      */
-    v3_Race_Pauma: Coding.FactoryCreateStrict({
+    v3_Race_Pauma: Coding.FromStrict({
         code: "1334-2",
         display: "Pauma",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2022,7 +2021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pechanga
      */
-    v3_Race_Pechanga: Coding.FactoryCreateStrict({
+    v3_Race_Pechanga: Coding.FromStrict({
         code: "1335-9",
         display: "Pechanga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2030,7 +2029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Soboba
      */
-    v3_Race_Soboba: Coding.FactoryCreateStrict({
+    v3_Race_Soboba: Coding.FromStrict({
         code: "1336-7",
         display: "Soboba",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2038,7 +2037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Twenty-Nine Palms
      */
-    v3_Race_TwentyNinePalms: Coding.FactoryCreateStrict({
+    v3_Race_TwentyNinePalms: Coding.FromStrict({
         code: "1337-5",
         display: "Twenty-Nine Palms",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2046,7 +2045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Temecula
      */
-    v3_Race_Temecula: Coding.FactoryCreateStrict({
+    v3_Race_Temecula: Coding.FromStrict({
         code: "1338-3",
         display: "Temecula",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2054,7 +2053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lumbee
      */
-    v3_Race_Lumbee: Coding.FactoryCreateStrict({
+    v3_Race_Lumbee: Coding.FromStrict({
         code: "1340-9",
         display: "Lumbee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2062,7 +2061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lummi
      */
-    v3_Race_Lummi: Coding.FactoryCreateStrict({
+    v3_Race_Lummi: Coding.FromStrict({
         code: "1342-5",
         display: "Lummi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2070,7 +2069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Maidu
      */
-    v3_Race_Maidu: Coding.FactoryCreateStrict({
+    v3_Race_Maidu: Coding.FromStrict({
         code: "1344-1",
         display: "Maidu",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2078,7 +2077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mountain Maidu
      */
-    v3_Race_MountainMaidu: Coding.FactoryCreateStrict({
+    v3_Race_MountainMaidu: Coding.FromStrict({
         code: "1345-8",
         display: "Mountain Maidu",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2086,7 +2085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nishinam
      */
-    v3_Race_Nishinam: Coding.FactoryCreateStrict({
+    v3_Race_Nishinam: Coding.FromStrict({
         code: "1346-6",
         display: "Nishinam",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2094,7 +2093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Makah
      */
-    v3_Race_Makah: Coding.FactoryCreateStrict({
+    v3_Race_Makah: Coding.FromStrict({
         code: "1348-2",
         display: "Makah",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2102,7 +2101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Maliseet
      */
-    v3_Race_Maliseet: Coding.FactoryCreateStrict({
+    v3_Race_Maliseet: Coding.FromStrict({
         code: "1350-8",
         display: "Maliseet",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2110,7 +2109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mandan
      */
-    v3_Race_Mandan: Coding.FactoryCreateStrict({
+    v3_Race_Mandan: Coding.FromStrict({
         code: "1352-4",
         display: "Mandan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2118,7 +2117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mattaponi
      */
-    v3_Race_Mattaponi: Coding.FactoryCreateStrict({
+    v3_Race_Mattaponi: Coding.FromStrict({
         code: "1354-0",
         display: "Mattaponi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2126,7 +2125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Menominee
      */
-    v3_Race_Menominee: Coding.FactoryCreateStrict({
+    v3_Race_Menominee: Coding.FromStrict({
         code: "1356-5",
         display: "Menominee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2134,7 +2133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Miami
      */
-    v3_Race_Miami: Coding.FactoryCreateStrict({
+    v3_Race_Miami: Coding.FromStrict({
         code: "1358-1",
         display: "Miami",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2142,7 +2141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Illinois Miami
      */
-    v3_Race_IllinoisMiami: Coding.FactoryCreateStrict({
+    v3_Race_IllinoisMiami: Coding.FromStrict({
         code: "1359-9",
         display: "Illinois Miami",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2150,7 +2149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Indiana Miami
      */
-    v3_Race_IndianaMiami: Coding.FactoryCreateStrict({
+    v3_Race_IndianaMiami: Coding.FromStrict({
         code: "1360-7",
         display: "Indiana Miami",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2158,7 +2157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Miami
      */
-    v3_Race_OklahomaMiami: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaMiami: Coding.FromStrict({
         code: "1361-5",
         display: "Oklahoma Miami",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2166,7 +2165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Miccosukee
      */
-    v3_Race_Miccosukee: Coding.FactoryCreateStrict({
+    v3_Race_Miccosukee: Coding.FromStrict({
         code: "1363-1",
         display: "Miccosukee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2174,7 +2173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Micmac
      */
-    v3_Race_Micmac: Coding.FactoryCreateStrict({
+    v3_Race_Micmac: Coding.FromStrict({
         code: "1365-6",
         display: "Micmac",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2182,7 +2181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aroostook
      */
-    v3_Race_Aroostook: Coding.FactoryCreateStrict({
+    v3_Race_Aroostook: Coding.FromStrict({
         code: "1366-4",
         display: "Aroostook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2190,7 +2189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mission Indians
      */
-    v3_Race_MissionIndians: Coding.FactoryCreateStrict({
+    v3_Race_MissionIndians: Coding.FromStrict({
         code: "1368-0",
         display: "Mission Indians",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2198,7 +2197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Miwok
      */
-    v3_Race_Miwok: Coding.FactoryCreateStrict({
+    v3_Race_Miwok: Coding.FromStrict({
         code: "1370-6",
         display: "Miwok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2206,7 +2205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Modoc
      */
-    v3_Race_Modoc: Coding.FactoryCreateStrict({
+    v3_Race_Modoc: Coding.FromStrict({
         code: "1372-2",
         display: "Modoc",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2214,7 +2213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mohegan
      */
-    v3_Race_Mohegan: Coding.FactoryCreateStrict({
+    v3_Race_Mohegan: Coding.FromStrict({
         code: "1374-8",
         display: "Mohegan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2222,7 +2221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mono
      */
-    v3_Race_Mono: Coding.FactoryCreateStrict({
+    v3_Race_Mono: Coding.FromStrict({
         code: "1376-3",
         display: "Mono",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2230,7 +2229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nanticoke
      */
-    v3_Race_Nanticoke: Coding.FactoryCreateStrict({
+    v3_Race_Nanticoke: Coding.FromStrict({
         code: "1378-9",
         display: "Nanticoke",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2238,7 +2237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Narragansett
      */
-    v3_Race_Narragansett: Coding.FactoryCreateStrict({
+    v3_Race_Narragansett: Coding.FromStrict({
         code: "1380-5",
         display: "Narragansett",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2246,7 +2245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Navajo
      */
-    v3_Race_Navajo: Coding.FactoryCreateStrict({
+    v3_Race_Navajo: Coding.FromStrict({
         code: "1382-1",
         display: "Navajo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2254,7 +2253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alamo Navajo
      */
-    v3_Race_AlamoNavajo: Coding.FactoryCreateStrict({
+    v3_Race_AlamoNavajo: Coding.FromStrict({
         code: "1383-9",
         display: "Alamo Navajo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2262,7 +2261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Canoncito Navajo
      */
-    v3_Race_CanoncitoNavajo: Coding.FactoryCreateStrict({
+    v3_Race_CanoncitoNavajo: Coding.FromStrict({
         code: "1384-7",
         display: "Canoncito Navajo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2270,7 +2269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ramah Navajo
      */
-    v3_Race_RamahNavajo: Coding.FactoryCreateStrict({
+    v3_Race_RamahNavajo: Coding.FromStrict({
         code: "1385-4",
         display: "Ramah Navajo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2278,7 +2277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nez Perce
      */
-    v3_Race_NezPerce: Coding.FactoryCreateStrict({
+    v3_Race_NezPerce: Coding.FromStrict({
         code: "1387-0",
         display: "Nez Perce",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2286,7 +2285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nomalaki
      */
-    v3_Race_Nomalaki: Coding.FactoryCreateStrict({
+    v3_Race_Nomalaki: Coding.FromStrict({
         code: "1389-6",
         display: "Nomalaki",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2294,7 +2293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northwest Tribes
      */
-    v3_Race_NorthwestTribes: Coding.FactoryCreateStrict({
+    v3_Race_NorthwestTribes: Coding.FromStrict({
         code: "1391-2",
         display: "Northwest Tribes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2302,7 +2301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alsea
      */
-    v3_Race_Alsea: Coding.FactoryCreateStrict({
+    v3_Race_Alsea: Coding.FromStrict({
         code: "1392-0",
         display: "Alsea",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2310,7 +2309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Celilo
      */
-    v3_Race_Celilo: Coding.FactoryCreateStrict({
+    v3_Race_Celilo: Coding.FromStrict({
         code: "1393-8",
         display: "Celilo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2318,7 +2317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Columbia
      */
-    v3_Race_Columbia: Coding.FactoryCreateStrict({
+    v3_Race_Columbia: Coding.FromStrict({
         code: "1394-6",
         display: "Columbia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2326,7 +2325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kalapuya
      */
-    v3_Race_Kalapuya: Coding.FactoryCreateStrict({
+    v3_Race_Kalapuya: Coding.FromStrict({
         code: "1395-3",
         display: "Kalapuya",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2334,7 +2333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Molala
      */
-    v3_Race_Molala: Coding.FactoryCreateStrict({
+    v3_Race_Molala: Coding.FromStrict({
         code: "1396-1",
         display: "Molala",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2342,7 +2341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Talakamish
      */
-    v3_Race_Talakamish: Coding.FactoryCreateStrict({
+    v3_Race_Talakamish: Coding.FromStrict({
         code: "1397-9",
         display: "Talakamish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2350,7 +2349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tenino
      */
-    v3_Race_Tenino: Coding.FactoryCreateStrict({
+    v3_Race_Tenino: Coding.FromStrict({
         code: "1398-7",
         display: "Tenino",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2358,7 +2357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tillamook
      */
-    v3_Race_Tillamook: Coding.FactoryCreateStrict({
+    v3_Race_Tillamook: Coding.FromStrict({
         code: "1399-5",
         display: "Tillamook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2366,7 +2365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wenatchee
      */
-    v3_Race_Wenatchee: Coding.FactoryCreateStrict({
+    v3_Race_Wenatchee: Coding.FromStrict({
         code: "1400-1",
         display: "Wenatchee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2374,7 +2373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yahooskin
      */
-    v3_Race_Yahooskin: Coding.FactoryCreateStrict({
+    v3_Race_Yahooskin: Coding.FromStrict({
         code: "1401-9",
         display: "Yahooskin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2382,7 +2381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Omaha
      */
-    v3_Race_Omaha: Coding.FactoryCreateStrict({
+    v3_Race_Omaha: Coding.FromStrict({
         code: "1403-5",
         display: "Omaha",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2390,7 +2389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oregon Athabaskan
      */
-    v3_Race_OregonAthabaskan: Coding.FactoryCreateStrict({
+    v3_Race_OregonAthabaskan: Coding.FromStrict({
         code: "1405-0",
         display: "Oregon Athabaskan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2398,7 +2397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Osage
      */
-    v3_Race_Osage: Coding.FactoryCreateStrict({
+    v3_Race_Osage: Coding.FromStrict({
         code: "1407-6",
         display: "Osage",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2406,7 +2405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Otoe-Missouria
      */
-    v3_Race_OtoeMissouria: Coding.FactoryCreateStrict({
+    v3_Race_OtoeMissouria: Coding.FromStrict({
         code: "1409-2",
         display: "Otoe-Missouria",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2414,7 +2413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ottawa
      */
-    v3_Race_Ottawa: Coding.FactoryCreateStrict({
+    v3_Race_Ottawa: Coding.FromStrict({
         code: "1411-8",
         display: "Ottawa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2422,7 +2421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Burt Lake Ottawa
      */
-    v3_Race_BurtLakeOttawa: Coding.FactoryCreateStrict({
+    v3_Race_BurtLakeOttawa: Coding.FromStrict({
         code: "1412-6",
         display: "Burt Lake Ottawa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2430,7 +2429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Michigan Ottawa
      */
-    v3_Race_MichiganOttawa: Coding.FactoryCreateStrict({
+    v3_Race_MichiganOttawa: Coding.FromStrict({
         code: "1413-4",
         display: "Michigan Ottawa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2438,7 +2437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Ottawa
      */
-    v3_Race_OklahomaOttawa: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaOttawa: Coding.FromStrict({
         code: "1414-2",
         display: "Oklahoma Ottawa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2446,7 +2445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Paiute
      */
-    v3_Race_Paiute: Coding.FactoryCreateStrict({
+    v3_Race_Paiute: Coding.FromStrict({
         code: "1416-7",
         display: "Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2454,7 +2453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bishop
      */
-    v3_Race_Bishop: Coding.FactoryCreateStrict({
+    v3_Race_Bishop: Coding.FromStrict({
         code: "1417-5",
         display: "Bishop",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2462,7 +2461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bridgeport
      */
-    v3_Race_Bridgeport: Coding.FactoryCreateStrict({
+    v3_Race_Bridgeport: Coding.FromStrict({
         code: "1418-3",
         display: "Bridgeport",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2470,7 +2469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Burns Paiute
      */
-    v3_Race_BurnsPaiute: Coding.FactoryCreateStrict({
+    v3_Race_BurnsPaiute: Coding.FromStrict({
         code: "1419-1",
         display: "Burns Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2478,7 +2477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cedarville
      */
-    v3_Race_Cedarville: Coding.FactoryCreateStrict({
+    v3_Race_Cedarville: Coding.FromStrict({
         code: "1420-9",
         display: "Cedarville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2486,7 +2485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Bidwell
      */
-    v3_Race_FortBidwell: Coding.FactoryCreateStrict({
+    v3_Race_FortBidwell: Coding.FromStrict({
         code: "1421-7",
         display: "Fort Bidwell",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2494,7 +2493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Independence
      */
-    v3_Race_FortIndependence: Coding.FactoryCreateStrict({
+    v3_Race_FortIndependence: Coding.FromStrict({
         code: "1422-5",
         display: "Fort Independence",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2502,7 +2501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kaibab
      */
-    v3_Race_Kaibab: Coding.FactoryCreateStrict({
+    v3_Race_Kaibab: Coding.FromStrict({
         code: "1423-3",
         display: "Kaibab",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2510,7 +2509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Las Vegas
      */
-    v3_Race_LasVegas: Coding.FactoryCreateStrict({
+    v3_Race_LasVegas: Coding.FromStrict({
         code: "1424-1",
         display: "Las Vegas",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2518,7 +2517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lone Pine
      */
-    v3_Race_LonePine: Coding.FactoryCreateStrict({
+    v3_Race_LonePine: Coding.FromStrict({
         code: "1425-8",
         display: "Lone Pine",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2526,7 +2525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lovelock
      */
-    v3_Race_Lovelock: Coding.FactoryCreateStrict({
+    v3_Race_Lovelock: Coding.FromStrict({
         code: "1426-6",
         display: "Lovelock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2534,7 +2533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Malheur Paiute
      */
-    v3_Race_MalheurPaiute: Coding.FactoryCreateStrict({
+    v3_Race_MalheurPaiute: Coding.FromStrict({
         code: "1427-4",
         display: "Malheur Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2542,7 +2541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Moapa
      */
-    v3_Race_Moapa: Coding.FactoryCreateStrict({
+    v3_Race_Moapa: Coding.FromStrict({
         code: "1428-2",
         display: "Moapa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2550,7 +2549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northern Paiute
      */
-    v3_Race_NorthernPaiute: Coding.FactoryCreateStrict({
+    v3_Race_NorthernPaiute: Coding.FromStrict({
         code: "1429-0",
         display: "Northern Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2558,7 +2557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Owens Valley
      */
-    v3_Race_OwensValley: Coding.FactoryCreateStrict({
+    v3_Race_OwensValley: Coding.FromStrict({
         code: "1430-8",
         display: "Owens Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2566,7 +2565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pyramid Lake
      */
-    v3_Race_PyramidLake: Coding.FactoryCreateStrict({
+    v3_Race_PyramidLake: Coding.FromStrict({
         code: "1431-6",
         display: "Pyramid Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2574,7 +2573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Juan Southern Paiute
      */
-    v3_Race_SanJuanSouthernPaiute: Coding.FactoryCreateStrict({
+    v3_Race_SanJuanSouthernPaiute: Coding.FromStrict({
         code: "1432-4",
         display: "San Juan Southern Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2582,7 +2581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Southern Paiute
      */
-    v3_Race_SouthernPaiute: Coding.FactoryCreateStrict({
+    v3_Race_SouthernPaiute: Coding.FromStrict({
         code: "1433-2",
         display: "Southern Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2590,7 +2589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Summit Lake
      */
-    v3_Race_SummitLake: Coding.FactoryCreateStrict({
+    v3_Race_SummitLake: Coding.FromStrict({
         code: "1434-0",
         display: "Summit Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2598,7 +2597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Utu Utu Gwaitu Paiute
      */
-    v3_Race_UtuUtuGwaituPaiute: Coding.FactoryCreateStrict({
+    v3_Race_UtuUtuGwaituPaiute: Coding.FromStrict({
         code: "1435-7",
         display: "Utu Utu Gwaitu Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2606,7 +2605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Walker River
      */
-    v3_Race_WalkerRiver: Coding.FactoryCreateStrict({
+    v3_Race_WalkerRiver: Coding.FromStrict({
         code: "1436-5",
         display: "Walker River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2614,7 +2613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yerington Paiute
      */
-    v3_Race_YeringtonPaiute: Coding.FactoryCreateStrict({
+    v3_Race_YeringtonPaiute: Coding.FromStrict({
         code: "1437-3",
         display: "Yerington Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2622,7 +2621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pamunkey
      */
-    v3_Race_Pamunkey: Coding.FactoryCreateStrict({
+    v3_Race_Pamunkey: Coding.FromStrict({
         code: "1439-9",
         display: "Pamunkey",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2630,7 +2629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Passamaquoddy
      */
-    v3_Race_Passamaquoddy: Coding.FactoryCreateStrict({
+    v3_Race_Passamaquoddy: Coding.FromStrict({
         code: "1441-5",
         display: "Passamaquoddy",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2638,7 +2637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Indian Township
      */
-    v3_Race_IndianTownship: Coding.FactoryCreateStrict({
+    v3_Race_IndianTownship: Coding.FromStrict({
         code: "1442-3",
         display: "Indian Township",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2646,7 +2645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pleasant Point Passamaquoddy
      */
-    v3_Race_PleasantPointPassamaquoddy: Coding.FactoryCreateStrict({
+    v3_Race_PleasantPointPassamaquoddy: Coding.FromStrict({
         code: "1443-1",
         display: "Pleasant Point Passamaquoddy",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2654,7 +2653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pawnee
      */
-    v3_Race_Pawnee: Coding.FactoryCreateStrict({
+    v3_Race_Pawnee: Coding.FromStrict({
         code: "1445-6",
         display: "Pawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2662,7 +2661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Pawnee
      */
-    v3_Race_OklahomaPawnee: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaPawnee: Coding.FromStrict({
         code: "1446-4",
         display: "Oklahoma Pawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2670,7 +2669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Penobscot
      */
-    v3_Race_Penobscot: Coding.FactoryCreateStrict({
+    v3_Race_Penobscot: Coding.FromStrict({
         code: "1448-0",
         display: "Penobscot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2678,7 +2677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Peoria
      */
-    v3_Race_Peoria: Coding.FactoryCreateStrict({
+    v3_Race_Peoria: Coding.FromStrict({
         code: "1450-6",
         display: "Peoria",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2686,7 +2685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Peoria
      */
-    v3_Race_OklahomaPeoria: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaPeoria: Coding.FromStrict({
         code: "1451-4",
         display: "Oklahoma Peoria",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2694,7 +2693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pequot
      */
-    v3_Race_Pequot: Coding.FactoryCreateStrict({
+    v3_Race_Pequot: Coding.FromStrict({
         code: "1453-0",
         display: "Pequot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2702,7 +2701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Marshantucket Pequot
      */
-    v3_Race_MarshantucketPequot: Coding.FactoryCreateStrict({
+    v3_Race_MarshantucketPequot: Coding.FromStrict({
         code: "1454-8",
         display: "Marshantucket Pequot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2710,7 +2709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pima
      */
-    v3_Race_Pima: Coding.FactoryCreateStrict({
+    v3_Race_Pima: Coding.FromStrict({
         code: "1456-3",
         display: "Pima",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2718,7 +2717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gila River Pima-Maricopa
      */
-    v3_Race_GilaRiverPimaMaricopa: Coding.FactoryCreateStrict({
+    v3_Race_GilaRiverPimaMaricopa: Coding.FromStrict({
         code: "1457-1",
         display: "Gila River Pima-Maricopa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2726,7 +2725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Salt River Pima-Maricopa
      */
-    v3_Race_SaltRiverPimaMaricopa: Coding.FactoryCreateStrict({
+    v3_Race_SaltRiverPimaMaricopa: Coding.FromStrict({
         code: "1458-9",
         display: "Salt River Pima-Maricopa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2734,7 +2733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Piscataway
      */
-    v3_Race_Piscataway: Coding.FactoryCreateStrict({
+    v3_Race_Piscataway: Coding.FromStrict({
         code: "1460-5",
         display: "Piscataway",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2742,7 +2741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pit River
      */
-    v3_Race_PitRiver: Coding.FactoryCreateStrict({
+    v3_Race_PitRiver: Coding.FromStrict({
         code: "1462-1",
         display: "Pit River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2750,7 +2749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pomo
      */
-    v3_Race_Pomo: Coding.FactoryCreateStrict({
+    v3_Race_Pomo: Coding.FromStrict({
         code: "1464-7",
         display: "Pomo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2758,7 +2757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Central Pomo
      */
-    v3_Race_CentralPomo: Coding.FactoryCreateStrict({
+    v3_Race_CentralPomo: Coding.FromStrict({
         code: "1465-4",
         display: "Central Pomo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2766,7 +2765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dry Creek
      */
-    v3_Race_DryCreek: Coding.FactoryCreateStrict({
+    v3_Race_DryCreek: Coding.FromStrict({
         code: "1466-2",
         display: "Dry Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2774,7 +2773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Pomo
      */
-    v3_Race_EasternPomo: Coding.FactoryCreateStrict({
+    v3_Race_EasternPomo: Coding.FromStrict({
         code: "1467-0",
         display: "Eastern Pomo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2782,7 +2781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kashia
      */
-    v3_Race_Kashia: Coding.FactoryCreateStrict({
+    v3_Race_Kashia: Coding.FromStrict({
         code: "1468-8",
         display: "Kashia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2790,7 +2789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northern Pomo
      */
-    v3_Race_NorthernPomo: Coding.FactoryCreateStrict({
+    v3_Race_NorthernPomo: Coding.FromStrict({
         code: "1469-6",
         display: "Northern Pomo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2798,7 +2797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Scotts Valley
      */
-    v3_Race_ScottsValley: Coding.FactoryCreateStrict({
+    v3_Race_ScottsValley: Coding.FromStrict({
         code: "1470-4",
         display: "Scotts Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2806,7 +2805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stonyford
      */
-    v3_Race_Stonyford: Coding.FactoryCreateStrict({
+    v3_Race_Stonyford: Coding.FromStrict({
         code: "1471-2",
         display: "Stonyford",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2814,7 +2813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sulphur Bank
      */
-    v3_Race_SulphurBank: Coding.FactoryCreateStrict({
+    v3_Race_SulphurBank: Coding.FromStrict({
         code: "1472-0",
         display: "Sulphur Bank",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2822,7 +2821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ponca
      */
-    v3_Race_Ponca: Coding.FactoryCreateStrict({
+    v3_Race_Ponca: Coding.FromStrict({
         code: "1474-6",
         display: "Ponca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2830,7 +2829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nebraska Ponca
      */
-    v3_Race_NebraskaPonca: Coding.FactoryCreateStrict({
+    v3_Race_NebraskaPonca: Coding.FromStrict({
         code: "1475-3",
         display: "Nebraska Ponca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2838,7 +2837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Ponca
      */
-    v3_Race_OklahomaPonca: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaPonca: Coding.FromStrict({
         code: "1476-1",
         display: "Oklahoma Ponca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2846,7 +2845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Potawatomi
      */
-    v3_Race_Potawatomi: Coding.FactoryCreateStrict({
+    v3_Race_Potawatomi: Coding.FromStrict({
         code: "1478-7",
         display: "Potawatomi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2854,7 +2853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Citizen Band Potawatomi
      */
-    v3_Race_CitizenBandPotawatomi: Coding.FactoryCreateStrict({
+    v3_Race_CitizenBandPotawatomi: Coding.FromStrict({
         code: "1479-5",
         display: "Citizen Band Potawatomi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2862,7 +2861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Forest County
      */
-    v3_Race_ForestCounty: Coding.FactoryCreateStrict({
+    v3_Race_ForestCounty: Coding.FromStrict({
         code: "1480-3",
         display: "Forest County",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2870,7 +2869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hannahville
      */
-    v3_Race_Hannahville: Coding.FactoryCreateStrict({
+    v3_Race_Hannahville: Coding.FromStrict({
         code: "1481-1",
         display: "Hannahville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2878,7 +2877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Huron Potawatomi
      */
-    v3_Race_HuronPotawatomi: Coding.FactoryCreateStrict({
+    v3_Race_HuronPotawatomi: Coding.FromStrict({
         code: "1482-9",
         display: "Huron Potawatomi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2886,7 +2885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pokagon Potawatomi
      */
-    v3_Race_PokagonPotawatomi: Coding.FactoryCreateStrict({
+    v3_Race_PokagonPotawatomi: Coding.FromStrict({
         code: "1483-7",
         display: "Pokagon Potawatomi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2894,7 +2893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Prairie Band
      */
-    v3_Race_PrairieBand: Coding.FactoryCreateStrict({
+    v3_Race_PrairieBand: Coding.FromStrict({
         code: "1484-5",
         display: "Prairie Band",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2902,7 +2901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wisconsin Potawatomi
      */
-    v3_Race_WisconsinPotawatomi: Coding.FactoryCreateStrict({
+    v3_Race_WisconsinPotawatomi: Coding.FromStrict({
         code: "1485-2",
         display: "Wisconsin Potawatomi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2910,7 +2909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Powhatan
      */
-    v3_Race_Powhatan: Coding.FactoryCreateStrict({
+    v3_Race_Powhatan: Coding.FromStrict({
         code: "1487-8",
         display: "Powhatan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2918,7 +2917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pueblo
      */
-    v3_Race_Pueblo: Coding.FactoryCreateStrict({
+    v3_Race_Pueblo: Coding.FromStrict({
         code: "1489-4",
         display: "Pueblo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2926,7 +2925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Acoma
      */
-    v3_Race_Acoma: Coding.FactoryCreateStrict({
+    v3_Race_Acoma: Coding.FromStrict({
         code: "1490-2",
         display: "Acoma",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2934,7 +2933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arizona Tewa
      */
-    v3_Race_ArizonaTewa: Coding.FactoryCreateStrict({
+    v3_Race_ArizonaTewa: Coding.FromStrict({
         code: "1491-0",
         display: "Arizona Tewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2942,7 +2941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cochiti
      */
-    v3_Race_Cochiti: Coding.FactoryCreateStrict({
+    v3_Race_Cochiti: Coding.FromStrict({
         code: "1492-8",
         display: "Cochiti",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2950,7 +2949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hopi
      */
-    v3_Race_Hopi: Coding.FactoryCreateStrict({
+    v3_Race_Hopi: Coding.FromStrict({
         code: "1493-6",
         display: "Hopi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2958,7 +2957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Isleta
      */
-    v3_Race_Isleta: Coding.FactoryCreateStrict({
+    v3_Race_Isleta: Coding.FromStrict({
         code: "1494-4",
         display: "Isleta",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2966,7 +2965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Jemez
      */
-    v3_Race_Jemez: Coding.FactoryCreateStrict({
+    v3_Race_Jemez: Coding.FromStrict({
         code: "1495-1",
         display: "Jemez",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2974,7 +2973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Keres
      */
-    v3_Race_Keres: Coding.FactoryCreateStrict({
+    v3_Race_Keres: Coding.FromStrict({
         code: "1496-9",
         display: "Keres",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2982,7 +2981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Laguna
      */
-    v3_Race_Laguna: Coding.FactoryCreateStrict({
+    v3_Race_Laguna: Coding.FromStrict({
         code: "1497-7",
         display: "Laguna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2990,7 +2989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nambe
      */
-    v3_Race_Nambe: Coding.FactoryCreateStrict({
+    v3_Race_Nambe: Coding.FromStrict({
         code: "1498-5",
         display: "Nambe",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -2998,7 +2997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Picuris
      */
-    v3_Race_Picuris: Coding.FactoryCreateStrict({
+    v3_Race_Picuris: Coding.FromStrict({
         code: "1499-3",
         display: "Picuris",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3006,7 +3005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Piro
      */
-    v3_Race_Piro: Coding.FactoryCreateStrict({
+    v3_Race_Piro: Coding.FromStrict({
         code: "1500-8",
         display: "Piro",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3014,7 +3013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pojoaque
      */
-    v3_Race_Pojoaque: Coding.FactoryCreateStrict({
+    v3_Race_Pojoaque: Coding.FromStrict({
         code: "1501-6",
         display: "Pojoaque",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3022,7 +3021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Felipe
      */
-    v3_Race_SanFelipe: Coding.FactoryCreateStrict({
+    v3_Race_SanFelipe: Coding.FromStrict({
         code: "1502-4",
         display: "San Felipe",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3030,7 +3029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Ildefonso
      */
-    v3_Race_SanIldefonso: Coding.FactoryCreateStrict({
+    v3_Race_SanIldefonso: Coding.FromStrict({
         code: "1503-2",
         display: "San Ildefonso",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3038,7 +3037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Juan Pueblo
      */
-    v3_Race_SanJuanPueblo: Coding.FactoryCreateStrict({
+    v3_Race_SanJuanPueblo: Coding.FromStrict({
         code: "1504-0",
         display: "San Juan Pueblo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3046,7 +3045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Juan De
      */
-    v3_Race_SanJuanDe: Coding.FactoryCreateStrict({
+    v3_Race_SanJuanDe: Coding.FromStrict({
         code: "1505-7",
         display: "San Juan De",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3054,7 +3053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Juan
      */
-    v3_Race_SanJuan: Coding.FactoryCreateStrict({
+    v3_Race_SanJuan: Coding.FromStrict({
         code: "1506-5",
         display: "San Juan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3062,7 +3061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sandia
      */
-    v3_Race_Sandia: Coding.FactoryCreateStrict({
+    v3_Race_Sandia: Coding.FromStrict({
         code: "1507-3",
         display: "Sandia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3070,7 +3069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Ana
      */
-    v3_Race_SantaAna: Coding.FactoryCreateStrict({
+    v3_Race_SantaAna: Coding.FromStrict({
         code: "1508-1",
         display: "Santa Ana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3078,7 +3077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santa Clara
      */
-    v3_Race_SantaClara: Coding.FactoryCreateStrict({
+    v3_Race_SantaClara: Coding.FromStrict({
         code: "1509-9",
         display: "Santa Clara",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3086,7 +3085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santo Domingo
      */
-    v3_Race_SantoDomingo: Coding.FactoryCreateStrict({
+    v3_Race_SantoDomingo: Coding.FromStrict({
         code: "1510-7",
         display: "Santo Domingo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3094,7 +3093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Taos
      */
-    v3_Race_Taos: Coding.FactoryCreateStrict({
+    v3_Race_Taos: Coding.FromStrict({
         code: "1511-5",
         display: "Taos",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3102,7 +3101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tesuque
      */
-    v3_Race_Tesuque: Coding.FactoryCreateStrict({
+    v3_Race_Tesuque: Coding.FromStrict({
         code: "1512-3",
         display: "Tesuque",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3110,7 +3109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tewa
      */
-    v3_Race_Tewa: Coding.FactoryCreateStrict({
+    v3_Race_Tewa: Coding.FromStrict({
         code: "1513-1",
         display: "Tewa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3118,7 +3117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tigua
      */
-    v3_Race_Tigua: Coding.FactoryCreateStrict({
+    v3_Race_Tigua: Coding.FromStrict({
         code: "1514-9",
         display: "Tigua",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3126,7 +3125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Zia
      */
-    v3_Race_Zia: Coding.FactoryCreateStrict({
+    v3_Race_Zia: Coding.FromStrict({
         code: "1515-6",
         display: "Zia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3134,7 +3133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Zuni
      */
-    v3_Race_Zuni: Coding.FactoryCreateStrict({
+    v3_Race_Zuni: Coding.FromStrict({
         code: "1516-4",
         display: "Zuni",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3142,7 +3141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Puget Sound Salish
      */
-    v3_Race_PugetSoundSalish: Coding.FactoryCreateStrict({
+    v3_Race_PugetSoundSalish: Coding.FromStrict({
         code: "1518-0",
         display: "Puget Sound Salish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3150,7 +3149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Duwamish
      */
-    v3_Race_Duwamish: Coding.FactoryCreateStrict({
+    v3_Race_Duwamish: Coding.FromStrict({
         code: "1519-8",
         display: "Duwamish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3158,7 +3157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kikiallus
      */
-    v3_Race_Kikiallus: Coding.FactoryCreateStrict({
+    v3_Race_Kikiallus: Coding.FromStrict({
         code: "1520-6",
         display: "Kikiallus",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3166,7 +3165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Skagit
      */
-    v3_Race_LowerSkagit: Coding.FactoryCreateStrict({
+    v3_Race_LowerSkagit: Coding.FromStrict({
         code: "1521-4",
         display: "Lower Skagit",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3174,7 +3173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Muckleshoot
      */
-    v3_Race_Muckleshoot: Coding.FactoryCreateStrict({
+    v3_Race_Muckleshoot: Coding.FromStrict({
         code: "1522-2",
         display: "Muckleshoot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3182,7 +3181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nisqually
      */
-    v3_Race_Nisqually: Coding.FactoryCreateStrict({
+    v3_Race_Nisqually: Coding.FromStrict({
         code: "1523-0",
         display: "Nisqually",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3190,7 +3189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nooksack
      */
-    v3_Race_Nooksack: Coding.FactoryCreateStrict({
+    v3_Race_Nooksack: Coding.FromStrict({
         code: "1524-8",
         display: "Nooksack",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3198,7 +3197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Port Madison
      */
-    v3_Race_PortMadison: Coding.FactoryCreateStrict({
+    v3_Race_PortMadison: Coding.FromStrict({
         code: "1525-5",
         display: "Port Madison",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3206,7 +3205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Puyallup
      */
-    v3_Race_Puyallup: Coding.FactoryCreateStrict({
+    v3_Race_Puyallup: Coding.FromStrict({
         code: "1526-3",
         display: "Puyallup",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3214,7 +3213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Samish
      */
-    v3_Race_Samish: Coding.FactoryCreateStrict({
+    v3_Race_Samish: Coding.FromStrict({
         code: "1527-1",
         display: "Samish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3222,7 +3221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sauk-Suiattle
      */
-    v3_Race_SaukSuiattle: Coding.FactoryCreateStrict({
+    v3_Race_SaukSuiattle: Coding.FromStrict({
         code: "1528-9",
         display: "Sauk-Suiattle",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3230,7 +3229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Skokomish
      */
-    v3_Race_Skokomish: Coding.FactoryCreateStrict({
+    v3_Race_Skokomish: Coding.FromStrict({
         code: "1529-7",
         display: "Skokomish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3238,7 +3237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Skykomish
      */
-    v3_Race_Skykomish: Coding.FactoryCreateStrict({
+    v3_Race_Skykomish: Coding.FromStrict({
         code: "1530-5",
         display: "Skykomish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3246,7 +3245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Snohomish
      */
-    v3_Race_Snohomish: Coding.FactoryCreateStrict({
+    v3_Race_Snohomish: Coding.FromStrict({
         code: "1531-3",
         display: "Snohomish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3254,7 +3253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Snoqualmie
      */
-    v3_Race_Snoqualmie: Coding.FactoryCreateStrict({
+    v3_Race_Snoqualmie: Coding.FromStrict({
         code: "1532-1",
         display: "Snoqualmie",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3262,7 +3261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Squaxin Island
      */
-    v3_Race_SquaxinIsland: Coding.FactoryCreateStrict({
+    v3_Race_SquaxinIsland: Coding.FromStrict({
         code: "1533-9",
         display: "Squaxin Island",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3270,7 +3269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Steilacoom
      */
-    v3_Race_Steilacoom: Coding.FactoryCreateStrict({
+    v3_Race_Steilacoom: Coding.FromStrict({
         code: "1534-7",
         display: "Steilacoom",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3278,7 +3277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stillaguamish
      */
-    v3_Race_Stillaguamish: Coding.FactoryCreateStrict({
+    v3_Race_Stillaguamish: Coding.FromStrict({
         code: "1535-4",
         display: "Stillaguamish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3286,7 +3285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Suquamish
      */
-    v3_Race_Suquamish: Coding.FactoryCreateStrict({
+    v3_Race_Suquamish: Coding.FromStrict({
         code: "1536-2",
         display: "Suquamish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3294,7 +3293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Swinomish
      */
-    v3_Race_Swinomish: Coding.FactoryCreateStrict({
+    v3_Race_Swinomish: Coding.FromStrict({
         code: "1537-0",
         display: "Swinomish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3302,7 +3301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tulalip
      */
-    v3_Race_Tulalip: Coding.FactoryCreateStrict({
+    v3_Race_Tulalip: Coding.FromStrict({
         code: "1538-8",
         display: "Tulalip",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3310,7 +3309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Upper Skagit
      */
-    v3_Race_UpperSkagit: Coding.FactoryCreateStrict({
+    v3_Race_UpperSkagit: Coding.FromStrict({
         code: "1539-6",
         display: "Upper Skagit",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3318,7 +3317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Quapaw
      */
-    v3_Race_Quapaw: Coding.FactoryCreateStrict({
+    v3_Race_Quapaw: Coding.FromStrict({
         code: "1541-2",
         display: "Quapaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3326,7 +3325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Quinault
      */
-    v3_Race_Quinault: Coding.FactoryCreateStrict({
+    v3_Race_Quinault: Coding.FromStrict({
         code: "1543-8",
         display: "Quinault",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3334,7 +3333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Rappahannock
      */
-    v3_Race_Rappahannock: Coding.FactoryCreateStrict({
+    v3_Race_Rappahannock: Coding.FromStrict({
         code: "1545-3",
         display: "Rappahannock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3342,7 +3341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Reno-Sparks
      */
-    v3_Race_RenoSparks: Coding.FactoryCreateStrict({
+    v3_Race_RenoSparks: Coding.FromStrict({
         code: "1547-9",
         display: "Reno-Sparks",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3350,7 +3349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Round Valley
      */
-    v3_Race_RoundValley: Coding.FactoryCreateStrict({
+    v3_Race_RoundValley: Coding.FromStrict({
         code: "1549-5",
         display: "Round Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3358,7 +3357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sac and Fox
      */
-    v3_Race_SacAndFox: Coding.FactoryCreateStrict({
+    v3_Race_SacAndFox: Coding.FromStrict({
         code: "1551-1",
         display: "Sac and Fox",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3366,7 +3365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iowa Sac and Fox
      */
-    v3_Race_IowaSacAndFox: Coding.FactoryCreateStrict({
+    v3_Race_IowaSacAndFox: Coding.FromStrict({
         code: "1552-9",
         display: "Iowa Sac and Fox",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3374,7 +3373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Missouri Sac and Fox
      */
-    v3_Race_MissouriSacAndFox: Coding.FactoryCreateStrict({
+    v3_Race_MissouriSacAndFox: Coding.FromStrict({
         code: "1553-7",
         display: "Missouri Sac and Fox",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3382,7 +3381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Sac and Fox
      */
-    v3_Race_OklahomaSacAndFox: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaSacAndFox: Coding.FromStrict({
         code: "1554-5",
         display: "Oklahoma Sac and Fox",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3390,7 +3389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Salinan
      */
-    v3_Race_Salinan: Coding.FactoryCreateStrict({
+    v3_Race_Salinan: Coding.FromStrict({
         code: "1556-0",
         display: "Salinan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3398,7 +3397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Salish
      */
-    v3_Race_Salish: Coding.FactoryCreateStrict({
+    v3_Race_Salish: Coding.FromStrict({
         code: "1558-6",
         display: "Salish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3406,7 +3405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Salish and Kootenai
      */
-    v3_Race_SalishAndKootenai: Coding.FactoryCreateStrict({
+    v3_Race_SalishAndKootenai: Coding.FromStrict({
         code: "1560-2",
         display: "Salish and Kootenai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3414,7 +3413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Schaghticoke
      */
-    v3_Race_Schaghticoke: Coding.FactoryCreateStrict({
+    v3_Race_Schaghticoke: Coding.FromStrict({
         code: "1562-8",
         display: "Schaghticoke",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3422,7 +3421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Scott Valley
      */
-    v3_Race_ScottValley: Coding.FactoryCreateStrict({
+    v3_Race_ScottValley: Coding.FromStrict({
         code: "1564-4",
         display: "Scott Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3430,7 +3429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Seminole
      */
-    v3_Race_Seminole: Coding.FactoryCreateStrict({
+    v3_Race_Seminole: Coding.FromStrict({
         code: "1566-9",
         display: "Seminole",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3438,7 +3437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Big Cypress
      */
-    v3_Race_BigCypress: Coding.FactoryCreateStrict({
+    v3_Race_BigCypress: Coding.FromStrict({
         code: "1567-7",
         display: "Big Cypress",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3446,7 +3445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Brighton
      */
-    v3_Race_Brighton: Coding.FactoryCreateStrict({
+    v3_Race_Brighton: Coding.FromStrict({
         code: "1568-5",
         display: "Brighton",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3454,7 +3453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Florida Seminole
      */
-    v3_Race_FloridaSeminole: Coding.FactoryCreateStrict({
+    v3_Race_FloridaSeminole: Coding.FromStrict({
         code: "1569-3",
         display: "Florida Seminole",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3462,7 +3461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hollywood Seminole
      */
-    v3_Race_HollywoodSeminole: Coding.FactoryCreateStrict({
+    v3_Race_HollywoodSeminole: Coding.FromStrict({
         code: "1570-1",
         display: "Hollywood Seminole",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3470,7 +3469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oklahoma Seminole
      */
-    v3_Race_OklahomaSeminole: Coding.FactoryCreateStrict({
+    v3_Race_OklahomaSeminole: Coding.FromStrict({
         code: "1571-9",
         display: "Oklahoma Seminole",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3478,7 +3477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Serrano
      */
-    v3_Race_Serrano: Coding.FactoryCreateStrict({
+    v3_Race_Serrano: Coding.FromStrict({
         code: "1573-5",
         display: "Serrano",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3486,7 +3485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Manual
      */
-    v3_Race_SanManual: Coding.FactoryCreateStrict({
+    v3_Race_SanManual: Coding.FromStrict({
         code: "1574-3",
         display: "San Manual",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3494,7 +3493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shasta
      */
-    v3_Race_Shasta: Coding.FactoryCreateStrict({
+    v3_Race_Shasta: Coding.FromStrict({
         code: "1576-8",
         display: "Shasta",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3502,7 +3501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shawnee
      */
-    v3_Race_Shawnee: Coding.FactoryCreateStrict({
+    v3_Race_Shawnee: Coding.FromStrict({
         code: "1578-4",
         display: "Shawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3510,7 +3509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Absentee Shawnee
      */
-    v3_Race_AbsenteeShawnee: Coding.FactoryCreateStrict({
+    v3_Race_AbsenteeShawnee: Coding.FromStrict({
         code: "1579-2",
         display: "Absentee Shawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3518,7 +3517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eastern Shawnee
      */
-    v3_Race_EasternShawnee: Coding.FactoryCreateStrict({
+    v3_Race_EasternShawnee: Coding.FromStrict({
         code: "1580-0",
         display: "Eastern Shawnee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3526,7 +3525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shinnecock
      */
-    v3_Race_Shinnecock: Coding.FactoryCreateStrict({
+    v3_Race_Shinnecock: Coding.FromStrict({
         code: "1582-6",
         display: "Shinnecock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3534,7 +3533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shoalwater Bay
      */
-    v3_Race_ShoalwaterBay: Coding.FactoryCreateStrict({
+    v3_Race_ShoalwaterBay: Coding.FromStrict({
         code: "1584-2",
         display: "Shoalwater Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3542,7 +3541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shoshone
      */
-    v3_Race_Shoshone: Coding.FactoryCreateStrict({
+    v3_Race_Shoshone: Coding.FromStrict({
         code: "1586-7",
         display: "Shoshone",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3550,7 +3549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Battle Mountain
      */
-    v3_Race_BattleMountain: Coding.FactoryCreateStrict({
+    v3_Race_BattleMountain: Coding.FromStrict({
         code: "1587-5",
         display: "Battle Mountain",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3558,7 +3557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Duckwater
      */
-    v3_Race_Duckwater: Coding.FactoryCreateStrict({
+    v3_Race_Duckwater: Coding.FromStrict({
         code: "1588-3",
         display: "Duckwater",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3566,7 +3565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Elko
      */
-    v3_Race_Elko: Coding.FactoryCreateStrict({
+    v3_Race_Elko: Coding.FromStrict({
         code: "1589-1",
         display: "Elko",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3574,7 +3573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ely
      */
-    v3_Race_Ely: Coding.FactoryCreateStrict({
+    v3_Race_Ely: Coding.FromStrict({
         code: "1590-9",
         display: "Ely",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3582,7 +3581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Goshute
      */
-    v3_Race_Goshute: Coding.FactoryCreateStrict({
+    v3_Race_Goshute: Coding.FromStrict({
         code: "1591-7",
         display: "Goshute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3590,7 +3589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Panamint
      */
-    v3_Race_Panamint: Coding.FactoryCreateStrict({
+    v3_Race_Panamint: Coding.FromStrict({
         code: "1592-5",
         display: "Panamint",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3598,7 +3597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ruby Valley
      */
-    v3_Race_RubyValley: Coding.FactoryCreateStrict({
+    v3_Race_RubyValley: Coding.FromStrict({
         code: "1593-3",
         display: "Ruby Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3606,7 +3605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Skull Valley
      */
-    v3_Race_SkullValley: Coding.FactoryCreateStrict({
+    v3_Race_SkullValley: Coding.FromStrict({
         code: "1594-1",
         display: "Skull Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3614,7 +3613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * South Fork Shoshone
      */
-    v3_Race_SouthForkShoshone: Coding.FactoryCreateStrict({
+    v3_Race_SouthForkShoshone: Coding.FromStrict({
         code: "1595-8",
         display: "South Fork Shoshone",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3622,7 +3621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Te-Moak Western Shoshone
      */
-    v3_Race_TeMoakWesternShoshone: Coding.FactoryCreateStrict({
+    v3_Race_TeMoakWesternShoshone: Coding.FromStrict({
         code: "1596-6",
         display: "Te-Moak Western Shoshone",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3630,7 +3629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Timbi-Sha Shoshone
      */
-    v3_Race_TimbiShaShoshone: Coding.FactoryCreateStrict({
+    v3_Race_TimbiShaShoshone: Coding.FromStrict({
         code: "1597-4",
         display: "Timbi-Sha Shoshone",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3638,7 +3637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Washakie
      */
-    v3_Race_Washakie: Coding.FactoryCreateStrict({
+    v3_Race_Washakie: Coding.FromStrict({
         code: "1598-2",
         display: "Washakie",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3646,7 +3645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wind River Shoshone
      */
-    v3_Race_WindRiverShoshone: Coding.FactoryCreateStrict({
+    v3_Race_WindRiverShoshone: Coding.FromStrict({
         code: "1599-0",
         display: "Wind River Shoshone",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3654,7 +3653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yomba
      */
-    v3_Race_Yomba: Coding.FactoryCreateStrict({
+    v3_Race_Yomba: Coding.FromStrict({
         code: "1600-6",
         display: "Yomba",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3662,7 +3661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shoshone Paiute
      */
-    v3_Race_ShoshonePaiute: Coding.FactoryCreateStrict({
+    v3_Race_ShoshonePaiute: Coding.FromStrict({
         code: "1602-2",
         display: "Shoshone Paiute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3670,7 +3669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Duck Valley
      */
-    v3_Race_DuckValley: Coding.FactoryCreateStrict({
+    v3_Race_DuckValley: Coding.FromStrict({
         code: "1603-0",
         display: "Duck Valley",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3678,7 +3677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fallon
      */
-    v3_Race_Fallon: Coding.FactoryCreateStrict({
+    v3_Race_Fallon: Coding.FromStrict({
         code: "1604-8",
         display: "Fallon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3686,7 +3685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort McDermitt
      */
-    v3_Race_FortMcDermitt: Coding.FactoryCreateStrict({
+    v3_Race_FortMcDermitt: Coding.FromStrict({
         code: "1605-5",
         display: "Fort McDermitt",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3694,7 +3693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Siletz
      */
-    v3_Race_Siletz: Coding.FactoryCreateStrict({
+    v3_Race_Siletz: Coding.FromStrict({
         code: "1607-1",
         display: "Siletz",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3702,7 +3701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sioux
      */
-    v3_Race_Sioux: Coding.FactoryCreateStrict({
+    v3_Race_Sioux: Coding.FromStrict({
         code: "1609-7",
         display: "Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3710,7 +3709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Blackfoot Sioux
      */
-    v3_Race_BlackfootSioux: Coding.FactoryCreateStrict({
+    v3_Race_BlackfootSioux: Coding.FromStrict({
         code: "1610-5",
         display: "Blackfoot Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3718,7 +3717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Brule Sioux
      */
-    v3_Race_BruleSioux: Coding.FactoryCreateStrict({
+    v3_Race_BruleSioux: Coding.FromStrict({
         code: "1611-3",
         display: "Brule Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3726,7 +3725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cheyenne River Sioux
      */
-    v3_Race_CheyenneRiverSioux: Coding.FactoryCreateStrict({
+    v3_Race_CheyenneRiverSioux: Coding.FromStrict({
         code: "1612-1",
         display: "Cheyenne River Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3734,7 +3733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Crow Creek Sioux
      */
-    v3_Race_CrowCreekSioux: Coding.FactoryCreateStrict({
+    v3_Race_CrowCreekSioux: Coding.FromStrict({
         code: "1613-9",
         display: "Crow Creek Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3742,7 +3741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dakota Sioux
      */
-    v3_Race_DakotaSioux: Coding.FactoryCreateStrict({
+    v3_Race_DakotaSioux: Coding.FromStrict({
         code: "1614-7",
         display: "Dakota Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3750,7 +3749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Flandreau Santee
      */
-    v3_Race_FlandreauSantee: Coding.FactoryCreateStrict({
+    v3_Race_FlandreauSantee: Coding.FromStrict({
         code: "1615-4",
         display: "Flandreau Santee",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3758,7 +3757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Peck
      */
-    v3_Race_FortPeck: Coding.FactoryCreateStrict({
+    v3_Race_FortPeck: Coding.FromStrict({
         code: "1616-2",
         display: "Fort Peck",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3766,7 +3765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lake Traverse Sioux
      */
-    v3_Race_LakeTraverseSioux: Coding.FactoryCreateStrict({
+    v3_Race_LakeTraverseSioux: Coding.FromStrict({
         code: "1617-0",
         display: "Lake Traverse Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3774,7 +3773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Brule Sioux
      */
-    v3_Race_LowerBruleSioux: Coding.FactoryCreateStrict({
+    v3_Race_LowerBruleSioux: Coding.FromStrict({
         code: "1618-8",
         display: "Lower Brule Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3782,7 +3781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Sioux
      */
-    v3_Race_LowerSioux: Coding.FactoryCreateStrict({
+    v3_Race_LowerSioux: Coding.FromStrict({
         code: "1619-6",
         display: "Lower Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3790,7 +3789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mdewakanton Sioux
      */
-    v3_Race_MdewakantonSioux: Coding.FactoryCreateStrict({
+    v3_Race_MdewakantonSioux: Coding.FromStrict({
         code: "1620-4",
         display: "Mdewakanton Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3798,7 +3797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Miniconjou
      */
-    v3_Race_Miniconjou: Coding.FactoryCreateStrict({
+    v3_Race_Miniconjou: Coding.FromStrict({
         code: "1621-2",
         display: "Miniconjou",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3806,7 +3805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oglala Sioux
      */
-    v3_Race_OglalaSioux: Coding.FactoryCreateStrict({
+    v3_Race_OglalaSioux: Coding.FromStrict({
         code: "1622-0",
         display: "Oglala Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3814,7 +3813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pine Ridge Sioux
      */
-    v3_Race_PineRidgeSioux: Coding.FactoryCreateStrict({
+    v3_Race_PineRidgeSioux: Coding.FromStrict({
         code: "1623-8",
         display: "Pine Ridge Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3822,7 +3821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pipestone Sioux
      */
-    v3_Race_PipestoneSioux: Coding.FactoryCreateStrict({
+    v3_Race_PipestoneSioux: Coding.FromStrict({
         code: "1624-6",
         display: "Pipestone Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3830,7 +3829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Prairie Island Sioux
      */
-    v3_Race_PrairieIslandSioux: Coding.FactoryCreateStrict({
+    v3_Race_PrairieIslandSioux: Coding.FromStrict({
         code: "1625-3",
         display: "Prairie Island Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3838,7 +3837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Prior Lake Sioux
      */
-    v3_Race_PriorLakeSioux: Coding.FactoryCreateStrict({
+    v3_Race_PriorLakeSioux: Coding.FromStrict({
         code: "1626-1",
         display: "Prior Lake Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3846,7 +3845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Rosebud Sioux
      */
-    v3_Race_RosebudSioux: Coding.FactoryCreateStrict({
+    v3_Race_RosebudSioux: Coding.FromStrict({
         code: "1627-9",
         display: "Rosebud Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3854,7 +3853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sans Arc Sioux
      */
-    v3_Race_SansArcSioux: Coding.FactoryCreateStrict({
+    v3_Race_SansArcSioux: Coding.FromStrict({
         code: "1628-7",
         display: "Sans Arc Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3862,7 +3861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Santee Sioux
      */
-    v3_Race_SanteeSioux: Coding.FactoryCreateStrict({
+    v3_Race_SanteeSioux: Coding.FromStrict({
         code: "1629-5",
         display: "Santee Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3870,7 +3869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sisseton-Wahpeton
      */
-    v3_Race_SissetonWahpeton: Coding.FactoryCreateStrict({
+    v3_Race_SissetonWahpeton: Coding.FromStrict({
         code: "1630-3",
         display: "Sisseton-Wahpeton",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3878,7 +3877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sisseton Sioux
      */
-    v3_Race_SissetonSioux: Coding.FactoryCreateStrict({
+    v3_Race_SissetonSioux: Coding.FromStrict({
         code: "1631-1",
         display: "Sisseton Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3886,7 +3885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Spirit Lake Sioux
      */
-    v3_Race_SpiritLakeSioux: Coding.FactoryCreateStrict({
+    v3_Race_SpiritLakeSioux: Coding.FromStrict({
         code: "1632-9",
         display: "Spirit Lake Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3894,7 +3893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Standing Rock Sioux
      */
-    v3_Race_StandingRockSioux: Coding.FactoryCreateStrict({
+    v3_Race_StandingRockSioux: Coding.FromStrict({
         code: "1633-7",
         display: "Standing Rock Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3902,7 +3901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Teton Sioux
      */
-    v3_Race_TetonSioux: Coding.FactoryCreateStrict({
+    v3_Race_TetonSioux: Coding.FromStrict({
         code: "1634-5",
         display: "Teton Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3910,7 +3909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Two Kettle Sioux
      */
-    v3_Race_TwoKettleSioux: Coding.FactoryCreateStrict({
+    v3_Race_TwoKettleSioux: Coding.FromStrict({
         code: "1635-2",
         display: "Two Kettle Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3918,7 +3917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Upper Sioux
      */
-    v3_Race_UpperSioux: Coding.FactoryCreateStrict({
+    v3_Race_UpperSioux: Coding.FromStrict({
         code: "1636-0",
         display: "Upper Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3926,7 +3925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wahpekute Sioux
      */
-    v3_Race_WahpekuteSioux: Coding.FactoryCreateStrict({
+    v3_Race_WahpekuteSioux: Coding.FromStrict({
         code: "1637-8",
         display: "Wahpekute Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3934,7 +3933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wahpeton Sioux
      */
-    v3_Race_WahpetonSioux: Coding.FactoryCreateStrict({
+    v3_Race_WahpetonSioux: Coding.FromStrict({
         code: "1638-6",
         display: "Wahpeton Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3942,7 +3941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wazhaza Sioux
      */
-    v3_Race_WazhazaSioux: Coding.FactoryCreateStrict({
+    v3_Race_WazhazaSioux: Coding.FromStrict({
         code: "1639-4",
         display: "Wazhaza Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3950,7 +3949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yankton Sioux
      */
-    v3_Race_YanktonSioux: Coding.FactoryCreateStrict({
+    v3_Race_YanktonSioux: Coding.FromStrict({
         code: "1640-2",
         display: "Yankton Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3958,7 +3957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yanktonai Sioux
      */
-    v3_Race_YanktonaiSioux: Coding.FactoryCreateStrict({
+    v3_Race_YanktonaiSioux: Coding.FromStrict({
         code: "1641-0",
         display: "Yanktonai Sioux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3966,7 +3965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Siuslaw
      */
-    v3_Race_Siuslaw: Coding.FactoryCreateStrict({
+    v3_Race_Siuslaw: Coding.FromStrict({
         code: "1643-6",
         display: "Siuslaw",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3974,7 +3973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Spokane
      */
-    v3_Race_Spokane: Coding.FactoryCreateStrict({
+    v3_Race_Spokane: Coding.FromStrict({
         code: "1645-1",
         display: "Spokane",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3982,7 +3981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stewart
      */
-    v3_Race_Stewart: Coding.FactoryCreateStrict({
+    v3_Race_Stewart: Coding.FromStrict({
         code: "1647-7",
         display: "Stewart",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3990,7 +3989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stockbridge
      */
-    v3_Race_Stockbridge: Coding.FactoryCreateStrict({
+    v3_Race_Stockbridge: Coding.FromStrict({
         code: "1649-3",
         display: "Stockbridge",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -3998,7 +3997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Susanville
      */
-    v3_Race_Susanville: Coding.FactoryCreateStrict({
+    v3_Race_Susanville: Coding.FromStrict({
         code: "1651-9",
         display: "Susanville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4006,7 +4005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tohono O'Odham
      */
-    v3_Race_TohonoOQuoteOdham: Coding.FactoryCreateStrict({
+    v3_Race_TohonoOQuoteOdham: Coding.FromStrict({
         code: "1653-5",
         display: "Tohono O'Odham",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4014,7 +4013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ak-Chin
      */
-    v3_Race_AkChin: Coding.FactoryCreateStrict({
+    v3_Race_AkChin: Coding.FromStrict({
         code: "1654-3",
         display: "Ak-Chin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4022,7 +4021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gila Bend
      */
-    v3_Race_GilaBend: Coding.FactoryCreateStrict({
+    v3_Race_GilaBend: Coding.FromStrict({
         code: "1655-0",
         display: "Gila Bend",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4030,7 +4029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * San Xavier
      */
-    v3_Race_SanXavier: Coding.FactoryCreateStrict({
+    v3_Race_SanXavier: Coding.FromStrict({
         code: "1656-8",
         display: "San Xavier",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4038,7 +4037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sells
      */
-    v3_Race_Sells: Coding.FactoryCreateStrict({
+    v3_Race_Sells: Coding.FromStrict({
         code: "1657-6",
         display: "Sells",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4046,7 +4045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tolowa
      */
-    v3_Race_Tolowa: Coding.FactoryCreateStrict({
+    v3_Race_Tolowa: Coding.FromStrict({
         code: "1659-2",
         display: "Tolowa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4054,7 +4053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tonkawa
      */
-    v3_Race_Tonkawa: Coding.FactoryCreateStrict({
+    v3_Race_Tonkawa: Coding.FromStrict({
         code: "1661-8",
         display: "Tonkawa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4062,7 +4061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tygh
      */
-    v3_Race_Tygh: Coding.FactoryCreateStrict({
+    v3_Race_Tygh: Coding.FromStrict({
         code: "1663-4",
         display: "Tygh",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4070,7 +4069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Umatilla
      */
-    v3_Race_Umatilla: Coding.FactoryCreateStrict({
+    v3_Race_Umatilla: Coding.FromStrict({
         code: "1665-9",
         display: "Umatilla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4078,7 +4077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Umpqua
      */
-    v3_Race_Umpqua: Coding.FactoryCreateStrict({
+    v3_Race_Umpqua: Coding.FromStrict({
         code: "1667-5",
         display: "Umpqua",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4086,7 +4085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cow Creek Umpqua
      */
-    v3_Race_CowCreekUmpqua: Coding.FactoryCreateStrict({
+    v3_Race_CowCreekUmpqua: Coding.FromStrict({
         code: "1668-3",
         display: "Cow Creek Umpqua",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4094,7 +4093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ute
      */
-    v3_Race_Ute: Coding.FactoryCreateStrict({
+    v3_Race_Ute: Coding.FromStrict({
         code: "1670-9",
         display: "Ute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4102,7 +4101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Allen Canyon
      */
-    v3_Race_AllenCanyon: Coding.FactoryCreateStrict({
+    v3_Race_AllenCanyon: Coding.FromStrict({
         code: "1671-7",
         display: "Allen Canyon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4110,7 +4109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Uintah Ute
      */
-    v3_Race_UintahUte: Coding.FactoryCreateStrict({
+    v3_Race_UintahUte: Coding.FromStrict({
         code: "1672-5",
         display: "Uintah Ute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4118,7 +4117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ute Mountain Ute
      */
-    v3_Race_UteMountainUte: Coding.FactoryCreateStrict({
+    v3_Race_UteMountainUte: Coding.FromStrict({
         code: "1673-3",
         display: "Ute Mountain Ute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4126,7 +4125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wailaki
      */
-    v3_Race_Wailaki: Coding.FactoryCreateStrict({
+    v3_Race_Wailaki: Coding.FromStrict({
         code: "1675-8",
         display: "Wailaki",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4134,7 +4133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Walla-Walla
      */
-    v3_Race_WallaWalla: Coding.FactoryCreateStrict({
+    v3_Race_WallaWalla: Coding.FromStrict({
         code: "1677-4",
         display: "Walla-Walla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4142,7 +4141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wampanoag
      */
-    v3_Race_Wampanoag: Coding.FactoryCreateStrict({
+    v3_Race_Wampanoag: Coding.FromStrict({
         code: "1679-0",
         display: "Wampanoag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4150,7 +4149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gay Head Wampanoag
      */
-    v3_Race_GayHeadWampanoag: Coding.FactoryCreateStrict({
+    v3_Race_GayHeadWampanoag: Coding.FromStrict({
         code: "1680-8",
         display: "Gay Head Wampanoag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4158,7 +4157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mashpee Wampanoag
      */
-    v3_Race_MashpeeWampanoag: Coding.FactoryCreateStrict({
+    v3_Race_MashpeeWampanoag: Coding.FromStrict({
         code: "1681-6",
         display: "Mashpee Wampanoag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4166,7 +4165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Warm Springs
      */
-    v3_Race_WarmSprings: Coding.FactoryCreateStrict({
+    v3_Race_WarmSprings: Coding.FromStrict({
         code: "1683-2",
         display: "Warm Springs",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4174,7 +4173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wascopum
      */
-    v3_Race_Wascopum: Coding.FactoryCreateStrict({
+    v3_Race_Wascopum: Coding.FromStrict({
         code: "1685-7",
         display: "Wascopum",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4182,7 +4181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Washoe
      */
-    v3_Race_Washoe: Coding.FactoryCreateStrict({
+    v3_Race_Washoe: Coding.FromStrict({
         code: "1687-3",
         display: "Washoe",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4190,7 +4189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alpine
      */
-    v3_Race_Alpine: Coding.FactoryCreateStrict({
+    v3_Race_Alpine: Coding.FromStrict({
         code: "1688-1",
         display: "Alpine",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4198,7 +4197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Carson
      */
-    v3_Race_Carson: Coding.FactoryCreateStrict({
+    v3_Race_Carson: Coding.FromStrict({
         code: "1689-9",
         display: "Carson",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4206,7 +4205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dresslerville
      */
-    v3_Race_Dresslerville: Coding.FactoryCreateStrict({
+    v3_Race_Dresslerville: Coding.FromStrict({
         code: "1690-7",
         display: "Dresslerville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4214,7 +4213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wichita
      */
-    v3_Race_Wichita: Coding.FactoryCreateStrict({
+    v3_Race_Wichita: Coding.FromStrict({
         code: "1692-3",
         display: "Wichita",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4222,7 +4221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wind River
      */
-    v3_Race_WindRiver: Coding.FactoryCreateStrict({
+    v3_Race_WindRiver: Coding.FromStrict({
         code: "1694-9",
         display: "Wind River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4230,7 +4229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Winnebago
      */
-    v3_Race_Winnebago: Coding.FactoryCreateStrict({
+    v3_Race_Winnebago: Coding.FromStrict({
         code: "1696-4",
         display: "Winnebago",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4238,7 +4237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ho-chunk
      */
-    v3_Race_HoChunk: Coding.FactoryCreateStrict({
+    v3_Race_HoChunk: Coding.FromStrict({
         code: "1697-2",
         display: "Ho-chunk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4246,7 +4245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nebraska Winnebago
      */
-    v3_Race_NebraskaWinnebago: Coding.FactoryCreateStrict({
+    v3_Race_NebraskaWinnebago: Coding.FromStrict({
         code: "1698-0",
         display: "Nebraska Winnebago",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4254,7 +4253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Winnemucca
      */
-    v3_Race_Winnemucca: Coding.FactoryCreateStrict({
+    v3_Race_Winnemucca: Coding.FromStrict({
         code: "1700-4",
         display: "Winnemucca",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4262,7 +4261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wintun
      */
-    v3_Race_Wintun: Coding.FactoryCreateStrict({
+    v3_Race_Wintun: Coding.FromStrict({
         code: "1702-0",
         display: "Wintun",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4270,7 +4269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wiyot
      */
-    v3_Race_Wiyot: Coding.FactoryCreateStrict({
+    v3_Race_Wiyot: Coding.FromStrict({
         code: "1704-6",
         display: "Wiyot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4278,7 +4277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Table Bluff
      */
-    v3_Race_TableBluff: Coding.FactoryCreateStrict({
+    v3_Race_TableBluff: Coding.FromStrict({
         code: "1705-3",
         display: "Table Bluff",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4286,7 +4285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yakama
      */
-    v3_Race_Yakama: Coding.FactoryCreateStrict({
+    v3_Race_Yakama: Coding.FromStrict({
         code: "1707-9",
         display: "Yakama",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4294,7 +4293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yakama Cowlitz
      */
-    v3_Race_YakamaCowlitz: Coding.FactoryCreateStrict({
+    v3_Race_YakamaCowlitz: Coding.FromStrict({
         code: "1709-5",
         display: "Yakama Cowlitz",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4302,7 +4301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yaqui
      */
-    v3_Race_Yaqui: Coding.FactoryCreateStrict({
+    v3_Race_Yaqui: Coding.FromStrict({
         code: "1711-1",
         display: "Yaqui",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4310,7 +4309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Barrio Libre
      */
-    v3_Race_BarrioLibre: Coding.FactoryCreateStrict({
+    v3_Race_BarrioLibre: Coding.FromStrict({
         code: "1712-9",
         display: "Barrio Libre",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4318,7 +4317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pascua Yaqui
      */
-    v3_Race_PascuaYaqui: Coding.FactoryCreateStrict({
+    v3_Race_PascuaYaqui: Coding.FromStrict({
         code: "1713-7",
         display: "Pascua Yaqui",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4326,7 +4325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yavapai Apache
      */
-    v3_Race_YavapaiApache: Coding.FactoryCreateStrict({
+    v3_Race_YavapaiApache: Coding.FromStrict({
         code: "1715-2",
         display: "Yavapai Apache",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4334,7 +4333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yokuts
      */
-    v3_Race_Yokuts: Coding.FactoryCreateStrict({
+    v3_Race_Yokuts: Coding.FromStrict({
         code: "1717-8",
         display: "Yokuts",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4342,7 +4341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chukchansi
      */
-    v3_Race_Chukchansi: Coding.FactoryCreateStrict({
+    v3_Race_Chukchansi: Coding.FromStrict({
         code: "1718-6",
         display: "Chukchansi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4350,7 +4349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tachi
      */
-    v3_Race_Tachi: Coding.FactoryCreateStrict({
+    v3_Race_Tachi: Coding.FromStrict({
         code: "1719-4",
         display: "Tachi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4358,7 +4357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tule River
      */
-    v3_Race_TuleRiver: Coding.FactoryCreateStrict({
+    v3_Race_TuleRiver: Coding.FromStrict({
         code: "1720-2",
         display: "Tule River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4366,7 +4365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yuchi
      */
-    v3_Race_Yuchi: Coding.FactoryCreateStrict({
+    v3_Race_Yuchi: Coding.FromStrict({
         code: "1722-8",
         display: "Yuchi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4374,7 +4373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yuman
      */
-    v3_Race_Yuman: Coding.FactoryCreateStrict({
+    v3_Race_Yuman: Coding.FromStrict({
         code: "1724-4",
         display: "Yuman",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4382,7 +4381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cocopah
      */
-    v3_Race_Cocopah: Coding.FactoryCreateStrict({
+    v3_Race_Cocopah: Coding.FromStrict({
         code: "1725-1",
         display: "Cocopah",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4390,7 +4389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Havasupai
      */
-    v3_Race_Havasupai: Coding.FactoryCreateStrict({
+    v3_Race_Havasupai: Coding.FromStrict({
         code: "1726-9",
         display: "Havasupai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4398,7 +4397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hualapai
      */
-    v3_Race_Hualapai: Coding.FactoryCreateStrict({
+    v3_Race_Hualapai: Coding.FromStrict({
         code: "1727-7",
         display: "Hualapai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4406,7 +4405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Maricopa
      */
-    v3_Race_Maricopa: Coding.FactoryCreateStrict({
+    v3_Race_Maricopa: Coding.FromStrict({
         code: "1728-5",
         display: "Maricopa",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4414,7 +4413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mohave
      */
-    v3_Race_Mohave: Coding.FactoryCreateStrict({
+    v3_Race_Mohave: Coding.FromStrict({
         code: "1729-3",
         display: "Mohave",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4422,7 +4421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Quechan
      */
-    v3_Race_Quechan: Coding.FactoryCreateStrict({
+    v3_Race_Quechan: Coding.FromStrict({
         code: "1730-1",
         display: "Quechan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4430,7 +4429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yavapai
      */
-    v3_Race_Yavapai: Coding.FactoryCreateStrict({
+    v3_Race_Yavapai: Coding.FromStrict({
         code: "1731-9",
         display: "Yavapai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4438,7 +4437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yurok
      */
-    v3_Race_Yurok: Coding.FactoryCreateStrict({
+    v3_Race_Yurok: Coding.FromStrict({
         code: "1732-7",
         display: "Yurok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4446,7 +4445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Coast Yurok
      */
-    v3_Race_CoastYurok: Coding.FactoryCreateStrict({
+    v3_Race_CoastYurok: Coding.FromStrict({
         code: "1733-5",
         display: "Coast Yurok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4454,7 +4453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alaska Native
      */
-    v3_Race_AlaskaNative: Coding.FactoryCreateStrict({
+    v3_Race_AlaskaNative: Coding.FromStrict({
         code: "1735-0",
         display: "Alaska Native",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4462,7 +4461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alaska Indian
      */
-    v3_Race_AlaskaIndian: Coding.FactoryCreateStrict({
+    v3_Race_AlaskaIndian: Coding.FromStrict({
         code: "1737-6",
         display: "Alaska Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4470,7 +4469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alaskan Athabascan
      */
-    v3_Race_AlaskanAthabascan: Coding.FactoryCreateStrict({
+    v3_Race_AlaskanAthabascan: Coding.FromStrict({
         code: "1739-2",
         display: "Alaskan Athabascan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4478,7 +4477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ahtna
      */
-    v3_Race_Ahtna: Coding.FactoryCreateStrict({
+    v3_Race_Ahtna: Coding.FromStrict({
         code: "1740-0",
         display: "Ahtna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4486,7 +4485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alatna
      */
-    v3_Race_Alatna: Coding.FactoryCreateStrict({
+    v3_Race_Alatna: Coding.FromStrict({
         code: "1741-8",
         display: "Alatna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4494,7 +4493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alexander
      */
-    v3_Race_Alexander: Coding.FactoryCreateStrict({
+    v3_Race_Alexander: Coding.FromStrict({
         code: "1742-6",
         display: "Alexander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4502,7 +4501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Allakaket
      */
-    v3_Race_Allakaket: Coding.FactoryCreateStrict({
+    v3_Race_Allakaket: Coding.FromStrict({
         code: "1743-4",
         display: "Allakaket",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4510,7 +4509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alanvik
      */
-    v3_Race_Alanvik: Coding.FactoryCreateStrict({
+    v3_Race_Alanvik: Coding.FromStrict({
         code: "1744-2",
         display: "Alanvik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4518,7 +4517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Anvik
      */
-    v3_Race_Anvik: Coding.FactoryCreateStrict({
+    v3_Race_Anvik: Coding.FromStrict({
         code: "1745-9",
         display: "Anvik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4526,7 +4525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arctic
      */
-    v3_Race_Arctic: Coding.FactoryCreateStrict({
+    v3_Race_Arctic: Coding.FromStrict({
         code: "1746-7",
         display: "Arctic",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4534,7 +4533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Beaver
      */
-    v3_Race_Beaver: Coding.FactoryCreateStrict({
+    v3_Race_Beaver: Coding.FromStrict({
         code: "1747-5",
         display: "Beaver",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4542,7 +4541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Birch Creek
      */
-    v3_Race_BirchCreek: Coding.FactoryCreateStrict({
+    v3_Race_BirchCreek: Coding.FromStrict({
         code: "1748-3",
         display: "Birch Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4550,7 +4549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cantwell
      */
-    v3_Race_Cantwell: Coding.FactoryCreateStrict({
+    v3_Race_Cantwell: Coding.FromStrict({
         code: "1749-1",
         display: "Cantwell",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4558,7 +4557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chalkyitsik
      */
-    v3_Race_Chalkyitsik: Coding.FactoryCreateStrict({
+    v3_Race_Chalkyitsik: Coding.FromStrict({
         code: "1750-9",
         display: "Chalkyitsik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4566,7 +4565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chickaloon
      */
-    v3_Race_Chickaloon: Coding.FactoryCreateStrict({
+    v3_Race_Chickaloon: Coding.FromStrict({
         code: "1751-7",
         display: "Chickaloon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4574,7 +4573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chistochina
      */
-    v3_Race_Chistochina: Coding.FactoryCreateStrict({
+    v3_Race_Chistochina: Coding.FromStrict({
         code: "1752-5",
         display: "Chistochina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4582,7 +4581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chitina
      */
-    v3_Race_Chitina: Coding.FactoryCreateStrict({
+    v3_Race_Chitina: Coding.FromStrict({
         code: "1753-3",
         display: "Chitina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4590,7 +4589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Circle
      */
-    v3_Race_Circle: Coding.FactoryCreateStrict({
+    v3_Race_Circle: Coding.FromStrict({
         code: "1754-1",
         display: "Circle",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4598,7 +4597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cook Inlet
      */
-    v3_Race_CookInlet: Coding.FactoryCreateStrict({
+    v3_Race_CookInlet: Coding.FromStrict({
         code: "1755-8",
         display: "Cook Inlet",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4606,7 +4605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Copper Center
      */
-    v3_Race_CopperCenter: Coding.FactoryCreateStrict({
+    v3_Race_CopperCenter: Coding.FromStrict({
         code: "1756-6",
         display: "Copper Center",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4614,7 +4613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Copper River
      */
-    v3_Race_CopperRiver: Coding.FactoryCreateStrict({
+    v3_Race_CopperRiver: Coding.FromStrict({
         code: "1757-4",
         display: "Copper River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4622,7 +4621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dot Lake
      */
-    v3_Race_DotLake: Coding.FactoryCreateStrict({
+    v3_Race_DotLake: Coding.FromStrict({
         code: "1758-2",
         display: "Dot Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4630,7 +4629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Doyon
      */
-    v3_Race_Doyon: Coding.FactoryCreateStrict({
+    v3_Race_Doyon: Coding.FromStrict({
         code: "1759-0",
         display: "Doyon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4638,7 +4637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eagle
      */
-    v3_Race_Eagle: Coding.FactoryCreateStrict({
+    v3_Race_Eagle: Coding.FromStrict({
         code: "1760-8",
         display: "Eagle",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4646,7 +4645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eklutna
      */
-    v3_Race_Eklutna: Coding.FactoryCreateStrict({
+    v3_Race_Eklutna: Coding.FromStrict({
         code: "1761-6",
         display: "Eklutna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4654,7 +4653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Evansville
      */
-    v3_Race_Evansville: Coding.FactoryCreateStrict({
+    v3_Race_Evansville: Coding.FromStrict({
         code: "1762-4",
         display: "Evansville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4662,7 +4661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fort Yukon
      */
-    v3_Race_FortYukon: Coding.FactoryCreateStrict({
+    v3_Race_FortYukon: Coding.FromStrict({
         code: "1763-2",
         display: "Fort Yukon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4670,7 +4669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gakona
      */
-    v3_Race_Gakona: Coding.FactoryCreateStrict({
+    v3_Race_Gakona: Coding.FromStrict({
         code: "1764-0",
         display: "Gakona",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4678,7 +4677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Galena
      */
-    v3_Race_Galena: Coding.FactoryCreateStrict({
+    v3_Race_Galena: Coding.FromStrict({
         code: "1765-7",
         display: "Galena",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4686,7 +4685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Grayling
      */
-    v3_Race_Grayling: Coding.FactoryCreateStrict({
+    v3_Race_Grayling: Coding.FromStrict({
         code: "1766-5",
         display: "Grayling",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4694,7 +4693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gulkana
      */
-    v3_Race_Gulkana: Coding.FactoryCreateStrict({
+    v3_Race_Gulkana: Coding.FromStrict({
         code: "1767-3",
         display: "Gulkana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4702,7 +4701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Healy Lake
      */
-    v3_Race_HealyLake: Coding.FactoryCreateStrict({
+    v3_Race_HealyLake: Coding.FromStrict({
         code: "1768-1",
         display: "Healy Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4710,7 +4709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Holy Cross
      */
-    v3_Race_HolyCross: Coding.FactoryCreateStrict({
+    v3_Race_HolyCross: Coding.FromStrict({
         code: "1769-9",
         display: "Holy Cross",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4718,7 +4717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hughes
      */
-    v3_Race_Hughes: Coding.FactoryCreateStrict({
+    v3_Race_Hughes: Coding.FromStrict({
         code: "1770-7",
         display: "Hughes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4726,7 +4725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Huslia
      */
-    v3_Race_Huslia: Coding.FactoryCreateStrict({
+    v3_Race_Huslia: Coding.FromStrict({
         code: "1771-5",
         display: "Huslia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4734,7 +4733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iliamna
      */
-    v3_Race_Iliamna: Coding.FactoryCreateStrict({
+    v3_Race_Iliamna: Coding.FromStrict({
         code: "1772-3",
         display: "Iliamna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4742,7 +4741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kaltag
      */
-    v3_Race_Kaltag: Coding.FactoryCreateStrict({
+    v3_Race_Kaltag: Coding.FromStrict({
         code: "1773-1",
         display: "Kaltag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4750,7 +4749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kluti Kaah
      */
-    v3_Race_KlutiKaah: Coding.FactoryCreateStrict({
+    v3_Race_KlutiKaah: Coding.FromStrict({
         code: "1774-9",
         display: "Kluti Kaah",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4758,7 +4757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Knik
      */
-    v3_Race_Knik: Coding.FactoryCreateStrict({
+    v3_Race_Knik: Coding.FromStrict({
         code: "1775-6",
         display: "Knik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4766,7 +4765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Koyukuk
      */
-    v3_Race_Koyukuk: Coding.FactoryCreateStrict({
+    v3_Race_Koyukuk: Coding.FromStrict({
         code: "1776-4",
         display: "Koyukuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4774,7 +4773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lake Minchumina
      */
-    v3_Race_LakeMinchumina: Coding.FactoryCreateStrict({
+    v3_Race_LakeMinchumina: Coding.FromStrict({
         code: "1777-2",
         display: "Lake Minchumina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4782,7 +4781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lime
      */
-    v3_Race_Lime: Coding.FactoryCreateStrict({
+    v3_Race_Lime: Coding.FromStrict({
         code: "1778-0",
         display: "Lime",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4790,7 +4789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mcgrath
      */
-    v3_Race_Mcgrath: Coding.FactoryCreateStrict({
+    v3_Race_Mcgrath: Coding.FromStrict({
         code: "1779-8",
         display: "Mcgrath",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4798,7 +4797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Manley Hot Springs
      */
-    v3_Race_ManleyHotSprings: Coding.FactoryCreateStrict({
+    v3_Race_ManleyHotSprings: Coding.FromStrict({
         code: "1780-6",
         display: "Manley Hot Springs",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4806,7 +4805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mentasta Lake
      */
-    v3_Race_MentastaLake: Coding.FactoryCreateStrict({
+    v3_Race_MentastaLake: Coding.FromStrict({
         code: "1781-4",
         display: "Mentasta Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4814,7 +4813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Minto
      */
-    v3_Race_Minto: Coding.FactoryCreateStrict({
+    v3_Race_Minto: Coding.FromStrict({
         code: "1782-2",
         display: "Minto",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4822,7 +4821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nenana
      */
-    v3_Race_Nenana: Coding.FactoryCreateStrict({
+    v3_Race_Nenana: Coding.FromStrict({
         code: "1783-0",
         display: "Nenana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4830,7 +4829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nikolai
      */
-    v3_Race_Nikolai: Coding.FactoryCreateStrict({
+    v3_Race_Nikolai: Coding.FromStrict({
         code: "1784-8",
         display: "Nikolai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4838,7 +4837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ninilchik
      */
-    v3_Race_Ninilchik: Coding.FactoryCreateStrict({
+    v3_Race_Ninilchik: Coding.FromStrict({
         code: "1785-5",
         display: "Ninilchik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4846,7 +4845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nondalton
      */
-    v3_Race_Nondalton: Coding.FactoryCreateStrict({
+    v3_Race_Nondalton: Coding.FromStrict({
         code: "1786-3",
         display: "Nondalton",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4854,7 +4853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Northway
      */
-    v3_Race_Northway: Coding.FactoryCreateStrict({
+    v3_Race_Northway: Coding.FromStrict({
         code: "1787-1",
         display: "Northway",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4862,7 +4861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nulato
      */
-    v3_Race_Nulato: Coding.FactoryCreateStrict({
+    v3_Race_Nulato: Coding.FromStrict({
         code: "1788-9",
         display: "Nulato",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4870,7 +4869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pedro Bay
      */
-    v3_Race_PedroBay: Coding.FactoryCreateStrict({
+    v3_Race_PedroBay: Coding.FromStrict({
         code: "1789-7",
         display: "Pedro Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4878,7 +4877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Rampart
      */
-    v3_Race_Rampart: Coding.FactoryCreateStrict({
+    v3_Race_Rampart: Coding.FromStrict({
         code: "1790-5",
         display: "Rampart",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4886,7 +4885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ruby
      */
-    v3_Race_Ruby: Coding.FactoryCreateStrict({
+    v3_Race_Ruby: Coding.FromStrict({
         code: "1791-3",
         display: "Ruby",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4894,7 +4893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Salamatof
      */
-    v3_Race_Salamatof: Coding.FactoryCreateStrict({
+    v3_Race_Salamatof: Coding.FromStrict({
         code: "1792-1",
         display: "Salamatof",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4902,7 +4901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Seldovia
      */
-    v3_Race_Seldovia: Coding.FactoryCreateStrict({
+    v3_Race_Seldovia: Coding.FromStrict({
         code: "1793-9",
         display: "Seldovia",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4910,7 +4909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Slana
      */
-    v3_Race_Slana: Coding.FactoryCreateStrict({
+    v3_Race_Slana: Coding.FromStrict({
         code: "1794-7",
         display: "Slana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4918,7 +4917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shageluk
      */
-    v3_Race_Shageluk: Coding.FactoryCreateStrict({
+    v3_Race_Shageluk: Coding.FromStrict({
         code: "1795-4",
         display: "Shageluk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4926,7 +4925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stevens
      */
-    v3_Race_Stevens: Coding.FactoryCreateStrict({
+    v3_Race_Stevens: Coding.FromStrict({
         code: "1796-2",
         display: "Stevens",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4934,7 +4933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stony River
      */
-    v3_Race_StonyRiver: Coding.FactoryCreateStrict({
+    v3_Race_StonyRiver: Coding.FromStrict({
         code: "1797-0",
         display: "Stony River",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4942,7 +4941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Takotna
      */
-    v3_Race_Takotna: Coding.FactoryCreateStrict({
+    v3_Race_Takotna: Coding.FromStrict({
         code: "1798-8",
         display: "Takotna",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4950,7 +4949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tanacross
      */
-    v3_Race_Tanacross: Coding.FactoryCreateStrict({
+    v3_Race_Tanacross: Coding.FromStrict({
         code: "1799-6",
         display: "Tanacross",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4958,7 +4957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tanaina
      */
-    v3_Race_Tanaina: Coding.FactoryCreateStrict({
+    v3_Race_Tanaina: Coding.FromStrict({
         code: "1800-2",
         display: "Tanaina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4966,7 +4965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tanana
      */
-    v3_Race_Tanana: Coding.FactoryCreateStrict({
+    v3_Race_Tanana: Coding.FromStrict({
         code: "1801-0",
         display: "Tanana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4974,7 +4973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tanana Chiefs
      */
-    v3_Race_TananaChiefs: Coding.FactoryCreateStrict({
+    v3_Race_TananaChiefs: Coding.FromStrict({
         code: "1802-8",
         display: "Tanana Chiefs",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4982,7 +4981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tazlina
      */
-    v3_Race_Tazlina: Coding.FactoryCreateStrict({
+    v3_Race_Tazlina: Coding.FromStrict({
         code: "1803-6",
         display: "Tazlina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4990,7 +4989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Telida
      */
-    v3_Race_Telida: Coding.FactoryCreateStrict({
+    v3_Race_Telida: Coding.FromStrict({
         code: "1804-4",
         display: "Telida",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -4998,7 +4997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tetlin
      */
-    v3_Race_Tetlin: Coding.FactoryCreateStrict({
+    v3_Race_Tetlin: Coding.FromStrict({
         code: "1805-1",
         display: "Tetlin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5006,7 +5005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tok
      */
-    v3_Race_Tok: Coding.FactoryCreateStrict({
+    v3_Race_Tok: Coding.FromStrict({
         code: "1806-9",
         display: "Tok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5014,7 +5013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tyonek
      */
-    v3_Race_Tyonek: Coding.FactoryCreateStrict({
+    v3_Race_Tyonek: Coding.FromStrict({
         code: "1807-7",
         display: "Tyonek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5022,7 +5021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Venetie
      */
-    v3_Race_Venetie: Coding.FactoryCreateStrict({
+    v3_Race_Venetie: Coding.FromStrict({
         code: "1808-5",
         display: "Venetie",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5030,7 +5029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wiseman
      */
-    v3_Race_Wiseman: Coding.FactoryCreateStrict({
+    v3_Race_Wiseman: Coding.FromStrict({
         code: "1809-3",
         display: "Wiseman",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5038,7 +5037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Southeast Alaska
      */
-    v3_Race_SoutheastAlaska: Coding.FactoryCreateStrict({
+    v3_Race_SoutheastAlaska: Coding.FromStrict({
         code: "1811-9",
         display: "Southeast Alaska",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5046,7 +5045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tlingit-Haida
      */
-    v3_Race_TlingitHaida: Coding.FactoryCreateStrict({
+    v3_Race_TlingitHaida: Coding.FromStrict({
         code: "1813-5",
         display: "Tlingit-Haida",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5054,7 +5053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Angoon
      */
-    v3_Race_Angoon: Coding.FactoryCreateStrict({
+    v3_Race_Angoon: Coding.FromStrict({
         code: "1814-3",
         display: "Angoon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5062,7 +5061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Central Council of Tlingit and Haida Tribes
      */
-    v3_Race_CentralCouncilOfTlingitAndHaidaTribes: Coding.FactoryCreateStrict({
+    v3_Race_CentralCouncilOfTlingitAndHaidaTribes: Coding.FromStrict({
         code: "1815-0",
         display: "Central Council of Tlingit and Haida Tribes",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5070,7 +5069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chilkat
      */
-    v3_Race_Chilkat: Coding.FactoryCreateStrict({
+    v3_Race_Chilkat: Coding.FromStrict({
         code: "1816-8",
         display: "Chilkat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5078,7 +5077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chilkoot
      */
-    v3_Race_Chilkoot: Coding.FactoryCreateStrict({
+    v3_Race_Chilkoot: Coding.FromStrict({
         code: "1817-6",
         display: "Chilkoot",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5086,7 +5085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Craig
      */
-    v3_Race_Craig: Coding.FactoryCreateStrict({
+    v3_Race_Craig: Coding.FromStrict({
         code: "1818-4",
         display: "Craig",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5094,7 +5093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Douglas
      */
-    v3_Race_Douglas: Coding.FactoryCreateStrict({
+    v3_Race_Douglas: Coding.FromStrict({
         code: "1819-2",
         display: "Douglas",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5102,7 +5101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Haida
      */
-    v3_Race_Haida: Coding.FactoryCreateStrict({
+    v3_Race_Haida: Coding.FromStrict({
         code: "1820-0",
         display: "Haida",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5110,7 +5109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hoonah
      */
-    v3_Race_Hoonah: Coding.FactoryCreateStrict({
+    v3_Race_Hoonah: Coding.FromStrict({
         code: "1821-8",
         display: "Hoonah",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5118,7 +5117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hydaburg
      */
-    v3_Race_Hydaburg: Coding.FactoryCreateStrict({
+    v3_Race_Hydaburg: Coding.FromStrict({
         code: "1822-6",
         display: "Hydaburg",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5126,7 +5125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kake
      */
-    v3_Race_Kake: Coding.FactoryCreateStrict({
+    v3_Race_Kake: Coding.FromStrict({
         code: "1823-4",
         display: "Kake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5134,7 +5133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kasaan
      */
-    v3_Race_Kasaan: Coding.FactoryCreateStrict({
+    v3_Race_Kasaan: Coding.FromStrict({
         code: "1824-2",
         display: "Kasaan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5142,7 +5141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kenaitze
      */
-    v3_Race_Kenaitze: Coding.FactoryCreateStrict({
+    v3_Race_Kenaitze: Coding.FromStrict({
         code: "1825-9",
         display: "Kenaitze",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5150,7 +5149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ketchikan
      */
-    v3_Race_Ketchikan: Coding.FactoryCreateStrict({
+    v3_Race_Ketchikan: Coding.FromStrict({
         code: "1826-7",
         display: "Ketchikan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5158,7 +5157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Klawock
      */
-    v3_Race_Klawock: Coding.FactoryCreateStrict({
+    v3_Race_Klawock: Coding.FromStrict({
         code: "1827-5",
         display: "Klawock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5166,7 +5165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pelican
      */
-    v3_Race_Pelican: Coding.FactoryCreateStrict({
+    v3_Race_Pelican: Coding.FromStrict({
         code: "1828-3",
         display: "Pelican",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5174,7 +5173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Petersburg
      */
-    v3_Race_Petersburg: Coding.FactoryCreateStrict({
+    v3_Race_Petersburg: Coding.FromStrict({
         code: "1829-1",
         display: "Petersburg",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5182,7 +5181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Saxman
      */
-    v3_Race_Saxman: Coding.FactoryCreateStrict({
+    v3_Race_Saxman: Coding.FromStrict({
         code: "1830-9",
         display: "Saxman",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5190,7 +5189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sitka
      */
-    v3_Race_Sitka: Coding.FactoryCreateStrict({
+    v3_Race_Sitka: Coding.FromStrict({
         code: "1831-7",
         display: "Sitka",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5198,7 +5197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tenakee Springs
      */
-    v3_Race_TenakeeSprings: Coding.FactoryCreateStrict({
+    v3_Race_TenakeeSprings: Coding.FromStrict({
         code: "1832-5",
         display: "Tenakee Springs",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5206,7 +5205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tlingit
      */
-    v3_Race_Tlingit: Coding.FactoryCreateStrict({
+    v3_Race_Tlingit: Coding.FromStrict({
         code: "1833-3",
         display: "Tlingit",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5214,7 +5213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wrangell
      */
-    v3_Race_Wrangell: Coding.FactoryCreateStrict({
+    v3_Race_Wrangell: Coding.FromStrict({
         code: "1834-1",
         display: "Wrangell",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5222,7 +5221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yakutat
      */
-    v3_Race_Yakutat: Coding.FactoryCreateStrict({
+    v3_Race_Yakutat: Coding.FromStrict({
         code: "1835-8",
         display: "Yakutat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5230,7 +5229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tsimshian
      */
-    v3_Race_Tsimshian: Coding.FactoryCreateStrict({
+    v3_Race_Tsimshian: Coding.FromStrict({
         code: "1837-4",
         display: "Tsimshian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5238,7 +5237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Metlakatla
      */
-    v3_Race_Metlakatla: Coding.FactoryCreateStrict({
+    v3_Race_Metlakatla: Coding.FromStrict({
         code: "1838-2",
         display: "Metlakatla",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5246,7 +5245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eskimo
      */
-    v3_Race_Eskimo: Coding.FactoryCreateStrict({
+    v3_Race_Eskimo: Coding.FromStrict({
         code: "1840-8",
         display: "Eskimo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5254,7 +5253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Greenland Eskimo
      */
-    v3_Race_GreenlandEskimo: Coding.FactoryCreateStrict({
+    v3_Race_GreenlandEskimo: Coding.FromStrict({
         code: "1842-4",
         display: "Greenland Eskimo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5262,7 +5261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Inupiat Eskimo
      */
-    v3_Race_InupiatEskimo: Coding.FactoryCreateStrict({
+    v3_Race_InupiatEskimo: Coding.FromStrict({
         code: "1844-0",
         display: "Inupiat Eskimo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5270,7 +5269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ambler
      */
-    v3_Race_Ambler: Coding.FactoryCreateStrict({
+    v3_Race_Ambler: Coding.FromStrict({
         code: "1845-7",
         display: "Ambler",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5278,7 +5277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Anaktuvuk
      */
-    v3_Race_Anaktuvuk: Coding.FactoryCreateStrict({
+    v3_Race_Anaktuvuk: Coding.FromStrict({
         code: "1846-5",
         display: "Anaktuvuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5286,7 +5285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Anaktuvuk Pass
      */
-    v3_Race_AnaktuvukPass: Coding.FactoryCreateStrict({
+    v3_Race_AnaktuvukPass: Coding.FromStrict({
         code: "1847-3",
         display: "Anaktuvuk Pass",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5294,7 +5293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arctic Slope Inupiat
      */
-    v3_Race_ArcticSlopeInupiat: Coding.FactoryCreateStrict({
+    v3_Race_ArcticSlopeInupiat: Coding.FromStrict({
         code: "1848-1",
         display: "Arctic Slope Inupiat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5302,7 +5301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arctic Slope Corporation
      */
-    v3_Race_ArcticSlopeCorporation: Coding.FactoryCreateStrict({
+    v3_Race_ArcticSlopeCorporation: Coding.FromStrict({
         code: "1849-9",
         display: "Arctic Slope Corporation",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5310,7 +5309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Atqasuk
      */
-    v3_Race_Atqasuk: Coding.FactoryCreateStrict({
+    v3_Race_Atqasuk: Coding.FromStrict({
         code: "1850-7",
         display: "Atqasuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5318,7 +5317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Barrow
      */
-    v3_Race_Barrow: Coding.FactoryCreateStrict({
+    v3_Race_Barrow: Coding.FromStrict({
         code: "1851-5",
         display: "Barrow",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5326,7 +5325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bering Straits Inupiat
      */
-    v3_Race_BeringStraitsInupiat: Coding.FactoryCreateStrict({
+    v3_Race_BeringStraitsInupiat: Coding.FromStrict({
         code: "1852-3",
         display: "Bering Straits Inupiat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5334,7 +5333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Brevig Mission
      */
-    v3_Race_BrevigMission: Coding.FactoryCreateStrict({
+    v3_Race_BrevigMission: Coding.FromStrict({
         code: "1853-1",
         display: "Brevig Mission",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5342,7 +5341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Buckland
      */
-    v3_Race_Buckland: Coding.FactoryCreateStrict({
+    v3_Race_Buckland: Coding.FromStrict({
         code: "1854-9",
         display: "Buckland",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5350,7 +5349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chinik
      */
-    v3_Race_Chinik: Coding.FactoryCreateStrict({
+    v3_Race_Chinik: Coding.FromStrict({
         code: "1855-6",
         display: "Chinik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5358,7 +5357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Council
      */
-    v3_Race_Council: Coding.FactoryCreateStrict({
+    v3_Race_Council: Coding.FromStrict({
         code: "1856-4",
         display: "Council",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5366,7 +5365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Deering
      */
-    v3_Race_Deering: Coding.FactoryCreateStrict({
+    v3_Race_Deering: Coding.FromStrict({
         code: "1857-2",
         display: "Deering",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5374,7 +5373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Elim
      */
-    v3_Race_Elim: Coding.FactoryCreateStrict({
+    v3_Race_Elim: Coding.FromStrict({
         code: "1858-0",
         display: "Elim",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5382,7 +5381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Golovin
      */
-    v3_Race_Golovin: Coding.FactoryCreateStrict({
+    v3_Race_Golovin: Coding.FromStrict({
         code: "1859-8",
         display: "Golovin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5390,7 +5389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Inalik Diomede
      */
-    v3_Race_InalikDiomede: Coding.FactoryCreateStrict({
+    v3_Race_InalikDiomede: Coding.FromStrict({
         code: "1860-6",
         display: "Inalik Diomede",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5398,7 +5397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Inupiaq
      */
-    v3_Race_Inupiaq: Coding.FactoryCreateStrict({
+    v3_Race_Inupiaq: Coding.FromStrict({
         code: "1861-4",
         display: "Inupiaq",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5406,7 +5405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kaktovik
      */
-    v3_Race_Kaktovik: Coding.FactoryCreateStrict({
+    v3_Race_Kaktovik: Coding.FromStrict({
         code: "1862-2",
         display: "Kaktovik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5414,7 +5413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kawerak
      */
-    v3_Race_Kawerak: Coding.FactoryCreateStrict({
+    v3_Race_Kawerak: Coding.FromStrict({
         code: "1863-0",
         display: "Kawerak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5422,7 +5421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kiana
      */
-    v3_Race_Kiana: Coding.FactoryCreateStrict({
+    v3_Race_Kiana: Coding.FromStrict({
         code: "1864-8",
         display: "Kiana",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5430,7 +5429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kivalina
      */
-    v3_Race_Kivalina: Coding.FactoryCreateStrict({
+    v3_Race_Kivalina: Coding.FromStrict({
         code: "1865-5",
         display: "Kivalina",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5438,7 +5437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kobuk
      */
-    v3_Race_Kobuk: Coding.FactoryCreateStrict({
+    v3_Race_Kobuk: Coding.FromStrict({
         code: "1866-3",
         display: "Kobuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5446,7 +5445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kotzebue
      */
-    v3_Race_Kotzebue: Coding.FactoryCreateStrict({
+    v3_Race_Kotzebue: Coding.FromStrict({
         code: "1867-1",
         display: "Kotzebue",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5454,7 +5453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Koyuk
      */
-    v3_Race_Koyuk: Coding.FactoryCreateStrict({
+    v3_Race_Koyuk: Coding.FromStrict({
         code: "1868-9",
         display: "Koyuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5462,7 +5461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kwiguk
      */
-    v3_Race_Kwiguk: Coding.FactoryCreateStrict({
+    v3_Race_Kwiguk: Coding.FromStrict({
         code: "1869-7",
         display: "Kwiguk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5470,7 +5469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mauneluk Inupiat
      */
-    v3_Race_MaunelukInupiat: Coding.FactoryCreateStrict({
+    v3_Race_MaunelukInupiat: Coding.FromStrict({
         code: "1870-5",
         display: "Mauneluk Inupiat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5478,7 +5477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nana Inupiat
      */
-    v3_Race_NanaInupiat: Coding.FactoryCreateStrict({
+    v3_Race_NanaInupiat: Coding.FromStrict({
         code: "1871-3",
         display: "Nana Inupiat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5486,7 +5485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Noatak
      */
-    v3_Race_Noatak: Coding.FactoryCreateStrict({
+    v3_Race_Noatak: Coding.FromStrict({
         code: "1872-1",
         display: "Noatak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5494,7 +5493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nome
      */
-    v3_Race_Nome: Coding.FactoryCreateStrict({
+    v3_Race_Nome: Coding.FromStrict({
         code: "1873-9",
         display: "Nome",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5502,7 +5501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Noorvik
      */
-    v3_Race_Noorvik: Coding.FactoryCreateStrict({
+    v3_Race_Noorvik: Coding.FromStrict({
         code: "1874-7",
         display: "Noorvik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5510,7 +5509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nuiqsut
      */
-    v3_Race_Nuiqsut: Coding.FactoryCreateStrict({
+    v3_Race_Nuiqsut: Coding.FromStrict({
         code: "1875-4",
         display: "Nuiqsut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5518,7 +5517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Point Hope
      */
-    v3_Race_PointHope: Coding.FactoryCreateStrict({
+    v3_Race_PointHope: Coding.FromStrict({
         code: "1876-2",
         display: "Point Hope",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5526,7 +5525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Point Lay
      */
-    v3_Race_PointLay: Coding.FactoryCreateStrict({
+    v3_Race_PointLay: Coding.FromStrict({
         code: "1877-0",
         display: "Point Lay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5534,7 +5533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Selawik
      */
-    v3_Race_Selawik: Coding.FactoryCreateStrict({
+    v3_Race_Selawik: Coding.FromStrict({
         code: "1878-8",
         display: "Selawik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5542,7 +5541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shaktoolik
      */
-    v3_Race_Shaktoolik: Coding.FactoryCreateStrict({
+    v3_Race_Shaktoolik: Coding.FromStrict({
         code: "1879-6",
         display: "Shaktoolik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5550,7 +5549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shishmaref
      */
-    v3_Race_Shishmaref: Coding.FactoryCreateStrict({
+    v3_Race_Shishmaref: Coding.FromStrict({
         code: "1880-4",
         display: "Shishmaref",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5558,7 +5557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Shungnak
      */
-    v3_Race_Shungnak: Coding.FactoryCreateStrict({
+    v3_Race_Shungnak: Coding.FromStrict({
         code: "1881-2",
         display: "Shungnak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5566,7 +5565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Solomon
      */
-    v3_Race_Solomon: Coding.FactoryCreateStrict({
+    v3_Race_Solomon: Coding.FromStrict({
         code: "1882-0",
         display: "Solomon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5574,7 +5573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Teller
      */
-    v3_Race_Teller: Coding.FactoryCreateStrict({
+    v3_Race_Teller: Coding.FromStrict({
         code: "1883-8",
         display: "Teller",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5582,7 +5581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Unalakleet
      */
-    v3_Race_Unalakleet: Coding.FactoryCreateStrict({
+    v3_Race_Unalakleet: Coding.FromStrict({
         code: "1884-6",
         display: "Unalakleet",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5590,7 +5589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wainwright
      */
-    v3_Race_Wainwright: Coding.FactoryCreateStrict({
+    v3_Race_Wainwright: Coding.FromStrict({
         code: "1885-3",
         display: "Wainwright",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5598,7 +5597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Wales
      */
-    v3_Race_Wales: Coding.FactoryCreateStrict({
+    v3_Race_Wales: Coding.FromStrict({
         code: "1886-1",
         display: "Wales",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5606,7 +5605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * White Mountain
      */
-    v3_Race_WhiteMountain: Coding.FactoryCreateStrict({
+    v3_Race_WhiteMountain: Coding.FromStrict({
         code: "1887-9",
         display: "White Mountain",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5614,7 +5613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * White Mountain Inupiat
      */
-    v3_Race_WhiteMountainInupiat: Coding.FactoryCreateStrict({
+    v3_Race_WhiteMountainInupiat: Coding.FromStrict({
         code: "1888-7",
         display: "White Mountain Inupiat",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5622,7 +5621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mary's Igloo
      */
-    v3_Race_MaryQuoteSIgloo: Coding.FactoryCreateStrict({
+    v3_Race_MaryQuoteSIgloo: Coding.FromStrict({
         code: "1889-5",
         display: "Mary's Igloo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5630,7 +5629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Siberian Eskimo
      */
-    v3_Race_SiberianEskimo: Coding.FactoryCreateStrict({
+    v3_Race_SiberianEskimo: Coding.FromStrict({
         code: "1891-1",
         display: "Siberian Eskimo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5638,7 +5637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Gambell
      */
-    v3_Race_Gambell: Coding.FactoryCreateStrict({
+    v3_Race_Gambell: Coding.FromStrict({
         code: "1892-9",
         display: "Gambell",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5646,7 +5645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Savoonga
      */
-    v3_Race_Savoonga: Coding.FactoryCreateStrict({
+    v3_Race_Savoonga: Coding.FromStrict({
         code: "1893-7",
         display: "Savoonga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5654,7 +5653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Siberian Yupik
      */
-    v3_Race_SiberianYupik: Coding.FactoryCreateStrict({
+    v3_Race_SiberianYupik: Coding.FromStrict({
         code: "1894-5",
         display: "Siberian Yupik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5662,7 +5661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yupik Eskimo
      */
-    v3_Race_YupikEskimo: Coding.FactoryCreateStrict({
+    v3_Race_YupikEskimo: Coding.FromStrict({
         code: "1896-0",
         display: "Yupik Eskimo",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5670,7 +5669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Akiachak
      */
-    v3_Race_Akiachak: Coding.FactoryCreateStrict({
+    v3_Race_Akiachak: Coding.FromStrict({
         code: "1897-8",
         display: "Akiachak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5678,7 +5677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Akiak
      */
-    v3_Race_Akiak: Coding.FactoryCreateStrict({
+    v3_Race_Akiak: Coding.FromStrict({
         code: "1898-6",
         display: "Akiak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5686,7 +5685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alakanuk
      */
-    v3_Race_Alakanuk: Coding.FactoryCreateStrict({
+    v3_Race_Alakanuk: Coding.FromStrict({
         code: "1899-4",
         display: "Alakanuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5694,7 +5693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aleknagik
      */
-    v3_Race_Aleknagik: Coding.FactoryCreateStrict({
+    v3_Race_Aleknagik: Coding.FromStrict({
         code: "1900-0",
         display: "Aleknagik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5702,7 +5701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Andreafsky
      */
-    v3_Race_Andreafsky: Coding.FactoryCreateStrict({
+    v3_Race_Andreafsky: Coding.FromStrict({
         code: "1901-8",
         display: "Andreafsky",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5710,7 +5709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aniak
      */
-    v3_Race_Aniak: Coding.FactoryCreateStrict({
+    v3_Race_Aniak: Coding.FromStrict({
         code: "1902-6",
         display: "Aniak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5718,7 +5717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Atmautluak
      */
-    v3_Race_Atmautluak: Coding.FactoryCreateStrict({
+    v3_Race_Atmautluak: Coding.FromStrict({
         code: "1903-4",
         display: "Atmautluak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5726,7 +5725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bethel
      */
-    v3_Race_Bethel: Coding.FactoryCreateStrict({
+    v3_Race_Bethel: Coding.FromStrict({
         code: "1904-2",
         display: "Bethel",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5734,7 +5733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bill Moore's Slough
      */
-    v3_Race_BillMooreQuoteSSlough: Coding.FactoryCreateStrict({
+    v3_Race_BillMooreQuoteSSlough: Coding.FromStrict({
         code: "1905-9",
         display: "Bill Moore's Slough",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5742,7 +5741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bristol Bay Yupik
      */
-    v3_Race_BristolBayYupik: Coding.FactoryCreateStrict({
+    v3_Race_BristolBayYupik: Coding.FromStrict({
         code: "1906-7",
         display: "Bristol Bay Yupik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5750,7 +5749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Calista Yupik
      */
-    v3_Race_CalistaYupik: Coding.FactoryCreateStrict({
+    v3_Race_CalistaYupik: Coding.FromStrict({
         code: "1907-5",
         display: "Calista Yupik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5758,7 +5757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chefornak
      */
-    v3_Race_Chefornak: Coding.FactoryCreateStrict({
+    v3_Race_Chefornak: Coding.FromStrict({
         code: "1908-3",
         display: "Chefornak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5766,7 +5765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chevak
      */
-    v3_Race_Chevak: Coding.FactoryCreateStrict({
+    v3_Race_Chevak: Coding.FromStrict({
         code: "1909-1",
         display: "Chevak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5774,7 +5773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chuathbaluk
      */
-    v3_Race_Chuathbaluk: Coding.FactoryCreateStrict({
+    v3_Race_Chuathbaluk: Coding.FromStrict({
         code: "1910-9",
         display: "Chuathbaluk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5782,7 +5781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Clark's Point
      */
-    v3_Race_ClarkQuoteSPoint: Coding.FactoryCreateStrict({
+    v3_Race_ClarkQuoteSPoint: Coding.FromStrict({
         code: "1911-7",
         display: "Clark's Point",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5790,7 +5789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Crooked Creek
      */
-    v3_Race_CrookedCreek: Coding.FactoryCreateStrict({
+    v3_Race_CrookedCreek: Coding.FromStrict({
         code: "1912-5",
         display: "Crooked Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5798,7 +5797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dillingham
      */
-    v3_Race_Dillingham: Coding.FactoryCreateStrict({
+    v3_Race_Dillingham: Coding.FromStrict({
         code: "1913-3",
         display: "Dillingham",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5806,7 +5805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eek
      */
-    v3_Race_Eek: Coding.FactoryCreateStrict({
+    v3_Race_Eek: Coding.FromStrict({
         code: "1914-1",
         display: "Eek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5814,7 +5813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ekuk
      */
-    v3_Race_Ekuk: Coding.FactoryCreateStrict({
+    v3_Race_Ekuk: Coding.FromStrict({
         code: "1915-8",
         display: "Ekuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5822,7 +5821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ekwok
      */
-    v3_Race_Ekwok: Coding.FactoryCreateStrict({
+    v3_Race_Ekwok: Coding.FromStrict({
         code: "1916-6",
         display: "Ekwok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5830,7 +5829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Emmonak
      */
-    v3_Race_Emmonak: Coding.FactoryCreateStrict({
+    v3_Race_Emmonak: Coding.FromStrict({
         code: "1917-4",
         display: "Emmonak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5838,7 +5837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Goodnews Bay
      */
-    v3_Race_GoodnewsBay: Coding.FactoryCreateStrict({
+    v3_Race_GoodnewsBay: Coding.FromStrict({
         code: "1918-2",
         display: "Goodnews Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5846,7 +5845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hooper Bay
      */
-    v3_Race_HooperBay: Coding.FactoryCreateStrict({
+    v3_Race_HooperBay: Coding.FromStrict({
         code: "1919-0",
         display: "Hooper Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5854,7 +5853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iqurmuit (Russian Mission)
      */
-    v3_Race_IqurmuitRussianMission: Coding.FactoryCreateStrict({
+    v3_Race_IqurmuitRussianMission: Coding.FromStrict({
         code: "1920-8",
         display: "Iqurmuit (Russian Mission)",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5862,7 +5861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kalskag
      */
-    v3_Race_Kalskag: Coding.FactoryCreateStrict({
+    v3_Race_Kalskag: Coding.FromStrict({
         code: "1921-6",
         display: "Kalskag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5870,7 +5869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kasigluk
      */
-    v3_Race_Kasigluk: Coding.FactoryCreateStrict({
+    v3_Race_Kasigluk: Coding.FromStrict({
         code: "1922-4",
         display: "Kasigluk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5878,7 +5877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kipnuk
      */
-    v3_Race_Kipnuk: Coding.FactoryCreateStrict({
+    v3_Race_Kipnuk: Coding.FromStrict({
         code: "1923-2",
         display: "Kipnuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5886,7 +5885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Koliganek
      */
-    v3_Race_Koliganek: Coding.FactoryCreateStrict({
+    v3_Race_Koliganek: Coding.FromStrict({
         code: "1924-0",
         display: "Koliganek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5894,7 +5893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kongiganak
      */
-    v3_Race_Kongiganak: Coding.FactoryCreateStrict({
+    v3_Race_Kongiganak: Coding.FromStrict({
         code: "1925-7",
         display: "Kongiganak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5902,7 +5901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kotlik
      */
-    v3_Race_Kotlik: Coding.FactoryCreateStrict({
+    v3_Race_Kotlik: Coding.FromStrict({
         code: "1926-5",
         display: "Kotlik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5910,7 +5909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kwethluk
      */
-    v3_Race_Kwethluk: Coding.FactoryCreateStrict({
+    v3_Race_Kwethluk: Coding.FromStrict({
         code: "1927-3",
         display: "Kwethluk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5918,7 +5917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kwigillingok
      */
-    v3_Race_Kwigillingok: Coding.FactoryCreateStrict({
+    v3_Race_Kwigillingok: Coding.FromStrict({
         code: "1928-1",
         display: "Kwigillingok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5926,7 +5925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Levelock
      */
-    v3_Race_Levelock: Coding.FactoryCreateStrict({
+    v3_Race_Levelock: Coding.FromStrict({
         code: "1929-9",
         display: "Levelock",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5934,7 +5933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lower Kalskag
      */
-    v3_Race_LowerKalskag: Coding.FactoryCreateStrict({
+    v3_Race_LowerKalskag: Coding.FromStrict({
         code: "1930-7",
         display: "Lower Kalskag",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5942,7 +5941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Manokotak
      */
-    v3_Race_Manokotak: Coding.FactoryCreateStrict({
+    v3_Race_Manokotak: Coding.FromStrict({
         code: "1931-5",
         display: "Manokotak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5950,7 +5949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Marshall
      */
-    v3_Race_Marshall: Coding.FactoryCreateStrict({
+    v3_Race_Marshall: Coding.FromStrict({
         code: "1932-3",
         display: "Marshall",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5958,7 +5957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mekoryuk
      */
-    v3_Race_Mekoryuk: Coding.FactoryCreateStrict({
+    v3_Race_Mekoryuk: Coding.FromStrict({
         code: "1933-1",
         display: "Mekoryuk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5966,7 +5965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mountain Village
      */
-    v3_Race_MountainVillage: Coding.FactoryCreateStrict({
+    v3_Race_MountainVillage: Coding.FromStrict({
         code: "1934-9",
         display: "Mountain Village",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5974,7 +5973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Naknek
      */
-    v3_Race_Naknek: Coding.FactoryCreateStrict({
+    v3_Race_Naknek: Coding.FromStrict({
         code: "1935-6",
         display: "Naknek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5982,7 +5981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Napaumute
      */
-    v3_Race_Napaumute: Coding.FactoryCreateStrict({
+    v3_Race_Napaumute: Coding.FromStrict({
         code: "1936-4",
         display: "Napaumute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5990,7 +5989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Napakiak
      */
-    v3_Race_Napakiak: Coding.FactoryCreateStrict({
+    v3_Race_Napakiak: Coding.FromStrict({
         code: "1937-2",
         display: "Napakiak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -5998,7 +5997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Napaskiak
      */
-    v3_Race_Napaskiak: Coding.FactoryCreateStrict({
+    v3_Race_Napaskiak: Coding.FromStrict({
         code: "1938-0",
         display: "Napaskiak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6006,7 +6005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Newhalen
      */
-    v3_Race_Newhalen: Coding.FactoryCreateStrict({
+    v3_Race_Newhalen: Coding.FromStrict({
         code: "1939-8",
         display: "Newhalen",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6014,7 +6013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * New Stuyahok
      */
-    v3_Race_NewStuyahok: Coding.FactoryCreateStrict({
+    v3_Race_NewStuyahok: Coding.FromStrict({
         code: "1940-6",
         display: "New Stuyahok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6022,7 +6021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Newtok
      */
-    v3_Race_Newtok: Coding.FactoryCreateStrict({
+    v3_Race_Newtok: Coding.FromStrict({
         code: "1941-4",
         display: "Newtok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6030,7 +6029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nightmute
      */
-    v3_Race_Nightmute: Coding.FactoryCreateStrict({
+    v3_Race_Nightmute: Coding.FromStrict({
         code: "1942-2",
         display: "Nightmute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6038,7 +6037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nunapitchukv
      */
-    v3_Race_Nunapitchukv: Coding.FactoryCreateStrict({
+    v3_Race_Nunapitchukv: Coding.FromStrict({
         code: "1943-0",
         display: "Nunapitchukv",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6046,7 +6045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Oscarville
      */
-    v3_Race_Oscarville: Coding.FactoryCreateStrict({
+    v3_Race_Oscarville: Coding.FromStrict({
         code: "1944-8",
         display: "Oscarville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6054,7 +6053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pilot Station
      */
-    v3_Race_PilotStation: Coding.FactoryCreateStrict({
+    v3_Race_PilotStation: Coding.FromStrict({
         code: "1945-5",
         display: "Pilot Station",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6062,7 +6061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pitkas Point
      */
-    v3_Race_PitkasPoint: Coding.FactoryCreateStrict({
+    v3_Race_PitkasPoint: Coding.FromStrict({
         code: "1946-3",
         display: "Pitkas Point",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6070,7 +6069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Platinum
      */
-    v3_Race_Platinum: Coding.FactoryCreateStrict({
+    v3_Race_Platinum: Coding.FromStrict({
         code: "1947-1",
         display: "Platinum",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6078,7 +6077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Portage Creek
      */
-    v3_Race_PortageCreek: Coding.FactoryCreateStrict({
+    v3_Race_PortageCreek: Coding.FromStrict({
         code: "1948-9",
         display: "Portage Creek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6086,7 +6085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Quinhagak
      */
-    v3_Race_Quinhagak: Coding.FactoryCreateStrict({
+    v3_Race_Quinhagak: Coding.FromStrict({
         code: "1949-7",
         display: "Quinhagak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6094,7 +6093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Red Devil
      */
-    v3_Race_RedDevil: Coding.FactoryCreateStrict({
+    v3_Race_RedDevil: Coding.FromStrict({
         code: "1950-5",
         display: "Red Devil",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6102,7 +6101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * St. Michael
      */
-    v3_Race_StMichael: Coding.FactoryCreateStrict({
+    v3_Race_StMichael: Coding.FromStrict({
         code: "1951-3",
         display: "St. Michael",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6110,7 +6109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Scammon Bay
      */
-    v3_Race_ScammonBay: Coding.FactoryCreateStrict({
+    v3_Race_ScammonBay: Coding.FromStrict({
         code: "1952-1",
         display: "Scammon Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6118,7 +6117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sheldon's Point
      */
-    v3_Race_SheldonQuoteSPoint: Coding.FactoryCreateStrict({
+    v3_Race_SheldonQuoteSPoint: Coding.FromStrict({
         code: "1953-9",
         display: "Sheldon's Point",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6126,7 +6125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sleetmute
      */
-    v3_Race_Sleetmute: Coding.FactoryCreateStrict({
+    v3_Race_Sleetmute: Coding.FromStrict({
         code: "1954-7",
         display: "Sleetmute",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6134,7 +6133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Stebbins
      */
-    v3_Race_Stebbins: Coding.FactoryCreateStrict({
+    v3_Race_Stebbins: Coding.FromStrict({
         code: "1955-4",
         display: "Stebbins",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6142,7 +6141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Togiak
      */
-    v3_Race_Togiak: Coding.FactoryCreateStrict({
+    v3_Race_Togiak: Coding.FromStrict({
         code: "1956-2",
         display: "Togiak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6150,7 +6149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Toksook
      */
-    v3_Race_Toksook: Coding.FactoryCreateStrict({
+    v3_Race_Toksook: Coding.FromStrict({
         code: "1957-0",
         display: "Toksook",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6158,7 +6157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tulukskak
      */
-    v3_Race_Tulukskak: Coding.FactoryCreateStrict({
+    v3_Race_Tulukskak: Coding.FromStrict({
         code: "1958-8",
         display: "Tulukskak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6166,7 +6165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tuntutuliak
      */
-    v3_Race_Tuntutuliak: Coding.FactoryCreateStrict({
+    v3_Race_Tuntutuliak: Coding.FromStrict({
         code: "1959-6",
         display: "Tuntutuliak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6174,7 +6173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tununak
      */
-    v3_Race_Tununak: Coding.FactoryCreateStrict({
+    v3_Race_Tununak: Coding.FromStrict({
         code: "1960-4",
         display: "Tununak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6182,7 +6181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Twin Hills
      */
-    v3_Race_TwinHills: Coding.FactoryCreateStrict({
+    v3_Race_TwinHills: Coding.FromStrict({
         code: "1961-2",
         display: "Twin Hills",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6190,7 +6189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Georgetown
      */
-    v3_Race_Georgetown_2: Coding.FactoryCreateStrict({
+    v3_Race_Georgetown_2: Coding.FromStrict({
         code: "1962-0",
         display: "Georgetown",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6198,7 +6197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * St. Mary's
      */
-    v3_Race_StMaryQuoteS: Coding.FactoryCreateStrict({
+    v3_Race_StMaryQuoteS: Coding.FromStrict({
         code: "1963-8",
         display: "St. Mary's",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6206,7 +6205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Umkumiate
      */
-    v3_Race_Umkumiate: Coding.FactoryCreateStrict({
+    v3_Race_Umkumiate: Coding.FromStrict({
         code: "1964-6",
         display: "Umkumiate",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6214,7 +6213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aleut
      */
-    v3_Race_Aleut: Coding.FactoryCreateStrict({
+    v3_Race_Aleut: Coding.FromStrict({
         code: "1966-1",
         display: "Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6222,7 +6221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Alutiiq Aleut
      */
-    v3_Race_AlutiiqAleut: Coding.FactoryCreateStrict({
+    v3_Race_AlutiiqAleut: Coding.FromStrict({
         code: "1968-7",
         display: "Alutiiq Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6230,7 +6229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tatitlek
      */
-    v3_Race_Tatitlek: Coding.FactoryCreateStrict({
+    v3_Race_Tatitlek: Coding.FromStrict({
         code: "1969-5",
         display: "Tatitlek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6238,7 +6237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ugashik
      */
-    v3_Race_Ugashik: Coding.FactoryCreateStrict({
+    v3_Race_Ugashik: Coding.FromStrict({
         code: "1970-3",
         display: "Ugashik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6246,7 +6245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bristol Bay Aleut
      */
-    v3_Race_BristolBayAleut: Coding.FactoryCreateStrict({
+    v3_Race_BristolBayAleut: Coding.FromStrict({
         code: "1972-9",
         display: "Bristol Bay Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6254,7 +6253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chignik
      */
-    v3_Race_Chignik: Coding.FactoryCreateStrict({
+    v3_Race_Chignik: Coding.FromStrict({
         code: "1973-7",
         display: "Chignik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6262,7 +6261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chignik Lake
      */
-    v3_Race_ChignikLake: Coding.FactoryCreateStrict({
+    v3_Race_ChignikLake: Coding.FromStrict({
         code: "1974-5",
         display: "Chignik Lake",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6270,7 +6269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Egegik
      */
-    v3_Race_Egegik: Coding.FactoryCreateStrict({
+    v3_Race_Egegik: Coding.FromStrict({
         code: "1975-2",
         display: "Egegik",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6278,7 +6277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Igiugig
      */
-    v3_Race_Igiugig: Coding.FactoryCreateStrict({
+    v3_Race_Igiugig: Coding.FromStrict({
         code: "1976-0",
         display: "Igiugig",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6286,7 +6285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ivanof Bay
      */
-    v3_Race_IvanofBay: Coding.FactoryCreateStrict({
+    v3_Race_IvanofBay: Coding.FromStrict({
         code: "1977-8",
         display: "Ivanof Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6294,7 +6293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * King Salmon
      */
-    v3_Race_KingSalmon: Coding.FactoryCreateStrict({
+    v3_Race_KingSalmon: Coding.FromStrict({
         code: "1978-6",
         display: "King Salmon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6302,7 +6301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kokhanok
      */
-    v3_Race_Kokhanok: Coding.FactoryCreateStrict({
+    v3_Race_Kokhanok: Coding.FromStrict({
         code: "1979-4",
         display: "Kokhanok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6310,7 +6309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Perryville
      */
-    v3_Race_Perryville: Coding.FactoryCreateStrict({
+    v3_Race_Perryville: Coding.FromStrict({
         code: "1980-2",
         display: "Perryville",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6318,7 +6317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pilot Point
      */
-    v3_Race_PilotPoint: Coding.FactoryCreateStrict({
+    v3_Race_PilotPoint: Coding.FromStrict({
         code: "1981-0",
         display: "Pilot Point",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6326,7 +6325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Port Heiden
      */
-    v3_Race_PortHeiden: Coding.FactoryCreateStrict({
+    v3_Race_PortHeiden: Coding.FromStrict({
         code: "1982-8",
         display: "Port Heiden",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6334,7 +6333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chugach Aleut
      */
-    v3_Race_ChugachAleut: Coding.FactoryCreateStrict({
+    v3_Race_ChugachAleut: Coding.FromStrict({
         code: "1984-4",
         display: "Chugach Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6342,7 +6341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chenega
      */
-    v3_Race_Chenega: Coding.FactoryCreateStrict({
+    v3_Race_Chenega: Coding.FromStrict({
         code: "1985-1",
         display: "Chenega",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6350,7 +6349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chugach Corporation
      */
-    v3_Race_ChugachCorporation: Coding.FactoryCreateStrict({
+    v3_Race_ChugachCorporation: Coding.FromStrict({
         code: "1986-9",
         display: "Chugach Corporation",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6358,7 +6357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * English Bay
      */
-    v3_Race_EnglishBay: Coding.FactoryCreateStrict({
+    v3_Race_EnglishBay: Coding.FromStrict({
         code: "1987-7",
         display: "English Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6366,7 +6365,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Port Graham
      */
-    v3_Race_PortGraham: Coding.FactoryCreateStrict({
+    v3_Race_PortGraham: Coding.FromStrict({
         code: "1988-5",
         display: "Port Graham",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6374,7 +6373,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Eyak
      */
-    v3_Race_Eyak: Coding.FactoryCreateStrict({
+    v3_Race_Eyak: Coding.FromStrict({
         code: "1990-1",
         display: "Eyak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6382,7 +6381,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Koniag Aleut
      */
-    v3_Race_KoniagAleut: Coding.FactoryCreateStrict({
+    v3_Race_KoniagAleut: Coding.FromStrict({
         code: "1992-7",
         display: "Koniag Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6390,7 +6389,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Akhiok
      */
-    v3_Race_Akhiok: Coding.FactoryCreateStrict({
+    v3_Race_Akhiok: Coding.FromStrict({
         code: "1993-5",
         display: "Akhiok",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6398,7 +6397,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Agdaagux
      */
-    v3_Race_Agdaagux: Coding.FactoryCreateStrict({
+    v3_Race_Agdaagux: Coding.FromStrict({
         code: "1994-3",
         display: "Agdaagux",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6406,7 +6405,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Karluk
      */
-    v3_Race_Karluk: Coding.FactoryCreateStrict({
+    v3_Race_Karluk: Coding.FromStrict({
         code: "1995-0",
         display: "Karluk",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6414,7 +6413,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kodiak
      */
-    v3_Race_Kodiak: Coding.FactoryCreateStrict({
+    v3_Race_Kodiak: Coding.FromStrict({
         code: "1996-8",
         display: "Kodiak",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6422,7 +6421,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Larsen Bay
      */
-    v3_Race_LarsenBay: Coding.FactoryCreateStrict({
+    v3_Race_LarsenBay: Coding.FromStrict({
         code: "1997-6",
         display: "Larsen Bay",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6430,7 +6429,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Old Harbor
      */
-    v3_Race_OldHarbor: Coding.FactoryCreateStrict({
+    v3_Race_OldHarbor: Coding.FromStrict({
         code: "1998-4",
         display: "Old Harbor",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6438,7 +6437,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ouzinkie
      */
-    v3_Race_Ouzinkie: Coding.FactoryCreateStrict({
+    v3_Race_Ouzinkie: Coding.FromStrict({
         code: "1999-2",
         display: "Ouzinkie",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6446,7 +6445,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Port Lions
      */
-    v3_Race_PortLions: Coding.FactoryCreateStrict({
+    v3_Race_PortLions: Coding.FromStrict({
         code: "2000-8",
         display: "Port Lions",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6454,7 +6453,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sugpiaq
      */
-    v3_Race_Sugpiaq: Coding.FactoryCreateStrict({
+    v3_Race_Sugpiaq: Coding.FromStrict({
         code: "2002-4",
         display: "Sugpiaq",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6462,7 +6461,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Suqpigaq
      */
-    v3_Race_Suqpigaq: Coding.FactoryCreateStrict({
+    v3_Race_Suqpigaq: Coding.FromStrict({
         code: "2004-0",
         display: "Suqpigaq",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6470,7 +6469,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Unangan Aleut
      */
-    v3_Race_UnanganAleut: Coding.FactoryCreateStrict({
+    v3_Race_UnanganAleut: Coding.FromStrict({
         code: "2006-5",
         display: "Unangan Aleut",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6478,7 +6477,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Akutan
      */
-    v3_Race_Akutan: Coding.FactoryCreateStrict({
+    v3_Race_Akutan: Coding.FromStrict({
         code: "2007-3",
         display: "Akutan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6486,7 +6485,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aleut Corporation
      */
-    v3_Race_AleutCorporation: Coding.FactoryCreateStrict({
+    v3_Race_AleutCorporation: Coding.FromStrict({
         code: "2008-1",
         display: "Aleut Corporation",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6494,7 +6493,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aleutian
      */
-    v3_Race_Aleutian: Coding.FactoryCreateStrict({
+    v3_Race_Aleutian: Coding.FromStrict({
         code: "2009-9",
         display: "Aleutian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6502,7 +6501,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Aleutian Islander
      */
-    v3_Race_AleutianIslander: Coding.FactoryCreateStrict({
+    v3_Race_AleutianIslander: Coding.FromStrict({
         code: "2010-7",
         display: "Aleutian Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6510,7 +6509,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Atka
      */
-    v3_Race_Atka: Coding.FactoryCreateStrict({
+    v3_Race_Atka: Coding.FromStrict({
         code: "2011-5",
         display: "Atka",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6518,7 +6517,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Belkofski
      */
-    v3_Race_Belkofski: Coding.FactoryCreateStrict({
+    v3_Race_Belkofski: Coding.FromStrict({
         code: "2012-3",
         display: "Belkofski",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6526,7 +6525,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chignik Lagoon
      */
-    v3_Race_ChignikLagoon: Coding.FactoryCreateStrict({
+    v3_Race_ChignikLagoon: Coding.FromStrict({
         code: "2013-1",
         display: "Chignik Lagoon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6534,7 +6533,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * King Cove
      */
-    v3_Race_KingCove: Coding.FactoryCreateStrict({
+    v3_Race_KingCove: Coding.FromStrict({
         code: "2014-9",
         display: "King Cove",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6542,7 +6541,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * False Pass
      */
-    v3_Race_FalsePass: Coding.FactoryCreateStrict({
+    v3_Race_FalsePass: Coding.FromStrict({
         code: "2015-6",
         display: "False Pass",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6550,7 +6549,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nelson Lagoon
      */
-    v3_Race_NelsonLagoon: Coding.FactoryCreateStrict({
+    v3_Race_NelsonLagoon: Coding.FromStrict({
         code: "2016-4",
         display: "Nelson Lagoon",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6558,7 +6557,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nikolski
      */
-    v3_Race_Nikolski: Coding.FactoryCreateStrict({
+    v3_Race_Nikolski: Coding.FromStrict({
         code: "2017-2",
         display: "Nikolski",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6566,7 +6565,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pauloff Harbor
      */
-    v3_Race_PauloffHarbor: Coding.FactoryCreateStrict({
+    v3_Race_PauloffHarbor: Coding.FromStrict({
         code: "2018-0",
         display: "Pauloff Harbor",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6574,7 +6573,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Qagan Toyagungin
      */
-    v3_Race_QaganToyagungin: Coding.FactoryCreateStrict({
+    v3_Race_QaganToyagungin: Coding.FromStrict({
         code: "2019-8",
         display: "Qagan Toyagungin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6582,7 +6581,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Qawalangin
      */
-    v3_Race_Qawalangin: Coding.FactoryCreateStrict({
+    v3_Race_Qawalangin: Coding.FromStrict({
         code: "2020-6",
         display: "Qawalangin",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6590,7 +6589,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * St. George
      */
-    v3_Race_StGeorge: Coding.FactoryCreateStrict({
+    v3_Race_StGeorge: Coding.FromStrict({
         code: "2021-4",
         display: "St. George",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6598,7 +6597,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * St. Paul
      */
-    v3_Race_StPaul: Coding.FactoryCreateStrict({
+    v3_Race_StPaul: Coding.FromStrict({
         code: "2022-2",
         display: "St. Paul",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6606,7 +6605,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sand Point
      */
-    v3_Race_SandPoint: Coding.FactoryCreateStrict({
+    v3_Race_SandPoint: Coding.FromStrict({
         code: "2023-0",
         display: "Sand Point",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6614,7 +6613,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * South Naknek
      */
-    v3_Race_SouthNaknek: Coding.FactoryCreateStrict({
+    v3_Race_SouthNaknek: Coding.FromStrict({
         code: "2024-8",
         display: "South Naknek",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6622,7 +6621,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Unalaska
      */
-    v3_Race_Unalaska: Coding.FactoryCreateStrict({
+    v3_Race_Unalaska: Coding.FromStrict({
         code: "2025-5",
         display: "Unalaska",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6630,7 +6629,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Unga
      */
-    v3_Race_Unga: Coding.FactoryCreateStrict({
+    v3_Race_Unga: Coding.FromStrict({
         code: "2026-3",
         display: "Unga",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6638,7 +6637,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Asian
      */
-    v3_Race_Asian: Coding.FactoryCreateStrict({
+    v3_Race_Asian: Coding.FromStrict({
         code: "2028-9",
         display: "Asian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6646,7 +6645,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Asian Indian
      */
-    v3_Race_AsianIndian: Coding.FactoryCreateStrict({
+    v3_Race_AsianIndian: Coding.FromStrict({
         code: "2029-7",
         display: "Asian Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6654,7 +6653,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bangladeshi
      */
-    v3_Race_Bangladeshi: Coding.FactoryCreateStrict({
+    v3_Race_Bangladeshi: Coding.FromStrict({
         code: "2030-5",
         display: "Bangladeshi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6662,7 +6661,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bhutanese
      */
-    v3_Race_Bhutanese: Coding.FactoryCreateStrict({
+    v3_Race_Bhutanese: Coding.FromStrict({
         code: "2031-3",
         display: "Bhutanese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6670,7 +6669,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Burmese
      */
-    v3_Race_Burmese: Coding.FactoryCreateStrict({
+    v3_Race_Burmese: Coding.FromStrict({
         code: "2032-1",
         display: "Burmese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6678,7 +6677,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Cambodian
      */
-    v3_Race_Cambodian: Coding.FactoryCreateStrict({
+    v3_Race_Cambodian: Coding.FromStrict({
         code: "2033-9",
         display: "Cambodian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6686,7 +6685,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chinese
      */
-    v3_Race_Chinese: Coding.FactoryCreateStrict({
+    v3_Race_Chinese: Coding.FromStrict({
         code: "2034-7",
         display: "Chinese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6694,7 +6693,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Taiwanese
      */
-    v3_Race_Taiwanese: Coding.FactoryCreateStrict({
+    v3_Race_Taiwanese: Coding.FromStrict({
         code: "2035-4",
         display: "Taiwanese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6702,7 +6701,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Filipino
      */
-    v3_Race_Filipino: Coding.FactoryCreateStrict({
+    v3_Race_Filipino: Coding.FromStrict({
         code: "2036-2",
         display: "Filipino",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6710,7 +6709,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Hmong
      */
-    v3_Race_Hmong: Coding.FactoryCreateStrict({
+    v3_Race_Hmong: Coding.FromStrict({
         code: "2037-0",
         display: "Hmong",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6718,7 +6717,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Indonesian
      */
-    v3_Race_Indonesian: Coding.FactoryCreateStrict({
+    v3_Race_Indonesian: Coding.FromStrict({
         code: "2038-8",
         display: "Indonesian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6726,7 +6725,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Japanese
      */
-    v3_Race_Japanese: Coding.FactoryCreateStrict({
+    v3_Race_Japanese: Coding.FromStrict({
         code: "2039-6",
         display: "Japanese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6734,7 +6733,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Korean
      */
-    v3_Race_Korean: Coding.FactoryCreateStrict({
+    v3_Race_Korean: Coding.FromStrict({
         code: "2040-4",
         display: "Korean",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6742,7 +6741,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Laotian
      */
-    v3_Race_Laotian: Coding.FactoryCreateStrict({
+    v3_Race_Laotian: Coding.FromStrict({
         code: "2041-2",
         display: "Laotian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6750,7 +6749,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Malaysian
      */
-    v3_Race_Malaysian: Coding.FactoryCreateStrict({
+    v3_Race_Malaysian: Coding.FromStrict({
         code: "2042-0",
         display: "Malaysian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6758,7 +6757,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Okinawan
      */
-    v3_Race_Okinawan: Coding.FactoryCreateStrict({
+    v3_Race_Okinawan: Coding.FromStrict({
         code: "2043-8",
         display: "Okinawan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6766,7 +6765,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pakistani
      */
-    v3_Race_Pakistani: Coding.FactoryCreateStrict({
+    v3_Race_Pakistani: Coding.FromStrict({
         code: "2044-6",
         display: "Pakistani",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6774,7 +6773,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Sri Lankan
      */
-    v3_Race_SriLankan: Coding.FactoryCreateStrict({
+    v3_Race_SriLankan: Coding.FromStrict({
         code: "2045-3",
         display: "Sri Lankan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6782,7 +6781,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Thai
      */
-    v3_Race_Thai: Coding.FactoryCreateStrict({
+    v3_Race_Thai: Coding.FromStrict({
         code: "2046-1",
         display: "Thai",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6790,7 +6789,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Vietnamese
      */
-    v3_Race_Vietnamese: Coding.FactoryCreateStrict({
+    v3_Race_Vietnamese: Coding.FromStrict({
         code: "2047-9",
         display: "Vietnamese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6798,7 +6797,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iwo Jiman
      */
-    v3_Race_IwoJiman: Coding.FactoryCreateStrict({
+    v3_Race_IwoJiman: Coding.FromStrict({
         code: "2048-7",
         display: "Iwo Jiman",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6806,7 +6805,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Maldivian
      */
-    v3_Race_Maldivian: Coding.FactoryCreateStrict({
+    v3_Race_Maldivian: Coding.FromStrict({
         code: "2049-5",
         display: "Maldivian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6814,7 +6813,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nepalese
      */
-    v3_Race_Nepalese: Coding.FactoryCreateStrict({
+    v3_Race_Nepalese: Coding.FromStrict({
         code: "2050-3",
         display: "Nepalese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6822,7 +6821,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Singaporean
      */
-    v3_Race_Singaporean: Coding.FactoryCreateStrict({
+    v3_Race_Singaporean: Coding.FromStrict({
         code: "2051-1",
         display: "Singaporean",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6830,7 +6829,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Madagascar
      */
-    v3_Race_Madagascar: Coding.FactoryCreateStrict({
+    v3_Race_Madagascar: Coding.FromStrict({
         code: "2052-9",
         display: "Madagascar",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6838,7 +6837,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Black or African American
      */
-    v3_Race_BlackOrAfricanAmerican: Coding.FactoryCreateStrict({
+    v3_Race_BlackOrAfricanAmerican: Coding.FromStrict({
         code: "2054-5",
         display: "Black or African American",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6846,7 +6845,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Black
      */
-    v3_Race_Black: Coding.FactoryCreateStrict({
+    v3_Race_Black: Coding.FromStrict({
         code: "2056-0",
         display: "Black",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6854,7 +6853,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * African American
      */
-    v3_Race_AfricanAmerican: Coding.FactoryCreateStrict({
+    v3_Race_AfricanAmerican: Coding.FromStrict({
         code: "2058-6",
         display: "African American",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6862,7 +6861,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * African
      */
-    v3_Race_African: Coding.FactoryCreateStrict({
+    v3_Race_African: Coding.FromStrict({
         code: "2060-2",
         display: "African",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6870,7 +6869,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Botswanan
      */
-    v3_Race_Botswanan: Coding.FactoryCreateStrict({
+    v3_Race_Botswanan: Coding.FromStrict({
         code: "2061-0",
         display: "Botswanan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6878,7 +6877,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Ethiopian
      */
-    v3_Race_Ethiopian: Coding.FactoryCreateStrict({
+    v3_Race_Ethiopian: Coding.FromStrict({
         code: "2062-8",
         display: "Ethiopian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6886,7 +6885,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Liberian
      */
-    v3_Race_Liberian: Coding.FactoryCreateStrict({
+    v3_Race_Liberian: Coding.FromStrict({
         code: "2063-6",
         display: "Liberian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6894,7 +6893,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Namibian
      */
-    v3_Race_Namibian: Coding.FactoryCreateStrict({
+    v3_Race_Namibian: Coding.FromStrict({
         code: "2064-4",
         display: "Namibian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6902,7 +6901,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Nigerian
      */
-    v3_Race_Nigerian: Coding.FactoryCreateStrict({
+    v3_Race_Nigerian: Coding.FromStrict({
         code: "2065-1",
         display: "Nigerian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6910,7 +6909,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Zairean
      */
-    v3_Race_Zairean: Coding.FactoryCreateStrict({
+    v3_Race_Zairean: Coding.FromStrict({
         code: "2066-9",
         display: "Zairean",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6918,7 +6917,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Bahamian
      */
-    v3_Race_Bahamian: Coding.FactoryCreateStrict({
+    v3_Race_Bahamian: Coding.FromStrict({
         code: "2067-7",
         display: "Bahamian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6926,7 +6925,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Barbadian
      */
-    v3_Race_Barbadian: Coding.FactoryCreateStrict({
+    v3_Race_Barbadian: Coding.FromStrict({
         code: "2068-5",
         display: "Barbadian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6934,7 +6933,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dominican
      */
-    v3_Race_Dominican: Coding.FactoryCreateStrict({
+    v3_Race_Dominican: Coding.FromStrict({
         code: "2069-3",
         display: "Dominican",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6942,7 +6941,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Dominica Islander
      */
-    v3_Race_DominicaIslander: Coding.FactoryCreateStrict({
+    v3_Race_DominicaIslander: Coding.FromStrict({
         code: "2070-1",
         display: "Dominica Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6950,7 +6949,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Haitian
      */
-    v3_Race_Haitian: Coding.FactoryCreateStrict({
+    v3_Race_Haitian: Coding.FromStrict({
         code: "2071-9",
         display: "Haitian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6958,7 +6957,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Jamaican
      */
-    v3_Race_Jamaican: Coding.FactoryCreateStrict({
+    v3_Race_Jamaican: Coding.FromStrict({
         code: "2072-7",
         display: "Jamaican",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6966,7 +6965,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tobagoan
      */
-    v3_Race_Tobagoan: Coding.FactoryCreateStrict({
+    v3_Race_Tobagoan: Coding.FromStrict({
         code: "2073-5",
         display: "Tobagoan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6974,7 +6973,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Trinidadian
      */
-    v3_Race_Trinidadian: Coding.FactoryCreateStrict({
+    v3_Race_Trinidadian: Coding.FromStrict({
         code: "2074-3",
         display: "Trinidadian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6982,7 +6981,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * West Indian
      */
-    v3_Race_WestIndian: Coding.FactoryCreateStrict({
+    v3_Race_WestIndian: Coding.FromStrict({
         code: "2075-0",
         display: "West Indian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6990,7 +6989,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Native Hawaiian or Other Pacific Islander
      */
-    v3_Race_NativeHawaiianOrOtherPacificIslander: Coding.FactoryCreateStrict({
+    v3_Race_NativeHawaiianOrOtherPacificIslander: Coding.FromStrict({
         code: "2076-8",
         display: "Native Hawaiian or Other Pacific Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -6998,7 +6997,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Polynesian
      */
-    v3_Race_Polynesian: Coding.FactoryCreateStrict({
+    v3_Race_Polynesian: Coding.FromStrict({
         code: "2078-4",
         display: "Polynesian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7006,7 +7005,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Native Hawaiian
      */
-    v3_Race_NativeHawaiian: Coding.FactoryCreateStrict({
+    v3_Race_NativeHawaiian: Coding.FromStrict({
         code: "2079-2",
         display: "Native Hawaiian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7014,7 +7013,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Samoan
      */
-    v3_Race_Samoan: Coding.FactoryCreateStrict({
+    v3_Race_Samoan: Coding.FromStrict({
         code: "2080-0",
         display: "Samoan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7022,7 +7021,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tahitian
      */
-    v3_Race_Tahitian: Coding.FactoryCreateStrict({
+    v3_Race_Tahitian: Coding.FromStrict({
         code: "2081-8",
         display: "Tahitian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7030,7 +7029,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tongan
      */
-    v3_Race_Tongan: Coding.FactoryCreateStrict({
+    v3_Race_Tongan: Coding.FromStrict({
         code: "2082-6",
         display: "Tongan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7038,7 +7037,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Tokelauan
      */
-    v3_Race_Tokelauan: Coding.FactoryCreateStrict({
+    v3_Race_Tokelauan: Coding.FromStrict({
         code: "2083-4",
         display: "Tokelauan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7046,7 +7045,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Micronesian
      */
-    v3_Race_Micronesian: Coding.FactoryCreateStrict({
+    v3_Race_Micronesian: Coding.FromStrict({
         code: "2085-9",
         display: "Micronesian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7054,7 +7053,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Guamanian or Chamorro
      */
-    v3_Race_GuamanianOrChamorro: Coding.FactoryCreateStrict({
+    v3_Race_GuamanianOrChamorro: Coding.FromStrict({
         code: "2086-7",
         display: "Guamanian or Chamorro",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7062,7 +7061,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Guamanian
      */
-    v3_Race_Guamanian: Coding.FactoryCreateStrict({
+    v3_Race_Guamanian: Coding.FromStrict({
         code: "2087-5",
         display: "Guamanian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7070,7 +7069,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chamorro
      */
-    v3_Race_Chamorro: Coding.FactoryCreateStrict({
+    v3_Race_Chamorro: Coding.FromStrict({
         code: "2088-3",
         display: "Chamorro",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7078,7 +7077,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Mariana Islander
      */
-    v3_Race_MarianaIslander: Coding.FactoryCreateStrict({
+    v3_Race_MarianaIslander: Coding.FromStrict({
         code: "2089-1",
         display: "Mariana Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7086,7 +7085,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Marshallese
      */
-    v3_Race_Marshallese: Coding.FactoryCreateStrict({
+    v3_Race_Marshallese: Coding.FromStrict({
         code: "2090-9",
         display: "Marshallese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7094,7 +7093,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Palauan
      */
-    v3_Race_Palauan: Coding.FactoryCreateStrict({
+    v3_Race_Palauan: Coding.FromStrict({
         code: "2091-7",
         display: "Palauan",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7102,7 +7101,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Carolinian
      */
-    v3_Race_Carolinian: Coding.FactoryCreateStrict({
+    v3_Race_Carolinian: Coding.FromStrict({
         code: "2092-5",
         display: "Carolinian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7110,7 +7109,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kosraean
      */
-    v3_Race_Kosraean: Coding.FactoryCreateStrict({
+    v3_Race_Kosraean: Coding.FromStrict({
         code: "2093-3",
         display: "Kosraean",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7118,7 +7117,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Pohnpeian
      */
-    v3_Race_Pohnpeian: Coding.FactoryCreateStrict({
+    v3_Race_Pohnpeian: Coding.FromStrict({
         code: "2094-1",
         display: "Pohnpeian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7126,7 +7125,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Saipanese
      */
-    v3_Race_Saipanese: Coding.FactoryCreateStrict({
+    v3_Race_Saipanese: Coding.FromStrict({
         code: "2095-8",
         display: "Saipanese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7134,7 +7133,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Kiribati
      */
-    v3_Race_Kiribati: Coding.FactoryCreateStrict({
+    v3_Race_Kiribati: Coding.FromStrict({
         code: "2096-6",
         display: "Kiribati",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7142,7 +7141,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Chuukese
      */
-    v3_Race_Chuukese: Coding.FactoryCreateStrict({
+    v3_Race_Chuukese: Coding.FromStrict({
         code: "2097-4",
         display: "Chuukese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7150,7 +7149,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Yapese
      */
-    v3_Race_Yapese: Coding.FactoryCreateStrict({
+    v3_Race_Yapese: Coding.FromStrict({
         code: "2098-2",
         display: "Yapese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7158,7 +7157,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Melanesian
      */
-    v3_Race_Melanesian: Coding.FactoryCreateStrict({
+    v3_Race_Melanesian: Coding.FromStrict({
         code: "2100-6",
         display: "Melanesian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7166,7 +7165,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Fijian
      */
-    v3_Race_Fijian: Coding.FactoryCreateStrict({
+    v3_Race_Fijian: Coding.FromStrict({
         code: "2101-4",
         display: "Fijian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7174,7 +7173,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Papua New Guinean
      */
-    v3_Race_PapuaNewGuinean: Coding.FactoryCreateStrict({
+    v3_Race_PapuaNewGuinean: Coding.FromStrict({
         code: "2102-2",
         display: "Papua New Guinean",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7182,7 +7181,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Solomon Islander
      */
-    v3_Race_SolomonIslander: Coding.FactoryCreateStrict({
+    v3_Race_SolomonIslander: Coding.FromStrict({
         code: "2103-0",
         display: "Solomon Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7190,7 +7189,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * New Hebrides
      */
-    v3_Race_NewHebrides: Coding.FactoryCreateStrict({
+    v3_Race_NewHebrides: Coding.FromStrict({
         code: "2104-8",
         display: "New Hebrides",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7198,7 +7197,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * White
      */
-    v3_Race_White: Coding.FactoryCreateStrict({
+    v3_Race_White: Coding.FromStrict({
         code: "2106-3",
         display: "White",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7206,7 +7205,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * European
      */
-    v3_Race_European: Coding.FactoryCreateStrict({
+    v3_Race_European: Coding.FromStrict({
         code: "2108-9",
         display: "European",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7214,7 +7213,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Armenian
      */
-    v3_Race_Armenian: Coding.FactoryCreateStrict({
+    v3_Race_Armenian: Coding.FromStrict({
         code: "2109-7",
         display: "Armenian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7222,7 +7221,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * English
      */
-    v3_Race_English: Coding.FactoryCreateStrict({
+    v3_Race_English: Coding.FromStrict({
         code: "2110-5",
         display: "English",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7230,7 +7229,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * French
      */
-    v3_Race_French: Coding.FactoryCreateStrict({
+    v3_Race_French: Coding.FromStrict({
         code: "2111-3",
         display: "French",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7238,7 +7237,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * German
      */
-    v3_Race_German: Coding.FactoryCreateStrict({
+    v3_Race_German: Coding.FromStrict({
         code: "2112-1",
         display: "German",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7246,7 +7245,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Irish
      */
-    v3_Race_Irish: Coding.FactoryCreateStrict({
+    v3_Race_Irish: Coding.FromStrict({
         code: "2113-9",
         display: "Irish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7254,7 +7253,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Italian
      */
-    v3_Race_Italian: Coding.FactoryCreateStrict({
+    v3_Race_Italian: Coding.FromStrict({
         code: "2114-7",
         display: "Italian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7262,7 +7261,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Polish
      */
-    v3_Race_Polish: Coding.FactoryCreateStrict({
+    v3_Race_Polish: Coding.FromStrict({
         code: "2115-4",
         display: "Polish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7270,7 +7269,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Scottish
      */
-    v3_Race_Scottish: Coding.FactoryCreateStrict({
+    v3_Race_Scottish: Coding.FromStrict({
         code: "2116-2",
         display: "Scottish",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7278,7 +7277,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Middle Eastern or North African
      */
-    v3_Race_MiddleEasternOrNorthAfrican: Coding.FactoryCreateStrict({
+    v3_Race_MiddleEasternOrNorthAfrican: Coding.FromStrict({
         code: "2118-8",
         display: "Middle Eastern or North African",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7286,7 +7285,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Assyrian
      */
-    v3_Race_Assyrian: Coding.FactoryCreateStrict({
+    v3_Race_Assyrian: Coding.FromStrict({
         code: "2119-6",
         display: "Assyrian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7294,7 +7293,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Egyptian
      */
-    v3_Race_Egyptian: Coding.FactoryCreateStrict({
+    v3_Race_Egyptian: Coding.FromStrict({
         code: "2120-4",
         display: "Egyptian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7302,7 +7301,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iranian
      */
-    v3_Race_Iranian: Coding.FactoryCreateStrict({
+    v3_Race_Iranian: Coding.FromStrict({
         code: "2121-2",
         display: "Iranian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7310,7 +7309,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Iraqi
      */
-    v3_Race_Iraqi: Coding.FactoryCreateStrict({
+    v3_Race_Iraqi: Coding.FromStrict({
         code: "2122-0",
         display: "Iraqi",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7318,7 +7317,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Lebanese
      */
-    v3_Race_Lebanese: Coding.FactoryCreateStrict({
+    v3_Race_Lebanese: Coding.FromStrict({
         code: "2123-8",
         display: "Lebanese",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7326,7 +7325,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Palestinian
      */
-    v3_Race_Palestinian: Coding.FactoryCreateStrict({
+    v3_Race_Palestinian: Coding.FromStrict({
         code: "2124-6",
         display: "Palestinian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7334,7 +7333,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Syrian
      */
-    v3_Race_Syrian: Coding.FactoryCreateStrict({
+    v3_Race_Syrian: Coding.FromStrict({
         code: "2125-3",
         display: "Syrian",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7342,7 +7341,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Afghanistani
      */
-    v3_Race_Afghanistani: Coding.FactoryCreateStrict({
+    v3_Race_Afghanistani: Coding.FromStrict({
         code: "2126-1",
         display: "Afghanistani",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7350,7 +7349,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Israeili
      */
-    v3_Race_Israeili: Coding.FactoryCreateStrict({
+    v3_Race_Israeili: Coding.FromStrict({
         code: "2127-9",
         display: "Israeili",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7358,7 +7357,7 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Arab
      */
-    v3_Race_Arab: Coding.FactoryCreateStrict({
+    v3_Race_Arab: Coding.FromStrict({
         code: "2129-5",
         display: "Arab",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
@@ -7366,30 +7365,26 @@ export var ReferencerangeAppliestoValueSet = {
     /**
      * Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
      */
-    v3_Race_OtherRace: Coding.FactoryCreateStrict({
+    v3_Race_OtherRace: Coding.FromStrict({
         code: "2131-1",
         display: "Other Race",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
     }),
-    ReferencerangeAppliestoValueSet_VAL248152002: Coding.FactoryCreateStrict({
+    ReferencerangeAppliestoValueSet_VAL248152002: Coding.FromStrict({
         code: "248152002",
         system: "http://snomed.info/sct"
     }),
-    ReferencerangeAppliestoValueSet_VAL248153007: Coding.FactoryCreateStrict({
+    ReferencerangeAppliestoValueSet_VAL248153007: Coding.FromStrict({
         code: "248153007",
         system: "http://snomed.info/sct"
     }),
     /**
      * Note that this term remains in the table for completeness, even though within HL7, the notion of Other code is deprecated.
      */
-    v3_Race_OtherPacificIslander: Coding.FactoryCreateStrict({
+    v3_Race_OtherPacificIslander: Coding.FromStrict({
         code: "2500-7",
         display: "Other Pacific Islander",
         system: "http://terminology.hl7.org/CodeSystem/v3-Race"
-    }),
-    ReferencerangeAppliestoValueSet_VAL77386006: Coding.FactoryCreateStrict({
-        code: "77386006",
-        system: "http://snomed.info/sct"
     }),
 };
 //# sourceMappingURL=ReferencerangeAppliestoValueSet.js.map

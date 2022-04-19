@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * The current status is always found in the current version of the resource, not the status history.
  */
-export interface IEncounterStatusHistory extends fhir.IBackboneElement {
+export type IEncounterStatusHistory = fhir.IBackboneElement & {
   /**
    * The time that the episode was in the specified status.
    */
@@ -24,7 +23,7 @@ export interface IEncounterStatusHistory extends fhir.IBackboneElement {
 /**
  * The class history permits the tracking of the encounters transitions without needing to go  through the resource history.  This would be used for a case where an admission starts of as an emergency encounter, then transitions into an inpatient scenario. Doing this and not restarting a new encounter ensures that any lab/diagnostic results can more easily follow the patient and not require re-processing and not get lost or cancelled during a kind of discharge from emergency to inpatient.
  */
-export interface IEncounterClassHistory extends fhir.IBackboneElement {
+export type IEncounterClassHistory = fhir.IBackboneElement & {
   /**
    * inpatient | outpatient | ambulatory | emergency +.
    */
@@ -37,7 +36,7 @@ export interface IEncounterClassHistory extends fhir.IBackboneElement {
 /**
  * The list of people responsible for providing the service.
  */
-export interface IEncounterParticipant extends fhir.IBackboneElement {
+export type IEncounterParticipant = fhir.IBackboneElement & {
   /**
    * Persons involved in the encounter other than the patient.
    */
@@ -54,7 +53,7 @@ export interface IEncounterParticipant extends fhir.IBackboneElement {
 /**
  * The list of diagnosis relevant to this encounter.
  */
-export interface IEncounterDiagnosis extends fhir.IBackboneElement {
+export type IEncounterDiagnosis = fhir.IBackboneElement & {
   /**
    * For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).
    */
@@ -73,7 +72,7 @@ export interface IEncounterDiagnosis extends fhir.IBackboneElement {
  * An Encounter may cover more than just the inpatient stay. Contexts such as outpatients, community clinics, and aged care facilities are also included.
  * The duration recorded in the period of this encounter covers the entire scope of this hospitalization record.
  */
-export interface IEncounterHospitalization extends fhir.IBackboneElement {
+export type IEncounterHospitalization = fhir.IBackboneElement & {
   /**
    * From where patient was admitted (physician referral, transfer).
    */
@@ -114,7 +113,7 @@ export interface IEncounterHospitalization extends fhir.IBackboneElement {
 /**
  * Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type "kind" such as "client's home" and an encounter.class = "virtual".
  */
-export interface IEncounterLocation extends fhir.IBackboneElement {
+export type IEncounterLocation = fhir.IBackboneElement & {
   /**
    * The location where the encounter takes place.
    */
@@ -137,11 +136,11 @@ export interface IEncounterLocation extends fhir.IBackboneElement {
 /**
  * An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.
  */
-export interface IEncounter extends fhir.IDomainResource {
+export type IEncounter = fhir.IDomainResource & {
   /**
    * Resource Type Name
    */
-  readonly resourceType: "Encounter";
+  resourceType: "Encounter";
   /**
    * The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.
    */
@@ -252,43 +251,36 @@ export class EncounterStatusHistory extends fhir.BackboneElement implements fhir
   public status: EncounterStatusHistoryStatusEnum|null;
   public _status?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for EncounterStatusHistory - initializes required elements to null.
+   * Default constructor for EncounterStatusHistory - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IEncounterStatusHistory> = {}) {
+    super(source);
     this.period = null;
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (this.period === undefined) { this.period = null }
     this.status = null;
-  }
-  /**
-   * Factory function to create a EncounterStatusHistory from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterStatusHistory>):EncounterStatusHistory {
-    var dest:Partial<EncounterStatusHistory> = super.FactoryCreate(source) as Partial<EncounterStatusHistory>;
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["status"] !== undefined) { dest.status = source.status; }
-    if (source["_status"] !== undefined) { dest._status = fhir.FhirElement.FactoryCreate(source._status!); }
-    return dest as EncounterStatusHistory;
+    if (source["status"]) { this.status = source.status; }
+    if (this.status === undefined) { this.status = null }
+    if (source["_status"]) { this._status = new fhir.FhirElement(source._status!); }
   }
   /**
    * Check if the current EncounterStatusHistory contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["period"] === undefined) { missingElements.push("period"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterStatusHistory from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterStatusHistory):EncounterStatusHistory {
-    var dest:EncounterStatusHistory = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterStatusHistory is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterStatusHistory):EncounterStatusHistory {
+    var dest:EncounterStatusHistory = new EncounterStatusHistory(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterStatusHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -305,42 +297,35 @@ export class EncounterClassHistory extends fhir.BackboneElement implements fhir.
    */
   public period: fhir.Period|null;
   /**
-   * Default constructor for EncounterClassHistory - initializes required elements to null.
+   * Default constructor for EncounterClassHistory - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IEncounterClassHistory> = {}) {
+    super(source);
     this.class = null;
+    if (source["class"]) { this.class = new fhir.Coding(source.class!); }
+    if (this.class === undefined) { this.class = null }
     this.period = null;
-  }
-  /**
-   * Factory function to create a EncounterClassHistory from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterClassHistory>):EncounterClassHistory {
-    var dest:Partial<EncounterClassHistory> = super.FactoryCreate(source) as Partial<EncounterClassHistory>;
-    if (source["class"] !== undefined) { dest.class = fhir.Coding.FactoryCreate(source.class!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    return dest as EncounterClassHistory;
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (this.period === undefined) { this.period = null }
   }
   /**
    * Check if the current EncounterClassHistory contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["class"] === undefined) { missingElements.push("class"); }
     if (this["period"] === undefined) { missingElements.push("period"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterClassHistory from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterClassHistory):EncounterClassHistory {
-    var dest:EncounterClassHistory = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterClassHistory is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterClassHistory):EncounterClassHistory {
+    var dest:EncounterClassHistory = new EncounterClassHistory(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterClassHistory is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -361,39 +346,30 @@ export class EncounterParticipant extends fhir.BackboneElement implements fhir.I
    */
   public type?: fhir.CodeableConcept[]|undefined;
   /**
-   * Default constructor for EncounterParticipant - initializes required elements to null.
+   * Default constructor for EncounterParticipant - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a EncounterParticipant from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterParticipant>):EncounterParticipant {
-    var dest:Partial<EncounterParticipant> = super.FactoryCreate(source) as Partial<EncounterParticipant>;
-    if (source["individual"] !== undefined) { dest.individual = fhir.Reference.FactoryCreate(source.individual!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["type"] !== undefined) { dest.type = source.type.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    return dest as EncounterParticipant;
+  constructor(source:Partial<fhir.IEncounterParticipant> = {}) {
+    super(source);
+    if (source["individual"]) { this.individual = new fhir.Reference(source.individual!); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["type"]) { this.type = source.type.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Check if the current EncounterParticipant contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterParticipant from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterParticipant):EncounterParticipant {
-    var dest:EncounterParticipant = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterParticipant is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterParticipant):EncounterParticipant {
+    var dest:EncounterParticipant = new EncounterParticipant(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterParticipant is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -415,42 +391,34 @@ export class EncounterDiagnosis extends fhir.BackboneElement implements fhir.IEn
    */
   public use?: fhir.CodeableConcept|undefined;
   /**
-   * Default constructor for EncounterDiagnosis - initializes required elements to null.
+   * Default constructor for EncounterDiagnosis - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IEncounterDiagnosis> = {}) {
+    super(source);
     this.condition = null;
-  }
-  /**
-   * Factory function to create a EncounterDiagnosis from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterDiagnosis>):EncounterDiagnosis {
-    var dest:Partial<EncounterDiagnosis> = super.FactoryCreate(source) as Partial<EncounterDiagnosis>;
-    if (source["condition"] !== undefined) { dest.condition = fhir.Reference.FactoryCreate(source.condition!); }
-    if (source["rank"] !== undefined) { dest.rank = source.rank; }
-    if (source["_rank"] !== undefined) { dest._rank = fhir.FhirElement.FactoryCreate(source._rank!); }
-    if (source["use"] !== undefined) { dest.use = fhir.CodeableConcept.FactoryCreate(source.use!); }
-    return dest as EncounterDiagnosis;
+    if (source["condition"]) { this.condition = new fhir.Reference(source.condition!); }
+    if (this.condition === undefined) { this.condition = null }
+    if (source["rank"]) { this.rank = source.rank; }
+    if (source["_rank"]) { this._rank = new fhir.FhirElement(source._rank!); }
+    if (source["use"]) { this.use = new fhir.CodeableConcept(source.use!); }
   }
   /**
    * Check if the current EncounterDiagnosis contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["condition"] === undefined) { missingElements.push("condition"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterDiagnosis from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterDiagnosis):EncounterDiagnosis {
-    var dest:EncounterDiagnosis = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterDiagnosis is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterDiagnosis):EncounterDiagnosis {
+    var dest:EncounterDiagnosis = new EncounterDiagnosis(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterDiagnosis is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -496,45 +464,36 @@ export class EncounterHospitalization extends fhir.BackboneElement implements fh
    */
   public specialCourtesy?: fhir.CodeableConcept[]|undefined;
   /**
-   * Default constructor for EncounterHospitalization - initializes required elements to null.
+   * Default constructor for EncounterHospitalization - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a EncounterHospitalization from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterHospitalization>):EncounterHospitalization {
-    var dest:Partial<EncounterHospitalization> = super.FactoryCreate(source) as Partial<EncounterHospitalization>;
-    if (source["admitSource"] !== undefined) { dest.admitSource = fhir.CodeableConcept.FactoryCreate(source.admitSource!); }
-    if (source["destination"] !== undefined) { dest.destination = fhir.Reference.FactoryCreate(source.destination!); }
-    if (source["dietPreference"] !== undefined) { dest.dietPreference = source.dietPreference.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["dischargeDisposition"] !== undefined) { dest.dischargeDisposition = fhir.CodeableConcept.FactoryCreate(source.dischargeDisposition!); }
-    if (source["origin"] !== undefined) { dest.origin = fhir.Reference.FactoryCreate(source.origin!); }
-    if (source["preAdmissionIdentifier"] !== undefined) { dest.preAdmissionIdentifier = fhir.Identifier.FactoryCreate(source.preAdmissionIdentifier!); }
-    if (source["reAdmission"] !== undefined) { dest.reAdmission = fhir.CodeableConcept.FactoryCreate(source.reAdmission!); }
-    if (source["specialArrangement"] !== undefined) { dest.specialArrangement = source.specialArrangement.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["specialCourtesy"] !== undefined) { dest.specialCourtesy = source.specialCourtesy.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    return dest as EncounterHospitalization;
+  constructor(source:Partial<fhir.IEncounterHospitalization> = {}) {
+    super(source);
+    if (source["admitSource"]) { this.admitSource = new fhir.CodeableConcept(source.admitSource!); }
+    if (source["destination"]) { this.destination = new fhir.Reference(source.destination!); }
+    if (source["dietPreference"]) { this.dietPreference = source.dietPreference.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["dischargeDisposition"]) { this.dischargeDisposition = new fhir.CodeableConcept(source.dischargeDisposition!); }
+    if (source["origin"]) { this.origin = new fhir.Reference(source.origin!); }
+    if (source["preAdmissionIdentifier"]) { this.preAdmissionIdentifier = new fhir.Identifier(source.preAdmissionIdentifier!); }
+    if (source["reAdmission"]) { this.reAdmission = new fhir.CodeableConcept(source.reAdmission!); }
+    if (source["specialArrangement"]) { this.specialArrangement = source.specialArrangement.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["specialCourtesy"]) { this.specialCourtesy = source.specialCourtesy.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Check if the current EncounterHospitalization contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterHospitalization from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterHospitalization):EncounterHospitalization {
-    var dest:EncounterHospitalization = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterHospitalization is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterHospitalization):EncounterHospitalization {
+    var dest:EncounterHospitalization = new EncounterHospitalization(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterHospitalization is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -561,43 +520,35 @@ export class EncounterLocation extends fhir.BackboneElement implements fhir.IEnc
   public status?: EncounterLocationStatusEnum|undefined;
   public _status?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for EncounterLocation - initializes required elements to null.
+   * Default constructor for EncounterLocation - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IEncounterLocation> = {}) {
+    super(source);
     this.location = null;
-  }
-  /**
-   * Factory function to create a EncounterLocation from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounterLocation>):EncounterLocation {
-    var dest:Partial<EncounterLocation> = super.FactoryCreate(source) as Partial<EncounterLocation>;
-    if (source["location"] !== undefined) { dest.location = fhir.Reference.FactoryCreate(source.location!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["physicalType"] !== undefined) { dest.physicalType = fhir.CodeableConcept.FactoryCreate(source.physicalType!); }
-    if (source["status"] !== undefined) { dest.status = source.status; }
-    if (source["_status"] !== undefined) { dest._status = fhir.FhirElement.FactoryCreate(source._status!); }
-    return dest as EncounterLocation;
+    if (source["location"]) { this.location = new fhir.Reference(source.location!); }
+    if (this.location === undefined) { this.location = null }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["physicalType"]) { this.physicalType = new fhir.CodeableConcept(source.physicalType!); }
+    if (source["status"]) { this.status = source.status; }
+    if (source["_status"]) { this._status = new fhir.FhirElement(source._status!); }
   }
   /**
    * Check if the current EncounterLocation contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["location"] === undefined) { missingElements.push("location"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a EncounterLocation from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounterLocation):EncounterLocation {
-    var dest:EncounterLocation = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `EncounterLocation is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounterLocation):EncounterLocation {
+    var dest:EncounterLocation = new EncounterLocation(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `EncounterLocation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -608,7 +559,7 @@ export class Encounter extends fhir.DomainResource implements fhir.IEncounter {
   /**
    * Resource Type Name
    */
-  readonly resourceType = "Encounter";
+  public override resourceType: "Encounter";
   /**
    * The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.
    */
@@ -705,65 +656,58 @@ export class Encounter extends fhir.DomainResource implements fhir.IEncounter {
    */
   public type?: fhir.CodeableConcept[]|undefined;
   /**
-   * Default constructor for Encounter - initializes required elements to null.
+   * Default constructor for Encounter - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IEncounter> = {}) {
+    super(source);
+    this.resourceType = 'Encounter';
+    if (source["account"]) { this.account = source.account.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["appointment"]) { this.appointment = source.appointment.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["basedOn"]) { this.basedOn = source.basedOn.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
     this.class = null;
+    if (source["class"]) { this.class = new fhir.Coding(source.class!); }
+    if (this.class === undefined) { this.class = null }
+    if (source["classHistory"]) { this.classHistory = source.classHistory.map((x:Partial<fhir.IEncounterClassHistory>) => new fhir.EncounterClassHistory(x)); }
+    if (source["diagnosis"]) { this.diagnosis = source.diagnosis.map((x:Partial<fhir.IEncounterDiagnosis>) => new fhir.EncounterDiagnosis(x)); }
+    if (source["episodeOfCare"]) { this.episodeOfCare = source.episodeOfCare.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["hospitalization"]) { this.hospitalization = new fhir.EncounterHospitalization(source.hospitalization!); }
+    if (source["identifier"]) { this.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => new fhir.Identifier(x)); }
+    if (source["length"]) { this.length = new fhir.Duration(source.length!); }
+    if (source["location"]) { this.location = source.location.map((x:Partial<fhir.IEncounterLocation>) => new fhir.EncounterLocation(x)); }
+    if (source["participant"]) { this.participant = source.participant.map((x:Partial<fhir.IEncounterParticipant>) => new fhir.EncounterParticipant(x)); }
+    if (source["partOf"]) { this.partOf = new fhir.Reference(source.partOf!); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["priority"]) { this.priority = new fhir.CodeableConcept(source.priority!); }
+    if (source["reasonCode"]) { this.reasonCode = source.reasonCode.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["reasonReference"]) { this.reasonReference = source.reasonReference.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["serviceProvider"]) { this.serviceProvider = new fhir.Reference(source.serviceProvider!); }
+    if (source["serviceType"]) { this.serviceType = new fhir.CodeableConcept(source.serviceType!); }
     this.status = null;
-  }
-  /**
-   * Factory function to create a Encounter from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IEncounter>):Encounter {
-    var dest:Partial<Encounter> = super.FactoryCreate(source) as Partial<Encounter>;
-    if ((source['resourceType'] !== "Encounter") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Encounter'; }
-    if (source["account"] !== undefined) { dest.account = source.account.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["appointment"] !== undefined) { dest.appointment = source.appointment.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["basedOn"] !== undefined) { dest.basedOn = source.basedOn.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["class"] !== undefined) { dest.class = fhir.Coding.FactoryCreate(source.class!); }
-    if (source["classHistory"] !== undefined) { dest.classHistory = source.classHistory.map((x:Partial<fhir.IEncounterClassHistory>) => fhir.EncounterClassHistory.FactoryCreate(x)); }
-    if (source["diagnosis"] !== undefined) { dest.diagnosis = source.diagnosis.map((x:Partial<fhir.IEncounterDiagnosis>) => fhir.EncounterDiagnosis.FactoryCreate(x)); }
-    if (source["episodeOfCare"] !== undefined) { dest.episodeOfCare = source.episodeOfCare.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["hospitalization"] !== undefined) { dest.hospitalization = fhir.EncounterHospitalization.FactoryCreate(source.hospitalization!); }
-    if (source["identifier"] !== undefined) { dest.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => fhir.Identifier.FactoryCreate(x)); }
-    if (source["length"] !== undefined) { dest.length = fhir.Duration.FactoryCreate(source.length!); }
-    if (source["location"] !== undefined) { dest.location = source.location.map((x:Partial<fhir.IEncounterLocation>) => fhir.EncounterLocation.FactoryCreate(x)); }
-    if (source["participant"] !== undefined) { dest.participant = source.participant.map((x:Partial<fhir.IEncounterParticipant>) => fhir.EncounterParticipant.FactoryCreate(x)); }
-    if (source["partOf"] !== undefined) { dest.partOf = fhir.Reference.FactoryCreate(source.partOf!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["priority"] !== undefined) { dest.priority = fhir.CodeableConcept.FactoryCreate(source.priority!); }
-    if (source["reasonCode"] !== undefined) { dest.reasonCode = source.reasonCode.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["reasonReference"] !== undefined) { dest.reasonReference = source.reasonReference.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["serviceProvider"] !== undefined) { dest.serviceProvider = fhir.Reference.FactoryCreate(source.serviceProvider!); }
-    if (source["serviceType"] !== undefined) { dest.serviceType = fhir.CodeableConcept.FactoryCreate(source.serviceType!); }
-    if (source["status"] !== undefined) { dest.status = source.status; }
-    if (source["_status"] !== undefined) { dest._status = fhir.FhirElement.FactoryCreate(source._status!); }
-    if (source["statusHistory"] !== undefined) { dest.statusHistory = source.statusHistory.map((x:Partial<fhir.IEncounterStatusHistory>) => fhir.EncounterStatusHistory.FactoryCreate(x)); }
-    if (source["subject"] !== undefined) { dest.subject = fhir.Reference.FactoryCreate(source.subject!); }
-    if (source["type"] !== undefined) { dest.type = source.type.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    return dest as Encounter;
+    if (source["status"]) { this.status = source.status; }
+    if (this.status === undefined) { this.status = null }
+    if (source["_status"]) { this._status = new fhir.FhirElement(source._status!); }
+    if (source["statusHistory"]) { this.statusHistory = source.statusHistory.map((x:Partial<fhir.IEncounterStatusHistory>) => new fhir.EncounterStatusHistory(x)); }
+    if (source["subject"]) { this.subject = new fhir.Reference(source.subject!); }
+    if (source["type"]) { this.type = source.type.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
   }
   /**
    * Check if the current Encounter contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["class"] === undefined) { missingElements.push("class"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Encounter from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IEncounter):Encounter {
-    var dest:Encounter = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Encounter is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IEncounter):Encounter {
+    var dest:Encounter = new Encounter(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Encounter is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

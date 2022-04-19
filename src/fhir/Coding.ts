@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A reference to a code defined by a terminology system.
  */
-export interface ICoding extends fhir.IFhirElement {
+export type ICoding = fhir.IFhirElement & {
   /**
    * A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
    */
@@ -67,46 +66,37 @@ export class Coding extends fhir.FhirElement implements fhir.ICoding {
   public version?: string|undefined;
   public _version?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Coding - initializes required elements to null.
+   * Default constructor for Coding - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Coding from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.ICoding>):Coding {
-    var dest:Partial<Coding> = super.FactoryCreate(source) as Partial<Coding>;
-    if (source["code"] !== undefined) { dest.code = source.code; }
-    if (source["_code"] !== undefined) { dest._code = fhir.FhirElement.FactoryCreate(source._code!); }
-    if (source["display"] !== undefined) { dest.display = source.display; }
-    if (source["_display"] !== undefined) { dest._display = fhir.FhirElement.FactoryCreate(source._display!); }
-    if (source["system"] !== undefined) { dest.system = source.system; }
-    if (source["_system"] !== undefined) { dest._system = fhir.FhirElement.FactoryCreate(source._system!); }
-    if (source["userSelected"] !== undefined) { dest.userSelected = source.userSelected; }
-    if (source["_userSelected"] !== undefined) { dest._userSelected = fhir.FhirElement.FactoryCreate(source._userSelected!); }
-    if (source["version"] !== undefined) { dest.version = source.version; }
-    if (source["_version"] !== undefined) { dest._version = fhir.FhirElement.FactoryCreate(source._version!); }
-    return dest as Coding;
+  constructor(source:Partial<fhir.ICoding> = {}) {
+    super(source);
+    if (source["code"]) { this.code = source.code; }
+    if (source["_code"]) { this._code = new fhir.FhirElement(source._code!); }
+    if (source["display"]) { this.display = source.display; }
+    if (source["_display"]) { this._display = new fhir.FhirElement(source._display!); }
+    if (source["system"]) { this.system = source.system; }
+    if (source["_system"]) { this._system = new fhir.FhirElement(source._system!); }
+    if (source["userSelected"]) { this.userSelected = source.userSelected; }
+    if (source["_userSelected"]) { this._userSelected = new fhir.FhirElement(source._userSelected!); }
+    if (source["version"]) { this.version = source.version; }
+    if (source["_version"]) { this._version = new fhir.FhirElement(source._version!); }
   }
   /**
    * Check if the current Coding contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Coding from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.ICoding):Coding {
-    var dest:Coding = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Coding is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.ICoding):Coding {
+    var dest:Coding = new Coding(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Coding is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

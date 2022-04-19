@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A set of rules that describe when the event is scheduled.
  */
-export interface ITimingRepeat extends fhir.IFhirElement {
+export type ITimingRepeat = fhir.IFhirElement & {
   /**
    * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
    */
@@ -97,7 +96,7 @@ export interface ITimingRepeat extends fhir.IFhirElement {
 /**
  * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
  */
-export interface ITiming extends fhir.IBackboneElement {
+export type ITiming = fhir.IBackboneElement & {
   /**
    * BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times).
    */
@@ -199,67 +198,58 @@ export class TimingRepeat extends fhir.FhirElement implements fhir.ITimingRepeat
   public when?: string[]|undefined;
   public _when?: fhir.FhirElement[]|undefined;
   /**
-   * Default constructor for TimingRepeat - initializes required elements to null.
+   * Default constructor for TimingRepeat - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a TimingRepeat from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.ITimingRepeat>):TimingRepeat {
-    var dest:Partial<TimingRepeat> = super.FactoryCreate(source) as Partial<TimingRepeat>;
-    if (source["boundsDuration"] !== undefined) { dest.boundsDuration = fhir.Duration.FactoryCreate(source.boundsDuration!); }
-    if (source["boundsRange"] !== undefined) { dest.boundsRange = fhir.Range.FactoryCreate(source.boundsRange!); }
-    if (source["boundsPeriod"] !== undefined) { dest.boundsPeriod = fhir.Period.FactoryCreate(source.boundsPeriod!); }
-    if (source["count"] !== undefined) { dest.count = source.count; }
-    if (source["_count"] !== undefined) { dest._count = fhir.FhirElement.FactoryCreate(source._count!); }
-    if (source["countMax"] !== undefined) { dest.countMax = source.countMax; }
-    if (source["_countMax"] !== undefined) { dest._countMax = fhir.FhirElement.FactoryCreate(source._countMax!); }
-    if (source["dayOfWeek"] !== undefined) { dest.dayOfWeek = source.dayOfWeek.map((x) => (x)); }
-    if (source["_dayOfWeek"] !== undefined) { dest._dayOfWeek = source._dayOfWeek.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["duration"] !== undefined) { dest.duration = source.duration; }
-    if (source["_duration"] !== undefined) { dest._duration = fhir.FhirElement.FactoryCreate(source._duration!); }
-    if (source["durationMax"] !== undefined) { dest.durationMax = source.durationMax; }
-    if (source["_durationMax"] !== undefined) { dest._durationMax = fhir.FhirElement.FactoryCreate(source._durationMax!); }
-    if (source["durationUnit"] !== undefined) { dest.durationUnit = source.durationUnit; }
-    if (source["_durationUnit"] !== undefined) { dest._durationUnit = fhir.FhirElement.FactoryCreate(source._durationUnit!); }
-    if (source["frequency"] !== undefined) { dest.frequency = source.frequency; }
-    if (source["_frequency"] !== undefined) { dest._frequency = fhir.FhirElement.FactoryCreate(source._frequency!); }
-    if (source["frequencyMax"] !== undefined) { dest.frequencyMax = source.frequencyMax; }
-    if (source["_frequencyMax"] !== undefined) { dest._frequencyMax = fhir.FhirElement.FactoryCreate(source._frequencyMax!); }
-    if (source["offset"] !== undefined) { dest.offset = source.offset; }
-    if (source["_offset"] !== undefined) { dest._offset = fhir.FhirElement.FactoryCreate(source._offset!); }
-    if (source["period"] !== undefined) { dest.period = source.period; }
-    if (source["_period"] !== undefined) { dest._period = fhir.FhirElement.FactoryCreate(source._period!); }
-    if (source["periodMax"] !== undefined) { dest.periodMax = source.periodMax; }
-    if (source["_periodMax"] !== undefined) { dest._periodMax = fhir.FhirElement.FactoryCreate(source._periodMax!); }
-    if (source["periodUnit"] !== undefined) { dest.periodUnit = source.periodUnit; }
-    if (source["_periodUnit"] !== undefined) { dest._periodUnit = fhir.FhirElement.FactoryCreate(source._periodUnit!); }
-    if (source["timeOfDay"] !== undefined) { dest.timeOfDay = source.timeOfDay.map((x) => (x)); }
-    if (source["_timeOfDay"] !== undefined) { dest._timeOfDay = source._timeOfDay.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["when"] !== undefined) { dest.when = source.when.map((x) => (x)); }
-    if (source["_when"] !== undefined) { dest._when = source._when.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    return dest as TimingRepeat;
+  constructor(source:Partial<fhir.ITimingRepeat> = {}) {
+    super(source);
+    if (source["boundsDuration"]) { this.boundsDuration = new fhir.Duration(source.boundsDuration!); }
+    if (source["boundsRange"]) { this.boundsRange = new fhir.Range(source.boundsRange!); }
+    if (source["boundsPeriod"]) { this.boundsPeriod = new fhir.Period(source.boundsPeriod!); }
+    if (source["count"]) { this.count = source.count; }
+    if (source["_count"]) { this._count = new fhir.FhirElement(source._count!); }
+    if (source["countMax"]) { this.countMax = source.countMax; }
+    if (source["_countMax"]) { this._countMax = new fhir.FhirElement(source._countMax!); }
+    if (source["dayOfWeek"]) { this.dayOfWeek = source.dayOfWeek.map((x) => (x)); }
+    if (source["_dayOfWeek"]) { this._dayOfWeek = source._dayOfWeek.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["duration"]) { this.duration = source.duration; }
+    if (source["_duration"]) { this._duration = new fhir.FhirElement(source._duration!); }
+    if (source["durationMax"]) { this.durationMax = source.durationMax; }
+    if (source["_durationMax"]) { this._durationMax = new fhir.FhirElement(source._durationMax!); }
+    if (source["durationUnit"]) { this.durationUnit = source.durationUnit; }
+    if (source["_durationUnit"]) { this._durationUnit = new fhir.FhirElement(source._durationUnit!); }
+    if (source["frequency"]) { this.frequency = source.frequency; }
+    if (source["_frequency"]) { this._frequency = new fhir.FhirElement(source._frequency!); }
+    if (source["frequencyMax"]) { this.frequencyMax = source.frequencyMax; }
+    if (source["_frequencyMax"]) { this._frequencyMax = new fhir.FhirElement(source._frequencyMax!); }
+    if (source["offset"]) { this.offset = source.offset; }
+    if (source["_offset"]) { this._offset = new fhir.FhirElement(source._offset!); }
+    if (source["period"]) { this.period = source.period; }
+    if (source["_period"]) { this._period = new fhir.FhirElement(source._period!); }
+    if (source["periodMax"]) { this.periodMax = source.periodMax; }
+    if (source["_periodMax"]) { this._periodMax = new fhir.FhirElement(source._periodMax!); }
+    if (source["periodUnit"]) { this.periodUnit = source.periodUnit; }
+    if (source["_periodUnit"]) { this._periodUnit = new fhir.FhirElement(source._periodUnit!); }
+    if (source["timeOfDay"]) { this.timeOfDay = source.timeOfDay.map((x) => (x)); }
+    if (source["_timeOfDay"]) { this._timeOfDay = source._timeOfDay.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["when"]) { this.when = source.when.map((x) => (x)); }
+    if (source["_when"]) { this._when = source._when.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
   }
   /**
    * Check if the current TimingRepeat contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a TimingRepeat from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.ITimingRepeat):TimingRepeat {
-    var dest:TimingRepeat = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `TimingRepeat is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.ITimingRepeat):TimingRepeat {
+    var dest:TimingRepeat = new TimingRepeat(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `TimingRepeat is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -281,40 +271,31 @@ export class Timing extends fhir.BackboneElement implements fhir.ITiming {
    */
   public repeat?: fhir.TimingRepeat|undefined;
   /**
-   * Default constructor for Timing - initializes required elements to null.
+   * Default constructor for Timing - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Timing from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.ITiming>):Timing {
-    var dest:Partial<Timing> = super.FactoryCreate(source) as Partial<Timing>;
-    if (source["code"] !== undefined) { dest.code = fhir.CodeableConcept.FactoryCreate(source.code!); }
-    if (source["event"] !== undefined) { dest.event = source.event.map((x) => (x)); }
-    if (source["_event"] !== undefined) { dest._event = source._event.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["repeat"] !== undefined) { dest.repeat = fhir.TimingRepeat.FactoryCreate(source.repeat!); }
-    return dest as Timing;
+  constructor(source:Partial<fhir.ITiming> = {}) {
+    super(source);
+    if (source["code"]) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (source["event"]) { this.event = source.event.map((x) => (x)); }
+    if (source["_event"]) { this._event = source._event.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["repeat"]) { this.repeat = new fhir.TimingRepeat(source.repeat!); }
   }
   /**
    * Check if the current Timing contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Timing from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.ITiming):Timing {
-    var dest:Timing = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Timing is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.ITiming):Timing {
+    var dest:Timing = new Timing(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Timing is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

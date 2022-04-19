@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
  */
-export interface ICodeableConcept extends fhir.IFhirElement {
+export declare type ICodeableConcept = fhir.IFhirElement & {
     /**
      * Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.
      */
@@ -12,7 +12,7 @@ export interface ICodeableConcept extends fhir.IFhirElement {
      */
     text?: string | undefined;
     _text?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
  */
@@ -27,20 +27,16 @@ export declare class CodeableConcept extends fhir.FhirElement implements fhir.IC
     text?: string | undefined;
     _text?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for CodeableConcept - initializes required elements to null.
+     * Default constructor for CodeableConcept - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a CodeableConcept from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.ICodeableConcept>): CodeableConcept;
+    constructor(source?: Partial<fhir.ICodeableConcept>);
     /**
      * Check if the current CodeableConcept contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a CodeableConcept from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.ICodeableConcept): CodeableConcept;
+    static FromStrict(source: fhir.ICodeableConcept): CodeableConcept;
 }
 //# sourceMappingURL=CodeableConcept.d.ts.map

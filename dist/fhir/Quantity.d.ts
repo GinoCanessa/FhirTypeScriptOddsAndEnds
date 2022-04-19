@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export interface IQuantity extends fhir.IFhirElement {
+export declare type IQuantity = fhir.IFhirElement & {
     /**
      * The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.
      */
@@ -28,7 +28,7 @@ export interface IQuantity extends fhir.IFhirElement {
      */
     value?: number | undefined;
     _value?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
@@ -59,21 +59,17 @@ export declare class Quantity extends fhir.FhirElement implements fhir.IQuantity
     value?: number | undefined;
     _value?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Quantity - initializes required elements to null.
+     * Default constructor for Quantity - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Quantity from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IQuantity>): Quantity;
+    constructor(source?: Partial<fhir.IQuantity>);
     /**
      * Check if the current Quantity contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Quantity from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IQuantity): Quantity;
+    static FromStrict(source: fhir.IQuantity): Quantity;
 }
 /**
  * Code Values for the Quantity.comparator field

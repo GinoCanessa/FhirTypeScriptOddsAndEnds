@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A relationship of two Quantity values - expressed as a numerator and a denominator.
  */
-export interface IRatio extends fhir.IFhirElement {
+export type IRatio = fhir.IFhirElement & {
   /**
    * The value of the denominator.
    */
@@ -33,38 +32,29 @@ export class Ratio extends fhir.FhirElement implements fhir.IRatio {
    */
   public numerator?: fhir.Quantity|undefined;
   /**
-   * Default constructor for Ratio - initializes required elements to null.
+   * Default constructor for Ratio - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Ratio from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IRatio>):Ratio {
-    var dest:Partial<Ratio> = super.FactoryCreate(source) as Partial<Ratio>;
-    if (source["denominator"] !== undefined) { dest.denominator = fhir.Quantity.FactoryCreate(source.denominator!); }
-    if (source["numerator"] !== undefined) { dest.numerator = fhir.Quantity.FactoryCreate(source.numerator!); }
-    return dest as Ratio;
+  constructor(source:Partial<fhir.IRatio> = {}) {
+    super(source);
+    if (source["denominator"]) { this.denominator = new fhir.Quantity(source.denominator!); }
+    if (source["numerator"]) { this.numerator = new fhir.Quantity(source.numerator!); }
   }
   /**
    * Check if the current Ratio contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Ratio from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IRatio):Ratio {
-    var dest:Ratio = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Ratio is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IRatio):Ratio {
+    var dest:Ratio = new Ratio(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Ratio is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * Common Tag Codes defined by FHIR project
  */
-export var CommonTagsValueSet = {
+export const CommonTagsValueSet = {
     /**
      * This request is intended to be acted upon, not merely stored
      */
-    common_tags_Actionable: Coding.FactoryCreateStrict({
+    common_tags_Actionable: Coding.FromStrict({
         code: "actionable",
         display: "Actionable",
         system: "http://terminology.hl7.org/CodeSystem/common-tags"

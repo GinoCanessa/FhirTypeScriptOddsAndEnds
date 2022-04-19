@@ -1,0 +1,65 @@
+import { Coding } from '../fhir';
+/**
+ * This value set includes some taken and not taken reason codes from SNOMED CT - provided as an exemplar
+ */
+export declare const ReasonMedicationStatusCodesValueSet: {
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfMycophenolate: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfCyclophosphamide: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInfliximab: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfEtanercept: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfNonSteroidalAntiInflammatoryDrug: Coding;
+    ReasonMedicationStatusCodesValueSet_HistoryOfEstrogenTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HistoryOfSystemicSteroidTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAzathioprine: Coding;
+    ReasonMedicationStatusCodesValueSet_OralSteroidsStarted: Coding;
+    ReasonMedicationStatusCodesValueSet_B12InjectionsStarted: Coding;
+    ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyHRTStarted: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugCourseCompleted: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeTaste: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenDislikeForm: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenSideEffects: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenInconvenient: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenPatDisbelief: Coding;
+    ReasonMedicationStatusCodesValueSet_TreatmentStoppedAlternativeTherapyUndertaken: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenPatientLostTablets: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugDiscontinuedReasonUnknown: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugDiscontinuedPatientFearRisk: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugDiscontinuedTooExpensive: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugTreatmentStoppedPatientRanOutOfTablets: Coding;
+    ReasonMedicationStatusCodesValueSet_TreatmentStoppedPatientUnableToConcentrate: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugNotTakenProblemSwallowing: Coding;
+    ReasonMedicationStatusCodesValueSet_TabletsTooLargeToSwallow: Coding;
+    ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisRecommended: Coding;
+    ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisNotRecommended: Coding;
+    ReasonMedicationStatusCodesValueSet_HormoneReplacementTherapyRequested: Coding;
+    ReasonMedicationStatusCodesValueSet_HOProlongedCorticosteroidTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugTreatmentStillNeeded: Coding;
+    ReasonMedicationStatusCodesValueSet_DrugTreatmentNoLongerNeeded: Coding;
+    ReasonMedicationStatusCodesValueSet_AntibioticProphylaxisIndicated: Coding;
+    ReasonMedicationStatusCodesValueSet_AngiotensinConvertingEnzymeInhibitorTargetDoseNotAchieved: Coding;
+    ReasonMedicationStatusCodesValueSet_DeferredAntibioticTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HODrugTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HOStatinTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HOBetaBlockerTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HONitrateTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HOAntiplateletAgentTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HOAngiotensinConvertingEnzymeACEInhibitorTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HOAngiotensinIIReceptorAntagonistTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_HistoryOfTherapyWithOtotoxicMedication: Coding;
+    ReasonMedicationStatusCodesValueSet_HistoryOfTuberculosisChemotherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_AngiotensinIIReceptorAntagonistIndicated: Coding;
+    ReasonMedicationStatusCodesValueSet_AntibioticTherapyIndicated: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermDualAntiplateletDrugTherapyIndicated: Coding;
+    ReasonMedicationStatusCodesValueSet_HistoryOfFenfluramineTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_IncretinMimeticTherapyStarted: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfImmunosuppressiveDrug: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfDrugTherapy: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInsulin: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfSteroid: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfInhaledSteroid: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAntibiotic: Coding;
+    ReasonMedicationStatusCodesValueSet_LongTermCurrentUseOfAnticoagulant: Coding;
+    ReasonMedicationStatusCodesValueSet_OralSteroidsUsedSinceLastEncounter: Coding;
+    ReasonMedicationStatusCodesValueSet_InhaledSteroidsUsedDaily: Coding;
+};
+//# sourceMappingURL=ReasonMedicationStatusCodesValueSet.d.ts.map

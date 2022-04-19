@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * How the Quantity should be understood and represented.
  */
-export var QuantityComparatorValueSet = {
+export const QuantityComparatorValueSet = {
     /**
      * The actual value is less than the given value.
      */
-    quantity_comparator_LessThan: Coding.FactoryCreateStrict({
+    quantity_comparator_LessThan: Coding.FromStrict({
         code: "<",
         display: "Less than",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -22,7 +21,7 @@ export var QuantityComparatorValueSet = {
     /**
      * The actual value is less than or equal to the given value.
      */
-    quantity_comparator_LessOrEqualTo: Coding.FactoryCreateStrict({
+    quantity_comparator_LessOrEqualTo: Coding.FromStrict({
         code: "<=",
         display: "Less or Equal to",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -30,7 +29,7 @@ export var QuantityComparatorValueSet = {
     /**
      * The actual value is greater than the given value.
      */
-    quantity_comparator_GreaterThan: Coding.FactoryCreateStrict({
+    quantity_comparator_GreaterThan: Coding.FromStrict({
         code: ">",
         display: "Greater than",
         system: "http://hl7.org/fhir/quantity-comparator"
@@ -38,7 +37,7 @@ export var QuantityComparatorValueSet = {
     /**
      * The actual value is greater than or equal to the given value.
      */
-    quantity_comparator_GreaterOrEqualTo: Coding.FactoryCreateStrict({
+    quantity_comparator_GreaterOrEqualTo: Coding.FromStrict({
         code: ">=",
         display: "Greater or Equal to",
         system: "http://hl7.org/fhir/quantity-comparator"

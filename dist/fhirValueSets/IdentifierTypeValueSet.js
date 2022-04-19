@@ -4,99 +4,98 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.
  */
-export var IdentifierTypeValueSet = {
-    v2_0203_AccessionID: Coding.FactoryCreateStrict({
+export const IdentifierTypeValueSet = {
+    v2_0203_AccessionID: Coding.FromStrict({
         code: "ACSN",
         display: "Accession ID",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_BreedRegistryNumber: Coding.FactoryCreateStrict({
+    v2_0203_BreedRegistryNumber: Coding.FromStrict({
         code: "BRN",
         display: "Breed Registry Number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_DriverQuoteSLicenseNumber: Coding.FactoryCreateStrict({
+    v2_0203_DriverQuoteSLicenseNumber: Coding.FromStrict({
         code: "DL",
         display: "Driver's license number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_DonorRegistrationNumber: Coding.FactoryCreateStrict({
+    v2_0203_DonorRegistrationNumber: Coding.FromStrict({
         code: "DR",
         display: "Donor Registration Number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_EmployerNumber: Coding.FactoryCreateStrict({
+    v2_0203_EmployerNumber: Coding.FromStrict({
         code: "EN",
         display: "Employer number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_FillerIdentifier: Coding.FactoryCreateStrict({
+    v2_0203_FillerIdentifier: Coding.FromStrict({
         code: "FILL",
         display: "Filler Identifier",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_JurisdictionalHealthNumberCanada: Coding.FactoryCreateStrict({
+    v2_0203_JurisdictionalHealthNumberCanada: Coding.FromStrict({
         code: "JHN",
         display: "Jurisdictional health number (Canada)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_MicrochipNumber: Coding.FactoryCreateStrict({
+    v2_0203_MicrochipNumber: Coding.FromStrict({
         code: "MCN",
         display: "Microchip Number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_MedicalLicenseNumber: Coding.FactoryCreateStrict({
+    v2_0203_MedicalLicenseNumber: Coding.FromStrict({
         code: "MD",
         display: "Medical License number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_MedicalRecordNumber: Coding.FactoryCreateStrict({
+    v2_0203_MedicalRecordNumber: Coding.FromStrict({
         code: "MR",
         display: "Medical record number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_NationalInsurancePayorIdentifierPayor: Coding.FactoryCreateStrict({
+    v2_0203_NationalInsurancePayorIdentifierPayor: Coding.FromStrict({
         code: "NIIP",
         display: "National Insurance Payor Identifier (Payor)",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_PlacerIdentifier: Coding.FactoryCreateStrict({
+    v2_0203_PlacerIdentifier: Coding.FromStrict({
         code: "PLAC",
         display: "Placer Identifier",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_PassportNumber: Coding.FactoryCreateStrict({
+    v2_0203_PassportNumber: Coding.FromStrict({
         code: "PPN",
         display: "Passport number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_ProviderNumber: Coding.FactoryCreateStrict({
+    v2_0203_ProviderNumber: Coding.FromStrict({
         code: "PRN",
         display: "Provider number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_SocialBeneficiaryIdentifier: Coding.FactoryCreateStrict({
+    v2_0203_SocialBeneficiaryIdentifier: Coding.FromStrict({
         code: "SB",
         display: "Social Beneficiary Identifier",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_SerialNumber: Coding.FactoryCreateStrict({
+    v2_0203_SerialNumber: Coding.FromStrict({
         code: "SNO",
         display: "Serial Number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_TaxIDNumber: Coding.FactoryCreateStrict({
+    v2_0203_TaxIDNumber: Coding.FromStrict({
         code: "TAX",
         display: "Tax ID number",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"
     }),
-    v2_0203_UniversalDeviceIdentifier: Coding.FactoryCreateStrict({
+    v2_0203_UniversalDeviceIdentifier: Coding.FromStrict({
         code: "UDI",
         display: "Universal Device Identifier",
         system: "http://terminology.hl7.org/CodeSystem/v2-0203"

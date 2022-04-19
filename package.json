@@ -1,6 +1,6 @@
 {
   "name": "fhir-typescript-sdk-dev",
-  "version": "0.0.4-beta.4",
+  "version": "0.0.4-beta.27",
   "description": "Developer pre-release testing of a FHIR TypeScript SDK",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
  */
-export interface IMeta extends fhir.IFhirElement {
+export type IMeta = fhir.IFhirElement & {
   /**
    * This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http.html#read) interaction.
    */
@@ -75,46 +74,37 @@ export class Meta extends fhir.FhirElement implements fhir.IMeta {
   public versionId?: string|undefined;
   public _versionId?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Meta - initializes required elements to null.
+   * Default constructor for Meta - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Meta from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IMeta>):Meta {
-    var dest:Partial<Meta> = super.FactoryCreate(source) as Partial<Meta>;
-    if (source["lastUpdated"] !== undefined) { dest.lastUpdated = source.lastUpdated; }
-    if (source["_lastUpdated"] !== undefined) { dest._lastUpdated = fhir.FhirElement.FactoryCreate(source._lastUpdated!); }
-    if (source["profile"] !== undefined) { dest.profile = source.profile.map((x) => (x)); }
-    if (source["_profile"] !== undefined) { dest._profile = source._profile.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["security"] !== undefined) { dest.security = source.security.map((x:Partial<fhir.ICoding>) => fhir.Coding.FactoryCreate(x)); }
-    if (source["source"] !== undefined) { dest.source = source.source; }
-    if (source["_source"] !== undefined) { dest._source = fhir.FhirElement.FactoryCreate(source._source!); }
-    if (source["tag"] !== undefined) { dest.tag = source.tag.map((x:Partial<fhir.ICoding>) => fhir.Coding.FactoryCreate(x)); }
-    if (source["versionId"] !== undefined) { dest.versionId = source.versionId; }
-    if (source["_versionId"] !== undefined) { dest._versionId = fhir.FhirElement.FactoryCreate(source._versionId!); }
-    return dest as Meta;
+  constructor(source:Partial<fhir.IMeta> = {}) {
+    super(source);
+    if (source["lastUpdated"]) { this.lastUpdated = source.lastUpdated; }
+    if (source["_lastUpdated"]) { this._lastUpdated = new fhir.FhirElement(source._lastUpdated!); }
+    if (source["profile"]) { this.profile = source.profile.map((x) => (x)); }
+    if (source["_profile"]) { this._profile = source._profile.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["security"]) { this.security = source.security.map((x:Partial<fhir.ICoding>) => new fhir.Coding(x)); }
+    if (source["source"]) { this.source = source.source; }
+    if (source["_source"]) { this._source = new fhir.FhirElement(source._source!); }
+    if (source["tag"]) { this.tag = source.tag.map((x:Partial<fhir.ICoding>) => new fhir.Coding(x)); }
+    if (source["versionId"]) { this.versionId = source.versionId; }
+    if (source["_versionId"]) { this._versionId = new fhir.FhirElement(source._versionId!); }
   }
   /**
    * Check if the current Meta contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Meta from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IMeta):Meta {
-    var dest:Meta = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Meta is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IMeta):Meta {
+    var dest:Meta = new Meta(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Meta is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

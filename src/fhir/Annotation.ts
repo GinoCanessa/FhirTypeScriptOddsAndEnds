@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
-export interface IAnnotation extends fhir.IFhirElement {
+export type IAnnotation = fhir.IFhirElement & {
   /**
    * Organization is used when there's no need for specific attribution as to who made the comment.
    */
@@ -55,45 +54,37 @@ export class Annotation extends fhir.FhirElement implements fhir.IAnnotation {
   public time?: string|undefined;
   public _time?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Annotation - initializes required elements to null.
+   * Default constructor for Annotation - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IAnnotation> = {}) {
+    super(source);
+    if (source["authorReference"]) { this.authorReference = new fhir.Reference(source.authorReference!); }
+    if (source["authorString"]) { this.authorString = source.authorString; }
+    if (source["_authorString"]) { this._authorString = new fhir.FhirElement(source._authorString!); }
     this.text = null;
-  }
-  /**
-   * Factory function to create a Annotation from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IAnnotation>):Annotation {
-    var dest:Partial<Annotation> = super.FactoryCreate(source) as Partial<Annotation>;
-    if (source["authorReference"] !== undefined) { dest.authorReference = fhir.Reference.FactoryCreate(source.authorReference!); }
-    if (source["authorString"] !== undefined) { dest.authorString = source.authorString; }
-    if (source["_authorString"] !== undefined) { dest._authorString = fhir.FhirElement.FactoryCreate(source._authorString!); }
-    if (source["text"] !== undefined) { dest.text = source.text; }
-    if (source["_text"] !== undefined) { dest._text = fhir.FhirElement.FactoryCreate(source._text!); }
-    if (source["time"] !== undefined) { dest.time = source.time; }
-    if (source["_time"] !== undefined) { dest._time = fhir.FhirElement.FactoryCreate(source._time!); }
-    return dest as Annotation;
+    if (source["text"]) { this.text = source.text; }
+    if (this.text === undefined) { this.text = null }
+    if (source["_text"]) { this._text = new fhir.FhirElement(source._text!); }
+    if (source["time"]) { this.time = source.time; }
+    if (source["_time"]) { this._time = new fhir.FhirElement(source._time!); }
   }
   /**
    * Check if the current Annotation contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["text"] === undefined) { missingElements.push("text"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Annotation from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IAnnotation):Annotation {
-    var dest:Annotation = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Annotation is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IAnnotation):Annotation {
+    var dest:Annotation = new Annotation(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Annotation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

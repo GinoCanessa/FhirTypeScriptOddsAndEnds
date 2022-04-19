@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * A single value set for all security labels defined by FHIR.
  */
-export var SecurityLabelsValueSet = {
+export const SecurityLabelsValueSet = {
     /**
      * Security metadata observation values used to indicate the use of a more abstract version of the content, e.g., replacing exact value of an age or date field with a range, or remove the left digits of a credit card number or SSN.
      */
-    v3_ObservationValue_Abstracted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Abstracted: Coding.FromStrict({
         code: "ABSTRED",
         display: "abstracted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -45,7 +44,7 @@ export var SecurityLabelsValueSet = {
      *                            Risk Adaptable Access Control (RAdAC)
      *                         &gt;
      */
-    v3_ActCode_AccessControlScheme: Coding.FactoryCreateStrict({
+    v3_ActCode_AccessControlScheme: Coding.FromStrict({
         code: "ACCESSCONSCHEME",
         display: "access control scheme",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -55,7 +54,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Security Compartment Labels assigned to a consumer's information use in accountable care workflows should be met or exceeded by the Security Compartment attribute claimed by a participant in a an accountable care workflow who is requesting access to that information
      */
-    v3_ActCode_AccountableCareOrganizationCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_AccountableCareOrganizationCompartment: Coding.FromStrict({
         code: "ACOCOMPT",
         display: "accountable care organization compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -66,7 +65,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: For use within an enterprise in which an adolescent is the information subject.  If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_AdolescentInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_AdolescentInformationSensitivity: Coding.FromStrict({
         code: "ADOL",
         display: "adolescent information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -74,23 +73,15 @@ export var SecurityLabelsValueSet = {
     /**
      * Security metadata observation values used to indicate the use of an algorithmic combination of actual values with the result of an aggregate function, e.g., average, sum, or count in order to limit disclosure of an IT resource (data, information object, service, or system capability) to the minimum necessary.
      */
-    v3_ObservationValue_Aggregated: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Aggregated: Coding.FromStrict({
         code: "AGGRED",
         display: "aggregated",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
     }),
     /**
-     * Custodian system must remove any information that could result in identifying the information subject.
-     */
-    v3_ActCode_Anonymize: Coding.FactoryCreateStrict({
-        code: "ANONY",
-        display: "anonymize",
-        system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }),
-    /**
      * Security metadata observation value conveying the alteration integrity of an IT resource (data, information object, service, or system capability) by used to indicate the mechanism by which software systems can strip portions of the resource that could allow the identification of the source of the information or the information subject.  No key to relink the data is retained.
      */
-    v3_ObservationValue_Anonymized: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Anonymized: Coding.FromStrict({
         code: "ANONYED",
         display: "anonymized",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -98,7 +89,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must make available to an information subject upon request an accounting of certain disclosures of the individualâ€™s protected health information over a period of time.  Policy may dictate that the accounting include information about the information disclosed,  the date of disclosure, the identification of the receiver, the purpose of the disclosure, the time in which the disclosing entity must provide a response and the time period for which accountings of disclosure can be requested.
      */
-    v3_ActCode_AccountingOfDisclosure: Coding.FactoryCreateStrict({
+    v3_ActCode_AccountingOfDisclosure: Coding.FromStrict({
         code: "AOD",
         display: "accounting of disclosure",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -106,7 +97,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must monitor systems to ensure that all users are authorized to operate on information objects.
      */
-    v3_ActCode_Audit: Coding.FactoryCreateStrict({
+    v3_ActCode_Audit: Coding.FromStrict({
         code: "AUDIT",
         display: "audit",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -114,7 +105,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must monitor and maintain retrievable log for each user and operation on information.
      */
-    v3_ActCode_AuditTrail: Coding.FactoryCreateStrict({
+    v3_ActCode_AuditTrail: Coding.FromStrict({
         code: "AUDTR",
         display: "audit trail",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -124,7 +115,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         A positive authorisation policy defines the actions that a subject is permitted to perform on a target. A negative authorisation policy specifies the actions that a subject is forbidden to perform on a target. Positive authorisation policies may also include filters to transform the parameters associated with their actions.  (Based on PONDERS)
      */
-    v3_ActCode_AuthorizationPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_AuthorizationPolicy: Coding.FromStrict({
         code: "AUTHPOL",
         display: "authorization policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -135,7 +126,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: No patient related information may ever be of this confidentiality level.   If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_BusinessInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_BusinessInformationSensitivity: Coding.FromStrict({
         code: "B",
         display: "business information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -146,7 +137,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_BehavioralHealthInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_BehavioralHealthInformationSensitivity: Coding.FromStrict({
         code: "BH",
         display: "behavioral health information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -154,7 +145,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations to obtain health care knowledge. Use of the data must be related to specified biomedical basic or applied research.  For example, research on rare plants to determine whether biologic properties may be useful for pharmaceutical development. May be used in combination with clinical trial and other healthcare research purposes of use.
      */
-    v3_ActReason_BiomedicalResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_BiomedicalResearch: Coding.FromStrict({
         code: "BIORCH",
         display: "biomedical research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -166,7 +157,7 @@ export var SecurityLabelsValueSet = {
      *                            Map: Partially Maps to ISO 14265 Classification Term "Emergency care provision to an individual subject of care" described as "To inform persons needing to provide health care services to the subject of care urgently, possibly needing to over-ride the  policies and consents pertaining to Purpose 1 above." Purpose 1 is equivalent to HL7 treatment purpose of use: "Clinical care provision to an individual subject of care" described as "To inform persons or processes responsible for providing health care services to the subject of care."
      * The ISO description conflates both of the proposed specializations of HL7 ETREAT: break the glass and the typically broader access to health information normally available to providers who are provisioned for emergency workflows on a regular basis, e.g., Emergency Room providers. Examples of greater access than is normally accessible by providers based on the need to know are access to sensitive information for which access typically requires a patient's consent.  This is not an override of a patient's dissent to disclose sensitive information in cases where the applicable policy waives the need for that consent to access this information. In US, Title 38 Section 7332 and 42 CFR Part 2 both permit emergency access without the need to override a patient's consent directive; rather, this access is a limitation to the patient's right to dissent from disclosure.
      */
-    v3_ActReason_BreakTheGlass: Coding.FactoryCreateStrict({
+    v3_ActReason_BreakTheGlass: Coding.FromStrict({
         code: "BTG",
         display: "break the glass",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -182,7 +173,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         There is a semantic gap in concepts.  This classification term  is described as activities, i.e., "to inform persons" or "to inform processes" rather than the rationale for performing actions/operations on information related to the activity.
      */
-    v3_ActReason_CareManagement: Coding.FactoryCreateStrict({
+    v3_ActReason_CareManagement: Coding.FromStrict({
         code: "CAREMGT",
         display: "care management",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -193,7 +184,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note:  For use within an enterprise in which the information subject is deemed a celebrity or very important person.  If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_CelebrityInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_CelebrityInformationSensitivity: Coding.FromStrict({
         code: "CEL",
         display: "celebrity information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -201,7 +192,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a clinician.
      */
-    v3_ObservationValue_ClinicianAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_ClinicianAsserted: Coding.FromStrict({
         code: "CLINAST",
         display: "clinician asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -209,7 +200,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a clinician.
      */
-    v3_ObservationValue_ClinicianReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_ClinicianReported: Coding.FromStrict({
         code: "CLINRPT",
         display: "clinician reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -217,7 +208,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations in accordance with clinical trial protocols to obtain health care knowledge.
      */
-    v3_ActReason_ClinicalTrialResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_ClinicalTrialResearch: Coding.FromStrict({
         code: "CLINTRCH",
         display: "clinical trial research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -225,7 +216,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations in accordance with clinical trial protocols to obtain health care knowledge without provision of patient care. May be post-coordinated or used with other purposes of use such as disease, discipline, specialty, population origins or ancestry, translational healthcare research. For example, a clinical trial conducted on laboratory specimens collected from a specified patient population.
      */
-    v3_ActReason_ClinicalTrialResearchWithoutPatientCare: Coding.FactoryCreateStrict({
+    v3_ActReason_ClinicalTrialResearchWithoutPatientCare: Coding.FromStrict({
         code: "CLINTRCHNPC",
         display: "clinical trial research without patient care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -233,7 +224,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations with patient care in accordance with clinical trial protocols to obtain health care knowledge. May be post-coordinated or used with other purposes of use such as disease, discipline, specialty, population origins or ancestry, translational healthcare research. For example, an "off-label" drug used for cancer therapy administer to a specified patient population.
      */
-    v3_ActReason_ClinicalTrialResearchWithPatientCare: Coding.FactoryCreateStrict({
+    v3_ActReason_ClinicalTrialResearchWithPatientCare: Coding.FromStrict({
         code: "CLINTRCHPC",
         display: "clinical trial research with patient care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -241,7 +232,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform health care as part of the clinical trial protocol.
      */
-    v3_ActReason_ClinicalTrial: Coding.FactoryCreateStrict({
+    v3_ActReason_ClinicalTrial: Coding.FromStrict({
         code: "CLINTRL",
         display: "clinical trial",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -249,7 +240,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for provision of additional clinical evidence in support of a request for coverage or payment for health services.
      */
-    v3_ActReason_ClaimAttachment: Coding.FactoryCreateStrict({
+    v3_ActReason_ClaimAttachment: Coding.FromStrict({
         code: "CLMATTCH",
         display: "claim attachment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -267,7 +258,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Map: Maps to ISO 14265 Classification Terms: "Support of care activities within the provider organisation for an individual subject of care" described as "To inform persons or processes enabling others to provide health care services to the subject of care."  "Subject of Care Uses" described as "To inform the subject of care in support of his or her own interests."
      */
-    v3_ActReason_CoordinationOfCare: Coding.FactoryCreateStrict({
+    v3_ActReason_CoordinationOfCare: Coding.FromStrict({
         code: "COC",
         display: "coordination of care",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -280,7 +271,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Examples may include dementia, traumatic brain injury, attention deficit, hearing and visual disability such as dyslexia and other disorders and related conditions which impair learning and self-sufficiency.  However, the cognitive disabilities to which this term may apply  versus other behavioral health categories varies by jurisdiction and organizational policy in part due to overlap with other behavioral health conditions. Implementers should constrain to those diagnoses applicable in the domain in which this code is used.
      */
-    v3_ActCode_CognitiveDisabilityInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_CognitiveDisabilityInformationSensitivity: Coding.FromStrict({
         code: "COGN",
         display: "cognitive disability information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -290,7 +281,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Map: Aligns with ISO 2382-8 definition of Compartment - "A division of data into isolated blocks with separate security controls for the purpose of reducing risk."
      */
-    v3_ActCode_Compartment: Coding.FactoryCreateStrict({
+    v3_ActCode_Compartment: Coding.FromStrict({
         code: "COMPT",
         display: "compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -298,7 +289,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting prior authorization or predetermination of coverage for services.
      */
-    v3_ActReason_CoverageAuthorization: Coding.FactoryCreateStrict({
+    v3_ActReason_CoverageAuthorization: Coding.FromStrict({
         code: "COVAUTH",
         display: "coverage authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -306,7 +297,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting activities related to coverage under a program or policy.
      */
-    v3_ActReason_CoverageUnderPolicyOrProgram: Coding.FactoryCreateStrict({
+    v3_ActReason_CoverageUnderPolicyOrProgram: Coding.FromStrict({
         code: "COVERAGE",
         display: "coverage under policy or program",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -314,7 +305,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with the information handling directions of the Confidentiality Code associated with an information target.
      */
-    v3_ActCode_ComplyWithConfidentialityCode: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithConfidentialityCode: Coding.FromStrict({
         code: "CPLYCC",
         display: "comply with confidentiality code",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -322,7 +313,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with applicable information subject consent directives.
      */
-    v3_ActCode_ComplyWithConsentDirective: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithConsentDirective: Coding.FromStrict({
         code: "CPLYCD",
         display: "comply with consent directive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -330,7 +321,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with applicable jurisdictional privacy policies associated with the target information.
      */
-    v3_ActCode_ComplyWithJurisdictionalPrivacyPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithJurisdictionalPrivacyPolicy: Coding.FromStrict({
         code: "CPLYJPP",
         display: "comply with jurisdictional privacy policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -338,7 +329,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with applicable organizational privacy policies associated with the target information.
      */
-    v3_ActCode_ComplyWithOrganizationalPrivacyPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithOrganizationalPrivacyPolicy: Coding.FromStrict({
         code: "CPLYOPP",
         display: "comply with organizational privacy policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -346,7 +337,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with the organizational security policies associated with the target information.
      */
-    v3_ActCode_ComplyWithOrganizationalSecurityPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithOrganizationalSecurityPolicy: Coding.FromStrict({
         code: "CPLYOSP",
         display: "comply with organizational security policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -354,7 +345,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must retrieve, evaluate, and comply with applicable policies associated with the target information.
      */
-    v3_ActCode_ComplyWithPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_ComplyWithPolicy: Coding.FromStrict({
         code: "CPLYPOL",
         display: "comply with policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -373,7 +364,7 @@ export var SecurityLabelsValueSet = {
      *                            SHA-1
      *                            SHA-2 (Secure Hash Algorithm)
      */
-    v3_ObservationValue_CryptographicHashFunction: Coding.FactoryCreateStrict({
+    v3_ObservationValue_CryptographicHashFunction: Coding.FromStrict({
         code: "CRYTOHASH",
         display: "cryptographic hash function",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -383,7 +374,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Security Compartment Labels assigned to a consumer's information use in care coordination workflows should be met or exceeded by the Security Compartment attribute claimed by a participant in a care team member workflow who is requesting access to that information
      */
-    v3_ActCode_CareTeamCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_CareTeamCompartment: Coding.FromStrict({
         code: "CTCOMPT",
         display: "care team compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -391,23 +382,15 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must declassify information assigned security labels by instantiating a new version of the classified information so as to break the binding of the classifying security label when assigning a new security label that marks the information as unclassified in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the previous assignment and binding.
      */
-    v3_ActCode_DeclassifySecurityLabel: Coding.FactoryCreateStrict({
+    v3_ActCode_DeclassifySecurityLabel: Coding.FromStrict({
         code: "DECLASSIFYLABEL",
         display: "declassify security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
-     * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.
-     */
-    v3_ActCode_Deidentify: Coding.FactoryCreateStrict({
-        code: "DEID",
-        display: "deidentify",
-        system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }),
-    /**
      * Custodian system must remove target information from access after use.
      */
-    v3_ActCode_DeleteAfterUse: Coding.FactoryCreateStrict({
+    v3_ActCode_DeleteAfterUse: Coding.FromStrict({
         code: "DELAU",
         display: "delete after use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -419,7 +402,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         A Delegation policy specifies the authorisation policy from which delegated rights are derived, the grantors, which are the entities which can delegate these access rights, and the grantees, which are the entities to which the access rights can be delegated. There are two types of delegation policy, positive and negative. (Based on PONDERS)
      */
-    v3_ActCode_DelegationPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_DelegationPolicy: Coding.FromStrict({
         code: "DELEPOL",
         display: "delegation policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -430,7 +413,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_AllDemographicInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_AllDemographicInformationSensitivity: Coding.FromStrict({
         code: "DEMO",
         display: "all demographic information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -438,7 +421,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a device.
      */
-    v3_ObservationValue_DeviceAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_DeviceAsserted: Coding.FromStrict({
         code: "DEVAST",
         display: "device asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -446,7 +429,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a device.
      */
-    v3_ObservationValue_DeviceReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_DeviceReported: Coding.FromStrict({
         code: "DEVRPT",
         display: "device reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -457,7 +440,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: For use within an enterprise that provides heightened confidentiality to  diagnostic, health condition or health problem related information deemed sensitive.   If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_DiagnosisInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_DiagnosisInformationSensitivity: Coding.FromStrict({
         code: "DIA",
         display: "diagnosis information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -468,7 +451,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Rationale: This definition is intended to align with the ISO 22600-2 3.3.26 definition of digital signature:  Data appended to, or a cryptographic transformation (see cryptography) of, a data unit that allows a recipient of the data unit to prove the source and integrity of the data unit and protect against forgery e.g., by the recipient.
      */
-    v3_ObservationValue_DigitalSignature: Coding.FactoryCreateStrict({
+    v3_ObservationValue_DigitalSignature: Coding.FromStrict({
         code: "DIGSIG",
         display: "digital signature",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -476,7 +459,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for provision of immediately needed health care to a population of living subjects located in a disaster zone.
      */
-    v3_ActReason_Disaster: Coding.FactoryCreateStrict({
+    v3_ActReason_Disaster: Coding.FromStrict({
         code: "DISASTER",
         display: "disaster",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -487,7 +470,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_DateOfBirthInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_DateOfBirthInformationSensitivity: Coding.FromStrict({
         code: "DOB",
         display: "date of birth information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -495,7 +478,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for cadaveric organ, eye or tissue donation.
      */
-    v3_ActReason_Donation: Coding.FactoryCreateStrict({
+    v3_ActReason_Donation: Coding.FromStrict({
         code: "DONAT",
         display: "donation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -503,7 +486,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must downgrade information assigned security labels by instantiating a new version of the classified information so as to break the binding of the classifying security label when assigning a new security label that marks the information as classified at a less protected level in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the previous assignment and binding.
      */
-    v3_ActCode_DowngradeSecurityLabel: Coding.FactoryCreateStrict({
+    v3_ActCode_DowngradeSecurityLabel: Coding.FromStrict({
         code: "DOWNGRDLABEL",
         display: "downgrade security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -514,7 +497,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: For use within an enterprise that provides heightened confidentiality to drug information deemed sensitive.   If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_DrugInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_DrugInformationSensitivity: Coding.FromStrict({
         code: "DRGIS",
         display: "drug information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -522,7 +505,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must assign and bind security labels derived from compilations of information by aggregation or disaggregation in order to classify information compiled in the information systems under its control for collection, access, use and disclosure in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the previous assignment and binding.
      */
-    v3_ActCode_DeriveSecurityLabel: Coding.FactoryCreateStrict({
+    v3_ActCode_DeriveSecurityLabel: Coding.FromStrict({
         code: "DRIVLABEL",
         display: "derive security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -530,7 +513,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations to obtain health care knowledge. Use of the data must be related to specified conditions, diagnosis, or disease healthcare research.  For example, conducting cancer research by testing reaction of tumor cells to certain biologics. May be used in combination with clinical trial and other healthcare research purposes of use.
      */
-    v3_ActReason_DiseaseSpecificHealthcareResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_DiseaseSpecificHealthcareResearch: Coding.FromStrict({
         code: "DSRCH",
         display: "disease specific healthcare research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -543,7 +526,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         A diverse group of chronic conditions that are due to mental or physical impairments impacting activities of daily living, self-care, language acuity, learning, mobility, independent living and economic self-sufficiency. Examples may include Down syndrome and  Autism spectrum. However, the developmental disabilities to which this term applies versus other behavioral health categories varies by jurisdiction and organizational policy in part due to overlap with other behavioral health conditions.  Implementers should constrain to those diagnoses applicable in the domain in which this code is used.
      */
-    v3_ActCode_DevelopmentalDisabilityInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_DevelopmentalDisabilityInformationSensitivity: Coding.FromStrict({
         code: "DVD",
         display: "developmental disability information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -551,7 +534,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting eligibility determination for coverage in a program or policy.  May entail review of financial status or disability assessment.
      */
-    v3_ActReason_EligibilityDetermination: Coding.FactoryCreateStrict({
+    v3_ActReason_EligibilityDetermination: Coding.FromStrict({
         code: "ELIGDTRM",
         display: "eligibility determination",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -559,7 +542,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting eligibility verification of coverage in a program or policy.  May entail provider contacting coverage source (e.g., government health program such as workers compensation or health plan) for confirmation of enrollment, eligibility for specific services, and any applicable copays.
      */
-    v3_ActReason_EligibilityVerification: Coding.FactoryCreateStrict({
+    v3_ActReason_EligibilityVerification: Coding.FromStrict({
         code: "ELIGVER",
         display: "eligibility verification",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -572,7 +555,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Typical used to characterize behavioral and mental health issues of adolescents where the disorder may be temporarily diagnosed in order to avoid the potential and unnecessary stigmatizing diagnoses of disorder long term.
      */
-    v3_ActCode_EmotionalDisturbanceInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_EmotionalDisturbanceInformationSensitivity: Coding.FromStrict({
         code: "EMOTDIS",
         display: "emotional disturbance information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -583,7 +566,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: Policy for handling information related to an employee, which will be afforded heightened confidentiality.  Description:  When a patient is an employee, an enterprise may have a policy that requires heightened confidentiality.  Information deemed sensitive typically includes health information and patient role information including patient status, demographics, next of kin, and location.
      */
-    v3_ActCode_EmployeeInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_EmployeeInformationSensitivity: Coding.FromStrict({
         code: "EMP",
         display: "employee information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -594,7 +577,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_EmployerInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_EmployerInformationSensitivity: Coding.FromStrict({
         code: "EMPL",
         display: "employer information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -607,7 +590,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: A mathematical transposition of a file or data stream so that it cannot be deciphered at the receiving end without the proper key. Encryption is a security feature that assures that only the parties who are supposed to be participating in a videoconference or data transfer are able to do so. It can include a password, public and private keys, or a complex combination of all.  (Per Infoway.)
      */
-    v3_ActCode_Encrypt: Coding.FactoryCreateStrict({
+    v3_ActCode_Encrypt: Coding.FromStrict({
         code: "ENCRYPT",
         display: "encrypt",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -615,7 +598,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext when "at rest" or in storage.
      */
-    v3_ActCode_EncryptAtRest: Coding.FactoryCreateStrict({
+    v3_ActCode_EncryptAtRest: Coding.FromStrict({
         code: "ENCRYPTR",
         display: "encrypt at rest",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -623,7 +606,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext while "in transit" or being transported by any means.
      */
-    v3_ActCode_EncryptInTransit: Coding.FactoryCreateStrict({
+    v3_ActCode_EncryptInTransit: Coding.FromStrict({
         code: "ENCRYPTT",
         display: "encrypt in transit",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -631,7 +614,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext while in use such that operations permitted on the target information are limited by the license granted to the end user.
      */
-    v3_ActCode_EncryptInUse: Coding.FactoryCreateStrict({
+    v3_ActCode_EncryptInUse: Coding.FromStrict({
         code: "ENCRYPTU",
         display: "encrypt in use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -639,7 +622,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for enrolling a covered party in a program or policy.  May entail recording of covered party's and any dependent's demographic information and benefit choices.
      */
-    v3_ActReason_Enrollment: Coding.FactoryCreateStrict({
+    v3_ActReason_Enrollment: Coding.FromStrict({
         code: "ENROLLM",
         display: "enrollment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -653,7 +636,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         There is a semantic gap in concepts.  This classification term is described as activities â€œto inform personsâ€? rather than the rationale for performing actions/operations on information related to the activity.
      */
-    v3_ActReason_EmergencyRoomTreatment: Coding.FactoryCreateStrict({
+    v3_ActReason_EmergencyRoomTreatment: Coding.FromStrict({
         code: "ERTREAT",
         display: "emergency room treatment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -664,7 +647,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_SubstanceAbuseInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SubstanceAbuseInformationSensitivity: Coding.FromStrict({
         code: "ETH",
         display: "substance abuse information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -675,7 +658,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_AlcoholUseDisorderInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_AlcoholUseDisorderInformationSensitivity: Coding.FromStrict({
         code: "ETHUD",
         display: "alcohol use disorder information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -683,7 +666,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for provision of immediately needed health care for an emergent condition.
      */
-    v3_ActReason_EmergencyTreatment: Coding.FactoryCreateStrict({
+    v3_ActReason_EmergencyTreatment: Coding.FromStrict({
         code: "ETREAT",
         display: "Emergency Treatment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -691,7 +674,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in response to a request by a family member authorized by the patient.
      */
-    v3_ActReason_FamilyRequested: Coding.FactoryCreateStrict({
+    v3_ActReason_FamilyRequested: Coding.FromStrict({
         code: "FAMRQT",
         display: "family requested",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -701,7 +684,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Security Compartment Labels assigned to consumer information used in these workflows should be met or exceeded by the Security Compartment attribute claimed by a participant in a financial management workflow who is requesting access to that information.
      */
-    v3_ActCode_FinancialManagementCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_FinancialManagementCompartment: Coding.FromStrict({
         code: "FMCOMPT",
         display: "financial management compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -709,7 +692,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for fraud detection and prevention processes.
      */
-    v3_ActReason_Fraud: Coding.FactoryCreateStrict({
+    v3_ActReason_Fraud: Coding.FromStrict({
         code: "FRAUD",
         display: "fraud",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -720,7 +703,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_GeneticDiseaseInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_GeneticDiseaseInformationSensitivity: Coding.FromStrict({
         code: "GDIS",
         display: "genetic disease information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -731,7 +714,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_GenderAndSexualOrientationInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_GenderAndSexualOrientationInformationSensitivity: Coding.FromStrict({
         code: "GENDER",
         display: "gender and sexual orientation information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -739,7 +722,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used within government processes.
      */
-    v3_ActReason_Government: Coding.FactoryCreateStrict({
+    v3_ActReason_Government: Coding.FromStrict({
         code: "GOV",
         display: "government",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -747,7 +730,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting activities related to meeting accreditation criteria.
      */
-    v3_ActReason_HealthAccreditation: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthAccreditation: Coding.FromStrict({
         code: "HACCRED",
         display: "health accreditation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -755,7 +738,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting activities required to meet a mandate.
      */
-    v3_ActReason_HealthCompliance: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthCompliance: Coding.FromStrict({
         code: "HCOMPL",
         display: "health compliance",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -763,7 +746,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a healthcare professional.
      */
-    v3_ObservationValue_HealthcareProfessionalAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_HealthcareProfessionalAsserted: Coding.FromStrict({
         code: "HCPAST",
         display: "healthcare professional asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -771,7 +754,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a healthcare professional.
      */
-    v3_ObservationValue_HealthcareProfessionalReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_HealthcareProfessionalReported: Coding.FromStrict({
         code: "HCPRPT",
         display: "healthcare professional reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -779,7 +762,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for handling deceased patient matters.
      */
-    v3_ActReason_Decedent: Coding.FactoryCreateStrict({
+    v3_ActReason_Decedent: Coding.FromStrict({
         code: "HDECD",
         display: "decedent",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -797,7 +780,7 @@ export var SecurityLabelsValueSet = {
      *                            payer
      *                            health information exchange patient directory
      */
-    v3_ActReason_Directory: Coding.FactoryCreateStrict({
+    v3_ActReason_Directory: Coding.FromStrict({
         code: "HDIRECT",
         display: "directory",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -813,7 +796,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         However, this classification term is described as activities, i.e., "to inform persons" or "to inform processes" rather than the rationale for performing actions/operations on information related to the activity.
      */
-    v3_ActReason_HealthcareDeliveryManagement: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthcareDeliveryManagement: Coding.FromStrict({
         code: "HDM",
         display: "healthcare delivery management",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -824,7 +807,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_HIVAIDSInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_HIVAIDSInformationSensitivity: Coding.FromStrict({
         code: "HIV",
         display: "HIV/AIDS information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -832,7 +815,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting activities required by legal proceeding.
      */
-    v3_ActReason_Legal: Coding.FactoryCreateStrict({
+    v3_ActReason_Legal: Coding.FromStrict({
         code: "HLEGAL",
         display: "legal",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -840,7 +823,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for marketing services and products related to health care.
      */
-    v3_ActReason_HealthcareMarketing: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthcareMarketing: Coding.FromStrict({
         code: "HMARKT",
         display: "healthcare marketing",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -848,7 +831,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting administrative and contractual activities related to the provision of health care.
      */
-    v3_ActReason_HealthcareOperations: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthcareOperations: Coding.FromStrict({
         code: "HOPERAT",
         display: "healthcare operations",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -856,7 +839,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for assessing results and comparative effectiveness achieved by health care practices and interventions.
      */
-    v3_ActReason_HealthOutcomeMeasure: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthOutcomeMeasure: Coding.FromStrict({
         code: "HOUTCOMS",
         display: "health outcome measure",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -864,7 +847,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting financial or contractual activities related to payment for provision of health care.
      */
-    v3_ActReason_HealthcarePayment: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthcarePayment: Coding.FromStrict({
         code: "HPAYMT",
         display: "healthcare payment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -872,7 +855,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting activities to meet program accounting requirements.
      */
-    v3_ActReason_HealthProgramReporting: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthProgramReporting: Coding.FromStrict({
         code: "HPRGRP",
         display: "health program reporting",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -880,7 +863,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for conducting administrative activities to improve health care quality.
      */
-    v3_ActReason_HealthQualityImprovement: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthQualityImprovement: Coding.FromStrict({
         code: "HQUALIMP",
         display: "health quality improvement",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -888,7 +871,7 @@ export var SecurityLabelsValueSet = {
     /**
      * A security category label field value, which indicates that access and use of an IT resource is restricted to members of human resources department or workflow.
      */
-    v3_ActCode_HumanResourceCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_HumanResourceCompartment: Coding.FromStrict({
         code: "HRCOMPT",
         display: "human resource compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -896,7 +879,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security metadata observation value used to indicate that the veracity or trustworthiness of an IT resource (data, information object, service, or system capability) for a specified purpose of use is perceived to be or deemed by policy to be very high.
      */
-    v3_ObservationValue_HighlyReliable: Coding.FactoryCreateStrict({
+    v3_ObservationValue_HighlyReliable: Coding.FromStrict({
         code: "HRELIABLE",
         display: "highly reliable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -904,7 +887,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations to obtain health care knowledge.  Use of the data iincludes basic and applied research such as biomedical, population origin or ancestry, translational research, and disease, discipline, specialty specific healthcare research and clinical trial research.
      */
-    v3_ActReason_HealthcareResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthcareResearch: Coding.FromStrict({
         code: "HRESCH",
         display: "healthcare research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -912,7 +895,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information to administer the electronic systems used for the delivery of health care.
      */
-    v3_ActReason_HealthSystemAdministration: Coding.FactoryCreateStrict({
+    v3_ActReason_HealthSystemAdministration: Coding.FromStrict({
         code: "HSYSADMIN",
         display: "health system administration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -923,7 +906,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: Data marked with a HTEST security label enables an access control system to permit interfacing systems or end users provisioned with a clearance, which includes a HTEST purpose of use attribute, to test, verify, or validate that a system or application will operate in production as intended based on design specifications.
      */
-    v3_ActReason_TestHealthData: Coding.FactoryCreateStrict({
+    v3_ActReason_TestHealthData: Coding.FromStrict({
         code: "HTEST",
         display: "test health data",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -931,7 +914,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must require human review and approval for permission requested.
      */
-    v3_ActCode_HumanApproval: Coding.FactoryCreateStrict({
+    v3_ActCode_HumanApproval: Coding.FromStrict({
         code: "HUAPRV",
         display: "human approval",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -948,21 +931,10 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This metadata indicates the receiver may have an obligation to comply with a data use agreement.
      */
-    v3_Confidentiality_Low: Coding.FactoryCreateStrict({
+    v3_Confidentiality_Low: Coding.FromStrict({
         code: "L",
         display: "low",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
-    }),
-    /**
-     * Custodian security system must assign and bind security labels in order to classify information created in the information systems under its control for collection, access, use and disclosure in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the assignment and binding.
-     *
-     *
-     *                            Usage Note: In security systems, security policy label assignments do not change, they may supersede prior assignments, and such reassignments are always tracked for auditing and other purposes.
-     */
-    v3_ActCode_AssignSecurityLabel: Coding.FactoryCreateStrict({
-        code: "LABEL",
-        display: "assign security label",
-        system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
      * To perform one or more operations on information to assign, persist, and manage labels to healthcare data to characterize various aspects, such as its security classification, sensitivity, compartment, integrity, and provenance; applicable privacy, consent, security, provenance, and trust policies; and handling caveats such as purpose of use, obligations, and refrain policies.
@@ -971,7 +943,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Label revisions may be triggered by, e.g., expiry of classification period; changes in applicable policy, e.g., revocation of a consent directive; or changes in the governing policy domain in which the data is relocated or a copy of the data is sent.  If a label is revised, an audit log should be kept and the provenance of the label changes should be tracked.
      */
-    v3_ActReason_Labeling: Coding.FactoryCreateStrict({
+    v3_ActReason_Labeling: Coding.FromStrict({
         code: "LABELING",
         display: "labeling",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -982,7 +954,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_LivingArrangementInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_LivingArrangementInformationSensitivity: Coding.FromStrict({
         code: "LIVARG",
         display: "living arrangement information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -993,7 +965,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_LocationInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_LocationInformationSensitivity: Coding.FromStrict({
         code: "LOCIS",
         display: "location information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1003,7 +975,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Security Compartment Labels assigned to a consumer's information use in legitimate relationship workflows should be met or exceeded by the Security Compartment attribute claimed by a participant in a legitimate relationship workflow who is requesting access to that information.
      */
-    v3_ActCode_LegitimateRelationshipCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_LegitimateRelationshipCompartment: Coding.FromStrict({
         code: "LRCOMPT",
         display: "legitimate relationship compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1020,7 +992,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This metadata indicates that the receiver may be obligated to comply with the receiver's terms of use or privacy policies.
      */
-    v3_Confidentiality_Moderate: Coding.FactoryCreateStrict({
+    v3_Confidentiality_Moderate: Coding.FromStrict({
         code: "M",
         display: "moderate",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -1035,7 +1007,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Semantic fidelity of the mapped IT Resource may also be indicated using a SecurityIntegrityConfidenceObservation.
      */
-    v3_ObservationValue_Mapped: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Mapped: Coding.FromStrict({
         code: "MAPPED",
         display: "mapped",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1046,17 +1018,9 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_MaritalStatusInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_MaritalStatusInformationSensitivity: Coding.FromStrict({
         code: "MARST",
         display: "marital status information sensitivity",
-        system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }),
-    /**
-     * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext.  User may be provided a key to decrypt per license or "shared secret".
-     */
-    v3_ActCode_Mask: Coding.FactoryCreateStrict({
-        code: "MASK",
-        display: "mask",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
@@ -1065,7 +1029,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: "MASKED" may be used, per applicable policy, as a flag to indicate to a user or receiver that some portion of an IT resource has been further encrypted, and may be accessed only by an authorized user or receiver to which a decryption key is provided.
      */
-    v3_ObservationValue_Masked: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Masked: Coding.FromStrict({
         code: "MASKED",
         display: "masked",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1073,7 +1037,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information to administer health care coverage to an enrollee under a policy or program.
      */
-    v3_ActReason_MemberAdministration: Coding.FactoryCreateStrict({
+    v3_ActReason_MemberAdministration: Coding.FromStrict({
         code: "MEMADMIN",
         display: "member administration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1081,7 +1045,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information to assign, persist, and manage metadata to healthcare data to characterize various aspects used for its indexing, discovery, retrieval, and processing by systems, applications, and end users.  For example, master index identifier, media type, and location.
      */
-    v3_ActReason_MetadataManagement: Coding.FactoryCreateStrict({
+    v3_ActReason_MetadataManagement: Coding.FromStrict({
         code: "METAMGT",
         display: "metadata management",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1092,7 +1056,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_MentalHealthInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_MentalHealthInformationSensitivity: Coding.FromStrict({
         code: "MH",
         display: "mental health information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1100,7 +1064,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting activities required by military processes, procedures, policies, or law.
      */
-    v3_ActReason_MilitaryCommand: Coding.FactoryCreateStrict({
+    v3_ActReason_MilitaryCommand: Coding.FromStrict({
         code: "MILCDM",
         display: "military command",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1108,7 +1072,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for the process of releasing military personnel from their service obligations, which may include determining service merit, discharge benefits, and disability assessment.
      */
-    v3_ActReason_MilitaryDischarge: Coding.FactoryCreateStrict({
+    v3_ActReason_MilitaryDischarge: Coding.FromStrict({
         code: "MILDCRG",
         display: "military discharge",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1119,7 +1083,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: Limiting the information available for access and disclosure to that an authorized user or receiver "needs to know" in order to perform permitted workflow or purpose of use.
      */
-    v3_ActCode_MinimumNecessary: Coding.FactoryCreateStrict({
+    v3_ActCode_MinimumNecessary: Coding.FromStrict({
         code: "MINEC",
         display: "minimum necessary",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1132,7 +1096,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_MilitarySexualTraumaInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_MilitarySexualTraumaInformationSensitivity: Coding.FromStrict({
         code: "MST",
         display: "military sexual trauma information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1149,7 +1113,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This metadata indicates that the receiver may be obligated to comply with applicable jurisdictional privacy law or disclosure authorization.
      */
-    v3_Confidentiality_Normal: Coding.FactoryCreateStrict({
+    v3_Confidentiality_Normal: Coding.FromStrict({
         code: "N",
         display: "normal",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -1157,7 +1121,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without information subject's authorization.
      */
-    v3_ActCode_NoDisclosureWithoutSubjectAuthorization: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutSubjectAuthorization: Coding.FromStrict({
         code: "NOAUTH",
         display: "no disclosure without subject authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1165,7 +1129,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on collection or storage of the information.
      */
-    v3_ActCode_NoCollection: Coding.FactoryCreateStrict({
+    v3_ActCode_NoCollection: Coding.FromStrict({
         code: "NOCOLLECT",
         display: "no collection",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1173,7 +1137,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without organizational approved patient restriction.
      */
-    v3_ActCode_NoDisclosureWithoutConsentDirective: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutConsentDirective: Coding.FromStrict({
         code: "NODSCLCD",
         display: "no disclosure without consent directive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1181,7 +1145,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without a consent directive from the information subject.
      */
-    v3_ActCode_NoDisclosureWithoutInformationSubjectQuoteSConsentDirective: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutInformationSubjectQuoteSConsentDirective: Coding.FromStrict({
         code: "NODSCLCDS",
         display: "no disclosure without information subject's consent directive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1189,7 +1153,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on Integration into other records.
      */
-    v3_ActCode_NoIntegration: Coding.FactoryCreateStrict({
+    v3_ActCode_NoIntegration: Coding.FromStrict({
         code: "NOINTEGRATE",
         display: "no integration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1197,7 +1161,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure except to entities on specific access list.
      */
-    v3_ActCode_NoUnlistedEntityDisclosure: Coding.FactoryCreateStrict({
+    v3_ActCode_NoUnlistedEntityDisclosure: Coding.FromStrict({
         code: "NOLIST",
         display: "no unlisted entity disclosure",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1205,7 +1169,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without an interagency service agreement or memorandum of understanding (MOU).
      */
-    v3_ActCode_NoDisclosureWithoutMOU: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutMOU: Coding.FromStrict({
         code: "NOMOU",
         display: "no disclosure without MOU",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1213,7 +1177,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without organizational authorization.
      */
-    v3_ActCode_NoDisclosureWithoutOrganizationalAuthorization: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutOrganizationalAuthorization: Coding.FromStrict({
         code: "NOORGPOL",
         display: "no disclosure without organizational authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1234,7 +1198,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         French use case:  A label for documents that the author  chose to hide from the patient until the content can be disclose to the patient in a face to face meeting between a healthcare professional and the patient (in French law some results like cancer diagnosis or AIDS diagnosis must be announced to the patient by a healthcare professional and should not be find out by the patient alone).
      */
-    v3_ActCode_NoDisclosureToPatientFamilyOrCaregiversWithoutAttendingProviderQuoteSAuthorization: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureToPatientFamilyOrCaregiversWithoutAttendingProviderQuoteSAuthorization: Coding.FromStrict({
         code: "NOPAT",
         display: "no disclosure to patient, family or caregivers without attending provider's authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1242,7 +1206,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on collection of the information beyond time necessary to accomplish authorized purpose of use is prohibited.
      */
-    v3_ActCode_NoCollectionBeyondPurposeOfUse: Coding.FactoryCreateStrict({
+    v3_ActCode_NoCollectionBeyondPurposeOfUse: Coding.FromStrict({
         code: "NOPERSISTP",
         display: "no collection beyond purpose of use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1250,7 +1214,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on redisclosure without patient consent directive.
      */
-    v3_ActCode_NoRedisclosureWithoutConsentDirective: Coding.FactoryCreateStrict({
+    v3_ActCode_NoRedisclosureWithoutConsentDirective: Coding.FromStrict({
         code: "NORDSCLCD",
         display: "no redisclosure without consent directive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1258,7 +1222,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on redisclosure without a consent directive from the information subject.
      */
-    v3_ActCode_NoRedisclosureWithoutInformationSubjectQuoteSConsentDirective: Coding.FactoryCreateStrict({
+    v3_ActCode_NoRedisclosureWithoutInformationSubjectQuoteSConsentDirective: Coding.FromStrict({
         code: "NORDSCLCDS",
         display: "no redisclosure without information subject's consent directive",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1266,7 +1230,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure without authorization under jurisdictional law.
      */
-    v3_ActCode_NoDisclosureWithoutJurisdictionalAuthorization: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutJurisdictionalAuthorization: Coding.FromStrict({
         code: "NORDSCLW",
         display: "no disclosure without jurisdictional authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1274,7 +1238,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on associating de-identified or pseudonymized information with other information in a manner that could or does result in disclosing information intended to be masked.
      */
-    v3_ActCode_NoRelinking: Coding.FactoryCreateStrict({
+    v3_ActCode_NoRelinking: Coding.FromStrict({
         code: "NORELINK",
         display: "no relinking",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1282,7 +1246,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on use of the information beyond the purpose of use initially authorized.
      */
-    v3_ActCode_NoReuseBeyondPurposeOfUse: Coding.FactoryCreateStrict({
+    v3_ActCode_NoReuseBeyondPurposeOfUse: Coding.FromStrict({
         code: "NOREUSE",
         display: "no reuse beyond purpose of use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1290,7 +1254,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure except to principals with access permission to specific VIP information.
      */
-    v3_ActCode_NoUnauthorizedVIPDisclosure: Coding.FactoryCreateStrict({
+    v3_ActCode_NoUnauthorizedVIPDisclosure: Coding.FromStrict({
         code: "NOVIP",
         display: "no unauthorized VIP disclosure",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1301,7 +1265,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: Per ISO 22600-2, ObligationPolicy instances 'are event-triggered and define actions to be performed by manager agent'. Per HL7 Composite Security and Privacy Domain Analysis Model:  This value set refers to the action required to receive the permission specified in the privacy rule. Per OASIS XACML, an obligation is an operation specified in a policy or policy that is performed in conjunction with the enforcement of an access control decision.
      */
-    v3_ActCode_ObligationPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_ObligationPolicy: Coding.FromStrict({
         code: "ObligationPolicy",
         display: "obligation policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1312,7 +1276,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_OpioidUseDisorderInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_OpioidUseDisorderInformationSensitivity: Coding.FromStrict({
         code: "OPIOIDUD",
         display: "opioid use disorder information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1320,7 +1284,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Prohibition on disclosure except as permitted by the information originator.
      */
-    v3_ActCode_NoDisclosureWithoutOriginatorAuthorization: Coding.FactoryCreateStrict({
+    v3_ActCode_NoDisclosureWithoutOriginatorAuthorization: Coding.FromStrict({
         code: "ORCON",
         display: "no disclosure without originator authorization",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1330,7 +1294,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Security Compartment Labels assigned to consumer information used in these workflows should be met or exceeded by the Security Compartment attribute claimed by a participant in a patient administration workflow who is requesting access to that information.
      */
-    v3_ActCode_PatientAdministrationCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_PatientAdministrationCompartment: Coding.FromStrict({
         code: "PACOMPT",
         display: "patient administration compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1338,7 +1302,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a patient acquaintance.
      */
-    v3_ObservationValue_PatientAcquaintanceAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PatientAcquaintanceAsserted: Coding.FromStrict({
         code: "PACQAST",
         display: "patient acquaintance asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1346,7 +1310,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a patient acquaintance.
      */
-    v3_ObservationValue_PatientAcquaintanceReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PatientAcquaintanceReported: Coding.FromStrict({
         code: "PACQRPT",
         display: "patient acquaintance reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1354,7 +1318,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for operational activities conducted to administer the delivery of health care to a patient.
      */
-    v3_ActReason_PatientAdministration: Coding.FactoryCreateStrict({
+    v3_ActReason_PatientAdministration: Coding.FromStrict({
         code: "PATADMIN",
         display: "patient administration",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1362,7 +1326,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a patient.
      */
-    v3_ObservationValue_PatientAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PatientAsserted: Coding.FromStrict({
         code: "PATAST",
         display: "patient asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1370,7 +1334,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a patient.
      */
-    v3_ObservationValue_PatientReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PatientReported: Coding.FromStrict({
         code: "PATRPT",
         display: "patient reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1378,7 +1342,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in response to a patient's request.
      */
-    v3_ActReason_PatientRequested: Coding.FactoryCreateStrict({
+    v3_ActReason_PatientRequested: Coding.FromStrict({
         code: "PATRQT",
         display: "patient requested",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1386,7 +1350,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in processes related to ensuring the safety of health care.
      */
-    v3_ActReason_PatientSafety: Coding.FactoryCreateStrict({
+    v3_ActReason_PatientSafety: Coding.FromStrict({
         code: "PATSFTY",
         display: "patient safety",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1394,7 +1358,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a payer.
      */
-    v3_ObservationValue_PayerAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PayerAsserted: Coding.FromStrict({
         code: "PAYAST",
         display: "payer asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1402,7 +1366,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a payer.
      */
-    v3_ObservationValue_PayerReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_PayerReported: Coding.FromStrict({
         code: "PAYRPT",
         display: "payer reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1415,7 +1379,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         For example, VA deems employee information sensitive by default.  Information about a patient who is being stalked or a victim of abuse or violence may be deemed sensitive by default per a provider organization's policies.
      */
-    v3_ActCode_PatientDefaultInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_PatientDefaultInformationSensitivity: Coding.FromStrict({
         code: "PDS",
         display: "patient default information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1423,7 +1387,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used for monitoring performance of recommended health care practices and interventions.
      */
-    v3_ActReason_PerformanceMeasure: Coding.FactoryCreateStrict({
+    v3_ActReason_PerformanceMeasure: Coding.FromStrict({
         code: "PERFMSR",
         display: "performance measure",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1431,7 +1395,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must persist the binding of security labels to classify information received or imported by information systems under its control for collection, access, use and disclosure in accordance with applicable jurisdictional privacy policies associated with the target information.  The system must retain an immutable record of the assignment and binding.
      */
-    v3_ActCode_PersistSecurityLabel: Coding.FactoryCreateStrict({
+    v3_ActCode_PersistSecurityLabel: Coding.FromStrict({
         code: "PERSISTLABEL",
         display: "persist security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1444,7 +1408,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Use cases in which this code could be used are, e.g.,  in systems that lack the ability to automatically detect sensitive information and must rely on manual tagging; a system that lacks an applicable sensitivity tag, or for ad hoc situations where criticality of the situation requires that the tagging be done immediately by the provider before coding or transcription of consult notes can be completed, e.g., upon detection of a patient with suicidal tendencies or potential for violence.
      */
-    v3_ActCode_PhysicianRequestedInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_PhysicianRequestedInformationSensitivity: Coding.FromStrict({
         code: "PHY",
         display: "physician requested information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1452,7 +1416,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information, including genealogical pedigrees, historical records, surveys, family health data, health records, and genetic information, for conducting scientific investigations to obtain health care knowledge. Use of the data must be related to population origins and/or ancestry healthcare research.  For example, gathering genetic specimens from a specific population in order to determine the ancestry and population origins of that group. May be used in combination with clinical trial and other healthcare research purposes of use.
      */
-    v3_ActReason_PopulationOriginsOrAncestryHealthcareResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_PopulationOriginsOrAncestryHealthcareResearch: Coding.FromStrict({
         code: "POARCH",
         display: "population origins or ancestry healthcare research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1460,7 +1424,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for provision of health care to a population of living subjects, e.g., needle exchange program.
      */
-    v3_ActReason_PopulationHealth: Coding.FactoryCreateStrict({
+    v3_ActReason_PopulationHealth: Coding.FromStrict({
         code: "POPHLTH",
         display: "population health",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1468,7 +1432,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in preparation for conducting scientific investigation to obtain health care knowledge, such as research on animals or review of patient health records, to determine the feasibility of a clinical trial study; assist with protocol design; or in preparation for institutional review board or ethics committee approval process.  May be post-coordinated or used with other purposes of use such as disease, discipline, specialty, population origins or ancestry, translational healthcare research.
      */
-    v3_ActReason_PreclinicalTrialResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_PreclinicalTrialResearch: Coding.FromStrict({
         code: "PRECLINTRCH",
         display: "preclinical trial research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1478,7 +1442,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         Map:  Aligns with ISO 22600-3 Section A.3.4.3 description of privacy mark:  "If present, the privacy-mark is not used for access control. The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label."
      */
-    v3_ActCode_PrivacyMark: Coding.FactoryCreateStrict({
+    v3_ActCode_PrivacyMark: Coding.FromStrict({
         code: "PRIVMARK",
         display: "privacy mark",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1486,7 +1450,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a professional.
      */
-    v3_ObservationValue_ProfessionalAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_ProfessionalAsserted: Coding.FromStrict({
         code: "PROAST",
         display: "professional asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1494,7 +1458,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a professional.
      */
-    v3_ObservationValue_ProfessionalReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_ProfessionalReported: Coding.FromStrict({
         code: "PRORPT",
         display: "professional reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1505,17 +1469,9 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_PatientRequestedInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_PatientRequestedInformationSensitivity: Coding.FromStrict({
         code: "PRS",
         display: "patient requested information sensitivity",
-        system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-    }),
-    /**
-     * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.  Custodian may retain a key to relink data necessary to reidentify the information subject.
-     */
-    v3_ActCode_Pseudonymize: Coding.FactoryCreateStrict({
-        code: "PSEUD",
-        display: "pseudonymize",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
     }),
     /**
@@ -1524,7 +1480,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Rationale: Personal data which has been processed to make it impossible to know whose data it is. Used particularly for secondary use of health data. In some cases, it may be possible for authorized individuals to restore the identity of the individual, e.g.,for public health case management.  Based on ISO/TS 25237:2008 Health informaticsâ€”Pseudonymization
      */
-    v3_ObservationValue_Pseudonymized: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Pseudonymized: Coding.FromStrict({
         code: "PSEUDED",
         display: "pseudonymized",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1535,7 +1491,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_PsychiatryDisorderInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_PsychiatryDisorderInformationSensitivity: Coding.FromStrict({
         code: "PSY",
         display: "psychiatry disorder information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1548,7 +1504,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_PsychotherapyNoteInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_PsychotherapyNoteInformationSensitivity: Coding.FromStrict({
         code: "PSYTHPN",
         display: "psychotherapy note information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1556,7 +1512,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting public health activities, such as the reporting of notifiable conditions.
      */
-    v3_ActReason_PublicHealth: Coding.FactoryCreateStrict({
+    v3_ActReason_PublicHealth: Coding.FromStrict({
         code: "PUBHLTH",
         display: "public health",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1567,7 +1523,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: The rationale or purpose for an act relating to the management of personal health information, such as collecting personal health information for research or public health purposes.
      */
-    v3_ActReason_PurposeOfUse: Coding.FactoryCreateStrict({
+    v3_ActReason_PurposeOfUse: Coding.FromStrict({
         code: "PurposeOfUse",
         display: "purpose of use",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1575,7 +1531,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in response to a request by a person appointed as the patient's legal representative.
      */
-    v3_ActReason_PowerOfAttorney: Coding.FactoryCreateStrict({
+    v3_ActReason_PowerOfAttorney: Coding.FromStrict({
         code: "PWATRNY",
         display: "power of attorney",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1592,7 +1548,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This metadata indicates that the receiver may be obligated to comply with applicable, prevailing (default) jurisdictional privacy law or disclosure authorization..
      */
-    v3_Confidentiality_Restricted: Coding.FactoryCreateStrict({
+    v3_Confidentiality_Restricted: Coding.FromStrict({
         code: "R",
         display: "restricted",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -1603,7 +1559,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_RaceInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_RaceInformationSensitivity: Coding.FromStrict({
         code: "RACE",
         display: "race information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1611,7 +1567,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used within the health records management process.
      */
-    v3_ActReason_RecordsManagement: Coding.FactoryCreateStrict({
+    v3_ActReason_RecordsManagement: Coding.FromStrict({
         code: "RECORDMGT",
         display: "records management",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1619,7 +1575,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian system must remove information, which is not authorized to be access, used, or disclosed from records made available to otherwise authorized users.
      */
-    v3_ActCode_Redact: Coding.FactoryCreateStrict({
+    v3_ActCode_Redact: Coding.FromStrict({
         code: "REDACT",
         display: "redact",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1630,7 +1586,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: "REDACTED" may be used, per applicable policy, as a flag to indicate to a user or receiver that some portion of an IT resource has filtered and not included in the content accessed or received.
      */
-    v3_ObservationValue_Redacted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Redacted: Coding.FromStrict({
         code: "REDACTED",
         display: "redacted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1643,7 +1599,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: ISO 22600-2 species that a Refrain Policy "defines actions the subjects must refrain from performing".  Per HL7 Composite Security and Privacy Domain Analysis Model:  May be used to indicate that a specific action is prohibited based on specific access control attributes e.g., purpose of use, information type, user role, etc.
      */
-    v3_ActCode_RefrainPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_RefrainPolicy: Coding.FromStrict({
         code: "RefrainPolicy",
         display: "refrain policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1654,7 +1610,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_ReligionInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_ReligionInformationSensitivity: Coding.FromStrict({
         code: "REL",
         display: "religion information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1662,7 +1618,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security metadata observation value used to indicate that the veracity or trustworthiness of an IT resource (data, information object, service, or system capability) for a specified purpose of use is perceived to be or deemed by policy to be adequate.
      */
-    v3_ObservationValue_Reliable: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Reliable: Coding.FromStrict({
         code: "RELIABLE",
         display: "reliable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1670,7 +1626,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information about the amount remitted for a health care claim.
      */
-    v3_ActReason_RemittanceAdvice: Coding.FactoryCreateStrict({
+    v3_ActReason_RemittanceAdvice: Coding.FromStrict({
         code: "REMITADV",
         display: "remittance advice",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1678,7 +1634,7 @@ export var SecurityLabelsValueSet = {
     /**
      * A security category label field value, which indicates that access and use of an IT resource is restricted to members of a research project.
      */
-    v3_ActCode_ResearchProjectCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_ResearchProjectCompartment: Coding.FromStrict({
         code: "RESCOMPT",
         display: "research project compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1686,7 +1642,7 @@ export var SecurityLabelsValueSet = {
     /**
      * A security category label field value, which indicates that access and use of an IT resource is restricted to members of records management department or workflow.
      */
-    v3_ActCode_RecordsManagementCompartment: Coding.FactoryCreateStrict({
+    v3_ActCode_RecordsManagementCompartment: Coding.FromStrict({
         code: "RMGTCOMPT",
         display: "records management compartment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1697,7 +1653,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then the Act valued with this ActCode should be associated with an Act valued with any applicable laws from the ActPrivacyLaw code system.
      */
-    v3_ActCode_SickleCellAnemiaInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SickleCellAnemiaInformationSensitivity: Coding.FromStrict({
         code: "SCA",
         display: "sickle cell anemia information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1705,7 +1661,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was asserted by a substitute decision maker.
      */
-    v3_ObservationValue_SubstituteDecisionMakerAsserted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_SubstituteDecisionMakerAsserted: Coding.FromStrict({
         code: "SDMAST",
         display: "substitute decision maker asserted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1713,7 +1669,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security provenance metadata observation value used to indicate that an IT resource (data, information object, service, or system capability) was reported by a substitute decision maker.
      */
-    v3_ObservationValue_SubstituteDecisionMakerReported: Coding.FactoryCreateStrict({
+    v3_ObservationValue_SubstituteDecisionMakerReported: Coding.FromStrict({
         code: "SDMRPT",
         display: "substitute decision maker reported",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1726,7 +1682,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_SexualAssaultAbuseOrDomesticViolenceInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SexualAssaultAbuseOrDomesticViolenceInformationSensitivity: Coding.FromStrict({
         code: "SDV",
         display: "sexual assault, abuse, or domestic violence information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1742,7 +1698,7 @@ export var SecurityLabelsValueSet = {
      *                            obligation to encrypt
      *                            refrain from redisclosure without consent
      */
-    v3_ActCode_SecurityPolicy: Coding.FactoryCreateStrict({
+    v3_ActCode_SecurityPolicy: Coding.FromStrict({
         code: "SecurityPolicy",
         display: "security policy",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1753,7 +1709,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_SexualityAndReproductiveHealthInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SexualityAndReproductiveHealthInformationSensitivity: Coding.FromStrict({
         code: "SEX",
         display: "sexuality and reproductive health information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1764,7 +1720,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: ActSensitivity codes are used to bind information to an Act.confidentialityCode according to local sensitivity policy so that those confidentiality codes can then govern its handling across enterprises.  Internally to a policy domain, however, local policies guide the access control system on how end users in that policy domain are able to use information tagged with these sensitivity values.
      */
-    v3_ActCode_SickleCell: Coding.FactoryCreateStrict({
+    v3_ActCode_SickleCell: Coding.FromStrict({
         code: "SICKLE",
         display: "sickle cell",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1775,7 +1731,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_SpeciallyProtectedInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SpeciallyProtectedInformationSensitivity: Coding.FromStrict({
         code: "SPI",
         display: "specially protected information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1786,7 +1742,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Notes: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_SensitiveServiceProviderInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SensitiveServiceProviderInformationSensitivity: Coding.FromStrict({
         code: "SSP",
         display: "sensitive service provider information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1798,7 +1754,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
-    v3_ActCode_SexuallyTransmittedDiseaseInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SexuallyTransmittedDiseaseInformationSensitivity: Coding.FromStrict({
         code: "STD",
         display: "sexually transmitted disease information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1809,7 +1765,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This is not suitable to be used when information is removed for security reasons - see the code REDACTED for this use.
      */
-    v3_ObservationValue_Subsetted: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Subsetted: Coding.FromStrict({
         code: "SUBSETTED",
         display: "subsetted",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1820,7 +1776,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_SubstanceUseDisorderInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_SubstanceUseDisorderInformationSensitivity: Coding.FromStrict({
         code: "SUD",
         display: "substance use disorder information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1828,7 +1784,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information in response to a request by a person authorized by the patient.
      */
-    v3_ActReason_SupportNetwork: Coding.FactoryCreateStrict({
+    v3_ActReason_SupportNetwork: Coding.FromStrict({
         code: "SUPNWK",
         display: "support network",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1839,7 +1795,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: "SYNTAC" code does not indicate the syntactical correctness of the syntactically transformed IT resource.
      */
-    v3_ObservationValue_SyntacticTransform: Coding.FactoryCreateStrict({
+    v3_ObservationValue_SyntacticTransform: Coding.FromStrict({
         code: "SYNTAC",
         display: "syntactic transform",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1847,7 +1803,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information to design, develop, implement, test, or deploy a healthcare system or application.
      */
-    v3_ActReason_SystemDevelopment: Coding.FactoryCreateStrict({
+    v3_ActReason_SystemDevelopment: Coding.FromStrict({
         code: "SYSDEV",
         display: "system development",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1861,7 +1817,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Open Issue: This definition conflates a rule and a characteristic, and there may be a similar issue with ts sibling codes.
      */
-    v3_ActCode_Taboo: Coding.FactoryCreateStrict({
+    v3_ActCode_Taboo: Coding.FromStrict({
         code: "TBOO",
         display: "taboo",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1869,7 +1825,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used to prevent injury or disease to living subjects who may be the target of violence.
      */
-    v3_ActReason_Threat: Coding.FactoryCreateStrict({
+    v3_ActReason_Threat: Coding.FromStrict({
         code: "THREAT",
         display: "threat",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1877,7 +1833,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information used in training and education.
      */
-    v3_ActReason_Training: Coding.FactoryCreateStrict({
+    v3_ActReason_Training: Coding.FromStrict({
         code: "TRAIN",
         display: "training",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1885,7 +1841,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for conducting scientific investigations to obtain health care knowledge related to evidence based medicine during the course of providing healthcare treatment.  Sometimes referred to as "bench to bedside", which is the iterative feedback loop between healthcare research and clinical trials with input from information collected in the course of routine provision of healthcare. For example, by extending a patient encounter to conduct a survey related to a research topic such as attitudes about use of a wellness device that a patient agreed to use. May be used in combination with clinical trial and other healthcare research purposes of use.
      */
-    v3_ActReason_TranslationalHealthcareResearch: Coding.FactoryCreateStrict({
+    v3_ActReason_TranslationalHealthcareResearch: Coding.FromStrict({
         code: "TRANSRCH",
         display: "translational healthcare research",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1893,7 +1849,7 @@ export var SecurityLabelsValueSet = {
     /**
      * To perform one or more operations on information for provision of health care.
      */
-    v3_ActReason_Treatment: Coding.FactoryCreateStrict({
+    v3_ActReason_Treatment: Coding.FromStrict({
         code: "TREAT",
         display: "treatment",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActReason"
@@ -1908,7 +1864,7 @@ export var SecurityLabelsValueSet = {
      *
      *                         To indicate languages, use the Value Set:HumanLanguage (2.16.840.1.113883.1.11.11526)
      */
-    v3_ObservationValue_Translated: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Translated: Coding.FromStrict({
         code: "TRSLT",
         display: "translated",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1922,7 +1878,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: This metadata indicates that the receiver has no obligation to consider additional policies when making access control decisions.   Note that in some jurisdictions, personally identifiable information must be protected as confidential, so it would not be appropriate to assign a confidentiality code of "unrestricted"  to that information even if it is publicly available.
      */
-    v3_Confidentiality_Unrestricted: Coding.FactoryCreateStrict({
+    v3_Confidentiality_Unrestricted: Coding.FromStrict({
         code: "U",
         display: "unrestricted",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -1930,7 +1886,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security metadata observation value used to indicate that the veracity or trustworthiness of an IT resource (data, information object, service, or system capability) for a specified purpose of use is perceived to be or deemed by policy to be uncertain.
      */
-    v3_ObservationValue_UncertainReliability: Coding.FactoryCreateStrict({
+    v3_ObservationValue_UncertainReliability: Coding.FromStrict({
         code: "UNCERTREL",
         display: "uncertain reliability",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1938,7 +1894,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Security metadata observation value used to indicate that the veracity or trustworthiness of an IT resource (data, information object, service, or system capability) for a specified purpose of use is perceived to be or deemed by policy to be inadequate.
      */
-    v3_ObservationValue_Unreliable: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Unreliable: Coding.FromStrict({
         code: "UNRELIABLE",
         display: "unreliable",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1946,7 +1902,7 @@ export var SecurityLabelsValueSet = {
     /**
      * Custodian security system must declassify information assigned security labels by instantiating a new version of the classified information so as to break the binding of the classifying security label when assigning a new security label that marks the information as classified at a more protected level  in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the previous assignment and binding.
      */
-    v3_ActCode_UpgradeSecurityLabel: Coding.FactoryCreateStrict({
+    v3_ActCode_UpgradeSecurityLabel: Coding.FromStrict({
         code: "UPGRDLABEL",
         display: "upgrade security label",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"
@@ -1963,7 +1919,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note:  This metadata indicates that the receiver may not disclose this information except as directed by the information custodian, who may be the information subject.
      */
-    v3_Confidentiality_VeryRestricted: Coding.FactoryCreateStrict({
+    v3_Confidentiality_VeryRestricted: Coding.FromStrict({
         code: "V",
         display: "very restricted",
         system: "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"
@@ -1974,7 +1930,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: When this code is used, expectation is that the system has removed historical versions of the data that falls outside the time period deemed to be the effective time of the applicable version.
      */
-    v3_ObservationValue_Versioned: Coding.FactoryCreateStrict({
+    v3_ObservationValue_Versioned: Coding.FromStrict({
         code: "VERSIONED",
         display: "versioned",
         system: "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"
@@ -1987,7 +1943,7 @@ export var SecurityLabelsValueSet = {
      *
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law in addition to this more generic code.
      */
-    v3_ActCode_ViolenceInformationSensitivity: Coding.FactoryCreateStrict({
+    v3_ActCode_ViolenceInformationSensitivity: Coding.FromStrict({
         code: "VIO",
         display: "violence information sensitivity",
         system: "http://terminology.hl7.org/CodeSystem/v3-ActCode"

@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * Code for a known / defined timing pattern.
  */
-export var TimingAbbreviationValueSet = {
+export const TimingAbbreviationValueSet = {
     /**
      * Every morning at institution specified times.
      */
-    v3_GTSAbbreviation_AM: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_AM: Coding.FromStrict({
         code: "AM",
         display: "AM",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -22,7 +21,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * At bedtime (institution specified time).
      */
-    v3_GTSAbbreviation_AtBedtime: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_AtBedtime: Coding.FromStrict({
         code: "BED",
         display: "at bedtime",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -30,7 +29,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Two times a day at institution specified time
      */
-    v3_GTSAbbreviation_BID: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_BID: Coding.FromStrict({
         code: "BID",
         display: "BID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -38,7 +37,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Monthly at institution specified time.
      */
-    v3_GTSAbbreviation_Monthly: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Monthly: Coding.FromStrict({
         code: "MO",
         display: "monthly",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -46,7 +45,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every afternoon at institution specified times.
      */
-    v3_GTSAbbreviation_PM: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_PM: Coding.FromStrict({
         code: "PM",
         display: "PM",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -54,7 +53,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every hour at institution specified times.
      */
-    v3_GTSAbbreviation_EveryHour: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_EveryHour: Coding.FromStrict({
         code: "Q1H",
         display: "every hour",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -62,7 +61,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every 2 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every2Hours: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Every2Hours: Coding.FromStrict({
         code: "Q2H",
         display: "every 2 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -70,7 +69,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every 3 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every3Hours: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Every3Hours: Coding.FromStrict({
         code: "Q3H",
         display: "every 3 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -78,7 +77,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every 4 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q4H: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Q4H: Coding.FromStrict({
         code: "Q4H",
         display: "Q4H",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -86,7 +85,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every 6 hours at institution specified time
      */
-    v3_GTSAbbreviation_Q6H: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Q6H: Coding.FromStrict({
         code: "Q6H",
         display: "Q6H",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -94,7 +93,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every 8 hours at institution specified times.
      */
-    v3_GTSAbbreviation_Every8Hours: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Every8Hours: Coding.FromStrict({
         code: "Q8H",
         display: "every 8 hours",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -102,7 +101,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every day at institution specified times.
      */
-    v3_GTSAbbreviation_QD: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_QD: Coding.FromStrict({
         code: "QD",
         display: "QD",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -110,7 +109,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Four times a day at institution specified time
      */
-    v3_GTSAbbreviation_QID: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_QID: Coding.FromStrict({
         code: "QID",
         display: "QID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -118,7 +117,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Every other day at institution specified times.
      */
-    v3_GTSAbbreviation_QOD: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_QOD: Coding.FromStrict({
         code: "QOD",
         display: "QOD",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -126,7 +125,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Three times a day at institution specified time
      */
-    v3_GTSAbbreviation_TID: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_TID: Coding.FromStrict({
         code: "TID",
         display: "TID",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"
@@ -134,7 +133,7 @@ export var TimingAbbreviationValueSet = {
     /**
      * Weekly at institution specified time.
      */
-    v3_GTSAbbreviation_Weekly: Coding.FactoryCreateStrict({
+    v3_GTSAbbreviation_Weekly: Coding.FromStrict({
         code: "WK",
         display: "weekly",
         system: "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation"

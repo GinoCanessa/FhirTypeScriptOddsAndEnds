@@ -4,44 +4,43 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * The nature of the relationship between the patient and the contact person.
  */
-export var PatientContactrelationshipValueSet = {
-    v2_0131_EmergencyContact: Coding.FactoryCreateStrict({
+export const PatientContactrelationshipValueSet = {
+    v2_0131_EmergencyContact: Coding.FromStrict({
         code: "C",
         display: "Emergency Contact",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_Employer: Coding.FactoryCreateStrict({
+    v2_0131_Employer: Coding.FromStrict({
         code: "E",
         display: "Employer",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_FederalAgency: Coding.FactoryCreateStrict({
+    v2_0131_FederalAgency: Coding.FromStrict({
         code: "F",
         display: "Federal Agency",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_InsuranceCompany: Coding.FactoryCreateStrict({
+    v2_0131_InsuranceCompany: Coding.FromStrict({
         code: "I",
         display: "Insurance Company",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_NextOfKin: Coding.FactoryCreateStrict({
+    v2_0131_NextOfKin: Coding.FromStrict({
         code: "N",
         display: "Next-of-Kin",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_StateAgency: Coding.FactoryCreateStrict({
+    v2_0131_StateAgency: Coding.FromStrict({
         code: "S",
         display: "State Agency",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"
     }),
-    v2_0131_Unknown: Coding.FactoryCreateStrict({
+    v2_0131_Unknown: Coding.FromStrict({
         code: "U",
         display: "Unknown",
         system: "http://terminology.hl7.org/CodeSystem/v2-0131"

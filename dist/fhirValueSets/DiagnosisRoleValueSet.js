@@ -4,44 +4,43 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to express the role of a diagnosis on the Encounter or EpisodeOfCare record.
  */
-export var DiagnosisRoleValueSet = {
-    diagnosis_role_AdmissionDiagnosis: Coding.FactoryCreateStrict({
+export const DiagnosisRoleValueSet = {
+    diagnosis_role_AdmissionDiagnosis: Coding.FromStrict({
         code: "AD",
         display: "Admission diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_Billing: Coding.FactoryCreateStrict({
+    diagnosis_role_Billing: Coding.FromStrict({
         code: "billing",
         display: "Billing",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_ChiefComplaint: Coding.FactoryCreateStrict({
+    diagnosis_role_ChiefComplaint: Coding.FromStrict({
         code: "CC",
         display: "Chief complaint",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_ComorbidityDiagnosis: Coding.FactoryCreateStrict({
+    diagnosis_role_ComorbidityDiagnosis: Coding.FromStrict({
         code: "CM",
         display: "Comorbidity diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_DischargeDiagnosis: Coding.FactoryCreateStrict({
+    diagnosis_role_DischargeDiagnosis: Coding.FromStrict({
         code: "DD",
         display: "Discharge diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_PostOpDiagnosis: Coding.FactoryCreateStrict({
+    diagnosis_role_PostOpDiagnosis: Coding.FromStrict({
         code: "post-op",
         display: "post-op diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"
     }),
-    diagnosis_role_PreOpDiagnosis: Coding.FactoryCreateStrict({
+    diagnosis_role_PreOpDiagnosis: Coding.FromStrict({
         code: "pre-op",
         display: "pre-op diagnosis",
         system: "http://terminology.hl7.org/CodeSystem/diagnosis-role"

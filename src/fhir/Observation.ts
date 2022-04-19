@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
  */
-export interface IObservationReferenceRange extends fhir.IBackboneElement {
+export type IObservationReferenceRange = fhir.IBackboneElement & {
   /**
    * The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
    */
@@ -40,7 +39,7 @@ export interface IObservationReferenceRange extends fhir.IBackboneElement {
 /**
  * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
  */
-export interface IObservationComponent extends fhir.IBackboneElement {
+export type IObservationComponent = fhir.IBackboneElement & {
   /**
    * *All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
    */
@@ -111,11 +110,11 @@ export interface IObservationComponent extends fhir.IBackboneElement {
 /**
  * Measurements and simple assertions made about a patient, device or other subject.
  */
-export interface IObservation extends fhir.IDomainResource {
+export type IObservation = fhir.IDomainResource & {
   /**
    * Resource Type Name
    */
-  readonly resourceType: "Observation";
+  resourceType: "Observation";
   /**
    * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
    */
@@ -306,43 +305,34 @@ export class ObservationReferenceRange extends fhir.BackboneElement implements f
    */
   public type?: fhir.CodeableConcept|undefined;
   /**
-   * Default constructor for ObservationReferenceRange - initializes required elements to null.
+   * Default constructor for ObservationReferenceRange - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a ObservationReferenceRange from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IObservationReferenceRange>):ObservationReferenceRange {
-    var dest:Partial<ObservationReferenceRange> = super.FactoryCreate(source) as Partial<ObservationReferenceRange>;
-    if (source["age"] !== undefined) { dest.age = fhir.Range.FactoryCreate(source.age!); }
-    if (source["appliesTo"] !== undefined) { dest.appliesTo = source.appliesTo.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["high"] !== undefined) { dest.high = fhir.Quantity.FactoryCreate(source.high!); }
-    if (source["low"] !== undefined) { dest.low = fhir.Quantity.FactoryCreate(source.low!); }
-    if (source["text"] !== undefined) { dest.text = source.text; }
-    if (source["_text"] !== undefined) { dest._text = fhir.FhirElement.FactoryCreate(source._text!); }
-    if (source["type"] !== undefined) { dest.type = fhir.CodeableConcept.FactoryCreate(source.type!); }
-    return dest as ObservationReferenceRange;
+  constructor(source:Partial<fhir.IObservationReferenceRange> = {}) {
+    super(source);
+    if (source["age"]) { this.age = new fhir.Range(source.age!); }
+    if (source["appliesTo"]) { this.appliesTo = source.appliesTo.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["high"]) { this.high = new fhir.Quantity(source.high!); }
+    if (source["low"]) { this.low = new fhir.Quantity(source.low!); }
+    if (source["text"]) { this.text = source.text; }
+    if (source["_text"]) { this._text = new fhir.FhirElement(source._text!); }
+    if (source["type"]) { this.type = new fhir.CodeableConcept(source.type!); }
   }
   /**
    * Check if the current ObservationReferenceRange contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationReferenceRange from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IObservationReferenceRange):ObservationReferenceRange {
-    var dest:ObservationReferenceRange = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `ObservationReferenceRange is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IObservationReferenceRange):ObservationReferenceRange {
+    var dest:ObservationReferenceRange = new ObservationReferenceRange(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `ObservationReferenceRange is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -417,58 +407,50 @@ export class ObservationComponent extends fhir.BackboneElement implements fhir.I
    */
   public valuePeriod?: fhir.Period|undefined;
   /**
-   * Default constructor for ObservationComponent - initializes required elements to null.
+   * Default constructor for ObservationComponent - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IObservationComponent> = {}) {
+    super(source);
     this.code = null;
-  }
-  /**
-   * Factory function to create a ObservationComponent from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IObservationComponent>):ObservationComponent {
-    var dest:Partial<ObservationComponent> = super.FactoryCreate(source) as Partial<ObservationComponent>;
-    if (source["code"] !== undefined) { dest.code = fhir.CodeableConcept.FactoryCreate(source.code!); }
-    if (source["dataAbsentReason"] !== undefined) { dest.dataAbsentReason = fhir.CodeableConcept.FactoryCreate(source.dataAbsentReason!); }
-    if (source["interpretation"] !== undefined) { dest.interpretation = source.interpretation.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["referenceRange"] !== undefined) { dest.referenceRange = source.referenceRange.map((x:Partial<fhir.IObservationReferenceRange>) => fhir.ObservationReferenceRange.FactoryCreate(x)); }
-    if (source["valueQuantity"] !== undefined) { dest.valueQuantity = fhir.Quantity.FactoryCreate(source.valueQuantity!); }
-    if (source["valueCodeableConcept"] !== undefined) { dest.valueCodeableConcept = fhir.CodeableConcept.FactoryCreate(source.valueCodeableConcept!); }
-    if (source["valueString"] !== undefined) { dest.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { dest._valueString = fhir.FhirElement.FactoryCreate(source._valueString!); }
-    if (source["valueBoolean"] !== undefined) { dest.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { dest._valueBoolean = fhir.FhirElement.FactoryCreate(source._valueBoolean!); }
-    if (source["valueInteger"] !== undefined) { dest.valueInteger = source.valueInteger; }
-    if (source["_valueInteger"] !== undefined) { dest._valueInteger = fhir.FhirElement.FactoryCreate(source._valueInteger!); }
-    if (source["valueRange"] !== undefined) { dest.valueRange = fhir.Range.FactoryCreate(source.valueRange!); }
-    if (source["valueRatio"] !== undefined) { dest.valueRatio = fhir.Ratio.FactoryCreate(source.valueRatio!); }
-    if (source["valueSampledData"] !== undefined) { dest.valueSampledData = fhir.SampledData.FactoryCreate(source.valueSampledData!); }
-    if (source["valueTime"] !== undefined) { dest.valueTime = source.valueTime; }
-    if (source["_valueTime"] !== undefined) { dest._valueTime = fhir.FhirElement.FactoryCreate(source._valueTime!); }
-    if (source["valueDateTime"] !== undefined) { dest.valueDateTime = source.valueDateTime; }
-    if (source["_valueDateTime"] !== undefined) { dest._valueDateTime = fhir.FhirElement.FactoryCreate(source._valueDateTime!); }
-    if (source["valuePeriod"] !== undefined) { dest.valuePeriod = fhir.Period.FactoryCreate(source.valuePeriod!); }
-    return dest as ObservationComponent;
+    if (source["code"]) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (this.code === undefined) { this.code = null }
+    if (source["dataAbsentReason"]) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason!); }
+    if (source["interpretation"]) { this.interpretation = source.interpretation.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["referenceRange"]) { this.referenceRange = source.referenceRange.map((x:Partial<fhir.IObservationReferenceRange>) => new fhir.ObservationReferenceRange(x)); }
+    if (source["valueQuantity"]) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
+    if (source["valueCodeableConcept"]) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
+    if (source["valueString"]) { this.valueString = source.valueString; }
+    if (source["_valueString"]) { this._valueString = new fhir.FhirElement(source._valueString!); }
+    if (source["valueBoolean"]) { this.valueBoolean = source.valueBoolean; }
+    if (source["_valueBoolean"]) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
+    if (source["valueInteger"]) { this.valueInteger = source.valueInteger; }
+    if (source["_valueInteger"]) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
+    if (source["valueRange"]) { this.valueRange = new fhir.Range(source.valueRange!); }
+    if (source["valueRatio"]) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
+    if (source["valueSampledData"]) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
+    if (source["valueTime"]) { this.valueTime = source.valueTime; }
+    if (source["_valueTime"]) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
+    if (source["valueDateTime"]) { this.valueDateTime = source.valueDateTime; }
+    if (source["_valueDateTime"]) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
+    if (source["valuePeriod"]) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
   }
   /**
    * Check if the current ObservationComponent contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ObservationComponent from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IObservationComponent):ObservationComponent {
-    var dest:ObservationComponent = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `ObservationComponent is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IObservationComponent):ObservationComponent {
+    var dest:ObservationComponent = new ObservationComponent(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `ObservationComponent is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -479,7 +461,7 @@ export class Observation extends fhir.DomainResource implements fhir.IObservatio
   /**
    * Resource Type Name
    */
-  readonly resourceType = "Observation";
+  public override resourceType: "Observation";
   /**
    * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
    */
@@ -640,87 +622,80 @@ export class Observation extends fhir.DomainResource implements fhir.IObservatio
    */
   public valuePeriod?: fhir.Period|undefined;
   /**
-   * Default constructor for Observation - initializes required elements to null.
+   * Default constructor for Observation - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IObservation> = {}) {
+    super(source);
+    this.resourceType = 'Observation';
+    if (source["basedOn"]) { this.basedOn = source.basedOn.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["bodySite"]) { this.bodySite = new fhir.CodeableConcept(source.bodySite!); }
+    if (source["category"]) { this.category = source.category.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
     this.code = null;
+    if (source["code"]) { this.code = new fhir.CodeableConcept(source.code!); }
+    if (this.code === undefined) { this.code = null }
+    if (source["component"]) { this.component = source.component.map((x:Partial<fhir.IObservationComponent>) => new fhir.ObservationComponent(x)); }
+    if (source["dataAbsentReason"]) { this.dataAbsentReason = new fhir.CodeableConcept(source.dataAbsentReason!); }
+    if (source["derivedFrom"]) { this.derivedFrom = source.derivedFrom.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["device"]) { this.device = new fhir.Reference(source.device!); }
+    if (source["effectiveDateTime"]) { this.effectiveDateTime = source.effectiveDateTime; }
+    if (source["_effectiveDateTime"]) { this._effectiveDateTime = new fhir.FhirElement(source._effectiveDateTime!); }
+    if (source["effectivePeriod"]) { this.effectivePeriod = new fhir.Period(source.effectivePeriod!); }
+    if (source["effectiveTiming"]) { this.effectiveTiming = new fhir.Timing(source.effectiveTiming!); }
+    if (source["effectiveInstant"]) { this.effectiveInstant = source.effectiveInstant; }
+    if (source["_effectiveInstant"]) { this._effectiveInstant = new fhir.FhirElement(source._effectiveInstant!); }
+    if (source["encounter"]) { this.encounter = new fhir.Reference(source.encounter!); }
+    if (source["focus"]) { this.focus = source.focus.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["hasMember"]) { this.hasMember = source.hasMember.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["identifier"]) { this.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => new fhir.Identifier(x)); }
+    if (source["interpretation"]) { this.interpretation = source.interpretation.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["issued"]) { this.issued = source.issued; }
+    if (source["_issued"]) { this._issued = new fhir.FhirElement(source._issued!); }
+    if (source["method"]) { this.method = new fhir.CodeableConcept(source.method!); }
+    if (source["note"]) { this.note = source.note.map((x:Partial<fhir.IAnnotation>) => new fhir.Annotation(x)); }
+    if (source["partOf"]) { this.partOf = source.partOf.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["performer"]) { this.performer = source.performer.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["referenceRange"]) { this.referenceRange = source.referenceRange.map((x:Partial<fhir.IObservationReferenceRange>) => new fhir.ObservationReferenceRange(x)); }
+    if (source["specimen"]) { this.specimen = new fhir.Reference(source.specimen!); }
     this.status = null;
-  }
-  /**
-   * Factory function to create a Observation from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IObservation>):Observation {
-    var dest:Partial<Observation> = super.FactoryCreate(source) as Partial<Observation>;
-    if ((source['resourceType'] !== "Observation") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Observation'; }
-    if (source["basedOn"] !== undefined) { dest.basedOn = source.basedOn.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["bodySite"] !== undefined) { dest.bodySite = fhir.CodeableConcept.FactoryCreate(source.bodySite!); }
-    if (source["category"] !== undefined) { dest.category = source.category.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["code"] !== undefined) { dest.code = fhir.CodeableConcept.FactoryCreate(source.code!); }
-    if (source["component"] !== undefined) { dest.component = source.component.map((x:Partial<fhir.IObservationComponent>) => fhir.ObservationComponent.FactoryCreate(x)); }
-    if (source["dataAbsentReason"] !== undefined) { dest.dataAbsentReason = fhir.CodeableConcept.FactoryCreate(source.dataAbsentReason!); }
-    if (source["derivedFrom"] !== undefined) { dest.derivedFrom = source.derivedFrom.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["device"] !== undefined) { dest.device = fhir.Reference.FactoryCreate(source.device!); }
-    if (source["effectiveDateTime"] !== undefined) { dest.effectiveDateTime = source.effectiveDateTime; }
-    if (source["_effectiveDateTime"] !== undefined) { dest._effectiveDateTime = fhir.FhirElement.FactoryCreate(source._effectiveDateTime!); }
-    if (source["effectivePeriod"] !== undefined) { dest.effectivePeriod = fhir.Period.FactoryCreate(source.effectivePeriod!); }
-    if (source["effectiveTiming"] !== undefined) { dest.effectiveTiming = fhir.Timing.FactoryCreate(source.effectiveTiming!); }
-    if (source["effectiveInstant"] !== undefined) { dest.effectiveInstant = source.effectiveInstant; }
-    if (source["_effectiveInstant"] !== undefined) { dest._effectiveInstant = fhir.FhirElement.FactoryCreate(source._effectiveInstant!); }
-    if (source["encounter"] !== undefined) { dest.encounter = fhir.Reference.FactoryCreate(source.encounter!); }
-    if (source["focus"] !== undefined) { dest.focus = source.focus.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["hasMember"] !== undefined) { dest.hasMember = source.hasMember.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["identifier"] !== undefined) { dest.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => fhir.Identifier.FactoryCreate(x)); }
-    if (source["interpretation"] !== undefined) { dest.interpretation = source.interpretation.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["issued"] !== undefined) { dest.issued = source.issued; }
-    if (source["_issued"] !== undefined) { dest._issued = fhir.FhirElement.FactoryCreate(source._issued!); }
-    if (source["method"] !== undefined) { dest.method = fhir.CodeableConcept.FactoryCreate(source.method!); }
-    if (source["note"] !== undefined) { dest.note = source.note.map((x:Partial<fhir.IAnnotation>) => fhir.Annotation.FactoryCreate(x)); }
-    if (source["partOf"] !== undefined) { dest.partOf = source.partOf.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["performer"] !== undefined) { dest.performer = source.performer.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["referenceRange"] !== undefined) { dest.referenceRange = source.referenceRange.map((x:Partial<fhir.IObservationReferenceRange>) => fhir.ObservationReferenceRange.FactoryCreate(x)); }
-    if (source["specimen"] !== undefined) { dest.specimen = fhir.Reference.FactoryCreate(source.specimen!); }
-    if (source["status"] !== undefined) { dest.status = source.status; }
-    if (source["_status"] !== undefined) { dest._status = fhir.FhirElement.FactoryCreate(source._status!); }
-    if (source["subject"] !== undefined) { dest.subject = fhir.Reference.FactoryCreate(source.subject!); }
-    if (source["valueQuantity"] !== undefined) { dest.valueQuantity = fhir.Quantity.FactoryCreate(source.valueQuantity!); }
-    if (source["valueCodeableConcept"] !== undefined) { dest.valueCodeableConcept = fhir.CodeableConcept.FactoryCreate(source.valueCodeableConcept!); }
-    if (source["valueString"] !== undefined) { dest.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { dest._valueString = fhir.FhirElement.FactoryCreate(source._valueString!); }
-    if (source["valueBoolean"] !== undefined) { dest.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { dest._valueBoolean = fhir.FhirElement.FactoryCreate(source._valueBoolean!); }
-    if (source["valueInteger"] !== undefined) { dest.valueInteger = source.valueInteger; }
-    if (source["_valueInteger"] !== undefined) { dest._valueInteger = fhir.FhirElement.FactoryCreate(source._valueInteger!); }
-    if (source["valueRange"] !== undefined) { dest.valueRange = fhir.Range.FactoryCreate(source.valueRange!); }
-    if (source["valueRatio"] !== undefined) { dest.valueRatio = fhir.Ratio.FactoryCreate(source.valueRatio!); }
-    if (source["valueSampledData"] !== undefined) { dest.valueSampledData = fhir.SampledData.FactoryCreate(source.valueSampledData!); }
-    if (source["valueTime"] !== undefined) { dest.valueTime = source.valueTime; }
-    if (source["_valueTime"] !== undefined) { dest._valueTime = fhir.FhirElement.FactoryCreate(source._valueTime!); }
-    if (source["valueDateTime"] !== undefined) { dest.valueDateTime = source.valueDateTime; }
-    if (source["_valueDateTime"] !== undefined) { dest._valueDateTime = fhir.FhirElement.FactoryCreate(source._valueDateTime!); }
-    if (source["valuePeriod"] !== undefined) { dest.valuePeriod = fhir.Period.FactoryCreate(source.valuePeriod!); }
-    return dest as Observation;
+    if (source["status"]) { this.status = source.status; }
+    if (this.status === undefined) { this.status = null }
+    if (source["_status"]) { this._status = new fhir.FhirElement(source._status!); }
+    if (source["subject"]) { this.subject = new fhir.Reference(source.subject!); }
+    if (source["valueQuantity"]) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
+    if (source["valueCodeableConcept"]) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
+    if (source["valueString"]) { this.valueString = source.valueString; }
+    if (source["_valueString"]) { this._valueString = new fhir.FhirElement(source._valueString!); }
+    if (source["valueBoolean"]) { this.valueBoolean = source.valueBoolean; }
+    if (source["_valueBoolean"]) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
+    if (source["valueInteger"]) { this.valueInteger = source.valueInteger; }
+    if (source["_valueInteger"]) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
+    if (source["valueRange"]) { this.valueRange = new fhir.Range(source.valueRange!); }
+    if (source["valueRatio"]) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
+    if (source["valueSampledData"]) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
+    if (source["valueTime"]) { this.valueTime = source.valueTime; }
+    if (source["_valueTime"]) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
+    if (source["valueDateTime"]) { this.valueDateTime = source.valueDateTime; }
+    if (source["_valueDateTime"]) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
+    if (source["valuePeriod"]) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
   }
   /**
    * Check if the current Observation contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["code"] === undefined) { missingElements.push("code"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Observation from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IObservation):Observation {
-    var dest:Observation = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Observation is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IObservation):Observation {
+    var dest:Observation = new Observation(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Observation is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

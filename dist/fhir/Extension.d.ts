@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * Optional Extension Element - found in all resources.
  */
-export interface IExtension extends fhir.IFhirElement {
+export declare type IExtension = fhir.IFhirElement & {
     /**
      * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
      */
@@ -110,7 +110,7 @@ export interface IExtension extends fhir.IFhirElement {
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAge?: any | undefined;
+    valueAge?: fhir.IAge | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -134,11 +134,11 @@ export interface IExtension extends fhir.IFhirElement {
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCount?: any | undefined;
+    valueCount?: fhir.ICount | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDistance?: any | undefined;
+    valueDistance?: fhir.IDistance | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -154,7 +154,7 @@ export interface IExtension extends fhir.IFhirElement {
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueMoney?: any | undefined;
+    valueMoney?: fhir.IMoney | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -182,7 +182,7 @@ export interface IExtension extends fhir.IFhirElement {
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueSignature?: any | undefined;
+    valueSignature?: fhir.ISignature | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -190,44 +190,44 @@ export interface IExtension extends fhir.IFhirElement {
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContactDetail?: any | undefined;
+    valueContactDetail?: fhir.IContactDetail | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContributor?: any | undefined;
+    valueContributor?: fhir.IContributor | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDataRequirement?: any | undefined;
+    valueDataRequirement?: fhir.IDataRequirement | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueExpression?: any | undefined;
+    valueExpression?: fhir.IExpression | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueParameterDefinition?: any | undefined;
+    valueParameterDefinition?: fhir.IParameterDefinition | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueRelatedArtifact?: any | undefined;
+    valueRelatedArtifact?: fhir.IRelatedArtifact | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueTriggerDefinition?: any | undefined;
+    valueTriggerDefinition?: fhir.ITriggerDefinition | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUsageContext?: any | undefined;
+    valueUsageContext?: fhir.IUsageContext | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDosage?: any | undefined;
+    valueDosage?: fhir.IDosage | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
     valueMeta?: fhir.IMeta | undefined;
-}
+};
 /**
  * Optional Extension Element - found in all resources.
  */
@@ -339,7 +339,7 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueAge?: any | undefined;
+    valueAge?: fhir.Age | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -363,11 +363,11 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueCount?: any | undefined;
+    valueCount?: fhir.Count | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDistance?: any | undefined;
+    valueDistance?: fhir.Distance | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -383,7 +383,7 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueMoney?: any | undefined;
+    valueMoney?: fhir.Money | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -411,7 +411,7 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueSignature?: any | undefined;
+    valueSignature?: fhir.Signature | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
@@ -419,58 +419,54 @@ export declare class Extension extends fhir.FhirElement implements fhir.IExtensi
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContactDetail?: any | undefined;
+    valueContactDetail?: fhir.ContactDetail | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueContributor?: any | undefined;
+    valueContributor?: fhir.Contributor | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDataRequirement?: any | undefined;
+    valueDataRequirement?: fhir.DataRequirement | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueExpression?: any | undefined;
+    valueExpression?: fhir.Expression | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueParameterDefinition?: any | undefined;
+    valueParameterDefinition?: fhir.ParameterDefinition | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueRelatedArtifact?: any | undefined;
+    valueRelatedArtifact?: fhir.RelatedArtifact | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueTriggerDefinition?: any | undefined;
+    valueTriggerDefinition?: fhir.TriggerDefinition | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueUsageContext?: any | undefined;
+    valueUsageContext?: fhir.UsageContext | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
-    valueDosage?: any | undefined;
+    valueDosage?: fhir.Dosage | undefined;
     /**
      * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
      */
     valueMeta?: fhir.Meta | undefined;
     /**
-     * Default constructor for Extension - initializes required elements to null.
+     * Default constructor for Extension - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Extension from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IExtension>): Extension;
+    constructor(source?: Partial<fhir.IExtension>);
     /**
      * Check if the current Extension contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Extension from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IExtension): Extension;
+    static FromStrict(source: fhir.IExtension): Extension;
 }
 //# sourceMappingURL=Extension.d.ts.map

@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
  */
-export interface IAddress extends fhir.IFhirElement {
+export type IAddress = fhir.IFhirElement & {
   /**
    * The name of the city, town, suburb, village or other community or delivery center.
    */
@@ -115,55 +114,46 @@ export class Address extends fhir.FhirElement implements fhir.IAddress {
   public use?: AddressUseEnum|undefined;
   public _use?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Address - initializes required elements to null.
+   * Default constructor for Address - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Address from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IAddress>):Address {
-    var dest:Partial<Address> = super.FactoryCreate(source) as Partial<Address>;
-    if (source["city"] !== undefined) { dest.city = source.city; }
-    if (source["_city"] !== undefined) { dest._city = fhir.FhirElement.FactoryCreate(source._city!); }
-    if (source["country"] !== undefined) { dest.country = source.country; }
-    if (source["_country"] !== undefined) { dest._country = fhir.FhirElement.FactoryCreate(source._country!); }
-    if (source["district"] !== undefined) { dest.district = source.district; }
-    if (source["_district"] !== undefined) { dest._district = fhir.FhirElement.FactoryCreate(source._district!); }
-    if (source["line"] !== undefined) { dest.line = source.line.map((x) => (x)); }
-    if (source["_line"] !== undefined) { dest._line = source._line.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["postalCode"] !== undefined) { dest.postalCode = source.postalCode; }
-    if (source["_postalCode"] !== undefined) { dest._postalCode = fhir.FhirElement.FactoryCreate(source._postalCode!); }
-    if (source["state"] !== undefined) { dest.state = source.state; }
-    if (source["_state"] !== undefined) { dest._state = fhir.FhirElement.FactoryCreate(source._state!); }
-    if (source["text"] !== undefined) { dest.text = source.text; }
-    if (source["_text"] !== undefined) { dest._text = fhir.FhirElement.FactoryCreate(source._text!); }
-    if (source["type"] !== undefined) { dest.type = source.type; }
-    if (source["_type"] !== undefined) { dest._type = fhir.FhirElement.FactoryCreate(source._type!); }
-    if (source["use"] !== undefined) { dest.use = source.use; }
-    if (source["_use"] !== undefined) { dest._use = fhir.FhirElement.FactoryCreate(source._use!); }
-    return dest as Address;
+  constructor(source:Partial<fhir.IAddress> = {}) {
+    super(source);
+    if (source["city"]) { this.city = source.city; }
+    if (source["_city"]) { this._city = new fhir.FhirElement(source._city!); }
+    if (source["country"]) { this.country = source.country; }
+    if (source["_country"]) { this._country = new fhir.FhirElement(source._country!); }
+    if (source["district"]) { this.district = source.district; }
+    if (source["_district"]) { this._district = new fhir.FhirElement(source._district!); }
+    if (source["line"]) { this.line = source.line.map((x) => (x)); }
+    if (source["_line"]) { this._line = source._line.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["postalCode"]) { this.postalCode = source.postalCode; }
+    if (source["_postalCode"]) { this._postalCode = new fhir.FhirElement(source._postalCode!); }
+    if (source["state"]) { this.state = source.state; }
+    if (source["_state"]) { this._state = new fhir.FhirElement(source._state!); }
+    if (source["text"]) { this.text = source.text; }
+    if (source["_text"]) { this._text = new fhir.FhirElement(source._text!); }
+    if (source["type"]) { this.type = source.type; }
+    if (source["_type"]) { this._type = new fhir.FhirElement(source._type!); }
+    if (source["use"]) { this.use = source.use; }
+    if (source["_use"]) { this._use = new fhir.FhirElement(source._use!); }
   }
   /**
    * Check if the current Address contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Address from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IAddress):Address {
-    var dest:Address = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Address is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IAddress):Address {
+    var dest:Address = new Address(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Address is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

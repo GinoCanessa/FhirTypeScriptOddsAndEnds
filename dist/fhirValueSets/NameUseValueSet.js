@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * The use of a human name.
  */
-export var NameUseValueSet = {
+export const NameUseValueSet = {
     /**
      * Anonymous assigned name, alias, or pseudonym (used to protect a person's identity for privacy reasons).
      */
-    name_use_Anonymous: Coding.FactoryCreateStrict({
+    name_use_Anonymous: Coding.FromStrict({
         code: "anonymous",
         display: "Anonymous",
         system: "http://hl7.org/fhir/name-use"
@@ -22,7 +21,7 @@ export var NameUseValueSet = {
     /**
      * A name used prior to changing name because of marriage. This name use is for use by applications that collect and store names that were used prior to a marriage. Marriage naming customs vary greatly around the world, and are constantly changing. This term is not gender specific. The use of this term does not imply any particular history for a person's name.
      */
-    name_use_NameChangedForMarriage: Coding.FactoryCreateStrict({
+    name_use_NameChangedForMarriage: Coding.FromStrict({
         code: "maiden",
         display: "Name changed for Marriage",
         system: "http://hl7.org/fhir/name-use"
@@ -30,7 +29,7 @@ export var NameUseValueSet = {
     /**
      * A name that is used to address the person in an informal manner, but is not part of their formal or usual name.
      */
-    name_use_Nickname: Coding.FactoryCreateStrict({
+    name_use_Nickname: Coding.FromStrict({
         code: "nickname",
         display: "Nickname",
         system: "http://hl7.org/fhir/name-use"
@@ -38,7 +37,7 @@ export var NameUseValueSet = {
     /**
      * The formal name as registered in an official (government) registry, but which name might not be commonly used. May be called "legal name".
      */
-    name_use_Official: Coding.FactoryCreateStrict({
+    name_use_Official: Coding.FromStrict({
         code: "official",
         display: "Official",
         system: "http://hl7.org/fhir/name-use"
@@ -46,7 +45,7 @@ export var NameUseValueSet = {
     /**
      * This name is no longer in use (or was never correct, but retained for records).
      */
-    name_use_Old: Coding.FactoryCreateStrict({
+    name_use_Old: Coding.FromStrict({
         code: "old",
         display: "Old",
         system: "http://hl7.org/fhir/name-use"
@@ -54,7 +53,7 @@ export var NameUseValueSet = {
     /**
      * A temporary name. Name.period can provide more detailed information. This may also be used for temporary names assigned at birth or in emergency situations.
      */
-    name_use_Temp: Coding.FactoryCreateStrict({
+    name_use_Temp: Coding.FromStrict({
         code: "temp",
         display: "Temp",
         system: "http://hl7.org/fhir/name-use"
@@ -62,7 +61,7 @@ export var NameUseValueSet = {
     /**
      * Known as/conventional/the one you normally use.
      */
-    name_use_Usual: Coding.FactoryCreateStrict({
+    name_use_Usual: Coding.FromStrict({
         code: "usual",
         display: "Usual",
         system: "http://hl7.org/fhir/name-use"

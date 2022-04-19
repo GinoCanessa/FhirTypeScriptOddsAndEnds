@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const AdministrativeGenderValueSet = {
   /**
    * Female.
    */
-  administrative_gender_Female: Coding.FactoryCreateStrict({
+  administrative_gender_Female: Coding.FromStrict({
     code: "female",
     display: "Female",
     system: "http://hl7.org/fhir/administrative-gender"
@@ -22,7 +21,7 @@ export const AdministrativeGenderValueSet = {
   /**
    * Male.
    */
-  administrative_gender_Male: Coding.FactoryCreateStrict({
+  administrative_gender_Male: Coding.FromStrict({
     code: "male",
     display: "Male",
     system: "http://hl7.org/fhir/administrative-gender"
@@ -30,7 +29,7 @@ export const AdministrativeGenderValueSet = {
   /**
    * Other.
    */
-  administrative_gender_Other: Coding.FactoryCreateStrict({
+  administrative_gender_Other: Coding.FromStrict({
     code: "other",
     display: "Other",
     system: "http://hl7.org/fhir/administrative-gender"
@@ -38,7 +37,7 @@ export const AdministrativeGenderValueSet = {
   /**
    * Unknown.
    */
-  administrative_gender_Unknown: Coding.FactoryCreateStrict({
+  administrative_gender_Unknown: Coding.FromStrict({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/administrative-gender"

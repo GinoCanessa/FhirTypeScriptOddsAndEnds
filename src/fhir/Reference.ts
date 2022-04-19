@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A reference from one resource to another.
  */
-export interface IReference extends fhir.IFhirElement {
+export type IReference = fhir.IFhirElement & {
   /**
    * This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.
    */
@@ -61,43 +60,51 @@ export class Reference extends fhir.FhirElement implements fhir.IReference {
   public type?: string|undefined;
   public _type?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Reference - initializes required elements to null.
+   * Default constructor for Reference - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Reference from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IReference>):Reference {
-    var dest:Partial<Reference> = super.FactoryCreate(source) as Partial<Reference>;
-    if (source["display"] !== undefined) { dest.display = source.display; }
-    if (source["_display"] !== undefined) { dest._display = fhir.FhirElement.FactoryCreate(source._display!); }
-    if (source["identifier"] !== undefined) { dest.identifier = fhir.Identifier.FactoryCreate(source.identifier!); }
-    if (source["reference"] !== undefined) { dest.reference = source.reference; }
-    if (source["_reference"] !== undefined) { dest._reference = fhir.FhirElement.FactoryCreate(source._reference!); }
-    if (source["type"] !== undefined) { dest.type = source.type; }
-    if (source["_type"] !== undefined) { dest._type = fhir.FhirElement.FactoryCreate(source._type!); }
-    return dest as Reference;
+  constructor(source:Partial<fhir.IReference> = {}) {
+    super(source);
+    if (source["display"]) { this.display = source.display; }
+    if (source["_display"]) { this._display = new fhir.FhirElement(source._display!); }
+    if (source["identifier"]) { this.identifier = new fhir.Identifier(source.identifier!); }
+    if (source["reference"]) { this.reference = source.reference; }
+    if (source["_reference"]) { this._reference = new fhir.FhirElement(source._reference!); }
+    if (source["type"]) { this.type = source.type; }
+    if (source["_type"]) { this._type = new fhir.FhirElement(source._type!); }
   }
   /**
    * Check if the current Reference contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Reference from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IReference):Reference {
-    var dest:Reference = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Reference is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IReference):Reference {
+    var dest:Reference = new Reference(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Reference is missing elements: ${missingElements.join(", ")}` }
     return dest;
+  }
+
+  /**
+   * Create a reference from an existing resource
+   */
+   static FromResource(source:fhir.IResource, baseUrl:string=''):Reference {
+    if (baseUrl.endsWith('/')) {
+      return new Reference({
+        type: source.resourceType,
+        reference: baseUrl + source.resourceType + '/' + source.id,
+      });
+    }
+
+    return new Reference({
+      type: source.resourceType,
+      reference: ((baseUrl.length > 0) ? (baseUrl + '/') : '') + source.resourceType + '/' + source.id,
+    });
   }
 }

@@ -1,0 +1,65 @@
+import { Coding } from '../fhir';
+/**
+ * This value set includes some method codes from SNOMED CT - provided as an exemplar
+ */
+export declare const AdministrationMethodCodesValueSet: {
+    AdministrationMethodCodesValueSet_Apply: Coding;
+    AdministrationMethodCodesValueSet_Administer: Coding;
+    AdministrationMethodCodesValueSet_Use: Coding;
+    AdministrationMethodCodesValueSet_Give: Coding;
+    AdministrationMethodCodesValueSet_Take: Coding;
+    AdministrationMethodCodesValueSet_Chew: Coding;
+    AdministrationMethodCodesValueSet_Suck: Coding;
+    AdministrationMethodCodesValueSet_At: Coding;
+    AdministrationMethodCodesValueSet_DosingInstructionImperative: Coding;
+    AdministrationMethodCodesValueSet_Only: Coding;
+    AdministrationMethodCodesValueSet_Constant: Coding;
+    AdministrationMethodCodesValueSet_Sniff: Coding;
+    AdministrationMethodCodesValueSet_SubtractDosingInstructionFragment: Coding;
+    AdministrationMethodCodesValueSet_As: Coding;
+    AdministrationMethodCodesValueSet_Or: Coding;
+    AdministrationMethodCodesValueSet_Finish: Coding;
+    AdministrationMethodCodesValueSet_Shampoo: Coding;
+    AdministrationMethodCodesValueSet_Push: Coding;
+    AdministrationMethodCodesValueSet_UntilGone: Coding;
+    AdministrationMethodCodesValueSet_Upon: Coding;
+    AdministrationMethodCodesValueSet_Per: Coding;
+    AdministrationMethodCodesValueSet_Sparingly: Coding;
+    AdministrationMethodCodesValueSet_Call: Coding;
+    AdministrationMethodCodesValueSet_When: Coding;
+    AdministrationMethodCodesValueSet_To: Coding;
+    AdministrationMethodCodesValueSet_Place: Coding;
+    AdministrationMethodCodesValueSet_Then: Coding;
+    AdministrationMethodCodesValueSet_Inhale: Coding;
+    AdministrationMethodCodesValueSet_Hold: Coding;
+    AdministrationMethodCodesValueSet_Multiply: Coding;
+    AdministrationMethodCodesValueSet_Insert: Coding;
+    AdministrationMethodCodesValueSet_Discontinue: Coding;
+    AdministrationMethodCodesValueSet_SwishAndSwallow: Coding;
+    AdministrationMethodCodesValueSet_Dilute: Coding;
+    AdministrationMethodCodesValueSet_With: Coding;
+    AdministrationMethodCodesValueSet_ThenDiscontinue: Coding;
+    AdministrationMethodCodesValueSet_Swallow: Coding;
+    AdministrationMethodCodesValueSet_Instill: Coding;
+    AdministrationMethodCodesValueSet_Until: Coding;
+    AdministrationMethodCodesValueSet_Every: Coding;
+    AdministrationMethodCodesValueSet_Dissolve: Coding;
+    AdministrationMethodCodesValueSet_Before: Coding;
+    AdministrationMethodCodesValueSet_Now: Coding;
+    AdministrationMethodCodesValueSet_FollowDirections: Coding;
+    AdministrationMethodCodesValueSet_If: Coding;
+    AdministrationMethodCodesValueSet_Swish: Coding;
+    AdministrationMethodCodesValueSet_And: Coding;
+    AdministrationMethodCodesValueSet_Twice: Coding;
+    AdministrationMethodCodesValueSet_Follow: Coding;
+    AdministrationMethodCodesValueSet_UntilFinished: Coding;
+    AdministrationMethodCodesValueSet_During: Coding;
+    AdministrationMethodCodesValueSet_Divide: Coding;
+    AdministrationMethodCodesValueSet_Add: Coding;
+    AdministrationMethodCodesValueSet_Once: Coding;
+    AdministrationMethodCodesValueSet_Inject: Coding;
+    AdministrationMethodCodesValueSet_Wash: Coding;
+    AdministrationMethodCodesValueSet_Sprinkle: Coding;
+    AdministrationMethodCodesValueSet_ThenStop: Coding;
+};
+//# sourceMappingURL=AdministrationMethodCodesValueSet.d.ts.map

@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
  */
-export interface IObservationReferenceRange extends fhir.IBackboneElement {
+export declare type IObservationReferenceRange = fhir.IBackboneElement & {
     /**
      * The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.
      */
@@ -28,11 +28,11 @@ export interface IObservationReferenceRange extends fhir.IBackboneElement {
      * This SHOULD be populated if there is more than one range.  If this element is not present then the normal range is assumed.
      */
     type?: fhir.ICodeableConcept | undefined;
-}
+};
 /**
  * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
  */
-export interface IObservationComponent extends fhir.IBackboneElement {
+export declare type IObservationComponent = fhir.IBackboneElement & {
     /**
      * *All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.
      */
@@ -99,15 +99,15 @@ export interface IObservationComponent extends fhir.IBackboneElement {
      * Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
      */
     valuePeriod?: fhir.IPeriod | undefined;
-}
+};
 /**
  * Measurements and simple assertions made about a patient, device or other subject.
  */
-export interface IObservation extends fhir.IDomainResource {
+export declare type IObservation = fhir.IDomainResource & {
     /**
      * Resource Type Name
      */
-    readonly resourceType: "Observation";
+    resourceType: "Observation";
     /**
      * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
      */
@@ -267,7 +267,7 @@ export interface IObservation extends fhir.IDomainResource {
      * An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.
      */
     valuePeriod?: fhir.IPeriod | undefined;
-}
+};
 /**
  * Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.
  */
@@ -298,21 +298,17 @@ export declare class ObservationReferenceRange extends fhir.BackboneElement impl
      */
     type?: fhir.CodeableConcept | undefined;
     /**
-     * Default constructor for ObservationReferenceRange - initializes required elements to null.
+     * Default constructor for ObservationReferenceRange - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a ObservationReferenceRange from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IObservationReferenceRange>): ObservationReferenceRange;
+    constructor(source?: Partial<fhir.IObservationReferenceRange>);
     /**
      * Check if the current ObservationReferenceRange contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a ObservationReferenceRange from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IObservationReferenceRange): ObservationReferenceRange;
+    static FromStrict(source: fhir.IObservationReferenceRange): ObservationReferenceRange;
 }
 /**
  * For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.
@@ -385,21 +381,17 @@ export declare class ObservationComponent extends fhir.BackboneElement implement
      */
     valuePeriod?: fhir.Period | undefined;
     /**
-     * Default constructor for ObservationComponent - initializes required elements to null.
+     * Default constructor for ObservationComponent - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a ObservationComponent from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IObservationComponent>): ObservationComponent;
+    constructor(source?: Partial<fhir.IObservationComponent>);
     /**
      * Check if the current ObservationComponent contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a ObservationComponent from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IObservationComponent): ObservationComponent;
+    static FromStrict(source: fhir.IObservationComponent): ObservationComponent;
 }
 /**
  * Measurements and simple assertions made about a patient, device or other subject.
@@ -408,7 +400,7 @@ export declare class Observation extends fhir.DomainResource implements fhir.IOb
     /**
      * Resource Type Name
      */
-    readonly resourceType = "Observation";
+    resourceType: "Observation";
     /**
      * A plan, proposal or order that is fulfilled in whole or in part by this event.  For example, a MedicationRequest may require a patient to have laboratory test performed before  it is dispensed.
      */
@@ -569,21 +561,17 @@ export declare class Observation extends fhir.DomainResource implements fhir.IOb
      */
     valuePeriod?: fhir.Period | undefined;
     /**
-     * Default constructor for Observation - initializes required elements to null.
+     * Default constructor for Observation - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Observation from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IObservation>): Observation;
+    constructor(source?: Partial<fhir.IObservation>);
     /**
      * Check if the current Observation contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Observation from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IObservation): Observation;
+    static FromStrict(source: fhir.IObservation): Observation;
 }
 /**
  * Code Values for the Observation.status field

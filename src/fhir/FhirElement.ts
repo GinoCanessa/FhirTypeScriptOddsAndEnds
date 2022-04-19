@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Base definition for all elements in a resource.
  */
-export interface IFhirElement {
+export type IFhirElement = {
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
@@ -35,36 +34,27 @@ export class FhirElement implements fhir.IFhirElement {
   public id?: string|undefined;
   public _id?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for FhirElement - initializes required elements to null.
+   * Default constructor for FhirElement - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-  }
-  /**
-   * Factory function to create a FhirElement from an object that MAY NOT contain all required elements.
-   */
-  static FactoryCreate(source:Partial<fhir.IFhirElement>):FhirElement {
-    var dest:FhirElement = new FhirElement();
-    if (source["extension"] !== undefined) { dest.extension = source.extension.map((x:Partial<fhir.IExtension>) => fhir.Extension.FactoryCreate(x)); }
-    if (source["id"] !== undefined) { dest.id = source.id; }
-    if (source["_id"] !== undefined) { dest._id = fhir.FhirElement.FactoryCreate(source._id!); }
-    return dest;
+  constructor(source:Partial<fhir.IFhirElement> = {}) {
+    if (source["extension"]) { this.extension = source.extension.map((x:Partial<fhir.IExtension>) => new fhir.Extension(x)); }
+    if (source["id"]) { this.id = source.id; }
+    if (source["_id"]) { this._id = new fhir.FhirElement(source._id!); }
   }
   /**
    * Check if the current FhirElement contains all required elements.
    */
-  checkRequiredElements():string[] {
+  CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     return missingElements;
   }
   /**
    * Factory function to create a FhirElement from an object that MUST contain all required elements.
    */
-  static FactoryCreateStrict(source:fhir.IFhirElement):FhirElement {
-    var dest:FhirElement = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `FhirElement is missing elements: ${missingElements.join(", ")}`
-     }
+  static FromStrict(source:fhir.IFhirElement):FhirElement {
+    var dest:FhirElement = new FhirElement(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `FhirElement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

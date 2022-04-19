@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A set of ordered Quantities defined by a low and high limit.
  */
-export interface IRange extends fhir.IFhirElement {
+export type IRange = fhir.IFhirElement & {
   /**
    * If the high element is missing, the high boundary is not known.
    */
@@ -33,38 +32,29 @@ export class Range extends fhir.FhirElement implements fhir.IRange {
    */
   public low?: fhir.Quantity|undefined;
   /**
-   * Default constructor for Range - initializes required elements to null.
+   * Default constructor for Range - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Range from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IRange>):Range {
-    var dest:Partial<Range> = super.FactoryCreate(source) as Partial<Range>;
-    if (source["high"] !== undefined) { dest.high = fhir.Quantity.FactoryCreate(source.high!); }
-    if (source["low"] !== undefined) { dest.low = fhir.Quantity.FactoryCreate(source.low!); }
-    return dest as Range;
+  constructor(source:Partial<fhir.IRange> = {}) {
+    super(source);
+    if (source["high"]) { this.high = new fhir.Quantity(source.high!); }
+    if (source["low"]) { this.low = new fhir.Quantity(source.low!); }
   }
   /**
    * Check if the current Range contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Range from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IRange):Range {
-    var dest:Range = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Range is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IRange):Range {
+    var dest:Range = new Range(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Range is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

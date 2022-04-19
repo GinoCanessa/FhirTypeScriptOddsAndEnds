@@ -4,53 +4,43 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir';
 /**
  * Base definition for all elements in a resource.
  */
-var FhirElement = /** @class */ (function () {
+export class FhirElement {
     /**
-     * Default constructor for FhirElement - initializes required elements to null.
+     * Default constructor for FhirElement - initializes any required elements to null if a value is not provided.
      */
-    function FhirElement() {
+    constructor(source = {}) {
+        if (source["extension"]) {
+            this.extension = source.extension.map((x) => new fhir.Extension(x));
+        }
+        if (source["id"]) {
+            this.id = source.id;
+        }
+        if (source["_id"]) {
+            this._id = new fhir.FhirElement(source._id);
+        }
     }
-    /**
-     * Factory function to create a FhirElement from an object that MAY NOT contain all required elements.
-     */
-    FhirElement.FactoryCreate = function (source) {
-        var dest = new FhirElement();
-        if (source["extension"] !== undefined) {
-            dest.extension = source.extension.map(function (x) { return fhir.Extension.FactoryCreate(x); });
-        }
-        if (source["id"] !== undefined) {
-            dest.id = source.id;
-        }
-        if (source["_id"] !== undefined) {
-            dest._id = fhir.FhirElement.FactoryCreate(source._id);
-        }
-        return dest;
-    };
     /**
      * Check if the current FhirElement contains all required elements.
      */
-    FhirElement.prototype.checkRequiredElements = function () {
+    CheckRequiredElements() {
         var missingElements = [];
         return missingElements;
-    };
+    }
     /**
      * Factory function to create a FhirElement from an object that MUST contain all required elements.
      */
-    FhirElement.FactoryCreateStrict = function (source) {
-        var dest = this.FactoryCreate(source);
-        var missingElements = dest.checkRequiredElements();
+    static FromStrict(source) {
+        var dest = new FhirElement(source);
+        var missingElements = dest.CheckRequiredElements();
         if (missingElements.length !== 0) {
-            throw "FhirElement is missing elements: ".concat(missingElements.join(", "));
+            throw `FhirElement is missing elements: ${missingElements.join(", ")}`;
         }
         return dest;
-    };
-    return FhirElement;
-}());
-export { FhirElement };
+    }
+}
 //# sourceMappingURL=FhirElement.js.map

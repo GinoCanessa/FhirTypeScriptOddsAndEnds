@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A human's name with the ability to identify parts and usage.
  */
-export interface IHumanName extends fhir.IFhirElement {
+export type IHumanName = fhir.IFhirElement & {
   /**
    * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
    */
@@ -85,51 +84,92 @@ export class HumanName extends fhir.FhirElement implements fhir.IHumanName {
   public use?: HumanNameUseEnum|undefined;
   public _use?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for HumanName - initializes required elements to null.
+   * Default constructor for HumanName - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a HumanName from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IHumanName>):HumanName {
-    var dest:Partial<HumanName> = super.FactoryCreate(source) as Partial<HumanName>;
-    if (source["family"] !== undefined) { dest.family = source.family; }
-    if (source["_family"] !== undefined) { dest._family = fhir.FhirElement.FactoryCreate(source._family!); }
-    if (source["given"] !== undefined) { dest.given = source.given.map((x) => (x)); }
-    if (source["_given"] !== undefined) { dest._given = source._given.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["prefix"] !== undefined) { dest.prefix = source.prefix.map((x) => (x)); }
-    if (source["_prefix"] !== undefined) { dest._prefix = source._prefix.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["suffix"] !== undefined) { dest.suffix = source.suffix.map((x) => (x)); }
-    if (source["_suffix"] !== undefined) { dest._suffix = source._suffix.map((x:Partial<fhir.IFhirElement>) => fhir.FhirElement.FactoryCreate(x)); }
-    if (source["text"] !== undefined) { dest.text = source.text; }
-    if (source["_text"] !== undefined) { dest._text = fhir.FhirElement.FactoryCreate(source._text!); }
-    if (source["use"] !== undefined) { dest.use = source.use; }
-    if (source["_use"] !== undefined) { dest._use = fhir.FhirElement.FactoryCreate(source._use!); }
-    return dest as HumanName;
+  constructor(source:Partial<fhir.IHumanName> = {}) {
+    super(source);
+    if (source["family"]) { this.family = source.family; }
+    if (source["_family"]) { this._family = new fhir.FhirElement(source._family!); }
+    if (source["given"]) { this.given = source.given.map((x) => (x)); }
+    if (source["_given"]) { this._given = source._given.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["prefix"]) { this.prefix = source.prefix.map((x) => (x)); }
+    if (source["_prefix"]) { this._prefix = source._prefix.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["suffix"]) { this.suffix = source.suffix.map((x) => (x)); }
+    if (source["_suffix"]) { this._suffix = source._suffix.map((x:Partial<fhir.IFhirElement>) => new fhir.FhirElement(x)); }
+    if (source["text"]) { this.text = source.text; }
+    if (source["_text"]) { this._text = new fhir.FhirElement(source._text!); }
+    if (source["use"]) { this.use = source.use; }
+    if (source["_use"]) { this._use = new fhir.FhirElement(source._use!); }
   }
   /**
    * Check if the current HumanName contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a HumanName from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IHumanName):HumanName {
-    var dest:HumanName = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `HumanName is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IHumanName):HumanName {
+    var dest:HumanName = new HumanName(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `HumanName is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
+
+/**
+ * Convert a HumanName into a displayable string
+ */
+ToDisplay(familyFirst:boolean = true, includeAnnotations:boolean = false):string {
+  if ((this.text) && (this.text.length > 0)) {
+    return this.text;
+  }
+
+  var val:string = '';
+
+  if (familyFirst) {
+    if (this.family) {
+      val = this.family;
+    }
+
+    if (this.given) {
+      val += (val.length > 0 ? ', ' : '') + this.given.join(' ');
+    }
+
+    if (includeAnnotations) {
+      if (this.suffix) {
+        val += (val.length > 0 ? ', ' : '') + this.suffix.join(', ');
+      }
+
+      if (this.prefix) {
+        val += (val.length > 0 ? ', ' : '') + this.prefix.join(', ');
+      }
+    }
+
+    return val;
+  }
+
+  if ((includeAnnotations) && (this.prefix)) {
+    val += this.prefix.join(', ');
+  }
+
+  if (this.given) {
+    val = (val.length > 0 ? ' ' : '') + this.given.join(' ');
+  }
+  if (this.family) {
+    val += (val.length > 0 ? ' ' : '') + this.family;
+  }
+
+  if ((includeAnnotations) && (this.suffix)) {
+    val += (val.length > 0 ? ', ' : '') + this.suffix.join(', ');
+  }
+
+  return val;
+}
 }
 /**
  * Code Values for the HumanName.use field

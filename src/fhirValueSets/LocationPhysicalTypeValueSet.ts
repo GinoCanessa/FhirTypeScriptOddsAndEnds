@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A defined physical boundary of something, such as a flood risk zone, region, postcode
    */
-  location_physical_type_Area: Coding.FactoryCreateStrict({
+  location_physical_type_Area: Coding.FromStrict({
     code: "area",
     display: "Area",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -22,7 +21,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A space that is allocated for sleeping/laying on. This is not the physical bed/trolley that may be moved about, but the space it may occupy.
    */
-  location_physical_type_Bed: Coding.FactoryCreateStrict({
+  location_physical_type_Bed: Coding.FromStrict({
     code: "bd",
     display: "Bed",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -30,7 +29,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * Any Building or structure. This may contain rooms, corridors, wings, etc. It might not have walls, or a roof, but is considered a defined/allocated space.
    */
-  location_physical_type_Building: Coding.FactoryCreateStrict({
+  location_physical_type_Building: Coding.FromStrict({
     code: "bu",
     display: "Building",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -38,7 +37,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A container that can store goods, equipment, medications or other items.
    */
-  location_physical_type_Cabinet: Coding.FactoryCreateStrict({
+  location_physical_type_Cabinet: Coding.FromStrict({
     code: "ca",
     display: "Cabinet",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -46,7 +45,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * Any corridor within a Building, that may connect rooms.
    */
-  location_physical_type_Corridor: Coding.FactoryCreateStrict({
+  location_physical_type_Corridor: Coding.FromStrict({
     code: "co",
     display: "Corridor",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -54,7 +53,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A residential dwelling. Usually used to reference a location that a person/patient may reside.
    */
-  location_physical_type_House: Coding.FactoryCreateStrict({
+  location_physical_type_House: Coding.FromStrict({
     code: "ho",
     display: "House",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -62,7 +61,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A wide scope that covers a conceptual domain, such as a Nation (Country wide community or Federal Government - e.g. Ministry of Health),  Province or State (community or Government), Business (throughout the enterprise), Nation with a business scope of an agency (e.g. CDC, FDA etc.) or a Business segment (UK Pharmacy), not just an physical boundary
    */
-  location_physical_type_Jurisdiction: Coding.FactoryCreateStrict({
+  location_physical_type_Jurisdiction: Coding.FromStrict({
     code: "jdn",
     display: "Jurisdiction",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -70,7 +69,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Level in a multi-level Building/Structure.
    */
-  location_physical_type_Level: Coding.FactoryCreateStrict({
+  location_physical_type_Level: Coding.FromStrict({
     code: "lvl",
     display: "Level",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -78,7 +77,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A defined path to travel between 2 points that has a known name.
    */
-  location_physical_type_Road: Coding.FactoryCreateStrict({
+  location_physical_type_Road: Coding.FromStrict({
     code: "rd",
     display: "Road",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -86,7 +85,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A space that is allocated as a room, it may have walls/roof etc., but does not require these.
    */
-  location_physical_type_Room: Coding.FactoryCreateStrict({
+  location_physical_type_Room: Coding.FromStrict({
     code: "ro",
     display: "Room",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -94,7 +93,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A collection of buildings or other locations such as a site or a campus.
    */
-  location_physical_type_Site: Coding.FactoryCreateStrict({
+  location_physical_type_Site: Coding.FromStrict({
     code: "si",
     display: "Site",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -102,7 +101,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A means of transportation.
    */
-  location_physical_type_Vehicle: Coding.FactoryCreateStrict({
+  location_physical_type_Vehicle: Coding.FromStrict({
     code: "ve",
     display: "Vehicle",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -110,7 +109,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Ward is a section of a medical facility that may contain rooms and other types of location.
    */
-  location_physical_type_Ward: Coding.FactoryCreateStrict({
+  location_physical_type_Ward: Coding.FromStrict({
     code: "wa",
     display: "Ward",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"
@@ -118,7 +117,7 @@ export const LocationPhysicalTypeValueSet = {
   /**
    * A Wing within a Building, this often contains levels, rooms and corridors.
    */
-  location_physical_type_Wing: Coding.FactoryCreateStrict({
+  location_physical_type_Wing: Coding.FromStrict({
     code: "wi",
     display: "Wing",
     system: "http://terminology.hl7.org/CodeSystem/location-physical-type"

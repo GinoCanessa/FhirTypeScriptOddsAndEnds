@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
  */
-export interface IMeta extends fhir.IFhirElement {
+export declare type IMeta = fhir.IFhirElement & {
     /**
      * This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http.html#read) interaction.
      */
@@ -32,7 +32,7 @@ export interface IMeta extends fhir.IFhirElement {
      */
     versionId?: string | undefined;
     _versionId?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * The metadata about a resource. This is content in the resource that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
  */
@@ -67,20 +67,16 @@ export declare class Meta extends fhir.FhirElement implements fhir.IMeta {
     versionId?: string | undefined;
     _versionId?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Meta - initializes required elements to null.
+     * Default constructor for Meta - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Meta from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IMeta>): Meta;
+    constructor(source?: Partial<fhir.IMeta>);
     /**
      * Check if the current Meta contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Meta from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IMeta): Meta;
+    static FromStrict(source: fhir.IMeta): Meta;
 }
 //# sourceMappingURL=Meta.d.ts.map

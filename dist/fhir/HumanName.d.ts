@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A human's name with the ability to identify parts and usage.
  */
-export interface IHumanName extends fhir.IFhirElement {
+export declare type IHumanName = fhir.IFhirElement & {
     /**
      * Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).
      */
@@ -37,7 +37,7 @@ export interface IHumanName extends fhir.IFhirElement {
      */
     use?: HumanNameUseEnum | undefined;
     _use?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A human's name with the ability to identify parts and usage.
  */
@@ -77,21 +77,21 @@ export declare class HumanName extends fhir.FhirElement implements fhir.IHumanNa
     use?: HumanNameUseEnum | undefined;
     _use?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for HumanName - initializes required elements to null.
+     * Default constructor for HumanName - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a HumanName from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IHumanName>): HumanName;
+    constructor(source?: Partial<fhir.IHumanName>);
     /**
      * Check if the current HumanName contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a HumanName from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IHumanName): HumanName;
+    static FromStrict(source: fhir.IHumanName): HumanName;
+    /**
+     * Convert a HumanName into a displayable string
+     */
+    ToDisplay(familyFirst?: boolean, includeAnnotations?: boolean): string;
 }
 /**
  * Code Values for the HumanName.use field

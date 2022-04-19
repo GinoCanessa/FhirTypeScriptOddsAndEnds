@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A reference from one resource to another.
  */
-export interface IReference extends fhir.IFhirElement {
+export declare type IReference = fhir.IFhirElement & {
     /**
      * This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.
      */
@@ -25,7 +25,7 @@ export interface IReference extends fhir.IFhirElement {
      */
     type?: string | undefined;
     _type?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A reference from one resource to another.
  */
@@ -53,20 +53,20 @@ export declare class Reference extends fhir.FhirElement implements fhir.IReferen
     type?: string | undefined;
     _type?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Reference - initializes required elements to null.
+     * Default constructor for Reference - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Reference from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IReference>): Reference;
+    constructor(source?: Partial<fhir.IReference>);
     /**
      * Check if the current Reference contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Reference from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IReference): Reference;
+    static FromStrict(source: fhir.IReference): Reference;
+    /**
+     * Create a reference from an existing resource
+     */
+    static FromResource(source: fhir.IResource, baseUrl?: string): Reference;
 }
 //# sourceMappingURL=Reference.d.ts.map

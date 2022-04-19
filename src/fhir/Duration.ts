@@ -4,49 +4,39 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A length of time.
  */
-export interface IDuration extends fhir.IQuantity {
+export type IDuration = fhir.IQuantity & {
 }
 /**
  * A length of time.
  */
 export class Duration extends fhir.Quantity implements fhir.IDuration {
   /**
-   * Default constructor for Duration - initializes required elements to null.
+   * Default constructor for Duration - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Duration from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IDuration>):Duration {
-    var dest:Partial<Duration> = super.FactoryCreate(source) as Partial<Duration>;
-    return dest as Duration;
+  constructor(source:Partial<fhir.IDuration> = {}) {
+    super(source);
   }
   /**
    * Check if the current Duration contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Duration from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IDuration):Duration {
-    var dest:Duration = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Duration is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IDuration):Duration {
+    var dest:Duration = new Duration(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Duration is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

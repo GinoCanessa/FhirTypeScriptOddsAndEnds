@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to indicate special courtesies provided to the patient.
  */
-export var EncounterSpecialCourtesyValueSet = {
+export const EncounterSpecialCourtesyValueSet = {
     /**
      * extended courtesy
      */
-    v3_EncounterSpecialCourtesy_ExtendedCourtesy: Coding.FactoryCreateStrict({
+    v3_EncounterSpecialCourtesy_ExtendedCourtesy: Coding.FromStrict({
         code: "EXT",
         display: "extended courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -22,7 +21,7 @@ export var EncounterSpecialCourtesyValueSet = {
     /**
      * normal courtesy
      */
-    v3_EncounterSpecialCourtesy_NormalCourtesy: Coding.FactoryCreateStrict({
+    v3_EncounterSpecialCourtesy_NormalCourtesy: Coding.FromStrict({
         code: "NRM",
         display: "normal courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -30,7 +29,7 @@ export var EncounterSpecialCourtesyValueSet = {
     /**
      * professional courtesy
      */
-    v3_EncounterSpecialCourtesy_ProfessionalCourtesy: Coding.FactoryCreateStrict({
+    v3_EncounterSpecialCourtesy_ProfessionalCourtesy: Coding.FromStrict({
         code: "PRF",
         display: "professional courtesy",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -38,7 +37,7 @@ export var EncounterSpecialCourtesyValueSet = {
     /**
      * Courtesies extended to the staff of the entity providing service.
      */
-    v3_EncounterSpecialCourtesy_Staff: Coding.FactoryCreateStrict({
+    v3_EncounterSpecialCourtesy_Staff: Coding.FromStrict({
         code: "STF",
         display: "staff",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"
@@ -53,7 +52,7 @@ export var EncounterSpecialCourtesyValueSet = {
      *                            Those properties themselves directly translate to a semantic of "unknown".  (E.g. a local code sent as a translation that conveys 'unknown')
      *                            Those properties further qualify the nature of what is unknown.  (E.g. specifying a use code of "H" and a URL prefix of "tel:" to convey that it is the home phone number that is unknown.)
      */
-    v3_NullFlavor_Unknown: Coding.FactoryCreateStrict({
+    v3_NullFlavor_Unknown: Coding.FromStrict({
         code: "UNK",
         display: "unknown",
         system: "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
@@ -61,7 +60,7 @@ export var EncounterSpecialCourtesyValueSet = {
     /**
      * very important person
      */
-    v3_EncounterSpecialCourtesy_VeryImportantPerson: Coding.FactoryCreateStrict({
+    v3_EncounterSpecialCourtesy_VeryImportantPerson: Coding.FromStrict({
         code: "VIP",
         display: "very important person",
         system: "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"

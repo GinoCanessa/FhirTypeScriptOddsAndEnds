@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
-export interface IAnnotation extends fhir.IFhirElement {
+export declare type IAnnotation = fhir.IFhirElement & {
     /**
      * Organization is used when there's no need for specific attribution as to who made the comment.
      */
@@ -22,7 +22,7 @@ export interface IAnnotation extends fhir.IFhirElement {
      */
     time?: string | undefined;
     _time?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A  text note which also  contains information about who made the statement and when.
  */
@@ -47,20 +47,16 @@ export declare class Annotation extends fhir.FhirElement implements fhir.IAnnota
     time?: string | undefined;
     _time?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Annotation - initializes required elements to null.
+     * Default constructor for Annotation - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Annotation from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IAnnotation>): Annotation;
+    constructor(source?: Partial<fhir.IAnnotation>);
     /**
      * Check if the current Annotation contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Annotation from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IAnnotation): Annotation;
+    static FromStrict(source: fhir.IAnnotation): Annotation;
 }
 //# sourceMappingURL=Annotation.d.ts.map

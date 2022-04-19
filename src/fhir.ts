@@ -4,60 +4,657 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
+import { IFhirElement, FhirElement } from './fhir/FhirElement';
 import { IAddress, Address, AddressTypeEnum, AddressUseEnum } from './fhir/Address';
+import { IQuantity, Quantity, QuantityComparatorEnum } from './fhir/Quantity';
+import { IAge, Age } from './fhir/Age';
 import { IAnnotation, Annotation } from './fhir/Annotation';
 import { IAttachment, Attachment } from './fhir/Attachment';
 import { IBackboneElement, BackboneElement } from './fhir/BackboneElement';
 import { ICodeableConcept, CodeableConcept } from './fhir/CodeableConcept';
 import { ICoding, Coding } from './fhir/Coding';
+import { IContactDetail, ContactDetail } from './fhir/ContactDetail';
 import { IContactPoint, ContactPoint, ContactPointSystemEnum, ContactPointUseEnum } from './fhir/ContactPoint';
+import { IContributor, Contributor, ContributorTypeEnum } from './fhir/Contributor';
+import { ICount, Count } from './fhir/Count';
+import { IDataRequirement, IDataRequirementCodeFilter, IDataRequirementDateFilter, IDataRequirementSort, DataRequirement, DataRequirementCodeFilter, DataRequirementDateFilter, DataRequirementSort, DataRequirementSortDirectionEnum } from './fhir/DataRequirement';
+import { IDistance, Distance } from './fhir/Distance';
+import { IDosage, IDosageDoseAndRate, Dosage, DosageDoseAndRate } from './fhir/Dosage';
 import { IDuration, Duration } from './fhir/Duration';
-import { IFhirElement, FhirElement } from './fhir/FhirElement';
+import { IElementDefinition, IElementDefinitionSlicingDiscriminator, IElementDefinitionSlicing, IElementDefinitionBase, IElementDefinitionType, IElementDefinitionExample, IElementDefinitionConstraint, IElementDefinitionBinding, IElementDefinitionMapping, ElementDefinition, ElementDefinitionSlicingDiscriminator, ElementDefinitionSlicing, ElementDefinitionBase, ElementDefinitionType, ElementDefinitionExample, ElementDefinitionConstraint, ElementDefinitionBinding, ElementDefinitionMapping, ElementDefinitionSlicingDiscriminatorTypeEnum, ElementDefinitionSlicingRulesEnum, ElementDefinitionTypeAggregationEnum, ElementDefinitionTypeVersioningEnum, ElementDefinitionConstraintSeverityEnum, ElementDefinitionBindingStrengthEnum, ElementDefinitionRepresentationEnum } from './fhir/ElementDefinition';
+import { IExpression, Expression, ExpressionLanguageEnum } from './fhir/Expression';
 import { IExtension, Extension } from './fhir/Extension';
 import { IHumanName, HumanName, HumanNameUseEnum } from './fhir/HumanName';
 import { IIdentifier, Identifier, IdentifierUseEnum } from './fhir/Identifier';
+import { IMarketingStatus, MarketingStatus } from './fhir/MarketingStatus';
 import { IMeta, Meta } from './fhir/Meta';
+import { IMoney, Money } from './fhir/Money';
 import { INarrative, Narrative, NarrativeStatusEnum } from './fhir/Narrative';
+import { IParameterDefinition, ParameterDefinition, ParameterDefinitionUseEnum } from './fhir/ParameterDefinition';
 import { IPeriod, Period } from './fhir/Period';
-import { IQuantity, Quantity, QuantityComparatorEnum } from './fhir/Quantity';
+import { IPopulation, Population } from './fhir/Population';
+import { IProdCharacteristic, ProdCharacteristic } from './fhir/ProdCharacteristic';
+import { IProductShelfLife, ProductShelfLife } from './fhir/ProductShelfLife';
 import { IRange, Range } from './fhir/Range';
 import { IRatio, Ratio } from './fhir/Ratio';
 import { IReference, Reference } from './fhir/Reference';
+import { IRelatedArtifact, RelatedArtifact, RelatedArtifactTypeEnum } from './fhir/RelatedArtifact';
 import { ISampledData, SampledData } from './fhir/SampledData';
-import { ITimingRepeat, ITiming, TimingRepeat, Timing, TimingRepeatDayOfWeekEnum, TimingRepeatDurationUnitEnum, TimingRepeatPeriodUnitEnum } from './fhir/Timing';
-import { IDomainResource, DomainResource } from './fhir/DomainResource';
-import { IEncounterStatusHistory, IEncounterClassHistory, IEncounterParticipant, IEncounterDiagnosis, IEncounterHospitalization, IEncounterLocation, IEncounter, EncounterStatusHistory, EncounterClassHistory, EncounterParticipant, EncounterDiagnosis, EncounterHospitalization, EncounterLocation, Encounter, EncounterStatusHistoryStatusEnum, EncounterLocationStatusEnum, EncounterStatusEnum } from './fhir/Encounter';
-import { IObservationReferenceRange, IObservationComponent, IObservation, ObservationReferenceRange, ObservationComponent, Observation, ObservationStatusEnum } from './fhir/Observation';
-import { IPatientContact, IPatientCommunication, IPatientLink, IPatient, PatientContact, PatientCommunication, PatientLink, Patient, PatientContactGenderEnum, PatientLinkTypeEnum, PatientGenderEnum } from './fhir/Patient';
+import { ISignature, Signature } from './fhir/Signature';
+import { ISubstanceAmount, ISubstanceAmountReferenceRange, SubstanceAmount, SubstanceAmountReferenceRange } from './fhir/SubstanceAmount';
+import { ITiming, ITimingRepeat, Timing, TimingRepeat, TimingRepeatDayOfWeekEnum, TimingRepeatDurationUnitEnum, TimingRepeatPeriodUnitEnum } from './fhir/Timing';
+import { ITriggerDefinition, TriggerDefinition, TriggerDefinitionTypeEnum } from './fhir/TriggerDefinition';
+import { IUsageContext, UsageContext } from './fhir/UsageContext';
 import { IResource, Resource } from './fhir/Resource';
+import { IDomainResource, DomainResource } from './fhir/DomainResource';
+import { IAccount, IAccountCoverage, IAccountGuarantor, Account, AccountCoverage, AccountGuarantor, AccountStatusEnum } from './fhir/Account';
+import { IActivityDefinition, IActivityDefinitionParticipant, IActivityDefinitionDynamicValue, ActivityDefinition, ActivityDefinitionParticipant, ActivityDefinitionDynamicValue, ActivityDefinitionParticipantTypeEnum, ActivityDefinitionIntentEnum, ActivityDefinitionPriorityEnum, ActivityDefinitionStatusEnum } from './fhir/ActivityDefinition';
+import { IAdverseEvent, IAdverseEventSuspectEntityCausality, IAdverseEventSuspectEntity, AdverseEvent, AdverseEventSuspectEntityCausality, AdverseEventSuspectEntity, AdverseEventActualityEnum } from './fhir/AdverseEvent';
+import { IAllergyIntolerance, IAllergyIntoleranceReaction, AllergyIntolerance, AllergyIntoleranceReaction, AllergyIntoleranceReactionSeverityEnum, AllergyIntoleranceCategoryEnum, AllergyIntoleranceCriticalityEnum, AllergyIntoleranceTypeEnum } from './fhir/AllergyIntolerance';
+import { IAppointment, IAppointmentParticipant, Appointment, AppointmentParticipant, AppointmentParticipantRequiredEnum, AppointmentParticipantStatusEnum, AppointmentStatusEnum } from './fhir/Appointment';
+import { IAppointmentResponse, AppointmentResponse, AppointmentResponseParticipantStatusEnum } from './fhir/AppointmentResponse';
+import { IAuditEvent, IAuditEventAgentNetwork, IAuditEventAgent, IAuditEventSource, IAuditEventEntityDetail, IAuditEventEntity, AuditEvent, AuditEventAgentNetwork, AuditEventAgent, AuditEventSource, AuditEventEntityDetail, AuditEventEntity } from './fhir/AuditEvent';
+import { IBasic, Basic } from './fhir/Basic';
+import { IBinary, Binary } from './fhir/Binary';
+import { IBiologicallyDerivedProduct, IBiologicallyDerivedProductCollection, IBiologicallyDerivedProductProcessing, IBiologicallyDerivedProductManipulation, IBiologicallyDerivedProductStorage, BiologicallyDerivedProduct, BiologicallyDerivedProductCollection, BiologicallyDerivedProductProcessing, BiologicallyDerivedProductManipulation, BiologicallyDerivedProductStorage, BiologicallyDerivedProductStorageScaleEnum, BiologicallyDerivedProductProductCategoryEnum, BiologicallyDerivedProductStatusEnum } from './fhir/BiologicallyDerivedProduct';
+import { IBodyStructure, BodyStructure } from './fhir/BodyStructure';
+import { IBundle, IBundleLink, IBundleEntrySearch, IBundleEntryRequest, IBundleEntryResponse, IBundleEntry, Bundle, BundleLink, BundleEntrySearch, BundleEntryRequest, BundleEntryResponse, BundleEntry, BundleEntrySearchModeEnum, BundleEntryRequestMethodEnum, BundleTypeEnum } from './fhir/Bundle';
+import { ICapabilityStatement, ICapabilityStatementSoftware, ICapabilityStatementImplementation, ICapabilityStatementRestSecurity, ICapabilityStatementRestResourceInteraction, ICapabilityStatementRestResourceSearchParam, ICapabilityStatementRestResourceOperation, ICapabilityStatementRestResource, ICapabilityStatementRestInteraction, ICapabilityStatementRest, ICapabilityStatementMessagingEndpoint, ICapabilityStatementMessagingSupportedMessage, ICapabilityStatementMessaging, ICapabilityStatementDocument, CapabilityStatement, CapabilityStatementSoftware, CapabilityStatementImplementation, CapabilityStatementRestSecurity, CapabilityStatementRestResourceInteraction, CapabilityStatementRestResourceSearchParam, CapabilityStatementRestResourceOperation, CapabilityStatementRestResource, CapabilityStatementRestInteraction, CapabilityStatementRest, CapabilityStatementMessagingEndpoint, CapabilityStatementMessagingSupportedMessage, CapabilityStatementMessaging, CapabilityStatementDocument, CapabilityStatementRestResourceInteractionCodeEnum, CapabilityStatementRestResourceSearchParamTypeEnum, CapabilityStatementRestResourceConditionalDeleteEnum, CapabilityStatementRestResourceConditionalReadEnum, CapabilityStatementRestResourceReferencePolicyEnum, CapabilityStatementRestResourceVersioningEnum, CapabilityStatementRestInteractionCodeEnum, CapabilityStatementRestModeEnum, CapabilityStatementMessagingSupportedMessageModeEnum, CapabilityStatementDocumentModeEnum, CapabilityStatementFormatEnum, CapabilityStatementKindEnum, CapabilityStatementStatusEnum } from './fhir/CapabilityStatement';
+import { ICarePlan, ICarePlanActivityDetail, ICarePlanActivity, CarePlan, CarePlanActivityDetail, CarePlanActivity, CarePlanActivityDetailKindEnum, CarePlanActivityDetailStatusEnum, CarePlanIntentEnum, CarePlanStatusEnum } from './fhir/CarePlan';
+import { ICareTeam, ICareTeamParticipant, CareTeam, CareTeamParticipant, CareTeamStatusEnum } from './fhir/CareTeam';
+import { ICatalogEntry, ICatalogEntryRelatedEntry, CatalogEntry, CatalogEntryRelatedEntry, CatalogEntryRelatedEntryRelationtypeEnum, CatalogEntryStatusEnum } from './fhir/CatalogEntry';
+import { IChargeItem, IChargeItemPerformer, ChargeItem, ChargeItemPerformer, ChargeItemStatusEnum } from './fhir/ChargeItem';
+import { IChargeItemDefinition, IChargeItemDefinitionApplicability, IChargeItemDefinitionPropertyGroupPriceComponent, IChargeItemDefinitionPropertyGroup, ChargeItemDefinition, ChargeItemDefinitionApplicability, ChargeItemDefinitionPropertyGroupPriceComponent, ChargeItemDefinitionPropertyGroup, ChargeItemDefinitionPropertyGroupPriceComponentTypeEnum, ChargeItemDefinitionStatusEnum } from './fhir/ChargeItemDefinition';
+import { IClaim, IClaimRelated, IClaimPayee, IClaimCareTeam, IClaimSupportingInfo, IClaimDiagnosis, IClaimProcedure, IClaimInsurance, IClaimAccident, IClaimItemDetailSubDetail, IClaimItemDetail, IClaimItem, Claim, ClaimRelated, ClaimPayee, ClaimCareTeam, ClaimSupportingInfo, ClaimDiagnosis, ClaimProcedure, ClaimInsurance, ClaimAccident, ClaimItemDetailSubDetail, ClaimItemDetail, ClaimItem, ClaimStatusEnum, ClaimUseEnum } from './fhir/Claim';
+import { IClaimResponse, IClaimResponseItemAdjudication, IClaimResponseItemDetailSubDetail, IClaimResponseItemDetail, IClaimResponseItem, IClaimResponseAddItemDetailSubDetail, IClaimResponseAddItemDetail, IClaimResponseAddItem, IClaimResponseTotal, IClaimResponsePayment, IClaimResponseProcessNote, IClaimResponseInsurance, IClaimResponseError, ClaimResponse, ClaimResponseItemAdjudication, ClaimResponseItemDetailSubDetail, ClaimResponseItemDetail, ClaimResponseItem, ClaimResponseAddItemDetailSubDetail, ClaimResponseAddItemDetail, ClaimResponseAddItem, ClaimResponseTotal, ClaimResponsePayment, ClaimResponseProcessNote, ClaimResponseInsurance, ClaimResponseError, ClaimResponseProcessNoteTypeEnum, ClaimResponseOutcomeEnum, ClaimResponseStatusEnum, ClaimResponseUseEnum } from './fhir/ClaimResponse';
+import { IClinicalImpression, IClinicalImpressionInvestigation, IClinicalImpressionFinding, ClinicalImpression, ClinicalImpressionInvestigation, ClinicalImpressionFinding, ClinicalImpressionStatusEnum } from './fhir/ClinicalImpression';
+import { ICodeSystem, ICodeSystemFilter, ICodeSystemProperty, ICodeSystemConceptDesignation, ICodeSystemConceptProperty, ICodeSystemConcept, CodeSystem, CodeSystemFilter, CodeSystemProperty, CodeSystemConceptDesignation, CodeSystemConceptProperty, CodeSystemConcept, CodeSystemFilterOperatorEnum, CodeSystemPropertyTypeEnum, CodeSystemContentEnum, CodeSystemHierarchyMeaningEnum, CodeSystemStatusEnum } from './fhir/CodeSystem';
+import { ICommunication, ICommunicationPayload, Communication, CommunicationPayload, CommunicationPriorityEnum, CommunicationStatusEnum } from './fhir/Communication';
+import { ICommunicationRequest, ICommunicationRequestPayload, CommunicationRequest, CommunicationRequestPayload, CommunicationRequestPriorityEnum, CommunicationRequestStatusEnum } from './fhir/CommunicationRequest';
+import { ICompartmentDefinition, ICompartmentDefinitionResource, CompartmentDefinition, CompartmentDefinitionResource, CompartmentDefinitionCodeEnum, CompartmentDefinitionStatusEnum } from './fhir/CompartmentDefinition';
+import { IComposition, ICompositionAttester, ICompositionRelatesTo, ICompositionEvent, ICompositionSection, Composition, CompositionAttester, CompositionRelatesTo, CompositionEvent, CompositionSection, CompositionAttesterModeEnum, CompositionRelatesToCodeEnum, CompositionSectionModeEnum, CompositionStatusEnum } from './fhir/Composition';
+import { IConceptMap, IConceptMapGroupElementTargetDependsOn, IConceptMapGroupElementTarget, IConceptMapGroupElement, IConceptMapGroupUnmapped, IConceptMapGroup, ConceptMap, ConceptMapGroupElementTargetDependsOn, ConceptMapGroupElementTarget, ConceptMapGroupElement, ConceptMapGroupUnmapped, ConceptMapGroup, ConceptMapGroupElementTargetEquivalenceEnum, ConceptMapGroupUnmappedModeEnum, ConceptMapStatusEnum } from './fhir/ConceptMap';
+import { ICondition, IConditionStage, IConditionEvidence, Condition, ConditionStage, ConditionEvidence } from './fhir/Condition';
+import { IConsent, IConsentPolicy, IConsentVerification, IConsentProvisionActor, IConsentProvisionData, IConsentProvision, Consent, ConsentPolicy, ConsentVerification, ConsentProvisionActor, ConsentProvisionData, ConsentProvision, ConsentProvisionDataMeaningEnum, ConsentProvisionTypeEnum, ConsentStatusEnum } from './fhir/Consent';
+import { IContract, IContractContentDefinition, IContractTermSecurityLabel, IContractTermOfferParty, IContractTermOfferAnswer, IContractTermOffer, IContractTermAssetContext, IContractTermAssetValuedItem, IContractTermAsset, IContractTermActionSubject, IContractTermAction, IContractTerm, IContractSigner, IContractFriendly, IContractLegal, IContractRule, Contract, ContractContentDefinition, ContractTermSecurityLabel, ContractTermOfferParty, ContractTermOfferAnswer, ContractTermOffer, ContractTermAssetContext, ContractTermAssetValuedItem, ContractTermAsset, ContractTermActionSubject, ContractTermAction, ContractTerm, ContractSigner, ContractFriendly, ContractLegal, ContractRule, ContractContentDefinitionPublicationStatusEnum, ContractStatusEnum } from './fhir/Contract';
+import { ICoverage, ICoverageClass, ICoverageCostToBeneficiaryException, ICoverageCostToBeneficiary, Coverage, CoverageClass, CoverageCostToBeneficiaryException, CoverageCostToBeneficiary, CoverageStatusEnum } from './fhir/Coverage';
+import { ICoverageEligibilityRequest, ICoverageEligibilityRequestSupportingInfo, ICoverageEligibilityRequestInsurance, ICoverageEligibilityRequestItemDiagnosis, ICoverageEligibilityRequestItem, CoverageEligibilityRequest, CoverageEligibilityRequestSupportingInfo, CoverageEligibilityRequestInsurance, CoverageEligibilityRequestItemDiagnosis, CoverageEligibilityRequestItem, CoverageEligibilityRequestPurposeEnum, CoverageEligibilityRequestStatusEnum } from './fhir/CoverageEligibilityRequest';
+import { ICoverageEligibilityResponse, ICoverageEligibilityResponseInsuranceItemBenefit, ICoverageEligibilityResponseInsuranceItem, ICoverageEligibilityResponseInsurance, ICoverageEligibilityResponseError, CoverageEligibilityResponse, CoverageEligibilityResponseInsuranceItemBenefit, CoverageEligibilityResponseInsuranceItem, CoverageEligibilityResponseInsurance, CoverageEligibilityResponseError, CoverageEligibilityResponseOutcomeEnum, CoverageEligibilityResponsePurposeEnum, CoverageEligibilityResponseStatusEnum } from './fhir/CoverageEligibilityResponse';
+import { IDetectedIssue, IDetectedIssueEvidence, IDetectedIssueMitigation, DetectedIssue, DetectedIssueEvidence, DetectedIssueMitigation, DetectedIssueSeverityEnum, DetectedIssueStatusEnum } from './fhir/DetectedIssue';
+import { IDevice, IDeviceUdiCarrier, IDeviceDeviceName, IDeviceSpecialization, IDeviceVersion, IDeviceProperty, Device, DeviceUdiCarrier, DeviceDeviceName, DeviceSpecialization, DeviceVersion, DeviceProperty, DeviceUdiCarrierEntryTypeEnum, DeviceDeviceNameTypeEnum, DeviceStatusEnum } from './fhir/Device';
+import { IDeviceDefinition, IDeviceDefinitionUdiDeviceIdentifier, IDeviceDefinitionDeviceName, IDeviceDefinitionSpecialization, IDeviceDefinitionCapability, IDeviceDefinitionProperty, IDeviceDefinitionMaterial, DeviceDefinition, DeviceDefinitionUdiDeviceIdentifier, DeviceDefinitionDeviceName, DeviceDefinitionSpecialization, DeviceDefinitionCapability, DeviceDefinitionProperty, DeviceDefinitionMaterial, DeviceDefinitionDeviceNameTypeEnum } from './fhir/DeviceDefinition';
+import { IDeviceMetric, IDeviceMetricCalibration, DeviceMetric, DeviceMetricCalibration, DeviceMetricCalibrationStateEnum, DeviceMetricCalibrationTypeEnum, DeviceMetricCategoryEnum, DeviceMetricColorEnum, DeviceMetricOperationalStatusEnum } from './fhir/DeviceMetric';
+import { IDeviceRequest, IDeviceRequestParameter, DeviceRequest, DeviceRequestParameter, DeviceRequestIntentEnum, DeviceRequestPriorityEnum, DeviceRequestStatusEnum } from './fhir/DeviceRequest';
+import { IDeviceUseStatement, DeviceUseStatement, DeviceUseStatementStatusEnum } from './fhir/DeviceUseStatement';
+import { IDiagnosticReport, IDiagnosticReportMedia, DiagnosticReport, DiagnosticReportMedia, DiagnosticReportStatusEnum } from './fhir/DiagnosticReport';
+import { IDocumentManifest, IDocumentManifestRelated, DocumentManifest, DocumentManifestRelated, DocumentManifestStatusEnum } from './fhir/DocumentManifest';
+import { IDocumentReference, IDocumentReferenceRelatesTo, IDocumentReferenceContent, IDocumentReferenceContext, DocumentReference, DocumentReferenceRelatesTo, DocumentReferenceContent, DocumentReferenceContext, DocumentReferenceRelatesToCodeEnum, DocumentReferenceDocStatusEnum, DocumentReferenceStatusEnum } from './fhir/DocumentReference';
+import { IEffectEvidenceSynthesis, IEffectEvidenceSynthesisSampleSize, IEffectEvidenceSynthesisResultsByExposure, IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, IEffectEvidenceSynthesisEffectEstimate, IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesis, EffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisResultsByExposureExposureStateEnum, EffectEvidenceSynthesisStatusEnum } from './fhir/EffectEvidenceSynthesis';
+import { IEncounter, IEncounterStatusHistory, IEncounterClassHistory, IEncounterParticipant, IEncounterDiagnosis, IEncounterHospitalization, IEncounterLocation, Encounter, EncounterStatusHistory, EncounterClassHistory, EncounterParticipant, EncounterDiagnosis, EncounterHospitalization, EncounterLocation, EncounterStatusHistoryStatusEnum, EncounterLocationStatusEnum, EncounterStatusEnum } from './fhir/Encounter';
+import { IEndpoint, Endpoint, EndpointStatusEnum } from './fhir/Endpoint';
+import { IEnrollmentRequest, EnrollmentRequest, EnrollmentRequestStatusEnum } from './fhir/EnrollmentRequest';
+import { IEnrollmentResponse, EnrollmentResponse, EnrollmentResponseOutcomeEnum, EnrollmentResponseStatusEnum } from './fhir/EnrollmentResponse';
+import { IEpisodeOfCare, IEpisodeOfCareStatusHistory, IEpisodeOfCareDiagnosis, EpisodeOfCare, EpisodeOfCareStatusHistory, EpisodeOfCareDiagnosis, EpisodeOfCareStatusHistoryStatusEnum, EpisodeOfCareStatusEnum } from './fhir/EpisodeOfCare';
+import { IEventDefinition, EventDefinition, EventDefinitionStatusEnum } from './fhir/EventDefinition';
+import { IEvidence, Evidence, EvidenceStatusEnum } from './fhir/Evidence';
+import { IEvidenceVariable, IEvidenceVariableCharacteristic, EvidenceVariable, EvidenceVariableCharacteristic, EvidenceVariableCharacteristicGroupMeasureEnum, EvidenceVariableStatusEnum, EvidenceVariableTypeEnum } from './fhir/EvidenceVariable';
+import { IExampleScenario, IExampleScenarioActor, IExampleScenarioInstanceVersion, IExampleScenarioInstanceContainedInstance, IExampleScenarioInstance, IExampleScenarioProcessStepOperation, IExampleScenarioProcessStepAlternative, IExampleScenarioProcessStep, IExampleScenarioProcess, ExampleScenario, ExampleScenarioActor, ExampleScenarioInstanceVersion, ExampleScenarioInstanceContainedInstance, ExampleScenarioInstance, ExampleScenarioProcessStepOperation, ExampleScenarioProcessStepAlternative, ExampleScenarioProcessStep, ExampleScenarioProcess, ExampleScenarioActorTypeEnum, ExampleScenarioStatusEnum } from './fhir/ExampleScenario';
+import { IExplanationOfBenefit, IExplanationOfBenefitRelated, IExplanationOfBenefitPayee, IExplanationOfBenefitCareTeam, IExplanationOfBenefitSupportingInfo, IExplanationOfBenefitDiagnosis, IExplanationOfBenefitProcedure, IExplanationOfBenefitInsurance, IExplanationOfBenefitAccident, IExplanationOfBenefitItemAdjudication, IExplanationOfBenefitItemDetailSubDetail, IExplanationOfBenefitItemDetail, IExplanationOfBenefitItem, IExplanationOfBenefitAddItemDetailSubDetail, IExplanationOfBenefitAddItemDetail, IExplanationOfBenefitAddItem, IExplanationOfBenefitTotal, IExplanationOfBenefitPayment, IExplanationOfBenefitProcessNote, IExplanationOfBenefitBenefitBalanceFinancial, IExplanationOfBenefitBenefitBalance, ExplanationOfBenefit, ExplanationOfBenefitRelated, ExplanationOfBenefitPayee, ExplanationOfBenefitCareTeam, ExplanationOfBenefitSupportingInfo, ExplanationOfBenefitDiagnosis, ExplanationOfBenefitProcedure, ExplanationOfBenefitInsurance, ExplanationOfBenefitAccident, ExplanationOfBenefitItemAdjudication, ExplanationOfBenefitItemDetailSubDetail, ExplanationOfBenefitItemDetail, ExplanationOfBenefitItem, ExplanationOfBenefitAddItemDetailSubDetail, ExplanationOfBenefitAddItemDetail, ExplanationOfBenefitAddItem, ExplanationOfBenefitTotal, ExplanationOfBenefitPayment, ExplanationOfBenefitProcessNote, ExplanationOfBenefitBenefitBalanceFinancial, ExplanationOfBenefitBenefitBalance, ExplanationOfBenefitProcessNoteTypeEnum, ExplanationOfBenefitOutcomeEnum, ExplanationOfBenefitStatusEnum, ExplanationOfBenefitUseEnum } from './fhir/ExplanationOfBenefit';
+import { IFamilyMemberHistory, IFamilyMemberHistoryCondition, FamilyMemberHistory, FamilyMemberHistoryCondition, FamilyMemberHistoryStatusEnum } from './fhir/FamilyMemberHistory';
+import { IFlag, Flag, FlagStatusEnum } from './fhir/Flag';
+import { IGoal, IGoalTarget, Goal, GoalTarget, GoalLifecycleStatusEnum } from './fhir/Goal';
+import { IGraphDefinition, IGraphDefinitionLinkTargetCompartment, IGraphDefinitionLinkTarget, IGraphDefinitionLink, GraphDefinition, GraphDefinitionLinkTargetCompartment, GraphDefinitionLinkTarget, GraphDefinitionLink, GraphDefinitionLinkTargetCompartmentCodeEnum, GraphDefinitionLinkTargetCompartmentRuleEnum, GraphDefinitionLinkTargetCompartmentUseEnum, GraphDefinitionStatusEnum } from './fhir/GraphDefinition';
+import { IGroup, IGroupCharacteristic, IGroupMember, Group, GroupCharacteristic, GroupMember, GroupTypeEnum } from './fhir/Group';
+import { IGuidanceResponse, GuidanceResponse, GuidanceResponseStatusEnum } from './fhir/GuidanceResponse';
+import { IHealthcareService, IHealthcareServiceEligibility, IHealthcareServiceAvailableTime, IHealthcareServiceNotAvailable, HealthcareService, HealthcareServiceEligibility, HealthcareServiceAvailableTime, HealthcareServiceNotAvailable, HealthcareServiceAvailableTimeDaysOfWeekEnum } from './fhir/HealthcareService';
+import { IImagingStudy, IImagingStudySeriesPerformer, IImagingStudySeriesInstance, IImagingStudySeries, ImagingStudy, ImagingStudySeriesPerformer, ImagingStudySeriesInstance, ImagingStudySeries, ImagingStudyStatusEnum } from './fhir/ImagingStudy';
+import { IImmunization, IImmunizationPerformer, IImmunizationEducation, IImmunizationReaction, IImmunizationProtocolApplied, Immunization, ImmunizationPerformer, ImmunizationEducation, ImmunizationReaction, ImmunizationProtocolApplied, ImmunizationStatusEnum } from './fhir/Immunization';
+import { IImmunizationEvaluation, ImmunizationEvaluation, ImmunizationEvaluationStatusEnum } from './fhir/ImmunizationEvaluation';
+import { IImmunizationRecommendation, IImmunizationRecommendationRecommendationDateCriterion, IImmunizationRecommendationRecommendation, ImmunizationRecommendation, ImmunizationRecommendationRecommendationDateCriterion, ImmunizationRecommendationRecommendation } from './fhir/ImmunizationRecommendation';
+import { IImplementationGuide, IImplementationGuideDependsOn, IImplementationGuideGlobal, IImplementationGuideDefinitionGrouping, IImplementationGuideDefinitionResource, IImplementationGuideDefinitionPage, IImplementationGuideDefinitionParameter, IImplementationGuideDefinitionTemplate, IImplementationGuideDefinition, IImplementationGuideManifestResource, IImplementationGuideManifestPage, IImplementationGuideManifest, ImplementationGuide, ImplementationGuideDependsOn, ImplementationGuideGlobal, ImplementationGuideDefinitionGrouping, ImplementationGuideDefinitionResource, ImplementationGuideDefinitionPage, ImplementationGuideDefinitionParameter, ImplementationGuideDefinitionTemplate, ImplementationGuideDefinition, ImplementationGuideManifestResource, ImplementationGuideManifestPage, ImplementationGuideManifest, ImplementationGuideDefinitionPageGenerationEnum, ImplementationGuideDefinitionParameterCodeEnum, ImplementationGuideStatusEnum } from './fhir/ImplementationGuide';
+import { IInsurancePlan, IInsurancePlanContact, IInsurancePlanCoverageBenefitLimit, IInsurancePlanCoverageBenefit, IInsurancePlanCoverage, IInsurancePlanPlanGeneralCost, IInsurancePlanPlanSpecificCostBenefitCost, IInsurancePlanPlanSpecificCostBenefit, IInsurancePlanPlanSpecificCost, IInsurancePlanPlan, InsurancePlan, InsurancePlanContact, InsurancePlanCoverageBenefitLimit, InsurancePlanCoverageBenefit, InsurancePlanCoverage, InsurancePlanPlanGeneralCost, InsurancePlanPlanSpecificCostBenefitCost, InsurancePlanPlanSpecificCostBenefit, InsurancePlanPlanSpecificCost, InsurancePlanPlan, InsurancePlanStatusEnum } from './fhir/InsurancePlan';
+import { IInvoice, IInvoiceParticipant, IInvoiceLineItemPriceComponent, IInvoiceLineItem, Invoice, InvoiceParticipant, InvoiceLineItemPriceComponent, InvoiceLineItem, InvoiceLineItemPriceComponentTypeEnum, InvoiceStatusEnum } from './fhir/Invoice';
+import { ILibrary, Library, LibraryStatusEnum } from './fhir/Library';
+import { ILinkage, ILinkageItem, Linkage, LinkageItem, LinkageItemTypeEnum } from './fhir/Linkage';
+import { IList, IListEntry, List, ListEntry, ListModeEnum, ListStatusEnum } from './fhir/List';
+import { ILocation, ILocationPosition, ILocationHoursOfOperation, Location, LocationPosition, LocationHoursOfOperation, LocationHoursOfOperationDaysOfWeekEnum, LocationModeEnum, LocationStatusEnum } from './fhir/Location';
+import { IMeasure, IMeasureGroupPopulation, IMeasureGroupStratifierComponent, IMeasureGroupStratifier, IMeasureGroup, IMeasureSupplementalData, Measure, MeasureGroupPopulation, MeasureGroupStratifierComponent, MeasureGroupStratifier, MeasureGroup, MeasureSupplementalData, MeasureStatusEnum } from './fhir/Measure';
+import { IMeasureReport, IMeasureReportGroupPopulation, IMeasureReportGroupStratifierStratumComponent, IMeasureReportGroupStratifierStratumPopulation, IMeasureReportGroupStratifierStratum, IMeasureReportGroupStratifier, IMeasureReportGroup, MeasureReport, MeasureReportGroupPopulation, MeasureReportGroupStratifierStratumComponent, MeasureReportGroupStratifierStratumPopulation, MeasureReportGroupStratifierStratum, MeasureReportGroupStratifier, MeasureReportGroup, MeasureReportStatusEnum, MeasureReportTypeEnum } from './fhir/MeasureReport';
+import { IMedia, Media, MediaStatusEnum } from './fhir/Media';
+import { IMedication, IMedicationIngredient, IMedicationBatch, Medication, MedicationIngredient, MedicationBatch, MedicationStatusEnum } from './fhir/Medication';
+import { IMedicationAdministration, IMedicationAdministrationPerformer, IMedicationAdministrationDosage, MedicationAdministration, MedicationAdministrationPerformer, MedicationAdministrationDosage, MedicationAdministrationStatusEnum } from './fhir/MedicationAdministration';
+import { IMedicationDispense, IMedicationDispensePerformer, IMedicationDispenseSubstitution, MedicationDispense, MedicationDispensePerformer, MedicationDispenseSubstitution, MedicationDispenseStatusEnum } from './fhir/MedicationDispense';
+import { IMedicationKnowledge, IMedicationKnowledgeRelatedMedicationKnowledge, IMedicationKnowledgeMonograph, IMedicationKnowledgeIngredient, IMedicationKnowledgeCost, IMedicationKnowledgeMonitoringProgram, IMedicationKnowledgeAdministrationGuidelinesDosage, IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, IMedicationKnowledgeAdministrationGuidelines, IMedicationKnowledgeMedicineClassification, IMedicationKnowledgePackaging, IMedicationKnowledgeDrugCharacteristic, IMedicationKnowledgeRegulatorySubstitution, IMedicationKnowledgeRegulatorySchedule, IMedicationKnowledgeRegulatoryMaxDispense, IMedicationKnowledgeRegulatory, IMedicationKnowledgeKinetics, MedicationKnowledge, MedicationKnowledgeRelatedMedicationKnowledge, MedicationKnowledgeMonograph, MedicationKnowledgeIngredient, MedicationKnowledgeCost, MedicationKnowledgeMonitoringProgram, MedicationKnowledgeAdministrationGuidelinesDosage, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, MedicationKnowledgeAdministrationGuidelines, MedicationKnowledgeMedicineClassification, MedicationKnowledgePackaging, MedicationKnowledgeDrugCharacteristic, MedicationKnowledgeRegulatorySubstitution, MedicationKnowledgeRegulatorySchedule, MedicationKnowledgeRegulatoryMaxDispense, MedicationKnowledgeRegulatory, MedicationKnowledgeKinetics, MedicationKnowledgeStatusEnum } from './fhir/MedicationKnowledge';
+import { IMedicationRequest, IMedicationRequestDispenseRequestInitialFill, IMedicationRequestDispenseRequest, IMedicationRequestSubstitution, MedicationRequest, MedicationRequestDispenseRequestInitialFill, MedicationRequestDispenseRequest, MedicationRequestSubstitution, MedicationRequestIntentEnum, MedicationRequestPriorityEnum, MedicationRequestStatusEnum } from './fhir/MedicationRequest';
+import { IMedicationStatement, MedicationStatement, MedicationStatementStatusEnum } from './fhir/MedicationStatement';
+import { IMedicinalProduct, IMedicinalProductNameNamePart, IMedicinalProductNameCountryLanguage, IMedicinalProductName, IMedicinalProductManufacturingBusinessOperation, IMedicinalProductSpecialDesignation, MedicinalProduct, MedicinalProductNameNamePart, MedicinalProductNameCountryLanguage, MedicinalProductName, MedicinalProductManufacturingBusinessOperation, MedicinalProductSpecialDesignation } from './fhir/MedicinalProduct';
+import { IMedicinalProductAuthorization, IMedicinalProductAuthorizationJurisdictionalAuthorization, IMedicinalProductAuthorizationProcedure, MedicinalProductAuthorization, MedicinalProductAuthorizationJurisdictionalAuthorization, MedicinalProductAuthorizationProcedure } from './fhir/MedicinalProductAuthorization';
+import { IMedicinalProductContraindication, IMedicinalProductContraindicationOtherTherapy, MedicinalProductContraindication, MedicinalProductContraindicationOtherTherapy } from './fhir/MedicinalProductContraindication';
+import { IMedicinalProductIndication, IMedicinalProductIndicationOtherTherapy, MedicinalProductIndication, MedicinalProductIndicationOtherTherapy } from './fhir/MedicinalProductIndication';
+import { IMedicinalProductIngredient, IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, IMedicinalProductIngredientSpecifiedSubstanceStrength, IMedicinalProductIngredientSpecifiedSubstance, IMedicinalProductIngredientSubstance, MedicinalProductIngredient, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, MedicinalProductIngredientSpecifiedSubstanceStrength, MedicinalProductIngredientSpecifiedSubstance, MedicinalProductIngredientSubstance } from './fhir/MedicinalProductIngredient';
+import { IMedicinalProductInteraction, IMedicinalProductInteractionInteractant, MedicinalProductInteraction, MedicinalProductInteractionInteractant } from './fhir/MedicinalProductInteraction';
+import { IMedicinalProductManufactured, MedicinalProductManufactured } from './fhir/MedicinalProductManufactured';
+import { IMedicinalProductPackaged, IMedicinalProductPackagedBatchIdentifier, IMedicinalProductPackagedPackageItem, MedicinalProductPackaged, MedicinalProductPackagedBatchIdentifier, MedicinalProductPackagedPackageItem } from './fhir/MedicinalProductPackaged';
+import { IMedicinalProductPharmaceutical, IMedicinalProductPharmaceuticalCharacteristics, IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, IMedicinalProductPharmaceuticalRouteOfAdministration, MedicinalProductPharmaceutical, MedicinalProductPharmaceuticalCharacteristics, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, MedicinalProductPharmaceuticalRouteOfAdministration } from './fhir/MedicinalProductPharmaceutical';
+import { IMedicinalProductUndesirableEffect, MedicinalProductUndesirableEffect } from './fhir/MedicinalProductUndesirableEffect';
+import { IMessageDefinition, IMessageDefinitionFocus, IMessageDefinitionAllowedResponse, MessageDefinition, MessageDefinitionFocus, MessageDefinitionAllowedResponse, MessageDefinitionCategoryEnum, MessageDefinitionResponseRequiredEnum, MessageDefinitionStatusEnum } from './fhir/MessageDefinition';
+import { IMessageHeader, IMessageHeaderDestination, IMessageHeaderSource, IMessageHeaderResponse, MessageHeader, MessageHeaderDestination, MessageHeaderSource, MessageHeaderResponse, MessageHeaderResponseCodeEnum } from './fhir/MessageHeader';
+import { IMolecularSequence, IMolecularSequenceReferenceSeq, IMolecularSequenceVariant, IMolecularSequenceQualityRoc, IMolecularSequenceQuality, IMolecularSequenceRepository, IMolecularSequenceStructureVariantOuter, IMolecularSequenceStructureVariantInner, IMolecularSequenceStructureVariant, MolecularSequence, MolecularSequenceReferenceSeq, MolecularSequenceVariant, MolecularSequenceQualityRoc, MolecularSequenceQuality, MolecularSequenceRepository, MolecularSequenceStructureVariantOuter, MolecularSequenceStructureVariantInner, MolecularSequenceStructureVariant, MolecularSequenceReferenceSeqOrientationEnum, MolecularSequenceReferenceSeqStrandEnum, MolecularSequenceQualityTypeEnum, MolecularSequenceRepositoryTypeEnum, MolecularSequenceTypeEnum } from './fhir/MolecularSequence';
+import { INamingSystem, INamingSystemUniqueId, NamingSystem, NamingSystemUniqueId, NamingSystemUniqueIdTypeEnum, NamingSystemKindEnum, NamingSystemStatusEnum } from './fhir/NamingSystem';
+import { INutritionOrder, INutritionOrderOralDietNutrient, INutritionOrderOralDietTexture, INutritionOrderOralDiet, INutritionOrderSupplement, INutritionOrderEnteralFormulaAdministration, INutritionOrderEnteralFormula, NutritionOrder, NutritionOrderOralDietNutrient, NutritionOrderOralDietTexture, NutritionOrderOralDiet, NutritionOrderSupplement, NutritionOrderEnteralFormulaAdministration, NutritionOrderEnteralFormula, NutritionOrderIntentEnum, NutritionOrderStatusEnum } from './fhir/NutritionOrder';
+import { IObservation, IObservationReferenceRange, IObservationComponent, Observation, ObservationReferenceRange, ObservationComponent, ObservationStatusEnum } from './fhir/Observation';
+import { IObservationDefinition, IObservationDefinitionQuantitativeDetails, IObservationDefinitionQualifiedInterval, ObservationDefinition, ObservationDefinitionQuantitativeDetails, ObservationDefinitionQualifiedInterval, ObservationDefinitionQualifiedIntervalCategoryEnum, ObservationDefinitionQualifiedIntervalGenderEnum, ObservationDefinitionPermittedDataTypeEnum } from './fhir/ObservationDefinition';
+import { IOperationDefinition, IOperationDefinitionParameterBinding, IOperationDefinitionParameterReferencedFrom, IOperationDefinitionParameter, IOperationDefinitionOverload, OperationDefinition, OperationDefinitionParameterBinding, OperationDefinitionParameterReferencedFrom, OperationDefinitionParameter, OperationDefinitionOverload, OperationDefinitionParameterBindingStrengthEnum, OperationDefinitionParameterSearchTypeEnum, OperationDefinitionParameterUseEnum, OperationDefinitionKindEnum, OperationDefinitionStatusEnum } from './fhir/OperationDefinition';
+import { IOperationOutcome, IOperationOutcomeIssue, OperationOutcome, OperationOutcomeIssue, OperationOutcomeIssueSeverityEnum } from './fhir/OperationOutcome';
+import { IOrganization, IOrganizationContact, Organization, OrganizationContact } from './fhir/Organization';
+import { IOrganizationAffiliation, OrganizationAffiliation } from './fhir/OrganizationAffiliation';
+import { IParameters, IParametersParameter, Parameters, ParametersParameter } from './fhir/Parameters';
+import { IPatient, IPatientContact, IPatientCommunication, IPatientLink, Patient, PatientContact, PatientCommunication, PatientLink, PatientContactGenderEnum, PatientLinkTypeEnum, PatientGenderEnum } from './fhir/Patient';
+import { IPaymentNotice, PaymentNotice, PaymentNoticeStatusEnum } from './fhir/PaymentNotice';
+import { IPaymentReconciliation, IPaymentReconciliationDetail, IPaymentReconciliationProcessNote, PaymentReconciliation, PaymentReconciliationDetail, PaymentReconciliationProcessNote, PaymentReconciliationProcessNoteTypeEnum, PaymentReconciliationOutcomeEnum, PaymentReconciliationStatusEnum } from './fhir/PaymentReconciliation';
+import { IPerson, IPersonLink, Person, PersonLink, PersonLinkAssuranceEnum, PersonGenderEnum } from './fhir/Person';
+import { IPlanDefinition, IPlanDefinitionGoalTarget, IPlanDefinitionGoal, IPlanDefinitionActionCondition, IPlanDefinitionActionRelatedAction, IPlanDefinitionActionParticipant, IPlanDefinitionActionDynamicValue, IPlanDefinitionAction, PlanDefinition, PlanDefinitionGoalTarget, PlanDefinitionGoal, PlanDefinitionActionCondition, PlanDefinitionActionRelatedAction, PlanDefinitionActionParticipant, PlanDefinitionActionDynamicValue, PlanDefinitionAction, PlanDefinitionActionConditionKindEnum, PlanDefinitionActionRelatedActionRelationshipEnum, PlanDefinitionActionParticipantTypeEnum, PlanDefinitionActionCardinalityBehaviorEnum, PlanDefinitionActionGroupingBehaviorEnum, PlanDefinitionActionPrecheckBehaviorEnum, PlanDefinitionActionPriorityEnum, PlanDefinitionActionRequiredBehaviorEnum, PlanDefinitionActionSelectionBehaviorEnum, PlanDefinitionStatusEnum } from './fhir/PlanDefinition';
+import { IPractitioner, IPractitionerQualification, Practitioner, PractitionerQualification, PractitionerGenderEnum } from './fhir/Practitioner';
+import { IPractitionerRole, IPractitionerRoleAvailableTime, IPractitionerRoleNotAvailable, PractitionerRole, PractitionerRoleAvailableTime, PractitionerRoleNotAvailable, PractitionerRoleAvailableTimeDaysOfWeekEnum } from './fhir/PractitionerRole';
+import { IProcedure, IProcedurePerformer, IProcedureFocalDevice, Procedure, ProcedurePerformer, ProcedureFocalDevice, ProcedureStatusEnum } from './fhir/Procedure';
+import { IProvenance, IProvenanceAgent, IProvenanceEntity, Provenance, ProvenanceAgent, ProvenanceEntity, ProvenanceEntityRoleEnum } from './fhir/Provenance';
+import { IQuestionnaire, IQuestionnaireItemEnableWhen, IQuestionnaireItemAnswerOption, IQuestionnaireItemInitial, IQuestionnaireItem, Questionnaire, QuestionnaireItemEnableWhen, QuestionnaireItemAnswerOption, QuestionnaireItemInitial, QuestionnaireItem, QuestionnaireItemEnableWhenOperatorEnum, QuestionnaireItemEnableBehaviorEnum, QuestionnaireItemTypeEnum, QuestionnaireStatusEnum } from './fhir/Questionnaire';
+import { IQuestionnaireResponse, IQuestionnaireResponseItemAnswer, IQuestionnaireResponseItem, QuestionnaireResponse, QuestionnaireResponseItemAnswer, QuestionnaireResponseItem, QuestionnaireResponseStatusEnum } from './fhir/QuestionnaireResponse';
+import { IRelatedPerson, IRelatedPersonCommunication, RelatedPerson, RelatedPersonCommunication, RelatedPersonGenderEnum } from './fhir/RelatedPerson';
+import { IRequestGroup, IRequestGroupActionCondition, IRequestGroupActionRelatedAction, IRequestGroupAction, RequestGroup, RequestGroupActionCondition, RequestGroupActionRelatedAction, RequestGroupAction, RequestGroupActionConditionKindEnum, RequestGroupActionRelatedActionRelationshipEnum, RequestGroupActionCardinalityBehaviorEnum, RequestGroupActionGroupingBehaviorEnum, RequestGroupActionPrecheckBehaviorEnum, RequestGroupActionPriorityEnum, RequestGroupActionRequiredBehaviorEnum, RequestGroupActionSelectionBehaviorEnum, RequestGroupIntentEnum, RequestGroupPriorityEnum, RequestGroupStatusEnum } from './fhir/RequestGroup';
+import { IResearchDefinition, ResearchDefinition, ResearchDefinitionStatusEnum } from './fhir/ResearchDefinition';
+import { IResearchElementDefinition, IResearchElementDefinitionCharacteristic, ResearchElementDefinition, ResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureEnum, ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasureEnum, ResearchElementDefinitionStatusEnum, ResearchElementDefinitionTypeEnum, ResearchElementDefinitionVariableTypeEnum } from './fhir/ResearchElementDefinition';
+import { IResearchStudy, IResearchStudyArm, IResearchStudyObjective, ResearchStudy, ResearchStudyArm, ResearchStudyObjective, ResearchStudyStatusEnum } from './fhir/ResearchStudy';
+import { IResearchSubject, ResearchSubject, ResearchSubjectStatusEnum } from './fhir/ResearchSubject';
+import { IRiskAssessment, IRiskAssessmentPrediction, RiskAssessment, RiskAssessmentPrediction, RiskAssessmentStatusEnum } from './fhir/RiskAssessment';
+import { IRiskEvidenceSynthesis, IRiskEvidenceSynthesisSampleSize, IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, IRiskEvidenceSynthesisRiskEstimate, IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesis, RiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisStatusEnum } from './fhir/RiskEvidenceSynthesis';
+import { ISchedule, Schedule } from './fhir/Schedule';
+import { ISearchParameter, ISearchParameterComponent, SearchParameter, SearchParameterComponent, SearchParameterComparatorEnum, SearchParameterModifierEnum, SearchParameterStatusEnum, SearchParameterTypeEnum, SearchParameterXpathUsageEnum } from './fhir/SearchParameter';
+import { IServiceRequest, ServiceRequest, ServiceRequestIntentEnum, ServiceRequestPriorityEnum, ServiceRequestStatusEnum } from './fhir/ServiceRequest';
+import { ISlot, Slot, SlotStatusEnum } from './fhir/Slot';
+import { ISpecimen, ISpecimenCollection, ISpecimenProcessing, ISpecimenContainer, Specimen, SpecimenCollection, SpecimenProcessing, SpecimenContainer, SpecimenStatusEnum } from './fhir/Specimen';
+import { ISpecimenDefinition, ISpecimenDefinitionTypeTestedContainerAdditive, ISpecimenDefinitionTypeTestedContainer, ISpecimenDefinitionTypeTestedHandling, ISpecimenDefinitionTypeTested, SpecimenDefinition, SpecimenDefinitionTypeTestedContainerAdditive, SpecimenDefinitionTypeTestedContainer, SpecimenDefinitionTypeTestedHandling, SpecimenDefinitionTypeTested, SpecimenDefinitionTypeTestedPreferenceEnum } from './fhir/SpecimenDefinition';
+import { IStructureDefinition, IStructureDefinitionMapping, IStructureDefinitionContext, IStructureDefinitionSnapshot, IStructureDefinitionDifferential, StructureDefinition, StructureDefinitionMapping, StructureDefinitionContext, StructureDefinitionSnapshot, StructureDefinitionDifferential, StructureDefinitionContextTypeEnum, StructureDefinitionDerivationEnum, StructureDefinitionKindEnum, StructureDefinitionStatusEnum } from './fhir/StructureDefinition';
+import { IStructureMap, IStructureMapStructure, IStructureMapGroupInput, IStructureMapGroupRuleSource, IStructureMapGroupRuleTargetParameter, IStructureMapGroupRuleTarget, IStructureMapGroupRuleDependent, IStructureMapGroupRule, IStructureMapGroup, StructureMap, StructureMapStructure, StructureMapGroupInput, StructureMapGroupRuleSource, StructureMapGroupRuleTargetParameter, StructureMapGroupRuleTarget, StructureMapGroupRuleDependent, StructureMapGroupRule, StructureMapGroup, StructureMapStructureModeEnum, StructureMapGroupInputModeEnum, StructureMapGroupRuleSourceListModeEnum, StructureMapGroupRuleTargetContextTypeEnum, StructureMapGroupRuleTargetListModeEnum, StructureMapGroupRuleTargetTransformEnum, StructureMapGroupTypeModeEnum, StructureMapStatusEnum } from './fhir/StructureMap';
+import { ISubscription, ISubscriptionChannel, Subscription, SubscriptionChannel, SubscriptionChannelTypeEnum, SubscriptionStatusEnum } from './fhir/Subscription';
+import { ISubstance, ISubstanceInstance, ISubstanceIngredient, Substance, SubstanceInstance, SubstanceIngredient, SubstanceStatusEnum } from './fhir/Substance';
+import { ISubstanceNucleicAcid, ISubstanceNucleicAcidSubunitLinkage, ISubstanceNucleicAcidSubunitSugar, ISubstanceNucleicAcidSubunit, SubstanceNucleicAcid, SubstanceNucleicAcidSubunitLinkage, SubstanceNucleicAcidSubunitSugar, SubstanceNucleicAcidSubunit } from './fhir/SubstanceNucleicAcid';
+import { ISubstancePolymer, ISubstancePolymerMonomerSetStartingMaterial, ISubstancePolymerMonomerSet, ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, ISubstancePolymerRepeatRepeatUnitStructuralRepresentation, ISubstancePolymerRepeatRepeatUnit, ISubstancePolymerRepeat, SubstancePolymer, SubstancePolymerMonomerSetStartingMaterial, SubstancePolymerMonomerSet, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, SubstancePolymerRepeatRepeatUnitStructuralRepresentation, SubstancePolymerRepeatRepeatUnit, SubstancePolymerRepeat } from './fhir/SubstancePolymer';
+import { ISubstanceProtein, ISubstanceProteinSubunit, SubstanceProtein, SubstanceProteinSubunit } from './fhir/SubstanceProtein';
+import { ISubstanceReferenceInformation, ISubstanceReferenceInformationGene, ISubstanceReferenceInformationGeneElement, ISubstanceReferenceInformationClassification, ISubstanceReferenceInformationTarget, SubstanceReferenceInformation, SubstanceReferenceInformationGene, SubstanceReferenceInformationGeneElement, SubstanceReferenceInformationClassification, SubstanceReferenceInformationTarget } from './fhir/SubstanceReferenceInformation';
+import { ISubstanceSourceMaterial, ISubstanceSourceMaterialFractionDescription, ISubstanceSourceMaterialOrganismAuthor, ISubstanceSourceMaterialOrganismHybrid, ISubstanceSourceMaterialOrganismOrganismGeneral, ISubstanceSourceMaterialOrganism, ISubstanceSourceMaterialPartDescription, SubstanceSourceMaterial, SubstanceSourceMaterialFractionDescription, SubstanceSourceMaterialOrganismAuthor, SubstanceSourceMaterialOrganismHybrid, SubstanceSourceMaterialOrganismOrganismGeneral, SubstanceSourceMaterialOrganism, SubstanceSourceMaterialPartDescription } from './fhir/SubstanceSourceMaterial';
+import { ISubstanceSpecification, ISubstanceSpecificationMoiety, ISubstanceSpecificationProperty, ISubstanceSpecificationStructureIsotopeMolecularWeight, ISubstanceSpecificationStructureIsotope, ISubstanceSpecificationStructureRepresentation, ISubstanceSpecificationStructure, ISubstanceSpecificationCode, ISubstanceSpecificationNameOfficial, ISubstanceSpecificationName, ISubstanceSpecificationRelationship, SubstanceSpecification, SubstanceSpecificationMoiety, SubstanceSpecificationProperty, SubstanceSpecificationStructureIsotopeMolecularWeight, SubstanceSpecificationStructureIsotope, SubstanceSpecificationStructureRepresentation, SubstanceSpecificationStructure, SubstanceSpecificationCode, SubstanceSpecificationNameOfficial, SubstanceSpecificationName, SubstanceSpecificationRelationship } from './fhir/SubstanceSpecification';
+import { ISupplyDelivery, ISupplyDeliverySuppliedItem, SupplyDelivery, SupplyDeliverySuppliedItem, SupplyDeliveryStatusEnum } from './fhir/SupplyDelivery';
+import { ISupplyRequest, ISupplyRequestParameter, SupplyRequest, SupplyRequestParameter, SupplyRequestPriorityEnum, SupplyRequestStatusEnum } from './fhir/SupplyRequest';
+import { ITask, ITaskRestriction, ITaskInput, ITaskOutput, Task, TaskRestriction, TaskInput, TaskOutput, TaskIntentEnum, TaskPriorityEnum, TaskStatusEnum } from './fhir/Task';
+import { ITerminologyCapabilities, ITerminologyCapabilitiesSoftware, ITerminologyCapabilitiesImplementation, ITerminologyCapabilitiesCodeSystemVersionFilter, ITerminologyCapabilitiesCodeSystemVersion, ITerminologyCapabilitiesCodeSystem, ITerminologyCapabilitiesExpansionParameter, ITerminologyCapabilitiesExpansion, ITerminologyCapabilitiesValidateCode, ITerminologyCapabilitiesTranslation, ITerminologyCapabilitiesClosure, TerminologyCapabilities, TerminologyCapabilitiesSoftware, TerminologyCapabilitiesImplementation, TerminologyCapabilitiesCodeSystemVersionFilter, TerminologyCapabilitiesCodeSystemVersion, TerminologyCapabilitiesCodeSystem, TerminologyCapabilitiesExpansionParameter, TerminologyCapabilitiesExpansion, TerminologyCapabilitiesValidateCode, TerminologyCapabilitiesTranslation, TerminologyCapabilitiesClosure, TerminologyCapabilitiesCodeSearchEnum, TerminologyCapabilitiesKindEnum, TerminologyCapabilitiesStatusEnum } from './fhir/TerminologyCapabilities';
+import { ITestReport, ITestReportParticipant, ITestReportSetupActionOperation, ITestReportSetupActionAssert, ITestReportSetupAction, ITestReportSetup, ITestReportTestAction, ITestReportTest, ITestReportTeardownAction, ITestReportTeardown, TestReport, TestReportParticipant, TestReportSetupActionOperation, TestReportSetupActionAssert, TestReportSetupAction, TestReportSetup, TestReportTestAction, TestReportTest, TestReportTeardownAction, TestReportTeardown, TestReportParticipantTypeEnum, TestReportSetupActionOperationResultEnum, TestReportSetupActionAssertResultEnum, TestReportResultEnum, TestReportStatusEnum } from './fhir/TestReport';
+import { ITestScript, ITestScriptOrigin, ITestScriptDestination, ITestScriptMetadataLink, ITestScriptMetadataCapability, ITestScriptMetadata, ITestScriptFixture, ITestScriptVariable, ITestScriptSetupActionOperationRequestHeader, ITestScriptSetupActionOperation, ITestScriptSetupActionAssert, ITestScriptSetupAction, ITestScriptSetup, ITestScriptTestAction, ITestScriptTest, ITestScriptTeardownAction, ITestScriptTeardown, TestScript, TestScriptOrigin, TestScriptDestination, TestScriptMetadataLink, TestScriptMetadataCapability, TestScriptMetadata, TestScriptFixture, TestScriptVariable, TestScriptSetupActionOperationRequestHeader, TestScriptSetupActionOperation, TestScriptSetupActionAssert, TestScriptSetupAction, TestScriptSetup, TestScriptTestAction, TestScriptTest, TestScriptTeardownAction, TestScriptTeardown, TestScriptSetupActionOperationMethodEnum, TestScriptSetupActionAssertDirectionEnum, TestScriptSetupActionAssertOperatorEnum, TestScriptSetupActionAssertRequestMethodEnum, TestScriptSetupActionAssertResponseEnum, TestScriptStatusEnum } from './fhir/TestScript';
+import { IValueSet, IValueSetComposeIncludeConceptDesignation, IValueSetComposeIncludeConcept, IValueSetComposeIncludeFilter, IValueSetComposeInclude, IValueSetCompose, IValueSetExpansionParameter, IValueSetExpansionContains, IValueSetExpansion, ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeIncludeFilter, ValueSetComposeInclude, ValueSetCompose, ValueSetExpansionParameter, ValueSetExpansionContains, ValueSetExpansion, ValueSetComposeIncludeFilterOpEnum, ValueSetStatusEnum } from './fhir/ValueSet';
+import { IVerificationResult, IVerificationResultPrimarySource, IVerificationResultAttestation, IVerificationResultValidator, VerificationResult, VerificationResultPrimarySource, VerificationResultAttestation, VerificationResultValidator, VerificationResultStatusEnum } from './fhir/VerificationResult';
+import { IVisionPrescription, IVisionPrescriptionLensSpecificationPrism, IVisionPrescriptionLensSpecification, VisionPrescription, VisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecification, VisionPrescriptionLensSpecificationPrismBaseEnum, VisionPrescriptionLensSpecificationEyeEnum, VisionPrescriptionStatusEnum } from './fhir/VisionPrescription';
 
 /**
  * Resource binding for generic use.
  */
 type IFhirResource = 
-  IEncounter
-  |IObservation
-  |IPatient;
+IAccount 
+|IActivityDefinition 
+|IAdverseEvent 
+|IAllergyIntolerance 
+|IAppointment 
+|IAppointmentResponse 
+|IAuditEvent 
+|IBasic 
+|IBinary 
+|IBiologicallyDerivedProduct 
+|IBodyStructure 
+|IBundle 
+|ICapabilityStatement 
+|ICarePlan 
+|ICareTeam 
+|ICatalogEntry 
+|IChargeItem 
+|IChargeItemDefinition 
+|IClaim 
+|IClaimResponse 
+|IClinicalImpression 
+|ICodeSystem 
+|ICommunication 
+|ICommunicationRequest 
+|ICompartmentDefinition 
+|IComposition 
+|IConceptMap 
+|ICondition 
+|IConsent 
+|IContract 
+|ICoverage 
+|ICoverageEligibilityRequest 
+|ICoverageEligibilityResponse 
+|IDetectedIssue 
+|IDevice 
+|IDeviceDefinition 
+|IDeviceMetric 
+|IDeviceRequest 
+|IDeviceUseStatement 
+|IDiagnosticReport 
+|IDocumentManifest 
+|IDocumentReference 
+|IDomainResource 
+|IEffectEvidenceSynthesis 
+|IEncounter 
+|IEndpoint 
+|IEnrollmentRequest 
+|IEnrollmentResponse 
+|IEpisodeOfCare 
+|IEventDefinition 
+|IEvidence 
+|IEvidenceVariable 
+|IExampleScenario 
+|IExplanationOfBenefit 
+|IFamilyMemberHistory 
+|IFlag 
+|IGoal 
+|IGraphDefinition 
+|IGroup 
+|IGuidanceResponse 
+|IHealthcareService 
+|IImagingStudy 
+|IImmunization 
+|IImmunizationEvaluation 
+|IImmunizationRecommendation 
+|IImplementationGuide 
+|IInsurancePlan 
+|IInvoice 
+|ILibrary 
+|ILinkage 
+|IList 
+|ILocation 
+|IMeasure 
+|IMeasureReport 
+|IMedia 
+|IMedication 
+|IMedicationAdministration 
+|IMedicationDispense 
+|IMedicationKnowledge 
+|IMedicationRequest 
+|IMedicationStatement 
+|IMedicinalProduct 
+|IMedicinalProductAuthorization 
+|IMedicinalProductContraindication 
+|IMedicinalProductIndication 
+|IMedicinalProductIngredient 
+|IMedicinalProductInteraction 
+|IMedicinalProductManufactured 
+|IMedicinalProductPackaged 
+|IMedicinalProductPharmaceutical 
+|IMedicinalProductUndesirableEffect 
+|IMessageDefinition 
+|IMessageHeader 
+|IMolecularSequence 
+|INamingSystem 
+|INutritionOrder 
+|IObservation 
+|IObservationDefinition 
+|IOperationDefinition 
+|IOperationOutcome 
+|IOrganization 
+|IOrganizationAffiliation 
+|IParameters 
+|IPatient 
+|IPaymentNotice 
+|IPaymentReconciliation 
+|IPerson 
+|IPlanDefinition 
+|IPractitioner 
+|IPractitionerRole 
+|IProcedure 
+|IProvenance 
+|IQuestionnaire 
+|IQuestionnaireResponse 
+|IRelatedPerson 
+|IRequestGroup 
+|IResearchDefinition 
+|IResearchElementDefinition 
+|IResearchStudy 
+|IResearchSubject 
+|IResource 
+|IRiskAssessment 
+|IRiskEvidenceSynthesis 
+|ISchedule 
+|ISearchParameter 
+|IServiceRequest 
+|ISlot 
+|ISpecimen 
+|ISpecimenDefinition 
+|IStructureDefinition 
+|IStructureMap 
+|ISubscription 
+|ISubstance 
+|ISubstanceNucleicAcid 
+|ISubstancePolymer 
+|ISubstanceProtein 
+|ISubstanceReferenceInformation 
+|ISubstanceSourceMaterial 
+|ISubstanceSpecification 
+|ISupplyDelivery 
+|ISupplyRequest 
+|ITask 
+|ITerminologyCapabilities 
+|ITestReport 
+|ITestScript 
+|IValueSet 
+|IVerificationResult 
+|IVisionPrescription;
 
 
 /**
  * Resource binding for generic use.
  */
 type FhirResource = 
-  Encounter
-  |Observation
-  |Patient;
+Account 
+|ActivityDefinition 
+|AdverseEvent 
+|AllergyIntolerance 
+|Appointment 
+|AppointmentResponse 
+|AuditEvent 
+|Basic 
+|Binary 
+|BiologicallyDerivedProduct 
+|BodyStructure 
+|Bundle 
+|CapabilityStatement 
+|CarePlan 
+|CareTeam 
+|CatalogEntry 
+|ChargeItem 
+|ChargeItemDefinition 
+|Claim 
+|ClaimResponse 
+|ClinicalImpression 
+|CodeSystem 
+|Communication 
+|CommunicationRequest 
+|CompartmentDefinition 
+|Composition 
+|ConceptMap 
+|Condition 
+|Consent 
+|Contract 
+|Coverage 
+|CoverageEligibilityRequest 
+|CoverageEligibilityResponse 
+|DetectedIssue 
+|Device 
+|DeviceDefinition 
+|DeviceMetric 
+|DeviceRequest 
+|DeviceUseStatement 
+|DiagnosticReport 
+|DocumentManifest 
+|DocumentReference 
+|DomainResource 
+|EffectEvidenceSynthesis 
+|Encounter 
+|Endpoint 
+|EnrollmentRequest 
+|EnrollmentResponse 
+|EpisodeOfCare 
+|EventDefinition 
+|Evidence 
+|EvidenceVariable 
+|ExampleScenario 
+|ExplanationOfBenefit 
+|FamilyMemberHistory 
+|Flag 
+|Goal 
+|GraphDefinition 
+|Group 
+|GuidanceResponse 
+|HealthcareService 
+|ImagingStudy 
+|Immunization 
+|ImmunizationEvaluation 
+|ImmunizationRecommendation 
+|ImplementationGuide 
+|InsurancePlan 
+|Invoice 
+|Library 
+|Linkage 
+|List 
+|Location 
+|Measure 
+|MeasureReport 
+|Media 
+|Medication 
+|MedicationAdministration 
+|MedicationDispense 
+|MedicationKnowledge 
+|MedicationRequest 
+|MedicationStatement 
+|MedicinalProduct 
+|MedicinalProductAuthorization 
+|MedicinalProductContraindication 
+|MedicinalProductIndication 
+|MedicinalProductIngredient 
+|MedicinalProductInteraction 
+|MedicinalProductManufactured 
+|MedicinalProductPackaged 
+|MedicinalProductPharmaceutical 
+|MedicinalProductUndesirableEffect 
+|MessageDefinition 
+|MessageHeader 
+|MolecularSequence 
+|NamingSystem 
+|NutritionOrder 
+|Observation 
+|ObservationDefinition 
+|OperationDefinition 
+|OperationOutcome 
+|Organization 
+|OrganizationAffiliation 
+|Parameters 
+|Patient 
+|PaymentNotice 
+|PaymentReconciliation 
+|Person 
+|PlanDefinition 
+|Practitioner 
+|PractitionerRole 
+|Procedure 
+|Provenance 
+|Questionnaire 
+|QuestionnaireResponse 
+|RelatedPerson 
+|RequestGroup 
+|ResearchDefinition 
+|ResearchElementDefinition 
+|ResearchStudy 
+|ResearchSubject 
+|Resource 
+|RiskAssessment 
+|RiskEvidenceSynthesis 
+|Schedule 
+|SearchParameter 
+|ServiceRequest 
+|Slot 
+|Specimen 
+|SpecimenDefinition 
+|StructureDefinition 
+|StructureMap 
+|Subscription 
+|Substance 
+|SubstanceNucleicAcid 
+|SubstancePolymer 
+|SubstanceProtein 
+|SubstanceReferenceInformation 
+|SubstanceSourceMaterial 
+|SubstanceSpecification 
+|SupplyDelivery 
+|SupplyRequest 
+|Task 
+|TerminologyCapabilities 
+|TestReport 
+|TestScript 
+|ValueSet 
+|VerificationResult 
+|VisionPrescription;
 
 /**
  * Factory creator for FHIR Resources
  */
 function FhirResourceFactory(source:any) : FhirResource|null {
   switch (source["resourceType"]) {
-    case "Encounter": return Encounter.FactoryCreate(source);
-    case "Observation": return Observation.FactoryCreate(source);
-    case "Patient": return Patient.FactoryCreate(source);
+    case "Account": return new Account(source);
+    case "ActivityDefinition": return new ActivityDefinition(source);
+    case "AdverseEvent": return new AdverseEvent(source);
+    case "AllergyIntolerance": return new AllergyIntolerance(source);
+    case "Appointment": return new Appointment(source);
+    case "AppointmentResponse": return new AppointmentResponse(source);
+    case "AuditEvent": return new AuditEvent(source);
+    case "Basic": return new Basic(source);
+    case "Binary": return new Binary(source);
+    case "BiologicallyDerivedProduct": return new BiologicallyDerivedProduct(source);
+    case "BodyStructure": return new BodyStructure(source);
+    case "Bundle": return new Bundle(source);
+    case "CapabilityStatement": return new CapabilityStatement(source);
+    case "CarePlan": return new CarePlan(source);
+    case "CareTeam": return new CareTeam(source);
+    case "CatalogEntry": return new CatalogEntry(source);
+    case "ChargeItem": return new ChargeItem(source);
+    case "ChargeItemDefinition": return new ChargeItemDefinition(source);
+    case "Claim": return new Claim(source);
+    case "ClaimResponse": return new ClaimResponse(source);
+    case "ClinicalImpression": return new ClinicalImpression(source);
+    case "CodeSystem": return new CodeSystem(source);
+    case "Communication": return new Communication(source);
+    case "CommunicationRequest": return new CommunicationRequest(source);
+    case "CompartmentDefinition": return new CompartmentDefinition(source);
+    case "Composition": return new Composition(source);
+    case "ConceptMap": return new ConceptMap(source);
+    case "Condition": return new Condition(source);
+    case "Consent": return new Consent(source);
+    case "Contract": return new Contract(source);
+    case "Coverage": return new Coverage(source);
+    case "CoverageEligibilityRequest": return new CoverageEligibilityRequest(source);
+    case "CoverageEligibilityResponse": return new CoverageEligibilityResponse(source);
+    case "DetectedIssue": return new DetectedIssue(source);
+    case "Device": return new Device(source);
+    case "DeviceDefinition": return new DeviceDefinition(source);
+    case "DeviceMetric": return new DeviceMetric(source);
+    case "DeviceRequest": return new DeviceRequest(source);
+    case "DeviceUseStatement": return new DeviceUseStatement(source);
+    case "DiagnosticReport": return new DiagnosticReport(source);
+    case "DocumentManifest": return new DocumentManifest(source);
+    case "DocumentReference": return new DocumentReference(source);
+    case "DomainResource": return new DomainResource(source);
+    case "EffectEvidenceSynthesis": return new EffectEvidenceSynthesis(source);
+    case "Encounter": return new Encounter(source);
+    case "Endpoint": return new Endpoint(source);
+    case "EnrollmentRequest": return new EnrollmentRequest(source);
+    case "EnrollmentResponse": return new EnrollmentResponse(source);
+    case "EpisodeOfCare": return new EpisodeOfCare(source);
+    case "EventDefinition": return new EventDefinition(source);
+    case "Evidence": return new Evidence(source);
+    case "EvidenceVariable": return new EvidenceVariable(source);
+    case "ExampleScenario": return new ExampleScenario(source);
+    case "ExplanationOfBenefit": return new ExplanationOfBenefit(source);
+    case "FamilyMemberHistory": return new FamilyMemberHistory(source);
+    case "Flag": return new Flag(source);
+    case "Goal": return new Goal(source);
+    case "GraphDefinition": return new GraphDefinition(source);
+    case "Group": return new Group(source);
+    case "GuidanceResponse": return new GuidanceResponse(source);
+    case "HealthcareService": return new HealthcareService(source);
+    case "ImagingStudy": return new ImagingStudy(source);
+    case "Immunization": return new Immunization(source);
+    case "ImmunizationEvaluation": return new ImmunizationEvaluation(source);
+    case "ImmunizationRecommendation": return new ImmunizationRecommendation(source);
+    case "ImplementationGuide": return new ImplementationGuide(source);
+    case "InsurancePlan": return new InsurancePlan(source);
+    case "Invoice": return new Invoice(source);
+    case "Library": return new Library(source);
+    case "Linkage": return new Linkage(source);
+    case "List": return new List(source);
+    case "Location": return new Location(source);
+    case "Measure": return new Measure(source);
+    case "MeasureReport": return new MeasureReport(source);
+    case "Media": return new Media(source);
+    case "Medication": return new Medication(source);
+    case "MedicationAdministration": return new MedicationAdministration(source);
+    case "MedicationDispense": return new MedicationDispense(source);
+    case "MedicationKnowledge": return new MedicationKnowledge(source);
+    case "MedicationRequest": return new MedicationRequest(source);
+    case "MedicationStatement": return new MedicationStatement(source);
+    case "MedicinalProduct": return new MedicinalProduct(source);
+    case "MedicinalProductAuthorization": return new MedicinalProductAuthorization(source);
+    case "MedicinalProductContraindication": return new MedicinalProductContraindication(source);
+    case "MedicinalProductIndication": return new MedicinalProductIndication(source);
+    case "MedicinalProductIngredient": return new MedicinalProductIngredient(source);
+    case "MedicinalProductInteraction": return new MedicinalProductInteraction(source);
+    case "MedicinalProductManufactured": return new MedicinalProductManufactured(source);
+    case "MedicinalProductPackaged": return new MedicinalProductPackaged(source);
+    case "MedicinalProductPharmaceutical": return new MedicinalProductPharmaceutical(source);
+    case "MedicinalProductUndesirableEffect": return new MedicinalProductUndesirableEffect(source);
+    case "MessageDefinition": return new MessageDefinition(source);
+    case "MessageHeader": return new MessageHeader(source);
+    case "MolecularSequence": return new MolecularSequence(source);
+    case "NamingSystem": return new NamingSystem(source);
+    case "NutritionOrder": return new NutritionOrder(source);
+    case "Observation": return new Observation(source);
+    case "ObservationDefinition": return new ObservationDefinition(source);
+    case "OperationDefinition": return new OperationDefinition(source);
+    case "OperationOutcome": return new OperationOutcome(source);
+    case "Organization": return new Organization(source);
+    case "OrganizationAffiliation": return new OrganizationAffiliation(source);
+    case "Parameters": return new Parameters(source);
+    case "Patient": return new Patient(source);
+    case "PaymentNotice": return new PaymentNotice(source);
+    case "PaymentReconciliation": return new PaymentReconciliation(source);
+    case "Person": return new Person(source);
+    case "PlanDefinition": return new PlanDefinition(source);
+    case "Practitioner": return new Practitioner(source);
+    case "PractitionerRole": return new PractitionerRole(source);
+    case "Procedure": return new Procedure(source);
+    case "Provenance": return new Provenance(source);
+    case "Questionnaire": return new Questionnaire(source);
+    case "QuestionnaireResponse": return new QuestionnaireResponse(source);
+    case "RelatedPerson": return new RelatedPerson(source);
+    case "RequestGroup": return new RequestGroup(source);
+    case "ResearchDefinition": return new ResearchDefinition(source);
+    case "ResearchElementDefinition": return new ResearchElementDefinition(source);
+    case "ResearchStudy": return new ResearchStudy(source);
+    case "ResearchSubject": return new ResearchSubject(source);
+    case "Resource": return new Resource(source);
+    case "RiskAssessment": return new RiskAssessment(source);
+    case "RiskEvidenceSynthesis": return new RiskEvidenceSynthesis(source);
+    case "Schedule": return new Schedule(source);
+    case "SearchParameter": return new SearchParameter(source);
+    case "ServiceRequest": return new ServiceRequest(source);
+    case "Slot": return new Slot(source);
+    case "Specimen": return new Specimen(source);
+    case "SpecimenDefinition": return new SpecimenDefinition(source);
+    case "StructureDefinition": return new StructureDefinition(source);
+    case "StructureMap": return new StructureMap(source);
+    case "Subscription": return new Subscription(source);
+    case "Substance": return new Substance(source);
+    case "SubstanceNucleicAcid": return new SubstanceNucleicAcid(source);
+    case "SubstancePolymer": return new SubstancePolymer(source);
+    case "SubstanceProtein": return new SubstanceProtein(source);
+    case "SubstanceReferenceInformation": return new SubstanceReferenceInformation(source);
+    case "SubstanceSourceMaterial": return new SubstanceSourceMaterial(source);
+    case "SubstanceSpecification": return new SubstanceSpecification(source);
+    case "SupplyDelivery": return new SupplyDelivery(source);
+    case "SupplyRequest": return new SupplyRequest(source);
+    case "Task": return new Task(source);
+    case "TerminologyCapabilities": return new TerminologyCapabilities(source);
+    case "TestReport": return new TestReport(source);
+    case "TestScript": return new TestScript(source);
+    case "ValueSet": return new ValueSet(source);
+    case "VerificationResult": return new VerificationResult(source);
+    case "VisionPrescription": return new VisionPrescription(source);
     default: return null;
   }
 }
@@ -66,40 +663,348 @@ function FhirResourceFactory(source:any) : FhirResource|null {
  */
 function FhirResourceFactoryStrict(source:any) : FhirResource|null {
   switch (source["resourceType"]) {
-    case "Encounter": return Encounter.FactoryCreateStrict(source);
-    case "Observation": return Observation.FactoryCreateStrict(source);
-    case "Patient": return Patient.FactoryCreateStrict(source);
+    case "Account": return Account.FromStrict(source);
+    case "ActivityDefinition": return ActivityDefinition.FromStrict(source);
+    case "AdverseEvent": return AdverseEvent.FromStrict(source);
+    case "AllergyIntolerance": return AllergyIntolerance.FromStrict(source);
+    case "Appointment": return Appointment.FromStrict(source);
+    case "AppointmentResponse": return AppointmentResponse.FromStrict(source);
+    case "AuditEvent": return AuditEvent.FromStrict(source);
+    case "Basic": return Basic.FromStrict(source);
+    case "Binary": return Binary.FromStrict(source);
+    case "BiologicallyDerivedProduct": return BiologicallyDerivedProduct.FromStrict(source);
+    case "BodyStructure": return BodyStructure.FromStrict(source);
+    case "Bundle": return Bundle.FromStrict(source);
+    case "CapabilityStatement": return CapabilityStatement.FromStrict(source);
+    case "CarePlan": return CarePlan.FromStrict(source);
+    case "CareTeam": return CareTeam.FromStrict(source);
+    case "CatalogEntry": return CatalogEntry.FromStrict(source);
+    case "ChargeItem": return ChargeItem.FromStrict(source);
+    case "ChargeItemDefinition": return ChargeItemDefinition.FromStrict(source);
+    case "Claim": return Claim.FromStrict(source);
+    case "ClaimResponse": return ClaimResponse.FromStrict(source);
+    case "ClinicalImpression": return ClinicalImpression.FromStrict(source);
+    case "CodeSystem": return CodeSystem.FromStrict(source);
+    case "Communication": return Communication.FromStrict(source);
+    case "CommunicationRequest": return CommunicationRequest.FromStrict(source);
+    case "CompartmentDefinition": return CompartmentDefinition.FromStrict(source);
+    case "Composition": return Composition.FromStrict(source);
+    case "ConceptMap": return ConceptMap.FromStrict(source);
+    case "Condition": return Condition.FromStrict(source);
+    case "Consent": return Consent.FromStrict(source);
+    case "Contract": return Contract.FromStrict(source);
+    case "Coverage": return Coverage.FromStrict(source);
+    case "CoverageEligibilityRequest": return CoverageEligibilityRequest.FromStrict(source);
+    case "CoverageEligibilityResponse": return CoverageEligibilityResponse.FromStrict(source);
+    case "DetectedIssue": return DetectedIssue.FromStrict(source);
+    case "Device": return Device.FromStrict(source);
+    case "DeviceDefinition": return DeviceDefinition.FromStrict(source);
+    case "DeviceMetric": return DeviceMetric.FromStrict(source);
+    case "DeviceRequest": return DeviceRequest.FromStrict(source);
+    case "DeviceUseStatement": return DeviceUseStatement.FromStrict(source);
+    case "DiagnosticReport": return DiagnosticReport.FromStrict(source);
+    case "DocumentManifest": return DocumentManifest.FromStrict(source);
+    case "DocumentReference": return DocumentReference.FromStrict(source);
+    case "DomainResource": return DomainResource.FromStrict(source);
+    case "EffectEvidenceSynthesis": return EffectEvidenceSynthesis.FromStrict(source);
+    case "Encounter": return Encounter.FromStrict(source);
+    case "Endpoint": return Endpoint.FromStrict(source);
+    case "EnrollmentRequest": return EnrollmentRequest.FromStrict(source);
+    case "EnrollmentResponse": return EnrollmentResponse.FromStrict(source);
+    case "EpisodeOfCare": return EpisodeOfCare.FromStrict(source);
+    case "EventDefinition": return EventDefinition.FromStrict(source);
+    case "Evidence": return Evidence.FromStrict(source);
+    case "EvidenceVariable": return EvidenceVariable.FromStrict(source);
+    case "ExampleScenario": return ExampleScenario.FromStrict(source);
+    case "ExplanationOfBenefit": return ExplanationOfBenefit.FromStrict(source);
+    case "FamilyMemberHistory": return FamilyMemberHistory.FromStrict(source);
+    case "Flag": return Flag.FromStrict(source);
+    case "Goal": return Goal.FromStrict(source);
+    case "GraphDefinition": return GraphDefinition.FromStrict(source);
+    case "Group": return Group.FromStrict(source);
+    case "GuidanceResponse": return GuidanceResponse.FromStrict(source);
+    case "HealthcareService": return HealthcareService.FromStrict(source);
+    case "ImagingStudy": return ImagingStudy.FromStrict(source);
+    case "Immunization": return Immunization.FromStrict(source);
+    case "ImmunizationEvaluation": return ImmunizationEvaluation.FromStrict(source);
+    case "ImmunizationRecommendation": return ImmunizationRecommendation.FromStrict(source);
+    case "ImplementationGuide": return ImplementationGuide.FromStrict(source);
+    case "InsurancePlan": return InsurancePlan.FromStrict(source);
+    case "Invoice": return Invoice.FromStrict(source);
+    case "Library": return Library.FromStrict(source);
+    case "Linkage": return Linkage.FromStrict(source);
+    case "List": return List.FromStrict(source);
+    case "Location": return Location.FromStrict(source);
+    case "Measure": return Measure.FromStrict(source);
+    case "MeasureReport": return MeasureReport.FromStrict(source);
+    case "Media": return Media.FromStrict(source);
+    case "Medication": return Medication.FromStrict(source);
+    case "MedicationAdministration": return MedicationAdministration.FromStrict(source);
+    case "MedicationDispense": return MedicationDispense.FromStrict(source);
+    case "MedicationKnowledge": return MedicationKnowledge.FromStrict(source);
+    case "MedicationRequest": return MedicationRequest.FromStrict(source);
+    case "MedicationStatement": return MedicationStatement.FromStrict(source);
+    case "MedicinalProduct": return MedicinalProduct.FromStrict(source);
+    case "MedicinalProductAuthorization": return MedicinalProductAuthorization.FromStrict(source);
+    case "MedicinalProductContraindication": return MedicinalProductContraindication.FromStrict(source);
+    case "MedicinalProductIndication": return MedicinalProductIndication.FromStrict(source);
+    case "MedicinalProductIngredient": return MedicinalProductIngredient.FromStrict(source);
+    case "MedicinalProductInteraction": return MedicinalProductInteraction.FromStrict(source);
+    case "MedicinalProductManufactured": return MedicinalProductManufactured.FromStrict(source);
+    case "MedicinalProductPackaged": return MedicinalProductPackaged.FromStrict(source);
+    case "MedicinalProductPharmaceutical": return MedicinalProductPharmaceutical.FromStrict(source);
+    case "MedicinalProductUndesirableEffect": return MedicinalProductUndesirableEffect.FromStrict(source);
+    case "MessageDefinition": return MessageDefinition.FromStrict(source);
+    case "MessageHeader": return MessageHeader.FromStrict(source);
+    case "MolecularSequence": return MolecularSequence.FromStrict(source);
+    case "NamingSystem": return NamingSystem.FromStrict(source);
+    case "NutritionOrder": return NutritionOrder.FromStrict(source);
+    case "Observation": return Observation.FromStrict(source);
+    case "ObservationDefinition": return ObservationDefinition.FromStrict(source);
+    case "OperationDefinition": return OperationDefinition.FromStrict(source);
+    case "OperationOutcome": return OperationOutcome.FromStrict(source);
+    case "Organization": return Organization.FromStrict(source);
+    case "OrganizationAffiliation": return OrganizationAffiliation.FromStrict(source);
+    case "Parameters": return Parameters.FromStrict(source);
+    case "Patient": return Patient.FromStrict(source);
+    case "PaymentNotice": return PaymentNotice.FromStrict(source);
+    case "PaymentReconciliation": return PaymentReconciliation.FromStrict(source);
+    case "Person": return Person.FromStrict(source);
+    case "PlanDefinition": return PlanDefinition.FromStrict(source);
+    case "Practitioner": return Practitioner.FromStrict(source);
+    case "PractitionerRole": return PractitionerRole.FromStrict(source);
+    case "Procedure": return Procedure.FromStrict(source);
+    case "Provenance": return Provenance.FromStrict(source);
+    case "Questionnaire": return Questionnaire.FromStrict(source);
+    case "QuestionnaireResponse": return QuestionnaireResponse.FromStrict(source);
+    case "RelatedPerson": return RelatedPerson.FromStrict(source);
+    case "RequestGroup": return RequestGroup.FromStrict(source);
+    case "ResearchDefinition": return ResearchDefinition.FromStrict(source);
+    case "ResearchElementDefinition": return ResearchElementDefinition.FromStrict(source);
+    case "ResearchStudy": return ResearchStudy.FromStrict(source);
+    case "ResearchSubject": return ResearchSubject.FromStrict(source);
+    case "Resource": return Resource.FromStrict(source);
+    case "RiskAssessment": return RiskAssessment.FromStrict(source);
+    case "RiskEvidenceSynthesis": return RiskEvidenceSynthesis.FromStrict(source);
+    case "Schedule": return Schedule.FromStrict(source);
+    case "SearchParameter": return SearchParameter.FromStrict(source);
+    case "ServiceRequest": return ServiceRequest.FromStrict(source);
+    case "Slot": return Slot.FromStrict(source);
+    case "Specimen": return Specimen.FromStrict(source);
+    case "SpecimenDefinition": return SpecimenDefinition.FromStrict(source);
+    case "StructureDefinition": return StructureDefinition.FromStrict(source);
+    case "StructureMap": return StructureMap.FromStrict(source);
+    case "Subscription": return Subscription.FromStrict(source);
+    case "Substance": return Substance.FromStrict(source);
+    case "SubstanceNucleicAcid": return SubstanceNucleicAcid.FromStrict(source);
+    case "SubstancePolymer": return SubstancePolymer.FromStrict(source);
+    case "SubstanceProtein": return SubstanceProtein.FromStrict(source);
+    case "SubstanceReferenceInformation": return SubstanceReferenceInformation.FromStrict(source);
+    case "SubstanceSourceMaterial": return SubstanceSourceMaterial.FromStrict(source);
+    case "SubstanceSpecification": return SubstanceSpecification.FromStrict(source);
+    case "SupplyDelivery": return SupplyDelivery.FromStrict(source);
+    case "SupplyRequest": return SupplyRequest.FromStrict(source);
+    case "Task": return Task.FromStrict(source);
+    case "TerminologyCapabilities": return TerminologyCapabilities.FromStrict(source);
+    case "TestReport": return TestReport.FromStrict(source);
+    case "TestScript": return TestScript.FromStrict(source);
+    case "ValueSet": return ValueSet.FromStrict(source);
+    case "VerificationResult": return VerificationResult.FromStrict(source);
+    case "VisionPrescription": return VisionPrescription.FromStrict(source);
     default: return null;
   }
 }
 
 export {
+  type IFhirElement, FhirElement, 
   type IAddress, Address, AddressTypeEnum, AddressUseEnum, 
+  type IQuantity, Quantity, QuantityComparatorEnum, 
+  type IAge, Age, 
   type IAnnotation, Annotation, 
   type IAttachment, Attachment, 
   type IBackboneElement, BackboneElement, 
   type ICodeableConcept, CodeableConcept, 
   type ICoding, Coding, 
+  type IContactDetail, ContactDetail, 
   type IContactPoint, ContactPoint, ContactPointSystemEnum, ContactPointUseEnum, 
+  type IContributor, Contributor, ContributorTypeEnum, 
+  type ICount, Count, 
+  type IDataRequirement, type IDataRequirementCodeFilter, type IDataRequirementDateFilter, type IDataRequirementSort, DataRequirement, DataRequirementCodeFilter, DataRequirementDateFilter, DataRequirementSort, DataRequirementSortDirectionEnum, 
+  type IDistance, Distance, 
+  type IDosage, type IDosageDoseAndRate, Dosage, DosageDoseAndRate, 
   type IDuration, Duration, 
-  type IFhirElement, FhirElement, 
+  type IElementDefinition, type IElementDefinitionSlicingDiscriminator, type IElementDefinitionSlicing, type IElementDefinitionBase, type IElementDefinitionType, type IElementDefinitionExample, type IElementDefinitionConstraint, type IElementDefinitionBinding, type IElementDefinitionMapping, ElementDefinition, ElementDefinitionSlicingDiscriminator, ElementDefinitionSlicing, ElementDefinitionBase, ElementDefinitionType, ElementDefinitionExample, ElementDefinitionConstraint, ElementDefinitionBinding, ElementDefinitionMapping, ElementDefinitionSlicingDiscriminatorTypeEnum, ElementDefinitionSlicingRulesEnum, ElementDefinitionTypeAggregationEnum, ElementDefinitionTypeVersioningEnum, ElementDefinitionConstraintSeverityEnum, ElementDefinitionBindingStrengthEnum, ElementDefinitionRepresentationEnum, 
+  type IExpression, Expression, ExpressionLanguageEnum, 
   type IExtension, Extension, 
   type IHumanName, HumanName, HumanNameUseEnum, 
   type IIdentifier, Identifier, IdentifierUseEnum, 
+  type IMarketingStatus, MarketingStatus, 
   type IMeta, Meta, 
+  type IMoney, Money, 
   type INarrative, Narrative, NarrativeStatusEnum, 
+  type IParameterDefinition, ParameterDefinition, ParameterDefinitionUseEnum, 
   type IPeriod, Period, 
-  type IQuantity, Quantity, QuantityComparatorEnum, 
+  type IPopulation, Population, 
+  type IProdCharacteristic, ProdCharacteristic, 
+  type IProductShelfLife, ProductShelfLife, 
   type IRange, Range, 
   type IRatio, Ratio, 
   type IReference, Reference, 
+  type IRelatedArtifact, RelatedArtifact, RelatedArtifactTypeEnum, 
   type ISampledData, SampledData, 
-  type ITimingRepeat, type ITiming, TimingRepeat, Timing, TimingRepeatDayOfWeekEnum, TimingRepeatDurationUnitEnum, TimingRepeatPeriodUnitEnum, 
-  type IDomainResource, DomainResource, 
-  type IEncounterStatusHistory, type IEncounterClassHistory, type IEncounterParticipant, type IEncounterDiagnosis, type IEncounterHospitalization, type IEncounterLocation, type IEncounter, EncounterStatusHistory, EncounterClassHistory, EncounterParticipant, EncounterDiagnosis, EncounterHospitalization, EncounterLocation, Encounter, EncounterStatusHistoryStatusEnum, EncounterLocationStatusEnum, EncounterStatusEnum, 
-  type IObservationReferenceRange, type IObservationComponent, type IObservation, ObservationReferenceRange, ObservationComponent, Observation, ObservationStatusEnum, 
-  type IPatientContact, type IPatientCommunication, type IPatientLink, type IPatient, PatientContact, PatientCommunication, PatientLink, Patient, PatientContactGenderEnum, PatientLinkTypeEnum, PatientGenderEnum, 
+  type ISignature, Signature, 
+  type ISubstanceAmount, type ISubstanceAmountReferenceRange, SubstanceAmount, SubstanceAmountReferenceRange, 
+  type ITiming, type ITimingRepeat, Timing, TimingRepeat, TimingRepeatDayOfWeekEnum, TimingRepeatDurationUnitEnum, TimingRepeatPeriodUnitEnum, 
+  type ITriggerDefinition, TriggerDefinition, TriggerDefinitionTypeEnum, 
+  type IUsageContext, UsageContext, 
   type IResource, Resource, 
+  type IDomainResource, DomainResource, 
+  type IAccount, type IAccountCoverage, type IAccountGuarantor, Account, AccountCoverage, AccountGuarantor, AccountStatusEnum, 
+  type IActivityDefinition, type IActivityDefinitionParticipant, type IActivityDefinitionDynamicValue, ActivityDefinition, ActivityDefinitionParticipant, ActivityDefinitionDynamicValue, ActivityDefinitionParticipantTypeEnum, ActivityDefinitionIntentEnum, ActivityDefinitionPriorityEnum, ActivityDefinitionStatusEnum, 
+  type IAdverseEvent, type IAdverseEventSuspectEntityCausality, type IAdverseEventSuspectEntity, AdverseEvent, AdverseEventSuspectEntityCausality, AdverseEventSuspectEntity, AdverseEventActualityEnum, 
+  type IAllergyIntolerance, type IAllergyIntoleranceReaction, AllergyIntolerance, AllergyIntoleranceReaction, AllergyIntoleranceReactionSeverityEnum, AllergyIntoleranceCategoryEnum, AllergyIntoleranceCriticalityEnum, AllergyIntoleranceTypeEnum, 
+  type IAppointment, type IAppointmentParticipant, Appointment, AppointmentParticipant, AppointmentParticipantRequiredEnum, AppointmentParticipantStatusEnum, AppointmentStatusEnum, 
+  type IAppointmentResponse, AppointmentResponse, AppointmentResponseParticipantStatusEnum, 
+  type IAuditEvent, type IAuditEventAgentNetwork, type IAuditEventAgent, type IAuditEventSource, type IAuditEventEntityDetail, type IAuditEventEntity, AuditEvent, AuditEventAgentNetwork, AuditEventAgent, AuditEventSource, AuditEventEntityDetail, AuditEventEntity, 
+  type IBasic, Basic, 
+  type IBinary, Binary, 
+  type IBiologicallyDerivedProduct, type IBiologicallyDerivedProductCollection, type IBiologicallyDerivedProductProcessing, type IBiologicallyDerivedProductManipulation, type IBiologicallyDerivedProductStorage, BiologicallyDerivedProduct, BiologicallyDerivedProductCollection, BiologicallyDerivedProductProcessing, BiologicallyDerivedProductManipulation, BiologicallyDerivedProductStorage, BiologicallyDerivedProductStorageScaleEnum, BiologicallyDerivedProductProductCategoryEnum, BiologicallyDerivedProductStatusEnum, 
+  type IBodyStructure, BodyStructure, 
+  type IBundle, type IBundleLink, type IBundleEntrySearch, type IBundleEntryRequest, type IBundleEntryResponse, type IBundleEntry, Bundle, BundleLink, BundleEntrySearch, BundleEntryRequest, BundleEntryResponse, BundleEntry, BundleEntrySearchModeEnum, BundleEntryRequestMethodEnum, BundleTypeEnum, 
+  type ICapabilityStatement, type ICapabilityStatementSoftware, type ICapabilityStatementImplementation, type ICapabilityStatementRestSecurity, type ICapabilityStatementRestResourceInteraction, type ICapabilityStatementRestResourceSearchParam, type ICapabilityStatementRestResourceOperation, type ICapabilityStatementRestResource, type ICapabilityStatementRestInteraction, type ICapabilityStatementRest, type ICapabilityStatementMessagingEndpoint, type ICapabilityStatementMessagingSupportedMessage, type ICapabilityStatementMessaging, type ICapabilityStatementDocument, CapabilityStatement, CapabilityStatementSoftware, CapabilityStatementImplementation, CapabilityStatementRestSecurity, CapabilityStatementRestResourceInteraction, CapabilityStatementRestResourceSearchParam, CapabilityStatementRestResourceOperation, CapabilityStatementRestResource, CapabilityStatementRestInteraction, CapabilityStatementRest, CapabilityStatementMessagingEndpoint, CapabilityStatementMessagingSupportedMessage, CapabilityStatementMessaging, CapabilityStatementDocument, CapabilityStatementRestResourceInteractionCodeEnum, CapabilityStatementRestResourceSearchParamTypeEnum, CapabilityStatementRestResourceConditionalDeleteEnum, CapabilityStatementRestResourceConditionalReadEnum, CapabilityStatementRestResourceReferencePolicyEnum, CapabilityStatementRestResourceVersioningEnum, CapabilityStatementRestInteractionCodeEnum, CapabilityStatementRestModeEnum, CapabilityStatementMessagingSupportedMessageModeEnum, CapabilityStatementDocumentModeEnum, CapabilityStatementFormatEnum, CapabilityStatementKindEnum, CapabilityStatementStatusEnum, 
+  type ICarePlan, type ICarePlanActivityDetail, type ICarePlanActivity, CarePlan, CarePlanActivityDetail, CarePlanActivity, CarePlanActivityDetailKindEnum, CarePlanActivityDetailStatusEnum, CarePlanIntentEnum, CarePlanStatusEnum, 
+  type ICareTeam, type ICareTeamParticipant, CareTeam, CareTeamParticipant, CareTeamStatusEnum, 
+  type ICatalogEntry, type ICatalogEntryRelatedEntry, CatalogEntry, CatalogEntryRelatedEntry, CatalogEntryRelatedEntryRelationtypeEnum, CatalogEntryStatusEnum, 
+  type IChargeItem, type IChargeItemPerformer, ChargeItem, ChargeItemPerformer, ChargeItemStatusEnum, 
+  type IChargeItemDefinition, type IChargeItemDefinitionApplicability, type IChargeItemDefinitionPropertyGroupPriceComponent, type IChargeItemDefinitionPropertyGroup, ChargeItemDefinition, ChargeItemDefinitionApplicability, ChargeItemDefinitionPropertyGroupPriceComponent, ChargeItemDefinitionPropertyGroup, ChargeItemDefinitionPropertyGroupPriceComponentTypeEnum, ChargeItemDefinitionStatusEnum, 
+  type IClaim, type IClaimRelated, type IClaimPayee, type IClaimCareTeam, type IClaimSupportingInfo, type IClaimDiagnosis, type IClaimProcedure, type IClaimInsurance, type IClaimAccident, type IClaimItemDetailSubDetail, type IClaimItemDetail, type IClaimItem, Claim, ClaimRelated, ClaimPayee, ClaimCareTeam, ClaimSupportingInfo, ClaimDiagnosis, ClaimProcedure, ClaimInsurance, ClaimAccident, ClaimItemDetailSubDetail, ClaimItemDetail, ClaimItem, ClaimStatusEnum, ClaimUseEnum, 
+  type IClaimResponse, type IClaimResponseItemAdjudication, type IClaimResponseItemDetailSubDetail, type IClaimResponseItemDetail, type IClaimResponseItem, type IClaimResponseAddItemDetailSubDetail, type IClaimResponseAddItemDetail, type IClaimResponseAddItem, type IClaimResponseTotal, type IClaimResponsePayment, type IClaimResponseProcessNote, type IClaimResponseInsurance, type IClaimResponseError, ClaimResponse, ClaimResponseItemAdjudication, ClaimResponseItemDetailSubDetail, ClaimResponseItemDetail, ClaimResponseItem, ClaimResponseAddItemDetailSubDetail, ClaimResponseAddItemDetail, ClaimResponseAddItem, ClaimResponseTotal, ClaimResponsePayment, ClaimResponseProcessNote, ClaimResponseInsurance, ClaimResponseError, ClaimResponseProcessNoteTypeEnum, ClaimResponseOutcomeEnum, ClaimResponseStatusEnum, ClaimResponseUseEnum, 
+  type IClinicalImpression, type IClinicalImpressionInvestigation, type IClinicalImpressionFinding, ClinicalImpression, ClinicalImpressionInvestigation, ClinicalImpressionFinding, ClinicalImpressionStatusEnum, 
+  type ICodeSystem, type ICodeSystemFilter, type ICodeSystemProperty, type ICodeSystemConceptDesignation, type ICodeSystemConceptProperty, type ICodeSystemConcept, CodeSystem, CodeSystemFilter, CodeSystemProperty, CodeSystemConceptDesignation, CodeSystemConceptProperty, CodeSystemConcept, CodeSystemFilterOperatorEnum, CodeSystemPropertyTypeEnum, CodeSystemContentEnum, CodeSystemHierarchyMeaningEnum, CodeSystemStatusEnum, 
+  type ICommunication, type ICommunicationPayload, Communication, CommunicationPayload, CommunicationPriorityEnum, CommunicationStatusEnum, 
+  type ICommunicationRequest, type ICommunicationRequestPayload, CommunicationRequest, CommunicationRequestPayload, CommunicationRequestPriorityEnum, CommunicationRequestStatusEnum, 
+  type ICompartmentDefinition, type ICompartmentDefinitionResource, CompartmentDefinition, CompartmentDefinitionResource, CompartmentDefinitionCodeEnum, CompartmentDefinitionStatusEnum, 
+  type IComposition, type ICompositionAttester, type ICompositionRelatesTo, type ICompositionEvent, type ICompositionSection, Composition, CompositionAttester, CompositionRelatesTo, CompositionEvent, CompositionSection, CompositionAttesterModeEnum, CompositionRelatesToCodeEnum, CompositionSectionModeEnum, CompositionStatusEnum, 
+  type IConceptMap, type IConceptMapGroupElementTargetDependsOn, type IConceptMapGroupElementTarget, type IConceptMapGroupElement, type IConceptMapGroupUnmapped, type IConceptMapGroup, ConceptMap, ConceptMapGroupElementTargetDependsOn, ConceptMapGroupElementTarget, ConceptMapGroupElement, ConceptMapGroupUnmapped, ConceptMapGroup, ConceptMapGroupElementTargetEquivalenceEnum, ConceptMapGroupUnmappedModeEnum, ConceptMapStatusEnum, 
+  type ICondition, type IConditionStage, type IConditionEvidence, Condition, ConditionStage, ConditionEvidence, 
+  type IConsent, type IConsentPolicy, type IConsentVerification, type IConsentProvisionActor, type IConsentProvisionData, type IConsentProvision, Consent, ConsentPolicy, ConsentVerification, ConsentProvisionActor, ConsentProvisionData, ConsentProvision, ConsentProvisionDataMeaningEnum, ConsentProvisionTypeEnum, ConsentStatusEnum, 
+  type IContract, type IContractContentDefinition, type IContractTermSecurityLabel, type IContractTermOfferParty, type IContractTermOfferAnswer, type IContractTermOffer, type IContractTermAssetContext, type IContractTermAssetValuedItem, type IContractTermAsset, type IContractTermActionSubject, type IContractTermAction, type IContractTerm, type IContractSigner, type IContractFriendly, type IContractLegal, type IContractRule, Contract, ContractContentDefinition, ContractTermSecurityLabel, ContractTermOfferParty, ContractTermOfferAnswer, ContractTermOffer, ContractTermAssetContext, ContractTermAssetValuedItem, ContractTermAsset, ContractTermActionSubject, ContractTermAction, ContractTerm, ContractSigner, ContractFriendly, ContractLegal, ContractRule, ContractContentDefinitionPublicationStatusEnum, ContractStatusEnum, 
+  type ICoverage, type ICoverageClass, type ICoverageCostToBeneficiaryException, type ICoverageCostToBeneficiary, Coverage, CoverageClass, CoverageCostToBeneficiaryException, CoverageCostToBeneficiary, CoverageStatusEnum, 
+  type ICoverageEligibilityRequest, type ICoverageEligibilityRequestSupportingInfo, type ICoverageEligibilityRequestInsurance, type ICoverageEligibilityRequestItemDiagnosis, type ICoverageEligibilityRequestItem, CoverageEligibilityRequest, CoverageEligibilityRequestSupportingInfo, CoverageEligibilityRequestInsurance, CoverageEligibilityRequestItemDiagnosis, CoverageEligibilityRequestItem, CoverageEligibilityRequestPurposeEnum, CoverageEligibilityRequestStatusEnum, 
+  type ICoverageEligibilityResponse, type ICoverageEligibilityResponseInsuranceItemBenefit, type ICoverageEligibilityResponseInsuranceItem, type ICoverageEligibilityResponseInsurance, type ICoverageEligibilityResponseError, CoverageEligibilityResponse, CoverageEligibilityResponseInsuranceItemBenefit, CoverageEligibilityResponseInsuranceItem, CoverageEligibilityResponseInsurance, CoverageEligibilityResponseError, CoverageEligibilityResponseOutcomeEnum, CoverageEligibilityResponsePurposeEnum, CoverageEligibilityResponseStatusEnum, 
+  type IDetectedIssue, type IDetectedIssueEvidence, type IDetectedIssueMitigation, DetectedIssue, DetectedIssueEvidence, DetectedIssueMitigation, DetectedIssueSeverityEnum, DetectedIssueStatusEnum, 
+  type IDevice, type IDeviceUdiCarrier, type IDeviceDeviceName, type IDeviceSpecialization, type IDeviceVersion, type IDeviceProperty, Device, DeviceUdiCarrier, DeviceDeviceName, DeviceSpecialization, DeviceVersion, DeviceProperty, DeviceUdiCarrierEntryTypeEnum, DeviceDeviceNameTypeEnum, DeviceStatusEnum, 
+  type IDeviceDefinition, type IDeviceDefinitionUdiDeviceIdentifier, type IDeviceDefinitionDeviceName, type IDeviceDefinitionSpecialization, type IDeviceDefinitionCapability, type IDeviceDefinitionProperty, type IDeviceDefinitionMaterial, DeviceDefinition, DeviceDefinitionUdiDeviceIdentifier, DeviceDefinitionDeviceName, DeviceDefinitionSpecialization, DeviceDefinitionCapability, DeviceDefinitionProperty, DeviceDefinitionMaterial, DeviceDefinitionDeviceNameTypeEnum, 
+  type IDeviceMetric, type IDeviceMetricCalibration, DeviceMetric, DeviceMetricCalibration, DeviceMetricCalibrationStateEnum, DeviceMetricCalibrationTypeEnum, DeviceMetricCategoryEnum, DeviceMetricColorEnum, DeviceMetricOperationalStatusEnum, 
+  type IDeviceRequest, type IDeviceRequestParameter, DeviceRequest, DeviceRequestParameter, DeviceRequestIntentEnum, DeviceRequestPriorityEnum, DeviceRequestStatusEnum, 
+  type IDeviceUseStatement, DeviceUseStatement, DeviceUseStatementStatusEnum, 
+  type IDiagnosticReport, type IDiagnosticReportMedia, DiagnosticReport, DiagnosticReportMedia, DiagnosticReportStatusEnum, 
+  type IDocumentManifest, type IDocumentManifestRelated, DocumentManifest, DocumentManifestRelated, DocumentManifestStatusEnum, 
+  type IDocumentReference, type IDocumentReferenceRelatesTo, type IDocumentReferenceContent, type IDocumentReferenceContext, DocumentReference, DocumentReferenceRelatesTo, DocumentReferenceContent, DocumentReferenceContext, DocumentReferenceRelatesToCodeEnum, DocumentReferenceDocStatusEnum, DocumentReferenceStatusEnum, 
+  type IEffectEvidenceSynthesis, type IEffectEvidenceSynthesisSampleSize, type IEffectEvidenceSynthesisResultsByExposure, type IEffectEvidenceSynthesisEffectEstimatePrecisionEstimate, type IEffectEvidenceSynthesisEffectEstimate, type IEffectEvidenceSynthesisCertaintyCertaintySubcomponent, type IEffectEvidenceSynthesisCertainty, EffectEvidenceSynthesis, EffectEvidenceSynthesisSampleSize, EffectEvidenceSynthesisResultsByExposure, EffectEvidenceSynthesisEffectEstimatePrecisionEstimate, EffectEvidenceSynthesisEffectEstimate, EffectEvidenceSynthesisCertaintyCertaintySubcomponent, EffectEvidenceSynthesisCertainty, EffectEvidenceSynthesisResultsByExposureExposureStateEnum, EffectEvidenceSynthesisStatusEnum, 
+  type IEncounter, type IEncounterStatusHistory, type IEncounterClassHistory, type IEncounterParticipant, type IEncounterDiagnosis, type IEncounterHospitalization, type IEncounterLocation, Encounter, EncounterStatusHistory, EncounterClassHistory, EncounterParticipant, EncounterDiagnosis, EncounterHospitalization, EncounterLocation, EncounterStatusHistoryStatusEnum, EncounterLocationStatusEnum, EncounterStatusEnum, 
+  type IEndpoint, Endpoint, EndpointStatusEnum, 
+  type IEnrollmentRequest, EnrollmentRequest, EnrollmentRequestStatusEnum, 
+  type IEnrollmentResponse, EnrollmentResponse, EnrollmentResponseOutcomeEnum, EnrollmentResponseStatusEnum, 
+  type IEpisodeOfCare, type IEpisodeOfCareStatusHistory, type IEpisodeOfCareDiagnosis, EpisodeOfCare, EpisodeOfCareStatusHistory, EpisodeOfCareDiagnosis, EpisodeOfCareStatusHistoryStatusEnum, EpisodeOfCareStatusEnum, 
+  type IEventDefinition, EventDefinition, EventDefinitionStatusEnum, 
+  type IEvidence, Evidence, EvidenceStatusEnum, 
+  type IEvidenceVariable, type IEvidenceVariableCharacteristic, EvidenceVariable, EvidenceVariableCharacteristic, EvidenceVariableCharacteristicGroupMeasureEnum, EvidenceVariableStatusEnum, EvidenceVariableTypeEnum, 
+  type IExampleScenario, type IExampleScenarioActor, type IExampleScenarioInstanceVersion, type IExampleScenarioInstanceContainedInstance, type IExampleScenarioInstance, type IExampleScenarioProcessStepOperation, type IExampleScenarioProcessStepAlternative, type IExampleScenarioProcessStep, type IExampleScenarioProcess, ExampleScenario, ExampleScenarioActor, ExampleScenarioInstanceVersion, ExampleScenarioInstanceContainedInstance, ExampleScenarioInstance, ExampleScenarioProcessStepOperation, ExampleScenarioProcessStepAlternative, ExampleScenarioProcessStep, ExampleScenarioProcess, ExampleScenarioActorTypeEnum, ExampleScenarioStatusEnum, 
+  type IExplanationOfBenefit, type IExplanationOfBenefitRelated, type IExplanationOfBenefitPayee, type IExplanationOfBenefitCareTeam, type IExplanationOfBenefitSupportingInfo, type IExplanationOfBenefitDiagnosis, type IExplanationOfBenefitProcedure, type IExplanationOfBenefitInsurance, type IExplanationOfBenefitAccident, type IExplanationOfBenefitItemAdjudication, type IExplanationOfBenefitItemDetailSubDetail, type IExplanationOfBenefitItemDetail, type IExplanationOfBenefitItem, type IExplanationOfBenefitAddItemDetailSubDetail, type IExplanationOfBenefitAddItemDetail, type IExplanationOfBenefitAddItem, type IExplanationOfBenefitTotal, type IExplanationOfBenefitPayment, type IExplanationOfBenefitProcessNote, type IExplanationOfBenefitBenefitBalanceFinancial, type IExplanationOfBenefitBenefitBalance, ExplanationOfBenefit, ExplanationOfBenefitRelated, ExplanationOfBenefitPayee, ExplanationOfBenefitCareTeam, ExplanationOfBenefitSupportingInfo, ExplanationOfBenefitDiagnosis, ExplanationOfBenefitProcedure, ExplanationOfBenefitInsurance, ExplanationOfBenefitAccident, ExplanationOfBenefitItemAdjudication, ExplanationOfBenefitItemDetailSubDetail, ExplanationOfBenefitItemDetail, ExplanationOfBenefitItem, ExplanationOfBenefitAddItemDetailSubDetail, ExplanationOfBenefitAddItemDetail, ExplanationOfBenefitAddItem, ExplanationOfBenefitTotal, ExplanationOfBenefitPayment, ExplanationOfBenefitProcessNote, ExplanationOfBenefitBenefitBalanceFinancial, ExplanationOfBenefitBenefitBalance, ExplanationOfBenefitProcessNoteTypeEnum, ExplanationOfBenefitOutcomeEnum, ExplanationOfBenefitStatusEnum, ExplanationOfBenefitUseEnum, 
+  type IFamilyMemberHistory, type IFamilyMemberHistoryCondition, FamilyMemberHistory, FamilyMemberHistoryCondition, FamilyMemberHistoryStatusEnum, 
+  type IFlag, Flag, FlagStatusEnum, 
+  type IGoal, type IGoalTarget, Goal, GoalTarget, GoalLifecycleStatusEnum, 
+  type IGraphDefinition, type IGraphDefinitionLinkTargetCompartment, type IGraphDefinitionLinkTarget, type IGraphDefinitionLink, GraphDefinition, GraphDefinitionLinkTargetCompartment, GraphDefinitionLinkTarget, GraphDefinitionLink, GraphDefinitionLinkTargetCompartmentCodeEnum, GraphDefinitionLinkTargetCompartmentRuleEnum, GraphDefinitionLinkTargetCompartmentUseEnum, GraphDefinitionStatusEnum, 
+  type IGroup, type IGroupCharacteristic, type IGroupMember, Group, GroupCharacteristic, GroupMember, GroupTypeEnum, 
+  type IGuidanceResponse, GuidanceResponse, GuidanceResponseStatusEnum, 
+  type IHealthcareService, type IHealthcareServiceEligibility, type IHealthcareServiceAvailableTime, type IHealthcareServiceNotAvailable, HealthcareService, HealthcareServiceEligibility, HealthcareServiceAvailableTime, HealthcareServiceNotAvailable, HealthcareServiceAvailableTimeDaysOfWeekEnum, 
+  type IImagingStudy, type IImagingStudySeriesPerformer, type IImagingStudySeriesInstance, type IImagingStudySeries, ImagingStudy, ImagingStudySeriesPerformer, ImagingStudySeriesInstance, ImagingStudySeries, ImagingStudyStatusEnum, 
+  type IImmunization, type IImmunizationPerformer, type IImmunizationEducation, type IImmunizationReaction, type IImmunizationProtocolApplied, Immunization, ImmunizationPerformer, ImmunizationEducation, ImmunizationReaction, ImmunizationProtocolApplied, ImmunizationStatusEnum, 
+  type IImmunizationEvaluation, ImmunizationEvaluation, ImmunizationEvaluationStatusEnum, 
+  type IImmunizationRecommendation, type IImmunizationRecommendationRecommendationDateCriterion, type IImmunizationRecommendationRecommendation, ImmunizationRecommendation, ImmunizationRecommendationRecommendationDateCriterion, ImmunizationRecommendationRecommendation, 
+  type IImplementationGuide, type IImplementationGuideDependsOn, type IImplementationGuideGlobal, type IImplementationGuideDefinitionGrouping, type IImplementationGuideDefinitionResource, type IImplementationGuideDefinitionPage, type IImplementationGuideDefinitionParameter, type IImplementationGuideDefinitionTemplate, type IImplementationGuideDefinition, type IImplementationGuideManifestResource, type IImplementationGuideManifestPage, type IImplementationGuideManifest, ImplementationGuide, ImplementationGuideDependsOn, ImplementationGuideGlobal, ImplementationGuideDefinitionGrouping, ImplementationGuideDefinitionResource, ImplementationGuideDefinitionPage, ImplementationGuideDefinitionParameter, ImplementationGuideDefinitionTemplate, ImplementationGuideDefinition, ImplementationGuideManifestResource, ImplementationGuideManifestPage, ImplementationGuideManifest, ImplementationGuideDefinitionPageGenerationEnum, ImplementationGuideDefinitionParameterCodeEnum, ImplementationGuideStatusEnum, 
+  type IInsurancePlan, type IInsurancePlanContact, type IInsurancePlanCoverageBenefitLimit, type IInsurancePlanCoverageBenefit, type IInsurancePlanCoverage, type IInsurancePlanPlanGeneralCost, type IInsurancePlanPlanSpecificCostBenefitCost, type IInsurancePlanPlanSpecificCostBenefit, type IInsurancePlanPlanSpecificCost, type IInsurancePlanPlan, InsurancePlan, InsurancePlanContact, InsurancePlanCoverageBenefitLimit, InsurancePlanCoverageBenefit, InsurancePlanCoverage, InsurancePlanPlanGeneralCost, InsurancePlanPlanSpecificCostBenefitCost, InsurancePlanPlanSpecificCostBenefit, InsurancePlanPlanSpecificCost, InsurancePlanPlan, InsurancePlanStatusEnum, 
+  type IInvoice, type IInvoiceParticipant, type IInvoiceLineItemPriceComponent, type IInvoiceLineItem, Invoice, InvoiceParticipant, InvoiceLineItemPriceComponent, InvoiceLineItem, InvoiceLineItemPriceComponentTypeEnum, InvoiceStatusEnum, 
+  type ILibrary, Library, LibraryStatusEnum, 
+  type ILinkage, type ILinkageItem, Linkage, LinkageItem, LinkageItemTypeEnum, 
+  type IList, type IListEntry, List, ListEntry, ListModeEnum, ListStatusEnum, 
+  type ILocation, type ILocationPosition, type ILocationHoursOfOperation, Location, LocationPosition, LocationHoursOfOperation, LocationHoursOfOperationDaysOfWeekEnum, LocationModeEnum, LocationStatusEnum, 
+  type IMeasure, type IMeasureGroupPopulation, type IMeasureGroupStratifierComponent, type IMeasureGroupStratifier, type IMeasureGroup, type IMeasureSupplementalData, Measure, MeasureGroupPopulation, MeasureGroupStratifierComponent, MeasureGroupStratifier, MeasureGroup, MeasureSupplementalData, MeasureStatusEnum, 
+  type IMeasureReport, type IMeasureReportGroupPopulation, type IMeasureReportGroupStratifierStratumComponent, type IMeasureReportGroupStratifierStratumPopulation, type IMeasureReportGroupStratifierStratum, type IMeasureReportGroupStratifier, type IMeasureReportGroup, MeasureReport, MeasureReportGroupPopulation, MeasureReportGroupStratifierStratumComponent, MeasureReportGroupStratifierStratumPopulation, MeasureReportGroupStratifierStratum, MeasureReportGroupStratifier, MeasureReportGroup, MeasureReportStatusEnum, MeasureReportTypeEnum, 
+  type IMedia, Media, MediaStatusEnum, 
+  type IMedication, type IMedicationIngredient, type IMedicationBatch, Medication, MedicationIngredient, MedicationBatch, MedicationStatusEnum, 
+  type IMedicationAdministration, type IMedicationAdministrationPerformer, type IMedicationAdministrationDosage, MedicationAdministration, MedicationAdministrationPerformer, MedicationAdministrationDosage, MedicationAdministrationStatusEnum, 
+  type IMedicationDispense, type IMedicationDispensePerformer, type IMedicationDispenseSubstitution, MedicationDispense, MedicationDispensePerformer, MedicationDispenseSubstitution, MedicationDispenseStatusEnum, 
+  type IMedicationKnowledge, type IMedicationKnowledgeRelatedMedicationKnowledge, type IMedicationKnowledgeMonograph, type IMedicationKnowledgeIngredient, type IMedicationKnowledgeCost, type IMedicationKnowledgeMonitoringProgram, type IMedicationKnowledgeAdministrationGuidelinesDosage, type IMedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, type IMedicationKnowledgeAdministrationGuidelines, type IMedicationKnowledgeMedicineClassification, type IMedicationKnowledgePackaging, type IMedicationKnowledgeDrugCharacteristic, type IMedicationKnowledgeRegulatorySubstitution, type IMedicationKnowledgeRegulatorySchedule, type IMedicationKnowledgeRegulatoryMaxDispense, type IMedicationKnowledgeRegulatory, type IMedicationKnowledgeKinetics, MedicationKnowledge, MedicationKnowledgeRelatedMedicationKnowledge, MedicationKnowledgeMonograph, MedicationKnowledgeIngredient, MedicationKnowledgeCost, MedicationKnowledgeMonitoringProgram, MedicationKnowledgeAdministrationGuidelinesDosage, MedicationKnowledgeAdministrationGuidelinesPatientCharacteristics, MedicationKnowledgeAdministrationGuidelines, MedicationKnowledgeMedicineClassification, MedicationKnowledgePackaging, MedicationKnowledgeDrugCharacteristic, MedicationKnowledgeRegulatorySubstitution, MedicationKnowledgeRegulatorySchedule, MedicationKnowledgeRegulatoryMaxDispense, MedicationKnowledgeRegulatory, MedicationKnowledgeKinetics, MedicationKnowledgeStatusEnum, 
+  type IMedicationRequest, type IMedicationRequestDispenseRequestInitialFill, type IMedicationRequestDispenseRequest, type IMedicationRequestSubstitution, MedicationRequest, MedicationRequestDispenseRequestInitialFill, MedicationRequestDispenseRequest, MedicationRequestSubstitution, MedicationRequestIntentEnum, MedicationRequestPriorityEnum, MedicationRequestStatusEnum, 
+  type IMedicationStatement, MedicationStatement, MedicationStatementStatusEnum, 
+  type IMedicinalProduct, type IMedicinalProductNameNamePart, type IMedicinalProductNameCountryLanguage, type IMedicinalProductName, type IMedicinalProductManufacturingBusinessOperation, type IMedicinalProductSpecialDesignation, MedicinalProduct, MedicinalProductNameNamePart, MedicinalProductNameCountryLanguage, MedicinalProductName, MedicinalProductManufacturingBusinessOperation, MedicinalProductSpecialDesignation, 
+  type IMedicinalProductAuthorization, type IMedicinalProductAuthorizationJurisdictionalAuthorization, type IMedicinalProductAuthorizationProcedure, MedicinalProductAuthorization, MedicinalProductAuthorizationJurisdictionalAuthorization, MedicinalProductAuthorizationProcedure, 
+  type IMedicinalProductContraindication, type IMedicinalProductContraindicationOtherTherapy, MedicinalProductContraindication, MedicinalProductContraindicationOtherTherapy, 
+  type IMedicinalProductIndication, type IMedicinalProductIndicationOtherTherapy, MedicinalProductIndication, MedicinalProductIndicationOtherTherapy, 
+  type IMedicinalProductIngredient, type IMedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, type IMedicinalProductIngredientSpecifiedSubstanceStrength, type IMedicinalProductIngredientSpecifiedSubstance, type IMedicinalProductIngredientSubstance, MedicinalProductIngredient, MedicinalProductIngredientSpecifiedSubstanceStrengthReferenceStrength, MedicinalProductIngredientSpecifiedSubstanceStrength, MedicinalProductIngredientSpecifiedSubstance, MedicinalProductIngredientSubstance, 
+  type IMedicinalProductInteraction, type IMedicinalProductInteractionInteractant, MedicinalProductInteraction, MedicinalProductInteractionInteractant, 
+  type IMedicinalProductManufactured, MedicinalProductManufactured, 
+  type IMedicinalProductPackaged, type IMedicinalProductPackagedBatchIdentifier, type IMedicinalProductPackagedPackageItem, MedicinalProductPackaged, MedicinalProductPackagedBatchIdentifier, MedicinalProductPackagedPackageItem, 
+  type IMedicinalProductPharmaceutical, type IMedicinalProductPharmaceuticalCharacteristics, type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, type IMedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, type IMedicinalProductPharmaceuticalRouteOfAdministration, MedicinalProductPharmaceutical, MedicinalProductPharmaceuticalCharacteristics, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpeciesWithdrawalPeriod, MedicinalProductPharmaceuticalRouteOfAdministrationTargetSpecies, MedicinalProductPharmaceuticalRouteOfAdministration, 
+  type IMedicinalProductUndesirableEffect, MedicinalProductUndesirableEffect, 
+  type IMessageDefinition, type IMessageDefinitionFocus, type IMessageDefinitionAllowedResponse, MessageDefinition, MessageDefinitionFocus, MessageDefinitionAllowedResponse, MessageDefinitionCategoryEnum, MessageDefinitionResponseRequiredEnum, MessageDefinitionStatusEnum, 
+  type IMessageHeader, type IMessageHeaderDestination, type IMessageHeaderSource, type IMessageHeaderResponse, MessageHeader, MessageHeaderDestination, MessageHeaderSource, MessageHeaderResponse, MessageHeaderResponseCodeEnum, 
+  type IMolecularSequence, type IMolecularSequenceReferenceSeq, type IMolecularSequenceVariant, type IMolecularSequenceQualityRoc, type IMolecularSequenceQuality, type IMolecularSequenceRepository, type IMolecularSequenceStructureVariantOuter, type IMolecularSequenceStructureVariantInner, type IMolecularSequenceStructureVariant, MolecularSequence, MolecularSequenceReferenceSeq, MolecularSequenceVariant, MolecularSequenceQualityRoc, MolecularSequenceQuality, MolecularSequenceRepository, MolecularSequenceStructureVariantOuter, MolecularSequenceStructureVariantInner, MolecularSequenceStructureVariant, MolecularSequenceReferenceSeqOrientationEnum, MolecularSequenceReferenceSeqStrandEnum, MolecularSequenceQualityTypeEnum, MolecularSequenceRepositoryTypeEnum, MolecularSequenceTypeEnum, 
+  type INamingSystem, type INamingSystemUniqueId, NamingSystem, NamingSystemUniqueId, NamingSystemUniqueIdTypeEnum, NamingSystemKindEnum, NamingSystemStatusEnum, 
+  type INutritionOrder, type INutritionOrderOralDietNutrient, type INutritionOrderOralDietTexture, type INutritionOrderOralDiet, type INutritionOrderSupplement, type INutritionOrderEnteralFormulaAdministration, type INutritionOrderEnteralFormula, NutritionOrder, NutritionOrderOralDietNutrient, NutritionOrderOralDietTexture, NutritionOrderOralDiet, NutritionOrderSupplement, NutritionOrderEnteralFormulaAdministration, NutritionOrderEnteralFormula, NutritionOrderIntentEnum, NutritionOrderStatusEnum, 
+  type IObservation, type IObservationReferenceRange, type IObservationComponent, Observation, ObservationReferenceRange, ObservationComponent, ObservationStatusEnum, 
+  type IObservationDefinition, type IObservationDefinitionQuantitativeDetails, type IObservationDefinitionQualifiedInterval, ObservationDefinition, ObservationDefinitionQuantitativeDetails, ObservationDefinitionQualifiedInterval, ObservationDefinitionQualifiedIntervalCategoryEnum, ObservationDefinitionQualifiedIntervalGenderEnum, ObservationDefinitionPermittedDataTypeEnum, 
+  type IOperationDefinition, type IOperationDefinitionParameterBinding, type IOperationDefinitionParameterReferencedFrom, type IOperationDefinitionParameter, type IOperationDefinitionOverload, OperationDefinition, OperationDefinitionParameterBinding, OperationDefinitionParameterReferencedFrom, OperationDefinitionParameter, OperationDefinitionOverload, OperationDefinitionParameterBindingStrengthEnum, OperationDefinitionParameterSearchTypeEnum, OperationDefinitionParameterUseEnum, OperationDefinitionKindEnum, OperationDefinitionStatusEnum, 
+  type IOperationOutcome, type IOperationOutcomeIssue, OperationOutcome, OperationOutcomeIssue, OperationOutcomeIssueSeverityEnum, 
+  type IOrganization, type IOrganizationContact, Organization, OrganizationContact, 
+  type IOrganizationAffiliation, OrganizationAffiliation, 
+  type IParameters, type IParametersParameter, Parameters, ParametersParameter, 
+  type IPatient, type IPatientContact, type IPatientCommunication, type IPatientLink, Patient, PatientContact, PatientCommunication, PatientLink, PatientContactGenderEnum, PatientLinkTypeEnum, PatientGenderEnum, 
+  type IPaymentNotice, PaymentNotice, PaymentNoticeStatusEnum, 
+  type IPaymentReconciliation, type IPaymentReconciliationDetail, type IPaymentReconciliationProcessNote, PaymentReconciliation, PaymentReconciliationDetail, PaymentReconciliationProcessNote, PaymentReconciliationProcessNoteTypeEnum, PaymentReconciliationOutcomeEnum, PaymentReconciliationStatusEnum, 
+  type IPerson, type IPersonLink, Person, PersonLink, PersonLinkAssuranceEnum, PersonGenderEnum, 
+  type IPlanDefinition, type IPlanDefinitionGoalTarget, type IPlanDefinitionGoal, type IPlanDefinitionActionCondition, type IPlanDefinitionActionRelatedAction, type IPlanDefinitionActionParticipant, type IPlanDefinitionActionDynamicValue, type IPlanDefinitionAction, PlanDefinition, PlanDefinitionGoalTarget, PlanDefinitionGoal, PlanDefinitionActionCondition, PlanDefinitionActionRelatedAction, PlanDefinitionActionParticipant, PlanDefinitionActionDynamicValue, PlanDefinitionAction, PlanDefinitionActionConditionKindEnum, PlanDefinitionActionRelatedActionRelationshipEnum, PlanDefinitionActionParticipantTypeEnum, PlanDefinitionActionCardinalityBehaviorEnum, PlanDefinitionActionGroupingBehaviorEnum, PlanDefinitionActionPrecheckBehaviorEnum, PlanDefinitionActionPriorityEnum, PlanDefinitionActionRequiredBehaviorEnum, PlanDefinitionActionSelectionBehaviorEnum, PlanDefinitionStatusEnum, 
+  type IPractitioner, type IPractitionerQualification, Practitioner, PractitionerQualification, PractitionerGenderEnum, 
+  type IPractitionerRole, type IPractitionerRoleAvailableTime, type IPractitionerRoleNotAvailable, PractitionerRole, PractitionerRoleAvailableTime, PractitionerRoleNotAvailable, PractitionerRoleAvailableTimeDaysOfWeekEnum, 
+  type IProcedure, type IProcedurePerformer, type IProcedureFocalDevice, Procedure, ProcedurePerformer, ProcedureFocalDevice, ProcedureStatusEnum, 
+  type IProvenance, type IProvenanceAgent, type IProvenanceEntity, Provenance, ProvenanceAgent, ProvenanceEntity, ProvenanceEntityRoleEnum, 
+  type IQuestionnaire, type IQuestionnaireItemEnableWhen, type IQuestionnaireItemAnswerOption, type IQuestionnaireItemInitial, type IQuestionnaireItem, Questionnaire, QuestionnaireItemEnableWhen, QuestionnaireItemAnswerOption, QuestionnaireItemInitial, QuestionnaireItem, QuestionnaireItemEnableWhenOperatorEnum, QuestionnaireItemEnableBehaviorEnum, QuestionnaireItemTypeEnum, QuestionnaireStatusEnum, 
+  type IQuestionnaireResponse, type IQuestionnaireResponseItemAnswer, type IQuestionnaireResponseItem, QuestionnaireResponse, QuestionnaireResponseItemAnswer, QuestionnaireResponseItem, QuestionnaireResponseStatusEnum, 
+  type IRelatedPerson, type IRelatedPersonCommunication, RelatedPerson, RelatedPersonCommunication, RelatedPersonGenderEnum, 
+  type IRequestGroup, type IRequestGroupActionCondition, type IRequestGroupActionRelatedAction, type IRequestGroupAction, RequestGroup, RequestGroupActionCondition, RequestGroupActionRelatedAction, RequestGroupAction, RequestGroupActionConditionKindEnum, RequestGroupActionRelatedActionRelationshipEnum, RequestGroupActionCardinalityBehaviorEnum, RequestGroupActionGroupingBehaviorEnum, RequestGroupActionPrecheckBehaviorEnum, RequestGroupActionPriorityEnum, RequestGroupActionRequiredBehaviorEnum, RequestGroupActionSelectionBehaviorEnum, RequestGroupIntentEnum, RequestGroupPriorityEnum, RequestGroupStatusEnum, 
+  type IResearchDefinition, ResearchDefinition, ResearchDefinitionStatusEnum, 
+  type IResearchElementDefinition, type IResearchElementDefinitionCharacteristic, ResearchElementDefinition, ResearchElementDefinitionCharacteristic, ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureEnum, ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasureEnum, ResearchElementDefinitionStatusEnum, ResearchElementDefinitionTypeEnum, ResearchElementDefinitionVariableTypeEnum, 
+  type IResearchStudy, type IResearchStudyArm, type IResearchStudyObjective, ResearchStudy, ResearchStudyArm, ResearchStudyObjective, ResearchStudyStatusEnum, 
+  type IResearchSubject, ResearchSubject, ResearchSubjectStatusEnum, 
+  type IRiskAssessment, type IRiskAssessmentPrediction, RiskAssessment, RiskAssessmentPrediction, RiskAssessmentStatusEnum, 
+  type IRiskEvidenceSynthesis, type IRiskEvidenceSynthesisSampleSize, type IRiskEvidenceSynthesisRiskEstimatePrecisionEstimate, type IRiskEvidenceSynthesisRiskEstimate, type IRiskEvidenceSynthesisCertaintyCertaintySubcomponent, type IRiskEvidenceSynthesisCertainty, RiskEvidenceSynthesis, RiskEvidenceSynthesisSampleSize, RiskEvidenceSynthesisRiskEstimatePrecisionEstimate, RiskEvidenceSynthesisRiskEstimate, RiskEvidenceSynthesisCertaintyCertaintySubcomponent, RiskEvidenceSynthesisCertainty, RiskEvidenceSynthesisStatusEnum, 
+  type ISchedule, Schedule, 
+  type ISearchParameter, type ISearchParameterComponent, SearchParameter, SearchParameterComponent, SearchParameterComparatorEnum, SearchParameterModifierEnum, SearchParameterStatusEnum, SearchParameterTypeEnum, SearchParameterXpathUsageEnum, 
+  type IServiceRequest, ServiceRequest, ServiceRequestIntentEnum, ServiceRequestPriorityEnum, ServiceRequestStatusEnum, 
+  type ISlot, Slot, SlotStatusEnum, 
+  type ISpecimen, type ISpecimenCollection, type ISpecimenProcessing, type ISpecimenContainer, Specimen, SpecimenCollection, SpecimenProcessing, SpecimenContainer, SpecimenStatusEnum, 
+  type ISpecimenDefinition, type ISpecimenDefinitionTypeTestedContainerAdditive, type ISpecimenDefinitionTypeTestedContainer, type ISpecimenDefinitionTypeTestedHandling, type ISpecimenDefinitionTypeTested, SpecimenDefinition, SpecimenDefinitionTypeTestedContainerAdditive, SpecimenDefinitionTypeTestedContainer, SpecimenDefinitionTypeTestedHandling, SpecimenDefinitionTypeTested, SpecimenDefinitionTypeTestedPreferenceEnum, 
+  type IStructureDefinition, type IStructureDefinitionMapping, type IStructureDefinitionContext, type IStructureDefinitionSnapshot, type IStructureDefinitionDifferential, StructureDefinition, StructureDefinitionMapping, StructureDefinitionContext, StructureDefinitionSnapshot, StructureDefinitionDifferential, StructureDefinitionContextTypeEnum, StructureDefinitionDerivationEnum, StructureDefinitionKindEnum, StructureDefinitionStatusEnum, 
+  type IStructureMap, type IStructureMapStructure, type IStructureMapGroupInput, type IStructureMapGroupRuleSource, type IStructureMapGroupRuleTargetParameter, type IStructureMapGroupRuleTarget, type IStructureMapGroupRuleDependent, type IStructureMapGroupRule, type IStructureMapGroup, StructureMap, StructureMapStructure, StructureMapGroupInput, StructureMapGroupRuleSource, StructureMapGroupRuleTargetParameter, StructureMapGroupRuleTarget, StructureMapGroupRuleDependent, StructureMapGroupRule, StructureMapGroup, StructureMapStructureModeEnum, StructureMapGroupInputModeEnum, StructureMapGroupRuleSourceListModeEnum, StructureMapGroupRuleTargetContextTypeEnum, StructureMapGroupRuleTargetListModeEnum, StructureMapGroupRuleTargetTransformEnum, StructureMapGroupTypeModeEnum, StructureMapStatusEnum, 
+  type ISubscription, type ISubscriptionChannel, Subscription, SubscriptionChannel, SubscriptionChannelTypeEnum, SubscriptionStatusEnum, 
+  type ISubstance, type ISubstanceInstance, type ISubstanceIngredient, Substance, SubstanceInstance, SubstanceIngredient, SubstanceStatusEnum, 
+  type ISubstanceNucleicAcid, type ISubstanceNucleicAcidSubunitLinkage, type ISubstanceNucleicAcidSubunitSugar, type ISubstanceNucleicAcidSubunit, SubstanceNucleicAcid, SubstanceNucleicAcidSubunitLinkage, SubstanceNucleicAcidSubunitSugar, SubstanceNucleicAcidSubunit, 
+  type ISubstancePolymer, type ISubstancePolymerMonomerSetStartingMaterial, type ISubstancePolymerMonomerSet, type ISubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, type ISubstancePolymerRepeatRepeatUnitStructuralRepresentation, type ISubstancePolymerRepeatRepeatUnit, type ISubstancePolymerRepeat, SubstancePolymer, SubstancePolymerMonomerSetStartingMaterial, SubstancePolymerMonomerSet, SubstancePolymerRepeatRepeatUnitDegreeOfPolymerisation, SubstancePolymerRepeatRepeatUnitStructuralRepresentation, SubstancePolymerRepeatRepeatUnit, SubstancePolymerRepeat, 
+  type ISubstanceProtein, type ISubstanceProteinSubunit, SubstanceProtein, SubstanceProteinSubunit, 
+  type ISubstanceReferenceInformation, type ISubstanceReferenceInformationGene, type ISubstanceReferenceInformationGeneElement, type ISubstanceReferenceInformationClassification, type ISubstanceReferenceInformationTarget, SubstanceReferenceInformation, SubstanceReferenceInformationGene, SubstanceReferenceInformationGeneElement, SubstanceReferenceInformationClassification, SubstanceReferenceInformationTarget, 
+  type ISubstanceSourceMaterial, type ISubstanceSourceMaterialFractionDescription, type ISubstanceSourceMaterialOrganismAuthor, type ISubstanceSourceMaterialOrganismHybrid, type ISubstanceSourceMaterialOrganismOrganismGeneral, type ISubstanceSourceMaterialOrganism, type ISubstanceSourceMaterialPartDescription, SubstanceSourceMaterial, SubstanceSourceMaterialFractionDescription, SubstanceSourceMaterialOrganismAuthor, SubstanceSourceMaterialOrganismHybrid, SubstanceSourceMaterialOrganismOrganismGeneral, SubstanceSourceMaterialOrganism, SubstanceSourceMaterialPartDescription, 
+  type ISubstanceSpecification, type ISubstanceSpecificationMoiety, type ISubstanceSpecificationProperty, type ISubstanceSpecificationStructureIsotopeMolecularWeight, type ISubstanceSpecificationStructureIsotope, type ISubstanceSpecificationStructureRepresentation, type ISubstanceSpecificationStructure, type ISubstanceSpecificationCode, type ISubstanceSpecificationNameOfficial, type ISubstanceSpecificationName, type ISubstanceSpecificationRelationship, SubstanceSpecification, SubstanceSpecificationMoiety, SubstanceSpecificationProperty, SubstanceSpecificationStructureIsotopeMolecularWeight, SubstanceSpecificationStructureIsotope, SubstanceSpecificationStructureRepresentation, SubstanceSpecificationStructure, SubstanceSpecificationCode, SubstanceSpecificationNameOfficial, SubstanceSpecificationName, SubstanceSpecificationRelationship, 
+  type ISupplyDelivery, type ISupplyDeliverySuppliedItem, SupplyDelivery, SupplyDeliverySuppliedItem, SupplyDeliveryStatusEnum, 
+  type ISupplyRequest, type ISupplyRequestParameter, SupplyRequest, SupplyRequestParameter, SupplyRequestPriorityEnum, SupplyRequestStatusEnum, 
+  type ITask, type ITaskRestriction, type ITaskInput, type ITaskOutput, Task, TaskRestriction, TaskInput, TaskOutput, TaskIntentEnum, TaskPriorityEnum, TaskStatusEnum, 
+  type ITerminologyCapabilities, type ITerminologyCapabilitiesSoftware, type ITerminologyCapabilitiesImplementation, type ITerminologyCapabilitiesCodeSystemVersionFilter, type ITerminologyCapabilitiesCodeSystemVersion, type ITerminologyCapabilitiesCodeSystem, type ITerminologyCapabilitiesExpansionParameter, type ITerminologyCapabilitiesExpansion, type ITerminologyCapabilitiesValidateCode, type ITerminologyCapabilitiesTranslation, type ITerminologyCapabilitiesClosure, TerminologyCapabilities, TerminologyCapabilitiesSoftware, TerminologyCapabilitiesImplementation, TerminologyCapabilitiesCodeSystemVersionFilter, TerminologyCapabilitiesCodeSystemVersion, TerminologyCapabilitiesCodeSystem, TerminologyCapabilitiesExpansionParameter, TerminologyCapabilitiesExpansion, TerminologyCapabilitiesValidateCode, TerminologyCapabilitiesTranslation, TerminologyCapabilitiesClosure, TerminologyCapabilitiesCodeSearchEnum, TerminologyCapabilitiesKindEnum, TerminologyCapabilitiesStatusEnum, 
+  type ITestReport, type ITestReportParticipant, type ITestReportSetupActionOperation, type ITestReportSetupActionAssert, type ITestReportSetupAction, type ITestReportSetup, type ITestReportTestAction, type ITestReportTest, type ITestReportTeardownAction, type ITestReportTeardown, TestReport, TestReportParticipant, TestReportSetupActionOperation, TestReportSetupActionAssert, TestReportSetupAction, TestReportSetup, TestReportTestAction, TestReportTest, TestReportTeardownAction, TestReportTeardown, TestReportParticipantTypeEnum, TestReportSetupActionOperationResultEnum, TestReportSetupActionAssertResultEnum, TestReportResultEnum, TestReportStatusEnum, 
+  type ITestScript, type ITestScriptOrigin, type ITestScriptDestination, type ITestScriptMetadataLink, type ITestScriptMetadataCapability, type ITestScriptMetadata, type ITestScriptFixture, type ITestScriptVariable, type ITestScriptSetupActionOperationRequestHeader, type ITestScriptSetupActionOperation, type ITestScriptSetupActionAssert, type ITestScriptSetupAction, type ITestScriptSetup, type ITestScriptTestAction, type ITestScriptTest, type ITestScriptTeardownAction, type ITestScriptTeardown, TestScript, TestScriptOrigin, TestScriptDestination, TestScriptMetadataLink, TestScriptMetadataCapability, TestScriptMetadata, TestScriptFixture, TestScriptVariable, TestScriptSetupActionOperationRequestHeader, TestScriptSetupActionOperation, TestScriptSetupActionAssert, TestScriptSetupAction, TestScriptSetup, TestScriptTestAction, TestScriptTest, TestScriptTeardownAction, TestScriptTeardown, TestScriptSetupActionOperationMethodEnum, TestScriptSetupActionAssertDirectionEnum, TestScriptSetupActionAssertOperatorEnum, TestScriptSetupActionAssertRequestMethodEnum, TestScriptSetupActionAssertResponseEnum, TestScriptStatusEnum, 
+  type IValueSet, type IValueSetComposeIncludeConceptDesignation, type IValueSetComposeIncludeConcept, type IValueSetComposeIncludeFilter, type IValueSetComposeInclude, type IValueSetCompose, type IValueSetExpansionParameter, type IValueSetExpansionContains, type IValueSetExpansion, ValueSet, ValueSetComposeIncludeConceptDesignation, ValueSetComposeIncludeConcept, ValueSetComposeIncludeFilter, ValueSetComposeInclude, ValueSetCompose, ValueSetExpansionParameter, ValueSetExpansionContains, ValueSetExpansion, ValueSetComposeIncludeFilterOpEnum, ValueSetStatusEnum, 
+  type IVerificationResult, type IVerificationResultPrimarySource, type IVerificationResultAttestation, type IVerificationResultValidator, VerificationResult, VerificationResultPrimarySource, VerificationResultAttestation, VerificationResultValidator, VerificationResultStatusEnum, 
+  type IVisionPrescription, type IVisionPrescriptionLensSpecificationPrism, type IVisionPrescriptionLensSpecification, VisionPrescription, VisionPrescriptionLensSpecificationPrism, VisionPrescriptionLensSpecification, VisionPrescriptionLensSpecificationPrismBaseEnum, VisionPrescriptionLensSpecificationEyeEnum, VisionPrescriptionStatusEnum, 
   type IFhirResource,
   type FhirResource,
   FhirResourceFactory,

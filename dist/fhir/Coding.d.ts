@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A reference to a code defined by a terminology system.
  */
-export interface ICoding extends fhir.IFhirElement {
+export declare type ICoding = fhir.IFhirElement & {
     /**
      * A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).
      */
@@ -28,7 +28,7 @@ export interface ICoding extends fhir.IFhirElement {
      */
     version?: string | undefined;
     _version?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * A reference to a code defined by a terminology system.
  */
@@ -59,20 +59,16 @@ export declare class Coding extends fhir.FhirElement implements fhir.ICoding {
     version?: string | undefined;
     _version?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Coding - initializes required elements to null.
+     * Default constructor for Coding - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Coding from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.ICoding>): Coding;
+    constructor(source?: Partial<fhir.ICoding>);
     /**
      * Check if the current Coding contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Coding from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.ICoding): Coding;
+    static FromStrict(source: fhir.ICoding): Coding;
 }
 //# sourceMappingURL=Coding.d.ts.map

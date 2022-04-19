@@ -4,29 +4,28 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
  * This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.
  */
 export const EncounterTypeValueSet = {
-  encounter_type_AnnualDiabetesMellitusScreening: Coding.FactoryCreateStrict({
+  encounter_type_AnnualDiabetesMellitusScreening: Coding.FromStrict({
     code: "ADMS",
     display: "Annual diabetes mellitus screening",
     system: "http://terminology.hl7.org/CodeSystem/encounter-type"
   }),
-  encounter_type_BoneDrillingBoneMarrowPunctionInClinic: Coding.FactoryCreateStrict({
+  encounter_type_BoneDrillingBoneMarrowPunctionInClinic: Coding.FromStrict({
     code: "BD/BM-clin",
     display: "Bone drilling/bone marrow punction in clinic",
     system: "http://terminology.hl7.org/CodeSystem/encounter-type"
   }),
-  encounter_type_InfantColonScreening60Minutes: Coding.FactoryCreateStrict({
+  encounter_type_InfantColonScreening60Minutes: Coding.FromStrict({
     code: "CCS60",
     display: "Infant colon screening - 60 minutes",
     system: "http://terminology.hl7.org/CodeSystem/encounter-type"
   }),
-  encounter_type_OutpatientKenacortInjection: Coding.FactoryCreateStrict({
+  encounter_type_OutpatientKenacortInjection: Coding.FromStrict({
     code: "OKI",
     display: "Outpatient Kenacort injection",
     system: "http://terminology.hl7.org/CodeSystem/encounter-type"

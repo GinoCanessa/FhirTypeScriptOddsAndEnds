@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The content of the data is represented in the resource narrative.
    */
-  data_absent_reason_AsText: Coding.FactoryCreateStrict({
+  data_absent_reason_AsText: Coding.FromStrict({
     code: "as-text",
     display: "As Text",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -22,7 +21,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The source was asked but declined to answer.
    */
-  data_absent_reason_AskedButDeclined: Coding.FactoryCreateStrict({
+  data_absent_reason_AskedButDeclined: Coding.FromStrict({
     code: "asked-declined",
     display: "Asked But Declined",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -30,7 +29,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The source was asked but does not know the value.
    */
-  data_absent_reason_AskedButUnknown: Coding.FactoryCreateStrict({
+  data_absent_reason_AskedButUnknown: Coding.FromStrict({
     code: "asked-unknown",
     display: "Asked But Unknown",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -38,7 +37,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * Some system or workflow process error means that the information is not available.
    */
-  data_absent_reason_Error: Coding.FactoryCreateStrict({
+  data_absent_reason_Error: Coding.FromStrict({
     code: "error",
     display: "Error",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -46,7 +45,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The information is not available due to security, privacy or related reasons.
    */
-  data_absent_reason_Masked: Coding.FactoryCreateStrict({
+  data_absent_reason_Masked: Coding.FromStrict({
     code: "masked",
     display: "Masked",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -54,7 +53,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The numeric value is excessively low and unrepresentable due to a floating point processing error.
    */
-  data_absent_reason_NegativeInfinityNINF: Coding.FactoryCreateStrict({
+  data_absent_reason_NegativeInfinityNINF: Coding.FromStrict({
     code: "negative-infinity",
     display: "Negative Infinity (NINF)",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -62,7 +61,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The numeric value is undefined or unrepresentable due to a floating point processing error.
    */
-  data_absent_reason_NotANumberNaN: Coding.FactoryCreateStrict({
+  data_absent_reason_NotANumberNaN: Coding.FromStrict({
     code: "not-a-number",
     display: "Not a Number (NaN)",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -70,7 +69,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * There is no proper value for this element (e.g. last menstrual period for a male).
    */
-  data_absent_reason_NotApplicable: Coding.FactoryCreateStrict({
+  data_absent_reason_NotApplicable: Coding.FromStrict({
     code: "not-applicable",
     display: "Not Applicable",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -78,7 +77,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The workflow didn't lead to this value being known.
    */
-  data_absent_reason_NotAsked: Coding.FactoryCreateStrict({
+  data_absent_reason_NotAsked: Coding.FromStrict({
     code: "not-asked",
     display: "Not Asked",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -86,7 +85,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The value is not available because the observation procedure (test, etc.) was not performed.
    */
-  data_absent_reason_NotPerformed: Coding.FactoryCreateStrict({
+  data_absent_reason_NotPerformed: Coding.FromStrict({
     code: "not-performed",
     display: "Not Performed",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -94,7 +93,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The value is not permitted in this context (e.g. due to profiles, or the base data types).
    */
-  data_absent_reason_NotPermitted: Coding.FactoryCreateStrict({
+  data_absent_reason_NotPermitted: Coding.FromStrict({
     code: "not-permitted",
     display: "Not Permitted",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -102,7 +101,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The numeric value is excessively high and unrepresentable due to a floating point processing error.
    */
-  data_absent_reason_PositiveInfinityPINF: Coding.FactoryCreateStrict({
+  data_absent_reason_PositiveInfinityPINF: Coding.FromStrict({
     code: "positive-infinity",
     display: "Positive Infinity (PINF)",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -110,7 +109,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * There is reason to expect (from the workflow) that the value may become known.
    */
-  data_absent_reason_TemporarilyUnknown: Coding.FactoryCreateStrict({
+  data_absent_reason_TemporarilyUnknown: Coding.FromStrict({
     code: "temp-unknown",
     display: "Temporarily Unknown",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -118,7 +117,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The value is expected to exist but is not known.
    */
-  data_absent_reason_Unknown: Coding.FactoryCreateStrict({
+  data_absent_reason_Unknown: Coding.FromStrict({
     code: "unknown",
     display: "Unknown",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"
@@ -126,7 +125,7 @@ export const DataAbsentReasonValueSet = {
   /**
    * The source system wasn't capable of supporting this element.
    */
-  data_absent_reason_Unsupported: Coding.FactoryCreateStrict({
+  data_absent_reason_Unsupported: Coding.FromStrict({
     code: "unsupported",
     display: "Unsupported",
     system: "http://terminology.hl7.org/CodeSystem/data-absent-reason"

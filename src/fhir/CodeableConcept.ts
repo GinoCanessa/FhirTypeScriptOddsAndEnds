@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
  */
-export interface ICodeableConcept extends fhir.IFhirElement {
+export type ICodeableConcept = fhir.IFhirElement & {
   /**
    * Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.
    */
@@ -35,39 +34,30 @@ export class CodeableConcept extends fhir.FhirElement implements fhir.ICodeableC
   public text?: string|undefined;
   public _text?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for CodeableConcept - initializes required elements to null.
+   * Default constructor for CodeableConcept - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a CodeableConcept from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.ICodeableConcept>):CodeableConcept {
-    var dest:Partial<CodeableConcept> = super.FactoryCreate(source) as Partial<CodeableConcept>;
-    if (source["coding"] !== undefined) { dest.coding = source.coding.map((x:Partial<fhir.ICoding>) => fhir.Coding.FactoryCreate(x)); }
-    if (source["text"] !== undefined) { dest.text = source.text; }
-    if (source["_text"] !== undefined) { dest._text = fhir.FhirElement.FactoryCreate(source._text!); }
-    return dest as CodeableConcept;
+  constructor(source:Partial<fhir.ICodeableConcept> = {}) {
+    super(source);
+    if (source["coding"]) { this.coding = source.coding.map((x:Partial<fhir.ICoding>) => new fhir.Coding(x)); }
+    if (source["text"]) { this.text = source.text; }
+    if (source["_text"]) { this._text = new fhir.FhirElement(source._text!); }
   }
   /**
    * Check if the current CodeableConcept contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a CodeableConcept from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.ICodeableConcept):CodeableConcept {
-    var dest:CodeableConcept = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `CodeableConcept is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.ICodeableConcept):CodeableConcept {
+    var dest:CodeableConcept = new CodeableConcept(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `CodeableConcept is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

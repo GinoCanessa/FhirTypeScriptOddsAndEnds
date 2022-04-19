@@ -4,17 +4,16 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * This is the base resource type for everything.
  */
-export interface IResource {
+export type IResource = {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string;
+  resourceType: string;
   /**
    * The only time that a resource does not have an id is when it is being submitted to the server using a create operation.
    */
@@ -42,7 +41,7 @@ export class Resource implements fhir.IResource {
   /**
    * Resource Type Name
    */
-  readonly resourceType: string = 'Resource';
+  public resourceType: string;
   /**
    * The only time that a resource does not have an id is when it is being submitted to the server using a create operation.
    */
@@ -63,40 +62,32 @@ export class Resource implements fhir.IResource {
    */
   public meta?: fhir.Meta|undefined;
   /**
-   * Default constructor for Resource - initializes required elements to null.
+   * Default constructor for Resource - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-  }
-  /**
-   * Factory function to create a Resource from an object that MAY NOT contain all required elements.
-   */
-  static FactoryCreate(source:Partial<fhir.IResource>):Resource {
-    var dest:Resource = new Resource();
-    if (source["id"] !== undefined) { dest.id = source.id; }
-    if (source["_id"] !== undefined) { dest._id = fhir.FhirElement.FactoryCreate(source._id!); }
-    if (source["implicitRules"] !== undefined) { dest.implicitRules = source.implicitRules; }
-    if (source["_implicitRules"] !== undefined) { dest._implicitRules = fhir.FhirElement.FactoryCreate(source._implicitRules!); }
-    if (source["language"] !== undefined) { dest.language = source.language; }
-    if (source["_language"] !== undefined) { dest._language = fhir.FhirElement.FactoryCreate(source._language!); }
-    if (source["meta"] !== undefined) { dest.meta = fhir.Meta.FactoryCreate(source.meta!); }
-    return dest;
+  constructor(source:Partial<fhir.IResource> = {}) {
+    this.resourceType = 'Resource';
+    if (source["id"]) { this.id = source.id; }
+    if (source["_id"]) { this._id = new fhir.FhirElement(source._id!); }
+    if (source["implicitRules"]) { this.implicitRules = source.implicitRules; }
+    if (source["_implicitRules"]) { this._implicitRules = new fhir.FhirElement(source._implicitRules!); }
+    if (source["language"]) { this.language = source.language; }
+    if (source["_language"]) { this._language = new fhir.FhirElement(source._language!); }
+    if (source["meta"]) { this.meta = new fhir.Meta(source.meta!); }
   }
   /**
    * Check if the current Resource contains all required elements.
    */
-  checkRequiredElements():string[] {
+  CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     return missingElements;
   }
   /**
    * Factory function to create a Resource from an object that MUST contain all required elements.
    */
-  static FactoryCreateStrict(source:fhir.IResource):Resource {
-    var dest:Resource = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Resource is missing elements: ${missingElements.join(", ")}`
-     }
+  static FromStrict(source:fhir.IResource):Resource {
+    var dest:Resource = new Resource(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Resource is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

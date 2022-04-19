@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to indicate how an individual participates in an encounter.
  */
-export var EncounterParticipantTypeValueSet = {
+export const EncounterParticipantTypeValueSet = {
     /**
      * The practitioner who is responsible for admitting a patient to a patient encounter.
      */
-    v3_ParticipationType_Admitter: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Admitter: Coding.FromStrict({
         code: "ADM",
         display: "admitter",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -22,7 +21,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * The practitioner that has responsibility for overseeing a patient's care during a patient encounter.
      */
-    v3_ParticipationType_Attender: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Attender: Coding.FromStrict({
         code: "ATND",
         display: "attender",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -30,7 +29,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * A person or organization who should be contacted for follow-up questions about the act in place of the author.
      */
-    v3_ParticipationType_CallbackContact: Coding.FactoryCreateStrict({
+    v3_ParticipationType_CallbackContact: Coding.FromStrict({
         code: "CALLBCK",
         display: "callback contact",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -38,7 +37,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * An advisor participating in the service by performing evaluations and making recommendations.
      */
-    v3_ParticipationType_Consultant: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Consultant: Coding.FromStrict({
         code: "CON",
         display: "consultant",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -46,7 +45,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * The practitioner who is responsible for the discharge of a patient from a patient encounter.
      */
-    v3_ParticipationType_Discharger: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Discharger: Coding.FromStrict({
         code: "DIS",
         display: "discharger",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -54,7 +53,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * A person to be contacted in case of an emergency during the encounter.
      */
-    encounter_participant_type_Emergency: Coding.FactoryCreateStrict({
+    encounter_participant_type_Emergency: Coding.FromStrict({
         code: "emergency",
         display: "Emergency",
         system: "http://terminology.hl7.org/CodeSystem/participant-type"
@@ -62,7 +61,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * Only with Transportation services.  A person who escorts the patient.
      */
-    v3_ParticipationType_Escort: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Escort: Coding.FromStrict({
         code: "ESC",
         display: "escort",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -70,7 +69,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * Indicates that the target of the participation is involved in some manner in the act, but does not qualify how.
      */
-    v3_ParticipationType_Participation: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Participation: Coding.FromStrict({
         code: "PART",
         display: "Participation",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -78,7 +77,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * The principal or primary performer of the act.
      */
-    v3_ParticipationType_PrimaryPerformer: Coding.FactoryCreateStrict({
+    v3_ParticipationType_PrimaryPerformer: Coding.FromStrict({
         code: "PPRF",
         display: "primary performer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -86,7 +85,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * A person having referred the subject of the service to the performer (referring physician).  Typically, a referring physician will receive a report.
      */
-    v3_ParticipationType_Referrer: Coding.FactoryCreateStrict({
+    v3_ParticipationType_Referrer: Coding.FromStrict({
         code: "REF",
         display: "referrer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -94,7 +93,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * A person assisting in an act through his substantial presence and involvement   This includes: assistants, technicians, associates, or whatever the job titles may be.
      */
-    v3_ParticipationType_SecondaryPerformer: Coding.FactoryCreateStrict({
+    v3_ParticipationType_SecondaryPerformer: Coding.FromStrict({
         code: "SPRF",
         display: "secondary performer",
         system: "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
@@ -102,7 +101,7 @@ export var EncounterParticipantTypeValueSet = {
     /**
      * A translator who is facilitating communication with the patient during the encounter.
      */
-    encounter_participant_type_Translator: Coding.FactoryCreateStrict({
+    encounter_participant_type_Translator: Coding.FromStrict({
         code: "translator",
         display: "Translator",
         system: "http://terminology.hl7.org/CodeSystem/participant-type"

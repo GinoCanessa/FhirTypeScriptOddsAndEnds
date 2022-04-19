@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
  */
-export interface IIdentifier extends fhir.IFhirElement {
+export declare type IIdentifier = fhir.IFhirElement & {
     /**
      * The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.
      */
@@ -30,7 +30,7 @@ export interface IIdentifier extends fhir.IFhirElement {
      */
     value?: string | undefined;
     _value?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
  */
@@ -63,21 +63,17 @@ export declare class Identifier extends fhir.FhirElement implements fhir.IIdenti
     value?: string | undefined;
     _value?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Identifier - initializes required elements to null.
+     * Default constructor for Identifier - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Identifier from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IIdentifier>): Identifier;
+    constructor(source?: Partial<fhir.IIdentifier>);
     /**
      * Check if the current Identifier contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Identifier from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IIdentifier): Identifier;
+    static FromStrict(source: fhir.IIdentifier): Identifier;
 }
 /**
  * Code Values for the Identifier.use field

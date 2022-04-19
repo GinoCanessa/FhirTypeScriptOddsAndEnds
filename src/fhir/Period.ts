@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A time period defined by a start and end date and optionally time.
  */
-export interface IPeriod extends fhir.IFhirElement {
+export type IPeriod = fhir.IFhirElement & {
   /**
    * The high value includes any matching date/time. i.e. 2012-02-03T10:00:00 is in a period that has an end value of 2012-02-03.
    */
@@ -37,40 +36,31 @@ export class Period extends fhir.FhirElement implements fhir.IPeriod {
   public start?: string|undefined;
   public _start?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Period - initializes required elements to null.
+   * Default constructor for Period - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Period from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IPeriod>):Period {
-    var dest:Partial<Period> = super.FactoryCreate(source) as Partial<Period>;
-    if (source["end"] !== undefined) { dest.end = source.end; }
-    if (source["_end"] !== undefined) { dest._end = fhir.FhirElement.FactoryCreate(source._end!); }
-    if (source["start"] !== undefined) { dest.start = source.start; }
-    if (source["_start"] !== undefined) { dest._start = fhir.FhirElement.FactoryCreate(source._start!); }
-    return dest as Period;
+  constructor(source:Partial<fhir.IPeriod> = {}) {
+    super(source);
+    if (source["end"]) { this.end = source.end; }
+    if (source["_end"]) { this._end = new fhir.FhirElement(source._end!); }
+    if (source["start"]) { this.start = source.start; }
+    if (source["_start"]) { this._start = new fhir.FhirElement(source._start!); }
   }
   /**
    * Check if the current Period contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Period from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IPeriod):Period {
-    var dest:Period = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Period is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IPeriod):Period {
+    var dest:Period = new Period(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Period is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * For referring to data content defined in other formats.
  */
-export interface IAttachment extends fhir.IFhirElement {
+export declare type IAttachment = fhir.IFhirElement & {
     /**
      * Identifies the type of the data in the attachment and allows a method to be chosen to interpret or render the data. Includes mime type parameters such as charset where appropriate.
      */
@@ -43,7 +43,7 @@ export interface IAttachment extends fhir.IFhirElement {
      */
     url?: string | undefined;
     _url?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * For referring to data content defined in other formats.
  */
@@ -89,20 +89,16 @@ export declare class Attachment extends fhir.FhirElement implements fhir.IAttach
     url?: string | undefined;
     _url?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Attachment - initializes required elements to null.
+     * Default constructor for Attachment - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Attachment from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IAttachment>): Attachment;
+    constructor(source?: Partial<fhir.IAttachment>);
     /**
      * Check if the current Attachment contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Attachment from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IAttachment): Attachment;
+    static FromStrict(source: fhir.IAttachment): Attachment;
 }
 //# sourceMappingURL=Attachment.d.ts.map

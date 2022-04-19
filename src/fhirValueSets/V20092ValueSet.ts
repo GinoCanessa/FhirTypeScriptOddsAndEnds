@@ -4,14 +4,13 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
  * FHIR Value set/code system definition for HL7 v2 table 0092 ( RE-ADMISSION INDICATOR)
  */
 export const V20092ValueSet = {
-  v2_0092_ReAdmission: Coding.FactoryCreateStrict({
+  v2_0092_ReAdmission: Coding.FromStrict({
     code: "R",
     display: "Re-admission",
     system: "http://terminology.hl7.org/CodeSystem/v2-0092"

@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Patient is present for the encounter, however is not currently meeting with a practitioner.
    */
-  encounter_status_Arrived: Coding.FactoryCreateStrict({
+  encounter_status_Arrived: Coding.FromStrict({
     code: "arrived",
     display: "Arrived",
     system: "http://hl7.org/fhir/encounter-status"
@@ -22,7 +21,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has ended before it has begun.
    */
-  encounter_status_Cancelled: Coding.FactoryCreateStrict({
+  encounter_status_Cancelled: Coding.FromStrict({
     code: "cancelled",
     display: "Cancelled",
     system: "http://hl7.org/fhir/encounter-status"
@@ -30,7 +29,7 @@ export const EncounterStatusValueSet = {
   /**
    * This instance should not have been part of this patient's medical record.
    */
-  encounter_status_EnteredInError: Coding.FactoryCreateStrict({
+  encounter_status_EnteredInError: Coding.FromStrict({
     code: "entered-in-error",
     display: "Entered in Error",
     system: "http://hl7.org/fhir/encounter-status"
@@ -38,7 +37,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has ended.
    */
-  encounter_status_Finished: Coding.FactoryCreateStrict({
+  encounter_status_Finished: Coding.FromStrict({
     code: "finished",
     display: "Finished",
     system: "http://hl7.org/fhir/encounter-status"
@@ -46,7 +45,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has begun and the patient is present / the practitioner and the patient are meeting.
    */
-  encounter_status_InProgress: Coding.FactoryCreateStrict({
+  encounter_status_InProgress: Coding.FromStrict({
     code: "in-progress",
     display: "In Progress",
     system: "http://hl7.org/fhir/encounter-status"
@@ -54,7 +53,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has begun, but the patient is temporarily on leave.
    */
-  encounter_status_OnLeave: Coding.FactoryCreateStrict({
+  encounter_status_OnLeave: Coding.FromStrict({
     code: "onleave",
     display: "On Leave",
     system: "http://hl7.org/fhir/encounter-status"
@@ -62,7 +61,7 @@ export const EncounterStatusValueSet = {
   /**
    * The Encounter has not yet started.
    */
-  encounter_status_Planned: Coding.FactoryCreateStrict({
+  encounter_status_Planned: Coding.FromStrict({
     code: "planned",
     display: "Planned",
     system: "http://hl7.org/fhir/encounter-status"
@@ -70,7 +69,7 @@ export const EncounterStatusValueSet = {
   /**
    * The patient has been assessed for the priority of their treatment based on the severity of their condition.
    */
-  encounter_status_Triaged: Coding.FactoryCreateStrict({
+  encounter_status_Triaged: Coding.FromStrict({
     code: "triaged",
     display: "Triaged",
     system: "http://hl7.org/fhir/encounter-status"
@@ -78,7 +77,7 @@ export const EncounterStatusValueSet = {
   /**
    * The encounter status is unknown. Note that "unknown" is a value of last resort and every attempt should be made to provide a meaningful value other than "unknown".
    */
-  encounter_status_Unknown: Coding.FactoryCreateStrict({
+  encounter_status_Unknown: Coding.FromStrict({
     code: "unknown",
     display: "Unknown",
     system: "http://hl7.org/fhir/encounter-status"

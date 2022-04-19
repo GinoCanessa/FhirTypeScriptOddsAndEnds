@@ -52,10 +52,6 @@ export declare const SecurityLabelsValueSet: {
      */
     v3_ObservationValue_Aggregated: Coding;
     /**
-     * Custodian system must remove any information that could result in identifying the information subject.
-     */
-    v3_ActCode_Anonymize: Coding;
-    /**
      * Security metadata observation value conveying the alteration integrity of an IT resource (data, information object, service, or system capability) by used to indicate the mechanism by which software systems can strip portions of the resource that could allow the identification of the source of the information or the information subject.  No key to relink the data is retained.
      */
     v3_ObservationValue_Anonymized: Coding;
@@ -236,10 +232,6 @@ export declare const SecurityLabelsValueSet: {
      * Custodian security system must declassify information assigned security labels by instantiating a new version of the classified information so as to break the binding of the classifying security label when assigning a new security label that marks the information as unclassified in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the previous assignment and binding.
      */
     v3_ActCode_DeclassifySecurityLabel: Coding;
-    /**
-     * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.
-     */
-    v3_ActCode_Deidentify: Coding;
     /**
      * Custodian system must remove target information from access after use.
      */
@@ -562,13 +554,6 @@ export declare const SecurityLabelsValueSet: {
      */
     v3_Confidentiality_Low: Coding;
     /**
-     * Custodian security system must assign and bind security labels in order to classify information created in the information systems under its control for collection, access, use and disclosure in accordance with applicable jurisdictional privacy policies associated with the target information. The system must retain an immutable record of the assignment and binding.
-     *
-     *
-     *                            Usage Note: In security systems, security policy label assignments do not change, they may supersede prior assignments, and such reassignments are always tracked for auditing and other purposes.
-     */
-    v3_ActCode_AssignSecurityLabel: Coding;
-    /**
      * To perform one or more operations on information to assign, persist, and manage labels to healthcare data to characterize various aspects, such as its security classification, sensitivity, compartment, integrity, and provenance; applicable privacy, consent, security, provenance, and trust policies; and handling caveats such as purpose of use, obligations, and refrain policies.
      *
      *                         Label management includes classification of target data by constructing and binding of a label set per applicable policies, security policy information file semantics, and classification guides.  Label management also includes process and procedures for subsequent revision of a label for, e.g., reclassification, downgrading classification, and declassification.
@@ -627,10 +612,6 @@ export declare const SecurityLabelsValueSet: {
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
     v3_ActCode_MaritalStatusInformationSensitivity: Coding;
-    /**
-     * Custodian system must render information unreadable and unusable by algorithmically transforming plaintext into ciphertext.  User may be provided a key to decrypt per license or "shared secret".
-     */
-    v3_ActCode_Mask: Coding;
     /**
      * Security metadata observation value conveying the alteration integrity of an IT resource (data, information object, service, or system capability) by indicating the mechanism by which software systems can make data unintelligible (that is, as unreadable and unusable by algorithmically transforming plaintext into ciphertext) such that it can only be accessed or used by authorized users.  An authorized user may be provided a key to decrypt per license or "shared secret".
      *
@@ -886,10 +867,6 @@ export declare const SecurityLabelsValueSet: {
      *                            Usage Note: If there is a jurisdictional mandate, then use the applicable ActPrivacyLaw code system, and specify the law rather than or in addition to this more generic code.
      */
     v3_ActCode_PatientRequestedInformationSensitivity: Coding;
-    /**
-     * Custodian system must strip information of data that would allow the identification of the source of the information or the information subject.  Custodian may retain a key to relink data necessary to reidentify the information subject.
-     */
-    v3_ActCode_Pseudonymize: Coding;
     /**
      * Security metadata observation value conveying the alteration integrity of an IT resource (data, information object, service, or system capability), by indicating the mechanism by which software systems can strip portions of the resource that could allow the identification of the source of the information or the information subject.  Custodian may retain a key to relink data necessary to reidentify the information subject.
      *

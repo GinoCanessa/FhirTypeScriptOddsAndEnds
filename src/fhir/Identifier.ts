@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
  */
-export interface IIdentifier extends fhir.IFhirElement {
+export type IIdentifier = fhir.IFhirElement & {
   /**
    * The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.
    */
@@ -71,45 +70,36 @@ export class Identifier extends fhir.FhirElement implements fhir.IIdentifier {
   public value?: string|undefined;
   public _value?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Identifier - initializes required elements to null.
+   * Default constructor for Identifier - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Identifier from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IIdentifier>):Identifier {
-    var dest:Partial<Identifier> = super.FactoryCreate(source) as Partial<Identifier>;
-    if (source["assigner"] !== undefined) { dest.assigner = fhir.Reference.FactoryCreate(source.assigner!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["system"] !== undefined) { dest.system = source.system; }
-    if (source["_system"] !== undefined) { dest._system = fhir.FhirElement.FactoryCreate(source._system!); }
-    if (source["type"] !== undefined) { dest.type = fhir.CodeableConcept.FactoryCreate(source.type!); }
-    if (source["use"] !== undefined) { dest.use = source.use; }
-    if (source["_use"] !== undefined) { dest._use = fhir.FhirElement.FactoryCreate(source._use!); }
-    if (source["value"] !== undefined) { dest.value = source.value; }
-    if (source["_value"] !== undefined) { dest._value = fhir.FhirElement.FactoryCreate(source._value!); }
-    return dest as Identifier;
+  constructor(source:Partial<fhir.IIdentifier> = {}) {
+    super(source);
+    if (source["assigner"]) { this.assigner = new fhir.Reference(source.assigner!); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["system"]) { this.system = source.system; }
+    if (source["_system"]) { this._system = new fhir.FhirElement(source._system!); }
+    if (source["type"]) { this.type = new fhir.CodeableConcept(source.type!); }
+    if (source["use"]) { this.use = source.use; }
+    if (source["_use"]) { this._use = new fhir.FhirElement(source._use!); }
+    if (source["value"]) { this.value = source.value; }
+    if (source["_value"]) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Check if the current Identifier contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Identifier from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IIdentifier):Identifier {
-    var dest:Identifier = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Identifier is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IIdentifier):Identifier {
+    var dest:Identifier = new Identifier(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Identifier is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Optional Extension Element - found in all resources.
  */
-export interface IExtension extends fhir.IFhirElement {
+export type IExtension = fhir.IFhirElement & {
   /**
    * The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.
    */
@@ -118,7 +117,7 @@ export interface IExtension extends fhir.IFhirElement {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueAge?: any|undefined;
+  valueAge?: fhir.IAge|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -142,11 +141,11 @@ export interface IExtension extends fhir.IFhirElement {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueCount?: any|undefined;
+  valueCount?: fhir.ICount|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDistance?: any|undefined;
+  valueDistance?: fhir.IDistance|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -162,7 +161,7 @@ export interface IExtension extends fhir.IFhirElement {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueMoney?: any|undefined;
+  valueMoney?: fhir.IMoney|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -190,7 +189,7 @@ export interface IExtension extends fhir.IFhirElement {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueSignature?: any|undefined;
+  valueSignature?: fhir.ISignature|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -198,39 +197,39 @@ export interface IExtension extends fhir.IFhirElement {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueContactDetail?: any|undefined;
+  valueContactDetail?: fhir.IContactDetail|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueContributor?: any|undefined;
+  valueContributor?: fhir.IContributor|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDataRequirement?: any|undefined;
+  valueDataRequirement?: fhir.IDataRequirement|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueExpression?: any|undefined;
+  valueExpression?: fhir.IExpression|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueParameterDefinition?: any|undefined;
+  valueParameterDefinition?: fhir.IParameterDefinition|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueRelatedArtifact?: any|undefined;
+  valueRelatedArtifact?: fhir.IRelatedArtifact|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueTriggerDefinition?: any|undefined;
+  valueTriggerDefinition?: fhir.ITriggerDefinition|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueUsageContext?: any|undefined;
+  valueUsageContext?: fhir.IUsageContext|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  valueDosage?: any|undefined;
+  valueDosage?: fhir.IDosage|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -347,7 +346,7 @@ export class Extension extends fhir.FhirElement implements fhir.IExtension {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueAge?: any|undefined;
+  public valueAge?: fhir.Age|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -371,11 +370,11 @@ export class Extension extends fhir.FhirElement implements fhir.IExtension {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueCount?: any|undefined;
+  public valueCount?: fhir.Count|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueDistance?: any|undefined;
+  public valueDistance?: fhir.Distance|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -391,7 +390,7 @@ export class Extension extends fhir.FhirElement implements fhir.IExtension {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueMoney?: any|undefined;
+  public valueMoney?: fhir.Money|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -419,7 +418,7 @@ export class Extension extends fhir.FhirElement implements fhir.IExtension {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueSignature?: any|undefined;
+  public valueSignature?: fhir.Signature|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
@@ -427,147 +426,139 @@ export class Extension extends fhir.FhirElement implements fhir.IExtension {
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueContactDetail?: any|undefined;
+  public valueContactDetail?: fhir.ContactDetail|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueContributor?: any|undefined;
+  public valueContributor?: fhir.Contributor|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueDataRequirement?: any|undefined;
+  public valueDataRequirement?: fhir.DataRequirement|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueExpression?: any|undefined;
+  public valueExpression?: fhir.Expression|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueParameterDefinition?: any|undefined;
+  public valueParameterDefinition?: fhir.ParameterDefinition|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueRelatedArtifact?: any|undefined;
+  public valueRelatedArtifact?: fhir.RelatedArtifact|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueTriggerDefinition?: any|undefined;
+  public valueTriggerDefinition?: fhir.TriggerDefinition|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueUsageContext?: any|undefined;
+  public valueUsageContext?: fhir.UsageContext|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
-  public valueDosage?: any|undefined;
+  public valueDosage?: fhir.Dosage|undefined;
   /**
    * Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).
    */
   public valueMeta?: fhir.Meta|undefined;
   /**
-   * Default constructor for Extension - initializes required elements to null.
+   * Default constructor for Extension - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IExtension> = {}) {
+    super(source);
     this.url = null;
-  }
-  /**
-   * Factory function to create a Extension from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IExtension>):Extension {
-    var dest:Partial<Extension> = super.FactoryCreate(source) as Partial<Extension>;
-    if (source["url"] !== undefined) { dest.url = source.url; }
-    if (source["_url"] !== undefined) { dest._url = fhir.FhirElement.FactoryCreate(source._url!); }
-    if (source["valueBase64Binary"] !== undefined) { dest.valueBase64Binary = source.valueBase64Binary; }
-    if (source["_valueBase64Binary"] !== undefined) { dest._valueBase64Binary = fhir.FhirElement.FactoryCreate(source._valueBase64Binary!); }
-    if (source["valueBoolean"] !== undefined) { dest.valueBoolean = source.valueBoolean; }
-    if (source["_valueBoolean"] !== undefined) { dest._valueBoolean = fhir.FhirElement.FactoryCreate(source._valueBoolean!); }
-    if (source["valueCanonical"] !== undefined) { dest.valueCanonical = source.valueCanonical; }
-    if (source["_valueCanonical"] !== undefined) { dest._valueCanonical = fhir.FhirElement.FactoryCreate(source._valueCanonical!); }
-    if (source["valueCode"] !== undefined) { dest.valueCode = source.valueCode; }
-    if (source["_valueCode"] !== undefined) { dest._valueCode = fhir.FhirElement.FactoryCreate(source._valueCode!); }
-    if (source["valueDate"] !== undefined) { dest.valueDate = source.valueDate; }
-    if (source["_valueDate"] !== undefined) { dest._valueDate = fhir.FhirElement.FactoryCreate(source._valueDate!); }
-    if (source["valueDateTime"] !== undefined) { dest.valueDateTime = source.valueDateTime; }
-    if (source["_valueDateTime"] !== undefined) { dest._valueDateTime = fhir.FhirElement.FactoryCreate(source._valueDateTime!); }
-    if (source["valueDecimal"] !== undefined) { dest.valueDecimal = source.valueDecimal; }
-    if (source["_valueDecimal"] !== undefined) { dest._valueDecimal = fhir.FhirElement.FactoryCreate(source._valueDecimal!); }
-    if (source["valueId"] !== undefined) { dest.valueId = source.valueId; }
-    if (source["_valueId"] !== undefined) { dest._valueId = fhir.FhirElement.FactoryCreate(source._valueId!); }
-    if (source["valueInstant"] !== undefined) { dest.valueInstant = source.valueInstant; }
-    if (source["_valueInstant"] !== undefined) { dest._valueInstant = fhir.FhirElement.FactoryCreate(source._valueInstant!); }
-    if (source["valueInteger"] !== undefined) { dest.valueInteger = source.valueInteger; }
-    if (source["_valueInteger"] !== undefined) { dest._valueInteger = fhir.FhirElement.FactoryCreate(source._valueInteger!); }
-    if (source["valueMarkdown"] !== undefined) { dest.valueMarkdown = source.valueMarkdown; }
-    if (source["_valueMarkdown"] !== undefined) { dest._valueMarkdown = fhir.FhirElement.FactoryCreate(source._valueMarkdown!); }
-    if (source["valueOid"] !== undefined) { dest.valueOid = source.valueOid; }
-    if (source["_valueOid"] !== undefined) { dest._valueOid = fhir.FhirElement.FactoryCreate(source._valueOid!); }
-    if (source["valuePositiveInt"] !== undefined) { dest.valuePositiveInt = source.valuePositiveInt; }
-    if (source["_valuePositiveInt"] !== undefined) { dest._valuePositiveInt = fhir.FhirElement.FactoryCreate(source._valuePositiveInt!); }
-    if (source["valueString"] !== undefined) { dest.valueString = source.valueString; }
-    if (source["_valueString"] !== undefined) { dest._valueString = fhir.FhirElement.FactoryCreate(source._valueString!); }
-    if (source["valueTime"] !== undefined) { dest.valueTime = source.valueTime; }
-    if (source["_valueTime"] !== undefined) { dest._valueTime = fhir.FhirElement.FactoryCreate(source._valueTime!); }
-    if (source["valueUnsignedInt"] !== undefined) { dest.valueUnsignedInt = source.valueUnsignedInt; }
-    if (source["_valueUnsignedInt"] !== undefined) { dest._valueUnsignedInt = fhir.FhirElement.FactoryCreate(source._valueUnsignedInt!); }
-    if (source["valueUri"] !== undefined) { dest.valueUri = source.valueUri; }
-    if (source["_valueUri"] !== undefined) { dest._valueUri = fhir.FhirElement.FactoryCreate(source._valueUri!); }
-    if (source["valueUrl"] !== undefined) { dest.valueUrl = source.valueUrl; }
-    if (source["_valueUrl"] !== undefined) { dest._valueUrl = fhir.FhirElement.FactoryCreate(source._valueUrl!); }
-    if (source["valueUuid"] !== undefined) { dest.valueUuid = source.valueUuid; }
-    if (source["_valueUuid"] !== undefined) { dest._valueUuid = fhir.FhirElement.FactoryCreate(source._valueUuid!); }
-    if (source["valueAddress"] !== undefined) { dest.valueAddress = fhir.Address.FactoryCreate(source.valueAddress!); }
-    if (source["valueAge"] !== undefined) { dest.valueAge = source.valueAge; }
-    if (source["valueAnnotation"] !== undefined) { dest.valueAnnotation = fhir.Annotation.FactoryCreate(source.valueAnnotation!); }
-    if (source["valueAttachment"] !== undefined) { dest.valueAttachment = fhir.Attachment.FactoryCreate(source.valueAttachment!); }
-    if (source["valueCodeableConcept"] !== undefined) { dest.valueCodeableConcept = fhir.CodeableConcept.FactoryCreate(source.valueCodeableConcept!); }
-    if (source["valueCoding"] !== undefined) { dest.valueCoding = fhir.Coding.FactoryCreate(source.valueCoding!); }
-    if (source["valueContactPoint"] !== undefined) { dest.valueContactPoint = fhir.ContactPoint.FactoryCreate(source.valueContactPoint!); }
-    if (source["valueCount"] !== undefined) { dest.valueCount = source.valueCount; }
-    if (source["valueDistance"] !== undefined) { dest.valueDistance = source.valueDistance; }
-    if (source["valueDuration"] !== undefined) { dest.valueDuration = fhir.Duration.FactoryCreate(source.valueDuration!); }
-    if (source["valueHumanName"] !== undefined) { dest.valueHumanName = fhir.HumanName.FactoryCreate(source.valueHumanName!); }
-    if (source["valueIdentifier"] !== undefined) { dest.valueIdentifier = fhir.Identifier.FactoryCreate(source.valueIdentifier!); }
-    if (source["valueMoney"] !== undefined) { dest.valueMoney = source.valueMoney; }
-    if (source["valuePeriod"] !== undefined) { dest.valuePeriod = fhir.Period.FactoryCreate(source.valuePeriod!); }
-    if (source["valueQuantity"] !== undefined) { dest.valueQuantity = fhir.Quantity.FactoryCreate(source.valueQuantity!); }
-    if (source["valueRange"] !== undefined) { dest.valueRange = fhir.Range.FactoryCreate(source.valueRange!); }
-    if (source["valueRatio"] !== undefined) { dest.valueRatio = fhir.Ratio.FactoryCreate(source.valueRatio!); }
-    if (source["valueReference"] !== undefined) { dest.valueReference = fhir.Reference.FactoryCreate(source.valueReference!); }
-    if (source["valueSampledData"] !== undefined) { dest.valueSampledData = fhir.SampledData.FactoryCreate(source.valueSampledData!); }
-    if (source["valueSignature"] !== undefined) { dest.valueSignature = source.valueSignature; }
-    if (source["valueTiming"] !== undefined) { dest.valueTiming = fhir.Timing.FactoryCreate(source.valueTiming!); }
-    if (source["valueContactDetail"] !== undefined) { dest.valueContactDetail = source.valueContactDetail; }
-    if (source["valueContributor"] !== undefined) { dest.valueContributor = source.valueContributor; }
-    if (source["valueDataRequirement"] !== undefined) { dest.valueDataRequirement = source.valueDataRequirement; }
-    if (source["valueExpression"] !== undefined) { dest.valueExpression = source.valueExpression; }
-    if (source["valueParameterDefinition"] !== undefined) { dest.valueParameterDefinition = source.valueParameterDefinition; }
-    if (source["valueRelatedArtifact"] !== undefined) { dest.valueRelatedArtifact = source.valueRelatedArtifact; }
-    if (source["valueTriggerDefinition"] !== undefined) { dest.valueTriggerDefinition = source.valueTriggerDefinition; }
-    if (source["valueUsageContext"] !== undefined) { dest.valueUsageContext = source.valueUsageContext; }
-    if (source["valueDosage"] !== undefined) { dest.valueDosage = source.valueDosage; }
-    if (source["valueMeta"] !== undefined) { dest.valueMeta = fhir.Meta.FactoryCreate(source.valueMeta!); }
-    return dest as Extension;
+    if (source["url"]) { this.url = source.url; }
+    if (this.url === undefined) { this.url = null }
+    if (source["_url"]) { this._url = new fhir.FhirElement(source._url!); }
+    if (source["valueBase64Binary"]) { this.valueBase64Binary = source.valueBase64Binary; }
+    if (source["_valueBase64Binary"]) { this._valueBase64Binary = new fhir.FhirElement(source._valueBase64Binary!); }
+    if (source["valueBoolean"]) { this.valueBoolean = source.valueBoolean; }
+    if (source["_valueBoolean"]) { this._valueBoolean = new fhir.FhirElement(source._valueBoolean!); }
+    if (source["valueCanonical"]) { this.valueCanonical = source.valueCanonical; }
+    if (source["_valueCanonical"]) { this._valueCanonical = new fhir.FhirElement(source._valueCanonical!); }
+    if (source["valueCode"]) { this.valueCode = source.valueCode; }
+    if (source["_valueCode"]) { this._valueCode = new fhir.FhirElement(source._valueCode!); }
+    if (source["valueDate"]) { this.valueDate = source.valueDate; }
+    if (source["_valueDate"]) { this._valueDate = new fhir.FhirElement(source._valueDate!); }
+    if (source["valueDateTime"]) { this.valueDateTime = source.valueDateTime; }
+    if (source["_valueDateTime"]) { this._valueDateTime = new fhir.FhirElement(source._valueDateTime!); }
+    if (source["valueDecimal"]) { this.valueDecimal = source.valueDecimal; }
+    if (source["_valueDecimal"]) { this._valueDecimal = new fhir.FhirElement(source._valueDecimal!); }
+    if (source["valueId"]) { this.valueId = source.valueId; }
+    if (source["_valueId"]) { this._valueId = new fhir.FhirElement(source._valueId!); }
+    if (source["valueInstant"]) { this.valueInstant = source.valueInstant; }
+    if (source["_valueInstant"]) { this._valueInstant = new fhir.FhirElement(source._valueInstant!); }
+    if (source["valueInteger"]) { this.valueInteger = source.valueInteger; }
+    if (source["_valueInteger"]) { this._valueInteger = new fhir.FhirElement(source._valueInteger!); }
+    if (source["valueMarkdown"]) { this.valueMarkdown = source.valueMarkdown; }
+    if (source["_valueMarkdown"]) { this._valueMarkdown = new fhir.FhirElement(source._valueMarkdown!); }
+    if (source["valueOid"]) { this.valueOid = source.valueOid; }
+    if (source["_valueOid"]) { this._valueOid = new fhir.FhirElement(source._valueOid!); }
+    if (source["valuePositiveInt"]) { this.valuePositiveInt = source.valuePositiveInt; }
+    if (source["_valuePositiveInt"]) { this._valuePositiveInt = new fhir.FhirElement(source._valuePositiveInt!); }
+    if (source["valueString"]) { this.valueString = source.valueString; }
+    if (source["_valueString"]) { this._valueString = new fhir.FhirElement(source._valueString!); }
+    if (source["valueTime"]) { this.valueTime = source.valueTime; }
+    if (source["_valueTime"]) { this._valueTime = new fhir.FhirElement(source._valueTime!); }
+    if (source["valueUnsignedInt"]) { this.valueUnsignedInt = source.valueUnsignedInt; }
+    if (source["_valueUnsignedInt"]) { this._valueUnsignedInt = new fhir.FhirElement(source._valueUnsignedInt!); }
+    if (source["valueUri"]) { this.valueUri = source.valueUri; }
+    if (source["_valueUri"]) { this._valueUri = new fhir.FhirElement(source._valueUri!); }
+    if (source["valueUrl"]) { this.valueUrl = source.valueUrl; }
+    if (source["_valueUrl"]) { this._valueUrl = new fhir.FhirElement(source._valueUrl!); }
+    if (source["valueUuid"]) { this.valueUuid = source.valueUuid; }
+    if (source["_valueUuid"]) { this._valueUuid = new fhir.FhirElement(source._valueUuid!); }
+    if (source["valueAddress"]) { this.valueAddress = new fhir.Address(source.valueAddress!); }
+    if (source["valueAge"]) { this.valueAge = new fhir.Age(source.valueAge!); }
+    if (source["valueAnnotation"]) { this.valueAnnotation = new fhir.Annotation(source.valueAnnotation!); }
+    if (source["valueAttachment"]) { this.valueAttachment = new fhir.Attachment(source.valueAttachment!); }
+    if (source["valueCodeableConcept"]) { this.valueCodeableConcept = new fhir.CodeableConcept(source.valueCodeableConcept!); }
+    if (source["valueCoding"]) { this.valueCoding = new fhir.Coding(source.valueCoding!); }
+    if (source["valueContactPoint"]) { this.valueContactPoint = new fhir.ContactPoint(source.valueContactPoint!); }
+    if (source["valueCount"]) { this.valueCount = new fhir.Count(source.valueCount!); }
+    if (source["valueDistance"]) { this.valueDistance = new fhir.Distance(source.valueDistance!); }
+    if (source["valueDuration"]) { this.valueDuration = new fhir.Duration(source.valueDuration!); }
+    if (source["valueHumanName"]) { this.valueHumanName = new fhir.HumanName(source.valueHumanName!); }
+    if (source["valueIdentifier"]) { this.valueIdentifier = new fhir.Identifier(source.valueIdentifier!); }
+    if (source["valueMoney"]) { this.valueMoney = new fhir.Money(source.valueMoney!); }
+    if (source["valuePeriod"]) { this.valuePeriod = new fhir.Period(source.valuePeriod!); }
+    if (source["valueQuantity"]) { this.valueQuantity = new fhir.Quantity(source.valueQuantity!); }
+    if (source["valueRange"]) { this.valueRange = new fhir.Range(source.valueRange!); }
+    if (source["valueRatio"]) { this.valueRatio = new fhir.Ratio(source.valueRatio!); }
+    if (source["valueReference"]) { this.valueReference = new fhir.Reference(source.valueReference!); }
+    if (source["valueSampledData"]) { this.valueSampledData = new fhir.SampledData(source.valueSampledData!); }
+    if (source["valueSignature"]) { this.valueSignature = new fhir.Signature(source.valueSignature!); }
+    if (source["valueTiming"]) { this.valueTiming = new fhir.Timing(source.valueTiming!); }
+    if (source["valueContactDetail"]) { this.valueContactDetail = new fhir.ContactDetail(source.valueContactDetail!); }
+    if (source["valueContributor"]) { this.valueContributor = new fhir.Contributor(source.valueContributor!); }
+    if (source["valueDataRequirement"]) { this.valueDataRequirement = new fhir.DataRequirement(source.valueDataRequirement!); }
+    if (source["valueExpression"]) { this.valueExpression = new fhir.Expression(source.valueExpression!); }
+    if (source["valueParameterDefinition"]) { this.valueParameterDefinition = new fhir.ParameterDefinition(source.valueParameterDefinition!); }
+    if (source["valueRelatedArtifact"]) { this.valueRelatedArtifact = new fhir.RelatedArtifact(source.valueRelatedArtifact!); }
+    if (source["valueTriggerDefinition"]) { this.valueTriggerDefinition = new fhir.TriggerDefinition(source.valueTriggerDefinition!); }
+    if (source["valueUsageContext"]) { this.valueUsageContext = new fhir.UsageContext(source.valueUsageContext!); }
+    if (source["valueDosage"]) { this.valueDosage = new fhir.Dosage(source.valueDosage!); }
+    if (source["valueMeta"]) { this.valueMeta = new fhir.Meta(source.valueMeta!); }
   }
   /**
    * Check if the current Extension contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["url"] === undefined) { missingElements.push("url"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Extension from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IExtension):Extension {
-    var dest:Extension = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Extension is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IExtension):Extension {
+    var dest:Extension = new Extension(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Extension is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

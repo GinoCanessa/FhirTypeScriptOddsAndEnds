@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * A set of rules that describe when the event is scheduled.
  */
-export interface ITimingRepeat extends fhir.IFhirElement {
+export declare type ITimingRepeat = fhir.IFhirElement & {
     /**
      * Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.
      */
@@ -85,11 +85,11 @@ export interface ITimingRepeat extends fhir.IFhirElement {
      */
     when?: string[] | undefined;
     _when?: fhir.IFhirElement[] | undefined;
-}
+};
 /**
  * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
  */
-export interface ITiming extends fhir.IBackboneElement {
+export declare type ITiming = fhir.IBackboneElement & {
     /**
      * BID etc. are defined as 'at institutionally specified times'. For example, an institution may choose that BID is "always at 7am and 6pm".  If it is inappropriate for this choice to be made, the code BID should not be used. Instead, a distinct organization-specific code should be used in place of the HL7-defined BID code and/or a structured representation should be used (in this case, specifying the two event times).
      */
@@ -103,7 +103,7 @@ export interface ITiming extends fhir.IBackboneElement {
      * A set of rules that describe when the event is scheduled.
      */
     repeat?: fhir.ITimingRepeat | undefined;
-}
+};
 /**
  * A set of rules that describe when the event is scheduled.
  */
@@ -191,21 +191,17 @@ export declare class TimingRepeat extends fhir.FhirElement implements fhir.ITimi
     when?: string[] | undefined;
     _when?: fhir.FhirElement[] | undefined;
     /**
-     * Default constructor for TimingRepeat - initializes required elements to null.
+     * Default constructor for TimingRepeat - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a TimingRepeat from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.ITimingRepeat>): TimingRepeat;
+    constructor(source?: Partial<fhir.ITimingRepeat>);
     /**
      * Check if the current TimingRepeat contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a TimingRepeat from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.ITimingRepeat): TimingRepeat;
+    static FromStrict(source: fhir.ITimingRepeat): TimingRepeat;
 }
 /**
  * Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
@@ -225,21 +221,17 @@ export declare class Timing extends fhir.BackboneElement implements fhir.ITiming
      */
     repeat?: fhir.TimingRepeat | undefined;
     /**
-     * Default constructor for Timing - initializes required elements to null.
+     * Default constructor for Timing - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Timing from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.ITiming>): Timing;
+    constructor(source?: Partial<fhir.ITiming>);
     /**
      * Check if the current Timing contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Timing from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.ITiming): Timing;
+    static FromStrict(source: fhir.ITiming): Timing;
 }
 /**
  * Code Values for the Timing.repeat.dayOfWeek field

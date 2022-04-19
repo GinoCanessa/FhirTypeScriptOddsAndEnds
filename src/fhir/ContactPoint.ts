@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
-export interface IContactPoint extends fhir.IFhirElement {
+export type IContactPoint = fhir.IFhirElement & {
   /**
    * Time period when the contact point was/is in use.
    */
@@ -65,45 +64,36 @@ export class ContactPoint extends fhir.FhirElement implements fhir.IContactPoint
   public value?: string|undefined;
   public _value?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for ContactPoint - initializes required elements to null.
+   * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a ContactPoint from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IContactPoint>):ContactPoint {
-    var dest:Partial<ContactPoint> = super.FactoryCreate(source) as Partial<ContactPoint>;
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["rank"] !== undefined) { dest.rank = source.rank; }
-    if (source["_rank"] !== undefined) { dest._rank = fhir.FhirElement.FactoryCreate(source._rank!); }
-    if (source["system"] !== undefined) { dest.system = source.system; }
-    if (source["_system"] !== undefined) { dest._system = fhir.FhirElement.FactoryCreate(source._system!); }
-    if (source["use"] !== undefined) { dest.use = source.use; }
-    if (source["_use"] !== undefined) { dest._use = fhir.FhirElement.FactoryCreate(source._use!); }
-    if (source["value"] !== undefined) { dest.value = source.value; }
-    if (source["_value"] !== undefined) { dest._value = fhir.FhirElement.FactoryCreate(source._value!); }
-    return dest as ContactPoint;
+  constructor(source:Partial<fhir.IContactPoint> = {}) {
+    super(source);
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["rank"]) { this.rank = source.rank; }
+    if (source["_rank"]) { this._rank = new fhir.FhirElement(source._rank!); }
+    if (source["system"]) { this.system = source.system; }
+    if (source["_system"]) { this._system = new fhir.FhirElement(source._system!); }
+    if (source["use"]) { this.use = source.use; }
+    if (source["_use"]) { this._use = new fhir.FhirElement(source._use!); }
+    if (source["value"]) { this.value = source.value; }
+    if (source["_value"]) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Check if the current ContactPoint contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a ContactPoint from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IContactPoint):ContactPoint {
-    var dest:ContactPoint = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `ContactPoint is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IContactPoint):ContactPoint {
+    var dest:ContactPoint = new ContactPoint(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `ContactPoint is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

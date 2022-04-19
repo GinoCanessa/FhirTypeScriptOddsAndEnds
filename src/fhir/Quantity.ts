@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
  */
-export interface IQuantity extends fhir.IFhirElement {
+export type IQuantity = fhir.IFhirElement & {
   /**
    * The preferred system is UCUM, but SNOMED CT can also be used (for customary units) or ISO 4217 for currency.  The context of use may additionally require a code from a particular system.
    */
@@ -67,46 +66,37 @@ export class Quantity extends fhir.FhirElement implements fhir.IQuantity {
   public value?: number|undefined;
   public _value?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Quantity - initializes required elements to null.
+   * Default constructor for Quantity - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Quantity from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IQuantity>):Quantity {
-    var dest:Partial<Quantity> = super.FactoryCreate(source) as Partial<Quantity>;
-    if (source["code"] !== undefined) { dest.code = source.code; }
-    if (source["_code"] !== undefined) { dest._code = fhir.FhirElement.FactoryCreate(source._code!); }
-    if (source["comparator"] !== undefined) { dest.comparator = source.comparator; }
-    if (source["_comparator"] !== undefined) { dest._comparator = fhir.FhirElement.FactoryCreate(source._comparator!); }
-    if (source["system"] !== undefined) { dest.system = source.system; }
-    if (source["_system"] !== undefined) { dest._system = fhir.FhirElement.FactoryCreate(source._system!); }
-    if (source["unit"] !== undefined) { dest.unit = source.unit; }
-    if (source["_unit"] !== undefined) { dest._unit = fhir.FhirElement.FactoryCreate(source._unit!); }
-    if (source["value"] !== undefined) { dest.value = source.value; }
-    if (source["_value"] !== undefined) { dest._value = fhir.FhirElement.FactoryCreate(source._value!); }
-    return dest as Quantity;
+  constructor(source:Partial<fhir.IQuantity> = {}) {
+    super(source);
+    if (source["code"]) { this.code = source.code; }
+    if (source["_code"]) { this._code = new fhir.FhirElement(source._code!); }
+    if (source["comparator"]) { this.comparator = source.comparator; }
+    if (source["_comparator"]) { this._comparator = new fhir.FhirElement(source._comparator!); }
+    if (source["system"]) { this.system = source.system; }
+    if (source["_system"]) { this._system = new fhir.FhirElement(source._system!); }
+    if (source["unit"]) { this.unit = source.unit; }
+    if (source["_unit"]) { this._unit = new fhir.FhirElement(source._unit!); }
+    if (source["value"]) { this.value = source.value; }
+    if (source["_value"]) { this._value = new fhir.FhirElement(source._value!); }
   }
   /**
    * Check if the current Quantity contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Quantity from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IQuantity):Quantity {
-    var dest:Quantity = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Quantity is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IQuantity):Quantity {
+    var dest:Quantity = new Quantity(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Quantity is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

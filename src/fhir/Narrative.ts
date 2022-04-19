@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A human-readable summary of the resource conveying the essential clinical and business information for the resource.
  */
-export interface INarrative extends fhir.IFhirElement {
+export type INarrative = fhir.IFhirElement & {
   /**
    * The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, &lt;a&gt; elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects.
    */
@@ -37,44 +36,37 @@ export class Narrative extends fhir.FhirElement implements fhir.INarrative {
   public status: NarrativeStatusEnum|null;
   public _status?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for Narrative - initializes required elements to null.
+   * Default constructor for Narrative - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.INarrative> = {}) {
+    super(source);
     this.div = null;
+    if (source["div"]) { this.div = source.div; }
+    if (this.div === undefined) { this.div = null }
+    if (source["_div"]) { this._div = new fhir.FhirElement(source._div!); }
     this.status = null;
-  }
-  /**
-   * Factory function to create a Narrative from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.INarrative>):Narrative {
-    var dest:Partial<Narrative> = super.FactoryCreate(source) as Partial<Narrative>;
-    if (source["div"] !== undefined) { dest.div = source.div; }
-    if (source["_div"] !== undefined) { dest._div = fhir.FhirElement.FactoryCreate(source._div!); }
-    if (source["status"] !== undefined) { dest.status = source.status; }
-    if (source["_status"] !== undefined) { dest._status = fhir.FhirElement.FactoryCreate(source._status!); }
-    return dest as Narrative;
+    if (source["status"]) { this.status = source.status; }
+    if (this.status === undefined) { this.status = null }
+    if (source["_status"]) { this._status = new fhir.FhirElement(source._status!); }
   }
   /**
    * Check if the current Narrative contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["div"] === undefined) { missingElements.push("div"); }
     if (this["status"] === undefined) { missingElements.push("status"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Narrative from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.INarrative):Narrative {
-    var dest:Narrative = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Narrative is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.INarrative):Narrative {
+    var dest:Narrative = new Narrative(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Narrative is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

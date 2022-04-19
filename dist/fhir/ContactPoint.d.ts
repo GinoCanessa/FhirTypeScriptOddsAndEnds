@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
-export interface IContactPoint extends fhir.IFhirElement {
+export declare type IContactPoint = fhir.IFhirElement & {
     /**
      * Time period when the contact point was/is in use.
      */
@@ -27,7 +27,7 @@ export interface IContactPoint extends fhir.IFhirElement {
      */
     value?: string | undefined;
     _value?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
  */
@@ -57,21 +57,17 @@ export declare class ContactPoint extends fhir.FhirElement implements fhir.ICont
     value?: string | undefined;
     _value?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for ContactPoint - initializes required elements to null.
+     * Default constructor for ContactPoint - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a ContactPoint from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IContactPoint>): ContactPoint;
+    constructor(source?: Partial<fhir.IContactPoint>);
     /**
      * Check if the current ContactPoint contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a ContactPoint from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IContactPoint): ContactPoint;
+    static FromStrict(source: fhir.IContactPoint): ContactPoint;
 }
 /**
  * Code Values for the ContactPoint.system field

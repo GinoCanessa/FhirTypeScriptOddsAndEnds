@@ -2,11 +2,11 @@ import * as fhir from '../fhir';
 /**
  * This is the base resource type for everything.
  */
-export interface IResource {
+export declare type IResource = {
     /**
      * Resource Type Name
      */
-    readonly resourceType: string;
+    resourceType: string;
     /**
      * The only time that a resource does not have an id is when it is being submitted to the server using a create operation.
      */
@@ -26,7 +26,7 @@ export interface IResource {
      * The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.
      */
     meta?: fhir.IMeta | undefined;
-}
+};
 /**
  * This is the base resource type for everything.
  */
@@ -34,7 +34,7 @@ export declare class Resource implements fhir.IResource {
     /**
      * Resource Type Name
      */
-    readonly resourceType: string;
+    resourceType: string;
     /**
      * The only time that a resource does not have an id is when it is being submitted to the server using a create operation.
      */
@@ -55,20 +55,16 @@ export declare class Resource implements fhir.IResource {
      */
     meta?: fhir.Meta | undefined;
     /**
-     * Default constructor for Resource - initializes required elements to null.
+     * Default constructor for Resource - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Resource from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IResource>): Resource;
+    constructor(source?: Partial<fhir.IResource>);
     /**
      * Check if the current Resource contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Resource from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IResource): Resource;
+    static FromStrict(source: fhir.IResource): Resource;
 }
 //# sourceMappingURL=Resource.d.ts.map

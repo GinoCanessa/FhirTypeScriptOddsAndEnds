@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines the set of codes that can be used to indicate the marital status of a person.
  */
-export var MaritalStatusValueSet = {
+export const MaritalStatusValueSet = {
     /**
      * Marriage contract has been declared null and to not have existed
      */
-    v3_MaritalStatus_Annulled: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Annulled: Coding.FromStrict({
         code: "A",
         display: "Annulled",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -22,7 +21,7 @@ export var MaritalStatusValueSet = {
     /**
      * Marriage contract has been declared dissolved and inactive
      */
-    v3_MaritalStatus_Divorced: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Divorced: Coding.FromStrict({
         code: "D",
         display: "Divorced",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -30,7 +29,7 @@ export var MaritalStatusValueSet = {
     /**
      * Subject to an Interlocutory Decree.
      */
-    v3_MaritalStatus_Interlocutory: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Interlocutory: Coding.FromStrict({
         code: "I",
         display: "Interlocutory",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -38,7 +37,7 @@ export var MaritalStatusValueSet = {
     /**
      * Legally Separated
      */
-    v3_MaritalStatus_LegallySeparated: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_LegallySeparated: Coding.FromStrict({
         code: "L",
         display: "Legally Separated",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -46,7 +45,7 @@ export var MaritalStatusValueSet = {
     /**
      * A current marriage contract is active
      */
-    v3_MaritalStatus_Married: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Married: Coding.FromStrict({
         code: "M",
         display: "Married",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -54,7 +53,7 @@ export var MaritalStatusValueSet = {
     /**
      * More than 1 current spouse
      */
-    v3_MaritalStatus_Polygamous: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Polygamous: Coding.FromStrict({
         code: "P",
         display: "Polygamous",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -62,7 +61,7 @@ export var MaritalStatusValueSet = {
     /**
      * No marriage contract has ever been entered
      */
-    v3_MaritalStatus_NeverMarried: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_NeverMarried: Coding.FromStrict({
         code: "S",
         display: "Never Married",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -70,7 +69,7 @@ export var MaritalStatusValueSet = {
     /**
      * Person declares that a domestic partner relationship exists.
      */
-    v3_MaritalStatus_DomesticPartner: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_DomesticPartner: Coding.FromStrict({
         code: "T",
         display: "Domestic partner",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -78,7 +77,7 @@ export var MaritalStatusValueSet = {
     /**
      * Currently not in a marriage contract.
      */
-    v3_MaritalStatus_Unmarried: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Unmarried: Coding.FromStrict({
         code: "U",
         display: "unmarried",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
@@ -86,7 +85,7 @@ export var MaritalStatusValueSet = {
     /**
      * The spouse has died
      */
-    v3_MaritalStatus_Widowed: Coding.FactoryCreateStrict({
+    v3_MaritalStatus_Widowed: Coding.FromStrict({
         code: "W",
         display: "Widowed",
         system: "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"

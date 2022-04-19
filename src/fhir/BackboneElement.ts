@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Base definition for all elements that are defined inside a resource - but not those in a data type.
  */
-export interface IBackboneElement extends fhir.IFhirElement {
+export type IBackboneElement = fhir.IFhirElement & {
   /**
    * There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.
    */
@@ -25,37 +24,28 @@ export class BackboneElement extends fhir.FhirElement implements fhir.IBackboneE
    */
   public modifierExtension?: fhir.Extension[]|undefined;
   /**
-   * Default constructor for BackboneElement - initializes required elements to null.
+   * Default constructor for BackboneElement - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a BackboneElement from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IBackboneElement>):BackboneElement {
-    var dest:Partial<BackboneElement> = super.FactoryCreate(source) as Partial<BackboneElement>;
-    if (source["modifierExtension"] !== undefined) { dest.modifierExtension = source.modifierExtension.map((x:Partial<fhir.IExtension>) => fhir.Extension.FactoryCreate(x)); }
-    return dest as BackboneElement;
+  constructor(source:Partial<fhir.IBackboneElement> = {}) {
+    super(source);
+    if (source["modifierExtension"]) { this.modifierExtension = source.modifierExtension.map((x:Partial<fhir.IExtension>) => new fhir.Extension(x)); }
   }
   /**
    * Check if the current BackboneElement contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a BackboneElement from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IBackboneElement):BackboneElement {
-    var dest:BackboneElement = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `BackboneElement is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IBackboneElement):BackboneElement {
+    var dest:BackboneElement = new BackboneElement(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `BackboneElement is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

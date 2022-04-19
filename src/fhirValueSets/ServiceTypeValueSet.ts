@@ -4,7 +4,6 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir'
 /**
@@ -14,7 +13,7 @@ export const ServiceTypeValueSet = {
   /**
    * Adoption &amp; permanent care information/support
    */
-  service_type_AdoptionPermanentCareInfoSupport: Coding.FactoryCreateStrict({
+  service_type_AdoptionPermanentCareInfoSupport: Coding.FromStrict({
     code: "1",
     display: "Adoption/Permanent Care Info/Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -22,7 +21,7 @@ export const ServiceTypeValueSet = {
   /**
    * Personal alarms/alerts
    */
-  service_type_PersonalAlarmsAlerts: Coding.FactoryCreateStrict({
+  service_type_PersonalAlarmsAlerts: Coding.FromStrict({
     code: "10",
     display: "Personal Alarms/Alerts",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -30,7 +29,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability information/referral
    */
-  service_type_DisabilityInformationReferral: Coding.FactoryCreateStrict({
+  service_type_DisabilityInformationReferral: Coding.FromStrict({
     code: "100",
     display: "Disability Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -38,7 +37,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability support packages
    */
-  service_type_DisabilitySupportPackages: Coding.FactoryCreateStrict({
+  service_type_DisabilitySupportPackages: Coding.FromStrict({
     code: "101",
     display: "Disability Support Packages",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -46,7 +45,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability supported accommodation
    */
-  service_type_DisabilitySupportedAccommodation: Coding.FactoryCreateStrict({
+  service_type_DisabilitySupportedAccommodation: Coding.FromStrict({
     code: "102",
     display: "Disability Supported Accommodation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -54,7 +53,7 @@ export const ServiceTypeValueSet = {
   /**
    * Early childhood intervention
    */
-  service_type_EarlyChildhoodIntervention: Coding.FactoryCreateStrict({
+  service_type_EarlyChildhoodIntervention: Coding.FromStrict({
     code: "103",
     display: "Early Childhood Intervention",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -62,7 +61,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hearing aids &amp; equipment
    */
-  service_type_HearingAidsAndEquipment: Coding.FactoryCreateStrict({
+  service_type_HearingAidsAndEquipment: Coding.FromStrict({
     code: "104",
     display: "Hearing Aids & Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -70,7 +69,7 @@ export const ServiceTypeValueSet = {
   /**
    * Drug and/or alcohol counselling
    */
-  service_type_DrugAndOrAlcoholCounselling: Coding.FactoryCreateStrict({
+  service_type_DrugAndOrAlcoholCounselling: Coding.FromStrict({
     code: "105",
     display: "Drug and/or Alcohol Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -78,7 +77,7 @@ export const ServiceTypeValueSet = {
   /**
    * Drug and/or alcohol information/referral
    */
-  service_type_DrugAlcoholInformationReferral: Coding.FactoryCreateStrict({
+  service_type_DrugAlcoholInformationReferral: Coding.FromStrict({
     code: "106",
     display: "Drug/Alcohol Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -86,7 +85,7 @@ export const ServiceTypeValueSet = {
   /**
    * Needle &amp; Syringe exchange
    */
-  service_type_NeedleAndSyringeExchange: Coding.FactoryCreateStrict({
+  service_type_NeedleAndSyringeExchange: Coding.FromStrict({
     code: "107",
     display: "Needle & Syringe Exchange",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -94,7 +93,7 @@ export const ServiceTypeValueSet = {
   /**
    * Non-residential alcohol and/or drug dependence treatment
    */
-  service_type_NonResidAlcoholDrugTreatment: Coding.FactoryCreateStrict({
+  service_type_NonResidAlcoholDrugTreatment: Coding.FromStrict({
     code: "108",
     display: "Non-resid. Alcohol/Drug Treatment ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -102,7 +101,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pharmacotherapy (eg. methadone) program
    */
-  service_type_Pharmacotherapy: Coding.FactoryCreateStrict({
+  service_type_Pharmacotherapy: Coding.FromStrict({
     code: "109",
     display: "Pharmacotherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -110,7 +109,7 @@ export const ServiceTypeValueSet = {
   /**
    * Personal care for older persons
    */
-  service_type_PersonalCareForOlderPersons: Coding.FactoryCreateStrict({
+  service_type_PersonalCareForOlderPersons: Coding.FromStrict({
     code: "11",
     display: "Personal Care for Older Persons",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -118,7 +117,7 @@ export const ServiceTypeValueSet = {
   /**
    * Quit program
    */
-  service_type_QuitProgram: Coding.FactoryCreateStrict({
+  service_type_QuitProgram: Coding.FromStrict({
     code: "110",
     display: "Quit Program",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -126,7 +125,7 @@ export const ServiceTypeValueSet = {
   /**
    * Residential alcohol and/or drug dependence treatment
    */
-  service_type_ResidentialAlcoholDrugTreatment: Coding.FactoryCreateStrict({
+  service_type_ResidentialAlcoholDrugTreatment: Coding.FromStrict({
     code: "111",
     display: "Residential Alcohol/Drug Treatment ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -134,7 +133,7 @@ export const ServiceTypeValueSet = {
   /**
    * Adult/community education
    */
-  service_type_AdultCommunityEducation: Coding.FactoryCreateStrict({
+  service_type_AdultCommunityEducation: Coding.FromStrict({
     code: "112",
     display: "Adult/Community Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -142,7 +141,7 @@ export const ServiceTypeValueSet = {
   /**
    * Higher education
    */
-  service_type_HigherEducation: Coding.FactoryCreateStrict({
+  service_type_HigherEducation: Coding.FromStrict({
     code: "113",
     display: "Higher Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -150,7 +149,7 @@ export const ServiceTypeValueSet = {
   /**
    * Primary education
    */
-  service_type_PrimaryEducation: Coding.FactoryCreateStrict({
+  service_type_PrimaryEducation: Coding.FromStrict({
     code: "114",
     display: "Primary Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -158,7 +157,7 @@ export const ServiceTypeValueSet = {
   /**
    * Secondary education
    */
-  service_type_SecondaryEducation: Coding.FactoryCreateStrict({
+  service_type_SecondaryEducation: Coding.FromStrict({
     code: "115",
     display: "Secondary Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -166,7 +165,7 @@ export const ServiceTypeValueSet = {
   /**
    * Training &amp; vocational education
    */
-  service_type_TrainingAndVocationalEducation: Coding.FactoryCreateStrict({
+  service_type_TrainingAndVocationalEducation: Coding.FromStrict({
     code: "116",
     display: "Training & Vocational Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -174,7 +173,7 @@ export const ServiceTypeValueSet = {
   /**
    * Emergency medical
    */
-  service_type_EmergencyMedical: Coding.FactoryCreateStrict({
+  service_type_EmergencyMedical: Coding.FromStrict({
     code: "117",
     display: "Emergency Medical",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -182,7 +181,7 @@ export const ServiceTypeValueSet = {
   /**
    * Employment placement and/or support
    */
-  service_type_EmploymentPlacementAndOrSupport: Coding.FactoryCreateStrict({
+  service_type_EmploymentPlacementAndOrSupport: Coding.FromStrict({
     code: "118",
     display: "Employment Placement and/or Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -190,7 +189,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vocational Rehabilitation
    */
-  service_type_VocationalRehabilitation: Coding.FactoryCreateStrict({
+  service_type_VocationalRehabilitation: Coding.FromStrict({
     code: "119",
     display: "Vocational Rehabilitation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -198,7 +197,7 @@ export const ServiceTypeValueSet = {
   /**
    * Planned activity groups
    */
-  service_type_PlannedActivityGroups: Coding.FactoryCreateStrict({
+  service_type_PlannedActivityGroups: Coding.FromStrict({
     code: "12",
     display: "Planned Activity Groups",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -206,7 +205,7 @@ export const ServiceTypeValueSet = {
   /**
    * Workplace safety and/or accident prevention
    */
-  service_type_WorkSafetyAccidentPrevention: Coding.FactoryCreateStrict({
+  service_type_WorkSafetyAccidentPrevention: Coding.FromStrict({
     code: "120",
     display: "Work Safety/Accident Prevention",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -214,7 +213,7 @@ export const ServiceTypeValueSet = {
   /**
    * Financial assistance
    */
-  service_type_FinancialAssistance: Coding.FactoryCreateStrict({
+  service_type_FinancialAssistance: Coding.FromStrict({
     code: "121",
     display: "Financial Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -222,7 +221,7 @@ export const ServiceTypeValueSet = {
   /**
    * Financial information/advice
    */
-  service_type_FinancialInformationAdvice: Coding.FactoryCreateStrict({
+  service_type_FinancialInformationAdvice: Coding.FromStrict({
     code: "122",
     display: "Financial Information/Advice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -230,7 +229,7 @@ export const ServiceTypeValueSet = {
   /**
    * Material aid
    */
-  service_type_MaterialAid: Coding.FactoryCreateStrict({
+  service_type_MaterialAid: Coding.FromStrict({
     code: "123",
     display: "Material Aid",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -238,7 +237,7 @@ export const ServiceTypeValueSet = {
   /**
    * General Practice/GP (doctor)
    */
-  service_type_GeneralPractice: Coding.FactoryCreateStrict({
+  service_type_GeneralPractice: Coding.FromStrict({
     code: "124",
     display: "General Practice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -246,7 +245,7 @@ export const ServiceTypeValueSet = {
   /**
    * Accommodation placement and/or support
    */
-  service_type_AccommodationPlacementSupport: Coding.FactoryCreateStrict({
+  service_type_AccommodationPlacementSupport: Coding.FromStrict({
     code: "125",
     display: "Accommodation Placement/Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -254,7 +253,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis/emergency accommodation
    */
-  service_type_CrisisEmergencyAccommodation: Coding.FactoryCreateStrict({
+  service_type_CrisisEmergencyAccommodation: Coding.FromStrict({
     code: "126",
     display: "Crisis/Emergency Accommodation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -262,7 +261,7 @@ export const ServiceTypeValueSet = {
   /**
    * Homelessness support
    */
-  service_type_HomelessnessSupport: Coding.FactoryCreateStrict({
+  service_type_HomelessnessSupport: Coding.FromStrict({
     code: "127",
     display: "Homelessness Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -270,7 +269,7 @@ export const ServiceTypeValueSet = {
   /**
    * Housing information/referral
    */
-  service_type_HousingInformationReferral: Coding.FactoryCreateStrict({
+  service_type_HousingInformationReferral: Coding.FromStrict({
     code: "128",
     display: "Housing Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -278,7 +277,7 @@ export const ServiceTypeValueSet = {
   /**
    * Public rental housing
    */
-  service_type_PublicRentalHousing: Coding.FactoryCreateStrict({
+  service_type_PublicRentalHousing: Coding.FromStrict({
     code: "129",
     display: "Public Rental Housing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -286,7 +285,7 @@ export const ServiceTypeValueSet = {
   /**
    * Acupuncture
    */
-  service_type_Acupuncture: Coding.FactoryCreateStrict({
+  service_type_Acupuncture: Coding.FromStrict({
     code: "13",
     display: "Acupuncture",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -294,7 +293,7 @@ export const ServiceTypeValueSet = {
   /**
    * Interpreting/Multilingual/Language service
    */
-  service_type_InterpretingMultilingualService: Coding.FactoryCreateStrict({
+  service_type_InterpretingMultilingualService: Coding.FromStrict({
     code: "130",
     display: "Interpreting/Multilingual Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -302,7 +301,7 @@ export const ServiceTypeValueSet = {
   /**
    * Juvenile Justice
    */
-  service_type_JuvenileJustice: Coding.FactoryCreateStrict({
+  service_type_JuvenileJustice: Coding.FromStrict({
     code: "131",
     display: "Juvenile Justice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -310,7 +309,7 @@ export const ServiceTypeValueSet = {
   /**
    * Legal advocacy
    */
-  service_type_LegalAdvocacy: Coding.FactoryCreateStrict({
+  service_type_LegalAdvocacy: Coding.FromStrict({
     code: "132",
     display: "Legal Advocacy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -318,7 +317,7 @@ export const ServiceTypeValueSet = {
   /**
    * Legal information/advice/referral
    */
-  service_type_LegalInformationAdviceReferral: Coding.FactoryCreateStrict({
+  service_type_LegalInformationAdviceReferral: Coding.FromStrict({
     code: "133",
     display: "Legal Information/Advice/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -326,7 +325,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health advocacy
    */
-  service_type_MentalHealthAdvocacy: Coding.FactoryCreateStrict({
+  service_type_MentalHealthAdvocacy: Coding.FromStrict({
     code: "134",
     display: "Mental Health Advocacy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -334,7 +333,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health assessment/triage/crisis response
    */
-  service_type_MentalHealthAssessTriageCrisisResponse: Coding.FactoryCreateStrict({
+  service_type_MentalHealthAssessTriageCrisisResponse: Coding.FromStrict({
     code: "135",
     display: "Mental Health Assess/Triage/Crisis Response",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -342,7 +341,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health case management/continuing care
    */
-  service_type_MentalHealthCaseManagement: Coding.FactoryCreateStrict({
+  service_type_MentalHealthCaseManagement: Coding.FromStrict({
     code: "136",
     display: "Mental Health Case Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -350,7 +349,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health information/referral
    */
-  service_type_MentalHealthInformationReferral: Coding.FactoryCreateStrict({
+  service_type_MentalHealthInformationReferral: Coding.FromStrict({
     code: "137",
     display: "Mental Health Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -358,7 +357,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health inpatient services (hospital psychiatric unit) - requires referral
    */
-  service_type_MentalHealthInpatientServices: Coding.FactoryCreateStrict({
+  service_type_MentalHealthInpatientServices: Coding.FromStrict({
     code: "138",
     display: "Mental Health Inpatient Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -366,7 +365,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health non-residential rehabilitation
    */
-  service_type_MentalHealthNonResidentialRehab: Coding.FactoryCreateStrict({
+  service_type_MentalHealthNonResidentialRehab: Coding.FromStrict({
     code: "139",
     display: "Mental Health Non-residential Rehab",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -374,7 +373,7 @@ export const ServiceTypeValueSet = {
   /**
    * Alexander technique therapy
    */
-  service_type_AlexanderTechniqueTherapy: Coding.FactoryCreateStrict({
+  service_type_AlexanderTechniqueTherapy: Coding.FromStrict({
     code: "14",
     display: "Alexander Technique Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -382,7 +381,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mental health residential rehabilitation/community care unit
    */
-  service_type_MentalHealthResidentialRehabCCU: Coding.FactoryCreateStrict({
+  service_type_MentalHealthResidentialRehabCCU: Coding.FromStrict({
     code: "140",
     display: "Mental Health Residential Rehab/CCU",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -390,7 +389,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatry (requires referral)
    */
-  service_type_PsychiatryRequiresReferral: Coding.FactoryCreateStrict({
+  service_type_PsychiatryRequiresReferral: Coding.FromStrict({
     code: "141",
     display: "Psychiatry (Requires Referral)",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -398,7 +397,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychology
    */
-  service_type_Psychology: Coding.FactoryCreateStrict({
+  service_type_Psychology: Coding.FromStrict({
     code: "142",
     display: "Psychology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -406,7 +405,7 @@ export const ServiceTypeValueSet = {
   /**
    * Martial arts
    */
-  service_type_MartialArts: Coding.FactoryCreateStrict({
+  service_type_MartialArts: Coding.FromStrict({
     code: "143",
     display: "Martial Arts",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -414,7 +413,7 @@ export const ServiceTypeValueSet = {
   /**
    * Personal fitness training
    */
-  service_type_PersonalFitnessTraining: Coding.FactoryCreateStrict({
+  service_type_PersonalFitnessTraining: Coding.FromStrict({
     code: "144",
     display: "Personal Fitness Training",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -422,7 +421,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical activity group
    */
-  service_type_PhysicalActivityGroup: Coding.FactoryCreateStrict({
+  service_type_PhysicalActivityGroup: Coding.FromStrict({
     code: "145",
     display: "Physical Activity Group",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -430,7 +429,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical activity programs
    */
-  service_type_PhysicalActivityPrograms: Coding.FactoryCreateStrict({
+  service_type_PhysicalActivityPrograms: Coding.FromStrict({
     code: "146",
     display: "Physical Activity Programs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -438,7 +437,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical fitness testing
    */
-  service_type_PhysicalFitnessTesting: Coding.FactoryCreateStrict({
+  service_type_PhysicalFitnessTesting: Coding.FromStrict({
     code: "147",
     display: "Physical Fitness Testing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -446,7 +445,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pilates
    */
-  service_type_Pilates: Coding.FactoryCreateStrict({
+  service_type_Pilates: Coding.FromStrict({
     code: "148",
     display: "Pilates",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -454,7 +453,7 @@ export const ServiceTypeValueSet = {
   /**
    * Self defence
    */
-  service_type_SelfDefence: Coding.FactoryCreateStrict({
+  service_type_SelfDefence: Coding.FromStrict({
     code: "149",
     display: "Self-Defence",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -462,7 +461,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aromatherapy
    */
-  service_type_Aromatherapy: Coding.FactoryCreateStrict({
+  service_type_Aromatherapy: Coding.FromStrict({
     code: "15",
     display: "Aromatherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -470,7 +469,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sporting club
    */
-  service_type_SportingClub: Coding.FactoryCreateStrict({
+  service_type_SportingClub: Coding.FromStrict({
     code: "150",
     display: "Sporting Club",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -478,7 +477,7 @@ export const ServiceTypeValueSet = {
   /**
    * Yoga
    */
-  service_type_Yoga: Coding.FactoryCreateStrict({
+  service_type_Yoga: Coding.FromStrict({
     code: "151",
     display: "Yoga",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -486,7 +485,7 @@ export const ServiceTypeValueSet = {
   /**
    * Food safety
    */
-  service_type_FoodSafety: Coding.FactoryCreateStrict({
+  service_type_FoodSafety: Coding.FromStrict({
     code: "152",
     display: "Food Safety",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -494,7 +493,7 @@ export const ServiceTypeValueSet = {
   /**
    * Health regulatory, inspection and/or certification
    */
-  service_type_HealthRegulatoryInspectionCert: Coding.FactoryCreateStrict({
+  service_type_HealthRegulatoryInspectionCert: Coding.FromStrict({
     code: "153",
     display: "Health Regulatory /Inspection /Cert.",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -502,7 +501,7 @@ export const ServiceTypeValueSet = {
   /**
    * Workplace health and/or safety inspection and/or certification
    */
-  service_type_WorkHealthSafetyInspectionCert: Coding.FactoryCreateStrict({
+  service_type_WorkHealthSafetyInspectionCert: Coding.FromStrict({
     code: "154",
     display: "Work Health/Safety Inspection/Cert.",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -510,7 +509,7 @@ export const ServiceTypeValueSet = {
   /**
    * Carer support
    */
-  service_type_CarerSupport: Coding.FactoryCreateStrict({
+  service_type_CarerSupport: Coding.FromStrict({
     code: "155",
     display: "Carer Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -518,7 +517,7 @@ export const ServiceTypeValueSet = {
   /**
    * Respite care
    */
-  service_type_RespiteCare: Coding.FactoryCreateStrict({
+  service_type_RespiteCare: Coding.FromStrict({
     code: "156",
     display: "Respite Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -526,7 +525,7 @@ export const ServiceTypeValueSet = {
   /**
    * Anatomical Pathology (including Cytopathology &amp; Forensic Pathology)
    */
-  service_type_AnatomicalPathology: Coding.FactoryCreateStrict({
+  service_type_AnatomicalPathology: Coding.FromStrict({
     code: "157",
     display: "Anatomical Pathology ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -534,7 +533,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - Clinical Chemistry
    */
-  service_type_PathologyClinicalChemistry: Coding.FactoryCreateStrict({
+  service_type_PathologyClinicalChemistry: Coding.FromStrict({
     code: "158",
     display: "Pathology - Clinical Chemistry",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -542,7 +541,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - General
    */
-  service_type_PathologyGeneral: Coding.FactoryCreateStrict({
+  service_type_PathologyGeneral: Coding.FromStrict({
     code: "159",
     display: "Pathology - General",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -550,7 +549,7 @@ export const ServiceTypeValueSet = {
   /**
    * Biorhythm services
    */
-  service_type_BiorhythmServices: Coding.FactoryCreateStrict({
+  service_type_BiorhythmServices: Coding.FromStrict({
     code: "16",
     display: "Biorhythm Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -558,7 +557,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - Genetics
    */
-  service_type_PathologyGenetics: Coding.FactoryCreateStrict({
+  service_type_PathologyGenetics: Coding.FromStrict({
     code: "160",
     display: "Pathology - Genetics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -566,7 +565,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - Haematology
    */
-  service_type_PathologyHaematology: Coding.FactoryCreateStrict({
+  service_type_PathologyHaematology: Coding.FromStrict({
     code: "161",
     display: "Pathology - Haematology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -574,7 +573,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - Immunology
    */
-  service_type_PathologyImmunology: Coding.FactoryCreateStrict({
+  service_type_PathologyImmunology: Coding.FromStrict({
     code: "162",
     display: "Pathology - Immunology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -582,7 +581,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pathology - Microbiology
    */
-  service_type_PathologyMicrobiology: Coding.FactoryCreateStrict({
+  service_type_PathologyMicrobiology: Coding.FromStrict({
     code: "163",
     display: "Pathology - Microbiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -590,7 +589,7 @@ export const ServiceTypeValueSet = {
   /**
    * Anaesthesiology - Pain Medicine
    */
-  service_type_AnaesthesiologyPainMedicine: Coding.FactoryCreateStrict({
+  service_type_AnaesthesiologyPainMedicine: Coding.FromStrict({
     code: "164",
     display: "Anaesthesiology - Pain Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -598,7 +597,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cardiology
    */
-  service_type_Cardiology: Coding.FactoryCreateStrict({
+  service_type_Cardiology: Coding.FromStrict({
     code: "165",
     display: "Cardiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -606,7 +605,7 @@ export const ServiceTypeValueSet = {
   /**
    * Clinical Genetics
    */
-  service_type_ClinicalGenetics: Coding.FactoryCreateStrict({
+  service_type_ClinicalGenetics: Coding.FromStrict({
     code: "166",
     display: "Clinical Genetics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -614,7 +613,7 @@ export const ServiceTypeValueSet = {
   /**
    * Clinical Pharmacology
    */
-  service_type_ClinicalPharmacology: Coding.FactoryCreateStrict({
+  service_type_ClinicalPharmacology: Coding.FromStrict({
     code: "167",
     display: "Clinical Pharmacology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -622,7 +621,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dermatology
    */
-  service_type_Dermatology: Coding.FactoryCreateStrict({
+  service_type_Dermatology: Coding.FromStrict({
     code: "168",
     display: "Dermatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -630,7 +629,7 @@ export const ServiceTypeValueSet = {
   /**
    * Endocrinology
    */
-  service_type_Endocrinology: Coding.FactoryCreateStrict({
+  service_type_Endocrinology: Coding.FromStrict({
     code: "169",
     display: "Endocrinology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -638,7 +637,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bowen therapy
    */
-  service_type_BowenTherapy: Coding.FactoryCreateStrict({
+  service_type_BowenTherapy: Coding.FromStrict({
     code: "17",
     display: "Bowen Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -646,7 +645,7 @@ export const ServiceTypeValueSet = {
   /**
    * Gastroenterology &amp; Hepatology
    */
-  service_type_GastroenterologyAndHepatology: Coding.FactoryCreateStrict({
+  service_type_GastroenterologyAndHepatology: Coding.FromStrict({
     code: "170",
     display: "Gastroenterology & Hepatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -654,7 +653,7 @@ export const ServiceTypeValueSet = {
   /**
    * Geriatric medicine
    */
-  service_type_GeriatricMedicine: Coding.FactoryCreateStrict({
+  service_type_GeriatricMedicine: Coding.FromStrict({
     code: "171",
     display: "Geriatric Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -662,7 +661,7 @@ export const ServiceTypeValueSet = {
   /**
    * Immunology &amp; Allergy
    */
-  service_type_ImmunologyAndAllergy: Coding.FactoryCreateStrict({
+  service_type_ImmunologyAndAllergy: Coding.FromStrict({
     code: "172",
     display: "Immunology & Allergy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -670,7 +669,7 @@ export const ServiceTypeValueSet = {
   /**
    * Infectious diseases
    */
-  service_type_InfectiousDiseases: Coding.FactoryCreateStrict({
+  service_type_InfectiousDiseases: Coding.FromStrict({
     code: "173",
     display: "Infectious Diseases",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -678,7 +677,7 @@ export const ServiceTypeValueSet = {
   /**
    * Intensive care medicine
    */
-  service_type_IntensiveCareMedicine: Coding.FactoryCreateStrict({
+  service_type_IntensiveCareMedicine: Coding.FromStrict({
     code: "174",
     display: "Intensive Care Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -686,7 +685,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medical Oncology
    */
-  service_type_MedicalOncology: Coding.FactoryCreateStrict({
+  service_type_MedicalOncology: Coding.FromStrict({
     code: "175",
     display: "Medical Oncology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -694,7 +693,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nephrology
    */
-  service_type_Nephrology: Coding.FactoryCreateStrict({
+  service_type_Nephrology: Coding.FromStrict({
     code: "176",
     display: "Nephrology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -702,7 +701,7 @@ export const ServiceTypeValueSet = {
   /**
    * Neurology
    */
-  service_type_Neurology: Coding.FactoryCreateStrict({
+  service_type_Neurology: Coding.FromStrict({
     code: "177",
     display: "Neurology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -710,7 +709,7 @@ export const ServiceTypeValueSet = {
   /**
    * Occupational Medicine
    */
-  service_type_OccupationalMedicine: Coding.FactoryCreateStrict({
+  service_type_OccupationalMedicine: Coding.FromStrict({
     code: "178",
     display: "Occupational Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -718,7 +717,7 @@ export const ServiceTypeValueSet = {
   /**
    * Palliative Medicine
    */
-  service_type_PalliativeMedicine: Coding.FactoryCreateStrict({
+  service_type_PalliativeMedicine: Coding.FromStrict({
     code: "179",
     display: "Palliative Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -726,7 +725,7 @@ export const ServiceTypeValueSet = {
   /**
    * Chinese herbal medicine
    */
-  service_type_ChineseHerbalMedicine: Coding.FactoryCreateStrict({
+  service_type_ChineseHerbalMedicine: Coding.FromStrict({
     code: "18",
     display: "Chinese Herbal Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -734,7 +733,7 @@ export const ServiceTypeValueSet = {
   /**
    * Public Health Medicine
    */
-  service_type_PublicHealthMedicine: Coding.FactoryCreateStrict({
+  service_type_PublicHealthMedicine: Coding.FromStrict({
     code: "180",
     display: "Public Health Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -742,7 +741,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rehabilitation Medicine
    */
-  service_type_RehabilitationMedicine: Coding.FactoryCreateStrict({
+  service_type_RehabilitationMedicine: Coding.FromStrict({
     code: "181",
     display: "Rehabilitation Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -750,7 +749,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rheumatology
    */
-  service_type_Rheumatology: Coding.FactoryCreateStrict({
+  service_type_Rheumatology: Coding.FromStrict({
     code: "182",
     display: "Rheumatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -758,7 +757,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sleep Medicine
    */
-  service_type_SleepMedicine: Coding.FactoryCreateStrict({
+  service_type_SleepMedicine: Coding.FromStrict({
     code: "183",
     display: "Sleep Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -766,7 +765,7 @@ export const ServiceTypeValueSet = {
   /**
    * Thoracic medicine
    */
-  service_type_ThoracicMedicine: Coding.FactoryCreateStrict({
+  service_type_ThoracicMedicine: Coding.FromStrict({
     code: "184",
     display: "Thoracic Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -774,7 +773,7 @@ export const ServiceTypeValueSet = {
   /**
    * Gynaecological Oncology
    */
-  service_type_GynaecologicalOncology: Coding.FactoryCreateStrict({
+  service_type_GynaecologicalOncology: Coding.FromStrict({
     code: "185",
     display: "Gynaecological Oncology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -782,7 +781,7 @@ export const ServiceTypeValueSet = {
   /**
    * Obstetrics &amp; Gynaecology
    */
-  service_type_ObstetricsAndGynaecology: Coding.FactoryCreateStrict({
+  service_type_ObstetricsAndGynaecology: Coding.FromStrict({
     code: "186",
     display: "Obstetrics & Gynaecology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -790,7 +789,7 @@ export const ServiceTypeValueSet = {
   /**
    * Reproductive Endocrinology &amp; Infertility
    */
-  service_type_ReproductiveEndocrinologyInfertility: Coding.FactoryCreateStrict({
+  service_type_ReproductiveEndocrinologyInfertility: Coding.FromStrict({
     code: "187",
     display: "Reproductive Endocrinology/Infertility",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -798,7 +797,7 @@ export const ServiceTypeValueSet = {
   /**
    * Urogynaecology
    */
-  service_type_Urogynaecology: Coding.FactoryCreateStrict({
+  service_type_Urogynaecology: Coding.FromStrict({
     code: "188",
     display: "Urogynaecology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -806,7 +805,7 @@ export const ServiceTypeValueSet = {
   /**
    * Neonatology &amp; Perinatology
    */
-  service_type_NeonatologyAndPerinatology: Coding.FactoryCreateStrict({
+  service_type_NeonatologyAndPerinatology: Coding.FromStrict({
     code: "189",
     display: "Neonatology & Perinatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -814,7 +813,7 @@ export const ServiceTypeValueSet = {
   /**
    * Feldenkrais
    */
-  service_type_Feldenkrais: Coding.FactoryCreateStrict({
+  service_type_Feldenkrais: Coding.FromStrict({
     code: "19",
     display: "Feldenkrais",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -822,7 +821,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Cardiology
    */
-  service_type_PaediatricCardiology: Coding.FactoryCreateStrict({
+  service_type_PaediatricCardiology: Coding.FromStrict({
     code: "190",
     display: "Paediatric Cardiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -830,7 +829,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Clinical Genetics
    */
-  service_type_PaediatricClinicalGenetics: Coding.FactoryCreateStrict({
+  service_type_PaediatricClinicalGenetics: Coding.FromStrict({
     code: "191",
     display: "Paediatric Clinical Genetics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -838,7 +837,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Clinical Pharmacology
    */
-  service_type_PaediatricClinicalPharmacology: Coding.FactoryCreateStrict({
+  service_type_PaediatricClinicalPharmacology: Coding.FromStrict({
     code: "192",
     display: "Paediatric Clinical Pharmacology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -846,7 +845,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Endocrinology
    */
-  service_type_PaediatricEndocrinology: Coding.FactoryCreateStrict({
+  service_type_PaediatricEndocrinology: Coding.FromStrict({
     code: "193",
     display: "Paediatric Endocrinology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -854,7 +853,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Gastroenterology &amp; Hepatology
    */
-  service_type_PaedGastroenterologyHepatology: Coding.FactoryCreateStrict({
+  service_type_PaedGastroenterologyHepatology: Coding.FromStrict({
     code: "194",
     display: "Paed. Gastroenterology/Hepatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -862,7 +861,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Haematology
    */
-  service_type_PaediatricHaematology: Coding.FactoryCreateStrict({
+  service_type_PaediatricHaematology: Coding.FromStrict({
     code: "195",
     display: "Paediatric Haematology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -870,7 +869,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Immunology &amp; Allergy
    */
-  service_type_PaediatricImmunologyAndAllergy: Coding.FactoryCreateStrict({
+  service_type_PaediatricImmunologyAndAllergy: Coding.FromStrict({
     code: "196",
     display: "Paediatric Immunology & Allergy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -878,7 +877,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Infectious diseases
    */
-  service_type_PaediatricInfectiousDiseases: Coding.FactoryCreateStrict({
+  service_type_PaediatricInfectiousDiseases: Coding.FromStrict({
     code: "197",
     display: "Paediatric Infectious Diseases",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -886,7 +885,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric intensive care medicine
    */
-  service_type_PaediatricIntensiveCareMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricIntensiveCareMedicine: Coding.FromStrict({
     code: "198",
     display: "Paediatric Intensive Care Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -894,7 +893,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Medical Oncology
    */
-  service_type_PaediatricMedicalOncology: Coding.FactoryCreateStrict({
+  service_type_PaediatricMedicalOncology: Coding.FromStrict({
     code: "199",
     display: "Paediatric Medical Oncology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -902,7 +901,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged care assessment
    */
-  service_type_AgedCareAssessment: Coding.FactoryCreateStrict({
+  service_type_AgedCareAssessment: Coding.FromStrict({
     code: "2",
     display: "Aged Care Assessment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -910,7 +909,7 @@ export const ServiceTypeValueSet = {
   /**
    * Homoeopathy
    */
-  service_type_Homoeopathy: Coding.FactoryCreateStrict({
+  service_type_Homoeopathy: Coding.FromStrict({
     code: "20",
     display: "Homoeopathy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -918,7 +917,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Medicine
    */
-  service_type_PaediatricMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricMedicine: Coding.FromStrict({
     code: "200",
     display: "Paediatric Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -926,7 +925,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Nephrology
    */
-  service_type_PaediatricNephrology: Coding.FactoryCreateStrict({
+  service_type_PaediatricNephrology: Coding.FromStrict({
     code: "201",
     display: "Paediatric Nephrology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -934,7 +933,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Neurology
    */
-  service_type_PaediatricNeurology: Coding.FactoryCreateStrict({
+  service_type_PaediatricNeurology: Coding.FromStrict({
     code: "202",
     display: "Paediatric Neurology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -942,7 +941,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Nuclear Medicine
    */
-  service_type_PaediatricNuclearMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricNuclearMedicine: Coding.FromStrict({
     code: "203",
     display: "Paediatric Nuclear Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -950,7 +949,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Rehabilitation Medicine
    */
-  service_type_PaediatricRehabilitationMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricRehabilitationMedicine: Coding.FromStrict({
     code: "204",
     display: "Paediatric Rehabilitation Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -958,7 +957,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Rheumatology
    */
-  service_type_PaediatricRheumatology: Coding.FactoryCreateStrict({
+  service_type_PaediatricRheumatology: Coding.FromStrict({
     code: "205",
     display: "Paediatric Rheumatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -966,7 +965,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Sleep Medicine
    */
-  service_type_PaediatricSleepMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricSleepMedicine: Coding.FromStrict({
     code: "206",
     display: "Paediatric Sleep Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -974,7 +973,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Surgery
    */
-  service_type_PaediatricSurgery: Coding.FactoryCreateStrict({
+  service_type_PaediatricSurgery: Coding.FromStrict({
     code: "207",
     display: "Paediatric Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -982,7 +981,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Thoracic Medicine
    */
-  service_type_PaediatricThoracicMedicine: Coding.FactoryCreateStrict({
+  service_type_PaediatricThoracicMedicine: Coding.FromStrict({
     code: "208",
     display: "Paediatric Thoracic Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -990,7 +989,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diagnostic Radiology/Xray/CT/Fluoroscopy
    */
-  service_type_DiagRadiologyXrayCTFluoroscopy: Coding.FactoryCreateStrict({
+  service_type_DiagRadiologyXrayCTFluoroscopy: Coding.FromStrict({
     code: "209",
     display: "Diag. Radiology /Xray /CT /Fluoroscopy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -998,7 +997,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hydrotherapy
    */
-  service_type_Hydrotherapy: Coding.FactoryCreateStrict({
+  service_type_Hydrotherapy: Coding.FromStrict({
     code: "21",
     display: "Hydrotherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1006,7 +1005,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diagnostic Ultrasound
    */
-  service_type_DiagnosticUltrasound: Coding.FactoryCreateStrict({
+  service_type_DiagnosticUltrasound: Coding.FromStrict({
     code: "210",
     display: "Diagnostic Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1014,7 +1013,7 @@ export const ServiceTypeValueSet = {
   /**
    * Magnetic Resonance Imaging (MRI)
    */
-  service_type_MagneticResonanceImagingMRI: Coding.FactoryCreateStrict({
+  service_type_MagneticResonanceImagingMRI: Coding.FromStrict({
     code: "211",
     display: "Magnetic Resonance Imaging (MRI)",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1022,7 +1021,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nuclear Medicine
    */
-  service_type_NuclearMedicine: Coding.FactoryCreateStrict({
+  service_type_NuclearMedicine: Coding.FromStrict({
     code: "212",
     display: "Nuclear Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1030,7 +1029,7 @@ export const ServiceTypeValueSet = {
   /**
    * Obstetric &amp; Gynaecological Ultrasound
    */
-  service_type_ObstetricGynaecologicalUltrasound: Coding.FactoryCreateStrict({
+  service_type_ObstetricGynaecologicalUltrasound: Coding.FromStrict({
     code: "213",
     display: "Obstetric/Gynaecological Ultrasound",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1038,7 +1037,7 @@ export const ServiceTypeValueSet = {
   /**
    * Radiation oncology
    */
-  service_type_RadiationOncology: Coding.FactoryCreateStrict({
+  service_type_RadiationOncology: Coding.FromStrict({
     code: "214",
     display: "Radiation Oncology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1046,7 +1045,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cardiothoracic surgery
    */
-  service_type_CardiothoracicSurgery: Coding.FactoryCreateStrict({
+  service_type_CardiothoracicSurgery: Coding.FromStrict({
     code: "215",
     display: "Cardiothoracic Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1054,7 +1053,7 @@ export const ServiceTypeValueSet = {
   /**
    * Neurosurgery
    */
-  service_type_Neurosurgery: Coding.FactoryCreateStrict({
+  service_type_Neurosurgery: Coding.FromStrict({
     code: "216",
     display: "Neurosurgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1062,7 +1061,7 @@ export const ServiceTypeValueSet = {
   /**
    * Ophthalmology
    */
-  service_type_Ophthalmology: Coding.FactoryCreateStrict({
+  service_type_Ophthalmology: Coding.FromStrict({
     code: "217",
     display: "Ophthalmology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1070,7 +1069,7 @@ export const ServiceTypeValueSet = {
   /**
    * Orthopaedic surgery
    */
-  service_type_OrthopaedicSurgery: Coding.FactoryCreateStrict({
+  service_type_OrthopaedicSurgery: Coding.FromStrict({
     code: "218",
     display: "Orthopaedic Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1078,7 +1077,7 @@ export const ServiceTypeValueSet = {
   /**
    * Otolaryngology - Head &amp; Neck Surgery
    */
-  service_type_OtolaryngologyHeadAndNeckSurgery: Coding.FactoryCreateStrict({
+  service_type_OtolaryngologyHeadAndNeckSurgery: Coding.FromStrict({
     code: "219",
     display: "Otolaryngology/Head & Neck Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1086,7 +1085,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hypnotherapy
    */
-  service_type_Hypnotherapy: Coding.FactoryCreateStrict({
+  service_type_Hypnotherapy: Coding.FromStrict({
     code: "22",
     display: "Hypnotherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1094,7 +1093,7 @@ export const ServiceTypeValueSet = {
   /**
    * Plastic &amp; Reconstructive Surgery
    */
-  service_type_PlasticAndReconstructiveSurgery: Coding.FactoryCreateStrict({
+  service_type_PlasticAndReconstructiveSurgery: Coding.FromStrict({
     code: "220",
     display: "Plastic & Reconstructive Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1102,7 +1101,7 @@ export const ServiceTypeValueSet = {
   /**
    * Surgery - General
    */
-  service_type_SurgeryGeneral: Coding.FactoryCreateStrict({
+  service_type_SurgeryGeneral: Coding.FromStrict({
     code: "221",
     display: "Surgery - General",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1110,7 +1109,7 @@ export const ServiceTypeValueSet = {
   /**
    * Urology
    */
-  service_type_Urology: Coding.FactoryCreateStrict({
+  service_type_Urology: Coding.FromStrict({
     code: "222",
     display: "Urology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1118,7 +1117,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vascular surgery
    */
-  service_type_VascularSurgery: Coding.FactoryCreateStrict({
+  service_type_VascularSurgery: Coding.FromStrict({
     code: "223",
     display: "Vascular Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1126,7 +1125,7 @@ export const ServiceTypeValueSet = {
   /**
    * Support groups
    */
-  service_type_SupportGroups: Coding.FactoryCreateStrict({
+  service_type_SupportGroups: Coding.FromStrict({
     code: "224",
     display: "Support Groups",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1134,7 +1133,7 @@ export const ServiceTypeValueSet = {
   /**
    * Air ambulance
    */
-  service_type_AirAmbulance: Coding.FactoryCreateStrict({
+  service_type_AirAmbulance: Coding.FromStrict({
     code: "225",
     display: "Air ambulance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1142,7 +1141,7 @@ export const ServiceTypeValueSet = {
   /**
    * Ambulance
    */
-  service_type_Ambulance: Coding.FactoryCreateStrict({
+  service_type_Ambulance: Coding.FromStrict({
     code: "226",
     display: "Ambulance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1150,7 +1149,7 @@ export const ServiceTypeValueSet = {
   /**
    * Blood transport
    */
-  service_type_BloodTransport: Coding.FactoryCreateStrict({
+  service_type_BloodTransport: Coding.FromStrict({
     code: "227",
     display: "Blood Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1158,7 +1157,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community bus
    */
-  service_type_CommunityBus: Coding.FactoryCreateStrict({
+  service_type_CommunityBus: Coding.FromStrict({
     code: "228",
     display: "Community Bus",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1166,7 +1165,7 @@ export const ServiceTypeValueSet = {
   /**
    * Flying doctor service
    */
-  service_type_FlyingDoctorService: Coding.FactoryCreateStrict({
+  service_type_FlyingDoctorService: Coding.FromStrict({
     code: "229",
     display: "Flying Doctor Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1174,7 +1173,7 @@ export const ServiceTypeValueSet = {
   /**
    * Kinesiology
    */
-  service_type_Kinesiology: Coding.FactoryCreateStrict({
+  service_type_Kinesiology: Coding.FromStrict({
     code: "23",
     display: "Kinesiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1182,7 +1181,7 @@ export const ServiceTypeValueSet = {
   /**
    * Patient transport
    */
-  service_type_PatientTransport: Coding.FactoryCreateStrict({
+  service_type_PatientTransport: Coding.FromStrict({
     code: "230",
     display: "Patient Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1190,7 +1189,7 @@ export const ServiceTypeValueSet = {
   /**
    * A&amp;E
    */
-  service_type_AAndE: Coding.FactoryCreateStrict({
+  service_type_AAndE: Coding.FromStrict({
     code: "231",
     display: "A&E",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1198,7 +1197,7 @@ export const ServiceTypeValueSet = {
   /**
    * A&amp;EP
    */
-  service_type_AAndEP: Coding.FactoryCreateStrict({
+  service_type_AAndEP: Coding.FromStrict({
     code: "232",
     display: "A&EP",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1206,7 +1205,7 @@ export const ServiceTypeValueSet = {
   /**
    * Abuse
    */
-  service_type_Abuse: Coding.FactoryCreateStrict({
+  service_type_Abuse: Coding.FromStrict({
     code: "233",
     display: "Abuse",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1214,7 +1213,7 @@ export const ServiceTypeValueSet = {
   /**
    * ACAS
    */
-  service_type_ACAS: Coding.FactoryCreateStrict({
+  service_type_ACAS: Coding.FromStrict({
     code: "234",
     display: "ACAS",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1222,7 +1221,7 @@ export const ServiceTypeValueSet = {
   /**
    * Access
    */
-  service_type_Access: Coding.FactoryCreateStrict({
+  service_type_Access: Coding.FromStrict({
     code: "235",
     display: "Access",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1230,7 +1229,7 @@ export const ServiceTypeValueSet = {
   /**
    * Accident
    */
-  service_type_Accident: Coding.FactoryCreateStrict({
+  service_type_Accident: Coding.FromStrict({
     code: "236",
     display: "Accident",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1238,7 +1237,7 @@ export const ServiceTypeValueSet = {
   /**
    * Acute Inpatient Service's
    */
-  service_type_AcuteInpatientServ: Coding.FactoryCreateStrict({
+  service_type_AcuteInpatientServ: Coding.FromStrict({
     code: "237",
     display: "Acute Inpatient Serv",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1246,7 +1245,7 @@ export const ServiceTypeValueSet = {
   /**
    * Adult Day Programs
    */
-  service_type_AdultDayPrograms: Coding.FactoryCreateStrict({
+  service_type_AdultDayPrograms: Coding.FromStrict({
     code: "238",
     display: "Adult Day Programs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1254,7 +1253,7 @@ export const ServiceTypeValueSet = {
   /**
    * Adult Mental Health Services
    */
-  service_type_AdultMentalHealthServices: Coding.FactoryCreateStrict({
+  service_type_AdultMentalHealthServices: Coding.FromStrict({
     code: "239",
     display: "Adult Mental Health Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1262,7 +1261,7 @@ export const ServiceTypeValueSet = {
   /**
    * Magnetic therapy
    */
-  service_type_MagneticTherapy: Coding.FactoryCreateStrict({
+  service_type_MagneticTherapy: Coding.FromStrict({
     code: "24",
     display: "Magnetic Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1270,7 +1269,7 @@ export const ServiceTypeValueSet = {
   /**
    * Advice
    */
-  service_type_Advice: Coding.FactoryCreateStrict({
+  service_type_Advice: Coding.FromStrict({
     code: "240",
     display: "Advice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1278,7 +1277,7 @@ export const ServiceTypeValueSet = {
   /**
    * Advocacy
    */
-  service_type_Advocacy: Coding.FactoryCreateStrict({
+  service_type_Advocacy: Coding.FromStrict({
     code: "241",
     display: "Advocacy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1286,7 +1285,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Persons Mental Health Residential Units
    */
-  service_type_AgedPersonsMental: Coding.FactoryCreateStrict({
+  service_type_AgedPersonsMental: Coding.FromStrict({
     code: "242",
     display: "Aged Persons Mental ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1294,7 +1293,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Persons Mental Health Services
    */
-  service_type_AgedPersonsMental_2: Coding.FactoryCreateStrict({
+  service_type_AgedPersonsMental_2: Coding.FromStrict({
     code: "243",
     display: "Aged Persons Mental ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1302,7 +1301,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Persons Mental Health Teams
    */
-  service_type_AgedPersonsMental_3: Coding.FactoryCreateStrict({
+  service_type_AgedPersonsMental_3: Coding.FromStrict({
     code: "244",
     display: "Aged Persons Mental ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1310,7 +1309,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aids
    */
-  service_type_Aids: Coding.FactoryCreateStrict({
+  service_type_Aids: Coding.FromStrict({
     code: "245",
     display: "Aids",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1318,7 +1317,7 @@ export const ServiceTypeValueSet = {
   /**
    * Al-Anon
    */
-  service_type_AlAnon: Coding.FactoryCreateStrict({
+  service_type_AlAnon: Coding.FromStrict({
     code: "246",
     display: "Al-Anon",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1326,7 +1325,7 @@ export const ServiceTypeValueSet = {
   /**
    * Alcohol
    */
-  service_type_Alcohol: Coding.FactoryCreateStrict({
+  service_type_Alcohol: Coding.FromStrict({
     code: "247",
     display: "Alcohol",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1334,7 +1333,7 @@ export const ServiceTypeValueSet = {
   /**
    * Al-Teen
    */
-  service_type_AlTeen: Coding.FactoryCreateStrict({
+  service_type_AlTeen: Coding.FromStrict({
     code: "248",
     display: "Al-Teen",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1342,7 +1341,7 @@ export const ServiceTypeValueSet = {
   /**
    * Antenatal
    */
-  service_type_Antenatal: Coding.FactoryCreateStrict({
+  service_type_Antenatal: Coding.FromStrict({
     code: "249",
     display: "Antenatal",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1350,7 +1349,7 @@ export const ServiceTypeValueSet = {
   /**
    * Massage therapy
    */
-  service_type_MassageTherapy: Coding.FactoryCreateStrict({
+  service_type_MassageTherapy: Coding.FromStrict({
     code: "25",
     display: "Massage Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1358,7 +1357,7 @@ export const ServiceTypeValueSet = {
   /**
    * Anxiety
    */
-  service_type_Anxiety: Coding.FactoryCreateStrict({
+  service_type_Anxiety: Coding.FromStrict({
     code: "250",
     display: "Anxiety",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1366,7 +1365,7 @@ export const ServiceTypeValueSet = {
   /**
    * Arthritis
    */
-  service_type_Arthritis: Coding.FactoryCreateStrict({
+  service_type_Arthritis: Coding.FromStrict({
     code: "251",
     display: "Arthritis",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1374,7 +1373,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assessment
    */
-  service_type_Assessment: Coding.FactoryCreateStrict({
+  service_type_Assessment: Coding.FromStrict({
     code: "252",
     display: "Assessment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1382,7 +1381,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assistance
    */
-  service_type_Assistance: Coding.FactoryCreateStrict({
+  service_type_Assistance: Coding.FromStrict({
     code: "253",
     display: "Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1390,7 +1389,7 @@ export const ServiceTypeValueSet = {
   /**
    * Asthma
    */
-  service_type_Asthma: Coding.FactoryCreateStrict({
+  service_type_Asthma: Coding.FromStrict({
     code: "254",
     display: "Asthma",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1398,7 +1397,7 @@ export const ServiceTypeValueSet = {
   /**
    * ATSS
    */
-  service_type_ATSS: Coding.FactoryCreateStrict({
+  service_type_ATSS: Coding.FromStrict({
     code: "255",
     display: "ATSS",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1406,7 +1405,7 @@ export const ServiceTypeValueSet = {
   /**
    * Attendant Care
    */
-  service_type_AttendantCare: Coding.FactoryCreateStrict({
+  service_type_AttendantCare: Coding.FromStrict({
     code: "256",
     display: "Attendant Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1414,7 +1413,7 @@ export const ServiceTypeValueSet = {
   /**
    * Babies
    */
-  service_type_Babies: Coding.FactoryCreateStrict({
+  service_type_Babies: Coding.FromStrict({
     code: "257",
     display: "Babies",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1422,7 +1421,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bathroom Modification
    */
-  service_type_BathroomModificatio: Coding.FactoryCreateStrict({
+  service_type_BathroomModificatio: Coding.FromStrict({
     code: "258",
     display: "Bathroom Modificatio",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1430,7 +1429,7 @@ export const ServiceTypeValueSet = {
   /**
    * Behavior
    */
-  service_type_Behavior: Coding.FactoryCreateStrict({
+  service_type_Behavior: Coding.FromStrict({
     code: "259",
     display: "Behavior",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1438,7 +1437,7 @@ export const ServiceTypeValueSet = {
   /**
    * Meditation
    */
-  service_type_Meditation: Coding.FactoryCreateStrict({
+  service_type_Meditation: Coding.FromStrict({
     code: "26",
     display: "Meditation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1446,7 +1445,7 @@ export const ServiceTypeValueSet = {
   /**
    * Behavior Intervention
    */
-  service_type_BehaviorInterventi: Coding.FactoryCreateStrict({
+  service_type_BehaviorInterventi: Coding.FromStrict({
     code: "260",
     display: "Behavior Interventi",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1454,7 +1453,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bereavement
    */
-  service_type_Bereavement: Coding.FactoryCreateStrict({
+  service_type_Bereavement: Coding.FromStrict({
     code: "261",
     display: "Bereavement",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1462,7 +1461,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bipolar
    */
-  service_type_Bipolar: Coding.FactoryCreateStrict({
+  service_type_Bipolar: Coding.FromStrict({
     code: "262",
     display: "Bipolar",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1470,7 +1469,7 @@ export const ServiceTypeValueSet = {
   /**
    * Birth
    */
-  service_type_Birth: Coding.FactoryCreateStrict({
+  service_type_Birth: Coding.FromStrict({
     code: "263",
     display: "Birth",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1478,7 +1477,7 @@ export const ServiceTypeValueSet = {
   /**
    * Birth Control
    */
-  service_type_BirthControl: Coding.FactoryCreateStrict({
+  service_type_BirthControl: Coding.FromStrict({
     code: "264",
     display: "Birth Control",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1486,7 +1485,7 @@ export const ServiceTypeValueSet = {
   /**
    * Birthing Options
    */
-  service_type_BirthingOptions: Coding.FactoryCreateStrict({
+  service_type_BirthingOptions: Coding.FromStrict({
     code: "265",
     display: "Birthing Options",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1494,7 +1493,7 @@ export const ServiceTypeValueSet = {
   /**
    * BIST
    */
-  service_type_BIST: Coding.FactoryCreateStrict({
+  service_type_BIST: Coding.FromStrict({
     code: "266",
     display: "BIST",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1502,7 +1501,7 @@ export const ServiceTypeValueSet = {
   /**
    * Blood
    */
-  service_type_Blood: Coding.FactoryCreateStrict({
+  service_type_Blood: Coding.FromStrict({
     code: "267",
     display: "Blood",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1510,7 +1509,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bone
    */
-  service_type_Bone: Coding.FactoryCreateStrict({
+  service_type_Bone: Coding.FromStrict({
     code: "268",
     display: "Bone",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1518,7 +1517,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bowel
    */
-  service_type_Bowel: Coding.FactoryCreateStrict({
+  service_type_Bowel: Coding.FromStrict({
     code: "269",
     display: "Bowel",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1526,7 +1525,7 @@ export const ServiceTypeValueSet = {
   /**
    * Myotherapy
    */
-  service_type_Myotherapy: Coding.FactoryCreateStrict({
+  service_type_Myotherapy: Coding.FromStrict({
     code: "27",
     display: "Myotherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1534,7 +1533,7 @@ export const ServiceTypeValueSet = {
   /**
    * Brain
    */
-  service_type_Brain: Coding.FactoryCreateStrict({
+  service_type_Brain: Coding.FromStrict({
     code: "270",
     display: "Brain",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1542,7 +1541,7 @@ export const ServiceTypeValueSet = {
   /**
    * Breast Feeding
    */
-  service_type_BreastFeeding: Coding.FactoryCreateStrict({
+  service_type_BreastFeeding: Coding.FromStrict({
     code: "271",
     display: "Breast Feeding",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1550,7 +1549,7 @@ export const ServiceTypeValueSet = {
   /**
    * Breast Screen
    */
-  service_type_BreastScreen: Coding.FactoryCreateStrict({
+  service_type_BreastScreen: Coding.FromStrict({
     code: "272",
     display: "Breast Screen",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1558,7 +1557,7 @@ export const ServiceTypeValueSet = {
   /**
    * Brokerage
    */
-  service_type_Brokerage: Coding.FactoryCreateStrict({
+  service_type_Brokerage: Coding.FromStrict({
     code: "273",
     display: "Brokerage",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1566,7 +1565,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cancer
    */
-  service_type_Cancer: Coding.FactoryCreateStrict({
+  service_type_Cancer: Coding.FromStrict({
     code: "274",
     display: "Cancer",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1574,7 +1573,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cancer Support
    */
-  service_type_CancerSupport: Coding.FactoryCreateStrict({
+  service_type_CancerSupport: Coding.FromStrict({
     code: "275",
     display: "Cancer Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1582,7 +1581,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cardiovascular Disease
    */
-  service_type_CardiovascularDisea: Coding.FactoryCreateStrict({
+  service_type_CardiovascularDisea: Coding.FromStrict({
     code: "276",
     display: "Cardiovascular Disea",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1590,7 +1589,7 @@ export const ServiceTypeValueSet = {
   /**
    * Care Packages
    */
-  service_type_CarePackages: Coding.FactoryCreateStrict({
+  service_type_CarePackages: Coding.FromStrict({
     code: "277",
     display: "Care Packages",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1598,7 +1597,7 @@ export const ServiceTypeValueSet = {
   /**
    * Carer
    */
-  service_type_Carer: Coding.FactoryCreateStrict({
+  service_type_Carer: Coding.FromStrict({
     code: "278",
     display: "Carer",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1606,7 +1605,7 @@ export const ServiceTypeValueSet = {
   /**
    * Case Management
    */
-  service_type_CaseManagement: Coding.FactoryCreateStrict({
+  service_type_CaseManagement: Coding.FromStrict({
     code: "279",
     display: "Case Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1614,7 +1613,7 @@ export const ServiceTypeValueSet = {
   /**
    * Naturopathy
    */
-  service_type_Naturopathy: Coding.FactoryCreateStrict({
+  service_type_Naturopathy: Coding.FromStrict({
     code: "28",
     display: "Naturopathy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1622,7 +1621,7 @@ export const ServiceTypeValueSet = {
   /**
    * Casualty
    */
-  service_type_Casualty: Coding.FactoryCreateStrict({
+  service_type_Casualty: Coding.FromStrict({
     code: "280",
     display: "Casualty",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1630,7 +1629,7 @@ export const ServiceTypeValueSet = {
   /**
    * Centrelink
    */
-  service_type_Centrelink: Coding.FactoryCreateStrict({
+  service_type_Centrelink: Coding.FromStrict({
     code: "281",
     display: "Centrelink",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1638,7 +1637,7 @@ export const ServiceTypeValueSet = {
   /**
    * Chemists
    */
-  service_type_Chemists: Coding.FactoryCreateStrict({
+  service_type_Chemists: Coding.FromStrict({
     code: "282",
     display: "Chemists",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1646,7 +1645,7 @@ export const ServiceTypeValueSet = {
   /**
    * Child And Adolescent Mental Health Services
    */
-  service_type_ChildAndAdolescent: Coding.FactoryCreateStrict({
+  service_type_ChildAndAdolescent: Coding.FromStrict({
     code: "283",
     display: "Child And Adolescent",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1654,7 +1653,7 @@ export const ServiceTypeValueSet = {
   /**
    * Child Care
    */
-  service_type_ChildCare: Coding.FactoryCreateStrict({
+  service_type_ChildCare: Coding.FromStrict({
     code: "284",
     display: "Child Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1662,7 +1661,7 @@ export const ServiceTypeValueSet = {
   /**
    * Child Services
    */
-  service_type_ChildServices: Coding.FactoryCreateStrict({
+  service_type_ChildServices: Coding.FromStrict({
     code: "285",
     display: "Child Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1670,7 +1669,7 @@ export const ServiceTypeValueSet = {
   /**
    * Children
    */
-  service_type_Children: Coding.FactoryCreateStrict({
+  service_type_Children: Coding.FromStrict({
     code: "286",
     display: "Children",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1678,7 +1677,7 @@ export const ServiceTypeValueSet = {
   /**
    * Children's Services
    */
-  service_type_ChildrenQuoteSServices: Coding.FactoryCreateStrict({
+  service_type_ChildrenQuoteSServices: Coding.FromStrict({
     code: "287",
     display: "Children's Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1686,7 +1685,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cholesterol
    */
-  service_type_Cholesterol: Coding.FactoryCreateStrict({
+  service_type_Cholesterol: Coding.FromStrict({
     code: "288",
     display: "Cholesterol",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1694,7 +1693,7 @@ export const ServiceTypeValueSet = {
   /**
    * Clothing
    */
-  service_type_Clothing: Coding.FactoryCreateStrict({
+  service_type_Clothing: Coding.FromStrict({
     code: "289",
     display: "Clothing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1702,7 +1701,7 @@ export const ServiceTypeValueSet = {
   /**
    * Reflexology
    */
-  service_type_Reflexology: Coding.FactoryCreateStrict({
+  service_type_Reflexology: Coding.FromStrict({
     code: "29",
     display: "Reflexology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1710,7 +1709,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Based Accommodation
    */
-  service_type_CommunityBasedAcco: Coding.FactoryCreateStrict({
+  service_type_CommunityBasedAcco: Coding.FromStrict({
     code: "290",
     display: "Community Based Acco",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1718,7 +1717,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Care Unit
    */
-  service_type_CommunityCareUnit: Coding.FactoryCreateStrict({
+  service_type_CommunityCareUnit: Coding.FromStrict({
     code: "291",
     display: "Community Care Unit",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1726,7 +1725,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Child And Adolescent Mental Health Services
    */
-  service_type_CommunityChildAnd: Coding.FactoryCreateStrict({
+  service_type_CommunityChildAnd: Coding.FromStrict({
     code: "292",
     display: "Community Child And ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1734,7 +1733,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Health
    */
-  service_type_CommunityHealth: Coding.FactoryCreateStrict({
+  service_type_CommunityHealth: Coding.FromStrict({
     code: "293",
     display: "Community Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1742,7 +1741,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Residential Unit
    */
-  service_type_CommunityResidentia: Coding.FactoryCreateStrict({
+  service_type_CommunityResidentia: Coding.FromStrict({
     code: "294",
     display: "Community Residentia",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1750,7 +1749,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Transport
    */
-  service_type_CommunityTransport: Coding.FactoryCreateStrict({
+  service_type_CommunityTransport: Coding.FromStrict({
     code: "295",
     display: "Community Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1758,7 +1757,7 @@ export const ServiceTypeValueSet = {
   /**
    * Companion Visiting
    */
-  service_type_CompanionVisiting: Coding.FactoryCreateStrict({
+  service_type_CompanionVisiting: Coding.FromStrict({
     code: "296",
     display: "Companion Visiting",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1766,7 +1765,7 @@ export const ServiceTypeValueSet = {
   /**
    * Companionship
    */
-  service_type_Companionship: Coding.FactoryCreateStrict({
+  service_type_Companionship: Coding.FromStrict({
     code: "297",
     display: "Companionship",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1774,7 +1773,7 @@ export const ServiceTypeValueSet = {
   /**
    * Consumer Advice
    */
-  service_type_ConsumerAdvice: Coding.FactoryCreateStrict({
+  service_type_ConsumerAdvice: Coding.FromStrict({
     code: "298",
     display: "Consumer Advice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1782,7 +1781,7 @@ export const ServiceTypeValueSet = {
   /**
    * Consumer Issues
    */
-  service_type_ConsumerIssues: Coding.FactoryCreateStrict({
+  service_type_ConsumerIssues: Coding.FromStrict({
     code: "299",
     display: "Consumer Issues",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1790,7 +1789,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Care information/referral
    */
-  service_type_AgedCareInformationReferral: Coding.FactoryCreateStrict({
+  service_type_AgedCareInformationReferral: Coding.FromStrict({
     code: "3",
     display: "Aged Care Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1798,7 +1797,7 @@ export const ServiceTypeValueSet = {
   /**
    * Reiki
    */
-  service_type_Reiki: Coding.FactoryCreateStrict({
+  service_type_Reiki: Coding.FromStrict({
     code: "30",
     display: "Reiki",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1806,7 +1805,7 @@ export const ServiceTypeValueSet = {
   /**
    * Continuing Care Services
    */
-  service_type_ContinuingCareServ: Coding.FactoryCreateStrict({
+  service_type_ContinuingCareServ: Coding.FromStrict({
     code: "300",
     display: "Continuing Care Serv",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1814,7 +1813,7 @@ export const ServiceTypeValueSet = {
   /**
    * Contraception Information
    */
-  service_type_ContraceptionInform: Coding.FactoryCreateStrict({
+  service_type_ContraceptionInform: Coding.FromStrict({
     code: "301",
     display: "Contraception Inform",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1822,7 +1821,7 @@ export const ServiceTypeValueSet = {
   /**
    * Coordinating Bodies
    */
-  service_type_CoordinatingBodies: Coding.FactoryCreateStrict({
+  service_type_CoordinatingBodies: Coding.FromStrict({
     code: "302",
     display: "Coordinating Bodies",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1830,7 +1829,7 @@ export const ServiceTypeValueSet = {
   /**
    * Correctional Services
    */
-  service_type_CorrectionalService: Coding.FactoryCreateStrict({
+  service_type_CorrectionalService: Coding.FromStrict({
     code: "303",
     display: "Correctional Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1838,7 +1837,7 @@ export const ServiceTypeValueSet = {
   /**
    * Council Environmental Health
    */
-  service_type_CouncilEnvironmenta: Coding.FactoryCreateStrict({
+  service_type_CouncilEnvironmenta: Coding.FromStrict({
     code: "304",
     display: "Council Environmenta",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1846,7 +1845,7 @@ export const ServiceTypeValueSet = {
   /**
    * Counselling
    */
-  service_type_Counselling: Coding.FactoryCreateStrict({
+  service_type_Counselling: Coding.FromStrict({
     code: "305",
     display: "Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1854,7 +1853,7 @@ export const ServiceTypeValueSet = {
   /**
    * Criminal
    */
-  service_type_Criminal: Coding.FactoryCreateStrict({
+  service_type_Criminal: Coding.FromStrict({
     code: "306",
     display: "Criminal",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1862,7 +1861,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crises
    */
-  service_type_Crises: Coding.FactoryCreateStrict({
+  service_type_Crises: Coding.FromStrict({
     code: "307",
     display: "Crises",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1870,7 +1869,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis Assessment And Treatment Services (Cats)
    */
-  service_type_CrisisAssessmentAn: Coding.FactoryCreateStrict({
+  service_type_CrisisAssessmentAn: Coding.FromStrict({
     code: "308",
     display: "Crisis Assessment An",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1878,7 +1877,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis Assistance
    */
-  service_type_CrisisAssistance: Coding.FactoryCreateStrict({
+  service_type_CrisisAssistance: Coding.FromStrict({
     code: "309",
     display: "Crisis Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1886,7 +1885,7 @@ export const ServiceTypeValueSet = {
   /**
    * Relaxation therapy
    */
-  service_type_RelaxationTherapy: Coding.FactoryCreateStrict({
+  service_type_RelaxationTherapy: Coding.FromStrict({
     code: "31",
     display: "Relaxation Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1894,7 +1893,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis Refuge
    */
-  service_type_CrisisRefuge: Coding.FactoryCreateStrict({
+  service_type_CrisisRefuge: Coding.FromStrict({
     code: "310",
     display: "Crisis Refuge",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1902,7 +1901,7 @@ export const ServiceTypeValueSet = {
   /**
    * Day Program
    */
-  service_type_DayProgram: Coding.FactoryCreateStrict({
+  service_type_DayProgram: Coding.FromStrict({
     code: "311",
     display: "Day Program",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1910,7 +1909,7 @@ export const ServiceTypeValueSet = {
   /**
    * Deaf
    */
-  service_type_Deaf: Coding.FactoryCreateStrict({
+  service_type_Deaf: Coding.FromStrict({
     code: "312",
     display: "Deaf",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1918,7 +1917,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dental Hygiene
    */
-  service_type_DentalHygiene: Coding.FactoryCreateStrict({
+  service_type_DentalHygiene: Coding.FromStrict({
     code: "313",
     display: "Dental Hygiene",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1926,7 +1925,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dentistry
    */
-  service_type_Dentistry: Coding.FactoryCreateStrict({
+  service_type_Dentistry: Coding.FromStrict({
     code: "314",
     display: "Dentistry",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1934,7 +1933,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dentures
    */
-  service_type_Dentures: Coding.FactoryCreateStrict({
+  service_type_Dentures: Coding.FromStrict({
     code: "315",
     display: "Dentures",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1942,7 +1941,7 @@ export const ServiceTypeValueSet = {
   /**
    * Depression
    */
-  service_type_Depression: Coding.FactoryCreateStrict({
+  service_type_Depression: Coding.FromStrict({
     code: "316",
     display: "Depression",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1950,7 +1949,7 @@ export const ServiceTypeValueSet = {
   /**
    * Detoxification
    */
-  service_type_Detoxification: Coding.FactoryCreateStrict({
+  service_type_Detoxification: Coding.FromStrict({
     code: "317",
     display: "Detoxification",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1958,7 +1957,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diabetes
    */
-  service_type_Diabetes: Coding.FactoryCreateStrict({
+  service_type_Diabetes: Coding.FromStrict({
     code: "318",
     display: "Diabetes",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1966,7 +1965,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diaphragm Fitting
    */
-  service_type_DiaphragmFitting: Coding.FactoryCreateStrict({
+  service_type_DiaphragmFitting: Coding.FromStrict({
     code: "319",
     display: "Diaphragm Fitting",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1974,7 +1973,7 @@ export const ServiceTypeValueSet = {
   /**
    * Shiatsu
    */
-  service_type_Shiatsu: Coding.FactoryCreateStrict({
+  service_type_Shiatsu: Coding.FromStrict({
     code: "32",
     display: "Shiatsu",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1982,7 +1981,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dieticians
    */
-  service_type_Dieticians: Coding.FactoryCreateStrict({
+  service_type_Dieticians: Coding.FromStrict({
     code: "320",
     display: "Dieticians",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1990,7 +1989,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disabled Parking
    */
-  service_type_DisabledParking: Coding.FactoryCreateStrict({
+  service_type_DisabledParking: Coding.FromStrict({
     code: "321",
     display: "Disabled Parking",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -1998,7 +1997,7 @@ export const ServiceTypeValueSet = {
   /**
    * District Nursing
    */
-  service_type_DistrictNursing: Coding.FactoryCreateStrict({
+  service_type_DistrictNursing: Coding.FromStrict({
     code: "322",
     display: "District Nursing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2006,7 +2005,7 @@ export const ServiceTypeValueSet = {
   /**
    * Divorce
    */
-  service_type_Divorce: Coding.FactoryCreateStrict({
+  service_type_Divorce: Coding.FromStrict({
     code: "323",
     display: "Divorce",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2014,7 +2013,7 @@ export const ServiceTypeValueSet = {
   /**
    * Doctors
    */
-  service_type_Doctors: Coding.FactoryCreateStrict({
+  service_type_Doctors: Coding.FromStrict({
     code: "324",
     display: "Doctors",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2022,7 +2021,7 @@ export const ServiceTypeValueSet = {
   /**
    * Drink-Drive
    */
-  service_type_DrinkDrive: Coding.FactoryCreateStrict({
+  service_type_DrinkDrive: Coding.FromStrict({
     code: "325",
     display: "Drink-Drive",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2030,7 +2029,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dual Diagnosis Services
    */
-  service_type_DualDiagnosisServi: Coding.FactoryCreateStrict({
+  service_type_DualDiagnosisServi: Coding.FromStrict({
     code: "326",
     display: "Dual Diagnosis Servi",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2038,7 +2037,7 @@ export const ServiceTypeValueSet = {
   /**
    * Early Choice
    */
-  service_type_EarlyChoice: Coding.FactoryCreateStrict({
+  service_type_EarlyChoice: Coding.FromStrict({
     code: "327",
     display: "Early Choice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2046,7 +2045,7 @@ export const ServiceTypeValueSet = {
   /**
    * Eating Disorder
    */
-  service_type_EatingDisorder: Coding.FactoryCreateStrict({
+  service_type_EatingDisorder: Coding.FromStrict({
     code: "328",
     display: "Eating Disorder",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2054,7 +2053,7 @@ export const ServiceTypeValueSet = {
   /**
    * Western herbal medicine
    */
-  service_type_WesternHerbalMedicine: Coding.FactoryCreateStrict({
+  service_type_WesternHerbalMedicine: Coding.FromStrict({
     code: "33",
     display: "Western Herbal Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2062,7 +2061,7 @@ export const ServiceTypeValueSet = {
   /**
    * Emergency Relief
    */
-  service_type_EmergencyRelief: Coding.FactoryCreateStrict({
+  service_type_EmergencyRelief: Coding.FromStrict({
     code: "330",
     display: "Emergency Relief",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2070,7 +2069,7 @@ export const ServiceTypeValueSet = {
   /**
    * Employment And Training
    */
-  service_type_EmploymentAndTrain: Coding.FactoryCreateStrict({
+  service_type_EmploymentAndTrain: Coding.FromStrict({
     code: "331",
     display: "Employment And Train",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2078,7 +2077,7 @@ export const ServiceTypeValueSet = {
   /**
    * Environment
    */
-  service_type_Environment: Coding.FactoryCreateStrict({
+  service_type_Environment: Coding.FromStrict({
     code: "332",
     display: "Environment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2086,7 +2085,7 @@ export const ServiceTypeValueSet = {
   /**
    * Equipment
    */
-  service_type_Equipment: Coding.FactoryCreateStrict({
+  service_type_Equipment: Coding.FromStrict({
     code: "333",
     display: "Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2094,7 +2093,7 @@ export const ServiceTypeValueSet = {
   /**
    * Exercise
    */
-  service_type_Exercise: Coding.FactoryCreateStrict({
+  service_type_Exercise: Coding.FromStrict({
     code: "334",
     display: "Exercise",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2102,7 +2101,7 @@ export const ServiceTypeValueSet = {
   /**
    * Facility
    */
-  service_type_Facility: Coding.FactoryCreateStrict({
+  service_type_Facility: Coding.FromStrict({
     code: "335",
     display: "Facility",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2110,7 +2109,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family Choice
    */
-  service_type_FamilyChoice: Coding.FactoryCreateStrict({
+  service_type_FamilyChoice: Coding.FromStrict({
     code: "336",
     display: "Family Choice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2118,7 +2117,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family Law
    */
-  service_type_FamilyLaw: Coding.FactoryCreateStrict({
+  service_type_FamilyLaw: Coding.FromStrict({
     code: "337",
     display: "Family Law",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2126,7 +2125,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family Options
    */
-  service_type_FamilyOptions: Coding.FactoryCreateStrict({
+  service_type_FamilyOptions: Coding.FromStrict({
     code: "338",
     display: "Family Options",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2134,7 +2133,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family Services
    */
-  service_type_FamilyServices: Coding.FactoryCreateStrict({
+  service_type_FamilyServices: Coding.FromStrict({
     code: "339",
     display: "Family Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2142,7 +2141,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family day care
    */
-  service_type_FamilyDayCare: Coding.FactoryCreateStrict({
+  service_type_FamilyDayCare: Coding.FromStrict({
     code: "34",
     display: "Family Day care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2150,7 +2149,7 @@ export const ServiceTypeValueSet = {
   /**
    * FFYA
    */
-  service_type_FFYA: Coding.FactoryCreateStrict({
+  service_type_FFYA: Coding.FromStrict({
     code: "340",
     display: "FFYA",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2158,7 +2157,7 @@ export const ServiceTypeValueSet = {
   /**
    * Financial Aid
    */
-  service_type_FinancialAid: Coding.FactoryCreateStrict({
+  service_type_FinancialAid: Coding.FromStrict({
     code: "341",
     display: "Financial Aid",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2166,7 +2165,7 @@ export const ServiceTypeValueSet = {
   /**
    * Fitness
    */
-  service_type_Fitness: Coding.FactoryCreateStrict({
+  service_type_Fitness: Coding.FromStrict({
     code: "342",
     display: "Fitness",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2174,7 +2173,7 @@ export const ServiceTypeValueSet = {
   /**
    * Flexible Care Packages
    */
-  service_type_FlexibleCarePackag: Coding.FactoryCreateStrict({
+  service_type_FlexibleCarePackag: Coding.FromStrict({
     code: "343",
     display: "Flexible Care Packag",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2182,7 +2181,7 @@ export const ServiceTypeValueSet = {
   /**
    * Food
    */
-  service_type_Food: Coding.FactoryCreateStrict({
+  service_type_Food: Coding.FromStrict({
     code: "344",
     display: "Food",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2190,7 +2189,7 @@ export const ServiceTypeValueSet = {
   /**
    * Food Vouchers
    */
-  service_type_FoodVouchers: Coding.FactoryCreateStrict({
+  service_type_FoodVouchers: Coding.FromStrict({
     code: "345",
     display: "Food Vouchers",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2198,7 +2197,7 @@ export const ServiceTypeValueSet = {
   /**
    * Forensic Mental Health Services
    */
-  service_type_ForensicMentalHeal: Coding.FactoryCreateStrict({
+  service_type_ForensicMentalHeal: Coding.FromStrict({
     code: "346",
     display: "Forensic Mental Heal",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2206,7 +2205,7 @@ export const ServiceTypeValueSet = {
   /**
    * Futures
    */
-  service_type_Futures: Coding.FactoryCreateStrict({
+  service_type_Futures: Coding.FromStrict({
     code: "347",
     display: "Futures",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2214,7 +2213,7 @@ export const ServiceTypeValueSet = {
   /**
    * Futures For Young Adults
    */
-  service_type_FuturesForYoungAd: Coding.FactoryCreateStrict({
+  service_type_FuturesForYoungAd: Coding.FromStrict({
     code: "348",
     display: "Futures For Young Ad",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2222,7 +2221,7 @@ export const ServiceTypeValueSet = {
   /**
    * General Practitioners
    */
-  service_type_GeneralPractitioner: Coding.FactoryCreateStrict({
+  service_type_GeneralPractitioner: Coding.FromStrict({
     code: "349",
     display: "General Practitioner",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2230,7 +2229,7 @@ export const ServiceTypeValueSet = {
   /**
    * Holiday programs
    */
-  service_type_HolidayPrograms: Coding.FactoryCreateStrict({
+  service_type_HolidayPrograms: Coding.FromStrict({
     code: "35",
     display: "Holiday Programs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2238,7 +2237,7 @@ export const ServiceTypeValueSet = {
   /**
    * Grants
    */
-  service_type_Grants: Coding.FactoryCreateStrict({
+  service_type_Grants: Coding.FromStrict({
     code: "350",
     display: "Grants",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2246,7 +2245,7 @@ export const ServiceTypeValueSet = {
   /**
    * Grief
    */
-  service_type_Grief: Coding.FactoryCreateStrict({
+  service_type_Grief: Coding.FromStrict({
     code: "351",
     display: "Grief",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2254,7 +2253,7 @@ export const ServiceTypeValueSet = {
   /**
    * Grief Counselling
    */
-  service_type_GriefCounselling: Coding.FactoryCreateStrict({
+  service_type_GriefCounselling: Coding.FromStrict({
     code: "352",
     display: "Grief Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2262,7 +2261,7 @@ export const ServiceTypeValueSet = {
   /**
    * HACC
    */
-  service_type_HACC: Coding.FactoryCreateStrict({
+  service_type_HACC: Coding.FromStrict({
     code: "353",
     display: "HACC",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2270,7 +2269,7 @@ export const ServiceTypeValueSet = {
   /**
    * Heart Disease
    */
-  service_type_HeartDisease: Coding.FactoryCreateStrict({
+  service_type_HeartDisease: Coding.FromStrict({
     code: "354",
     display: "Heart Disease",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2278,7 +2277,7 @@ export const ServiceTypeValueSet = {
   /**
    * Help
    */
-  service_type_Help: Coding.FactoryCreateStrict({
+  service_type_Help: Coding.FromStrict({
     code: "355",
     display: "Help",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2286,7 +2285,7 @@ export const ServiceTypeValueSet = {
   /**
    * High Blood Pressure
    */
-  service_type_HighBloodPressure: Coding.FactoryCreateStrict({
+  service_type_HighBloodPressure: Coding.FromStrict({
     code: "356",
     display: "High Blood Pressure",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2294,7 +2293,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home Help
    */
-  service_type_HomeHelp: Coding.FactoryCreateStrict({
+  service_type_HomeHelp: Coding.FromStrict({
     code: "357",
     display: "Home Help",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2302,7 +2301,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home Nursing
    */
-  service_type_HomeNursing: Coding.FactoryCreateStrict({
+  service_type_HomeNursing: Coding.FromStrict({
     code: "358",
     display: "Home Nursing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2310,7 +2309,7 @@ export const ServiceTypeValueSet = {
   /**
    * Homefirst
    */
-  service_type_Homefirst: Coding.FactoryCreateStrict({
+  service_type_Homefirst: Coding.FromStrict({
     code: "359",
     display: "Homefirst",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2318,7 +2317,7 @@ export const ServiceTypeValueSet = {
   /**
    * Kindergarten inclusion support for children with a disability
    */
-  service_type_KindergartenInclusionSupport: Coding.FactoryCreateStrict({
+  service_type_KindergartenInclusionSupport: Coding.FromStrict({
     code: "36",
     display: "Kindergarten Inclusion Support ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2326,7 +2325,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hospice Care
    */
-  service_type_HospiceCare: Coding.FactoryCreateStrict({
+  service_type_HospiceCare: Coding.FromStrict({
     code: "360",
     display: "Hospice Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2334,7 +2333,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hospital Services
    */
-  service_type_HospitalServices: Coding.FactoryCreateStrict({
+  service_type_HospitalServices: Coding.FromStrict({
     code: "361",
     display: "Hospital Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2342,7 +2341,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hospital To Home
    */
-  service_type_HospitalToHome: Coding.FactoryCreateStrict({
+  service_type_HospitalToHome: Coding.FromStrict({
     code: "362",
     display: "Hospital To Home",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2350,7 +2349,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hostel
    */
-  service_type_Hostel: Coding.FactoryCreateStrict({
+  service_type_Hostel: Coding.FromStrict({
     code: "364",
     display: "Hostel",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2358,7 +2357,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hostel Accommodation
    */
-  service_type_HostelAccommodation: Coding.FactoryCreateStrict({
+  service_type_HostelAccommodation: Coding.FromStrict({
     code: "365",
     display: "Hostel Accommodation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2366,7 +2365,7 @@ export const ServiceTypeValueSet = {
   /**
    * Household Items
    */
-  service_type_HouseholdItems: Coding.FactoryCreateStrict({
+  service_type_HouseholdItems: Coding.FromStrict({
     code: "366",
     display: "Household Items",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2374,7 +2373,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hypertension
    */
-  service_type_Hypertension: Coding.FactoryCreateStrict({
+  service_type_Hypertension: Coding.FromStrict({
     code: "367",
     display: "Hypertension",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2382,7 +2381,7 @@ export const ServiceTypeValueSet = {
   /**
    * Illness
    */
-  service_type_Illness: Coding.FactoryCreateStrict({
+  service_type_Illness: Coding.FromStrict({
     code: "368",
     display: "Illness",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2390,7 +2389,7 @@ export const ServiceTypeValueSet = {
   /**
    * Independent Living
    */
-  service_type_IndependentLiving: Coding.FactoryCreateStrict({
+  service_type_IndependentLiving: Coding.FromStrict({
     code: "369",
     display: "Independent Living",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2398,7 +2397,7 @@ export const ServiceTypeValueSet = {
   /**
    * Kindergarten/preschool
    */
-  service_type_KindergartenPreschool: Coding.FactoryCreateStrict({
+  service_type_KindergartenPreschool: Coding.FromStrict({
     code: "37",
     display: "Kindergarten/Preschool",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2406,7 +2405,7 @@ export const ServiceTypeValueSet = {
   /**
    * Information
    */
-  service_type_Information: Coding.FactoryCreateStrict({
+  service_type_Information: Coding.FromStrict({
     code: "370",
     display: "Information",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2414,7 +2413,7 @@ export const ServiceTypeValueSet = {
   /**
    * Injury
    */
-  service_type_Injury: Coding.FactoryCreateStrict({
+  service_type_Injury: Coding.FromStrict({
     code: "371",
     display: "Injury",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2422,7 +2421,7 @@ export const ServiceTypeValueSet = {
   /**
    * Intake
    */
-  service_type_Intake: Coding.FactoryCreateStrict({
+  service_type_Intake: Coding.FromStrict({
     code: "372",
     display: "Intake",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2430,7 +2429,7 @@ export const ServiceTypeValueSet = {
   /**
    * Intensive Mobile Youth Outreach Services (Imyos)
    */
-  service_type_IntensiveMobileYou: Coding.FactoryCreateStrict({
+  service_type_IntensiveMobileYou: Coding.FromStrict({
     code: "373",
     display: "Intensive Mobile You",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2438,7 +2437,7 @@ export const ServiceTypeValueSet = {
   /**
    * Intervention
    */
-  service_type_Intervention: Coding.FactoryCreateStrict({
+  service_type_Intervention: Coding.FromStrict({
     code: "374",
     display: "Intervention",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2446,7 +2445,7 @@ export const ServiceTypeValueSet = {
   /**
    * Job Searching
    */
-  service_type_JobSearching: Coding.FactoryCreateStrict({
+  service_type_JobSearching: Coding.FromStrict({
     code: "375",
     display: "Job Searching",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2454,7 +2453,7 @@ export const ServiceTypeValueSet = {
   /**
    * Justice
    */
-  service_type_Justice: Coding.FactoryCreateStrict({
+  service_type_Justice: Coding.FromStrict({
     code: "376",
     display: "Justice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2462,7 +2461,7 @@ export const ServiceTypeValueSet = {
   /**
    * Leisure
    */
-  service_type_Leisure: Coding.FactoryCreateStrict({
+  service_type_Leisure: Coding.FromStrict({
     code: "377",
     display: "Leisure",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2470,7 +2469,7 @@ export const ServiceTypeValueSet = {
   /**
    * Loans
    */
-  service_type_Loans: Coding.FactoryCreateStrict({
+  service_type_Loans: Coding.FromStrict({
     code: "378",
     display: "Loans",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2478,7 +2477,7 @@ export const ServiceTypeValueSet = {
   /**
    * Low Income Earners
    */
-  service_type_LowIncomeEarners: Coding.FactoryCreateStrict({
+  service_type_LowIncomeEarners: Coding.FromStrict({
     code: "379",
     display: "Low Income Earners",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2486,7 +2485,7 @@ export const ServiceTypeValueSet = {
   /**
    * Long day child care
    */
-  service_type_LongDayChildCare: Coding.FactoryCreateStrict({
+  service_type_LongDayChildCare: Coding.FromStrict({
     code: "38",
     display: "Long Day Child Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2494,7 +2493,7 @@ export const ServiceTypeValueSet = {
   /**
    * Lung
    */
-  service_type_Lung: Coding.FactoryCreateStrict({
+  service_type_Lung: Coding.FromStrict({
     code: "380",
     display: "Lung",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2502,7 +2501,7 @@ export const ServiceTypeValueSet = {
   /**
    * Making A Difference
    */
-  service_type_MakingADifference: Coding.FactoryCreateStrict({
+  service_type_MakingADifference: Coding.FromStrict({
     code: "381",
     display: "Making A Difference",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2510,7 +2509,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medical Services
    */
-  service_type_MedicalServices: Coding.FactoryCreateStrict({
+  service_type_MedicalServices: Coding.FromStrict({
     code: "382",
     display: "Medical Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2518,7 +2517,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medical Specialists
    */
-  service_type_MedicalSpecialists: Coding.FactoryCreateStrict({
+  service_type_MedicalSpecialists: Coding.FromStrict({
     code: "383",
     display: "Medical Specialists",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2526,7 +2525,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medication Administration
    */
-  service_type_MedicationAdministr: Coding.FactoryCreateStrict({
+  service_type_MedicationAdministr: Coding.FromStrict({
     code: "384",
     display: "Medication Administr",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2534,7 +2533,7 @@ export const ServiceTypeValueSet = {
   /**
    * Menstrual Information
    */
-  service_type_MenstrualInformatio: Coding.FactoryCreateStrict({
+  service_type_MenstrualInformatio: Coding.FromStrict({
     code: "385",
     display: "Menstrual Informatio",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2542,7 +2541,7 @@ export const ServiceTypeValueSet = {
   /**
    * Methadone
    */
-  service_type_Methadone: Coding.FactoryCreateStrict({
+  service_type_Methadone: Coding.FromStrict({
     code: "386",
     display: "Methadone",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2550,7 +2549,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mobile Support And Treatment Services (MSTS)
    */
-  service_type_MobileSupportAndT: Coding.FactoryCreateStrict({
+  service_type_MobileSupportAndT: Coding.FromStrict({
     code: "387",
     display: "Mobile Support And T",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2558,7 +2557,7 @@ export const ServiceTypeValueSet = {
   /**
    * Motor Neurone
    */
-  service_type_MotorNeurone: Coding.FactoryCreateStrict({
+  service_type_MotorNeurone: Coding.FromStrict({
     code: "388",
     display: "Motor Neurone",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2566,7 +2565,7 @@ export const ServiceTypeValueSet = {
   /**
    * Multiple Sclerosis
    */
-  service_type_MultipleSclerosis: Coding.FactoryCreateStrict({
+  service_type_MultipleSclerosis: Coding.FromStrict({
     code: "389",
     display: "Multiple Sclerosis",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2574,7 +2573,7 @@ export const ServiceTypeValueSet = {
   /**
    * Occasional child care
    */
-  service_type_OccasionalChildCare: Coding.FactoryCreateStrict({
+  service_type_OccasionalChildCare: Coding.FromStrict({
     code: "39",
     display: "Occasional Child Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2582,7 +2581,7 @@ export const ServiceTypeValueSet = {
   /**
    * Neighbourhood House
    */
-  service_type_NeighbourhoodHouse: Coding.FactoryCreateStrict({
+  service_type_NeighbourhoodHouse: Coding.FromStrict({
     code: "390",
     display: "Neighbourhood House",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2590,7 +2589,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nursing Home
    */
-  service_type_NursingHome: Coding.FactoryCreateStrict({
+  service_type_NursingHome: Coding.FromStrict({
     code: "391",
     display: "Nursing Home",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2598,7 +2597,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nursing Mothers
    */
-  service_type_NursingMothers: Coding.FactoryCreateStrict({
+  service_type_NursingMothers: Coding.FromStrict({
     code: "392",
     display: "Nursing Mothers",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2606,7 +2605,7 @@ export const ServiceTypeValueSet = {
   /**
    * Obesity
    */
-  service_type_Obesity: Coding.FactoryCreateStrict({
+  service_type_Obesity: Coding.FromStrict({
     code: "393",
     display: "Obesity",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2614,7 +2613,7 @@ export const ServiceTypeValueSet = {
   /**
    * Occupational Health &amp; Safety
    */
-  service_type_OccupationalHealth: Coding.FactoryCreateStrict({
+  service_type_OccupationalHealth: Coding.FromStrict({
     code: "394",
     display: "Occupational Health ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2622,7 +2621,7 @@ export const ServiceTypeValueSet = {
   /**
    * Optometrist
    */
-  service_type_Optometrist: Coding.FactoryCreateStrict({
+  service_type_Optometrist: Coding.FromStrict({
     code: "395",
     display: "Optometrist",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2630,7 +2629,7 @@ export const ServiceTypeValueSet = {
   /**
    * Oral Hygiene
    */
-  service_type_OralHygiene: Coding.FactoryCreateStrict({
+  service_type_OralHygiene: Coding.FromStrict({
     code: "396",
     display: "Oral Hygiene",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2638,7 +2637,7 @@ export const ServiceTypeValueSet = {
   /**
    * Outpatients
    */
-  service_type_Outpatients: Coding.FactoryCreateStrict({
+  service_type_Outpatients: Coding.FromStrict({
     code: "397",
     display: "Outpatients",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2646,7 +2645,7 @@ export const ServiceTypeValueSet = {
   /**
    * Outreach Service
    */
-  service_type_OutreachService: Coding.FactoryCreateStrict({
+  service_type_OutreachService: Coding.FromStrict({
     code: "398",
     display: "Outreach Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2654,7 +2653,7 @@ export const ServiceTypeValueSet = {
   /**
    * PADP
    */
-  service_type_PADP: Coding.FactoryCreateStrict({
+  service_type_PADP: Coding.FromStrict({
     code: "399",
     display: "PADP",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2662,7 +2661,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Residential Care
    */
-  service_type_AgedResidentialCare: Coding.FactoryCreateStrict({
+  service_type_AgedResidentialCare: Coding.FromStrict({
     code: "4",
     display: "Aged Residential Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2670,7 +2669,7 @@ export const ServiceTypeValueSet = {
   /**
    * Outside school hours care
    */
-  service_type_OutsideSchoolHoursCare: Coding.FactoryCreateStrict({
+  service_type_OutsideSchoolHoursCare: Coding.FromStrict({
     code: "40",
     display: "Outside School Hours Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2678,7 +2677,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pain
    */
-  service_type_Pain: Coding.FactoryCreateStrict({
+  service_type_Pain: Coding.FromStrict({
     code: "400",
     display: "Pain",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2686,7 +2685,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pap Smear
    */
-  service_type_PapSmear: Coding.FactoryCreateStrict({
+  service_type_PapSmear: Coding.FromStrict({
     code: "401",
     display: "Pap Smear",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2694,7 +2693,7 @@ export const ServiceTypeValueSet = {
   /**
    * Parenting
    */
-  service_type_Parenting: Coding.FactoryCreateStrict({
+  service_type_Parenting: Coding.FromStrict({
     code: "402",
     display: "Parenting",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2702,7 +2701,7 @@ export const ServiceTypeValueSet = {
   /**
    * Peak Organizations
    */
-  service_type_PeakOrganizations: Coding.FactoryCreateStrict({
+  service_type_PeakOrganizations: Coding.FromStrict({
     code: "403",
     display: "Peak Organizations",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2710,7 +2709,7 @@ export const ServiceTypeValueSet = {
   /**
    * Personal Care
    */
-  service_type_PersonalCare: Coding.FactoryCreateStrict({
+  service_type_PersonalCare: Coding.FromStrict({
     code: "404",
     display: "Personal Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2718,7 +2717,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pharmacies
    */
-  service_type_Pharmacies: Coding.FactoryCreateStrict({
+  service_type_Pharmacies: Coding.FromStrict({
     code: "405",
     display: "Pharmacies",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2726,7 +2725,7 @@ export const ServiceTypeValueSet = {
   /**
    * Phobias
    */
-  service_type_Phobias: Coding.FactoryCreateStrict({
+  service_type_Phobias: Coding.FromStrict({
     code: "406",
     display: "Phobias",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2734,7 +2733,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical
    */
-  service_type_Physical: Coding.FactoryCreateStrict({
+  service_type_Physical: Coding.FromStrict({
     code: "407",
     display: "Physical",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2742,7 +2741,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical Activity
    */
-  service_type_PhysicalActivity: Coding.FactoryCreateStrict({
+  service_type_PhysicalActivity: Coding.FromStrict({
     code: "408",
     display: "Physical Activity",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2750,7 +2749,7 @@ export const ServiceTypeValueSet = {
   /**
    * Postnatal
    */
-  service_type_Postnatal: Coding.FactoryCreateStrict({
+  service_type_Postnatal: Coding.FromStrict({
     code: "409",
     display: "Postnatal",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2758,7 +2757,7 @@ export const ServiceTypeValueSet = {
   /**
    * Children's play programs
    */
-  service_type_ChildrenQuoteSPlayPrograms: Coding.FactoryCreateStrict({
+  service_type_ChildrenQuoteSPlayPrograms: Coding.FromStrict({
     code: "41",
     display: "Children's Play Programs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2766,7 +2765,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pregnancy
    */
-  service_type_Pregnancy: Coding.FactoryCreateStrict({
+  service_type_Pregnancy: Coding.FromStrict({
     code: "410",
     display: "Pregnancy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2774,7 +2773,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pregnancy Tests
    */
-  service_type_PregnancyTests: Coding.FactoryCreateStrict({
+  service_type_PregnancyTests: Coding.FromStrict({
     code: "411",
     display: "Pregnancy Tests",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2782,7 +2781,7 @@ export const ServiceTypeValueSet = {
   /**
    * Preschool
    */
-  service_type_Preschool: Coding.FactoryCreateStrict({
+  service_type_Preschool: Coding.FromStrict({
     code: "412",
     display: "Preschool",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2790,7 +2789,7 @@ export const ServiceTypeValueSet = {
   /**
    * Prescriptions
    */
-  service_type_Prescriptions: Coding.FactoryCreateStrict({
+  service_type_Prescriptions: Coding.FromStrict({
     code: "413",
     display: "Prescriptions",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2798,7 +2797,7 @@ export const ServiceTypeValueSet = {
   /**
    * Primary Mental Health And Early Intervention Teams
    */
-  service_type_PrimaryMentalHealt: Coding.FactoryCreateStrict({
+  service_type_PrimaryMentalHealt: Coding.FromStrict({
     code: "414",
     display: "Primary Mental Healt",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2806,7 +2805,7 @@ export const ServiceTypeValueSet = {
   /**
    * Property Maintenance
    */
-  service_type_PropertyMaintenance: Coding.FactoryCreateStrict({
+  service_type_PropertyMaintenance: Coding.FromStrict({
     code: "415",
     display: "Property Maintenance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2814,7 +2813,7 @@ export const ServiceTypeValueSet = {
   /**
    * Prostate
    */
-  service_type_Prostate: Coding.FactoryCreateStrict({
+  service_type_Prostate: Coding.FromStrict({
     code: "416",
     display: "Prostate",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2822,7 +2821,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric
    */
-  service_type_Psychiatric: Coding.FactoryCreateStrict({
+  service_type_Psychiatric: Coding.FromStrict({
     code: "417",
     display: "Psychiatric",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2830,7 +2829,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Disability Support Services - Home-Based Outreach
    */
-  service_type_PsychiatricDisabili: Coding.FactoryCreateStrict({
+  service_type_PsychiatricDisabili: Coding.FromStrict({
     code: "418",
     display: "Psychiatric Disabili",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2838,7 +2837,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Disability Support Services - Planned Respite
    */
-  service_type_PsychiatricDisabili_2: Coding.FactoryCreateStrict({
+  service_type_PsychiatricDisabili_2: Coding.FromStrict({
     code: "419",
     display: "Psychiatric Disabili",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2846,7 +2845,7 @@ export const ServiceTypeValueSet = {
   /**
    * Parenting &amp; family management support/education
    */
-  service_type_ParentingFamilySupportEducation: Coding.FactoryCreateStrict({
+  service_type_ParentingFamilySupportEducation: Coding.FromStrict({
     code: "42",
     display: "Parenting/Family Support/Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2854,7 +2853,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Disability Support Services - Residential Rehabilitation
    */
-  service_type_PsychiatricDisabili_3: Coding.FactoryCreateStrict({
+  service_type_PsychiatricDisabili_3: Coding.FromStrict({
     code: "420",
     display: "Psychiatric Disabili",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2862,7 +2861,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Disability Support Services Home-Based Outreach
    */
-  service_type_PsychiatricDisabili_4: Coding.FactoryCreateStrict({
+  service_type_PsychiatricDisabili_4: Coding.FromStrict({
     code: "421",
     display: "Psychiatric Disabili",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2870,7 +2869,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Disability Support Services Mutual Support And Self Help
    */
-  service_type_PsychiatricDisabili_5: Coding.FactoryCreateStrict({
+  service_type_PsychiatricDisabili_5: Coding.FromStrict({
     code: "422",
     display: "Psychiatric Disabili",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2878,7 +2877,7 @@ export const ServiceTypeValueSet = {
   /**
    * Psychiatric Support
    */
-  service_type_PsychiatricSupport: Coding.FactoryCreateStrict({
+  service_type_PsychiatricSupport: Coding.FromStrict({
     code: "423",
     display: "Psychiatric Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2886,7 +2885,7 @@ export const ServiceTypeValueSet = {
   /**
    * Recreation
    */
-  service_type_Recreation: Coding.FactoryCreateStrict({
+  service_type_Recreation: Coding.FromStrict({
     code: "424",
     display: "Recreation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2894,7 +2893,7 @@ export const ServiceTypeValueSet = {
   /**
    * Referral
    */
-  service_type_Referral: Coding.FactoryCreateStrict({
+  service_type_Referral: Coding.FromStrict({
     code: "425",
     display: "Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2902,7 +2901,7 @@ export const ServiceTypeValueSet = {
   /**
    * Refuge
    */
-  service_type_Refuge: Coding.FactoryCreateStrict({
+  service_type_Refuge: Coding.FromStrict({
     code: "426",
     display: "Refuge",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2910,7 +2909,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rent Assistance
    */
-  service_type_RentAssistance: Coding.FactoryCreateStrict({
+  service_type_RentAssistance: Coding.FromStrict({
     code: "427",
     display: "Rent Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2918,7 +2917,7 @@ export const ServiceTypeValueSet = {
   /**
    * Residential Facilities
    */
-  service_type_ResidentialFaciliti: Coding.FactoryCreateStrict({
+  service_type_ResidentialFaciliti: Coding.FromStrict({
     code: "428",
     display: "Residential Faciliti",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2926,7 +2925,7 @@ export const ServiceTypeValueSet = {
   /**
    * Residential Respite
    */
-  service_type_ResidentialRespite: Coding.FactoryCreateStrict({
+  service_type_ResidentialRespite: Coding.FromStrict({
     code: "429",
     display: "Residential Respite",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2934,7 +2933,7 @@ export const ServiceTypeValueSet = {
   /**
    * Playgroup
    */
-  service_type_Playgroup: Coding.FactoryCreateStrict({
+  service_type_Playgroup: Coding.FromStrict({
     code: "43",
     display: "Playgroup",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2942,7 +2941,7 @@ export const ServiceTypeValueSet = {
   /**
    * Respiratory
    */
-  service_type_Respiratory: Coding.FactoryCreateStrict({
+  service_type_Respiratory: Coding.FromStrict({
     code: "430",
     display: "Respiratory",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2950,7 +2949,7 @@ export const ServiceTypeValueSet = {
   /**
    * Response
    */
-  service_type_Response: Coding.FactoryCreateStrict({
+  service_type_Response: Coding.FromStrict({
     code: "431",
     display: "Response",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2958,7 +2957,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rooming Houses
    */
-  service_type_RoomingHouses: Coding.FactoryCreateStrict({
+  service_type_RoomingHouses: Coding.FromStrict({
     code: "432",
     display: "Rooming Houses",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2966,7 +2965,7 @@ export const ServiceTypeValueSet = {
   /**
    * Safe Sex
    */
-  service_type_SafeSex: Coding.FactoryCreateStrict({
+  service_type_SafeSex: Coding.FromStrict({
     code: "433",
     display: "Safe Sex",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2974,7 +2973,7 @@ export const ServiceTypeValueSet = {
   /**
    * Secure Extended Care Inpatient Services
    */
-  service_type_SecureExtendedCare: Coding.FactoryCreateStrict({
+  service_type_SecureExtendedCare: Coding.FromStrict({
     code: "434",
     display: "Secure Extended Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2982,7 +2981,7 @@ export const ServiceTypeValueSet = {
   /**
    * Self Help
    */
-  service_type_SelfHelp: Coding.FactoryCreateStrict({
+  service_type_SelfHelp: Coding.FromStrict({
     code: "435",
     display: "Self Help",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2990,7 +2989,7 @@ export const ServiceTypeValueSet = {
   /**
    * Separation
    */
-  service_type_Separation: Coding.FactoryCreateStrict({
+  service_type_Separation: Coding.FromStrict({
     code: "436",
     display: "Separation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -2998,7 +2997,7 @@ export const ServiceTypeValueSet = {
   /**
    * Services
    */
-  service_type_Services: Coding.FactoryCreateStrict({
+  service_type_Services: Coding.FromStrict({
     code: "437",
     display: "Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3006,7 +3005,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sex Education
    */
-  service_type_SexEducation: Coding.FactoryCreateStrict({
+  service_type_SexEducation: Coding.FromStrict({
     code: "438",
     display: "Sex Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3014,7 +3013,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexual Abuse
    */
-  service_type_SexualAbuse: Coding.FactoryCreateStrict({
+  service_type_SexualAbuse: Coding.FromStrict({
     code: "439",
     display: "Sexual Abuse",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3022,7 +3021,7 @@ export const ServiceTypeValueSet = {
   /**
    * School nursing
    */
-  service_type_SchoolNursing: Coding.FactoryCreateStrict({
+  service_type_SchoolNursing: Coding.FromStrict({
     code: "44",
     display: "School Nursing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3030,7 +3029,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexual Issues
    */
-  service_type_SexualIssues: Coding.FactoryCreateStrict({
+  service_type_SexualIssues: Coding.FromStrict({
     code: "440",
     display: "Sexual Issues",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3038,7 +3037,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexually Transmitted Diseases
    */
-  service_type_SexuallyTransmitted: Coding.FactoryCreateStrict({
+  service_type_SexuallyTransmitted: Coding.FromStrict({
     code: "441",
     display: "Sexually Transmitted",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3046,7 +3045,7 @@ export const ServiceTypeValueSet = {
   /**
    * SIDS
    */
-  service_type_SIDS: Coding.FactoryCreateStrict({
+  service_type_SIDS: Coding.FromStrict({
     code: "442",
     display: "SIDS",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3054,7 +3053,7 @@ export const ServiceTypeValueSet = {
   /**
    * Social Support
    */
-  service_type_SocialSupport: Coding.FactoryCreateStrict({
+  service_type_SocialSupport: Coding.FromStrict({
     code: "443",
     display: "Social Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3062,7 +3061,7 @@ export const ServiceTypeValueSet = {
   /**
    * Socialisation
    */
-  service_type_Socialisation: Coding.FactoryCreateStrict({
+  service_type_Socialisation: Coding.FromStrict({
     code: "444",
     display: "Socialisation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3070,7 +3069,7 @@ export const ServiceTypeValueSet = {
   /**
    * Special Needs
    */
-  service_type_SpecialNeeds: Coding.FactoryCreateStrict({
+  service_type_SpecialNeeds: Coding.FromStrict({
     code: "445",
     display: "Special Needs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3078,7 +3077,7 @@ export const ServiceTypeValueSet = {
   /**
    * Speech Therapist
    */
-  service_type_SpeechTherapist: Coding.FactoryCreateStrict({
+  service_type_SpeechTherapist: Coding.FromStrict({
     code: "446",
     display: "Speech Therapist",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3086,7 +3085,7 @@ export const ServiceTypeValueSet = {
   /**
    * Splinting
    */
-  service_type_Splinting: Coding.FactoryCreateStrict({
+  service_type_Splinting: Coding.FromStrict({
     code: "447",
     display: "Splinting",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3094,7 +3093,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sport
    */
-  service_type_Sport: Coding.FactoryCreateStrict({
+  service_type_Sport: Coding.FromStrict({
     code: "448",
     display: "Sport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3102,7 +3101,7 @@ export const ServiceTypeValueSet = {
   /**
    * Statewide And Specialist Services
    */
-  service_type_StatewideAndSpecia: Coding.FactoryCreateStrict({
+  service_type_StatewideAndSpecia: Coding.FromStrict({
     code: "449",
     display: "Statewide And Specia",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3110,7 +3109,7 @@ export const ServiceTypeValueSet = {
   /**
    * Toy library
    */
-  service_type_ToyLibrary: Coding.FactoryCreateStrict({
+  service_type_ToyLibrary: Coding.FromStrict({
     code: "45",
     display: "Toy Library",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3118,7 +3117,7 @@ export const ServiceTypeValueSet = {
   /**
    * STD
    */
-  service_type_STD: Coding.FactoryCreateStrict({
+  service_type_STD: Coding.FromStrict({
     code: "450",
     display: "STD",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3126,7 +3125,7 @@ export const ServiceTypeValueSet = {
   /**
    * STI
    */
-  service_type_STI: Coding.FactoryCreateStrict({
+  service_type_STI: Coding.FromStrict({
     code: "451",
     display: "STI",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3134,7 +3133,7 @@ export const ServiceTypeValueSet = {
   /**
    * Stillbirth
    */
-  service_type_Stillbirth: Coding.FactoryCreateStrict({
+  service_type_Stillbirth: Coding.FromStrict({
     code: "452",
     display: "Stillbirth",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3142,7 +3141,7 @@ export const ServiceTypeValueSet = {
   /**
    * Stomal Care
    */
-  service_type_StomalCare: Coding.FactoryCreateStrict({
+  service_type_StomalCare: Coding.FromStrict({
     code: "453",
     display: "Stomal Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3150,7 +3149,7 @@ export const ServiceTypeValueSet = {
   /**
    * Stroke
    */
-  service_type_Stroke: Coding.FactoryCreateStrict({
+  service_type_Stroke: Coding.FromStrict({
     code: "454",
     display: "Stroke",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3158,7 +3157,7 @@ export const ServiceTypeValueSet = {
   /**
    * Substance Abuse
    */
-  service_type_SubstanceAbuse: Coding.FactoryCreateStrict({
+  service_type_SubstanceAbuse: Coding.FromStrict({
     code: "455",
     display: "Substance Abuse",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3166,7 +3165,7 @@ export const ServiceTypeValueSet = {
   /**
    * Support
    */
-  service_type_Support: Coding.FactoryCreateStrict({
+  service_type_Support: Coding.FromStrict({
     code: "456",
     display: "Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3174,7 +3173,7 @@ export const ServiceTypeValueSet = {
   /**
    * Syringes
    */
-  service_type_Syringes: Coding.FactoryCreateStrict({
+  service_type_Syringes: Coding.FromStrict({
     code: "457",
     display: "Syringes",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3182,7 +3181,7 @@ export const ServiceTypeValueSet = {
   /**
    * Teeth
    */
-  service_type_Teeth: Coding.FactoryCreateStrict({
+  service_type_Teeth: Coding.FromStrict({
     code: "458",
     display: "Teeth",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3190,7 +3189,7 @@ export const ServiceTypeValueSet = {
   /**
    * Tenancy Advice
    */
-  service_type_TenancyAdvice: Coding.FactoryCreateStrict({
+  service_type_TenancyAdvice: Coding.FromStrict({
     code: "459",
     display: "Tenancy Advice",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3198,7 +3197,7 @@ export const ServiceTypeValueSet = {
   /**
    * Child protection/child abuse report
    */
-  service_type_ChildProtectionChildAbuseReport: Coding.FactoryCreateStrict({
+  service_type_ChildProtectionChildAbuseReport: Coding.FromStrict({
     code: "46",
     display: "Child Protection/Child Abuse Report",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3206,7 +3205,7 @@ export const ServiceTypeValueSet = {
   /**
    * Terminal Illness
    */
-  service_type_TerminalIllness: Coding.FactoryCreateStrict({
+  service_type_TerminalIllness: Coding.FromStrict({
     code: "460",
     display: "Terminal Illness",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3214,7 +3213,7 @@ export const ServiceTypeValueSet = {
   /**
    * Therapy
    */
-  service_type_Therapy: Coding.FactoryCreateStrict({
+  service_type_Therapy: Coding.FromStrict({
     code: "461",
     display: "Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3222,7 +3221,7 @@ export const ServiceTypeValueSet = {
   /**
    * Transcription
    */
-  service_type_Transcription: Coding.FactoryCreateStrict({
+  service_type_Transcription: Coding.FromStrict({
     code: "462",
     display: "Transcription",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3230,7 +3229,7 @@ export const ServiceTypeValueSet = {
   /**
    * Translating Services
    */
-  service_type_TranslatingServices: Coding.FactoryCreateStrict({
+  service_type_TranslatingServices: Coding.FromStrict({
     code: "463",
     display: "Translating Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3238,7 +3237,7 @@ export const ServiceTypeValueSet = {
   /**
    * Translator
    */
-  service_type_Translator: Coding.FactoryCreateStrict({
+  service_type_Translator: Coding.FromStrict({
     code: "464",
     display: "Translator",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3246,7 +3245,7 @@ export const ServiceTypeValueSet = {
   /**
    * Transport
    */
-  service_type_Transport: Coding.FactoryCreateStrict({
+  service_type_Transport: Coding.FromStrict({
     code: "465",
     display: "Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3254,7 +3253,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vertebrae
    */
-  service_type_Vertebrae: Coding.FactoryCreateStrict({
+  service_type_Vertebrae: Coding.FromStrict({
     code: "466",
     display: "Vertebrae",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3262,7 +3261,7 @@ export const ServiceTypeValueSet = {
   /**
    * Violence
    */
-  service_type_Violence: Coding.FactoryCreateStrict({
+  service_type_Violence: Coding.FromStrict({
     code: "467",
     display: "Violence",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3270,7 +3269,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vocational Guidance
    */
-  service_type_VocationalGuidance: Coding.FactoryCreateStrict({
+  service_type_VocationalGuidance: Coding.FromStrict({
     code: "468",
     display: "Vocational Guidance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3278,7 +3277,7 @@ export const ServiceTypeValueSet = {
   /**
    * Weight
    */
-  service_type_Weight: Coding.FactoryCreateStrict({
+  service_type_Weight: Coding.FromStrict({
     code: "469",
     display: "Weight",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3286,7 +3285,7 @@ export const ServiceTypeValueSet = {
   /**
    * Foster care
    */
-  service_type_FosterCare: Coding.FactoryCreateStrict({
+  service_type_FosterCare: Coding.FromStrict({
     code: "47",
     display: "Foster Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3294,7 +3293,7 @@ export const ServiceTypeValueSet = {
   /**
    * Welfare Assistance
    */
-  service_type_WelfareAssistance: Coding.FactoryCreateStrict({
+  service_type_WelfareAssistance: Coding.FromStrict({
     code: "470",
     display: "Welfare Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3302,7 +3301,7 @@ export const ServiceTypeValueSet = {
   /**
    * Welfare Counselling
    */
-  service_type_WelfareCounselling: Coding.FactoryCreateStrict({
+  service_type_WelfareCounselling: Coding.FromStrict({
     code: "471",
     display: "Welfare Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3310,7 +3309,7 @@ export const ServiceTypeValueSet = {
   /**
    * Wheelchairs
    */
-  service_type_Wheelchairs: Coding.FactoryCreateStrict({
+  service_type_Wheelchairs: Coding.FromStrict({
     code: "472",
     display: "Wheelchairs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3318,7 +3317,7 @@ export const ServiceTypeValueSet = {
   /**
    * Wound Management
    */
-  service_type_WoundManagement: Coding.FactoryCreateStrict({
+  service_type_WoundManagement: Coding.FromStrict({
     code: "473",
     display: "Wound Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3326,7 +3325,7 @@ export const ServiceTypeValueSet = {
   /**
    * Young People At Risk
    */
-  service_type_YoungPeopleAtRisk: Coding.FactoryCreateStrict({
+  service_type_YoungPeopleAtRisk: Coding.FromStrict({
     code: "474",
     display: "Young People At Risk",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3334,7 +3333,7 @@ export const ServiceTypeValueSet = {
   /**
    * Further Description - Community Health Care
    */
-  service_type_FurtherDescCommunityHealthCare: Coding.FactoryCreateStrict({
+  service_type_FurtherDescCommunityHealthCare: Coding.FromStrict({
     code: "475",
     display: "Further Desc. - Community Health Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3342,7 +3341,7 @@ export const ServiceTypeValueSet = {
   /**
    * Library
    */
-  service_type_Library: Coding.FactoryCreateStrict({
+  service_type_Library: Coding.FromStrict({
     code: "476",
     display: "Library",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3350,7 +3349,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Hours
    */
-  service_type_CommunityHours: Coding.FactoryCreateStrict({
+  service_type_CommunityHours: Coding.FromStrict({
     code: "477",
     display: "Community Hours",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3358,7 +3357,7 @@ export const ServiceTypeValueSet = {
   /**
    * Further Description - Specialist Medical
    */
-  service_type_FurtherDescSpecialistMedical: Coding.FactoryCreateStrict({
+  service_type_FurtherDescSpecialistMedical: Coding.FromStrict({
     code: "478",
     display: "Further Desc. - Specialist Medical",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3366,7 +3365,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hepatology
    */
-  service_type_Hepatology: Coding.FactoryCreateStrict({
+  service_type_Hepatology: Coding.FromStrict({
     code: "479",
     display: "Hepatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3374,7 +3373,7 @@ export const ServiceTypeValueSet = {
   /**
    * Residential/ out of home care
    */
-  service_type_ResidentialOutOfHomeCare: Coding.FactoryCreateStrict({
+  service_type_ResidentialOutOfHomeCare: Coding.FromStrict({
     code: "48",
     display: "Residential/Out-of-Home Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3382,7 +3381,7 @@ export const ServiceTypeValueSet = {
   /**
    * Gastroenterology
    */
-  service_type_Gastroenterology: Coding.FactoryCreateStrict({
+  service_type_Gastroenterology: Coding.FromStrict({
     code: "480",
     display: "Gastroenterology ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3390,7 +3389,7 @@ export const ServiceTypeValueSet = {
   /**
    * Gynaecology
    */
-  service_type_Gynaecology: Coding.FactoryCreateStrict({
+  service_type_Gynaecology: Coding.FromStrict({
     code: "481",
     display: "Gynaecology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3398,7 +3397,7 @@ export const ServiceTypeValueSet = {
   /**
    * Obstetrics
    */
-  service_type_Obstetrics: Coding.FactoryCreateStrict({
+  service_type_Obstetrics: Coding.FromStrict({
     code: "482",
     display: "Obstetrics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3406,7 +3405,7 @@ export const ServiceTypeValueSet = {
   /**
    * Further Description - Specialist Surgical
    */
-  service_type_FurtherDescSpecialistSurgical: Coding.FactoryCreateStrict({
+  service_type_FurtherDescSpecialistSurgical: Coding.FromStrict({
     code: "483",
     display: "Further Desc. - Specialist Surgical",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3414,7 +3413,7 @@ export const ServiceTypeValueSet = {
   /**
    * Placement Protection
    */
-  service_type_PlacementProtection: Coding.FactoryCreateStrict({
+  service_type_PlacementProtection: Coding.FromStrict({
     code: "484",
     display: "Placement Protection",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3422,7 +3421,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family Violence
    */
-  service_type_FamilyViolence: Coding.FactoryCreateStrict({
+  service_type_FamilyViolence: Coding.FromStrict({
     code: "485",
     display: "Family Violence",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3430,7 +3429,7 @@ export const ServiceTypeValueSet = {
   /**
    * Integrated Family Services
    */
-  service_type_IntegratedFamilyServices: Coding.FactoryCreateStrict({
+  service_type_IntegratedFamilyServices: Coding.FromStrict({
     code: "486",
     display: "Integrated Family Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3438,7 +3437,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diabetes Educator
    */
-  service_type_DiabetesEducator: Coding.FactoryCreateStrict({
+  service_type_DiabetesEducator: Coding.FromStrict({
     code: "488",
     display: "Diabetes Educator",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3446,7 +3445,7 @@ export const ServiceTypeValueSet = {
   /**
    * Kinship Care
    */
-  service_type_KinshipCare: Coding.FactoryCreateStrict({
+  service_type_KinshipCare: Coding.FromStrict({
     code: "489",
     display: "Kinship Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3454,7 +3453,7 @@ export const ServiceTypeValueSet = {
   /**
    * Support for young people leaving care
    */
-  service_type_SupportYoungPeopleLeavingCare: Coding.FactoryCreateStrict({
+  service_type_SupportYoungPeopleLeavingCare: Coding.FromStrict({
     code: "49",
     display: "Support - Young People Leaving Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3462,7 +3461,7 @@ export const ServiceTypeValueSet = {
   /**
    * General Mental Health Services
    */
-  service_type_GeneralMentalHealthServices: Coding.FactoryCreateStrict({
+  service_type_GeneralMentalHealthServices: Coding.FromStrict({
     code: "490",
     display: "General Mental Health Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3470,7 +3469,7 @@ export const ServiceTypeValueSet = {
   /**
    * Exercise Physiology
    */
-  service_type_ExercisePhysiology: Coding.FactoryCreateStrict({
+  service_type_ExercisePhysiology: Coding.FromStrict({
     code: "491",
     display: "Exercise Physiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3478,7 +3477,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medical Research
    */
-  service_type_MedicalResearch: Coding.FactoryCreateStrict({
+  service_type_MedicalResearch: Coding.FromStrict({
     code: "492",
     display: "Medical Research",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3486,7 +3485,7 @@ export const ServiceTypeValueSet = {
   /**
    * Youth
    */
-  service_type_Youth: Coding.FactoryCreateStrict({
+  service_type_Youth: Coding.FromStrict({
     code: "493",
     display: "Youth",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3494,7 +3493,7 @@ export const ServiceTypeValueSet = {
   /**
    * Youth Services
    */
-  service_type_YouthServices: Coding.FactoryCreateStrict({
+  service_type_YouthServices: Coding.FromStrict({
     code: "494",
     display: "Youth Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3502,7 +3501,7 @@ export const ServiceTypeValueSet = {
   /**
    * Youth Health
    */
-  service_type_YouthHealth: Coding.FactoryCreateStrict({
+  service_type_YouthHealth: Coding.FromStrict({
     code: "495",
     display: "Youth Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3510,7 +3509,7 @@ export const ServiceTypeValueSet = {
   /**
    * Child and Family Services
    */
-  service_type_ChildAndFamilySer: Coding.FactoryCreateStrict({
+  service_type_ChildAndFamilySer: Coding.FromStrict({
     code: "496",
     display: "Child and Family Ser",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3518,7 +3517,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home Visits
    */
-  service_type_HomeVisits: Coding.FactoryCreateStrict({
+  service_type_HomeVisits: Coding.FromStrict({
     code: "497",
     display: "Home Visits",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3526,7 +3525,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mobile Services
    */
-  service_type_MobileServices: Coding.FactoryCreateStrict({
+  service_type_MobileServices: Coding.FromStrict({
     code: "498",
     display: "Mobile Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3534,7 +3533,7 @@ export const ServiceTypeValueSet = {
   /**
    * Case management for older persons
    */
-  service_type_CaseManagementForOlderPersons: Coding.FactoryCreateStrict({
+  service_type_CaseManagementForOlderPersons: Coding.FromStrict({
     code: "5",
     display: "Case Management for Older Persons",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3542,7 +3541,7 @@ export const ServiceTypeValueSet = {
   /**
    * Audiology
    */
-  service_type_Audiology: Coding.FactoryCreateStrict({
+  service_type_Audiology: Coding.FromStrict({
     code: "50",
     display: "Audiology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3550,7 +3549,7 @@ export const ServiceTypeValueSet = {
   /**
    * Before and/or After School Care
    */
-  service_type_BeforeAndOrAfter: Coding.FactoryCreateStrict({
+  service_type_BeforeAndOrAfter: Coding.FromStrict({
     code: "500",
     display: "Before and/or After ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3558,7 +3557,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cancer Services
    */
-  service_type_CancerServices: Coding.FactoryCreateStrict({
+  service_type_CancerServices: Coding.FromStrict({
     code: "501",
     display: "Cancer Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3566,7 +3565,7 @@ export const ServiceTypeValueSet = {
   /**
    * Integrated Cancer Services
    */
-  service_type_IntegratedCancerSe: Coding.FactoryCreateStrict({
+  service_type_IntegratedCancerSe: Coding.FromStrict({
     code: "502",
     display: "Integrated Cancer Se",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3574,7 +3573,7 @@ export const ServiceTypeValueSet = {
   /**
    * Multidisciplinary Services
    */
-  service_type_MultidisciplinarySe: Coding.FactoryCreateStrict({
+  service_type_MultidisciplinarySe: Coding.FromStrict({
     code: "503",
     display: "Multidisciplinary Se",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3582,7 +3581,7 @@ export const ServiceTypeValueSet = {
   /**
    * Multidisciplinary Cancer Services
    */
-  service_type_MultidisciplinaryCa: Coding.FactoryCreateStrict({
+  service_type_MultidisciplinaryCa: Coding.FromStrict({
     code: "504",
     display: "Multidisciplinary Ca",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3590,7 +3589,7 @@ export const ServiceTypeValueSet = {
   /**
    * Meetings
    */
-  service_type_Meetings: Coding.FactoryCreateStrict({
+  service_type_Meetings: Coding.FromStrict({
     code: "505",
     display: "Meetings",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3598,7 +3597,7 @@ export const ServiceTypeValueSet = {
   /**
    * Blood pressure monitoring
    */
-  service_type_BloodPressureMonit: Coding.FactoryCreateStrict({
+  service_type_BloodPressureMonit: Coding.FromStrict({
     code: "506",
     display: "Blood pressure monit",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3606,7 +3605,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dose administration aid
    */
-  service_type_DoseAdministration: Coding.FactoryCreateStrict({
+  service_type_DoseAdministration: Coding.FromStrict({
     code: "507",
     display: "Dose administration ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3614,7 +3613,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medical Equipment Hire
    */
-  service_type_MedicalEquipmentHi: Coding.FactoryCreateStrict({
+  service_type_MedicalEquipmentHi: Coding.FromStrict({
     code: "508",
     display: "Medical Equipment Hi",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3622,7 +3621,7 @@ export const ServiceTypeValueSet = {
   /**
    * Parenting &amp; family support/education
    */
-  service_type_ParentingFamilySupportEducation_2: Coding.FactoryCreateStrict({
+  service_type_ParentingFamilySupportEducation_2: Coding.FromStrict({
     code: "509",
     display: "Parenting/Family Support/Education",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3630,7 +3629,7 @@ export const ServiceTypeValueSet = {
   /**
    * Blood donation
    */
-  service_type_BloodDonation: Coding.FactoryCreateStrict({
+  service_type_BloodDonation: Coding.FromStrict({
     code: "51",
     display: "Blood Donation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3638,7 +3637,7 @@ export const ServiceTypeValueSet = {
   /**
    * Deputising Service
    */
-  service_type_DeputisingService: Coding.FactoryCreateStrict({
+  service_type_DeputisingService: Coding.FromStrict({
     code: "510",
     display: "Deputising Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3646,7 +3645,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cancer Support Groups
    */
-  service_type_CancerSupportGroups: Coding.FactoryCreateStrict({
+  service_type_CancerSupportGroups: Coding.FromStrict({
     code: "513",
     display: "Cancer Support Groups",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3654,7 +3653,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Cancer Services
    */
-  service_type_CommunityCancerServices: Coding.FactoryCreateStrict({
+  service_type_CommunityCancerServices: Coding.FromStrict({
     code: "514",
     display: "Community Cancer Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3662,7 +3661,7 @@ export const ServiceTypeValueSet = {
   /**
    * Chiropractic
    */
-  service_type_Chiropractic: Coding.FactoryCreateStrict({
+  service_type_Chiropractic: Coding.FromStrict({
     code: "52",
     display: "Chiropractic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3670,7 +3669,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dietetics
    */
-  service_type_Dietetics: Coding.FactoryCreateStrict({
+  service_type_Dietetics: Coding.FromStrict({
     code: "53",
     display: "Dietetics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3678,7 +3677,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability Care Transport
    */
-  service_type_DisabilityCareTransport: Coding.FactoryCreateStrict({
+  service_type_DisabilityCareTransport: Coding.FromStrict({
     code: "530",
     display: "Disability Care Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3686,7 +3685,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aged Care Transport
    */
-  service_type_AgedCareTransport: Coding.FactoryCreateStrict({
+  service_type_AgedCareTransport: Coding.FromStrict({
     code: "531",
     display: "Aged Care Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3694,7 +3693,7 @@ export const ServiceTypeValueSet = {
   /**
    * Diabetes Education service
    */
-  service_type_DiabetesEducationS: Coding.FactoryCreateStrict({
+  service_type_DiabetesEducationS: Coding.FromStrict({
     code: "532",
     display: "Diabetes Education s",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3702,7 +3701,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cardiac Rehabilitation Service 
    */
-  service_type_CardiacRehabilitati: Coding.FactoryCreateStrict({
+  service_type_CardiacRehabilitati: Coding.FromStrict({
     code: "533",
     display: "Cardiac Rehabilitati",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3710,7 +3709,7 @@ export const ServiceTypeValueSet = {
   /**
    * Young Adult Diabetes services (YADS)
    */
-  service_type_YoungAdultDiabetes: Coding.FactoryCreateStrict({
+  service_type_YoungAdultDiabetes: Coding.FromStrict({
     code: "534",
     display: "Young Adult Diabetes",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3718,7 +3717,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pulmonary Rehabilitation Service
    */
-  service_type_PulmonaryRehabilita: Coding.FactoryCreateStrict({
+  service_type_PulmonaryRehabilita: Coding.FromStrict({
     code: "535",
     display: "Pulmonary Rehabilita",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3726,7 +3725,7 @@ export const ServiceTypeValueSet = {
   /**
    * Art therapy
    */
-  service_type_ArtTherapy: Coding.FactoryCreateStrict({
+  service_type_ArtTherapy: Coding.FromStrict({
     code: "536",
     display: "Art therapy ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3734,7 +3733,7 @@ export const ServiceTypeValueSet = {
   /**
    * Medication Reviews
    */
-  service_type_MedicationReviews: Coding.FactoryCreateStrict({
+  service_type_MedicationReviews: Coding.FromStrict({
     code: "537",
     display: "Medication Reviews",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3742,7 +3741,7 @@ export const ServiceTypeValueSet = {
   /**
    * Telephone Counselling
    */
-  service_type_TelephoneCounselling: Coding.FactoryCreateStrict({
+  service_type_TelephoneCounselling: Coding.FromStrict({
     code: "538",
     display: "Telephone Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3750,7 +3749,7 @@ export const ServiceTypeValueSet = {
   /**
    * Telephone Help Line
    */
-  service_type_TelephoneHelpLine: Coding.FactoryCreateStrict({
+  service_type_TelephoneHelpLine: Coding.FromStrict({
     code: "539",
     display: "Telephone Help Line",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3758,7 +3757,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family planning
    */
-  service_type_FamilyPlanning: Coding.FactoryCreateStrict({
+  service_type_FamilyPlanning: Coding.FromStrict({
     code: "54",
     display: "Family Planning",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3766,7 +3765,7 @@ export const ServiceTypeValueSet = {
   /**
    * Online Service
    */
-  service_type_OnlineService: Coding.FactoryCreateStrict({
+  service_type_OnlineService: Coding.FromStrict({
     code: "540",
     display: "Online Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3774,7 +3773,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis - Mental Health
    */
-  service_type_CrisisMentalHealth: Coding.FactoryCreateStrict({
+  service_type_CrisisMentalHealth: Coding.FromStrict({
     code: "541",
     display: "Crisis - Mental Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3782,7 +3781,7 @@ export const ServiceTypeValueSet = {
   /**
    * Youth Crisis
    */
-  service_type_YouthCrisis: Coding.FactoryCreateStrict({
+  service_type_YouthCrisis: Coding.FromStrict({
     code: "542",
     display: "Youth Crisis",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3790,7 +3789,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexual Assault
    */
-  service_type_SexualAssault: Coding.FactoryCreateStrict({
+  service_type_SexualAssault: Coding.FromStrict({
     code: "543",
     display: "Sexual Assault",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3798,7 +3797,7 @@ export const ServiceTypeValueSet = {
   /**
    * GPAH Other
    */
-  service_type_GPAHOther: Coding.FactoryCreateStrict({
+  service_type_GPAHOther: Coding.FromStrict({
     code: "544",
     display: "GPAH Other",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3806,7 +3805,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Dermatology
    */
-  service_type_PaediatricDermatology: Coding.FactoryCreateStrict({
+  service_type_PaediatricDermatology: Coding.FromStrict({
     code: "545",
     display: "Paediatric Dermatology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3814,7 +3813,7 @@ export const ServiceTypeValueSet = {
   /**
    * Veterans Services
    */
-  service_type_VeteransServices: Coding.FactoryCreateStrict({
+  service_type_VeteransServices: Coding.FromStrict({
     code: "546",
     display: "Veterans Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3822,7 +3821,7 @@ export const ServiceTypeValueSet = {
   /**
    * Veterans
    */
-  service_type_Veterans: Coding.FactoryCreateStrict({
+  service_type_Veterans: Coding.FromStrict({
     code: "547",
     display: "Veterans",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3830,7 +3829,7 @@ export const ServiceTypeValueSet = {
   /**
    * Food Relief/food/meals
    */
-  service_type_FoodReliefFoodMeals: Coding.FactoryCreateStrict({
+  service_type_FoodReliefFoodMeals: Coding.FromStrict({
     code: "548",
     display: "Food Relief/Food/Meals",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3838,7 +3837,7 @@ export const ServiceTypeValueSet = {
   /**
    * Health advocacy/Liaison service
    */
-  service_type_HealthAdvocacyLiaisonService: Coding.FactoryCreateStrict({
+  service_type_HealthAdvocacyLiaisonService: Coding.FromStrict({
     code: "55",
     display: "Health Advocacy/Liaison Service",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3846,7 +3845,7 @@ export const ServiceTypeValueSet = {
   /**
    * Dementia Care
    */
-  service_type_DementiaCare: Coding.FactoryCreateStrict({
+  service_type_DementiaCare: Coding.FromStrict({
     code: "550",
     display: "Dementia Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3854,7 +3853,7 @@ export const ServiceTypeValueSet = {
   /**
    * Alzheimer
    */
-  service_type_Alzheimer: Coding.FactoryCreateStrict({
+  service_type_Alzheimer: Coding.FromStrict({
     code: "551",
     display: "Alzheimer",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3862,7 +3861,7 @@ export const ServiceTypeValueSet = {
   /**
    * Drug and/or alcohol support groups
    */
-  service_type_DrugAndOrAlcoholSupportGroups: Coding.FactoryCreateStrict({
+  service_type_DrugAndOrAlcoholSupportGroups: Coding.FromStrict({
     code: "552",
     display: "Drug and/or Alcohol Support Groups",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3870,7 +3869,7 @@ export const ServiceTypeValueSet = {
   /**
    * One on One Support/Mentoring/Coaching
    */
-  service_type_VAL1On1SupportMentoringCoaching: Coding.FactoryCreateStrict({
+  service_type_VAL1On1SupportMentoringCoaching: Coding.FromStrict({
     code: "553",
     display: "1-on-1 Support /Mentoring /Coaching",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3878,7 +3877,7 @@ export const ServiceTypeValueSet = {
   /**
    * Chronic Disease Management
    */
-  service_type_ChronicDiseaseManagement: Coding.FactoryCreateStrict({
+  service_type_ChronicDiseaseManagement: Coding.FromStrict({
     code: "554",
     display: "Chronic Disease Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3886,7 +3885,7 @@ export const ServiceTypeValueSet = {
   /**
    * Liaison Services
    */
-  service_type_LiaisonServices: Coding.FactoryCreateStrict({
+  service_type_LiaisonServices: Coding.FromStrict({
     code: "555",
     display: "Liaison Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3894,7 +3893,7 @@ export const ServiceTypeValueSet = {
   /**
    * Walk in Centre / non emergency
    */
-  service_type_WalkInCentreNonEmergency: Coding.FactoryCreateStrict({
+  service_type_WalkInCentreNonEmergency: Coding.FromStrict({
     code: "556",
     display: "Walk-in Centre /Non-Emergency",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3902,7 +3901,7 @@ export const ServiceTypeValueSet = {
   /**
    * Inpatients
    */
-  service_type_Inpatients: Coding.FactoryCreateStrict({
+  service_type_Inpatients: Coding.FromStrict({
     code: "557",
     display: "Inpatients",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3910,7 +3909,7 @@ export const ServiceTypeValueSet = {
   /**
    * Spiritual Counselling
    */
-  service_type_SpiritualCounselling: Coding.FactoryCreateStrict({
+  service_type_SpiritualCounselling: Coding.FromStrict({
     code: "558",
     display: "Spiritual Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3918,7 +3917,7 @@ export const ServiceTypeValueSet = {
   /**
    * Women's Health
    */
-  service_type_WomenQuoteSHealth: Coding.FactoryCreateStrict({
+  service_type_WomenQuoteSHealth: Coding.FromStrict({
     code: "559",
     display: "Women's Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3926,7 +3925,7 @@ export const ServiceTypeValueSet = {
   /**
    * Health information/referral
    */
-  service_type_HealthInformationReferral: Coding.FactoryCreateStrict({
+  service_type_HealthInformationReferral: Coding.FromStrict({
     code: "56",
     display: "Health Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3934,7 +3933,7 @@ export const ServiceTypeValueSet = {
   /**
    * Men's Health
    */
-  service_type_MenQuoteSHealth: Coding.FactoryCreateStrict({
+  service_type_MenQuoteSHealth: Coding.FromStrict({
     code: "560",
     display: "Men's Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3942,7 +3941,7 @@ export const ServiceTypeValueSet = {
   /**
    * Health education/Health awareness program
    */
-  service_type_HealthEducationAwarenessProgram: Coding.FactoryCreateStrict({
+  service_type_HealthEducationAwarenessProgram: Coding.FromStrict({
     code: "561",
     display: "Health Education/Awareness Program",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3950,7 +3949,7 @@ export const ServiceTypeValueSet = {
   /**
    * Test Message
    */
-  service_type_TestMessage: Coding.FactoryCreateStrict({
+  service_type_TestMessage: Coding.FromStrict({
     code: "562",
     display: "Test Message",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3958,7 +3957,7 @@ export const ServiceTypeValueSet = {
   /**
    * Remedial Massage
    */
-  service_type_RemedialMassage: Coding.FactoryCreateStrict({
+  service_type_RemedialMassage: Coding.FromStrict({
     code: "563",
     display: "Remedial Massage",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3966,7 +3965,7 @@ export const ServiceTypeValueSet = {
   /**
    * Adolescent Mental Health Services
    */
-  service_type_AdolescentMentalHealthServices: Coding.FactoryCreateStrict({
+  service_type_AdolescentMentalHealthServices: Coding.FromStrict({
     code: "564",
     display: "Adolescent Mental Health Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3974,7 +3973,7 @@ export const ServiceTypeValueSet = {
   /**
    * Youth drop in/assistance/support
    */
-  service_type_YouthDropInAssistanceSupport: Coding.FactoryCreateStrict({
+  service_type_YouthDropInAssistanceSupport: Coding.FromStrict({
     code: "565",
     display: "Youth Drop In/Assistance/Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3982,7 +3981,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aboriginal Health Worker
    */
-  service_type_AboriginalHealthWorker: Coding.FactoryCreateStrict({
+  service_type_AboriginalHealthWorker: Coding.FromStrict({
     code: "566",
     display: "Aboriginal Health Worker",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3990,7 +3989,7 @@ export const ServiceTypeValueSet = {
   /**
    * Women's Health Clinic
    */
-  service_type_WomenQuoteSHealthClinic: Coding.FactoryCreateStrict({
+  service_type_WomenQuoteSHealthClinic: Coding.FromStrict({
     code: "567",
     display: "Women's Health Clinic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -3998,7 +3997,7 @@ export const ServiceTypeValueSet = {
   /**
    * Men's Health Clinic 
    */
-  service_type_MenQuoteSHealthClinic: Coding.FactoryCreateStrict({
+  service_type_MenQuoteSHealthClinic: Coding.FromStrict({
     code: "568",
     display: "Men's Health Clinic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4006,7 +4005,7 @@ export const ServiceTypeValueSet = {
   /**
    * Migrant Health Clinic
    */
-  service_type_MigrantHealthClinic: Coding.FactoryCreateStrict({
+  service_type_MigrantHealthClinic: Coding.FromStrict({
     code: "569",
     display: "Migrant Health Clinic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4014,7 +4013,7 @@ export const ServiceTypeValueSet = {
   /**
    * Immunization
    */
-  service_type_Immunization: Coding.FactoryCreateStrict({
+  service_type_Immunization: Coding.FromStrict({
     code: "57",
     display: "Immunization",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4022,7 +4021,7 @@ export const ServiceTypeValueSet = {
   /**
    * Refugee Health Clinic
    */
-  service_type_RefugeeHealthClinic: Coding.FactoryCreateStrict({
+  service_type_RefugeeHealthClinic: Coding.FromStrict({
     code: "570",
     display: "Refugee Health Clinic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4030,7 +4029,7 @@ export const ServiceTypeValueSet = {
   /**
    * Aboriginal Health Clinic
    */
-  service_type_AboriginalHealthClinic: Coding.FactoryCreateStrict({
+  service_type_AboriginalHealthClinic: Coding.FromStrict({
     code: "571",
     display: "Aboriginal Health Clinic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4038,7 +4037,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nurse Practitioner lead Clinic/s
    */
-  service_type_NursePractitionerLeadClinicS: Coding.FactoryCreateStrict({
+  service_type_NursePractitionerLeadClinicS: Coding.FromStrict({
     code: "572",
     display: "Nurse Practitioner Lead Clinic/s",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4046,7 +4045,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nurse lead Clinic/s
    */
-  service_type_NurseLeadClinicS: Coding.FactoryCreateStrict({
+  service_type_NurseLeadClinicS: Coding.FromStrict({
     code: "573",
     display: "Nurse Lead Clinic/s",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4054,7 +4053,7 @@ export const ServiceTypeValueSet = {
   /**
    * Culturally tailored support groups
    */
-  service_type_CulturallyTailoredSupportGroups: Coding.FactoryCreateStrict({
+  service_type_CulturallyTailoredSupportGroups: Coding.FromStrict({
     code: "574",
     display: "Culturally Tailored Support Groups",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4062,7 +4061,7 @@ export const ServiceTypeValueSet = {
   /**
    * Culturally tailored health promotion
    */
-  service_type_CulturallyTailoredHealthPromotion: Coding.FactoryCreateStrict({
+  service_type_CulturallyTailoredHealthPromotion: Coding.FromStrict({
     code: "575",
     display: "Culturally Tailored Health Promotion",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4070,7 +4069,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rehabilitation
    */
-  service_type_Rehabilitation: Coding.FactoryCreateStrict({
+  service_type_Rehabilitation: Coding.FromStrict({
     code: "576",
     display: "Rehabilitation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4078,7 +4077,7 @@ export const ServiceTypeValueSet = {
   /**
    * Education information/referral
    */
-  service_type_EducationInformationReferral: Coding.FactoryCreateStrict({
+  service_type_EducationInformationReferral: Coding.FromStrict({
     code: "577",
     display: "Education Information/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4086,7 +4085,7 @@ export const ServiceTypeValueSet = {
   /**
    * Maternal &amp; child health
    */
-  service_type_MaternalAndChildHealth: Coding.FactoryCreateStrict({
+  service_type_MaternalAndChildHealth: Coding.FromStrict({
     code: "58",
     display: "Maternal & Child Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4094,7 +4093,7 @@ export const ServiceTypeValueSet = {
   /**
    * Social Work
    */
-  service_type_SocialWork: Coding.FactoryCreateStrict({
+  service_type_SocialWork: Coding.FromStrict({
     code: "580",
     display: "Social Work",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4102,7 +4101,7 @@ export const ServiceTypeValueSet = {
   /**
    * Haematology
    */
-  service_type_Haematology: Coding.FactoryCreateStrict({
+  service_type_Haematology: Coding.FromStrict({
     code: "581",
     display: "Haematology",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4110,7 +4109,7 @@ export const ServiceTypeValueSet = {
   /**
    * Maternity Shared Care
    */
-  service_type_MaternitySharedCar: Coding.FactoryCreateStrict({
+  service_type_MaternitySharedCar: Coding.FromStrict({
     code: "582",
     display: "Maternity Shared Car",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4118,7 +4117,7 @@ export const ServiceTypeValueSet = {
   /**
    * Rehabilitation Service
    */
-  service_type_RehabilitationServi: Coding.FactoryCreateStrict({
+  service_type_RehabilitationServi: Coding.FromStrict({
     code: "583",
     display: "Rehabilitation Servi",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4126,7 +4125,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cranio-Sacral Therapy
    */
-  service_type_CranioSacralTherapy: Coding.FactoryCreateStrict({
+  service_type_CranioSacralTherapy: Coding.FromStrict({
     code: "584",
     display: "Cranio-sacral Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4134,7 +4133,7 @@ export const ServiceTypeValueSet = {
   /**
    * Prosthetics &amp; Orthotics
    */
-  service_type_ProstheticsAndOrthotics: Coding.FactoryCreateStrict({
+  service_type_ProstheticsAndOrthotics: Coding.FromStrict({
     code: "585",
     display: "Prosthetics & Orthotics",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4142,7 +4141,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home Medicine Review
    */
-  service_type_HomeMedicineReview: Coding.FactoryCreateStrict({
+  service_type_HomeMedicineReview: Coding.FromStrict({
     code: "589",
     display: "Home Medicine Review",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4150,7 +4149,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nursing
    */
-  service_type_Nursing: Coding.FactoryCreateStrict({
+  service_type_Nursing: Coding.FromStrict({
     code: "59",
     display: "Nursing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4158,7 +4157,7 @@ export const ServiceTypeValueSet = {
   /**
    * GPAH - Medical
    */
-  service_type_GPAHMedical: Coding.FactoryCreateStrict({
+  service_type_GPAHMedical: Coding.FromStrict({
     code: "590",
     display: "GPAH - Medical",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4166,7 +4165,7 @@ export const ServiceTypeValueSet = {
   /**
    * Music Therapy
    */
-  service_type_MusicTherapy: Coding.FactoryCreateStrict({
+  service_type_MusicTherapy: Coding.FromStrict({
     code: "591",
     display: "Music Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4174,7 +4173,7 @@ export const ServiceTypeValueSet = {
   /**
    * Falls Prevention
    */
-  service_type_FallsPrevention: Coding.FactoryCreateStrict({
+  service_type_FallsPrevention: Coding.FromStrict({
     code: "593",
     display: "Falls Prevention",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4182,7 +4181,7 @@ export const ServiceTypeValueSet = {
   /**
    * Accommodation/Tenancy
    */
-  service_type_AccommodationTenancy: Coding.FactoryCreateStrict({
+  service_type_AccommodationTenancy: Coding.FromStrict({
     code: "599",
     display: "Accommodation/Tenancy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4190,7 +4189,7 @@ export const ServiceTypeValueSet = {
   /**
    * Delivered meals (meals on wheels)
    */
-  service_type_DeliveredMealsMealsOnWheels: Coding.FactoryCreateStrict({
+  service_type_DeliveredMealsMealsOnWheels: Coding.FromStrict({
     code: "6",
     display: "Delivered Meals (Meals On Wheels)",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4198,7 +4197,7 @@ export const ServiceTypeValueSet = {
   /**
    * Nutrition
    */
-  service_type_Nutrition: Coding.FactoryCreateStrict({
+  service_type_Nutrition: Coding.FromStrict({
     code: "60",
     display: "Nutrition",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4206,7 +4205,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assess-Skill, Ability, Needs
    */
-  service_type_AssessSkillAbilityNeeds: Coding.FactoryCreateStrict({
+  service_type_AssessSkillAbilityNeeds: Coding.FromStrict({
     code: "600",
     display: "Assess-Skill, Ability, Needs",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4214,7 +4213,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist Access/Maintain Employ
    */
-  service_type_AssistAccessMaintainEmploy: Coding.FactoryCreateStrict({
+  service_type_AssistAccessMaintainEmploy: Coding.FromStrict({
     code: "601",
     display: "Assist Access/Maintain Employ",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4222,7 +4221,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist Prod-Pers Care/Safety
    */
-  service_type_AssistProdPersCareSafety: Coding.FactoryCreateStrict({
+  service_type_AssistProdPersCareSafety: Coding.FromStrict({
     code: "602",
     display: "Assist Prod-Pers Care/Safety",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4230,7 +4229,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist-Integrate School/Ed
    */
-  service_type_AssistIntegrateSchoolEd: Coding.FactoryCreateStrict({
+  service_type_AssistIntegrateSchoolEd: Coding.FromStrict({
     code: "603",
     display: "Assist-Integrate School/Ed",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4238,7 +4237,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist-Life Stage, Transition
    */
-  service_type_AssistLifeStageTransition: Coding.FactoryCreateStrict({
+  service_type_AssistLifeStageTransition: Coding.FromStrict({
     code: "604",
     display: "Assist-Life Stage, Transition",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4246,7 +4245,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist-Personal Activities
    */
-  service_type_AssistPersonalActivities: Coding.FactoryCreateStrict({
+  service_type_AssistPersonalActivities: Coding.FromStrict({
     code: "605",
     display: "Assist-Personal Activities",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4254,7 +4253,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assist-Travel/Transport
    */
-  service_type_AssistTravelTransport: Coding.FactoryCreateStrict({
+  service_type_AssistTravelTransport: Coding.FromStrict({
     code: "606",
     display: "Assist-Travel/Transport",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4262,7 +4261,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assistive Equip-General Tasks
    */
-  service_type_AssistiveEquipGeneralTasks: Coding.FactoryCreateStrict({
+  service_type_AssistiveEquipGeneralTasks: Coding.FromStrict({
     code: "607",
     display: "Assistive Equip-General Tasks",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4270,7 +4269,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assistive Equip-Recreation
    */
-  service_type_AssistiveEquipRecreation: Coding.FactoryCreateStrict({
+  service_type_AssistiveEquipRecreation: Coding.FromStrict({
     code: "608",
     display: "Assistive Equip-Recreation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4278,7 +4277,7 @@ export const ServiceTypeValueSet = {
   /**
    * Assistive Prod-Household Task
    */
-  service_type_AssistiveProdHouseholdTask: Coding.FactoryCreateStrict({
+  service_type_AssistiveProdHouseholdTask: Coding.FromStrict({
     code: "609",
     display: "Assistive Prod-Household Task",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4286,7 +4285,7 @@ export const ServiceTypeValueSet = {
   /**
    * Occupational therapy
    */
-  service_type_OccupationalTherapy: Coding.FactoryCreateStrict({
+  service_type_OccupationalTherapy: Coding.FromStrict({
     code: "61",
     display: "Occupational Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4294,7 +4293,7 @@ export const ServiceTypeValueSet = {
   /**
    * Behavior Support
    */
-  service_type_BehaviorSupport: Coding.FactoryCreateStrict({
+  service_type_BehaviorSupport: Coding.FromStrict({
     code: "610",
     display: "Behavior Support",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4302,7 +4301,7 @@ export const ServiceTypeValueSet = {
   /**
    * Comms &amp; Info Equipment
    */
-  service_type_CommsAndInfoEquipment: Coding.FactoryCreateStrict({
+  service_type_CommsAndInfoEquipment: Coding.FromStrict({
     code: "611",
     display: "Comms & Info Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4310,7 +4309,7 @@ export const ServiceTypeValueSet = {
   /**
    * Community Nursing Care
    */
-  service_type_CommunityNursingCare: Coding.FactoryCreateStrict({
+  service_type_CommunityNursingCare: Coding.FromStrict({
     code: "612",
     display: "Community Nursing Care",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4318,7 +4317,7 @@ export const ServiceTypeValueSet = {
   /**
    * Daily Tasks/Shared Living
    */
-  service_type_DailyTasksSharedLiving: Coding.FactoryCreateStrict({
+  service_type_DailyTasksSharedLiving: Coding.FromStrict({
     code: "613",
     display: "Daily Tasks/Shared Living",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4326,7 +4325,7 @@ export const ServiceTypeValueSet = {
   /**
    * Development-Life Skills
    */
-  service_type_DevelopmentLifeSkills: Coding.FactoryCreateStrict({
+  service_type_DevelopmentLifeSkills: Coding.FromStrict({
     code: "614",
     display: "Development-Life Skills",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4334,7 +4333,7 @@ export const ServiceTypeValueSet = {
   /**
    * Early Childhood Supports
    */
-  service_type_EarlyChildhoodSupports: Coding.FactoryCreateStrict({
+  service_type_EarlyChildhoodSupports: Coding.FromStrict({
     code: "615",
     display: "Early Childhood Supports",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4342,7 +4341,7 @@ export const ServiceTypeValueSet = {
   /**
    * Equipment Special Assess Setup
    */
-  service_type_EquipmentSpecialAssessSetup: Coding.FactoryCreateStrict({
+  service_type_EquipmentSpecialAssessSetup: Coding.FromStrict({
     code: "616",
     display: "Equipment Special Assess Setup",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4350,7 +4349,7 @@ export const ServiceTypeValueSet = {
   /**
    * Hearing Equipment
    */
-  service_type_HearingEquipment: Coding.FactoryCreateStrict({
+  service_type_HearingEquipment: Coding.FromStrict({
     code: "617",
     display: "Hearing Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4358,7 +4357,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home Modification
    */
-  service_type_HomeModification: Coding.FactoryCreateStrict({
+  service_type_HomeModification: Coding.FromStrict({
     code: "618",
     display: "Home Modification",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4366,7 +4365,7 @@ export const ServiceTypeValueSet = {
   /**
    * Household Tasks
    */
-  service_type_HouseholdTasks: Coding.FactoryCreateStrict({
+  service_type_HouseholdTasks: Coding.FromStrict({
     code: "619",
     display: "Household Tasks",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4374,7 +4373,7 @@ export const ServiceTypeValueSet = {
   /**
    * Optometry
    */
-  service_type_Optometry: Coding.FactoryCreateStrict({
+  service_type_Optometry: Coding.FromStrict({
     code: "62",
     display: "Optometry",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4382,7 +4381,7 @@ export const ServiceTypeValueSet = {
   /**
    * Interpret/Translate
    */
-  service_type_InterpretTranslate: Coding.FactoryCreateStrict({
+  service_type_InterpretTranslate: Coding.FromStrict({
     code: "620",
     display: "Interpret/Translate",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4390,7 +4389,7 @@ export const ServiceTypeValueSet = {
   /**
    * Other Innovative Supports
    */
-  service_type_OtherInnovativeSupports: Coding.FactoryCreateStrict({
+  service_type_OtherInnovativeSupports: Coding.FromStrict({
     code: "621",
     display: "Other Innovative Supports",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4398,7 +4397,7 @@ export const ServiceTypeValueSet = {
   /**
    * Participate Community
    */
-  service_type_ParticipateCommunity: Coding.FactoryCreateStrict({
+  service_type_ParticipateCommunity: Coding.FromStrict({
     code: "622",
     display: "Participate Community",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4406,7 +4405,7 @@ export const ServiceTypeValueSet = {
   /**
    * Personal Mobility Equipment
    */
-  service_type_PersonalMobilityEquipment: Coding.FactoryCreateStrict({
+  service_type_PersonalMobilityEquipment: Coding.FromStrict({
     code: "623",
     display: "Personal Mobility Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4414,7 +4413,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physical Wellbeing
    */
-  service_type_PhysicalWellbeing: Coding.FactoryCreateStrict({
+  service_type_PhysicalWellbeing: Coding.FromStrict({
     code: "624",
     display: "Physical Wellbeing",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4422,7 +4421,7 @@ export const ServiceTypeValueSet = {
   /**
    * Plan Management
    */
-  service_type_PlanManagement: Coding.FactoryCreateStrict({
+  service_type_PlanManagement: Coding.FromStrict({
     code: "625",
     display: "Plan Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4430,7 +4429,7 @@ export const ServiceTypeValueSet = {
   /**
    * Therapeutic Supports
    */
-  service_type_TherapeuticSupports: Coding.FactoryCreateStrict({
+  service_type_TherapeuticSupports: Coding.FromStrict({
     code: "626",
     display: "Therapeutic Supports",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4438,7 +4437,7 @@ export const ServiceTypeValueSet = {
   /**
    * Training-Travel Independence
    */
-  service_type_TrainingTravelIndependence: Coding.FactoryCreateStrict({
+  service_type_TrainingTravelIndependence: Coding.FromStrict({
     code: "627",
     display: "Training-Travel Independence",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4446,7 +4445,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vehicle modifications
    */
-  service_type_VehicleModifications: Coding.FactoryCreateStrict({
+  service_type_VehicleModifications: Coding.FromStrict({
     code: "628",
     display: "Vehicle modifications",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4454,7 +4453,7 @@ export const ServiceTypeValueSet = {
   /**
    * Vision Equipment
    */
-  service_type_VisionEquipment: Coding.FactoryCreateStrict({
+  service_type_VisionEquipment: Coding.FromStrict({
     code: "629",
     display: "Vision Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4462,7 +4461,7 @@ export const ServiceTypeValueSet = {
   /**
    * Osteopathy
    */
-  service_type_Osteopathy: Coding.FactoryCreateStrict({
+  service_type_Osteopathy: Coding.FromStrict({
     code: "63",
     display: "Osteopathy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4470,7 +4469,7 @@ export const ServiceTypeValueSet = {
   /**
    * Pharmacy
    */
-  service_type_Pharmacy: Coding.FactoryCreateStrict({
+  service_type_Pharmacy: Coding.FromStrict({
     code: "64",
     display: "Pharmacy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4478,7 +4477,7 @@ export const ServiceTypeValueSet = {
   /**
    * Physiotherapy
    */
-  service_type_Physiotherapy: Coding.FactoryCreateStrict({
+  service_type_Physiotherapy: Coding.FromStrict({
     code: "65",
     display: "Physiotherapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4486,7 +4485,7 @@ export const ServiceTypeValueSet = {
   /**
    * Podiatry
    */
-  service_type_Podiatry: Coding.FactoryCreateStrict({
+  service_type_Podiatry: Coding.FromStrict({
     code: "66",
     display: "Podiatry",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4494,7 +4493,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexual health
    */
-  service_type_SexualHealth: Coding.FactoryCreateStrict({
+  service_type_SexualHealth: Coding.FromStrict({
     code: "67",
     display: "Sexual Health",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4502,7 +4501,7 @@ export const ServiceTypeValueSet = {
   /**
    * Speech pathology/therapy
    */
-  service_type_SpeechPathologyTherapy: Coding.FactoryCreateStrict({
+  service_type_SpeechPathologyTherapy: Coding.FromStrict({
     code: "68",
     display: "Speech Pathology/Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4510,7 +4509,7 @@ export const ServiceTypeValueSet = {
   /**
    * Bereavement counselling
    */
-  service_type_BereavementCounselling: Coding.FactoryCreateStrict({
+  service_type_BereavementCounselling: Coding.FromStrict({
     code: "69",
     display: "Bereavement Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4518,7 +4517,7 @@ export const ServiceTypeValueSet = {
   /**
    * Friendly visiting
    */
-  service_type_FriendlyVisiting: Coding.FactoryCreateStrict({
+  service_type_FriendlyVisiting: Coding.FromStrict({
     code: "7",
     display: "Friendly Visiting",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4526,7 +4525,7 @@ export const ServiceTypeValueSet = {
   /**
    * Crisis counselling
    */
-  service_type_CrisisCounselling: Coding.FactoryCreateStrict({
+  service_type_CrisisCounselling: Coding.FromStrict({
     code: "70",
     display: "Crisis Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4534,7 +4533,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family counselling and/or family therapy
    */
-  service_type_FamilyCounsellingTherapy: Coding.FactoryCreateStrict({
+  service_type_FamilyCounsellingTherapy: Coding.FromStrict({
     code: "71",
     display: "Family Counselling/Therapy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4542,7 +4541,7 @@ export const ServiceTypeValueSet = {
   /**
    * Family violence counselling
    */
-  service_type_FamilyViolenceCounselling: Coding.FactoryCreateStrict({
+  service_type_FamilyViolenceCounselling: Coding.FromStrict({
     code: "72",
     display: "Family Violence Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4550,7 +4549,7 @@ export const ServiceTypeValueSet = {
   /**
    * Financial counselling
    */
-  service_type_FinancialCounselling: Coding.FactoryCreateStrict({
+  service_type_FinancialCounselling: Coding.FromStrict({
     code: "73",
     display: "Financial Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4558,7 +4557,7 @@ export const ServiceTypeValueSet = {
   /**
    * Generalist counselling
    */
-  service_type_GeneralistCounselling: Coding.FactoryCreateStrict({
+  service_type_GeneralistCounselling: Coding.FromStrict({
     code: "74",
     display: "Generalist Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4566,7 +4565,7 @@ export const ServiceTypeValueSet = {
   /**
    * Genetic counselling
    */
-  service_type_GeneticCounselling: Coding.FactoryCreateStrict({
+  service_type_GeneticCounselling: Coding.FromStrict({
     code: "75",
     display: "Genetic Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4574,7 +4573,7 @@ export const ServiceTypeValueSet = {
   /**
    * Health counselling
    */
-  service_type_HealthCounselling: Coding.FactoryCreateStrict({
+  service_type_HealthCounselling: Coding.FromStrict({
     code: "76",
     display: "Health Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4582,7 +4581,7 @@ export const ServiceTypeValueSet = {
   /**
    * Mediation
    */
-  service_type_Mediation: Coding.FactoryCreateStrict({
+  service_type_Mediation: Coding.FromStrict({
     code: "77",
     display: "Mediation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4590,7 +4589,7 @@ export const ServiceTypeValueSet = {
   /**
    * Problem gambling counselling
    */
-  service_type_ProblemGamblingCounselling: Coding.FactoryCreateStrict({
+  service_type_ProblemGamblingCounselling: Coding.FromStrict({
     code: "78",
     display: "Problem Gambling Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4598,7 +4597,7 @@ export const ServiceTypeValueSet = {
   /**
    * Relationship counselling
    */
-  service_type_RelationshipCounselling: Coding.FactoryCreateStrict({
+  service_type_RelationshipCounselling: Coding.FromStrict({
     code: "79",
     display: "Relationship Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4606,7 +4605,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home care/housekeeping assistance
    */
-  service_type_HomeCareHousekeepingAssistance: Coding.FactoryCreateStrict({
+  service_type_HomeCareHousekeepingAssistance: Coding.FromStrict({
     code: "8",
     display: "Home Care/Housekeeping Assistance",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4614,7 +4613,7 @@ export const ServiceTypeValueSet = {
   /**
    * Sexual assault counselling
    */
-  service_type_SexualAssaultCounselling: Coding.FactoryCreateStrict({
+  service_type_SexualAssaultCounselling: Coding.FromStrict({
     code: "80",
     display: "Sexual Assault Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4622,7 +4621,7 @@ export const ServiceTypeValueSet = {
   /**
    * Trauma counselling
    */
-  service_type_TraumaCounselling: Coding.FactoryCreateStrict({
+  service_type_TraumaCounselling: Coding.FromStrict({
     code: "81",
     display: "Trauma Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4630,7 +4629,7 @@ export const ServiceTypeValueSet = {
   /**
    * Victims of crime counselling
    */
-  service_type_VictimsOfCrimeCounselling: Coding.FactoryCreateStrict({
+  service_type_VictimsOfCrimeCounselling: Coding.FromStrict({
     code: "82",
     display: "Victims of Crime Counselling",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4638,7 +4637,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cemetery operation
    */
-  service_type_CemeteryOperation: Coding.FactoryCreateStrict({
+  service_type_CemeteryOperation: Coding.FromStrict({
     code: "83",
     display: "Cemetery Operation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4646,7 +4645,7 @@ export const ServiceTypeValueSet = {
   /**
    * Cremation
    */
-  service_type_Cremation: Coding.FactoryCreateStrict({
+  service_type_Cremation: Coding.FromStrict({
     code: "84",
     display: "Cremation",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4654,7 +4653,7 @@ export const ServiceTypeValueSet = {
   /**
    * Death service information
    */
-  service_type_DeathServiceInformation: Coding.FactoryCreateStrict({
+  service_type_DeathServiceInformation: Coding.FromStrict({
     code: "85",
     display: "Death Service Information",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4662,7 +4661,7 @@ export const ServiceTypeValueSet = {
   /**
    * Funeral services
    */
-  service_type_FuneralServices: Coding.FactoryCreateStrict({
+  service_type_FuneralServices: Coding.FromStrict({
     code: "86",
     display: "Funeral Services",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4670,7 +4669,7 @@ export const ServiceTypeValueSet = {
   /**
    * Endodontic
    */
-  service_type_Endodontic: Coding.FactoryCreateStrict({
+  service_type_Endodontic: Coding.FromStrict({
     code: "87",
     display: "Endodontic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4678,7 +4677,7 @@ export const ServiceTypeValueSet = {
   /**
    * General dental
    */
-  service_type_GeneralDental: Coding.FactoryCreateStrict({
+  service_type_GeneralDental: Coding.FromStrict({
     code: "88",
     display: "General Dental",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4686,7 +4685,7 @@ export const ServiceTypeValueSet = {
   /**
    * Oral medicine
    */
-  service_type_OralMedicine: Coding.FactoryCreateStrict({
+  service_type_OralMedicine: Coding.FromStrict({
     code: "89",
     display: "Oral Medicine",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4694,7 +4693,7 @@ export const ServiceTypeValueSet = {
   /**
    * Home maintenance and repair
    */
-  service_type_HomeMaintenanceAndRepair: Coding.FactoryCreateStrict({
+  service_type_HomeMaintenanceAndRepair: Coding.FromStrict({
     code: "9",
     display: "Home Maintenance and Repair",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4702,7 +4701,7 @@ export const ServiceTypeValueSet = {
   /**
    * Oral surgery
    */
-  service_type_OralSurgery: Coding.FactoryCreateStrict({
+  service_type_OralSurgery: Coding.FromStrict({
     code: "90",
     display: "Oral Surgery",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4710,7 +4709,7 @@ export const ServiceTypeValueSet = {
   /**
    * Orthodontic
    */
-  service_type_Orthodontic: Coding.FactoryCreateStrict({
+  service_type_Orthodontic: Coding.FromStrict({
     code: "91",
     display: "Orthodontic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4718,7 +4717,7 @@ export const ServiceTypeValueSet = {
   /**
    * Paediatric Dentistry
    */
-  service_type_PaediatricDentistry: Coding.FactoryCreateStrict({
+  service_type_PaediatricDentistry: Coding.FromStrict({
     code: "92",
     display: "Paediatric Dentistry",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4726,7 +4725,7 @@ export const ServiceTypeValueSet = {
   /**
    * Periodontic
    */
-  service_type_Periodontic: Coding.FactoryCreateStrict({
+  service_type_Periodontic: Coding.FromStrict({
     code: "93",
     display: "Periodontic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4734,7 +4733,7 @@ export const ServiceTypeValueSet = {
   /**
    * Prosthodontic
    */
-  service_type_Prosthodontic: Coding.FactoryCreateStrict({
+  service_type_Prosthodontic: Coding.FromStrict({
     code: "94",
     display: "Prosthodontic",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4742,7 +4741,7 @@ export const ServiceTypeValueSet = {
   /**
    * Acquired brain injury information/referral
    */
-  service_type_AcquiredBrainInjuryInfoReferral: Coding.FactoryCreateStrict({
+  service_type_AcquiredBrainInjuryInfoReferral: Coding.FromStrict({
     code: "95",
     display: "Acquired Brain Injury Info/Referral",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4750,7 +4749,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability advocacy
    */
-  service_type_DisabilityAdvocacy: Coding.FactoryCreateStrict({
+  service_type_DisabilityAdvocacy: Coding.FromStrict({
     code: "96",
     display: "Disability Advocacy",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4758,7 +4757,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability aids &amp; equipment
    */
-  service_type_DisabilityAidsAndEquipment: Coding.FactoryCreateStrict({
+  service_type_DisabilityAidsAndEquipment: Coding.FromStrict({
     code: "97",
     display: "Disability Aids & Equipment",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4766,7 +4765,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability case management
    */
-  service_type_DisabilityCaseManagement: Coding.FactoryCreateStrict({
+  service_type_DisabilityCaseManagement: Coding.FromStrict({
     code: "98",
     display: "Disability Case Management",
     system: "http://terminology.hl7.org/CodeSystem/service-type"
@@ -4774,7 +4773,7 @@ export const ServiceTypeValueSet = {
   /**
    * Disability day programs &amp; activities
    */
-  service_type_DisabilityDayProgramsActivities: Coding.FactoryCreateStrict({
+  service_type_DisabilityDayProgramsActivities: Coding.FromStrict({
     code: "99",
     display: "Disability Day Programs/Activities",
     system: "http://terminology.hl7.org/CodeSystem/service-type"

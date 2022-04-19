@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
  */
-export interface IAddress extends fhir.IFhirElement {
+export declare type IAddress = fhir.IFhirElement & {
     /**
      * The name of the city, town, suburb, village or other community or delivery center.
      */
@@ -52,7 +52,7 @@ export interface IAddress extends fhir.IFhirElement {
      */
     use?: AddressUseEnum | undefined;
     _use?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
  */
@@ -107,21 +107,17 @@ export declare class Address extends fhir.FhirElement implements fhir.IAddress {
     use?: AddressUseEnum | undefined;
     _use?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for Address - initializes required elements to null.
+     * Default constructor for Address - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Address from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IAddress>): Address;
+    constructor(source?: Partial<fhir.IAddress>);
     /**
      * Check if the current Address contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Address from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IAddress): Address;
+    static FromStrict(source: fhir.IAddress): Address;
 }
 /**
  * Code Values for the Address.type field

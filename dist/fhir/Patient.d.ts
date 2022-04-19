@@ -2,7 +2,7 @@ import * as fhir from '../fhir';
 /**
  * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
  */
-export interface IPatientContact extends fhir.IBackboneElement {
+export declare type IPatientContact = fhir.IBackboneElement & {
     /**
      * Address for the contact person.
      */
@@ -32,11 +32,11 @@ export interface IPatientContact extends fhir.IBackboneElement {
      * Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.
      */
     telecom?: fhir.IContactPoint[] | undefined;
-}
+};
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
-export interface IPatientCommunication extends fhir.IBackboneElement {
+export declare type IPatientCommunication = fhir.IBackboneElement & {
     /**
      * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
      */
@@ -46,11 +46,11 @@ export interface IPatientCommunication extends fhir.IBackboneElement {
      */
     preferred?: boolean | undefined;
     _preferred?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * There is no assumption that linked patient records have mutual links.
  */
-export interface IPatientLink extends fhir.IBackboneElement {
+export declare type IPatientLink = fhir.IBackboneElement & {
     /**
      * Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.
      */
@@ -60,15 +60,15 @@ export interface IPatientLink extends fhir.IBackboneElement {
      */
     type: PatientLinkTypeEnum | null;
     _type?: fhir.IFhirElement | undefined;
-}
+};
 /**
  * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
  */
-export interface IPatient extends fhir.IDomainResource {
+export declare type IPatient = fhir.IDomainResource & {
     /**
      * Resource Type Name
      */
-    readonly resourceType: "Patient";
+    resourceType: "Patient";
     /**
      * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
      */
@@ -153,7 +153,7 @@ export interface IPatient extends fhir.IDomainResource {
      * A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).
      */
     telecom?: fhir.IContactPoint[] | undefined;
-}
+};
 /**
  * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
  */
@@ -188,21 +188,17 @@ export declare class PatientContact extends fhir.BackboneElement implements fhir
      */
     telecom?: fhir.ContactPoint[] | undefined;
     /**
-     * Default constructor for PatientContact - initializes required elements to null.
+     * Default constructor for PatientContact - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a PatientContact from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IPatientContact>): PatientContact;
+    constructor(source?: Partial<fhir.IPatientContact>);
     /**
      * Check if the current PatientContact contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a PatientContact from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IPatientContact): PatientContact;
+    static FromStrict(source: fhir.IPatientContact): PatientContact;
 }
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
@@ -218,21 +214,17 @@ export declare class PatientCommunication extends fhir.BackboneElement implement
     preferred?: boolean | undefined;
     _preferred?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for PatientCommunication - initializes required elements to null.
+     * Default constructor for PatientCommunication - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a PatientCommunication from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IPatientCommunication>): PatientCommunication;
+    constructor(source?: Partial<fhir.IPatientCommunication>);
     /**
      * Check if the current PatientCommunication contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a PatientCommunication from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IPatientCommunication): PatientCommunication;
+    static FromStrict(source: fhir.IPatientCommunication): PatientCommunication;
 }
 /**
  * There is no assumption that linked patient records have mutual links.
@@ -248,21 +240,17 @@ export declare class PatientLink extends fhir.BackboneElement implements fhir.IP
     type: PatientLinkTypeEnum | null;
     _type?: fhir.FhirElement | undefined;
     /**
-     * Default constructor for PatientLink - initializes required elements to null.
+     * Default constructor for PatientLink - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a PatientLink from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IPatientLink>): PatientLink;
+    constructor(source?: Partial<fhir.IPatientLink>);
     /**
      * Check if the current PatientLink contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a PatientLink from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IPatientLink): PatientLink;
+    static FromStrict(source: fhir.IPatientLink): PatientLink;
 }
 /**
  * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
@@ -271,7 +259,7 @@ export declare class Patient extends fhir.DomainResource implements fhir.IPatien
     /**
      * Resource Type Name
      */
-    readonly resourceType = "Patient";
+    resourceType: "Patient";
     /**
      * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
      */
@@ -357,21 +345,17 @@ export declare class Patient extends fhir.DomainResource implements fhir.IPatien
      */
     telecom?: fhir.ContactPoint[] | undefined;
     /**
-     * Default constructor for Patient - initializes required elements to null.
+     * Default constructor for Patient - initializes any required elements to null if a value is not provided.
      */
-    constructor();
-    /**
-     * Factory function to create a Patient from an object that MAY NOT contain all required elements.
-     */
-    static FactoryCreate(source: Partial<fhir.IPatient>): Patient;
+    constructor(source?: Partial<fhir.IPatient>);
     /**
      * Check if the current Patient contains all required elements.
      */
-    checkRequiredElements(): string[];
+    CheckRequiredElements(): string[];
     /**
      * Factory function to create a Patient from an object that MUST contain all required elements.
      */
-    static FactoryCreateStrict(source: fhir.IPatient): Patient;
+    static FromStrict(source: fhir.IPatient): Patient;
 }
 /**
  * Code Values for the Patient.contact.gender field

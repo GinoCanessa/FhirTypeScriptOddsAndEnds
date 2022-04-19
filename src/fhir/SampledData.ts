@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
  */
-export interface ISampledData extends fhir.IFhirElement {
+export type ISampledData = fhir.IFhirElement & {
   /**
    * Data may be missing if it is omitted for summarization purposes. In general, data is required for any actual use of a SampledData.
    */
@@ -85,55 +84,49 @@ export class SampledData extends fhir.FhirElement implements fhir.ISampledData {
   public upperLimit?: number|undefined;
   public _upperLimit?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for SampledData - initializes required elements to null.
+   * Default constructor for SampledData - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.ISampledData> = {}) {
+    super(source);
+    if (source["data"]) { this.data = source.data; }
+    if (source["_data"]) { this._data = new fhir.FhirElement(source._data!); }
     this.dimensions = null;
+    if (source["dimensions"]) { this.dimensions = source.dimensions; }
+    if (this.dimensions === undefined) { this.dimensions = null }
+    if (source["_dimensions"]) { this._dimensions = new fhir.FhirElement(source._dimensions!); }
+    if (source["factor"]) { this.factor = source.factor; }
+    if (source["_factor"]) { this._factor = new fhir.FhirElement(source._factor!); }
+    if (source["lowerLimit"]) { this.lowerLimit = source.lowerLimit; }
+    if (source["_lowerLimit"]) { this._lowerLimit = new fhir.FhirElement(source._lowerLimit!); }
     this.origin = null;
+    if (source["origin"]) { this.origin = new fhir.Quantity(source.origin!); }
+    if (this.origin === undefined) { this.origin = null }
     this.period = null;
-  }
-  /**
-   * Factory function to create a SampledData from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.ISampledData>):SampledData {
-    var dest:Partial<SampledData> = super.FactoryCreate(source) as Partial<SampledData>;
-    if (source["data"] !== undefined) { dest.data = source.data; }
-    if (source["_data"] !== undefined) { dest._data = fhir.FhirElement.FactoryCreate(source._data!); }
-    if (source["dimensions"] !== undefined) { dest.dimensions = source.dimensions; }
-    if (source["_dimensions"] !== undefined) { dest._dimensions = fhir.FhirElement.FactoryCreate(source._dimensions!); }
-    if (source["factor"] !== undefined) { dest.factor = source.factor; }
-    if (source["_factor"] !== undefined) { dest._factor = fhir.FhirElement.FactoryCreate(source._factor!); }
-    if (source["lowerLimit"] !== undefined) { dest.lowerLimit = source.lowerLimit; }
-    if (source["_lowerLimit"] !== undefined) { dest._lowerLimit = fhir.FhirElement.FactoryCreate(source._lowerLimit!); }
-    if (source["origin"] !== undefined) { dest.origin = fhir.Quantity.FactoryCreate(source.origin!); }
-    if (source["period"] !== undefined) { dest.period = source.period; }
-    if (source["_period"] !== undefined) { dest._period = fhir.FhirElement.FactoryCreate(source._period!); }
-    if (source["upperLimit"] !== undefined) { dest.upperLimit = source.upperLimit; }
-    if (source["_upperLimit"] !== undefined) { dest._upperLimit = fhir.FhirElement.FactoryCreate(source._upperLimit!); }
-    return dest as SampledData;
+    if (source["period"]) { this.period = source.period; }
+    if (this.period === undefined) { this.period = null }
+    if (source["_period"]) { this._period = new fhir.FhirElement(source._period!); }
+    if (source["upperLimit"]) { this.upperLimit = source.upperLimit; }
+    if (source["_upperLimit"]) { this._upperLimit = new fhir.FhirElement(source._upperLimit!); }
   }
   /**
    * Check if the current SampledData contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["dimensions"] === undefined) { missingElements.push("dimensions"); }
     if (this["origin"] === undefined) { missingElements.push("origin"); }
     if (this["period"] === undefined) { missingElements.push("period"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a SampledData from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.ISampledData):SampledData {
-    var dest:SampledData = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `SampledData is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.ISampledData):SampledData {
+    var dest:SampledData = new SampledData(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `SampledData is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

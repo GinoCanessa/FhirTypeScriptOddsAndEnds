@@ -4,13 +4,12 @@
   // Complex Type / Resource Naming Style: PascalCase
   // Interaction Naming Style: None
   // Extension Support: NonPrimitive
-  // Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import * as fhir from '../fhir'
 /**
  * Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.
  */
-export interface IPatientContact extends fhir.IBackboneElement {
+export type IPatientContact = fhir.IBackboneElement & {
   /**
    * Address for the contact person.
    */
@@ -44,7 +43,7 @@ export interface IPatientContact extends fhir.IBackboneElement {
 /**
  * If no language is specified, this *implies* that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.
  */
-export interface IPatientCommunication extends fhir.IBackboneElement {
+export type IPatientCommunication = fhir.IBackboneElement & {
   /**
    * The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.
    */
@@ -58,7 +57,7 @@ export interface IPatientCommunication extends fhir.IBackboneElement {
 /**
  * There is no assumption that linked patient records have mutual links.
  */
-export interface IPatientLink extends fhir.IBackboneElement {
+export type IPatientLink = fhir.IBackboneElement & {
   /**
    * Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.
    */
@@ -72,11 +71,11 @@ export interface IPatientLink extends fhir.IBackboneElement {
 /**
  * Demographics and other administrative information about an individual or animal receiving care or other health-related services.
  */
-export interface IPatient extends fhir.IDomainResource {
+export type IPatient = fhir.IDomainResource & {
   /**
    * Resource Type Name
    */
-  readonly resourceType: "Patient";
+  resourceType: "Patient";
   /**
    * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
    */
@@ -196,44 +195,35 @@ export class PatientContact extends fhir.BackboneElement implements fhir.IPatien
    */
   public telecom?: fhir.ContactPoint[]|undefined;
   /**
-   * Default constructor for PatientContact - initializes required elements to null.
+   * Default constructor for PatientContact - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a PatientContact from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IPatientContact>):PatientContact {
-    var dest:Partial<PatientContact> = super.FactoryCreate(source) as Partial<PatientContact>;
-    if (source["address"] !== undefined) { dest.address = fhir.Address.FactoryCreate(source.address!); }
-    if (source["gender"] !== undefined) { dest.gender = source.gender; }
-    if (source["_gender"] !== undefined) { dest._gender = fhir.FhirElement.FactoryCreate(source._gender!); }
-    if (source["name"] !== undefined) { dest.name = fhir.HumanName.FactoryCreate(source.name!); }
-    if (source["organization"] !== undefined) { dest.organization = fhir.Reference.FactoryCreate(source.organization!); }
-    if (source["period"] !== undefined) { dest.period = fhir.Period.FactoryCreate(source.period!); }
-    if (source["relationship"] !== undefined) { dest.relationship = source.relationship.map((x:Partial<fhir.ICodeableConcept>) => fhir.CodeableConcept.FactoryCreate(x)); }
-    if (source["telecom"] !== undefined) { dest.telecom = source.telecom.map((x:Partial<fhir.IContactPoint>) => fhir.ContactPoint.FactoryCreate(x)); }
-    return dest as PatientContact;
+  constructor(source:Partial<fhir.IPatientContact> = {}) {
+    super(source);
+    if (source["address"]) { this.address = new fhir.Address(source.address!); }
+    if (source["gender"]) { this.gender = source.gender; }
+    if (source["_gender"]) { this._gender = new fhir.FhirElement(source._gender!); }
+    if (source["name"]) { this.name = new fhir.HumanName(source.name!); }
+    if (source["organization"]) { this.organization = new fhir.Reference(source.organization!); }
+    if (source["period"]) { this.period = new fhir.Period(source.period!); }
+    if (source["relationship"]) { this.relationship = source.relationship.map((x:Partial<fhir.ICodeableConcept>) => new fhir.CodeableConcept(x)); }
+    if (source["telecom"]) { this.telecom = source.telecom.map((x:Partial<fhir.IContactPoint>) => new fhir.ContactPoint(x)); }
   }
   /**
    * Check if the current PatientContact contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientContact from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IPatientContact):PatientContact {
-    var dest:PatientContact = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `PatientContact is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IPatientContact):PatientContact {
+    var dest:PatientContact = new PatientContact(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `PatientContact is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -251,41 +241,33 @@ export class PatientCommunication extends fhir.BackboneElement implements fhir.I
   public preferred?: boolean|undefined;
   public _preferred?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for PatientCommunication - initializes required elements to null.
+   * Default constructor for PatientCommunication - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IPatientCommunication> = {}) {
+    super(source);
     this.language = null;
-  }
-  /**
-   * Factory function to create a PatientCommunication from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IPatientCommunication>):PatientCommunication {
-    var dest:Partial<PatientCommunication> = super.FactoryCreate(source) as Partial<PatientCommunication>;
-    if (source["language"] !== undefined) { dest.language = fhir.CodeableConcept.FactoryCreate(source.language!); }
-    if (source["preferred"] !== undefined) { dest.preferred = source.preferred; }
-    if (source["_preferred"] !== undefined) { dest._preferred = fhir.FhirElement.FactoryCreate(source._preferred!); }
-    return dest as PatientCommunication;
+    if (source["language"]) { this.language = new fhir.CodeableConcept(source.language!); }
+    if (this.language === undefined) { this.language = null }
+    if (source["preferred"]) { this.preferred = source.preferred; }
+    if (source["_preferred"]) { this._preferred = new fhir.FhirElement(source._preferred!); }
   }
   /**
    * Check if the current PatientCommunication contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["language"] === undefined) { missingElements.push("language"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientCommunication from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IPatientCommunication):PatientCommunication {
-    var dest:PatientCommunication = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `PatientCommunication is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IPatientCommunication):PatientCommunication {
+    var dest:PatientCommunication = new PatientCommunication(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `PatientCommunication is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -303,43 +285,36 @@ export class PatientLink extends fhir.BackboneElement implements fhir.IPatientLi
   public type: PatientLinkTypeEnum|null;
   public _type?: fhir.FhirElement|undefined;
   /**
-   * Default constructor for PatientLink - initializes required elements to null.
+   * Default constructor for PatientLink - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
+  constructor(source:Partial<fhir.IPatientLink> = {}) {
+    super(source);
     this.other = null;
+    if (source["other"]) { this.other = new fhir.Reference(source.other!); }
+    if (this.other === undefined) { this.other = null }
     this.type = null;
-  }
-  /**
-   * Factory function to create a PatientLink from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IPatientLink>):PatientLink {
-    var dest:Partial<PatientLink> = super.FactoryCreate(source) as Partial<PatientLink>;
-    if (source["other"] !== undefined) { dest.other = fhir.Reference.FactoryCreate(source.other!); }
-    if (source["type"] !== undefined) { dest.type = source.type; }
-    if (source["_type"] !== undefined) { dest._type = fhir.FhirElement.FactoryCreate(source._type!); }
-    return dest as PatientLink;
+    if (source["type"]) { this.type = source.type; }
+    if (this.type === undefined) { this.type = null }
+    if (source["_type"]) { this._type = new fhir.FhirElement(source._type!); }
   }
   /**
    * Check if the current PatientLink contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
     if (this["other"] === undefined) { missingElements.push("other"); }
     if (this["type"] === undefined) { missingElements.push("type"); }
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a PatientLink from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IPatientLink):PatientLink {
-    var dest:PatientLink = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `PatientLink is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IPatientLink):PatientLink {
+    var dest:PatientLink = new PatientLink(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `PatientLink is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }
@@ -350,7 +325,7 @@ export class Patient extends fhir.DomainResource implements fhir.IPatient {
   /**
    * Resource Type Name
    */
-  readonly resourceType = "Patient";
+  public override resourceType: "Patient";
   /**
    * If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.
    */
@@ -436,62 +411,53 @@ export class Patient extends fhir.DomainResource implements fhir.IPatient {
    */
   public telecom?: fhir.ContactPoint[]|undefined;
   /**
-   * Default constructor for Patient - initializes required elements to null.
+   * Default constructor for Patient - initializes any required elements to null if a value is not provided.
    */
-  constructor() {
-    super();
-  }
-  /**
-   * Factory function to create a Patient from an object that MAY NOT contain all required elements.
-   */
-  static override FactoryCreate(source:Partial<fhir.IPatient>):Patient {
-    var dest:Partial<Patient> = super.FactoryCreate(source) as Partial<Patient>;
-    if ((source['resourceType'] !== "Patient") || (source['resourceType'] !== undefined)) { throw 'Invalid resourceType for a Patient'; }
-    if (source["active"] !== undefined) { dest.active = source.active; }
-    if (source["_active"] !== undefined) { dest._active = fhir.FhirElement.FactoryCreate(source._active!); }
-    if (source["address"] !== undefined) { dest.address = source.address.map((x:Partial<fhir.IAddress>) => fhir.Address.FactoryCreate(x)); }
-    if (source["birthDate"] !== undefined) { dest.birthDate = source.birthDate; }
-    if (source["_birthDate"] !== undefined) { dest._birthDate = fhir.FhirElement.FactoryCreate(source._birthDate!); }
-    if (source["communication"] !== undefined) { dest.communication = source.communication.map((x:Partial<fhir.IPatientCommunication>) => fhir.PatientCommunication.FactoryCreate(x)); }
-    if (source["contact"] !== undefined) { dest.contact = source.contact.map((x:Partial<fhir.IPatientContact>) => fhir.PatientContact.FactoryCreate(x)); }
-    if (source["deceasedBoolean"] !== undefined) { dest.deceasedBoolean = source.deceasedBoolean; }
-    if (source["_deceasedBoolean"] !== undefined) { dest._deceasedBoolean = fhir.FhirElement.FactoryCreate(source._deceasedBoolean!); }
-    if (source["deceasedDateTime"] !== undefined) { dest.deceasedDateTime = source.deceasedDateTime; }
-    if (source["_deceasedDateTime"] !== undefined) { dest._deceasedDateTime = fhir.FhirElement.FactoryCreate(source._deceasedDateTime!); }
-    if (source["gender"] !== undefined) { dest.gender = source.gender; }
-    if (source["_gender"] !== undefined) { dest._gender = fhir.FhirElement.FactoryCreate(source._gender!); }
-    if (source["generalPractitioner"] !== undefined) { dest.generalPractitioner = source.generalPractitioner.map((x:Partial<fhir.IReference>) => fhir.Reference.FactoryCreate(x)); }
-    if (source["identifier"] !== undefined) { dest.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => fhir.Identifier.FactoryCreate(x)); }
-    if (source["link"] !== undefined) { dest.link = source.link.map((x:Partial<fhir.IPatientLink>) => fhir.PatientLink.FactoryCreate(x)); }
-    if (source["managingOrganization"] !== undefined) { dest.managingOrganization = fhir.Reference.FactoryCreate(source.managingOrganization!); }
-    if (source["maritalStatus"] !== undefined) { dest.maritalStatus = fhir.CodeableConcept.FactoryCreate(source.maritalStatus!); }
-    if (source["multipleBirthBoolean"] !== undefined) { dest.multipleBirthBoolean = source.multipleBirthBoolean; }
-    if (source["_multipleBirthBoolean"] !== undefined) { dest._multipleBirthBoolean = fhir.FhirElement.FactoryCreate(source._multipleBirthBoolean!); }
-    if (source["multipleBirthInteger"] !== undefined) { dest.multipleBirthInteger = source.multipleBirthInteger; }
-    if (source["_multipleBirthInteger"] !== undefined) { dest._multipleBirthInteger = fhir.FhirElement.FactoryCreate(source._multipleBirthInteger!); }
-    if (source["name"] !== undefined) { dest.name = source.name.map((x:Partial<fhir.IHumanName>) => fhir.HumanName.FactoryCreate(x)); }
-    if (source["photo"] !== undefined) { dest.photo = source.photo.map((x:Partial<fhir.IAttachment>) => fhir.Attachment.FactoryCreate(x)); }
-    if (source["telecom"] !== undefined) { dest.telecom = source.telecom.map((x:Partial<fhir.IContactPoint>) => fhir.ContactPoint.FactoryCreate(x)); }
-    return dest as Patient;
+  constructor(source:Partial<fhir.IPatient> = {}) {
+    super(source);
+    this.resourceType = 'Patient';
+    if (source["active"]) { this.active = source.active; }
+    if (source["_active"]) { this._active = new fhir.FhirElement(source._active!); }
+    if (source["address"]) { this.address = source.address.map((x:Partial<fhir.IAddress>) => new fhir.Address(x)); }
+    if (source["birthDate"]) { this.birthDate = source.birthDate; }
+    if (source["_birthDate"]) { this._birthDate = new fhir.FhirElement(source._birthDate!); }
+    if (source["communication"]) { this.communication = source.communication.map((x:Partial<fhir.IPatientCommunication>) => new fhir.PatientCommunication(x)); }
+    if (source["contact"]) { this.contact = source.contact.map((x:Partial<fhir.IPatientContact>) => new fhir.PatientContact(x)); }
+    if (source["deceasedBoolean"]) { this.deceasedBoolean = source.deceasedBoolean; }
+    if (source["_deceasedBoolean"]) { this._deceasedBoolean = new fhir.FhirElement(source._deceasedBoolean!); }
+    if (source["deceasedDateTime"]) { this.deceasedDateTime = source.deceasedDateTime; }
+    if (source["_deceasedDateTime"]) { this._deceasedDateTime = new fhir.FhirElement(source._deceasedDateTime!); }
+    if (source["gender"]) { this.gender = source.gender; }
+    if (source["_gender"]) { this._gender = new fhir.FhirElement(source._gender!); }
+    if (source["generalPractitioner"]) { this.generalPractitioner = source.generalPractitioner.map((x:Partial<fhir.IReference>) => new fhir.Reference(x)); }
+    if (source["identifier"]) { this.identifier = source.identifier.map((x:Partial<fhir.IIdentifier>) => new fhir.Identifier(x)); }
+    if (source["link"]) { this.link = source.link.map((x:Partial<fhir.IPatientLink>) => new fhir.PatientLink(x)); }
+    if (source["managingOrganization"]) { this.managingOrganization = new fhir.Reference(source.managingOrganization!); }
+    if (source["maritalStatus"]) { this.maritalStatus = new fhir.CodeableConcept(source.maritalStatus!); }
+    if (source["multipleBirthBoolean"]) { this.multipleBirthBoolean = source.multipleBirthBoolean; }
+    if (source["_multipleBirthBoolean"]) { this._multipleBirthBoolean = new fhir.FhirElement(source._multipleBirthBoolean!); }
+    if (source["multipleBirthInteger"]) { this.multipleBirthInteger = source.multipleBirthInteger; }
+    if (source["_multipleBirthInteger"]) { this._multipleBirthInteger = new fhir.FhirElement(source._multipleBirthInteger!); }
+    if (source["name"]) { this.name = source.name.map((x:Partial<fhir.IHumanName>) => new fhir.HumanName(x)); }
+    if (source["photo"]) { this.photo = source.photo.map((x:Partial<fhir.IAttachment>) => new fhir.Attachment(x)); }
+    if (source["telecom"]) { this.telecom = source.telecom.map((x:Partial<fhir.IContactPoint>) => new fhir.ContactPoint(x)); }
   }
   /**
    * Check if the current Patient contains all required elements.
    */
-  override checkRequiredElements():string[] {
+  override CheckRequiredElements():string[] {
     var missingElements:string[] = [];
-    var parentMissing:string[] = super.checkRequiredElements();
+    var parentMissing:string[] = super.CheckRequiredElements();
     missingElements.push(...parentMissing);
     return missingElements;
   }
   /**
    * Factory function to create a Patient from an object that MUST contain all required elements.
    */
-  static override FactoryCreateStrict(source:fhir.IPatient):Patient {
-    var dest:Patient = this.FactoryCreate(source);
-    var missingElements:string[] = dest.checkRequiredElements();
-    if (missingElements.length !== 0) {
-    throw `Patient is missing elements: ${missingElements.join(", ")}`
-     }
+  static override FromStrict(source:fhir.IPatient):Patient {
+    var dest:Patient = new Patient(source);
+    var missingElements:string[] = dest.CheckRequiredElements();
+    if (missingElements.length !== 0) { throw `Patient is missing elements: ${missingElements.join(", ")}` }
     return dest;
   }
 }

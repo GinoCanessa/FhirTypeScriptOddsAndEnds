@@ -4,17 +4,16 @@
 // Complex Type / Resource Naming Style: PascalCase
 // Interaction Naming Style: None
 // Extension Support: NonPrimitive
-// Restricted to: Patient|Encounter|Observation
 // Minimum TypeScript Version: 3.7
 import { Coding } from '../fhir';
 /**
  * This value set defines a set of codes that can be used to where the patient left the hospital.
  */
-export var EncounterDischargeDispositionValueSet = {
+export const EncounterDischargeDispositionValueSet = {
     /**
      * The patient self discharged against medical advice.
      */
-    encounter_discharge_disposition_LeftAgainstAdvice: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_LeftAgainstAdvice: Coding.FromStrict({
         code: "aadvice",
         display: "Left against advice",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -22,7 +21,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient was discharged and has indicated that they are going to return home afterwards, but not the patient's home - e.g. a family member's home.
      */
-    encounter_discharge_disposition_AlternativeHome: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_AlternativeHome: Coding.FromStrict({
         code: "alt-home",
         display: "Alternative home",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -30,7 +29,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient has deceased during this encounter.
      */
-    encounter_discharge_disposition_Expired: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_Expired: Coding.FromStrict({
         code: "exp",
         display: "Expired",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -38,7 +37,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient was dicharged and has indicated that they are going to return home afterwards.
      */
-    encounter_discharge_disposition_Home: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_Home: Coding.FromStrict({
         code: "home",
         display: "Home",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -46,7 +45,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient has been discharged into palliative care.
      */
-    encounter_discharge_disposition_Hospice: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_Hospice: Coding.FromStrict({
         code: "hosp",
         display: "Hospice",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -54,7 +53,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient has been discharged into long-term care where is likely to be monitored through an ongoing episode-of-care.
      */
-    encounter_discharge_disposition_LongTermCare: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_LongTermCare: Coding.FromStrict({
         code: "long",
         display: "Long-term care",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -62,7 +61,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The discharge disposition has not otherwise defined.
      */
-    encounter_discharge_disposition_Other: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_Other: Coding.FromStrict({
         code: "oth",
         display: "Other",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -70,7 +69,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient was transferred to another healthcare facility.
      */
-    encounter_discharge_disposition_OtherHealthcareFacility: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_OtherHealthcareFacility: Coding.FromStrict({
         code: "other-hcf",
         display: "Other healthcare facility",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -78,7 +77,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient has been transferred to a psychiatric facility.
      */
-    encounter_discharge_disposition_PsychiatricHospital: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_PsychiatricHospital: Coding.FromStrict({
         code: "psy",
         display: "Psychiatric hospital",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -86,7 +85,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient was discharged and is to receive post acute care rehabilitation services.
      */
-    encounter_discharge_disposition_Rehabilitation: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_Rehabilitation: Coding.FromStrict({
         code: "rehab",
         display: "Rehabilitation",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -94,7 +93,7 @@ export var EncounterDischargeDispositionValueSet = {
     /**
      * The patient has been discharged to a skilled nursing facility for the patient to receive additional care.
      */
-    encounter_discharge_disposition_SkilledNursingFacility: Coding.FactoryCreateStrict({
+    encounter_discharge_disposition_SkilledNursingFacility: Coding.FromStrict({
         code: "snf",
         display: "Skilled nursing facility",
         system: "http://terminology.hl7.org/CodeSystem/discharge-disposition"
